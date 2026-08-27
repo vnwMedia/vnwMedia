@@ -1,35 +1,38 @@
+// Open the first answer in each FAQ group once, without locking it open
+// or changing unrelated details/summary components.
+function initializeFaqDefaults() {
+  const groups = new Set();
+  document.querySelectorAll("details").forEach((item) => {
+    if (!item.closest('[class*="faq"], [id*="faq"]')) return;
+    const group = item.parentElement;
+    if (groups.has(group)) return;
+    groups.add(group);
+    item.open = true;
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeFaqDefaults, { once: true });
+} else {
+  initializeFaqDefaults();
+}
+
 const siteHeaderElement = document.querySelector(".site-header");
 const isNestedPage = /\/(?:services|industries|case-studies|resources)\//.test(location.pathname);
 const navRoot = isNestedPage ? "../" : "";
-const serviceMegaGroups = [
-  ["Websites & UX", [
-    ["Custom Website Design","web-design"],
-    ["Website Redesign","web-design"],
-    ["Landing Page Design","web-design"],
-    ["eCommerce Development","ecommerce"],
-    ["UI/UX & Conversion","web-design"]
-  ]],
-  ["Traffic & Search", [
-    ["SEO","seo"],
-    ["Local SEO","seo"],
-    ["Google Ads / PPC","google-ppc"],
-    ["GEO / AI Visibility","seo"],
-    ["Content Writing","content-writing"]
-  ]],
-  ["Growth Systems", [
-    ["Social Media","social-media"],
-    ["Reputation Management","reputation-management"],
-    ["Email Marketing","email-marketing"],
-    ["Text Marketing","text-marketing"],
-    ["Strategy & Analytics","brand-strategy"]
-  ]]
-];
-const serviceMegaMarkup = serviceMegaGroups.map(([heading, links]) => `
-      <div class="mega-column">
-        <h3>${heading}</h3>
-        ${links.map(([label, slug]) => `<a href="${navRoot}services/${slug}.html">${label}</a>`).join("")}
-      </div>`).join("");
-const servicesMegaNav = `<div class="nav-item nav-services has-mega mega-wide"><a class="nav-link nav-mega-link nav-services-trigger" href="${navRoot}services.html?v=12" aria-haspopup="true">Services</a><div class="mega-menu" id="services-mega" aria-label="Services menu"><div class="mega-inner"><div class="mega-feature"><span>Full Service</span><strong>Everything needed to attract, convert, and retain better leads.</strong><p>From web design and SEO to paid ads, AI visibility, reputation, content, and tracking.</p><a href="${navRoot}services.html?v=12">Explore Services</a></div><div class="mega-columns">${serviceMegaMarkup}</div></div></div></div>`;
+// Keep every footer and the homepage service directory aligned with the catalog.
+document.querySelectorAll("footer h4").forEach(heading => {
+  if (heading.textContent.trim().toLowerCase() !== "services") return;
+  const column = heading.parentElement;
+  column.classList.add("footer-services");
+  column.innerHTML = serviceFooterMarkup(navRoot);
+});
+const homepageServices = document.querySelector("main > #services.services");
+if (homepageServices && !document.querySelector("#all-services")) {
+  homepageServices.insertAdjacentHTML("afterend", serviceDirectoryMarkup(navRoot, true));
+}
+
+const servicesMegaNav = serviceMenuMarkup(navRoot);
 
 if (siteHeaderElement) {
   siteHeaderElement.innerHTML = `<nav class="nav shell" aria-label="Main navigation">

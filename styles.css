@@ -1356,6 +1356,15 @@ body .site-header.site-header .mega-wide .mega-columns{
   font-size:16px;
   line-height:1.65;
 }
+.scm-ms-work-background{
+  background:
+    radial-gradient(ellipse at 12% 30%,rgba(0,174,239,.11),transparent 65%),
+    #070707;
+}
+.scm-ms-work-background .scm-ms-work,
+.scm-ms-work-background .scm-ms-service{
+  background:transparent;
+}
 .scm-ms-work{
   padding:36px 0;
   scroll-margin-top:110px;
@@ -1515,8 +1524,8 @@ body .site-header.site-header .mega-wide .mega-columns{
 }
 .scm-ms-action-grid{
   display:grid;
-  grid-template-columns:.28fr .72fr;
-  gap:70px;
+  grid-template-columns:minmax(0,1fr);
+  gap:24px;
   align-items:start;
 }
 .scm-ms-action h2{
@@ -1834,4 +1843,108 @@ body h2{
   .hsc-faq-list summary{
     font-size:20px!important;
   }
+}
+
+/* Complete service offering, shared by the directory, homepage, and detail pages. */
+.service-directory{background:#f7f3ed;color:#111}
+.service-directory .section-heading{max-width:840px}
+.service-directory .section-heading p:not(.section-tag){color:#626262}
+.service-directory-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 64px}
+.service-directory-groups article{min-width:0}
+.service-directory-groups h3{margin:0 0 20px;font-size:28px}
+.service-directory-groups article>div{border-top:1px solid #d4d0c9}
+.service-directory-groups a{position:relative;display:block;padding:20px 34px 20px 0;border-bottom:1px solid #d4d0c9}
+.service-directory-groups a>span{display:block;font-size:18px;font-weight:600}
+.service-directory-groups a>small{display:block;margin-top:8px;color:#626262;font-size:14px;line-height:1.55}
+.service-directory-groups a>b{position:absolute;right:2px;top:20px;color:var(--orange)}
+.service-directory-groups a:hover>span{color:#0077a3}
+.service-directory-groups a:focus-visible{outline:2px solid #0077a3;outline-offset:4px}
+.service-scope-note{max-width:900px;margin:30px 0;color:#626262;font-size:14px;line-height:1.65}
+.service-directory-compact .service-directory-groups{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.service-directory-compact .service-directory-groups h3{font-size:22px;min-height:54px}
+.service-directory-compact .service-directory-groups a{padding:16px 24px 16px 0}
+.service-directory-compact .service-directory-groups a>span{font-size:14px}
+.service-directory-compact .service-directory-groups a>b{top:16px}
+.service-detail{background:#fff;color:#111}
+.service-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.service-detail-grid>div{min-width:0}
+.service-detail-grid p:not(.section-tag){color:#626262}
+.service-deliverables{list-style:none;padding:0;margin:0;border-top:1px solid #d4d0c9}
+.service-deliverables li{padding:20px 0;border-bottom:1px solid #d4d0c9;font-size:18px}
+.footer-grid:has(.footer-services){grid-template-columns:1.25fr 1.9fr .7fr 1fr;gap:34px}
+.footer-services{min-width:0}
+.footer-service-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px;align-items:start}
+.footer-service-links a{font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.footer-services .footer-all-services{margin-top:18px;color:var(--orange)}
+body .site-header.site-header .mega-inner{gap:20px}
+body .site-header.site-header .mega-column a{font-size:12px;line-height:1.5}
+@media(max-width:1100px){
+  .footer-grid:has(.footer-services){grid-template-columns:1fr 1.5fr}
+  .service-directory-compact .service-directory-groups{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:800px){
+  .service-directory-groups,.service-detail-grid{grid-template-columns:1fr;gap:36px}
+  body .site-header.site-header .mega-inner{display:block}
+  body .site-header.site-header .nav-menu{max-height:calc(100dvh - 72px);overflow-y:auto;overscroll-behavior:contain}
+}
+@media(max-width:560px){
+  .footer-grid:has(.footer-services),.service-directory-compact .service-directory-groups{grid-template-columns:1fr}
+  .service-directory-compact .service-directory-groups h3{min-height:0}
+  .footer-service-links{column-gap:20px}
+}
+@media(min-width:981px){
+  body .site-header.site-header .mega-wide .mega-inner{grid-template-columns:minmax(0,1fr) minmax(0,2.4fr)}
+}
+@media(min-width:801px){
+  body .site-header.site-header .mega-wide .mega-columns{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:24px 36px;
+    align-content:start;
+  }
+  body .site-header.site-header .mega-menu{
+    max-height:calc(100dvh - 110px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+  }
+}
+
+/* Selected services menu: Option 7 / Create, Connect, Convert. */
+body .site-header.site-header .mega-compact>.mega-menu{width:min(832px,calc(100vw - 40px));border-radius:14px}
+body .site-header.site-header .mega-compact .mega-inner{display:block;padding:0;border-radius:14px;border:1px solid #34393d;background:#111416;box-shadow:0 24px 65px #0009;overflow:hidden}
+body .site-header.site-header .mega-compact .mega-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:16px}
+body .site-header.site-header .mega-compact .mega-column{padding:0;min-width:0}
+body .site-header.site-header .mega-compact .mega-column h3{margin:0 0 9px;padding-left:8px;color:#42b1e5;font:600 10px/1.4 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+body .site-header.site-header .mega-compact .mega-column>a{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:27px;padding:4px 8px;border:0;border-radius:5px;color:#e4e6e7;font:400 12px/1.4 Inter,sans-serif}
+body .site-header.site-header .mega-compact .mega-column>a b{color:#60747d;font-size:11px;font-weight:400}
+body .site-header.site-header .mega-compact .mega-column>a:hover,body .site-header.site-header .mega-compact .mega-column>a:focus-visible{color:#fff;background:#20282d}
+body .site-header.site-header .mega-compact .mega-column>a:hover b{color:#42b1e5}
+body .site-header.site-header .mega-compact .mega-column+.mega-column{padding-top:12px;margin-top:14px;border-top:1px solid #303235}
+body .site-header.site-header .mega-compact .mega-footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:12px 20px;border-top:1px solid #303235}
+body .site-header.site-header .mega-compact .mega-footer>a{padding:0;border:0;color:#aaa;font:400 11px/1.4 Inter,sans-serif}
+body .site-header.site-header .mega-compact .mega-footer>a:first-child{color:#42b1e5}
+body .site-header.site-header .mega-compact .mega-footer>a span{margin-left:8px}
+body .site-header.site-header .mega-compact .mega-menu a:focus-visible{outline:2px solid #42b1e5;outline-offset:2px}
+/* Let the existing pointer/click/keyboard handlers control open state. */
+body .site-header.site-header .mega-compact:not(.mega-open)>.mega-menu{opacity:0;visibility:hidden;pointer-events:none}
+body .site-header.site-header .mega-compact.mega-open>.mega-menu{opacity:1;visibility:visible;pointer-events:auto}
+@media(max-width:800px){
+  body .site-header.site-header .mega-compact>.mega-menu{width:100%}
+  body .site-header.site-header .mega-compact .mega-inner{margin:0 0 10px}
+  body .site-header.site-header .mega-compact .mega-pillars{grid-template-columns:1fr;gap:20px;padding:12px}
+  body .site-header.site-header .mega-compact .mega-column h3{font-size:9px;letter-spacing:.05em;min-height:26px}
+  body .site-header.site-header .mega-compact .mega-column>a{min-height:40px;padding:6px 4px;font-size:11px;gap:5px}
+  body .site-header.site-header .mega-compact .mega-column>a b{display:none}
+  body .site-header.site-header .mega-compact .mega-footer{padding:12px;gap:10px}
+  body .site-header.site-header .mega-compact .mega-footer>a{width:auto;font-size:10px}
+}
+
+body .site-header.site-header .mega-compact .mega-pillar{min-width:0}
+body .site-header.site-header .mega-compact .mega-pillar-heading{padding:0 8px 12px;margin-bottom:14px;border-bottom:1px solid #303235}
+body .site-header.site-header .mega-compact .mega-pillar-heading h2{margin:0 0 8px;color:#42b1e5;font:600 13px/1.4 Inter,Arial,sans-serif;font-size:13px!important;line-height:1.4!important;letter-spacing:.12em!important;text-transform:uppercase}
+body .site-header.site-header .mega-compact .mega-pillar-heading p{margin:0;color:#aaa;font:400 11px/1.5 Inter,Arial,sans-serif}
+@media(max-width:800px){
+  body .site-header.site-header .mega-compact .mega-pillar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
+  body .site-header.site-header .mega-compact .mega-pillar-heading{grid-column:1/-1}
+  body .site-header.site-header .mega-compact .mega-column+.mega-column{border-top:0;padding-top:0;margin-top:0}
 }

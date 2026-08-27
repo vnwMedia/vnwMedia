@@ -1,16 +1,5 @@
 const DATA = {
-  services: [
-    ["Web Design & Development","web-design","Custom, responsive websites built to earn trust and turn visits into inquiries.","assets/south-carolina-motors.png"],
-    ["Search Engine Optimization","seo","Technical, local, and content SEO that helps the right customers find you.","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=84"],
-    ["Google PPC","google-ppc","Focused paid-search campaigns built around qualified calls, forms, and sales.","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=84"],
-    ["Social Media Marketing","social-media","Content and campaigns that build awareness, engagement, and demand.","https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1400&q=84"],
-    ["Reputation Management","reputation-management","Review and reputation systems that strengthen customer confidence.","assets/rices-collision.png"],
-    ["eCommerce Web Design","ecommerce","Fast, persuasive shopping experiences that make products easier to buy.","https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=84"],
-    ["Email Marketing","email-marketing","Welcome, nurture, promotion, and review campaigns that keep customers moving.","https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=84"],
-    ["Content Writing","content-writing","Clear website and search content that explains value and builds authority.","https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=84"],
-    ["Text Marketing","text-marketing","Timely promotions, reminders, updates, and customer reactivation by text.","https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=1400&q=84"],
-    ["Brand & Strategy","brand-strategy","Positioning, visual identity, messaging, and campaign direction people remember.","https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1400&q=84"]
-  ],
+  services: SERVICE_CATALOG.map(service => [service.name, service.slug, service.description, service.image]),
   industries: [
     ["Home Services & Contractors","home-services-contractors","Service-area pages, proof, local SEO, and faster paths from problem to qualified call.","https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=84"],
     ["Medical, Dental & Eye Care","healthcare","Credible, approachable digital experiences for practices that need patient trust and appointment clarity.","https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=84"],
@@ -52,7 +41,7 @@ const topPages = {
   "work-8":["Work Option 8","A local-growth territory map.","A Work page organized by industries, service areas, intent clusters, and local SEO opportunities for businesses that need more regional visibility.","assets/case-plumbing-impact.svg"],
   "work-9":["Work Option 9","A build-room service stack.","A modular Work page that presents VNW’s portfolio through strategy, creative, web, SEO, ads, reputation, and follow-up systems.","assets/case-automotive-impact.svg"],
   "work-10":["Work Option 10","An audit-room portfolio diagnosis.","A diagnostic Work page that shows common website problems, the VNW fix, relevant projects, FAQs, and direct consultation CTAs.","assets/case-collision-impact.svg"],
-  "services-hub":["Services Options","Choose the Services page experience you want to explore.","Ten different ways to present VNW Media’s web design, SEO, Google PPC, social media, reputation, content, brand strategy, lead generation, and full-service digital marketing capabilities.","assets/case-system-stack.svg"],
+  "services-hub":["Services","Websites, visibility, and marketing—working together.","Explore our complete offering: websites and maintenance, SEO, Yelp, Google Business Profile, AI visibility, advertising, content, reputation, and customer follow-up.","assets/case-system-stack.svg"],
   services:["Services Option 1","Every digital tool your business needs—connected.","The current services grid direction: clear service cards with a simple path into web design, SEO, PPC, social media, content, reputation, eCommerce, email, text marketing, and strategy.","https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1800&q=84"],
   "services-2":["Services Option 2","A conversion stack built around the buyer journey.","A Services page organized from attention to inquiry: website, SEO, PPC, reputation, content, nurture, tracking, and optimization.","assets/case-final-cta.svg"],
   "services-3":["Services Option 3","An SEO-rich service library.","A detailed services directory designed for organic search, internal linking, FAQs, service clusters, and high-intent visitors.","assets/case-plumbing-impact.svg"],
@@ -85,35 +74,7 @@ const path = value => depth + value;
 const img = value => value.startsWith("http") ? value : depth + value.replace("../vnwmedia-site/assets/","assets/").replace(/^\.\.\//,"");
 const esc = value => String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
 function servicesMega(){
-  const groups = [
-    ["Websites & UX", [
-      ["Custom Website Design","web-design"],
-      ["Website Redesign","web-design"],
-      ["Landing Page Design","web-design"],
-      ["eCommerce Development","ecommerce"],
-      ["UI/UX & Conversion","web-design"]
-    ]],
-    ["Traffic & Search", [
-      ["SEO","seo"],
-      ["Local SEO","seo"],
-      ["Google Ads / PPC","google-ppc"],
-      ["GEO / AI Visibility","seo"],
-      ["Content Writing","content-writing"]
-    ]],
-    ["Growth Systems", [
-      ["Social Media","social-media"],
-      ["Reputation Management","reputation-management"],
-      ["Email Marketing","email-marketing"],
-      ["Text Marketing","text-marketing"],
-      ["Strategy & Analytics","brand-strategy"]
-    ]]
-  ];
-  const items = groups.map(([heading, links]) => `
-      <div class="mega-column">
-        <h3>${esc(heading)}</h3>
-        ${links.map(([label, slug]) => `<a href="${path(`services/${slug}.html`)}">${esc(label)}</a>`).join("")}
-      </div>`).join("");
-  return `<div class="nav-item nav-services has-mega mega-wide"><a class="nav-link nav-mega-link nav-services-trigger" href="${path("services.html?v=12")}" aria-haspopup="true">Services</a><div class="mega-menu" id="services-mega" aria-label="Services menu"><div class="mega-inner"><div class="mega-feature"><span>Full Service</span><strong>Everything needed to attract, convert, and retain better leads.</strong><p>From web design and SEO to paid ads, AI visibility, reputation, content, and tracking.</p><a href="${path("services.html?v=12")}">Explore Services</a></div><div class="mega-columns">${items}</div></div></div></div>`;
+  return serviceMenuMarkup(path(""));
 }
 
 function header(){
@@ -127,8 +88,8 @@ function header(){
 
 function footer(){
   return `<footer class="footer"><div class="shell footer-grid">
-    <div class="footer-about"><img src="${img("assets/vnwMedia-LogoBlk.png")}" alt="VNW Media"><p>New Jersey’s full-service web and digital marketing company. Strategy, creative, and campaigns that move business forward.</p><div class="social"><a href="https://www.instagram.com/vnwmediallc/">Instagram</a><a href="https://www.linkedin.com/company/vnw-media-llc">LinkedIn</a><a href="https://www.facebook.com/vnwmedia/">Facebook</a></div></div>
-    <div><h4>Services</h4>${DATA.services.slice(0,6).map(x=>`<a href="${path(`services/${x[1]}.html`)}">${x[0]}</a>`).join("")}</div>
+    <div class="footer-about"><img src="${img("assets/vnwMedia-LogoBlk.png?v=127")}" alt="VNW Media"><p>New Jersey’s full-service web and digital marketing company. Strategy, creative, and campaigns that move business forward.</p><div class="social"><a href="https://www.instagram.com/vnwmediallc/">Instagram</a><a href="https://www.linkedin.com/company/vnw-media-llc">LinkedIn</a><a href="https://www.facebook.com/vnwmedia/">Facebook</a></div></div>
+    <div><h4>Services</h4>${DATA.services.map(x=>`<a href="${path(`services/${x[1]}.html`)}">${x[0]}</a>`).join("")}</div>
     <div><h4>Company</h4><a href="${path("our-story.html")}">Our Story</a><a href="${path("work.html?v=30")}">Work</a><a href="${path("clients.html")}">Clients</a><a href="${path("resources.html#faq")}">FAQ</a><a href="${path("contact.html")}">Contact</a></div>
     <div><h4>Contact</h4><a href="mailto:contactus@vnwmedia.com">contactus@vnwmedia.com</a><a href="tel:17328200609">(732) 820-0609</a><span>Morganville, NJ 07751</span></div>
   </div><div class="shell copyright"><span>© 2026 VNW Media LLC. All rights reserved.</span><a href="#top">Back to top ↑</a></div></footer><a class="mobile-plan" href="${path("contact.html")}">Get Started</a>`;
@@ -417,7 +378,7 @@ function servicesHub(){
 
 function servicesFAQ(){
   const qs=[
-    ["What services does VNW Media provide?","VNW Media provides web design and development, SEO, Google PPC, social media marketing, reputation management, eCommerce web design, email marketing, content writing, text marketing, brand strategy, and lead-generation planning."],
+    ["What services does VNW Media provide?","VNW Media offers web design, eCommerce, website maintenance, SEO, Yelp visibility, Google Business Profile management, AI visibility and GEO, PPC, paid social, social media management, reputation management, email, SMS, content, and combined lead-generation plans. Brand strategy, graphic design, video editing, and CRM automation are also available."],
     ["Which service should a business start with?","Most businesses should start with the website and the customer journey. If the site is unclear or hard to act on, SEO and ads will usually perform worse than they should."],
     ["How do web design, SEO, and PPC work together?","The website converts visitors, SEO builds organic visibility, and PPC captures high-intent demand faster. The best results happen when messaging, pages, tracking, and CTAs are aligned."],
     ["Can VNW help local businesses get more calls?","Yes. Local businesses often need service-area content, local SEO, reviews, Google PPC, click-to-call UX, landing pages, and reputation signals working together."],
@@ -687,34 +648,293 @@ function southCarolinaMotorsCaseStudy(){
     ["content-architecture","Content Architecture","The content should answer practical buying questions: what kind of dealership this is, what vehicles or categories matter, why shoppers can trust the business, and how to begin the conversation.","Page clarity"],
     ["tracking","Analytics & Lead Tracking","The page should be ready to measure calls, form starts, vehicle-interest clicks, source quality, and the moments where visitors move from browsing to real sales intent.","Measurement"]
   ];
+  return renderClientCaseStudy({signals, approach, services, ...{
+  "name": "South Carolina Motors",
+  "kicker": "Used car dealership · Automotive",
+  "intro": "A dealership website shaped around inventory discovery, local trust, and a faster path from vehicle interest to contact.",
+  "hero": "assets/scm-collision-center-cars-hero.jpg",
+  "heroAlt": "Enhanced photo of SC Motors Collision Center with three digitally added cars parked in front",
+  "challengeTitle": "Win attention before shoppers compare away.",
+  "challengeOne": "South Carolina Motors needs to win attention in a category where shoppers compare quickly and hesitate easily. Visitors arrive with practical questions about inventory, location, vehicle availability, price range, business credibility, and what happens after they reach out.",
+  "challengeTwo": "The challenge is not just to make the site look polished. The page has to make the dealership feel easier to evaluate, easier to trust, and easier to contact from the exact moment a shopper starts browsing.",
+  "approachTitle": "Build the page around the buyer’s next decision.",
+  "mockup": "assets/scm-graphic-options/selected-location-screen.png",
+  "mockupAlt": "South Carolina Motors website mockup on a laptop and phone in front of a circular photo of SC Motors Collision Center",
+  "storyTitle": "Clarity at every click.",
+  "storyOne": "For a dealership, the website is often the bridge between a search result and a sales conversation. If the visitor cannot quickly understand what is available, why the dealership is credible, and how to ask the right question, the site creates friction instead of momentum.",
+  "storyTwo": "This South Carolina Motors direction pulls the main decision points into one clearer system: inventory interest, dealership trust, local visibility, mobile action, and follow-up readiness. The result is a page story that feels less like a brochure and more like a buying path.",
+  "storyThree": "Instead of inventing performance numbers, this case study focuses on the strategic work a dealership page needs to do before meaningful measurement can happen: make the visitor confident, make the offer legible, and make the next step obvious.",
+  "heroWidth": 1672,
+  "heroHeight": 941,
+  "mockupWidth": 1448,
+  "mockupHeight": 1086
+}});
+}
+
+function renderClientCaseStudy(config){
+  const {signals, approach, services}=config;
   const serviceNav=services.map(x=>`<a class="pill pill-outline" href="#${x[0]}">${x[1]}</a>`).join("");
   const detailSections=services.map((x,i)=>`<section class="scm-ms-service reveal" id="${x[0]}" data-nav-theme="dark"><div class="scm-ms-service-grid"><div class="scm-ms-service-title"><span>${String(i+1).padStart(2,"0")} / ${x[3]}</span><h2>${x[1]}</h2></div><div class="scm-ms-service-copy"><p>${x[2]}</p><a class="scm-ms-inline-cta" href="${path("contact.html")}">${x[4]||"Discuss this part of the build"} <span>↗</span></a></div></div></section>`).join("");
   return `
     <div class="scm-ms-page">
-      <section class="scm-ms-hero" id="page-content" data-nav-theme="dark"><div class="scm-ms-hero-bg"><img src="${img("assets/scm-collision-center-cars-hero.jpg")}" alt="Enhanced photo of SC Motors Collision Center with three digitally added cars parked in front" width="1672" height="941" fetchpriority="high"></div><div class="shell scm-ms-hero-inner reveal"><p class="scm-ms-kicker">Used car dealership · Automotive</p><h1>South Carolina Motors</h1><p>A dealership website shaped around inventory discovery, local trust, and a faster path from vehicle interest to contact.</p><span>2026</span></div></section>
+      <section class="scm-ms-hero" id="page-content" data-nav-theme="dark"><div class="scm-ms-hero-bg"><img src="${img(config.hero)}" alt="${esc(config.heroAlt)}" width="${config.heroWidth}" height="${config.heroHeight}" fetchpriority="high"></div><div class="shell scm-ms-hero-inner reveal"><p class="scm-ms-kicker">${esc(config.kicker)}</p><h1>${esc(config.name)}</h1><p>${esc(config.intro)}</p><span>2026</span></div></section>
       <section class="scm-ms-signals" data-nav-theme="dark"><div class="shell scm-ms-signal-grid">${signals.map(x=>`<article class="reveal"><strong>${x[0]}</strong><span>${x[1]}</span></article>`).join("")}</div></section>
-      <section class="scm-ms-challenge-approach" data-nav-theme="dark"><div class="shell scm-ms-ca-grid reveal"><article class="scm-ms-ca-panel"><p class="section-tag">The Challenge</p><h2>Win attention before shoppers compare away.</h2><div class="scm-ms-ca-copy"><p>South Carolina Motors needs to win attention in a category where shoppers compare quickly and hesitate easily. Visitors arrive with practical questions about inventory, location, vehicle availability, price range, business credibility, and what happens after they reach out.</p><p>The challenge is not just to make the site look polished. The page has to make the dealership feel easier to evaluate, easier to trust, and easier to contact from the exact moment a shopper starts browsing.</p></div></article><article class="scm-ms-ca-panel"><p class="section-tag">Our Approach</p><h2>Build the page around the buyer’s next decision.</h2><div class="scm-ms-approach-list">${approach.map(x=>`<article><b>—</b><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></article></div></section>
+      <section class="scm-ms-challenge-approach" data-nav-theme="dark"><div class="shell scm-ms-ca-grid reveal"><article class="scm-ms-ca-panel"><p class="section-tag">The Challenge</p><h2>${esc(config.challengeTitle)}</h2><div class="scm-ms-ca-copy"><p>${esc(config.challengeOne)}</p><p>${esc(config.challengeTwo)}</p></div></article><article class="scm-ms-ca-panel"><p class="section-tag">Our Approach</p><h2>${esc(config.approachTitle)}</h2><div class="scm-ms-approach-list">${approach.map(x=>`<article><b>—</b><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></article></div></section>
       <section class="scm-ms-story" id="digital-experience" data-nav-theme="light" aria-labelledby="scm-story-title">
         <div class="shell scm-ms-story-grid reveal">
           <figure class="scm-ms-story-visual">
-            <span class="section-tag">South Carolina Motors / Digital Experience</span>
-            <div class="scm-ms-story-stage"><img src="${img("assets/scm-graphic-options/selected-location-screen.png")}" alt="South Carolina Motors website mockup on a laptop and phone in front of a circular photo of SC Motors Collision Center" width="1448" height="1086" loading="lazy" decoding="async"></div>
+            <span class="section-tag">${esc(config.name)} / Digital Experience</span>
+            <div class="scm-ms-story-stage"><img src="${img(config.mockup)}" alt="${esc(config.mockupAlt)}" width="${config.mockupWidth}" height="${config.mockupHeight}" loading="lazy" decoding="async"></div>
             <figcaption><span>One experience. Every screen.</span><span>Desktop · Mobile</span></figcaption>
           </figure>
           <div class="scm-ms-story-copy">
-            <h2 id="scm-story-title">Clarity at every click.</h2>
-            <p>For a dealership, the website is often the bridge between a search result and a sales conversation. If the visitor cannot quickly understand what is available, why the dealership is credible, and how to ask the right question, the site creates friction instead of momentum.</p>
-            <p>This South Carolina Motors direction pulls the main decision points into one clearer system: inventory interest, dealership trust, local visibility, mobile action, and follow-up readiness. The result is a page story that feels less like a brochure and more like a buying path.</p>
-            <p>Instead of inventing performance numbers, this case study focuses on the strategic work a dealership page needs to do before meaningful measurement can happen: make the visitor confident, make the offer legible, and make the next step obvious.</p>
+            <h2 id="scm-story-title">${esc(config.storyTitle)}</h2>
+            <p>${esc(config.storyOne)}</p>
+            <p>${esc(config.storyTwo)}</p>
+            <p>${esc(config.storyThree)}</p>
           </div>
         </div>
       </section>
-      <section class="scm-ms-work" id="what-we-did" data-nav-theme="dark"><div class="shell"><div class="scm-ms-work-head reveal"><p class="section-tag">What We Did</p><nav aria-label="South Carolina Motors case study sections">${serviceNav}</nav></div></div></section>
-      <div class="shell scm-ms-services-grid">${detailSections}</div>
-      <section class="scm-ms-action" data-nav-theme="dark"><div class="shell scm-ms-action-grid reveal"><p class="section-tag">Conversion Layer</p><div><h2>Every section should make the next sales action easier.</h2><p>For South Carolina Motors, the important work is connecting inventory, proof, local search, and mobile behavior into one page rhythm. If the visitor is ready to ask about a vehicle, the page should not make them slow down.</p><div><a class="pill pill-blue pill-large" href="${path("contact.html")}">Build a clearer lead path <span>↗</span></a><a class="text-arrow" href="${path("case-studies.html?v=16")}">View more case studies <span>↗</span></a></div></div></div></section>
-      <section class="scm-ms-upnext" data-nav-theme="dark"><div class="shell scm-ms-upnext-grid reveal"><p class="section-tag">Up Next</p><a href="${path("case-studies/rices-collision.html")}"><span>Rice’s Collision</span><b>View case study</b></a></div></section>
+      <div class="scm-ms-work-background">
+        <section class="scm-ms-work" id="what-we-did" data-nav-theme="dark"><div class="shell"><div class="scm-ms-work-head reveal"><p class="section-tag">What We Did</p><nav aria-label="${esc(config.name)} case study sections">${serviceNav}</nav></div></div></section>
+        <div class="shell scm-ms-services-grid">${detailSections}</div>
+      </div>
     </div>`;
 }
+
+// Client-specific content and imagery; all three pages share the same layout.
+const CLIENT_CASE_STUDIES={
+  "rices-collision": {
+    "name": "Rice’s Collision",
+    "kicker": "Collision Repair · West Hempstead, NY",
+    "intro": "An auto body website built around repair confidence, local discovery, and a clearer path to an estimate.",
+    "hero": "assets/rices-collision-hero.jpg",
+    "heroAlt": "Rice’s Collision storefront with its sign and vehicles outside",
+    "heroWidth": 1440,
+    "heroHeight": 962,
+    "mockup": "assets/rices-collision.png",
+    "mockupAlt": "Rice’s Collision website shown on desktop, laptop, tablet, and mobile screens",
+    "mockupWidth": 998,
+    "mockupHeight": 593,
+    "signals": [
+      [
+        "Repair",
+        "Auto body service clarity"
+      ],
+      [
+        "Trust",
+        "Shop and certification information"
+      ],
+      [
+        "Mobile",
+        "Call and estimate path"
+      ],
+      [
+        "Search",
+        "West Hempstead visibility"
+      ]
+    ],
+    "challengeTitle": "Make the next step clear after an accident.",
+    "challengeOne": "Drivers looking for collision repair often arrive with questions about vehicle damage, insurance, and where to turn. Rice’s Collision needs a website that makes its West Hempstead shop easy to find and its repair services easy to understand.",
+    "challengeTwo": "The experience should reduce uncertainty before the first call: show the business, explain the repair options, and give visitors a direct way to request an estimate.",
+    "approachTitle": "Build confidence before the first repair conversation.",
+    "approach": [
+      [
+        "Lead with the shop and its work.",
+        "Recognizable facility imagery and clear auto body messaging help drivers understand who they are contacting."
+      ],
+      [
+        "Organize information around repair questions.",
+        "Service, certification, insurance, and location information support visitors as they decide how to proceed."
+      ],
+      [
+        "Keep estimate requests within reach.",
+        "Calls and estimate prompts should sit close to the information that helps a driver choose the shop."
+      ]
+    ],
+    "storyTitle": "From repair questions to a clear next step.",
+    "storyOne": "For Rice’s Collision, the digital experience connects a local search with a conversation about getting a vehicle repaired. The page needs to make the shop recognizable while giving service and contact information room to breathe.",
+    "storyTwo": "The desktop and mobile presentation brings together collision-repair information, the shop’s identity, and appointment and estimate entry points. A driver should be able to move from checking the business to making contact without retracing their steps.",
+    "storyThree": "This case study describes the website and marketing direction, without claiming unverified increases in calls, rankings, or repair bookings.",
+    "services": [
+      [
+        "repair-ux",
+        "Repair-Focused Website UX",
+        "Organize collision-repair information around the questions drivers bring to the site. The shop identity, services, and estimate path should be immediately recognizable.",
+        "Repair clarity"
+      ],
+      [
+        "local-seo",
+        "SEO",
+        "For Rice’s Collision, the organic-search direction centers on auto body repair in West Hempstead and Long Island. Relevant service pages and accurate location details help connect local repair searches with useful information.",
+        "Organic search"
+      ],
+      [
+        "ppc",
+        "PPC",
+        "The paid-search direction pairs collision-repair intent with a relevant estimate page. Location targeting and clear repair messaging should guide interested drivers toward a call or inquiry.",
+        "Paid search"
+      ],
+      [
+        "google-business",
+        "GBP Organic & Paid Search",
+        "Consistent shop details, facility photos, and service information support the Google Business Profile experience. If location-linked advertising is used, it should lead to the same accurate contact and estimate information.",
+        "Local visibility"
+      ],
+      [
+        "geo",
+        "GEO",
+        "Clear answers about repair services, the shop location, and estimate requests make Rice’s Collision easier to understand in AI-assisted search. This content approach complements SEO without promising AI mentions or citations.",
+        "AI search readiness"
+      ],
+      [
+        "estimate-requests",
+        "Estimate Request CTAs",
+        "Estimate and appointment prompts give drivers a clear next step. Keep contact options near repair information so a visitor can act while the relevant question is still in mind.",
+        "Lead path"
+      ],
+      [
+        "repair-proof",
+        "Collision Repair Trust Signals",
+        "Use real facility images and the client’s published certification information to support credibility. Keep credentials current and avoid implying that every certification applies to every repair or affiliated location.",
+        "Confidence"
+      ],
+      [
+        "mobile-development",
+        "Mobile Responsive Development",
+        "Drivers may look for a repair shop on their phones. Readable service information, easy-to-tap contact links, and a straightforward estimate path make that experience more useful.",
+        "Mobile action"
+      ],
+      [
+        "content-architecture",
+        "Content Architecture",
+        "Group auto body services, insurance information, shop details, and estimate guidance into clear paths. Keep Rice’s Collision’s West Hempstead identity distinct from other locations listed on the client website.",
+        "Page clarity"
+      ],
+      [
+        "tracking",
+        "Analytics & Lead Tracking",
+        "A measurement plan should distinguish phone-link clicks, estimate-form starts, completed inquiries, and traffic sources. Verified tracking data would be needed before reporting repair-booking results.",
+        "Measurement"
+      ]
+    ]
+  },
+  "h2bros-plumbing": {
+    "name": "H2Bros Plumbing",
+    "kicker": "Plumbing & Heating · New Jersey",
+    "intro": "A service website that connects plumbing and heating needs with clear information, local trust, and an easy way to request help.",
+    "hero": "assets/h2bros-plumbing-hero.jpg",
+    "heroAlt": "Bathroom sinks and plumbing fixtures featured on the H2Bros Plumbing website",
+    "heroWidth": 1280,
+    "heroHeight": 853,
+    "mockup": "assets/h2bros-plumbing.png",
+    "mockupAlt": "H2Bros Plumbing and Heating website shown on desktop, laptop, tablet, and mobile screens",
+    "mockupWidth": 998,
+    "mockupHeight": 593,
+    "signals": [
+      [
+        "Services",
+        "Plumbing and heating"
+      ],
+      [
+        "Trust",
+        "Clear business information"
+      ],
+      [
+        "Mobile",
+        "Call and quote requests"
+      ],
+      [
+        "Search",
+        "New Jersey service discovery"
+      ]
+    ],
+    "challengeTitle": "Help customers find the right service quickly.",
+    "challengeOne": "A homeowner with a plumbing problem and a property manager planning an installation have different questions. H2Bros Plumbing needs to serve both without making either visitor search through unrelated information.",
+    "challengeTwo": "The website should distinguish urgent help from planned work, explain the service offering, and make it simple to call or request a quote from any screen.",
+    "approachTitle": "Organize the experience around the customer’s problem.",
+    "approach": [
+      [
+        "Make services easy to recognize.",
+        "Plain-language service categories help visitors connect a plumbing or heating need with the right information."
+      ],
+      [
+        "Support urgent and planned inquiries.",
+        "Prominent contact options serve immediate needs, while service details give planned projects space for consideration."
+      ],
+      [
+        "Keep the mobile path simple.",
+        "Readable content, clear buttons, and short inquiry paths help customers make contact from their phones."
+      ]
+    ],
+    "storyTitle": "Clear services. Easier contact.",
+    "storyOne": "H2Bros Plumbing & Heating serves residential, commercial, and new-construction needs in New Jersey. Its website needs to explain that scope while keeping the first contact simple.",
+    "storyTwo": "The device mockup shows the client’s own website, with plumbing imagery, service navigation, and contact options. The case-study layout connects that presentation to a practical goal: helping visitors identify the right service and ask for help.",
+    "storyThree": "The focus is on service clarity and inquiry design. No unverified response-time guarantees, booking increases, or search results are presented as measured outcomes.",
+    "services": [
+      [
+        "service-ux",
+        "Service-Focused Website UX",
+        "Help visitors distinguish plumbing repairs, heating work, and planned installations. Clear categories make the site useful to homeowners, business owners, and new-construction customers.",
+        "Service discovery"
+      ],
+      [
+        "local-seo",
+        "SEO",
+        "The search direction connects New Jersey plumbing and heating needs with relevant service pages. Accurate business details and useful local content support discovery without inventing service areas.",
+        "Organic search"
+      ],
+      [
+        "ppc",
+        "PPC",
+        "Paid-search planning should separate urgent repair intent from installation and replacement inquiries. Relevant landing pages and clear contact options help each visitor reach the appropriate next step.",
+        "Paid search"
+      ],
+      [
+        "google-business",
+        "GBP Organic & Paid Search",
+        "Keep the business name, phone number, services, and service-area details consistent. Any location-linked advertising should use the same accurate information and a clear inquiry destination.",
+        "Local visibility"
+      ],
+      [
+        "geo",
+        "GEO",
+        "Plain-language descriptions of plumbing and heating services help people and AI-assisted search understand H2Bros. Service answers and consistent business information support this direction without guaranteeing AI visibility.",
+        "AI search readiness"
+      ],
+      [
+        "service-inquiries",
+        "Service Inquiry CTAs",
+        "Make calling and requesting a quote easy to find. Inquiry prompts should help customers describe their plumbing or heating need without requiring a long form before the first conversation.",
+        "Lead path"
+      ],
+      [
+        "business-proof",
+        "Plumbing & Heating Trust Signals",
+        "Show the client’s identity, clear contact details, and relevant service imagery. Any credentials, customer reviews, or availability claims should remain accurate and current.",
+        "Confidence"
+      ],
+      [
+        "mobile-development",
+        "Mobile Responsive Development",
+        "Customers may need help while away from a desktop. Simple navigation, readable service content, and accessible contact buttons keep the mobile experience practical.",
+        "Mobile action"
+      ],
+      [
+        "content-architecture",
+        "Content Architecture",
+        "Organize water heaters, sump pumps, fixtures, water filters, and boilers into understandable service paths. Keep emergency inquiries and planned project requests easy to distinguish.",
+        "Page clarity"
+      ],
+      [
+        "tracking",
+        "Analytics & Lead Tracking",
+        "Plan measurement around phone-link clicks, quote requests, and inquiry sources. Separate plumbing and heating interest where possible, and report booked work only when verified data is available.",
+        "Measurement"
+      ]
+    ]
+  }
+};
 
 function caseStudiesOptionSix(){
   const scenes=["The visitor arrives with a problem","The page must create trust fast","The service path gets simplified","The proof moves closer to the CTA","The next step becomes obvious"];
@@ -790,7 +1010,7 @@ function testimonials(){
 }
 
 function faq(){
-  const qs=[["What does VNW Media do?","Web design, SEO, Google PPC, social media, branding, content, reputation management, eCommerce, email, text marketing, and lead-generation strategy."],["Can you redesign an existing website?","Yes. We can improve the current site or create a new build based on what best supports trust, visibility, and conversion."],["Do you work with local businesses?","Yes. Our work includes daycare, healthcare, restaurants, eyecare, auto repair, real estate, home services, retail, and professional businesses."],["How much does a project cost?","Scope depends on your goals, content, functionality, competition, and support needs. We recommend a clear fit after discovery."],["How do we begin?","Submit the form, call, or email. We’ll discuss the business, current website, goals, and most valuable opportunities."]];
+  const qs=[["What does VNW Media do?","Web design, eCommerce, maintenance, SEO, Yelp visibility, Google Business Profile, GEO, PPC, paid social, social management, reputation, email, SMS, content, lead generation, brand strategy, graphic design, video editing, and CRM automation."],["Can you redesign an existing website?","Yes. We can improve the current site or create a new build based on what best supports trust, visibility, and conversion."],["Do you work with local businesses?","Yes. Our work includes daycare, healthcare, restaurants, eyecare, auto repair, real estate, home services, retail, and professional businesses."],["How much does a project cost?","Scope depends on your goals, content, functionality, competition, and support needs. We recommend a clear fit after discovery."],["How do we begin?","Submit the form, call, or email. We’ll discuss the business, current website, goals, and most valuable opportunities."]];
   return `<section class="faq section" id="faq"><div class="shell faq-grid"><div class="faq-intro reveal"><p class="section-tag">FAQ</p><h2>Questions before we begin.</h2><p>Start here—or contact us for an answer specific to your business.</p></div><div class="faq-list reveal">${qs.map((x,i)=>`<details ${i===0?"open":""}><summary>${x[0]}<span>+</span></summary><p>${x[1]}</p></details>`).join("")}</div></div></section>`;
 }
 
@@ -819,7 +1039,7 @@ function topPage(id){
   if(id==="work-8") body=workOptionEight();
   if(id==="work-9") body=workOptionNine();
   if(id==="work-10") body=workOptionTen();
-  if(id==="services-hub") body=servicesHub();
+  if(id==="services-hub") body=`<div id="page-content">${serviceDirectoryMarkup(path(""))}</div>`+servicesFAQ();
   if(id==="services") body=servicesPageOne();
   if(id==="services-2") body=servicesOptionTwo();
   if(id==="services-3") body=servicesOptionThree();
@@ -853,6 +1073,10 @@ function detail(kind,item){
   const name=item[0], description=isCase?item[3]:item[2], image=isCase?item[4]:item[3];
   if(isCase) return hero(`${item[2]} Case Study`,name,description,image)+`<section class="detail section" id="page-content"><div class="shell detail-grid"><div class="reveal"><p class="section-tag">Project Story</p><h2>Designed around confidence, clarity, and faster next steps.</h2><p>${description}</p><a class="text-arrow" href="${item[5]}" target="_blank" rel="noreferrer">Visit live website <span>↗</span></a></div><img class="detail-image reveal" src="${img(image)}" alt="${name} website"></div></section>${caseOptionFAQ()}`;
   if(isResource) return hero("Resource",name,description,image)+`<section class="article section" id="page-content"><div class="shell article-grid"><aside class="reveal"><p class="section-tag">Practical Guide</p><h2>Use this before your next marketing investment.</h2><a class="text-arrow" href="${path("contact.html")}">Get help applying it <span>↗</span></a></aside><article class="reveal"><h2>Start with the customer’s decision.</h2><p>Can a first-time visitor understand what you do, who it is for, and why your business is credible within a few seconds? If not, more traffic alone will not solve the problem.</p><h3>Check these five areas</h3><ol><li>Headline clarity and offer positioning.</li><li>Service pages that match real search intent.</li><li>Trust signals, reviews, projects, and credentials.</li><li>Mobile calls-to-action and short forms.</li><li>Tracking, follow-up, and campaign alignment.</li></ol><p>Fix the largest source of friction first, measure the response, and improve from there.</p></article></div></section>`;
+  if(kind==="service") {
+    const service=SERVICE_CATALOG.find(entry=>entry.slug===item[1]);
+    return hero(service.addon?"Creative & Technical Support":"VNW Media Services",service.name,service.description,service.image)+`<section class="service-detail section" id="page-content"><div class="shell service-detail-grid"><div><p class="section-tag">${esc(service.name)}</p><h2>What we help you do.</h2><p>${esc(service.overview)}</p><a class="pill pill-blue" href="${path("contact.html")}">Discuss this service <span>↗</span></a></div><div><p class="section-tag">Service Scope</p><ul class="service-deliverables">${service.includes.map(text=>`<li>${esc(text)}</li>`).join("")}</ul><p class="service-scope-note">${esc(service.scope)}</p></div></div></section><section class="faq section"><div class="shell faq-grid"><div class="faq-intro"><p class="section-tag">Service FAQ</p><h2>Before we get started.</h2></div><div class="faq-list"><details open><summary>What does this service include?<span>+</span></summary><p>${esc(service.includes.join("; "))}. ${esc(service.scope)}</p></details><details><summary>Can this be combined with other services?<span>+</span></summary><p>Yes. We can combine services around your website, visibility, advertising, and follow-up needs. We confirm the deliverables and responsibilities in your proposal.</p></details><details><summary>How do we get started?<span>+</span></summary><p>Contact VNW Media with your website, goals, and priorities. We will discuss the current setup and recommend an appropriate scope.</p></details></div></div></section>${serviceDirectoryMarkup(path(""),true)}`;
+  }
   const industry=kind==="industry";
   return hero(industry?"Industry Playbook":"Service",name,description,image)+`<section class="detail section" id="page-content"><div class="shell detail-grid"><div class="reveal"><p class="section-tag">${industry?"Market Strategy":"Service Blueprint"}</p><h2>${industry?"Built around how customers choose.":"Built to connect attention to action."}</h2><p>${description}</p><a class="text-arrow" href="${path("contact.html")}">Plan this with VNW <span>↗</span></a></div><div class="blueprint reveal">${["Strategy and positioning","Trust-first page experience","Search and campaign alignment","Measurement and improvement"].map((x,i)=>`<article><span>0${i+1}</span><h3>${x}</h3><p>A focused layer that helps prospects feel informed, confident, and ready to act.</p></article>`).join("")}</div></div></section>${process()}`;
 }
@@ -864,6 +1088,7 @@ function bootPages(){
   if(!content && id?.startsWith("service-")) content=detail("service",DATA.services.find(x=>x[1]===id.slice(8))||DATA.services[0]);
   if(!content && id?.startsWith("industry-")) content=detail("industry",DATA.industries.find(x=>x[1]===id.slice(9))||DATA.industries[0]);
   if(id==="case-south-carolina-motors") content=southCarolinaMotorsCaseStudy();
+  if(id?.startsWith("case-") && CLIENT_CASE_STUDIES[id.slice(5)]) content=renderClientCaseStudy(CLIENT_CASE_STUDIES[id.slice(5)]);
   if(!content && id?.startsWith("case-")) content=detail("case",DATA.cases.find(x=>x[1]===id.slice(5))||DATA.cases[0]);
   if(!content && id?.startsWith("resource-")) content=detail("resource",DATA.resources.find(x=>x[1]===id.slice(9))||DATA.resources[0]);
   const pageTitle=topPages[id]?.[0] || content.match(/<h1>(.*?)<\/h1>/)?.[1] || "VNW Media";
