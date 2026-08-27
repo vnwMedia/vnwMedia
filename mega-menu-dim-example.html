@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mega Menu Dim Preview | VNW Media</title>
+    <meta name="description" content="Preview of a 40% darker website background behind the Services mega menu." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=105" />
+    <style>
+      body.mega-dim-example::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 85;
+        background: rgba(0, 0, 0, .4);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .22s ease;
+      }
+
+      body.mega-dim-example.mega-menu-dimmed::before {
+        opacity: 1;
+      }
+
+      body.mega-dim-example .site-header {
+        z-index: 100;
+      }
+
+      body.mega-dim-example .site-header .mega-menu {
+        z-index: 120;
+      }
+
+      .dim-preview-note {
+        position: relative;
+        z-index: 1;
+        padding: 42px 0;
+        background: #f3f0ea;
+      }
+
+      .dim-preview-note .shell {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+
+      .dim-preview-note p {
+        max-width: 680px;
+        margin: 0;
+        color: #666;
+        font-size: 18px;
+        line-height: 1.45;
+      }
+
+      .dim-preview-note strong {
+        display: block;
+        margin-bottom: 8px;
+        color: #111;
+        font-family: Fraunces, serif;
+        font-size: clamp(34px, 4vw, 58px);
+        font-weight: 400;
+        letter-spacing: -.05em;
+        line-height: .96;
+      }
+
+      @media (max-width: 760px) {
+        .dim-preview-note .shell {
+          display: block;
+        }
+      }
+    </style>
+    <script defer src="script.js?v=105"></script>
+  </head>
+  <body class="mega-dim-example" data-page="home">
+    <header class="site-header"></header>
+
+    <main id="top">
+      <section class="hero" data-nav-theme="dark">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="shell hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Mega Menu Preview</p>
+            <h1>See the Services menu with a darker page behind it.</h1>
+            <p class="hero-lede">Hover over Services in the top navigation. The page behind the mega menu will dim by 40%, while the dropdown stays sharp and readable.</p>
+            <div class="hero-actions">
+              <a class="pill pill-orange pill-large" href="#preview">Try the hover <span>↗</span></a>
+              <a class="pill pill-outline pill-large" href="index.html?v=97">Back to homepage</a>
+            </div>
+            <div class="hero-proof">
+              <span><b>40% darker</b> stronger background dim</span>
+              <span><b>Menu stays clear</b> stronger focus</span>
+              <span><b>Preview only</b> not applied site-wide</span>
+            </div>
+          </div>
+
+          <form class="hero-form reveal" aria-label="Example form">
+            <h2>Plan your digital<br />growth strategy</h2>
+            <label class="icon-field">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg>
+              <input name="name" autocomplete="name" placeholder="Full Name" aria-label="Full Name" />
+            </label>
+            <label class="icon-field">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 10h18"/><path d="M5 10V7l7-4 7 4v3"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+              <input name="company" autocomplete="organization" placeholder="Business Name" aria-label="Business Name" />
+            </label>
+            <label class="icon-field">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8 9.7a16 16 0 0 0 6.3 6.3l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+              <input name="phone" type="tel" autocomplete="tel" placeholder="Phone Number" aria-label="Phone Number" />
+            </label>
+            <label class="icon-field">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <input name="email" type="email" autocomplete="email" placeholder="Email Address" aria-label="Email Address" />
+            </label>
+            <label class="icon-field">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+              <input name="website" type="url" autocomplete="url" placeholder="Website (Optional)" aria-label="Website (Optional)" />
+            </label>
+            <button type="submit">Submit</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="VNW Media capabilities">
+        <div class="trust-track">
+          <small>Built to move businesses forward</small><i></i>
+          <span>Web Design</span><span>SEO</span><span>Google Ads</span><span>Social Media</span><span>Brand Strategy</span><span>Content</span>
+          <span>Web Design</span><span>SEO</span><span>Google Ads</span><span>Social Media</span>
+        </div>
+      </section>
+
+      <section class="dim-preview-note" id="preview" data-nav-theme="light">
+        <div class="shell">
+          <div>
+            <strong>Preview behavior</strong>
+            <p>Hover or click Services. The website content behind the dropdown gets a 40% dark overlay, while the menu remains bright and active so it is easier to read and click around.</p>
+          </div>
+          <a class="pill pill-blue pill-large" href="#top">Test it again <span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="proof section" data-nav-theme="light">
+        <div class="shell">
+          <div class="proof-heading reveal">
+            <p class="section-tag">Example background</p>
+            <h2>The dim layer is only behind the dropdown.</h2>
+          </div>
+          <div class="proof-pills">
+            <span>Custom-built strategy</span>
+            <span>Mobile-first design</span>
+            <span>Search-ready foundations</span>
+            <span>Conversion-focused UX</span>
+            <span>Transparent recommendations</span>
+            <span>Ongoing support</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const setupDimPreview = () => {
+          const servicesDropdown = document.querySelector(".nav-services");
+          if (!servicesDropdown) return requestAnimationFrame(setupDimPreview);
+
+          const syncDim = () => {
+            const menuIsOpen = servicesDropdown.matches(":hover, :focus-within") || servicesDropdown.classList.contains("mega-open");
+            document.body.classList.toggle("mega-menu-dimmed", menuIsOpen);
+          };
+
+          servicesDropdown.addEventListener("pointerenter", syncDim);
+          servicesDropdown.addEventListener("pointerleave", () => setTimeout(syncDim, 280));
+          servicesDropdown.addEventListener("focusin", syncDim);
+          servicesDropdown.addEventListener("focusout", () => setTimeout(syncDim, 280));
+          document.addEventListener("click", () => setTimeout(syncDim, 0));
+          document.addEventListener("keydown", syncDim);
+          new MutationObserver(syncDim).observe(servicesDropdown, { attributes: true, attributeFilter: ["class"] });
+          syncDim();
+        };
+
+        setupDimPreview();
+      });
+    </script>
+  </body>
+</html>

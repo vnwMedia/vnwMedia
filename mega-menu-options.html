@@ -1,0 +1,1200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Services Mega Menu Options | VNW Media</title>
+    <meta
+      name="description"
+      content="Five alternate services mega menu design directions for the VNW Media website."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --black: #111111;
+        --ink: #141414;
+        --muted: #707070;
+        --line: rgba(17, 17, 17, 0.14);
+        --line-dark: rgba(255, 255, 255, 0.14);
+        --white: #ffffff;
+        --cream: #f3efe8;
+        --cream-2: #faf8f4;
+        --blue: #12ade4;
+        --blue-dark: #059dd3;
+        --panel: #171717;
+        --radius-xl: 34px;
+        --radius-lg: 24px;
+        --shell: min(1440px, calc(100vw - 96px));
+        --serif: "Fraunces", Georgia, serif;
+        --sans: "Inter", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--cream-2);
+        color: var(--ink);
+        font-family: var(--sans);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .mmo-shell {
+        width: var(--shell);
+        margin: 0 auto;
+      }
+
+      .mmo-topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(17, 17, 17, 0.92);
+        backdrop-filter: blur(24px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .mmo-topbar .mmo-shell {
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+
+      .mmo-logo img {
+        width: 194px;
+        display: block;
+      }
+
+      .mmo-jumps {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .mmo-jumps a {
+        display: inline-flex;
+        width: 42px;
+        height: 42px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 999px;
+        transition: 0.22s ease;
+      }
+
+      .mmo-jumps a:hover {
+        color: #fff;
+        border-color: rgba(18, 173, 228, 0.8);
+        background: rgba(18, 173, 228, 0.16);
+      }
+
+      .mmo-home-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 22px;
+        border-radius: 999px;
+        background: var(--blue);
+        color: #fff;
+        font-weight: 800;
+        font-size: 14px;
+        transition: transform 0.22s ease, background 0.22s ease;
+      }
+
+      .mmo-home-link:hover {
+        transform: translateY(-2px);
+        background: var(--blue-dark);
+      }
+
+      .mmo-hero {
+        background:
+          radial-gradient(circle at 78% 6%, rgba(18, 173, 228, 0.22), transparent 32%),
+          linear-gradient(135deg, #071014 0%, #111 48%, #171717 100%);
+        color: #fff;
+        padding: 108px 0 78px;
+      }
+
+      .mmo-hero-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 0.65fr;
+        gap: 80px;
+        align-items: end;
+      }
+
+      .mmo-eyebrow,
+      .mmo-option-kicker,
+      .mmo-nav-mini,
+      .mmo-small-label {
+        margin: 0;
+        color: var(--blue);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .mmo-hero h1,
+      .mmo-option-head h2 {
+        margin: 18px 0 0;
+        font-family: var(--serif);
+        font-weight: 400;
+        line-height: 0.92;
+        letter-spacing: -0.05em;
+      }
+
+      .mmo-hero h1 {
+        max-width: 850px;
+        font-size: clamp(64px, 8vw, 132px);
+      }
+
+      .mmo-hero p:last-child {
+        max-width: 610px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 21px;
+        line-height: 1.55;
+      }
+
+      .mmo-hero-note {
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+        padding-top: 28px;
+      }
+
+      .mmo-option {
+        padding: 112px 0;
+      }
+
+      .mmo-option:nth-child(even) {
+        background: var(--cream);
+      }
+
+      .mmo-option:nth-child(odd) {
+        background: #fff;
+      }
+
+      .mmo-option.is-dark {
+        background: #090909;
+        color: #fff;
+      }
+
+      .mmo-option-head {
+        display: grid;
+        grid-template-columns: 0.95fr 0.55fr;
+        gap: 70px;
+        align-items: end;
+        margin-bottom: 44px;
+      }
+
+      .mmo-option-head h2 {
+        font-size: clamp(48px, 5.2vw, 88px);
+      }
+
+      .mmo-option-head p:last-child {
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.55;
+      }
+
+      .is-dark .mmo-option-head p:last-child {
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      .mmo-demo {
+        border: 1px solid var(--line);
+        background: #fff;
+        overflow: visible;
+        box-shadow: 0 22px 80px rgba(0, 0, 0, 0.08);
+      }
+
+      .is-dark .mmo-demo {
+        border-color: rgba(255, 255, 255, 0.12);
+        box-shadow: 0 22px 80px rgba(0, 0, 0, 0.28);
+      }
+
+      .mmo-demo-nav {
+        min-height: 86px;
+        padding: 0 42px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        background:
+          linear-gradient(90deg, rgba(5, 39, 51, 0.92), rgba(17, 17, 17, 0.88)),
+          #111;
+        color: #fff;
+      }
+
+      .mmo-demo-logo {
+        width: 184px;
+        display: block;
+      }
+
+      .mmo-demo-links {
+        display: flex;
+        align-items: center;
+        gap: 31px;
+        font-size: 15px;
+        font-weight: 800;
+      }
+
+      .mmo-demo-links span {
+        opacity: 0.76;
+      }
+
+      .mmo-demo-links .active {
+        color: #fff;
+        opacity: 1;
+      }
+
+      .mmo-demo-cta {
+        min-width: 132px;
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        background: var(--blue);
+        color: #fff;
+        font-weight: 900;
+      }
+
+      .mmo-menu-surface {
+        position: relative;
+        padding: 42px;
+      }
+
+      .mmo-menu-surface.dark {
+        background: #111;
+        color: #fff;
+      }
+
+      .mmo-menu-surface.cream {
+        background: var(--cream);
+      }
+
+      .mmo-link-arrow {
+        color: var(--blue);
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      /* Option 01 */
+      .mmo-diagnostic {
+        display: grid;
+        grid-template-columns: 0.48fr 1fr;
+        gap: 36px;
+        align-items: stretch;
+      }
+
+      .mmo-diagnostic-intro {
+        padding: 38px;
+        background: #111;
+        color: #fff;
+        min-height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .mmo-diagnostic-intro h3 {
+        max-width: 420px;
+        margin: 18px 0 24px;
+        font-family: var(--serif);
+        font-size: clamp(38px, 4.2vw, 72px);
+        line-height: 0.93;
+        letter-spacing: -0.055em;
+        font-weight: 400;
+      }
+
+      .mmo-diagnostic-intro p:not(.mmo-small-label) {
+        color: rgba(255, 255, 255, 0.68);
+        font-size: 17px;
+        line-height: 1.55;
+      }
+
+      .mmo-mini-pill {
+        display: inline-flex;
+        width: max-content;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        border-radius: 999px;
+        background: var(--blue);
+        color: #fff;
+        font-weight: 900;
+      }
+
+      .mmo-symptom-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+      }
+
+      .mmo-symptom-card {
+        min-height: 214px;
+        padding: 26px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: background 0.22s ease, color 0.22s ease;
+      }
+
+      .mmo-symptom-card:hover {
+        background: var(--blue);
+        color: #fff;
+      }
+
+      .mmo-symptom-card span {
+        color: var(--blue);
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .mmo-symptom-card:hover span,
+      .mmo-symptom-card:hover p {
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .mmo-symptom-card h4 {
+        margin: 22px 0 12px;
+        font-family: var(--serif);
+        font-size: 29px;
+        line-height: 1;
+        letter-spacing: -0.035em;
+        font-weight: 400;
+      }
+
+      .mmo-symptom-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      /* Option 02 */
+      .mmo-system {
+        display: grid;
+        grid-template-columns: 0.38fr 0.62fr;
+        min-height: 540px;
+      }
+
+      .mmo-system-left {
+        padding: 44px;
+        background:
+          radial-gradient(circle at 10% 15%, rgba(18, 173, 228, 0.18), transparent 34%),
+          #0d0d0d;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .mmo-system-left h3 {
+        max-width: 420px;
+        margin: 18px 0;
+        font-family: var(--serif);
+        font-size: clamp(44px, 5vw, 78px);
+        line-height: 0.91;
+        letter-spacing: -0.055em;
+        font-weight: 400;
+      }
+
+      .mmo-system-left p {
+        color: rgba(255, 255, 255, 0.68);
+        line-height: 1.55;
+      }
+
+      .mmo-system-right {
+        padding: 38px 42px;
+        background: #f8f6f1;
+      }
+
+      .mmo-system-row {
+        min-height: 104px;
+        display: grid;
+        grid-template-columns: 118px 1fr 120px;
+        gap: 26px;
+        align-items: center;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .mmo-system-row:first-child {
+        border-top: 1px solid var(--line);
+      }
+
+      .mmo-system-row small {
+        color: var(--blue);
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .mmo-system-row strong {
+        font-family: var(--serif);
+        font-size: 38px;
+        line-height: 0.96;
+        letter-spacing: -0.035em;
+        font-weight: 400;
+      }
+
+      .mmo-system-row p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      /* Option 03 */
+      .mmo-editorial-menu {
+        display: grid;
+        grid-template-columns: 0.38fr 0.62fr;
+        min-height: 530px;
+        background: #fff;
+      }
+
+      .mmo-editorial-aside {
+        padding: 44px;
+        border-right: 1px solid var(--line);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .mmo-editorial-aside h3 {
+        margin: 18px 0 18px;
+        font-family: var(--serif);
+        font-size: clamp(46px, 5vw, 88px);
+        line-height: 0.9;
+        letter-spacing: -0.06em;
+        font-weight: 400;
+      }
+
+      .mmo-editorial-aside p {
+        max-width: 410px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .mmo-editorial-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .mmo-editorial-link {
+        min-height: 132px;
+        padding: 28px 30px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        display: grid;
+        grid-template-columns: 42px 1fr 24px;
+        gap: 18px;
+        align-items: center;
+      }
+
+      .mmo-editorial-link:nth-child(even) {
+        border-right: 0;
+      }
+
+      .mmo-editorial-link small {
+        color: var(--blue);
+        font-weight: 900;
+      }
+
+      .mmo-editorial-link strong {
+        font-family: var(--serif);
+        font-size: 30px;
+        line-height: 0.96;
+        letter-spacing: -0.035em;
+        font-weight: 400;
+      }
+
+      .mmo-editorial-link span:last-child {
+        color: var(--blue);
+        font-size: 22px;
+        font-weight: 900;
+      }
+
+      /* Option 04 */
+      .mmo-command {
+        background:
+          radial-gradient(circle at 70% 18%, rgba(18, 173, 228, 0.24), transparent 34%),
+          linear-gradient(135deg, #050505 0%, #111 45%, #051922 100%);
+        color: #fff;
+      }
+
+      .mmo-command-grid {
+        display: grid;
+        grid-template-columns: 0.58fr 0.42fr;
+        gap: 42px;
+      }
+
+      .mmo-command-board {
+        min-height: 520px;
+        padding: 44px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        background: rgba(255, 255, 255, 0.035);
+        backdrop-filter: blur(16px);
+      }
+
+      .mmo-command-board h3 {
+        max-width: 590px;
+        margin: 18px 0 32px;
+        font-family: var(--serif);
+        font-size: clamp(46px, 5vw, 84px);
+        line-height: 0.9;
+        letter-spacing: -0.06em;
+        font-weight: 400;
+      }
+
+      .mmo-command-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .mmo-command-pills a {
+        display: inline-flex;
+        min-height: 56px;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        padding: 0 23px;
+        font-weight: 850;
+        color: rgba(255, 255, 255, 0.78);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .mmo-command-pills a:nth-child(2n) {
+        background: var(--blue);
+        color: #fff;
+        border-color: transparent;
+      }
+
+      .mmo-command-rail {
+        display: grid;
+        gap: 16px;
+      }
+
+      .mmo-command-rail article {
+        padding: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .mmo-command-rail span {
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .mmo-command-rail h4 {
+        margin: 16px 0 8px;
+        font-family: var(--serif);
+        font-size: 32px;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        font-weight: 400;
+      }
+
+      .mmo-command-rail p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.66);
+        line-height: 1.45;
+      }
+
+      /* Option 05 */
+      .mmo-outcome {
+        display: grid;
+        grid-template-columns: 0.44fr 0.56fr;
+        min-height: 540px;
+        background: #111;
+        color: #fff;
+      }
+
+      .mmo-outcome-copy {
+        padding: 44px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .mmo-outcome-copy h3 {
+        max-width: 500px;
+        margin: 18px 0;
+        font-family: var(--serif);
+        font-size: clamp(44px, 5vw, 82px);
+        line-height: 0.91;
+        letter-spacing: -0.055em;
+        font-weight: 400;
+      }
+
+      .mmo-outcome-copy p {
+        color: rgba(255, 255, 255, 0.68);
+        line-height: 1.55;
+      }
+
+      .mmo-outcome-paths {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .mmo-path {
+        min-height: 270px;
+        padding: 32px;
+        border-right: 1px solid rgba(255, 255, 255, 0.12);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: background 0.22s ease, color 0.22s ease;
+      }
+
+      .mmo-path:hover {
+        background: var(--blue);
+      }
+
+      .mmo-path small {
+        color: var(--blue);
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .mmo-path:hover small,
+      .mmo-path:hover p {
+        color: rgba(255, 255, 255, 0.86);
+      }
+
+      .mmo-path h4 {
+        margin: 20px 0 12px;
+        font-family: var(--serif);
+        font-size: 36px;
+        line-height: 0.96;
+        letter-spacing: -0.045em;
+        font-weight: 400;
+      }
+
+      .mmo-path p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.62);
+        line-height: 1.45;
+      }
+
+      .mmo-note {
+        margin-top: 36px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .is-dark .mmo-note {
+        border-color: rgba(255, 255, 255, 0.16);
+        color: rgba(255, 255, 255, 0.62);
+      }
+
+      @media (max-width: 1120px) {
+        :root {
+          --shell: min(100% - 40px, 940px);
+        }
+
+        .mmo-hero-grid,
+        .mmo-option-head,
+        .mmo-diagnostic,
+        .mmo-system,
+        .mmo-editorial-menu,
+        .mmo-command-grid,
+        .mmo-outcome {
+          grid-template-columns: 1fr;
+        }
+
+        .mmo-system-row {
+          grid-template-columns: 90px 1fr;
+        }
+
+        .mmo-system-row p {
+          grid-column: 2;
+        }
+
+        .mmo-editorial-aside,
+        .mmo-outcome-copy {
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .mmo-outcome-copy {
+          border-color: rgba(255, 255, 255, 0.12);
+        }
+      }
+
+      @media (max-width: 780px) {
+        .mmo-topbar .mmo-shell,
+        .mmo-demo-nav {
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 18px 20px;
+        }
+
+        .mmo-jumps {
+          order: 3;
+          width: 100%;
+          justify-content: center;
+        }
+
+        .mmo-demo-links {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 16px;
+        }
+
+        .mmo-option {
+          padding: 72px 0;
+        }
+
+        .mmo-menu-surface {
+          padding: 22px;
+        }
+
+        .mmo-symptom-grid,
+        .mmo-editorial-list,
+        .mmo-outcome-paths {
+          grid-template-columns: 1fr;
+        }
+
+        .mmo-editorial-link:nth-child(even) {
+          border-right: 1px solid var(--line);
+        }
+
+        .mmo-hero {
+          padding: 74px 0 54px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="mmo-topbar" aria-label="Mega menu option preview navigation">
+      <div class="mmo-shell">
+        <a class="mmo-logo" href="index.html?v=92">
+          <img src="assets/vnwMedia-LogoBlk.png" alt="VNW Media" />
+        </a>
+        <div class="mmo-jumps" aria-label="Jump to option">
+          <a href="#option-01">01</a>
+          <a href="#option-02">02</a>
+          <a href="#option-03">03</a>
+          <a href="#option-04">04</a>
+          <a href="#option-05">05</a>
+        </div>
+        <a class="mmo-home-link" href="index.html?v=92">Back home ↗</a>
+      </div>
+    </nav>
+
+    <header class="mmo-hero">
+      <div class="mmo-shell mmo-hero-grid">
+        <div>
+          <p class="mmo-eyebrow">Services Mega Menu / New Directions</p>
+          <h1>Five ways the Services menu can feel more agency-level.</h1>
+        </div>
+        <div class="mmo-hero-note">
+          <p>
+            I left the live navigation untouched. These are open-state menu previews so you can pick
+            the structure and mood before we replace the current mega menu.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="mmo-option" id="option-01">
+        <div class="mmo-shell">
+          <div class="mmo-option-head">
+            <div>
+              <p class="mmo-option-kicker">Option 01 / Diagnostic Menu</p>
+              <h2>Problem-first, like Resource Option 2.</h2>
+            </div>
+            <p>
+              Best if the menu should feel useful immediately. Instead of a plain service list, it
+              asks what the visitor is trying to fix and points them to the right service path.
+            </p>
+          </div>
+
+          <div class="mmo-demo">
+            <div class="mmo-demo-nav">
+              <img class="mmo-demo-logo" src="assets/vnwMedia-LogoBlk.png" alt="VNW Media" />
+              <div class="mmo-demo-links">
+                <span>Our Story</span>
+                <span>Work</span>
+                <span class="active">Services ⌄</span>
+                <span>Industries</span>
+                <span>Case Studies</span>
+                <span>Resources</span>
+              </div>
+              <span class="mmo-demo-cta">Get Started</span>
+            </div>
+            <div class="mmo-menu-surface">
+              <div class="mmo-diagnostic">
+                <aside class="mmo-diagnostic-intro">
+                  <div>
+                    <p class="mmo-small-label">Choose the symptom</p>
+                    <h3>Find what is blocking the next lead.</h3>
+                    <p>
+                      A menu that feels more consultative — visibility, trust, conversion, and
+                      follow-up are framed as real business problems.
+                    </p>
+                  </div>
+                  <a class="mmo-mini-pill" href="services.html?v=92">View all services ↗</a>
+                </aside>
+                <div class="mmo-symptom-grid">
+                  <a class="mmo-symptom-card" href="services/web-design.html">
+                    <span>01 / Website</span>
+                    <div>
+                      <h4>“The site does not explain us clearly.”</h4>
+                      <p>Web design, UX, conversion paths, service pages.</p>
+                    </div>
+                    <b class="mmo-link-arrow">Open path ↗</b>
+                  </a>
+                  <a class="mmo-symptom-card" href="services/seo.html">
+                    <span>02 / Search</span>
+                    <div>
+                      <h4>“People are not finding us on Google.”</h4>
+                      <p>SEO, local visibility, content, technical foundations.</p>
+                    </div>
+                    <b class="mmo-link-arrow">Open path ↗</b>
+                  </a>
+                  <a class="mmo-symptom-card" href="services/google-ppc.html">
+                    <span>03 / Paid Growth</span>
+                    <div>
+                      <h4>“Ads are running, but leads feel weak.”</h4>
+                      <p>Google PPC, landing pages, tracking, lead quality.</p>
+                    </div>
+                    <b class="mmo-link-arrow">Open path ↗</b>
+                  </a>
+                  <a class="mmo-symptom-card" href="services/reputation-management.html">
+                    <span>04 / Trust</span>
+                    <div>
+                      <h4>“Visitors need proof before they call.”</h4>
+                      <p>Reviews, reputation, social proof, brand trust systems.</p>
+                    </div>
+                    <b class="mmo-link-arrow">Open path ↗</b>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mmo-note">
+            My read: this is closest to the reference page you liked. It feels strategic, not just
+            decorative.
+          </p>
+        </div>
+      </section>
+
+      <section class="mmo-option" id="option-02">
+        <div class="mmo-shell">
+          <div class="mmo-option-head">
+            <div>
+              <p class="mmo-option-kicker">Option 02 / Agency Split</p>
+              <h2>A clean split between strategy and services.</h2>
+            </div>
+            <p>
+              This version keeps the VNW agency feel: one bold strategic message on the left, with
+              service routes grouped into a calm, readable system on the right.
+            </p>
+          </div>
+
+          <div class="mmo-demo">
+            <div class="mmo-demo-nav">
+              <img class="mmo-demo-logo" src="assets/vnwMedia-LogoBlk.png" alt="VNW Media" />
+              <div class="mmo-demo-links">
+                <span>Our Story</span>
+                <span>Work</span>
+                <span class="active">Services ⌄</span>
+                <span>Industries</span>
+                <span>Case Studies</span>
+                <span>Resources</span>
+              </div>
+              <span class="mmo-demo-cta">Get Started</span>
+            </div>
+            <div class="mmo-system">
+              <aside class="mmo-system-left">
+                <div>
+                  <p class="mmo-small-label">Full-service digital partner</p>
+                  <h3>Build one system, not disconnected marketing pieces.</h3>
+                  <p>
+                    Good for a premium services menu that positions VNW as the operator connecting
+                    website, visibility, proof, campaigns, and follow-up.
+                  </p>
+                </div>
+                <a class="mmo-mini-pill" href="contact.html">Plan the system ↗</a>
+              </aside>
+              <div class="mmo-system-right">
+                <a class="mmo-system-row" href="services/web-design.html">
+                  <small>01</small>
+                  <strong>Website & UX</strong>
+                  <p>Web design, service pages, landing pages, mobile-first lead paths.</p>
+                </a>
+                <a class="mmo-system-row" href="services/seo.html">
+                  <small>02</small>
+                  <strong>Visibility</strong>
+                  <p>SEO, content writing, GEO readiness, local search structure.</p>
+                </a>
+                <a class="mmo-system-row" href="services/google-ppc.html">
+                  <small>03</small>
+                  <strong>Campaigns</strong>
+                  <p>Google PPC, social media, email marketing, text marketing.</p>
+                </a>
+                <a class="mmo-system-row" href="services/reputation-management.html">
+                  <small>04</small>
+                  <strong>Trust & retention</strong>
+                  <p>Reputation, reviews, brand strategy, analytics, follow-up.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mmo-option" id="option-03">
+        <div class="mmo-shell">
+          <div class="mmo-option-head">
+            <div>
+              <p class="mmo-option-kicker">Option 03 / Editorial Index</p>
+              <h2>A refined service directory with no heavy menu boxes.</h2>
+            </div>
+            <p>
+              This one is quieter and more editorial. It gives every service room to breathe and
+              makes the menu feel like a premium contents page.
+            </p>
+          </div>
+
+          <div class="mmo-demo">
+            <div class="mmo-demo-nav">
+              <img class="mmo-demo-logo" src="assets/vnwMedia-LogoBlk.png" alt="VNW Media" />
+              <div class="mmo-demo-links">
+                <span>Our Story</span>
+                <span>Work</span>
+                <span class="active">Services ⌄</span>
+                <span>Industries</span>
+                <span>Case Studies</span>
+                <span>Resources</span>
+              </div>
+              <span class="mmo-demo-cta">Get Started</span>
+            </div>
+            <div class="mmo-editorial-menu">
+              <aside class="mmo-editorial-aside">
+                <div>
+                  <p class="mmo-small-label">Services index</p>
+                  <h3>Choose the capability you need next.</h3>
+                  <p>
+                    A minimal direction that could work well if you want the dropdown to feel less
+                    “app UI” and more like the rest of the website’s typography.
+                  </p>
+                </div>
+                <a class="mmo-mini-pill" href="services.html?v=92">Explore services ↗</a>
+              </aside>
+              <div class="mmo-editorial-list">
+                <a class="mmo-editorial-link" href="services/web-design.html">
+                  <small>01</small><strong>Web Design</strong><span>↗</span>
+                </a>
+                <a class="mmo-editorial-link" href="services/seo.html">
+                  <small>02</small><strong>SEO</strong><span>↗</span>
+                </a>
+                <a class="mmo-editorial-link" href="services/google-ppc.html">
+                  <small>03</small><strong>Google PPC</strong><span>↗</span>
+                </a>
+                <a class="mmo-editorial-link" href="services/social-media.html">
+                  <small>04</small><strong>Social Media</strong><span>↗</span>
+                </a>
+                <a class="mmo-editorial-link" href="services/reputation-management.html">
+                  <small>05</small><strong>Reputation</strong><span>↗</span>
+                </a>
+                <a class="mmo-editorial-link" href="services/ecommerce.html">
+                  <small>06</small><strong>eCommerce</strong><span>↗</span>
+                </a>
+                <a class="mmo-editorial-link" href="services/content-writing.html">
+                  <small>07</small><strong>Content Writing</strong><span>↗</span>
+                </a>
+                <a class="mmo-editorial-link" href="services/brand-strategy.html">
+                  <small>08</small><strong>Brand Strategy</strong><span>↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mmo-option is-dark" id="option-04">
+        <div class="mmo-shell">
+          <div class="mmo-option-head">
+            <div>
+              <p class="mmo-option-kicker">Option 04 / Command Center</p>
+              <h2>A bold dark menu for a full-service agency.</h2>
+            </div>
+            <p>
+              This is the most “modern digital agency” direction. It uses grouped service pills and
+              a right-side rail to show that VNW thinks in systems.
+            </p>
+          </div>
+
+          <div class="mmo-demo">
+            <div class="mmo-demo-nav">
+              <img class="mmo-demo-logo" src="assets/vnwMedia-LogoBlk.png" alt="VNW Media" />
+              <div class="mmo-demo-links">
+                <span>Our Story</span>
+                <span>Work</span>
+                <span class="active">Services ⌄</span>
+                <span>Industries</span>
+                <span>Case Studies</span>
+                <span>Resources</span>
+              </div>
+              <span class="mmo-demo-cta">Get Started</span>
+            </div>
+            <div class="mmo-menu-surface mmo-command">
+              <div class="mmo-command-grid">
+                <div class="mmo-command-board">
+                  <p class="mmo-small-label">Capability map</p>
+                  <h3>Pick the service layer that moves the business forward.</h3>
+                  <div class="mmo-command-pills">
+                    <a href="services/web-design.html">Website design and redesign</a>
+                    <a href="services/seo.html">SEO and local search visibility</a>
+                    <a href="services/google-ppc.html">Google Ads and paid search</a>
+                    <a href="services/social-media.html">Social media and content</a>
+                    <a href="services/reputation-management.html">Review and reputation systems</a>
+                    <a href="services/email-marketing.html">Email and text follow-up</a>
+                    <a href="services/ecommerce.html">eCommerce and landing pages</a>
+                    <a href="services/brand-strategy.html">Analytics, brand, and reporting</a>
+                  </div>
+                </div>
+                <aside class="mmo-command-rail">
+                  <article>
+                    <span>Start here</span>
+                    <h4>Need more qualified calls?</h4>
+                    <p>Start with website UX, local SEO, paid search, and contact paths.</p>
+                  </article>
+                  <article>
+                    <span>Growth engine</span>
+                    <h4>Need repeatable demand?</h4>
+                    <p>Use campaigns, content, tracking, and follow-up as one system.</p>
+                  </article>
+                  <article>
+                    <span>Proof layer</span>
+                    <h4>Need stronger trust?</h4>
+                    <p>Make reviews, case studies, proof, and reputation impossible to miss.</p>
+                  </article>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mmo-option" id="option-05">
+        <div class="mmo-shell">
+          <div class="mmo-option-head">
+            <div>
+              <p class="mmo-option-kicker">Option 05 / Outcome Paths</p>
+              <h2>A menu organized by what the client wants.</h2>
+            </div>
+            <p>
+              This is more buyer-friendly than a traditional service list. It routes people by
+              outcome: more calls, more visibility, more trust, or more sales.
+            </p>
+          </div>
+
+          <div class="mmo-demo">
+            <div class="mmo-demo-nav">
+              <img class="mmo-demo-logo" src="assets/vnwMedia-LogoBlk.png" alt="VNW Media" />
+              <div class="mmo-demo-links">
+                <span>Our Story</span>
+                <span>Work</span>
+                <span class="active">Services ⌄</span>
+                <span>Industries</span>
+                <span>Case Studies</span>
+                <span>Resources</span>
+              </div>
+              <span class="mmo-demo-cta">Get Started</span>
+            </div>
+            <div class="mmo-outcome">
+              <aside class="mmo-outcome-copy">
+                <div>
+                  <p class="mmo-small-label">Choose the outcome</p>
+                  <h3>Let the menu help visitors self-select.</h3>
+                  <p>
+                    This could work if you want less service jargon and more “here is the business
+                    problem we solve.”
+                  </p>
+                </div>
+                <a class="mmo-mini-pill" href="contact.html">Get a recommendation ↗</a>
+              </aside>
+              <div class="mmo-outcome-paths">
+                <a class="mmo-path" href="services/web-design.html">
+                  <small>More calls</small>
+                  <div>
+                    <h4>Turn visitors into inquiries.</h4>
+                    <p>Web design, landing pages, UX, forms, call paths, tracking.</p>
+                  </div>
+                  <b>Open path ↗</b>
+                </a>
+                <a class="mmo-path" href="services/seo.html">
+                  <small>More visibility</small>
+                  <div>
+                    <h4>Show up where buyers search.</h4>
+                    <p>SEO, local content, GEO readiness, service-area pages.</p>
+                  </div>
+                  <b>Open path ↗</b>
+                </a>
+                <a class="mmo-path" href="services/reputation-management.html">
+                  <small>More trust</small>
+                  <div>
+                    <h4>Make proof easy to believe.</h4>
+                    <p>Reviews, reputation, brand strategy, case studies, social proof.</p>
+                  </div>
+                  <b>Open path ↗</b>
+                </a>
+                <a class="mmo-path" href="services/google-ppc.html">
+                  <small>More demand</small>
+                  <div>
+                    <h4>Build repeatable lead flow.</h4>
+                    <p>PPC, social, email, text marketing, content, campaign tracking.</p>
+                  </div>
+                  <b>Open path ↗</b>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <p class="mmo-note">
+            My instinct: Option 01 is strongest if we want “helpful and strategic.” Option 03 is
+            strongest if we want “quiet and premium.” Option 04 is strongest if you want the menu to
+            feel the most modern.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

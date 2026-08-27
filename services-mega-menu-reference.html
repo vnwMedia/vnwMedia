@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Services Mega Menu Reference | VNW Media</title>
+    <meta
+      name="description"
+      content="A Services mega menu example for VNW Media based on the provided Our Story Option 5 navigation style."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --black: #0b0b0b;
+        --panel: rgba(13, 13, 13, 0.94);
+        --panel-soft: rgba(18, 18, 18, 0.92);
+        --cream: #f4f1ec;
+        --white: #ffffff;
+        --blue: #12ade4;
+        --blue-dark: #049bd0;
+        --muted: #a9a9a9;
+        --line: rgba(255, 255, 255, 0.12);
+        --shell: min(1280px, calc(100vw - 92px));
+        --serif: "Fraunces", Georgia, serif;
+        --sans: "Inter", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: #f7f4ef;
+        color: #111;
+        font-family: var(--sans);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .shell {
+        width: var(--shell);
+        margin: 0 auto;
+      }
+
+      .preview-note {
+        background: #050505;
+        color: rgba(255, 255, 255, 0.72);
+        padding: 12px 0;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .preview-note .shell {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+      }
+
+      .preview-note a {
+        color: var(--blue);
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background:
+          linear-gradient(90deg, rgba(6, 17, 22, 0.92), rgba(12, 12, 12, 0.88)),
+          rgba(12, 12, 12, 0.92);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(22px);
+        -webkit-backdrop-filter: blur(22px);
+      }
+
+      .nav {
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .logo img {
+        width: 192px;
+        display: block;
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 15px;
+        font-weight: 800;
+      }
+
+      .nav-menu a,
+      .nav-menu span {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        white-space: nowrap;
+      }
+
+      .nav-menu .is-open {
+        color: #fff;
+      }
+
+      .caret {
+        width: 7px;
+        height: 7px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: rotate(-135deg) translateY(-1px);
+        opacity: 0.8;
+      }
+
+      .pill-blue {
+        min-height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        padding: 0 24px;
+        border-radius: 999px;
+        background: var(--blue);
+        color: #fff;
+        font-weight: 900;
+        transition: 0.22s ease;
+      }
+
+      .pill-blue:hover {
+        transform: translateY(-2px);
+        background: var(--blue-dark);
+      }
+
+      .stage {
+        position: relative;
+        min-height: 1020px;
+        overflow: hidden;
+        background: #111;
+      }
+
+      .stage::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(3, 3, 3, 0.92), rgba(3, 3, 3, 0.76), rgba(3, 3, 3, 0.38)),
+          url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2200&q=84");
+        background-size: cover;
+        background-position: center;
+        filter: saturate(0.9) contrast(1.02);
+        transform: scale(1.02);
+      }
+
+      .stage::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.44);
+      }
+
+      .hero-copy {
+        position: relative;
+        z-index: 2;
+        padding-top: 164px;
+        color: #fff;
+      }
+
+      .eyebrow,
+      .mega-feature span,
+      .mega-column h3 {
+        margin: 0;
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .hero-copy h1 {
+        max-width: 800px;
+        margin: 22px 0 18px;
+        font-family: var(--serif);
+        font-size: clamp(64px, 7vw, 124px);
+        line-height: 0.9;
+        letter-spacing: -0.055em;
+        font-weight: 400;
+      }
+
+      .hero-copy p:last-child {
+        max-width: 620px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.68);
+        font-size: 21px;
+        line-height: 1.5;
+      }
+
+      .service-mega-reference {
+        position: absolute;
+        z-index: 10;
+        top: 88px;
+        left: 50%;
+        width: min(1220px, calc(100vw - 70px));
+        transform: translateX(-50%);
+        display: grid;
+        grid-template-columns: 306px 1fr;
+        gap: 34px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 30px;
+        background: var(--panel);
+        box-shadow: 0 30px 110px rgba(0, 0, 0, 0.58);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+      }
+
+      .mega-feature {
+        min-height: 790px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px 28px 30px;
+        border-radius: 26px;
+        background: var(--cream);
+        color: #111;
+      }
+
+      .mega-feature strong {
+        display: block;
+        max-width: 250px;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 37px;
+        line-height: 0.92;
+        letter-spacing: -0.055em;
+        font-weight: 500;
+      }
+
+      .mega-feature p {
+        max-width: 245px;
+        margin: 0 0 28px;
+        color: #646464;
+        font-size: 15px;
+        line-height: 1.55;
+        font-weight: 600;
+      }
+
+      .mega-feature .pill-blue {
+        width: max-content;
+        min-height: 48px;
+        padding: 0 19px;
+        font-size: 13px;
+      }
+
+      .mega-columns {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 42px 54px;
+        align-content: start;
+        padding: 18px 4px 16px;
+      }
+
+      .mega-column h3 {
+        margin: 0 0 18px;
+      }
+
+      .mega-column a {
+        display: block;
+        padding: 0 0 12px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 14px;
+        font-weight: 750;
+        line-height: 1.25;
+        transition: color 0.18s ease, transform 0.18s ease;
+      }
+
+      .mega-column a:hover {
+        color: var(--blue);
+        transform: translateX(3px);
+      }
+
+      .ticker {
+        position: absolute;
+        z-index: 8;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        gap: 42px;
+        overflow: hidden;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(14, 14, 14, 0.96);
+        color: rgba(255, 255, 255, 0.75);
+        font-family: var(--serif);
+        font-size: 22px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .ticker-track {
+        display: flex;
+        gap: 42px;
+        animation: ticker 34s linear infinite;
+      }
+
+      @keyframes ticker {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .below {
+        padding: 104px 0 130px;
+        background: #fff;
+      }
+
+      .below-grid {
+        display: grid;
+        grid-template-columns: 0.42fr 0.58fr;
+        gap: 88px;
+        align-items: start;
+      }
+
+      .below h2 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(48px, 6vw, 96px);
+        line-height: 0.92;
+        letter-spacing: -0.055em;
+        font-weight: 400;
+      }
+
+      .below p {
+        margin: 0;
+        color: #686868;
+        font-size: 21px;
+        line-height: 1.55;
+      }
+
+      @media (max-width: 1160px) {
+        :root {
+          --shell: min(100% - 42px, 900px);
+        }
+
+        .nav {
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 18px 0;
+        }
+
+        .service-mega-reference {
+          position: relative;
+          top: auto;
+          margin: 34px auto 100px;
+          grid-template-columns: 1fr;
+        }
+
+        .mega-feature {
+          min-height: 360px;
+        }
+
+        .mega-columns {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .hero-copy {
+          padding-top: 82px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .preview-note .shell {
+          display: block;
+          line-height: 1.6;
+        }
+
+        .nav-menu {
+          width: 100%;
+          flex-wrap: wrap;
+          gap: 14px 18px;
+          font-size: 13px;
+        }
+
+        .service-mega-reference {
+          width: min(100% - 24px, 520px);
+          padding: 12px;
+          border-radius: 24px;
+        }
+
+        .mega-feature {
+          padding: 26px 22px;
+          border-radius: 20px;
+        }
+
+        .mega-feature strong {
+          font-size: 34px;
+        }
+
+        .mega-columns {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          padding: 18px 10px 20px;
+        }
+
+        .below-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preview-note">
+      <div class="shell">
+        <span>Services mega menu reference example — based on the layout you provided</span>
+        <a href="index.html?v=92">Back to homepage ↗</a>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Main navigation preview">
+        <a class="logo" href="index.html?v=92" aria-label="VNW Media home">
+          <img src="assets/vnwMedia-LogoBlk.png" alt="VNW Media" />
+        </a>
+        <div class="nav-menu">
+          <a href="our-story.html">Our Story</a>
+          <span>Work <i class="caret" style="transform: rotate(45deg);"></i></span>
+          <span class="is-open">Services <i class="caret"></i></span>
+          <span>Industries <i class="caret" style="transform: rotate(45deg);"></i></span>
+          <span>Case Studies <i class="caret" style="transform: rotate(45deg);"></i></span>
+          <span>Resources <i class="caret" style="transform: rotate(45deg);"></i></span>
+        </div>
+        <a class="pill-blue" href="contact.html">Get Started <i class="caret" style="transform: rotate(45deg);"></i></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="stage">
+        <div class="shell hero-copy">
+          <p class="eyebrow">Services mega menu</p>
+          <h1>A full-service menu with the structure you liked.</h1>
+          <p>
+            This preview keeps the exact feel of the reference: dark glass overlay, white feature
+            card, grouped service columns, and a premium agency-style navigation moment.
+          </p>
+        </div>
+
+        <div class="service-mega-reference" aria-label="Open services mega menu preview">
+          <aside class="mega-feature">
+            <span>Full service</span>
+            <strong>Everything needed to attract, convert, and retain better leads.</strong>
+            <div>
+              <p>
+                From web design and SEO to paid ads, AI visibility, reputation, and tracking.
+              </p>
+              <a class="pill-blue" href="services.html?v=92">Explore Services ↗</a>
+            </div>
+          </aside>
+
+          <div class="mega-columns">
+            <div class="mega-column">
+              <h3>Web Design & Development</h3>
+              <a href="services/web-design.html">Custom Website Design</a>
+              <a href="services/web-design.html">Website Redesign</a>
+              <a href="services/web-design.html">WordPress Development</a>
+              <a href="services/ecommerce.html">eCommerce Development</a>
+              <a href="services/ecommerce.html">Shopify Development</a>
+              <a href="services/ecommerce.html">WooCommerce Development</a>
+              <a href="services/web-design.html">Landing Page Design</a>
+              <a href="services/web-design.html">UI/UX Design</a>
+              <a href="services/web-design.html">Mobile Responsive Development</a>
+              <a href="services/web-design.html">Website Maintenance</a>
+              <a href="services/web-design.html">Website Speed Optimization</a>
+            </div>
+
+            <div class="mega-column">
+              <h3>SEO & Organic Search</h3>
+              <a href="services/seo.html">Search Engine Optimization</a>
+              <a href="services/seo.html">Local SEO</a>
+              <a href="services/seo.html">Technical SEO</a>
+              <a href="services/seo.html">On-Page SEO</a>
+              <a href="services/seo.html">Keyword Research</a>
+              <a href="services/content-writing.html">Content Optimization</a>
+              <a href="services/seo.html">Link Building</a>
+              <a href="services/seo.html">SEO Audits</a>
+              <a href="services/seo.html">Competitor Analysis</a>
+              <a href="services/seo.html">Google Maps Optimization</a>
+              <a href="services/seo.html">Multi-Location SEO</a>
+            </div>
+
+            <div class="mega-column">
+              <h3>AI Search & GEO</h3>
+              <a href="services/seo.html">GEO – Generative Engine Optimization</a>
+              <a href="services/seo.html">AI Search Optimization</a>
+              <a href="services/content-writing.html">ChatGPT Visibility</a>
+              <a href="services/content-writing.html">Google Gemini Visibility</a>
+              <a href="services/brand-strategy.html">AI Brand Visibility</a>
+              <a href="services/seo.html">AI Search Monitoring</a>
+              <a href="services/brand-strategy.html">Entity & Brand Authority Optimization</a>
+              <a href="services/content-writing.html">AI-Friendly Content Strategy</a>
+            </div>
+
+            <div class="mega-column">
+              <h3>Paid Advertising</h3>
+              <a href="services/google-ppc.html">Google Ads / PPC</a>
+              <a href="services/google-ppc.html">Google Search Ads</a>
+              <a href="services/google-ppc.html">Google Business Profile Advertising</a>
+              <a href="services/google-ppc.html">Performance Max</a>
+              <a href="services/google-ppc.html">Display Advertising</a>
+              <a href="services/google-ppc.html">Remarketing / Retargeting</a>
+              <a href="services/social-media.html">Social Media Advertising</a>
+              <a href="services/web-design.html">Landing Page Optimization</a>
+              <a href="services/google-ppc.html">Conversion Tracking</a>
+              <a href="services/google-ppc.html">Call & Lead Tracking</a>
+              <a href="services/google-ppc.html">PPC Reporting & Optimization</a>
+            </div>
+
+            <div class="mega-column">
+              <h3>Social Media & Content</h3>
+              <a href="services/social-media.html">Social Media Management</a>
+              <a href="services/social-media.html">Social Media Marketing</a>
+              <a href="services/social-media.html">Facebook Marketing</a>
+              <a href="services/social-media.html">Instagram Marketing</a>
+              <a href="services/social-media.html">LinkedIn Marketing</a>
+              <a href="services/social-media.html">TikTok Marketing</a>
+              <a href="services/content-writing.html">Content Creation</a>
+              <a href="services/content-writing.html">Graphic Design</a>
+              <a href="services/content-writing.html">Content Writing</a>
+              <a href="services/content-writing.html">Blog Writing</a>
+              <a href="services/content-writing.html">Website Copywriting</a>
+              <a href="services/email-marketing.html">Email Marketing</a>
+              <a href="services/text-marketing.html">SMS / Text Marketing</a>
+            </div>
+
+            <div class="mega-column">
+              <h3>Reputation & Growth</h3>
+              <a href="services/reputation-management.html">Google Business Profile Management</a>
+              <a href="services/reputation-management.html">Reputation Management</a>
+              <a href="services/reputation-management.html">Review Generation</a>
+              <a href="services/reputation-management.html">Review Monitoring</a>
+              <a href="services/reputation-management.html">Review Responses</a>
+              <a href="services/google-ppc.html">Lead Generation</a>
+              <a href="services/web-design.html">Conversion Rate Optimization</a>
+              <a href="services/brand-strategy.html">Marketing Strategy</a>
+              <a href="services/brand-strategy.html">Analytics & Reporting</a>
+              <a href="services/brand-strategy.html">Digital Marketing Audits</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticker" aria-hidden="true">
+          <div class="ticker-track">
+            <span>WEB DESIGN</span><span>SEO</span><span>GOOGLE ADS</span><span>SOCIAL MEDIA</span><span>AI SEARCH</span><span>REPUTATION</span><span>CONTENT</span><span>LEAD GENERATION</span>
+            <span>WEB DESIGN</span><span>SEO</span><span>GOOGLE ADS</span><span>SOCIAL MEDIA</span><span>AI SEARCH</span><span>REPUTATION</span><span>CONTENT</span><span>LEAD GENERATION</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="below">
+        <div class="shell below-grid">
+          <h2>This is the style family I would apply to the live Services dropdown.</h2>
+          <p>
+            If you approve this direction, I can replace the current Services mega menu across the
+            website with this version and keep the homepage navigation as the baseline.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
