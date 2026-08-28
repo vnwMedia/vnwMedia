@@ -4,7 +4,7 @@
 const concepts = [
   {id:1,name:'The right-hand drawer',short:'Right drawer',hint:'88% width · layered accordions',title:'Familiar, with room to breathe.',description:'A warm, light drawer glides in from the right. The page stays visible at the edge. Services expand into Create, Connect, and Convert, with a fixed contact button below.',tags:['Right → left','88% of screen','Nested accordions'],try:'Open Services, expand a different service group, then tap a service. Reopen the menu and tap the shaded edge to close it.',motion:'Right → left · 88% width',instruction:'Tap Menu, the shaded edge, or ×. Swipe right on the drawer to close.'},
   {id:2,name:'The wide left drawer',short:'90% left drawer',hint:'90% width · compact service tabs',title:'Less panel. More focus.',description:'A dark panel slides in from the left and covers 90% of the screen. The main links stay compact; three service tabs keep the long list manageable.',tags:['Left → right','90% of screen','Service tabs'],try:'Switch between Create, Connect, and Convert. Notice how the panel stays in place while each service list changes.',motion:'Left → right · 90% width',instruction:'Switch service tabs. Swipe left on the drawer or tap outside to close.'},
-  {id:'2A',name:'The searchable left drawer',short:'90% drawer + search',hint:'Option 02 with service search',title:'Your preferred menu, with a shortcut.',description:'All the latest Option 2 details stay the same: the 90% left drawer, your logo, phone button, heading, and service tabs. A new search field finds services across Create, Connect, and Convert.',tags:['Left → right · 90%','Search all 21 services','Original Option 02 preserved'],try:'Choose Convert, then search for SEO. Clear the search to return to Convert. Try “website” or “email” for a direct route.',motion:'Left → right · 90% width · search + tabs',instruction:'Search for a service or browse the tabs. Clear restores your previous category. Swipe left to close.'},
+  {id:'2A',name:'The searchable right drawer',short:'90% drawer + search',hint:'Right drawer with service search',title:'Your preferred menu, with a shortcut.',description:'The selected 90% drawer now opens from the right, with your logo, phone button, heading, service tabs, and larger service text. Search across Create, Connect, and Convert.',tags:['Right → left · 90%','Search all 21 services','Original Option 02 preserved'],try:'Choose Convert, then search for SEO. Clear the search to return to Convert. Try “website” or “email” for a direct route.',motion:'Right → left · 90% width · search + tabs',instruction:'Search for a service or browse the tabs. Clear restores your previous category. Swipe right to close.'},
   {id:3,name:'The full-screen journey',short:'Full-screen journey',hint:'100% width · one decision at a time',title:'Give every choice its own space.',description:'A full-screen panel opens from the right. Choose Services, then a category, then a service. Forward and back animations make the hierarchy easy to follow without a long accordion.',tags:['Full screen','Three levels','Animated back / next'],try:'Tap Services → Connect → SEO. Reopen and try the back arrows. Only the current level is on screen.',motion:'Right → left · full screen',instruction:'Services → category → service. Use Back or swipe right to step back.'},
   {id:4,name:'The bottom sheet',short:'Searchable sheet',hint:'92% height · service search',title:'Everything within thumb’s reach.',description:'A rounded sheet rises from the bottom. Quick links sit above searchable services. Type a service name for a direct route, or browse the three expandable categories.',tags:['Bottom → top','92% of screen height','Instant service search'],try:'Search for “SEO” or “website.” Clear the search to browse categories. Drag the top handle down to dismiss.',motion:'Bottom → top · 92% height',instruction:'Search by service name. Swipe down from the handle or tap × to close.'},
   {id:5,name:'The split canvas',short:'Split canvas',hint:'88% width · persistent category rail',title:'A menu with a different rhythm.',description:'The website shifts aside as a blue category rail and dark panel enter from the left. Explore handles site navigation; Create, Connect, and Convert reveal their services in place.',tags:['Page pushes right','88% of screen','Persistent category rail'],try:'Use the blue rail to jump between Explore and the three service areas. The page remains visible as a small reminder of where you came from.',motion:'Left → right · page pushes aside',instruction:'Use the category rail. Swipe left or tap the page edge to close.'},
@@ -37,6 +37,7 @@ let replayTimer=0;
 let closeTimer=0;
 let receiptTimer=0;
 let openFrame=0;
+let openFocusTimer=0;
 let journeyLevel='home';
 let journeyPillar=0;
 let tabIndex=0;
@@ -48,7 +49,8 @@ let refineTab=0;
 let refineLevel=-1;
 let swipeStart=null;
 let suppressClickUntil=0;
-const link=([label,href],className='')=>`<a class="${className}" href="${safe(href)}" data-demo-link="${safe(label)}"><span>${safe(label)}</span><span class="arrow" aria-hidden="true">↗</span></a>`;
+const twoAArrow='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';
+const link=([label,href],className='')=>`<a class="${className}" href="${safe(href)}" data-demo-link="${safe(label)}"><span>${safe(label)}</span><span class="arrow" aria-hidden="true">${selected==='2A'?twoAArrow:'↗'}</span></a>`;
 const groupsMarkup=pillar=>pillar.groups.map(g=>`<section class="service-group"><h3>${safe(g.name)}</h3>${g.links.map(item=>link(item)).join('')}</section>`).join('');
 const allServicesLink=()=>link(['View all services','services.html#all-services'],'all-services');
 const footer=()=>`<footer class="drawer-footer">${link(['Let’s talk about your project','contact.html'],'cta')}<p class="footer-note">One team. Your next stage of growth.</p></footer>`;
@@ -201,17 +203,22 @@ function renderPanel(){
   }
 }
 function openMenu(focus=true){
-  clearTimeout(closeTimer);clearTimeout(receiptTimer);cancelAnimationFrame(openFrame);
+  clearTimeout(closeTimer);clearTimeout(receiptTimer);clearTimeout(openFocusTimer);cancelAnimationFrame(openFrame);
   overlay.hidden=false;destination.hidden=true;panel.inert=false;sitePreview.inert=true;
   isOpen=true;trigger.setAttribute('aria-expanded','true');
+  // Establish the offscreen position without scrolling to a moving control.
+  if(selected==='2A'){screen.scrollLeft=0;void panel.offsetWidth;}
   openFrame=requestAnimationFrame(()=>{openFrame=requestAnimationFrame(()=>{
     if(!isOpen)return;
     screen.classList.add('is-open');
-    if(focus)panel.querySelector('[data-close]').focus({preventScroll:true});
+    if(focus){
+      if(selected==='2A')openFocusTimer=setTimeout(()=>{if(isOpen)panel.querySelector('[data-close]').focus({preventScroll:true});},matchMedia('(prefers-reduced-motion:reduce)').matches?0:500);
+      else panel.querySelector('[data-close]').focus({preventScroll:true});
+    }
   });});
 }
 function closeMenu(restoreFocus=true){
-  clearTimeout(replayTimer);cancelAnimationFrame(openFrame);clearTimeout(closeTimer);
+  clearTimeout(replayTimer);cancelAnimationFrame(openFrame);clearTimeout(openFocusTimer);clearTimeout(closeTimer);
   isOpen=false;screen.classList.remove('is-open');trigger.setAttribute('aria-expanded','false');
   panel.inert=true;sitePreview.inert=false;
   closeTimer=setTimeout(()=>{if(!isOpen)overlay.hidden=true;},500);
@@ -352,7 +359,7 @@ panel.addEventListener('pointercancel',()=>swipeStart=null);
 panel.addEventListener('pointerup',e=>{
   if(!swipeStart||!isOpen)return;const dx=e.clientX-swipeStart.x,dy=e.clientY-swipeStart.y;
   const horizontal=Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.5;
-  const dismiss=([1,8].includes(selected)&&horizontal&&dx>0)||(([2,'2A',5].includes(selected)||selected>=11)&&horizontal&&dx<0)||([4,9].includes(selected)&&swipeStart.sheet&&dy>60&&dy>Math.abs(dx));
+  const dismiss=([1,'2A',8].includes(selected)&&horizontal&&dx>0)||(([2,5].includes(selected)||selected>=11)&&horizontal&&dx<0)||([4,9].includes(selected)&&swipeStart.sheet&&dy>60&&dy>Math.abs(dx));
   if(dismiss){suppressClickUntil=Date.now()+350;closeMenu();}
   else if([6,7].includes(selected)&&horizontal&&dx>0){suppressClickUntil=Date.now()+350;if(modernView==='main')closeMenu();else{modernView=modernView==='pillar'?'services':'main';updateModern(true);}}
   else if(selected===3&&horizontal&&dx>0){suppressClickUntil=Date.now()+350;if(journeyLevel==='home')closeMenu();else journeyBack();}

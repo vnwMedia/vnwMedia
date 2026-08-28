@@ -1,0 +1,16 @@
+/* Equal cycles include their trailing gap, so -50% is one exact repeat. */
+.trust-track{--ticker-gap:48px}
+.ticker-window{display:block!important;flex:1 1 auto;min-width:0;max-width:100%;width:100%!important;padding:0!important;overflow:hidden;animation:none!important;transform:none!important}
+.ticker-window:focus-visible{outline:2px solid #42b1e5;outline-offset:-2px}
+.seamless-track{display:flex!important;align-items:center;flex:0 0 auto;width:max-content!important;max-width:none;gap:0!important;padding-inline:0!important;margin:0!important;white-space:nowrap;animation:none!important;will-change:transform}
+.seamless-track>.ticker-cycle{display:flex;align-items:center;flex:0 0 auto;gap:var(--ticker-gap,48px);width:max-content;max-width:none;margin:0;padding:0 var(--ticker-gap,48px) 0 0;animation:none!important;transform:none!important}
+.seamless-track>.ticker-cycle>*{flex:0 0 auto}
+.seamless-track.ticker-ready{animation:vnw-ticker-loop var(--ticker-duration,40s) linear infinite!important}
+.ticker-window:is(:hover,:focus-within)>.seamless-track{animation-play-state:paused!important}
+@keyframes vnw-ticker-loop{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media(max-width:560px){.trust-track{--ticker-gap:30px}}
+@media(prefers-reduced-motion:reduce){
+  .ticker-window{overflow-x:auto;scrollbar-width:thin}
+  .seamless-track.ticker-ready{animation:none!important;transform:none!important;will-change:auto}
+  .seamless-track>.ticker-cycle-copy,.seamless-track [data-ticker-repeat]{display:none}
+}

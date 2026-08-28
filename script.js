@@ -89,7 +89,8 @@ initializeMobileNavigation();
 function initializeMobileNavigation() {
   if (!headerToggle) return;
   const safe = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
-  const link = ([label, href], className = "") => `<a class="${className}" href="${navRoot}${safe(href)}"><span>${safe(label)}</span><span class="sm-arrow" aria-hidden="true">↗</span></a>`;
+  const arrow = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';
+  const link = ([label, href], className = "") => `<a class="${className}" href="${navRoot}${safe(href)}"><span>${safe(label)}</span><span class="sm-arrow" aria-hidden="true">${arrow}</span></a>`;
   const mainLinks = [['Our Story','our-story.html'],['Work','work.html'],['Industries','industries.html'],['Case Studies','case-studies.html'],['Resources','resources.html'],['Contact','contact.html']];
   const services = SERVICE_MENU_PILLARS.flatMap(pillar => pillar.groups.flatMap(group => group.links));
   const allServicesLink = () => link(['View all services','services.html#all-services'], 'sm-all-services');
@@ -97,10 +98,11 @@ function initializeMobileNavigation() {
   dialog.id = 'site-mobile-menu';
   dialog.className = 'site-mobile-menu';
   dialog.setAttribute('aria-label', 'Mobile navigation');
+  dialog.setAttribute('autofocus', '');
   dialog.innerHTML = `<div class="sm-panel">
     <header class="sm-top">
       <a class="sm-logo" href="${navRoot}index.html" aria-label="VNW Media home"><img src="${navRoot}assets/vnwMedia-LogoBlk.png" alt="VNW Media" width="646" height="128"></a>
-      <div class="sm-actions"><a class="sm-icon" href="tel:17328200609" aria-label="Call VNW Media at (732) 820-0609"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.09 9.89a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.83.56 2.79.69A2 2 0 0 1 22 16.92z"/></svg></a><button class="sm-icon" type="button" data-sm-close aria-label="Close mobile menu" autofocus>×</button></div>
+      <div class="sm-actions"><a class="sm-icon" href="tel:17328200609" aria-label="Call VNW Media at (732) 820-0609"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.09 9.89a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.83.56 2.79.69A2 2 0 0 1 22 16.92z"/></svg></a><button class="sm-icon" type="button" data-sm-close aria-label="Close mobile menu">×</button></div>
     </header>
     <div class="sm-scroll">
       <h2 class="sm-title">Let’s get you there.</h2>
@@ -121,6 +123,9 @@ function initializeMobileNavigation() {
   const mobileViewport = matchMedia('(max-width:800px)');
   const reducedMotion = matchMedia('(prefers-reduced-motion:reduce)');
   let closeTimer;
+  let openFrame = 0;
+  let openFocusTimer = 0;
+  let focusPending = false;
   let savedScrollY = 0;
   let savedBodyStyle = null;
   let touchStart = null;
@@ -160,6 +165,9 @@ function initializeMobileNavigation() {
 
   function closeMenu(immediate = false) {
     clearTimeout(closeTimer);
+    cancelAnimationFrame(openFrame);
+    clearTimeout(openFocusTimer);
+    focusPending = false;
     dialog.classList.remove('is-open');
     headerToggle.setAttribute('aria-expanded', 'false');
     const finish = () => {
@@ -170,21 +178,45 @@ function initializeMobileNavigation() {
     else closeTimer = setTimeout(finish, 480);
   }
 
+  function focusOpenMenu() {
+    if (!focusPending || !dialog.open || !dialog.classList.contains('is-open')) return;
+    clearTimeout(openFocusTimer);
+    focusPending = false;
+    dialog.querySelector('[data-sm-close]').focus({ preventScroll: true });
+  }
+  panel.addEventListener('transitionend', event => {
+    if (event.target === panel && event.propertyName === 'transform') focusOpenMenu();
+  });
+
   headerToggle.addEventListener('click', () => {
     if (!mobileViewport.matches) return;
     if (dialog.open) { closeMenu(); return; }
     clearTimeout(closeTimer);
+    cancelAnimationFrame(openFrame);
+    clearTimeout(openFocusTimer);
     setServicesMenuOpen(false);
     savedScrollY = window.scrollY;
     savedBodyStyle = Object.fromEntries(['position','top','left','right','width','overflow'].map(key => [key, document.body.style[key]]));
     Object.assign(document.body.style, { position:'fixed', top:`-${savedScrollY}px`, left:'0', right:'0', width:'100%', overflow:'hidden' });
     document.body.classList.add('mobile-menu-open');
+    // Let the dialog receive initial focus, not an offscreen control. Focusing
+    // the translated close button here can scroll the dialog horizontally.
+    panel.inert = true;
+    dialog.classList.remove('is-open');
     dialog.showModal();
+    dialog.scrollLeft = 0;
+    // Commit the right-side starting position before changing the transform.
+    void panel.offsetWidth;
+    panel.inert = false;
+    focusPending = true;
     headerToggle.setAttribute('aria-expanded', 'true');
-    // Paint the closed position before animating the drawer into view.
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      if (dialog.open) dialog.classList.add('is-open');
-    }));
+    openFrame = requestAnimationFrame(() => {
+      openFrame = 0;
+      if (!dialog.open || !focusPending) return;
+      dialog.classList.add('is-open');
+      if (reducedMotion.matches) focusOpenMenu();
+      else openFocusTimer = setTimeout(focusOpenMenu, 520);
+    });
   });
   dialog.addEventListener('cancel', event => { event.preventDefault(); closeMenu(); });
   dialog.addEventListener('keydown', event => {
@@ -192,6 +224,9 @@ function initializeMobileNavigation() {
   });
   dialog.addEventListener('close', () => {
     clearTimeout(closeTimer);
+    cancelAnimationFrame(openFrame);
+    clearTimeout(openFocusTimer);
+    focusPending = false;
     dialog.classList.remove('is-open');
     headerToggle.setAttribute('aria-expanded', 'false');
     unlockPage();
@@ -218,7 +253,7 @@ function initializeMobileNavigation() {
     if (!touchStart || !event.changedTouches.length) return;
     const dx = event.changedTouches[0].clientX - touchStart.x;
     const dy = event.changedTouches[0].clientY - touchStart.y;
-    if (dx < -65 && Math.abs(dx) > Math.abs(dy) * 1.5) closeMenu();
+    if (dx > 65 && Math.abs(dx) > Math.abs(dy) * 1.5) closeMenu();
     touchStart = null;
   }, {passive:true});
   panel.addEventListener('touchcancel', () => { touchStart = null; }, {passive:true});

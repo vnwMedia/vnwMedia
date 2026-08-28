@@ -7,7 +7,7 @@
 [data-option="1"]{--menu-bg:#f6f4ef;--menu-fg:#152023;--menu-muted:#757f80;--menu-line:#1520231b;--accent:#1689b8}
 [data-option="1"] .mobile-panel{border-radius:24px 0 0 24px}.drawer-intro{margin:0 0 18px;font:400 33px/1.03 Fraunces,Georgia,serif;letter-spacing:-.03em}.drawer-intro em{color:var(--accent);font-weight:400}.services-nest{padding:0 0 10px 11px;border-left:2px solid var(--blue);margin:8px 0 13px}.services-nest .menu-kicker{margin-top:8px}.services-nest .service-accordion>summary{font-size:11px}.services-nest .service-group a{font-size:10px}
 /* 02 — 90% drawer from the left, with service tabs. */
-:is([data-option="2"],[data-option="2A"]) .mobile-panel{left:0;right:auto;width:90%;transform:translateX(-105%);border-radius:0 22px 22px 0}:is([data-option="2"],[data-option="2A"]).is-open .mobile-panel{transform:translateX(0)}
+[data-option="2"] .mobile-panel{left:0;right:auto;width:90%;transform:translateX(-105%);border-radius:0 22px 22px 0}[data-option="2"].is-open .mobile-panel{transform:translateX(0)}
 .compact-nav{display:grid;grid-template-columns:1fr 1fr;gap:0 10px;margin-bottom:16px}.compact-nav>a{font-size:11px;min-height:44px;display:flex;align-items:center;border-bottom:1px solid var(--menu-line)}.category-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;padding:4px;background:#ffffff08;border:1px solid var(--menu-line);border-radius:9px}.category-tabs button{font-size:9px;min-height:40px;border:0;background:transparent;border-radius:6px;color:var(--menu-muted);padding:6px 2px}.category-tabs button[aria-selected=true]{background:#2c99c8;color:#071c25}.tab-caption{font-size:9px;color:var(--menu-muted);margin:16px 0 5px;line-height:1.6}.drawer-title{font:400 29px/1.05 Fraunces,Georgia,serif;margin:0 0 18px;letter-spacing:-.025em}
 /* 03 — a full-screen, three-level service journey. */
 [data-option="3"] .mobile-panel{width:100%;background:radial-gradient(ellipse at 0 90%,#103849,transparent 70%),#0c1419}.journey-view{animation:journey-in .32s var(--ease)}.journey-view.backwards{animation-name:journey-back}.journey-title{font:400 42px/1.02 Fraunces,Georgia,serif;letter-spacing:-.04em;margin:12px 0 24px}.journey-view .nav-list>a,.journey-view .service-launch{font-size:30px;min-height:61px}.back-button{border:0;justify-content:flex-start;font-size:10px;border-radius:0;gap:8px;width:auto}.back-button span{font-size:18px}.journey-card{display:flex;align-items:center;justify-content:space-between;text-align:left;width:100%;padding:20px 0;min-height:92px;border:0;border-top:1px solid var(--menu-line);background:transparent;color:var(--menu-fg)}.journey-card strong{font:400 31px Fraunces,Georgia,serif;display:block;margin-bottom:7px}.journey-card small{font-size:10px;color:var(--menu-muted)}.journey-card>span:last-child{font-size:20px;color:var(--accent)}.journey-view .service-group a{font-size:13px;min-height:49px}
@@ -98,8 +98,8 @@
 /* 2A inherits the current Option 2 design and adds only a service finder. */
 [data-option="2A"] .two-a-search{margin:3px 0 14px}
 [data-option="2A"] .two-a-search .search-heading{min-height:36px}
-[data-option="2A"] .two-a-search .search-label{font-size:11px;color:var(--menu-fg)}
-[data-option="2A"] .two-a-search .service-search{height:44px;border:1px solid #405760;border-radius:9px;background:#1b292f;color:var(--menu-fg);font-size:12px;margin:0}
+[data-option="2A"] .two-a-search .search-label{font-size:13.75px;color:var(--menu-fg)}
+[data-option="2A"] .two-a-search .service-search{height:44px;border:1px solid #405760;border-radius:9px;background:#1b292f;color:var(--menu-fg);font-size:15px;margin:0}
 [data-option="2A"] .two-a-search .service-search::placeholder{color:#9aafb7}
 [data-option="2A"] .result-count{line-height:1.6;padding-top:0}
 [data-option="2A"] .empty-search{font-size:25px}
@@ -107,3 +107,24 @@
 /* Match Option 2A’s contact button corners to its category buttons. */
 [data-option="2A"] .drawer-footer .cta{border-radius:6px;height:46px;font:400 17.1875px/1.05 Fraunces,Georgia,serif;color:#fff;justify-content:center;text-align:center}
 [data-option="2A"] .drawer-footer .cta .arrow{display:none}
+
+/* Match the selected site menu; keep the original Option 2 unchanged. */
+[data-option="2A"] .mobile-panel{inset:0 0 0 auto;width:90%;transform:translate3d(calc(100% + 48px),0,0);border-radius:22px 0 0 22px;will-change:transform}
+[data-option="2A"].is-open .mobile-panel{transform:translate3d(0,0,0)}
+.phone-screen[data-option="2A"]{overflow:clip;scroll-behavior:auto}
+[data-option="2A"] .tab-caption{font-size:14.0625px}
+[data-option="2A"] .result-count{font-size:11.25px}
+[data-option="2A"] .service-group h3{font-size:10px}
+[data-option="2A"] :is(.service-group,.result-links) a{font-size:13.75px}
+[data-option="2A"] .all-services{font-size:12.5px}
+[data-option="2A"] :is(.service-group,.result-links,.all-services) .arrow{display:inline-flex;flex:0 0 15px}
+[data-option="2A"] .arrow svg{display:block;width:15px;height:15px}
+.mini-2A:before{inset:0 0 0 10px;border-radius:0}
+.mini-2A:after{left:16px}
+
+/* Keep both menu controls at the right and enlarge the navigation/search labels. */
+[data-option="2A"] .phone-header .menu-toggle{margin-left:auto;order:1;flex-shrink:0}
+[data-option="2A"] .menu-header-actions{margin-left:auto}
+[data-option="2A"] .compact-nav>a{font-size:13.75px}
+[data-option="2A"] .two-a-search .search-heading button{font-size:12.5px}
+[data-option="2A"] .category-tabs button{font-size:11.25px}
