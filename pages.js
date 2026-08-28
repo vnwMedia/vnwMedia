@@ -92,7 +92,7 @@ function footer(){
     <div><h4>Services</h4>${DATA.services.map(x=>`<a href="${path(`services/${x[1]}.html`)}">${x[0]}</a>`).join("")}</div>
     <div><h4>Company</h4><a href="${path("our-story.html")}">Our Story</a><a href="${path("work.html?v=30")}">Work</a><a href="${path("clients.html")}">Clients</a><a href="${path("resources.html#faq")}">FAQ</a><a href="${path("contact.html")}">Contact</a></div>
     <div><h4>Contact</h4><a href="mailto:contactus@vnwmedia.com">contactus@vnwmedia.com</a><a href="tel:17328200609">(732) 820-0609</a><span>Morganville, NJ 07751</span></div>
-  </div><div class="shell copyright"><span>© 2026 VNW Media LLC. All rights reserved.</span><a href="#top">Back to top ↑</a></div></footer><a class="mobile-plan" href="${path("contact.html")}">Get Started</a>`;
+  </div><div class="shell copyright"><span>© 2026 VNW Media LLC. All rights reserved.</span><a href="#top">Back to top ↑</a></div></footer><a class="mobile-plan" href="${path("contact.html")}">Let’s Talk About Your Project</a>`;
 }
 
 function hero(title,headline,text,image){

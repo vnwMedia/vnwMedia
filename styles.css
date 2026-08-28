@@ -1998,3 +1998,6 @@ body .site-header.site-header .mega-compact .mega-pillar-heading p{margin:0;colo
 @media(max-width:800px){body .site-header.site-header .nav-menu,body.nav-open .site-header.site-header .nav-menu{display:none}body .site-header.site-header .nav-toggle{margin-left:auto;order:3;flex-shrink:0}body.mobile-menu-open .mobile-plan{visibility:hidden}}
 @media(max-width:359px){.site-mobile-menu .sm-cta{padding:8px}}
 @media(prefers-reduced-motion:reduce){.site-mobile-menu .sm-panel{transition:none}}
+
+/* Match the sticky mobile contact button to the selected menu's serif CTA. */
+body .mobile-plan{font:400 17.1875px/1.2 Fraunces,Georgia,serif;text-align:center}
