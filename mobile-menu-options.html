@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>16 Mobile Menu Concepts | VNW Media</title>
+  <meta name="description" content="Try sixteen interactive mobile navigation concepts for VNW Media.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mobile-menu-options.css?v=25">
+  <script defer src="service-catalog.js?v=131"></script>
+  <script defer src="mobile-menu-options.js?v=24"></script>
+</head>
+<body>
+  <header class="studio-header"><a href="index.html" aria-label="Back to VNW Media website"><img src="assets/vnwMedia-LogoBlk.png" alt="VNW Media"></a><span>DESIGN STUDIO <b>/</b> MOBILE NAVIGATION</span><a href="index.html" class="back-site">Back to website ↗</a></header>
+  <main class="studio">
+    <section class="concepts" aria-labelledby="studio-title">
+      <p class="eyebrow">MOBILE NAVIGATION / OPTION 02, EXPLORED</p><h1 id="studio-title">One direction.<br>Five refinements.</h1>
+      <p class="intro">Built on your favorite left drawer, now expanded to 90% width. Five ways to make its navigation clearer, quicker, and easier to use.</p>
+      <div class="collection-switch" role="group" aria-label="Menu collections"><button data-collection="refined" aria-pressed="true">New · 11–15</button><button data-collection="new" aria-pressed="false">06–10</button><button data-collection="original" aria-pressed="false">01–05 + 2A</button></div>
+      <button class="baseline-compare" id="compare-baseline">Compare with original Option 02 ↗</button>
+      <div id="concept-list" class="concept-list" role="group" aria-label="Choose a mobile menu concept"></div>
+      <div class="studio-note"><span class="status-dot"></span><p>Working prototypes. Your current website navigation is unchanged. Every concept includes all <strong>21 services.</strong></p></div>
+    </section>
+    <section class="preview" aria-label="Interactive mobile preview">
+      <div class="preview-tools"><div class="width-options" role="group" aria-label="Preview screen width"><button data-width="360" aria-pressed="false">360</button><button data-width="390" aria-pressed="true">390</button><button data-width="430" aria-pressed="false">430</button></div><button id="full-demo" class="text-button">Try full screen ↗</button></div>
+      <div class="phone" id="phone">
+        <div class="phone-screen" id="phone-screen" data-option="1">
+          <div class="site-preview" id="site-preview">
+            <div class="phone-status" aria-hidden="true"><span>9:41</span><span class="island"></span><span>▮▮▮ <span class="battery">▰</span></span></div>
+            <header class="phone-header"><a href="index.html" data-demo-link="Home" aria-label="VNW Media home"><img src="assets/vnwMedia-LogoBlk.png" alt="VNW Media"></a><button id="open-menu" class="menu-toggle" aria-label="Open mobile menu" aria-controls="mobile-panel" aria-expanded="false"><span></span><span></span></button></header>
+            <div class="phone-hero"><p class="eyebrow">NEW JERSEY · BUILT FOR GROWTH</p><h2>Digital marketing.<br><em>Real results.</em></h2><p>Websites, search, and campaigns that turn your next visitor into your next customer.</p><a href="contact.html" data-demo-link="Get Your Strategy" class="cta">Get Your Strategy <span>↗</span></a><a href="work.html" data-demo-link="View Our Work" class="quiet-link">View Our Work ↗</a><div class="hero-proof"><span>STRATEGY</span><span>CREATIVE</span><span>GROWTH</span></div></div>
+            <div class="phone-below"><span>THE RIGHT CONNECTION</span><h3>Make your next<br>move count.</h3><p>One team. A clearer direction.</p></div>
+          </div>
+          <div class="menu-overlay" id="menu-overlay" hidden aria-hidden="true"></div>
+          <section id="mobile-panel" class="mobile-panel" role="dialog" aria-label="Mobile navigation preview" aria-modal="false" inert></section>
+          <aside id="destination" class="destination" role="status" hidden></aside>
+        </div>
+      </div>
+      <div class="playback"><button id="replay" class="replay-button"><span aria-hidden="true">↻</span> Replay opening</button><p id="motion-caption"></p></div>
+      <p class="interaction-note" id="interaction-note"></p>
+    </section>
+    <section class="concept-detail" aria-label="About this concept"><p class="eyebrow" id="detail-number"></p><h2 id="detail-title"></h2><p id="detail-description"></p><div class="detail-tags" id="detail-tags"></div><div class="try-this"><span>TRY THIS</span><p id="detail-try"></p></div><p class="link-note">Menu links show a destination preview. Choose “Open page” to visit the actual page.</p></section>
+  </main>
+  <div class="demo-bar"><label for="demo-select">Concept</label><select id="demo-select" aria-label="Choose full screen concept"></select><button id="exit-demo">Exit preview ↗</button></div>
+</body>
+</html>
