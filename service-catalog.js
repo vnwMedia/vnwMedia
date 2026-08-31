@@ -51,6 +51,38 @@ const SERVICE_CATALOG = [
   },
   {
     "group": "Websites & Creative",
+    "slug": "app-design-development",
+    "name": "App Design & Development",
+    "description": "User-centered web and mobile application experiences planned around real workflows and business goals.",
+    "includes": [
+      "Product discovery and feature planning",
+      "User flows, wireframes, and interface design",
+      "Responsive front-end and application development",
+      "Testing, integrations, launch, and ongoing improvement"
+    ],
+    "overview": "Turn an application idea or operational need into a focused digital product with clear workflows, thoughtful interfaces, and a practical development path.",
+    "scope": "Features, platforms, integrations, technical architecture, and launch timing are confirmed during discovery.",
+    "image": "assets/home-process-lead-path.png",
+    "addon": false
+  },
+  {
+    "group": "Websites & Creative",
+    "slug": "landing-pages",
+    "name": "Landing Pages",
+    "description": "Focused campaign pages designed to match audience intent and turn more visits into qualified actions.",
+    "includes": [
+      "Offer, audience, and message planning",
+      "Conversion-focused page design and copy",
+      "Forms, call tracking, CRM, and analytics connections",
+      "SEO or paid-campaign alignment and testing"
+    ],
+    "overview": "Give every important offer or campaign a clear destination. We build landing pages that remove distractions, answer the right questions, and make the next step easy.",
+    "scope": "Page length, copywriting, integrations, experiments, and campaign support depend on the selected project scope.",
+    "image": "assets/home-process-strategy-screen.png",
+    "addon": false
+  },
+  {
+    "group": "Websites & Creative",
     "slug": "brand-strategy",
     "name": "Brand & Strategy",
     "description": "Positioning, messaging, visual identity, and focused strategy sessions.",
@@ -259,6 +291,38 @@ const SERVICE_CATALOG = [
   },
   {
     "group": "Engagement & Retention",
+    "slug": "social-media-consultation",
+    "name": "Social Media Consultation",
+    "description": "Channel strategy, content planning, account reviews, and practical guidance for teams managing social media.",
+    "includes": [
+      "Channel and profile audit",
+      "Audience, content pillar, and format planning",
+      "Editorial calendar and workflow guidance",
+      "Measurement framework and team consultation"
+    ],
+    "overview": "Give your internal team a clearer social media direction with practical recommendations shaped around your audience, resources, and business goals.",
+    "scope": "Workshop count, research depth, channel coverage, and ongoing advisory support depend on the selected scope.",
+    "image": "assets/home-process-strategy-screen.png",
+    "addon": false
+  },
+  {
+    "group": "Engagement & Retention",
+    "slug": "community-management",
+    "name": "Community Management",
+    "description": "Audience engagement, response workflows, comment monitoring, and relationship building across social channels.",
+    "includes": [
+      "Comment, message, and mention monitoring",
+      "Response guidelines and escalation workflows",
+      "Proactive audience engagement",
+      "Sentiment, recurring-question, and activity reporting"
+    ],
+    "overview": "Turn social activity into an active customer relationship with consistent responses, thoughtful engagement, and clearer insight into what the audience needs.",
+    "scope": "Coverage hours, response authority, platforms, volume, and escalation requirements are confirmed before service begins.",
+    "image": "assets/home-process-trust-system.png",
+    "addon": false
+  },
+  {
+    "group": "Engagement & Retention",
     "slug": "reputation-management",
     "name": "Online Reputation Management",
     "description": "Review monitoring, response support, and reputation improvement strategies.",
@@ -308,19 +372,25 @@ const SERVICE_CATALOG = [
 ];
 const SERVICE_GROUPS = [...new Set(SERVICE_CATALOG.map(service => service.group))].map(group => [group, SERVICE_CATALOG.filter(service => service.group === group).map(service => [service.name, service.slug])]);
 function serviceDirectoryMarkup(root = "", compact = false) {
-  return `<section class="service-directory section ${compact ? "service-directory-compact" : ""}" id="all-services"><div class="shell"><div class="section-heading"><p class="section-tag">Our Full Offering</p><h2>Choose the support your business needs.</h2><p>Explore individual services, combined marketing plans, and optional creative and technical support.</p></div><div class="service-directory-groups">${SERVICE_GROUPS.map(([group, links]) => `<article><h3>${group.replaceAll("&", "&amp;")}</h3><div>${links.map(([name, slug]) => {const service = SERVICE_CATALOG.find(item => item.slug === slug); return `<a href="${root}services/${slug}.html"><span>${name.replaceAll("&", "&amp;")}</span>${compact ? "" : `<small>${service.description}</small>`}<b aria-hidden="true">↗</b></a>`;}).join("")}</div></article>`).join("")}</div><p class="service-scope-note">Services can be combined around your goals. Package inclusions, add-ons, media budgets, and platform costs are confirmed in your proposal.</p><a class="pill pill-blue" href="${root}contact.html">Plan my service mix <span>↗</span></a></div></section>`;
+  const safe = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
+  const pillars = SERVICE_MENU_PILLARS.map(pillar => `<article class="service-directory-pillar"><header><h3>${safe(pillar.name)}</h3><p>${safe(pillar.description)}</p></header>${pillar.groups.map(group => `<section class="service-directory-subgroup"><h4>${safe(group.name)}</h4><div>${group.links.map(([label,href]) => `<a href="${root}${safe(href)}"><span>${safe(label)}</span><b aria-hidden="true">↗</b></a>`).join("")}</div></section>`).join("")}</article>`).join("");
+  return `<section class="service-directory section ${compact ? "service-directory-compact" : ""}" id="all-services"><div class="shell"><div class="section-heading"><p class="section-tag">Our Full Offering</p><h2>Choose the support your business needs.</h2><p>Explore the same Create, Connect, and Convert services featured in our navigation.</p></div><div class="service-directory-groups service-directory-menu-groups">${pillars}</div><p class="service-scope-note">Services can be combined around your goals. Package inclusions, add-ons, media budgets, and platform costs are confirmed in your proposal.</p><a class="pill pill-blue" href="${root}contact.html">Plan my service mix <span>↗</span></a></div></section>`;
 }
 function serviceFooterMarkup(root = "") {
-  return `<h4>Services</h4><div class="footer-service-links">${SERVICE_CATALOG.map(service => `<a href="${root}services/${service.slug}.html">${service.name.replaceAll("&", "&amp;")}</a>`).join("")}</div><a class="footer-all-services" href="${root}services.html#all-services">Explore all services ↗</a>`;
+  const safe = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
+  const pillars = SERVICE_MENU_PILLARS.map(pillar => `<section class="footer-service-pillar"><h5>${safe(pillar.name)}</h5>${pillar.groups.map(group => `<div class="footer-service-group"><h6>${safe(group.name)}</h6>${group.links.map(([label, href]) => `<a href="${root}${safe(href)}">${safe(label)}</a>`).join("")}</div>`).join("")}</section>`).join("");
+  return `<h4>Services</h4><div class="footer-service-pillars">${pillars}</div><a class="footer-all-services" href="${root}services.html#all-services">Explore all services ↗</a>`;
 }
 
 // Canonical service labels used by the navigation and menu studies.
 const SERVICE_MENU_LABELS = {
   'web-design':'Web Design & Development','ecommerce':'eCommerce','website-maintenance':'Website Maintenance',
+  'app-design-development':'App Design & Development','landing-pages':'Landing Pages',
   'brand-strategy':'Brand & Strategy','graphic-design':'Graphic Design','seo':'SEO','yelp-seo':'Yelp SEO & Visibility',
   'google-business-profile':'Google Business Profile','geo':'AI Visibility & GEO','content-writing':'Content Writing',
   'lead-generation':'Lead Generation','google-ppc':'PPC Advertising','paid-social':'Paid Social Ads',
   'crm-automation':'CRM & Automation','video-editing':'Video & Ad Creative','social-media':'Social Media Management',
+  'social-media-consultation':'Social Media Consultation','community-management':'Community Management',
   'reputation-management':'Reputation Management','email-marketing':'Email Marketing','text-marketing':'SMS Marketing'
 };
 // Selected navigation: Option 7, merged services with the Create / Connect / Convert breakdown.
@@ -332,10 +402,10 @@ function serviceMenuLink(slug){
 const SERVICE_MENU_PILLARS = [
   {name:'Create', description:'Build a brand and website that stand out.', groups:[
     {name:'Brand Identity', links:['brand-strategy','graphic-design'].map(serviceMenuLink)},
-    {name:'Website & App Development', links:[...['web-design','ecommerce','website-maintenance'].map(serviceMenuLink),['App Design & Development','contact.html'],['Landing Pages','services/web-design.html']]}
+    {name:'Website & App Development', links:['web-design','ecommerce','website-maintenance','app-design-development','landing-pages'].map(serviceMenuLink)}
   ]},
   {name:'Connect', description:'Reach the people who need your business.', groups:[
-    {name:'Social Media Strategy', links:[serviceMenuLink('social-media'),['Social Media Consultation','services/social-media.html'],['Community Management','services/social-media.html']]},
+    {name:'Social Media Strategy', links:['social-media','social-media-consultation','community-management'].map(serviceMenuLink)},
     {name:'SEO & Local Visibility', links:['seo','yelp-seo','google-business-profile','geo','reputation-management'].map(serviceMenuLink)}
   ]},
   {name:'Convert', description:'Turn interest into leads and customers.', groups:[

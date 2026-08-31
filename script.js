@@ -28,9 +28,13 @@ document.querySelectorAll("footer h4").forEach(heading => {
   column.innerHTML = serviceFooterMarkup(navRoot);
 });
 const homepageServices = document.querySelector("main > #services.services");
-if (homepageServices && !document.querySelector("#all-services")) {
-  homepageServices.insertAdjacentHTML("afterend", serviceDirectoryMarkup(navRoot, true));
+const homepageServicesAnchor = document.querySelector("main > [data-service-directory-anchor]");
+const homepageServicesTarget = homepageServices || homepageServicesAnchor;
+if (homepageServicesTarget && !document.querySelector("#all-services")) {
+  homepageServicesTarget.insertAdjacentHTML("beforebegin", serviceDirectoryMarkup(navRoot, true));
 }
+homepageServices?.remove();
+homepageServicesAnchor?.remove();
 
 const servicesMegaNav = serviceMenuMarkup(navRoot);
 
@@ -339,6 +343,31 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: .1 });
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
+const testimonialTicker = document.querySelector("[data-testimonial-ticker]");
+const testimonialTickerTrack = testimonialTicker?.querySelector(".testimonial-ticker-track");
+
+if (testimonialTicker && testimonialTickerTrack) {
+  const originalCards = Array.from(testimonialTickerTrack.children);
+  originalCards.forEach((card) => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    clone.classList.add("testimonial-ticker-clone");
+    testimonialTickerTrack.append(clone);
+  });
+
+  const updateTestimonialTickerDistance = () => {
+    const firstCard = testimonialTickerTrack.children[0];
+    const firstClone = testimonialTickerTrack.children[originalCards.length];
+    if (!firstCard || !firstClone) return;
+    testimonialTickerTrack.style.setProperty("--testimonial-loop-distance", `${firstClone.offsetLeft - firstCard.offsetLeft}px`);
+  };
+
+  updateTestimonialTickerDistance();
+  addEventListener("load", updateTestimonialTickerDistance);
+  addEventListener("resize", updateTestimonialTickerDistance, { passive: true });
+
+}
 
 if (heroForm) {
   const mobileCtaObserver = new IntersectionObserver((entries) => {

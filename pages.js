@@ -11,9 +11,9 @@ const DATA = {
     ["Retail & eCommerce","retail-ecommerce","Product clarity, shopping paths, local retail visibility, campaigns, and repeat-customer systems.","https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=84"]
   ],
   cases: [
-    ["South Carolina Motors","south-carolina-motors","Automotive","Inventory-led UX and a faster path from vehicle discovery to dealership contact.","assets/case-automotive-impact.svg","https://www.southcarolinamotors.com/"],
-    ["Rice’s Collision","rices-collision","Auto Body","A credibility-first experience that makes services and estimate requests easier.","assets/case-collision-impact.svg","https://rices-collision.com/"],
-    ["H2Bros Plumbing","h2bros-plumbing","Home Services","Urgent click-to-call paths, service-area clarity, and local lead generation.","assets/case-plumbing-impact.svg","https://h2brosplumbing.com/"]
+    ["South Carolina Motors","south-carolina-motors","Automotive","Inventory-led UX and a faster path from vehicle discovery to dealership contact.","assets/scm-collision-center-cars-hero.jpg","https://www.southcarolinamotors.com/"],
+    ["Rice’s Collision","rices-collision","Auto Body","A credibility-first experience that makes services and estimate requests easier.","assets/rices-collision-hero.jpg","https://rices-collision.com/"],
+    ["H2Bros Plumbing","h2bros-plumbing","Home Services","Urgent click-to-call paths, service-area clarity, and local lead generation.","assets/h2bros-plumbing-hero.jpg","https://h2brosplumbing.com/"]
   ],
   resources: [
     ["Website Redesign Readiness Checklist","website-redesign-checklist","Know when focused improvements are enough—and when the website is holding growth back.","https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=1400&q=84"],
@@ -1069,6 +1069,47 @@ function topPage(id){
   return hero(...p)+body;
 }
 
+function marketingPerformanceCheck(){
+  const metrics=[
+    ["Visibility reach",82,"Strong","good"],
+    ["Conversion path",61,"Watch","warn"],
+    ["Marketing foundation",34,"Needs attention","bad"],
+    ["Customer follow-up",49,"Needs attention","bad"]
+  ];
+  return `<section class="csp-performance-check" data-nav-theme="dark"><div class="shell csp-check-grid"><div class="csp-check-copy"><p class="section-tag">Digital performance check</p><h2>Is your marketing ready for your next stage of growth?</h2><p>Complete a short performance check to see how your website, search visibility, campaigns, and customer follow-up support one another. You’ll get a clear snapshot of what is working, what needs attention, and where to focus next.</p><a class="pill pill-blue pill-large" href="${path("contact.html")}">Check my marketing performance <span>↗</span></a><div class="csp-check-proof"><span>Guided self-assessment</span><span>Clear performance snapshot</span><span>Prioritized next steps</span></div></div><div class="csp-check-card" aria-label="Example digital performance snapshot"><div class="csp-check-card-head"><p>Example digital performance snapshot</p><b>Digital / Growth check</b></div><div class="csp-check-ring"><div><strong>82</strong><small>Growth readiness</small></div></div><div class="csp-check-metrics">${metrics.map(item=>`<div class="csp-check-metric ${item[3]}"><div class="csp-check-metric-head"><span>${esc(item[0])}</span><b>${item[1]}</b><em>${esc(item[2])}</em></div><div class="csp-check-meter" role="img" aria-label="${esc(item[0])}: ${item[1]} out of 100, ${esc(item[2])}"><i style="width:${item[1]}%"></i></div></div>`).join("")}</div><p class="csp-check-sample">Sample results shown. Your score reflects the answers and business information you provide.</p></div></div></section>`;
+}
+
+function createServiceDetail(service,data){
+  const existingSchema=document.querySelector('script[data-create-service-schema]');
+  if(existingSchema) existingSchema.remove();
+  const schema=document.createElement('script');
+  schema.type='application/ld+json';
+  schema.dataset.createServiceSchema='true';
+  schema.textContent=JSON.stringify({
+    '@context':'https://schema.org',
+    '@graph':[
+      {'@type':'Service','name':service.name,'description':service.description,'provider':{'@type':'ProfessionalService','name':'VNW Media LLC','url':'https://www.vnwmedia.com/','telephone':'+1-732-820-0609'},'areaServed':{'@type':'State','name':'New Jersey'},'url':`https://www.vnwmedia.com/services/${service.slug}.html`},
+      {'@type':'FAQPage','mainEntity':data.faqs.map(item=>({'@type':'Question','name':item[0],'acceptedAnswer':{'@type':'Answer','text':item[1]}}))}
+    ]
+  });
+  document.head.appendChild(schema);
+  const related=(data.related||[]).map(slug=>SERVICE_CATALOG.find(item=>item.slug===slug)).filter(Boolean);
+  return `<div class="create-service-page">
+    <section class="csp-hero" id="top" data-nav-theme="dark">
+      <div class="csp-hero-copy"><div class="csp-hero-copy-inner"><p class="eyebrow">${esc(data.eyebrow)}</p><h1>${esc(data.headline)}</h1><p class="hero-lede">${esc(data.lede)}</p><div class="csp-hero-actions"><a class="pill pill-blue pill-large" href="${path("contact.html")}">Discuss your project <span>↗</span></a><a class="pill pill-outline pill-large" href="#what-we-help">See how we help</a></div><div class="csp-hero-proof"><span>Strategy-led</span><span>Responsive design</span><span>Search &amp; campaign ready</span></div></div></div>
+      <figure class="csp-hero-media"><img src="${img(data.hero)}" alt="${esc(data.heroAlt)}"><figcaption>${esc(service.name)} / VNW Media</figcaption></figure>
+    </section>
+    <section class="csp-help section" id="what-we-help" data-nav-theme="light"><div class="shell"><div class="csp-section-head"><p class="section-tag">What we can help you do</p><div><h2>${esc(data.introHeading)}</h2><p>${esc(data.introBody)}</p></div></div><div class="csp-outcomes">${data.outcomes.map((item,index)=>`<article><span>0${index+1}</span><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></article>`).join("")}</div></div></section>
+    <section class="csp-scope section" data-nav-theme="dark"><div class="shell csp-scope-grid"><figure><img src="${img(data.feature)}" alt="${esc(data.featureAlt)}"><figcaption>Built around the customer and the business goal.</figcaption></figure><div class="csp-scope-copy"><p class="section-tag">A complete engagement</p><h2>What the work can include.</h2><p>We shape the scope around the current situation, internal resources, and the result the business needs next.</p><ul>${data.included.map(item=>`<li>${esc(item)}</li>`).join("")}</ul><p class="csp-scope-note">Deliverables, review rounds, platforms, integrations, and timing are confirmed in your proposal.</p></div></div></section>
+    <section class="csp-process section" data-nav-theme="light"><div class="shell"><div class="csp-section-head"><p class="section-tag">How the project moves</p><div><h2>A practical process with clear decisions.</h2><p>Enough structure to keep work moving, with room to respond to what discovery and testing reveal.</p></div></div><div class="csp-process-grid">${data.process.map((item,index)=>`<article><span>0${index+1}</span><div><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></div></article>`).join("")}</div></div></section>
+    ${marketingPerformanceCheck()}
+    <section class="csp-visibility section" data-nav-theme="light"><div class="shell"><div class="csp-section-head"><p class="section-tag">SEO, PPC &amp; AI visibility</p><div><h2>Built to support discovery and conversion.</h2><p>The page or product experience should work with organic search, paid campaigns, measurement, and the way AI-assisted discovery interprets useful business information.</p></div></div><div class="csp-visibility-grid">${data.visibility.map((item,index)=>`<article><span>0${index+1}</span><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></article>`).join("")}</div></div></section>
+    <section class="csp-related section" data-nav-theme="dark"><div class="shell csp-related-grid"><div><p class="section-tag">Connected services</p><h2>Build the right combination around the goal.</h2><p>${esc(service.name)} can work on its own or connect with strategy, visibility, advertising, automation, and ongoing support.</p><a class="pill pill-blue" href="${path("services.html#all-services")}">View all services <span>↗</span></a></div><div class="csp-related-list">${related.map((item,index)=>`<a href="${path(`services/${item.slug}.html`)}"><span>0${index+1}</span><div><h3>${esc(item.name)}</h3><p>${esc(item.description)}</p></div><b>↗</b></a>`).join("")}</div></div></section>
+    <section class="csp-faq section" id="faq" data-nav-theme="light"><div class="shell csp-faq-grid"><div class="csp-faq-intro"><p class="section-tag">${esc(service.name)} FAQ</p><h2>Useful answers before we begin.</h2><p>Every project is scoped to the business, platform, and priorities. These answers cover the questions we hear most often.</p></div><div class="csp-faq-list">${data.faqs.map((item,index)=>`<details ${index===0?"open":""}><summary>${esc(item[0])}<span>+</span></summary><p>${esc(item[1])}</p></details>`).join("")}</div></div></section>
+    <section class="csp-final" data-nav-theme="dark"><div class="shell"><p class="section-tag">Ready when you are</p><h2>Let’s make the next digital investment easier to understand—and easier to act on.</h2><p>Share what you are planning, where the current experience falls short, and what a successful outcome should look like.</p><div><a class="pill pill-blue pill-large" href="${path("contact.html")}">Let’s talk about your project <span>↗</span></a><a class="pill pill-outline pill-large" href="tel:17328200609">Call (732) 820-0609</a></div></div></section>
+  </div>`;
+}
+
 function detail(kind,item){
   const isCase=kind==="case", isResource=kind==="resource";
   const name=item[0], description=isCase?item[3]:item[2], image=isCase?item[4]:item[3];
@@ -1076,6 +1117,8 @@ function detail(kind,item){
   if(isResource) return hero("Resource",name,description,image)+`<section class="article section" id="page-content"><div class="shell article-grid"><aside class="reveal"><p class="section-tag">Practical Guide</p><h2>Use this before your next marketing investment.</h2><a class="text-arrow" href="${path("contact.html")}">Get help applying it <span>↗</span></a></aside><article class="reveal"><h2>Start with the customer’s decision.</h2><p>Can a first-time visitor understand what you do, who it is for, and why your business is credible within a few seconds? If not, more traffic alone will not solve the problem.</p><h3>Check these five areas</h3><ol><li>Headline clarity and offer positioning.</li><li>Service pages that match real search intent.</li><li>Trust signals, reviews, projects, and credentials.</li><li>Mobile calls-to-action and short forms.</li><li>Tracking, follow-up, and campaign alignment.</li></ol><p>Fix the largest source of friction first, measure the response, and improve from there.</p></article></div></section>`;
   if(kind==="service") {
     const service=SERVICE_CATALOG.find(entry=>entry.slug===item[1]);
+    const servicePageData=typeof CREATE_SERVICE_PAGES!=="undefined" ? (service.slug==="seo"?CREATE_SERVICE_PAGES.searchOptimization:CREATE_SERVICE_PAGES[service.slug]) : null;
+    if(servicePageData) return createServiceDetail(service,servicePageData);
     return hero(service.addon?"Creative & Technical Support":"VNW Media Services",service.name,service.description,service.image)+`<section class="service-detail section" id="page-content"><div class="shell service-detail-grid"><div><p class="section-tag">${esc(service.name)}</p><h2>What we help you do.</h2><p>${esc(service.overview)}</p><a class="pill pill-blue" href="${path("contact.html")}">Discuss this service <span>↗</span></a></div><div><p class="section-tag">Service Scope</p><ul class="service-deliverables">${service.includes.map(text=>`<li>${esc(text)}</li>`).join("")}</ul><p class="service-scope-note">${esc(service.scope)}</p></div></div></section><section class="faq section"><div class="shell faq-grid"><div class="faq-intro"><p class="section-tag">Service FAQ</p><h2>Before we get started.</h2></div><div class="faq-list"><details open><summary>What does this service include?<span>+</span></summary><p>${esc(service.includes.join("; "))}. ${esc(service.scope)}</p></details><details><summary>Can this be combined with other services?<span>+</span></summary><p>Yes. We can combine services around your website, visibility, advertising, and follow-up needs. We confirm the deliverables and responsibilities in your proposal.</p></details><details><summary>How do we get started?<span>+</span></summary><p>Contact VNW Media with your website, goals, and priorities. We will discuss the current setup and recommend an appropriate scope.</p></details></div></div></section>${serviceDirectoryMarkup(path(""),true)}`;
   }
   const industry=kind==="industry";
@@ -1095,7 +1138,9 @@ function bootPages(){
   const pageTitle=topPages[id]?.[0] || content.match(/<h1>(.*?)<\/h1>/)?.[1] || "VNW Media";
   const titleDecoder=document.createElement("textarea");
   titleDecoder.innerHTML=pageTitle;
-  document.title=`${titleDecoder.value} | VNW Media`;
+  const customServiceSlug=id?.startsWith("service-")?id.slice(8):"";
+  const preserveAuthoredTitle=typeof CREATE_SERVICE_PAGES!=="undefined" && !!(customServiceSlug==="seo"?CREATE_SERVICE_PAGES.searchOptimization:CREATE_SERVICE_PAGES[customServiceSlug]);
+  if(!preserveAuthoredTitle) document.title=`${titleDecoder.value} | VNW Media`;
   app.innerHTML=header()+`<main>${content}</main>`+footer();
 }
 bootPages();
