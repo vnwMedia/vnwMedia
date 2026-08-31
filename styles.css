@@ -1962,7 +1962,7 @@ body .site-header.site-header .mega-compact .mega-pillar-heading p{margin:0;colo
 .site-mobile-menu .sm-top{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:84px;padding:calc(24px + env(safe-area-inset-top)) 19px 12px;flex-shrink:0}
 .site-mobile-menu .sm-logo{display:flex;align-items:center;min-height:44px;min-width:0}
 .site-mobile-menu .sm-logo img{width:clamp(109.7712px,36.5904vw,146.3616px);height:auto}
-.site-mobile-menu .sm-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;margin-left:auto}
+.site-mobile-menu .sm-actions{display:flex;align-items:center;gap:20px;flex-shrink:0;margin-left:auto}
 .site-mobile-menu .sm-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;flex-shrink:0;border:1px solid var(--sm-line);border-radius:50%;background:transparent;color:var(--sm-fg);font:400 21px/1 Inter,Arial,sans-serif}
 .site-mobile-menu .sm-icon:is(:hover,:focus-visible){color:var(--sm-accent);background:#42b1e512}
 .site-mobile-menu .sm-scroll{padding:0 19px 20px;overflow-y:auto;overscroll-behavior:contain;min-height:0;flex:1;scrollbar-width:thin;scrollbar-color:#8b999766 transparent}
@@ -2001,3 +2001,39 @@ body .site-header.site-header .mega-compact .mega-pillar-heading p{margin:0;colo
 
 /* Match the sticky mobile contact button to the selected menu's serif CTA. */
 body .mobile-plan{font:400 17.1875px/1.2 Fraunces,Georgia,serif;text-align:center}
+
+/* Mobile header contact control and enlarged logo for the 9.1.2026 copy. */
+body .site-header.site-header .nav-phone{display:none}
+@media(max-width:800px){
+  body .site-header.site-header .nav{gap:0}
+  body .site-header.site-header .logo{width:166.75px;height:52px;flex-basis:166.75px}
+  body .site-header.site-header .logo img{width:166.75px;height:52px}
+  body .site-header.site-header .nav-phone{
+    width:44px;
+    height:44px;
+    margin-left:auto;
+    display:grid;
+    place-content:center;
+    order:2;
+    flex:0 0 44px;
+    border:1px solid #666;
+    border-radius:50%;
+    color:#fff;
+    background:transparent;
+    transition:border-color .2s,color .2s,background .2s;
+  }
+  body .site-header.site-header .nav-phone:is(:hover,:focus-visible){
+    border-color:#fff;
+    color:#fff;
+    background:rgba(255,255,255,.08);
+  }
+  body .site-header.site-header .nav-phone svg{display:block}
+  body .site-header.site-header .nav-toggle{margin-left:20px}
+  body .site-header.site-header .nav-phone,
+  body .site-header.site-header .nav-phone:is(:hover,:focus-visible,:active){color:#fff!important;border-color:#fff!important}
+  body .site-header.site-header .nav-phone svg{stroke:#fff!important}
+  body .site-header.site-header .nav-toggle,
+  body .site-header.site-header .nav-toggle:is(:hover,:focus-visible,:active){border-color:#fff!important}
+  body .site-header.site-header .nav-toggle i,
+  body .site-header.site-header .nav-toggle:is(:hover,:focus-visible,:active) i{background:#fff!important}
+}

@@ -80,6 +80,7 @@ function servicesMega(){
 function header(){
   return `<header class="site-header"><nav class="nav shell" aria-label="Main navigation">
     <a class="logo" href="${path("index.html")}" aria-label="VNW Media home"><img src="${img("assets/vnwMedia-LogoBlk.png")}" alt="VNW Media"></a>
+    <a class="nav-phone" href="tel:17328200609" aria-label="Call VNW Media at (732) 820-0609"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.09 9.89a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.83.56 2.79.69A2 2 0 0 1 22 16.92z"/></svg></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"><span class="sr-only">Toggle navigation</span><i></i><i></i></button>
     <div class="nav-menu" id="nav-menu"><a href="${path("our-story.html")}">Our Story</a><a href="${path("work.html?v=30")}">Work</a>${servicesMega()}<a href="${path("industries.html")}">Industries</a><a href="${path("case-studies.html?v=16")}">Case Studies</a><a href="${path("resources.html")}">Resources</a></div>
     <div class="nav-actions"><a class="pill pill-blue" href="${path("contact.html")}">Get Started</a></div>
