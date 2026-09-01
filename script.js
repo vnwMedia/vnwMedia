@@ -386,10 +386,9 @@ forms.forEach((form) => {
     const company = String(data.get("company") || "").trim();
     const website = String(data.get("website") || "").trim();
     const interest = String(data.get("interest") || "Digital marketing strategy").trim();
-    const budget = String(data.get("budget") || "").trim();
     const message = String(data.get("message") || "").trim();
     const subject = encodeURIComponent(`VNW Media strategy request${company ? ` — ${company}` : ""}`);
-    const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nCompany: ${company}\nWebsite: ${website}\nInterest: ${interest}\nBudget: ${budget}\n\nGoals:\n${message}`);
+    const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nCompany: ${company}\nWebsite: ${website}\nInterest: ${interest}\n\nGoals:\n${message}`);
     location.href = `mailto:contactus@vnwmedia.com?subject=${subject}&body=${body}`;
     const status = form.querySelector(".form-status");
     if (status) status.textContent = `Thanks${name ? `, ${name}` : ""}. Your email app is opening now.`;
