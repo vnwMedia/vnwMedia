@@ -48,6 +48,39 @@ if (siteHeaderElement) {
   </nav>`;
 }
 
+function markCurrentPrimaryNavigation() {
+  const currentPath = location.pathname.replace(/\/+$/, "");
+  let section = "";
+
+  if (/\/our-story\.html$/.test(currentPath)) section = "our-story";
+  else if (/\/work(?:-[^/]+)?\.html$/.test(currentPath)) section = "work";
+  else if (/\/services(?:\.html|\/)/.test(currentPath)) section = "services";
+  else if (/\/industries(?:\.html|\/)/.test(currentPath)) section = "industries";
+  else if (/\/case-studies(?:\.html|\/)/.test(currentPath)) section = "case-studies";
+  else if (/\/resources(?:\.html|\/)/.test(currentPath)) section = "resources";
+
+  const primaryLinks = {
+    "our-story": document.querySelector('.site-header .nav-menu > a[href*="our-story.html"]'),
+    work: document.querySelector('.site-header .nav-menu > a[href*="work.html"]'),
+    services: document.querySelector('.site-header .nav-services-trigger'),
+    industries: document.querySelector('.site-header .nav-menu > a[href*="industries.html"]'),
+    "case-studies": document.querySelector('.site-header .nav-menu > a[href*="case-studies.html"]'),
+    resources: document.querySelector('.site-header .nav-menu > a[href*="resources.html"]')
+  };
+
+  Object.values(primaryLinks).forEach(link => {
+    link?.classList.remove("active");
+    link?.removeAttribute("aria-current");
+  });
+
+  const currentLink = primaryLinks[section];
+  if (!currentLink) return;
+  currentLink.classList.add("active");
+  currentLink.setAttribute("aria-current", "page");
+}
+
+markCurrentPrimaryNavigation();
+
 const headerToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const servicesDropdown = document.querySelector(".nav-services");
