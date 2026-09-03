@@ -43,6 +43,9 @@ The chatbot does not diagnose, recommend personalized doses, promise health outc
 
 - 259 business-intent example phrasings were exercised in a real browser and reached their intended intent.
 - 98 end-to-end checks covered high-risk routing, guided buttons, topic switching, contextual follow-ups, multi-intent queuing, lead validation, pause/resume, emergency priority, restart/reload safety, transparent demo submission, console errors, and mobile fit.
+- The complete end-to-end suite was also run against `index.html` opened directly from disk, confirming that the embedded knowledge library works without a local web server.
+- A direct-file check in Safari confirmed a clean startup and the complete Customer Service answer, including its phone, email, hours, and action buttons.
+- The hosted JSON fallback was verified by deliberately blocking the embedded browser data file and confirming that routing still initialized from `intents.json`.
 - All 36 unique HTTPS destinations used by guided buttons returned a successful live response. The additional telephone and email actions were checked for valid `tel:` and `mailto:` formats.
 - Every guided choice has an explicit action and every lead-enabled business intent has a working contact action.
 

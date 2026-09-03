@@ -3,7 +3,7 @@
   const cfg = Object.assign({leadEndpoint:"",requestHeaders:{},typingMinMs:420,typingMaxMs:1450,persistSession:true,demoSubmissionWhenEndpointMissing:true}, window.LIQUID_SOLDIER_CHAT_CONFIG||{});
   const $ = s => document.querySelector(s);
   const widget=$("#chatWidget"), launcher=$("#chatLauncher"), messages=$("#messages"), form=$("#chatForm"), input=$("#userInput"), send=$("#sendBtn");
-  const STORE="liquidSoldierProductionChatV2";
+  const STORE="liquidSoldierProductionChatV3";
   const state={started:false,currentIntent:null,previousIntent:null,pendingIntent:null,history:[],transcript:[],entities:{},lead:null,pausedLead:null,submitting:false,open:false};
   let knowledge=null, busy=false, generation=0;
   const synonyms={buy:"shop",purchase:"shop",refund:"return",package:"order",delivery:"shipping",job:"career",work:"career",seller:"vendor",merchant:"vendor",weed:"cbd",hemp:"cbd",vitamin:"supplement",pr:"public relations",tech:"technology",franchize:"franchise",franshise:"franchise",supliment:"supplement",suppliment:"supplement",shiping:"shipping",retun:"return",refnd:"refund",costumer:"customer"};
@@ -170,12 +170,21 @@
     bot("Submitting your information…",async()=>{try{const demo=!cfg.leadEndpoint;if(cfg.leadEndpoint){const res=await fetch(cfg.leadEndpoint,{method:"POST",headers:Object.assign({"Content-Type":"application/json"},cfg.requestHeaders),body:JSON.stringify(payload)});if(!res.ok)throw new Error(`Endpoint returned ${res.status}`)}else if(!cfg.demoSubmissionWhenEndpointMissing)throw new Error("Lead endpoint is not configured");else console.info("Liquid Soldier demo lead payload",payload);state.lead=null;state.pausedLead=null;state.submitting=false;save();const confirmation=demo?"Thank you! The prototype handoff completed successfully. Live delivery will begin when the secure client endpoint is connected.":"Thank you! Your information has been submitted successfully. A member of the appropriate Liquid Soldier team will contact you shortly.";bot(confirmation,()=>chips([{label:"Ask another question",action:"system"},{label:"Close chat",action:"system"}],byId("lead_success")))}catch(e){state.submitting=false;save();console.error(e);bot("I couldn’t complete the handoff yet. Please check the contact details and try again, or use the current Contact Us page so the team receives your request.",()=>chips([{label:"Try again",action:"system"},{label:"Open Contact Us",action:"system"},{label:"Cancel request",action:"system"}],byId("lead_failure")))}})
   }
   function start(){if(state.started)return;state.started=true;save();bot("Hi, welcome to Liquid Soldier.",()=>bot("What can we help you with? You can type any question or choose a starting point.",()=>mainChips()))}
-  function restart(){generation++;busy=false;send.disabled=false;localStorage.removeItem(STORE);const isOpen=state.open;Object.assign(state,{started:false,currentIntent:null,previousIntent:null,pendingIntent:null,history:[],transcript:[],entities:{},lead:null,pausedLead:null,submitting:false,open:isOpen});messages.innerHTML="";start()}
+  function restart(){generation++;busy=false;send.disabled=false;try{localStorage.removeItem(STORE)}catch{}const isOpen=state.open;Object.assign(state,{started:false,currentIntent:null,previousIntent:null,pendingIntent:null,history:[],transcript:[],entities:{},lead:null,pausedLead:null,submitting:false,open:isOpen});messages.innerHTML="";start()}
   function open(){state.open=true;widget.classList.add("open");widget.setAttribute("aria-hidden","false");launcher.classList.add("open");launcher.setAttribute("aria-expanded","true");$("#unread").hidden=true;save();start();setTimeout(()=>input.focus(),150)}
   function close(){state.open=false;widget.classList.remove("open");widget.setAttribute("aria-hidden","true");launcher.classList.remove("open");launcher.setAttribute("aria-expanded","false");save()}
   form.addEventListener("submit",e=>{e.preventDefault();const text=input.value.trim();if(!text||busy||state.submitting)return;input.value="";input.style.height="auto";add(text,"user");handle(text)});
   input.addEventListener("input",()=>{input.style.height="auto";input.style.height=Math.min(input.scrollHeight,92)+"px"});
   input.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();form.requestSubmit()}});
   launcher.addEventListener("click",()=>state.open?close():open());$("#closeBtn").onclick=close;$("#restartBtn").onclick=restart;
-  fetch("intents.json?v=20260903-5").then(r=>{if(!r.ok)throw new Error("Knowledge base not found");return r.json()}).then(data=>{knowledge=data;restore();if(state.transcript.length)state.transcript.forEach(x=>add(x.message,x.speaker==="Visitor"?"user":"bot",false));if(state.lead){const prompt=leadPrompt(),last=state.transcript.at(-1);if(state.lead.index>=state.lead.fields.length){bot("Your contact details are ready. Send the request when you’re ready.",()=>chips([{label:"Send request",action:"system"},{label:"Cancel request",action:"system"}],byId(state.lead.intentId)))}else if(last?.speaker!=="Bot"||last.message!==prompt)askField()}if(state.open)open()}).catch(e=>{console.error(e);knowledge={intents:[]};add("The chatbot knowledge file could not load. Serve this folder from a web server as described in the README.")});
+  function initialize(data){
+    if(!data||!Array.isArray(data.intents)||!data.intents.length)throw new Error("Knowledge base is empty");
+    knowledge=data;restore();
+    if(state.transcript.length)state.transcript.forEach(x=>add(x.message,x.speaker==="Visitor"?"user":"bot",false));
+    if(state.lead){const prompt=leadPrompt(),last=state.transcript.at(-1);if(state.lead.index>=state.lead.fields.length){bot("Your contact details are ready. Send the request when you’re ready.",()=>chips([{label:"Send request",action:"system"},{label:"Cancel request",action:"system"}],byId(state.lead.intentId)))}else if(last?.speaker!=="Bot"||last.message!==prompt)askField()}
+    if(state.open)open();
+  }
+  const embeddedKnowledge=window.LIQUID_SOLDIER_KNOWLEDGE;
+  if(embeddedKnowledge?.intents?.length)initialize(embeddedKnowledge);
+  else fetch("intents.json?v=20260903-6").then(r=>{if(!r.ok)throw new Error("Knowledge base not found");return r.json()}).then(initialize).catch(e=>{console.error(e);knowledge={intents:[]};add("The chatbot knowledge file could not load. Please refresh the page or contact Liquid Soldier for help.")});
 })();

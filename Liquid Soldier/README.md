@@ -7,19 +7,24 @@ This package contains a production-style, bottom-right chatbot prototype built f
 - `index.html` — drop-in prototype and configuration
 - `assets/chatbot.css` — responsive widget styling
 - `assets/chatbot.js` — conversation, matching, memory, lead capture, and submission logic
+- `assets/intents-data.js` — browser-ready knowledge library for hosted and direct-file use
 - `assets/liquid-soldier-logo.webp` — the current logo used by the live chatbot
 - `intents.json` — machine-readable intent and routing library
 - `SOURCE-AUDIT.md` — coverage, source notes, and live-data boundaries
 
 ## Preview locally
 
-Because the chatbot loads `intents.json`, view it through a local web server rather than double-clicking `index.html`.
+Extract the complete ZIP, keep the included folder structure intact, and double-click `index.html` to run the chatbot directly from the downloaded folder. The included browser-ready knowledge library avoids local-file security restrictions in Safari, Chrome, and Edge.
+
+For a production-like local URL, you can optionally serve the folder with:
 
 ```bash
 python3 -m http.server 8080
 ```
 
 Then visit `http://localhost:8080` from inside this folder.
+
+Keep `intents.json` and `assets/intents-data.js` together when editing the knowledge library. Both files are generated from `work/build-intents.mjs` in the source workspace so the browser and machine-readable versions stay identical.
 
 ## Configure lead delivery
 
@@ -38,6 +43,8 @@ The payload contains:
 No lead summary is shown to the visitor. After an accepted response from the endpoint, the visitor sees only the success confirmation. When no endpoint is configured, this public prototype clearly identifies the handoff as a prototype test rather than claiming that a team received it. Set `demoSubmissionWhenEndpointMissing` to `false` before production so an unconfigured endpoint routes visitors to Contact Us instead.
 
 Do not put private API keys in this front-end file. Authenticate and forward leads from a server-side endpoint. Configure CORS to allow the production website origin, validate and rate-limit submissions, sanitize all fields, log consent as required, and return a 2xx status only after the lead has been accepted.
+
+Use the hosted HTTPS version—not a `file://` preview—when testing a real lead endpoint. Browsers give local files an opaque origin that production endpoints should not allow through CORS.
 
 ## Matching and conversation behavior
 
