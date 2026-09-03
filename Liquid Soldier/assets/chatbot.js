@@ -80,5 +80,5 @@
   input.addEventListener("input",()=>{input.style.height="auto";input.style.height=Math.min(input.scrollHeight,92)+"px"});
   input.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();form.requestSubmit()}});
   launcher.addEventListener("click",()=>state.open?close():open());$("#closeBtn").onclick=close;$("#restartBtn").onclick=restart;
-  fetch("intents.json").then(r=>{if(!r.ok)throw new Error("Knowledge base not found");return r.json()}).then(data=>{knowledge=data;restore();if(state.transcript.length){state.transcript.forEach(x=>add(x.message,x.speaker==="Visitor"?"user":"bot",false));if(state.lead)askField()}if(state.open)open()}).catch(e=>{console.error(e);knowledge={intents:[]};add("The chatbot knowledge file could not load. Serve this folder from a web server as described in the README.")});
+  fetch("intents.json?v=20260903-2").then(r=>{if(!r.ok)throw new Error("Knowledge base not found");return r.json()}).then(data=>{knowledge=data;restore();if(state.transcript.length){state.transcript.forEach(x=>add(x.message,x.speaker==="Visitor"?"user":"bot",false));if(state.lead)askField()}if(state.open)open()}).catch(e=>{console.error(e);knowledge={intents:[]};add("The chatbot knowledge file could not load. Serve this folder from a web server as described in the README.")});
 })();
