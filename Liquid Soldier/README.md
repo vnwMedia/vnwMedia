@@ -1,29 +1,50 @@
-# Liquid Soldier conversational chatbot prototype
+# Liquid Soldier hybrid chatbot
 
-## Run it
+This package contains a production-style, bottom-right chatbot prototype built from the approved Chat box FAQ language and a public-site audit completed September 3, 2026.
 
-Open `index.html` in a modern browser. The prototype has no build step. An internet connection is used only to load the Font Awesome icon stylesheet; the Liquid Soldier logo and the floating chat icon are included locally.
+## Package contents
 
-## What is included
+- `index.html` — drop-in prototype and configuration
+- `assets/chatbot.css` — responsive widget styling
+- `assets/chatbot.js` — conversation, matching, memory, lead capture, and submission logic
+- `assets/liquid-soldier-logo.webp` — the current logo used by the live chatbot
+- `intents.json` — machine-readable intent and routing library
+- `SOURCE-AUDIT.md` — coverage, source notes, and live-data boundaries
 
-- The latest supplied Liquid Soldier widget layout, sizing, spacing, logo, and floating SVG chat icon
-- Guided buttons and free-text questions available throughout the conversation
-- Natural phrase and keyword routing across products, coffee, supplements, shipping, tracking, returns, damaged orders, franchising, franchise cost/training/application/approval, investing, charity, donations, volunteering, careers, remote work, media, articles, partnerships, ownership, location, nonprofit status, payment security, and contact
-- Word normalization, common misspelling tolerance, concept aliases, and semantic scoring—not just exact phrase matching
-- Multi-topic recognition when a visitor combines two related questions in one message
-- Follow-up context for short questions such as “How much?”, “Is it available?”, or “Tell me more”
-- Helpful clarification prompts in place of dead-end “answer not found” messages
-- Variable human-style typing delays
-- Conversational name, email, and optional phone capture when the visitor requests follow-up
-- Private lead payload preparation; visitors only see a submission confirmation
-- Restart, minimize, close, responsive mobile layout, and keyboard submission
+## Preview locally
 
-## Connect lead delivery
+Because the chatbot loads `intents.json`, view it through a local web server rather than double-clicking `index.html`.
 
-This package is a browser prototype. In `index.html`, set `LEAD_ENDPOINT` to the client's secure server-side CRM or webhook endpoint. The prototype sends JSON containing the lead details, interest, conversation history, and submission time.
+```bash
+python3 -m http.server 8080
+```
 
-Do not put private API keys, SMTP passwords, or client email credentials in browser code. The receiving service should validate and sanitize fields, add spam protection and rate limits, record any legally required consent, and deliver the lead summary privately to the client.
+Then visit `http://localhost:8080` from inside this folder.
 
-## Before production launch
+## Configure lead delivery
 
-Have the client re-approve exact business answers and add live links for products, tracking, policies, donations, careers, franchise applications, investment inquiries, and contact. Current pricing, stock, territories, roles, and investment terms should come from maintained business systems rather than hard-coded chatbot copy.
+In `index.html`, set `window.LIQUID_SOLDIER_CHAT_CONFIG.leadEndpoint` to an HTTPS endpoint that accepts a JSON `POST`.
+
+The payload contains:
+
+- source and timestamp
+- page URL and browser user agent
+- detected intent and destination department
+- collected lead fields
+- remembered conversation entities
+- intent history
+- full visitor/bot transcript
+
+No lead summary is shown to the visitor. After an accepted response from the endpoint, the visitor sees only the success confirmation. The included prototype simulates success when no endpoint is configured; set `demoSubmissionWhenEndpointMissing` to `false` before production.
+
+Do not put private API keys in this front-end file. Authenticate and forward leads from a server-side endpoint. Configure CORS to allow the production website origin, validate and rate-limit submissions, sanitize all fields, log consent as required, and return a 2xx status only after the lead has been accepted.
+
+## Matching and conversation behavior
+
+The browser engine combines phrase/keyword scoring, typo-tolerant token comparison, synonyms, active-topic weighting, and multi-intent detection. It keeps the current and previous topics, queues a second intent when appropriate, allows immediate topic switching, understands short pronoun follow-ups in the active context, and never disables free text.
+
+Safety and accuracy rules in the intent library prevent stored prices, availability, leadership names, financial terms, or jurisdiction-dependent facts from being presented as permanently current. Medical questions are limited to label guidance, healthcare-professional referral, and urgent emergency routing.
+
+## Integration
+
+The widget uses plain HTML, CSS, and JavaScript and has no third-party runtime dependency. For WordPress, enqueue the CSS and JavaScript, add the widget markup near the end of the page template, update asset paths, and set the lead endpoint. Keep the current page URLs in `intents.json` synchronized if site routes change.
