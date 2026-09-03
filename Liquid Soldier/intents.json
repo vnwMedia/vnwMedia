@@ -27,7 +27,7 @@
     "visitorLeadSummary": false,
     "helpfulFallbackOnly": true
   },
-  "count": 124,
+  "count": 133,
   "intents": [
     {
       "id": "company_overview",
@@ -48,15 +48,15 @@
       "buttons": [
         {
           "label": "Explore products",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Our mission",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Opportunities",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -98,19 +98,19 @@
       "buttons": [
         {
           "label": "Shop",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Business opportunities",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Community",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Departments",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -151,15 +151,15 @@
       "buttons": [
         {
           "label": "How purchases help",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Donate",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "About us",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -201,11 +201,11 @@
       "buttons": [
         {
           "label": "Donate",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Community outreach",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -245,15 +245,16 @@
       "buttons": [
         {
           "label": "Donate",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Investor information",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/about-us/"
         },
         {
           "label": "Contact team",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -295,11 +296,11 @@
       "buttons": [
         {
           "label": "Contact us",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Ask the team",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -343,19 +344,19 @@
       "buttons": [
         {
           "label": "Customer support",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Franchising",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Investing",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Other",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -402,19 +403,19 @@
       "buttons": [
         {
           "label": "Shop",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Order help",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Opportunities",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Policies",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -429,6 +430,63 @@
       "department": "General Information",
       "url": "https://liquidsoldier.com/about-us/",
       "liveDataOnly": false,
+      "medicalSafety": false,
+      "sourceBasis": [
+        "approved_chatbox_faq",
+        "live_website_audit_2026-09-03"
+      ]
+    },
+    {
+      "id": "customer_experience",
+      "category": "Shopping",
+      "examples": [
+        "customer experience",
+        "customer experience department",
+        "retail customer experience"
+      ],
+      "keywords": [
+        "customer experience",
+        "retail support",
+        "shopping experience"
+      ],
+      "response": "Liquid Soldier's Sales, Retail & Customer Experience group supports the customer journey across products, purchasing, service, and relationship-building. For an immediate service question, Customer Service can help by phone at (844) 221-9709 or email at contact@liquidsoldier.com.",
+      "followUps": [
+        "Do you need shopping help, order support, sales information, or customer service?"
+      ],
+      "buttons": [
+        {
+          "label": "Customer service",
+          "action": "intent",
+          "intentId": "customer_service"
+        },
+        {
+          "label": "Order help",
+          "action": "intent",
+          "intentId": "order_support_overview"
+        },
+        {
+          "label": "Sales team",
+          "action": "intent",
+          "intentId": "sales_team"
+        },
+        {
+          "label": "Department page",
+          "action": "link",
+          "url": "https://liquidsoldier.com/sales-retail-customer-experience/"
+        }
+      ],
+      "memory": {
+        "topic": "shopping",
+        "retainEntities": true,
+        "allowPronounReference": true,
+        "pauseOnTopicSwitch": true,
+        "resumeSuggestion": true
+      },
+      "leadCapture": "none",
+      "leadFields": [],
+      "department": "Sales, Retail & Customer Experience",
+      "url": "https://liquidsoldier.com/sales-retail-customer-experience/",
+      "liveDataOnly": true,
       "medicalSafety": false,
       "sourceBasis": [
         "approved_chatbox_faq",
@@ -455,19 +513,19 @@
       "buttons": [
         {
           "label": "Coffee",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Supplements",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "CBD / ItsAllMedical",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Marketplace",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -511,19 +569,20 @@
       "buttons": [
         {
           "label": "Energy",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "General wellness",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Gift",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Browse categories",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/sales-retail-customer-experience/"
         }
       ],
       "memory": {
@@ -565,19 +624,19 @@
       "buttons": [
         {
           "label": "Coffee",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Supplements",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "CBD",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Marketplace",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -618,19 +677,19 @@
       "buttons": [
         {
           "label": "Coffee",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Supplements",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "CBD",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Marketplace",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -672,11 +731,13 @@
       "buttons": [
         {
           "label": "Find product",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "product_overview"
         },
         {
           "label": "Safety guidance",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "supplement_safety"
         }
       ],
       "memory": {
@@ -718,11 +779,11 @@
       "buttons": [
         {
           "label": "Find product",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Contact product team",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -764,11 +825,12 @@
       "buttons": [
         {
           "label": "View clothing",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/sales-retail-customer-experience/clothing-line/"
         },
         {
           "label": "Other products",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -808,11 +870,12 @@
       "buttons": [
         {
           "label": "Browse products",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/sales-retail-customer-experience/"
         },
         {
           "label": "Marketplace",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -854,11 +917,12 @@
       "buttons": [
         {
           "label": "Go to checkout",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/checkout/"
         },
         {
           "label": "Payment problem",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -899,11 +963,12 @@
       "buttons": [
         {
           "label": "Open cart",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/cart/"
         },
         {
           "label": "Contact support",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -945,11 +1010,12 @@
       "buttons": [
         {
           "label": "Checkout",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Privacy policy",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/sales-retail-customer-experience/"
         }
       ],
       "memory": {
@@ -991,11 +1057,12 @@
       "buttons": [
         {
           "label": "Open cart",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/sales-retail-customer-experience/"
         },
         {
           "label": "Shipping help",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1010,6 +1077,183 @@
       "department": "Sales, Retail & Customer Experience",
       "url": "https://liquidsoldier.com/sales-retail-customer-experience/",
       "liveDataOnly": true,
+      "medicalSafety": false,
+      "sourceBasis": [
+        "approved_chatbox_faq",
+        "live_website_audit_2026-09-03"
+      ]
+    },
+    {
+      "id": "customer_service",
+      "category": "Orders",
+      "examples": [
+        "customer service",
+        "customer service information",
+        "how do i contact customer service",
+        "customer support phone number",
+        "support contact information"
+      ],
+      "keywords": [
+        "customer service",
+        "customer support",
+        "service department",
+        "support number",
+        "contact information"
+      ],
+      "response": "Liquid Soldier Customer Service is available Monday-Thursday, 9:00 AM-5:00 PM MST, and Friday, 9:00 AM-3:00 PM MST.\n\nPhone: (844) 221-9709\nEmail: contact@liquidsoldier.com\n\nYou can call, email, use the Contact Us form, or tell me what you need help with here.",
+      "followUps": [
+        "Is this about an order, product, return, website issue, or something else?"
+      ],
+      "buttons": [
+        {
+          "label": "Call customer service",
+          "action": "link",
+          "url": "tel:+18442219709"
+        },
+        {
+          "label": "Email customer service",
+          "action": "link",
+          "url": "mailto:contact@liquidsoldier.com"
+        },
+        {
+          "label": "Order help",
+          "action": "intent",
+          "intentId": "order_support_overview"
+        },
+        {
+          "label": "Contact form",
+          "action": "link",
+          "url": "https://liquidsoldier.com/contact-us/"
+        }
+      ],
+      "memory": {
+        "topic": "orders",
+        "retainEntities": true,
+        "allowPronounReference": true,
+        "pauseOnTopicSwitch": true,
+        "resumeSuggestion": true
+      },
+      "leadCapture": "none",
+      "leadFields": [],
+      "department": "Customer Service",
+      "url": "https://liquidsoldier.com/contact-us/",
+      "liveDataOnly": false,
+      "medicalSafety": false,
+      "sourceBasis": [
+        "approved_chatbox_faq",
+        "live_website_audit_2026-09-03"
+      ]
+    },
+    {
+      "id": "order_support_overview",
+      "category": "Orders",
+      "examples": [
+        "order help",
+        "order support",
+        "help with an order",
+        "orders"
+      ],
+      "keywords": [
+        "order",
+        "order support",
+        "purchase help",
+        "existing order"
+      ],
+      "response": "I can help with an existing order. Choose the closest issue, or describe what happened in your own words.",
+      "followUps": [
+        "What do you need help with?"
+      ],
+      "buttons": [
+        {
+          "label": "Track my order",
+          "action": "intent",
+          "intentId": "order_tracking"
+        },
+        {
+          "label": "Change or cancel",
+          "action": "intent",
+          "intentId": "change_cancel_order"
+        },
+        {
+          "label": "Damaged or wrong item",
+          "action": "intent",
+          "intentId": "damaged_order"
+        },
+        {
+          "label": "Return or refund",
+          "action": "intent",
+          "intentId": "return_refund"
+        }
+      ],
+      "memory": {
+        "topic": "orders",
+        "retainEntities": true,
+        "allowPronounReference": true,
+        "pauseOnTopicSwitch": true,
+        "resumeSuggestion": true
+      },
+      "leadCapture": "none",
+      "leadFields": [],
+      "department": "Customer Service",
+      "url": "https://liquidsoldier.com/contact-us/",
+      "liveDataOnly": false,
+      "medicalSafety": false,
+      "sourceBasis": [
+        "approved_chatbox_faq",
+        "live_website_audit_2026-09-03"
+      ]
+    },
+    {
+      "id": "shipping_overview",
+      "category": "Orders",
+      "examples": [
+        "shipping",
+        "shipping information",
+        "delivery information"
+      ],
+      "keywords": [
+        "shipping",
+        "delivery",
+        "ship order"
+      ],
+      "response": "I can help with shipping. Are you checking delivery time or cost, tracking an order, changing an address, or reporting a delivery problem?",
+      "followUps": [
+        "Which shipping question do you have?"
+      ],
+      "buttons": [
+        {
+          "label": "Shipping time",
+          "action": "intent",
+          "intentId": "shipping_time"
+        },
+        {
+          "label": "Shipping cost",
+          "action": "intent",
+          "intentId": "shipping_cost"
+        },
+        {
+          "label": "Track order",
+          "action": "intent",
+          "intentId": "order_tracking"
+        },
+        {
+          "label": "Delivery problem",
+          "action": "intent",
+          "intentId": "customer_complaint"
+        }
+      ],
+      "memory": {
+        "topic": "orders",
+        "retainEntities": true,
+        "allowPronounReference": true,
+        "pauseOnTopicSwitch": true,
+        "resumeSuggestion": true
+      },
+      "leadCapture": "none",
+      "leadFields": [],
+      "department": "Customer Service",
+      "url": "https://liquidsoldier.com/contact-us/",
+      "liveDataOnly": false,
       "medicalSafety": false,
       "sourceBasis": [
         "approved_chatbox_faq",
@@ -1037,15 +1281,16 @@
       "buttons": [
         {
           "label": "I have it",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "No order number",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Marketplace order",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "marketplace_dispute"
         }
       ],
       "memory": {
@@ -1092,15 +1337,15 @@
       "buttons": [
         {
           "label": "Liquid Soldier order",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Marketplace order",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Track order",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1141,11 +1386,12 @@
       "buttons": [
         {
           "label": "Open cart",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/contact-us/"
         },
         {
           "label": "Shipping policy",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1186,15 +1432,15 @@
       "buttons": [
         {
           "label": "Cancel order",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Change address",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Change item",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1242,11 +1488,11 @@
       "buttons": [
         {
           "label": "Start request",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Return policy",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1294,11 +1540,11 @@
       "buttons": [
         {
           "label": "Start request",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Track another shipment",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1345,15 +1591,17 @@
       "buttons": [
         {
           "label": "Marketplace",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "marketplace_return_policy"
         },
         {
           "label": "CBD / ItsAllMedical",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "cbd_returns"
         },
         {
           "label": "Other order",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -1394,11 +1642,11 @@
       "buttons": [
         {
           "label": "Start lookup",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "I found it",
-          "action": "intent_or_link"
+          "action": "system"
         }
       ],
       "memory": {
@@ -1445,19 +1693,19 @@
       "buttons": [
         {
           "label": "Order",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Vendor",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Website",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Other",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1504,15 +1752,16 @@
       "buttons": [
         {
           "label": "View coffee",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/liquid-soldier-coffee/"
         },
         {
           "label": "Help me choose",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Coffee availability",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1554,15 +1803,16 @@
       "buttons": [
         {
           "label": "Browse coffee",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/liquid-soldier-coffee/"
         },
         {
           "label": "Whole bean",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Ground",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1602,11 +1852,12 @@
       "buttons": [
         {
           "label": "View coffee",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/liquid-soldier-coffee/"
         },
         {
           "label": "Contact team",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -1646,11 +1897,12 @@
       "buttons": [
         {
           "label": "Browse coffee",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/liquid-soldier-coffee/"
         },
         {
           "label": "Safety guidance",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1691,15 +1943,18 @@
       "buttons": [
         {
           "label": "Browse supplements",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/liquid-soldier-supplements/"
         },
         {
           "label": "Ingredients",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "product_ingredients"
         },
         {
           "label": "Safety",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "supplement_safety"
         }
       ],
       "memory": {
@@ -1742,11 +1997,11 @@
       "buttons": [
         {
           "label": "Find product",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Contact support",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -1789,11 +2044,12 @@
       "buttons": [
         {
           "label": "Browse supplements",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/liquid-soldier-supplements/"
         },
         {
           "label": "Ingredients",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1835,11 +2091,11 @@
       "buttons": [
         {
           "label": "Find product",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Safety guidance",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -1881,11 +2137,11 @@
       "buttons": [
         {
           "label": "Emergency guidance",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Report product issue",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -1933,15 +2189,18 @@
       "buttons": [
         {
           "label": "View CBD products",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/itsallmedical/"
         },
         {
           "label": "Safety",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "cbd_drug_interaction"
         },
         {
           "label": "CBD order help",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "cbd_customer_service"
         }
       ],
       "memory": {
@@ -1982,11 +2241,12 @@
       "buttons": [
         {
           "label": "View ItsAllMedical",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/itsallmedical/"
         },
         {
           "label": "CBD safety",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -2027,11 +2287,12 @@
       "buttons": [
         {
           "label": "View CBD shop",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/itsallmedical/"
         },
         {
           "label": "Contact support",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -2073,11 +2334,12 @@
       "buttons": [
         {
           "label": "View COAs",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/coa/"
         },
         {
           "label": "Contact CBD support",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -2119,11 +2381,11 @@
       "buttons": [
         {
           "label": "Find CBD product",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Ingredients",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -2164,11 +2426,75 @@
       "buttons": [
         {
           "label": "CBD support",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "View ItsAllMedical",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/itsallmedical/"
+        }
+      ],
+      "memory": {
+        "topic": "cbd",
+        "retainEntities": true,
+        "allowPronounReference": true,
+        "pauseOnTopicSwitch": true,
+        "resumeSuggestion": true
+      },
+      "leadCapture": "on_issue",
+      "leadFields": [
+        "name",
+        "email",
+        "phone",
+        "orderNumber",
+        "issue"
+      ],
+      "department": "Medical, Wellness & Research",
+      "url": "https://liquidsoldier.com/itsallmedical/",
+      "liveDataOnly": true,
+      "medicalSafety": false,
+      "sourceBasis": [
+        "approved_chatbox_faq",
+        "live_website_audit_2026-09-03"
+      ]
+    },
+    {
+      "id": "cbd_customer_service",
+      "category": "CBD",
+      "examples": [
+        "cbd customer service",
+        "itsallmedical support",
+        "cbd order support"
+      ],
+      "keywords": [
+        "cbd support",
+        "cbd customer service",
+        "orders email",
+        "return address"
+      ],
+      "response": "ItsAllMedical/CBD order support is available Monday-Friday, 9:00 AM-5:00 PM Pacific Time.\n\nPhone: (844) 221-9709\nEmail: orders@liquidsoldier.com\nReturns: PO Box 286, Los Alamitos, CA 90720\n\nItsAllMedical states that products carry a 30-day customer-satisfaction guarantee; unused product must be returned within 30 days of receipt under the published terms.",
+      "followUps": [
+        "Do you need order help, return instructions, or the CBD product page?"
+      ],
+      "buttons": [
+        {
+          "label": "Call CBD order support",
+          "action": "link",
+          "url": "tel:+18442219709"
+        },
+        {
+          "label": "Email CBD order support",
+          "action": "link",
+          "url": "mailto:orders@liquidsoldier.com"
+        },
+        {
+          "label": "CBD return help",
+          "action": "lead"
+        },
+        {
+          "label": "View ItsAllMedical",
+          "action": "link",
+          "url": "https://liquidsoldier.com/itsallmedical/"
         }
       ],
       "memory": {
@@ -2215,19 +2541,23 @@
       "buttons": [
         {
           "label": "Shop",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/store-listing/"
         },
         {
           "label": "Become a vendor",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "vendor_apply"
         },
         {
           "label": "Vendor login",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/vendor-login/"
         },
         {
           "label": "Marketplace support",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "marketplace_support"
         }
       ],
       "memory": {
@@ -2242,6 +2572,64 @@
       "department": "Marketplace Team",
       "url": "https://liquidsoldier.com/marketplace-information/",
       "liveDataOnly": false,
+      "medicalSafety": false,
+      "sourceBasis": [
+        "approved_chatbox_faq",
+        "live_website_audit_2026-09-03"
+      ]
+    },
+    {
+      "id": "marketplace_support",
+      "category": "Marketplace",
+      "examples": [
+        "marketplace customer service",
+        "marketplace support",
+        "contact marketplace team"
+      ],
+      "keywords": [
+        "marketplace help",
+        "marketplace support",
+        "marketplace customer service",
+        "vendor support"
+      ],
+      "response": "For Marketplace help, contact Liquid Soldier Customer Service Monday-Thursday, 9:00 AM-5:00 PM MST, or Friday, 9:00 AM-3:00 PM MST.\n\nPhone: (844) 221-9709\nEmail: contact@liquidsoldier.com\n\nTell them whether you are a buyer or vendor and include the order number or business name when applicable.",
+      "followUps": [
+        "Are you a buyer, vendor applicant, or approved vendor?"
+      ],
+      "buttons": [
+        {
+          "label": "Call customer service",
+          "action": "link",
+          "url": "tel:+18442219709"
+        },
+        {
+          "label": "Email customer service",
+          "action": "link",
+          "url": "mailto:contact@liquidsoldier.com"
+        },
+        {
+          "label": "Marketplace order issue",
+          "action": "intent",
+          "intentId": "marketplace_dispute"
+        },
+        {
+          "label": "Vendor login help",
+          "action": "intent",
+          "intentId": "vendor_login"
+        }
+      ],
+      "memory": {
+        "topic": "marketplace",
+        "retainEntities": true,
+        "allowPronounReference": true,
+        "pauseOnTopicSwitch": true,
+        "resumeSuggestion": true
+      },
+      "leadCapture": "none",
+      "leadFields": [],
+      "department": "Marketplace Team",
+      "url": "https://liquidsoldier.com/marketplace-information/",
+      "liveDataOnly": true,
       "medicalSafety": false,
       "sourceBasis": [
         "approved_chatbox_faq",
@@ -2271,11 +2659,13 @@
       "buttons": [
         {
           "label": "Shop Marketplace",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/store-listing/"
         },
         {
           "label": "Apply as vendor",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "vendor_apply"
         }
       ],
       "memory": {
@@ -2316,11 +2706,12 @@
       "buttons": [
         {
           "label": "Browse stores",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/marketplace-information/"
         },
         {
           "label": "Marketplace help",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -2360,15 +2751,15 @@
       "buttons": [
         {
           "label": "Shipping times",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Track order",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Report issue",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -2410,11 +2801,12 @@
       "buttons": [
         {
           "label": "Privacy Policy",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/marketplace-information/"
         },
         {
           "label": "Vendor standards",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -2455,15 +2847,16 @@
       "buttons": [
         {
           "label": "Start inquiry",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Full application",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/vendor-registration/"
         },
         {
           "label": "Vendor requirements",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -2513,11 +2906,12 @@
       "buttons": [
         {
           "label": "Open application",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/vendor-registration/"
         },
         {
           "label": "Start inquiry",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -2558,11 +2952,12 @@
       "buttons": [
         {
           "label": "Check status",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Apply now",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "vendor_apply"
         }
       ],
       "memory": {
@@ -2611,11 +3006,11 @@
       "buttons": [
         {
           "label": "Vendor login",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Login help",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -2656,11 +3051,12 @@
       "buttons": [
         {
           "label": "Reset password",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/password-reset-2/"
         },
         {
           "label": "Contact support",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -2706,19 +3102,23 @@
       "buttons": [
         {
           "label": "Open dashboard",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/vendor-dashboard/"
         },
         {
           "label": "Product listings",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "vendor_listing_help"
         },
         {
           "label": "Orders",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/my-orders/"
         },
         {
           "label": "Payments",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "vendor_payments"
         }
       ],
       "memory": {
@@ -2760,15 +3160,15 @@
       "buttons": [
         {
           "label": "Add product",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Edit listing",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Listing problem",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -2817,11 +3217,12 @@
       "buttons": [
         {
           "label": "View policies",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/marketplace-information/"
         },
         {
           "label": "Report payout issue",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -2869,11 +3270,11 @@
       "buttons": [
         {
           "label": "Leave review",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Report review",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -2915,19 +3316,19 @@
       "buttons": [
         {
           "label": "Not received",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Damaged",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Not as described",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Refund issue",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -2975,11 +3376,12 @@
       "buttons": [
         {
           "label": "View return policy",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/marketplace-return-policy/"
         },
         {
           "label": "Start support request",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -3021,19 +3423,22 @@
       "buttons": [
         {
           "label": "How it works",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/franchising/"
         },
         {
           "label": "Costs",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "franchise_cost"
         },
         {
           "label": "Apply",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "franchise_apply"
         },
         {
           "label": "Talk to franchise team",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -3083,15 +3488,15 @@
       "buttons": [
         {
           "label": "Request current costs",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Apply",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Keep researching",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -3141,11 +3546,11 @@
       "buttons": [
         {
           "label": "Submit market interest",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Franchise application",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -3194,15 +3599,15 @@
       "buttons": [
         {
           "label": "Yes",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "No",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Apply",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -3244,11 +3649,11 @@
       "buttons": [
         {
           "label": "Request details",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Apply",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -3289,19 +3694,27 @@
       "buttons": [
         {
           "label": "ASAP",
-          "action": "intent_or_link"
+          "action": "set_entity",
+          "field": "timeline",
+          "value": "ASAP"
         },
         {
           "label": "3-6 months",
-          "action": "intent_or_link"
+          "action": "set_entity",
+          "field": "timeline",
+          "value": "3-6 months"
         },
         {
           "label": "6-12 months",
-          "action": "intent_or_link"
+          "action": "set_entity",
+          "field": "timeline",
+          "value": "6-12 months"
         },
         {
           "label": "Researching",
-          "action": "intent_or_link"
+          "action": "set_entity",
+          "field": "timeline",
+          "value": "Researching"
         }
       ],
       "memory": {
@@ -3342,11 +3755,11 @@
       "buttons": [
         {
           "label": "Contact franchise team",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Costs",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -3388,11 +3801,11 @@
       "buttons": [
         {
           "label": "Talk to franchise team",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Franchise application",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -3433,11 +3846,12 @@
       "buttons": [
         {
           "label": "Open application",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/franchise-application/"
         },
         {
           "label": "Guided inquiry",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -3487,19 +3901,21 @@
       "buttons": [
         {
           "label": "General information",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/investor-information/"
         },
         {
           "label": "Strategic interest",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Shareholder help",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "existing_shareholder"
         },
         {
           "label": "Contact investment team",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -3547,11 +3963,12 @@
       "buttons": [
         {
           "label": "Investor information",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/investor-information/"
         },
         {
           "label": "Contact investment team",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -3599,11 +4016,12 @@
       "buttons": [
         {
           "label": "Investor information",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/investor-information/"
         },
         {
           "label": "Contact team",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -3645,7 +4063,7 @@
       "buttons": [
         {
           "label": "Request follow-up",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -3693,19 +4111,23 @@
       "buttons": [
         {
           "label": "Read articles",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/blog/"
         },
         {
           "label": "Contribute",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "submit_article"
         },
         {
           "label": "Press inquiry",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "press_inquiry"
         },
         {
           "label": "Partnership",
-          "action": "intent_or_link"
+          "action": "intent",
+          "intentId": "media_partnership"
         }
       ],
       "memory": {
@@ -3747,11 +4169,11 @@
       "buttons": [
         {
           "label": "Contributor inquiry",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Submit post",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -3800,7 +4222,7 @@
       "buttons": [
         {
           "label": "Start press inquiry",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -3849,19 +4271,19 @@
       "buttons": [
         {
           "label": "Content",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Sponsorship",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Podcast",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Other",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -3881,6 +4303,64 @@
       ],
       "department": "Liquid Soldier Media",
       "url": "https://liquidsoldier.com/liquid-soldier-media/",
+      "liveDataOnly": false,
+      "medicalSafety": false,
+      "sourceBasis": [
+        "approved_chatbox_faq",
+        "live_website_audit_2026-09-03"
+      ]
+    },
+    {
+      "id": "human_resources",
+      "category": "Careers",
+      "examples": [
+        "human resources",
+        "hr",
+        "hr department",
+        "contact hr"
+      ],
+      "keywords": [
+        "hr",
+        "human resources",
+        "employee help",
+        "people administration"
+      ],
+      "response": "Liquid Soldier's Human Resources department supports recruiting, onboarding, employee documentation, compensation and benefits, training and development, compliance, workplace safety, performance, and employee career development. Current employees and applicants can use Human Resources as the appropriate first point of contact.",
+      "followUps": [
+        "Are you applying for a role or looking for employee support?"
+      ],
+      "buttons": [
+        {
+          "label": "Current openings",
+          "action": "intent",
+          "intentId": "careers_openings"
+        },
+        {
+          "label": "Apply for a job",
+          "action": "intent",
+          "intentId": "career_apply"
+        },
+        {
+          "label": "Employee support",
+          "action": "lead"
+        },
+        {
+          "label": "Human Resources page",
+          "action": "link",
+          "url": "https://liquidsoldier.com/people-administration/human-resources-team/"
+        }
+      ],
+      "memory": {
+        "topic": "careers",
+        "retainEntities": true,
+        "allowPronounReference": true,
+        "pauseOnTopicSwitch": true,
+        "resumeSuggestion": true
+      },
+      "leadCapture": "none",
+      "leadFields": [],
+      "department": "Human Resources Team",
+      "url": "https://liquidsoldier.com/people-administration/human-resources-team/",
       "liveDataOnly": false,
       "medicalSafety": false,
       "sourceBasis": [
@@ -3909,15 +4389,16 @@
       "buttons": [
         {
           "label": "View opportunities",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/opportunities/"
         },
         {
           "label": "Departments",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Contact HR",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -3959,11 +4440,12 @@
       "buttons": [
         {
           "label": "View opportunities",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/people-administration/human-resources-team/"
         },
         {
           "label": "Contact HR",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4009,11 +4491,12 @@
       "buttons": [
         {
           "label": "View opportunities",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/people-administration/human-resources-team/"
         },
         {
           "label": "Contact HR",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4054,11 +4537,12 @@
       "buttons": [
         {
           "label": "Contact HR",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "View opportunities",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/people-administration/human-resources-team/"
         }
       ],
       "memory": {
@@ -4105,11 +4589,12 @@
       "buttons": [
         {
           "label": "Donate now",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/donate/"
         },
         {
           "label": "How purchases help",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -4150,15 +4635,15 @@
       "buttons": [
         {
           "label": "Direct donation",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Purchase proceeds",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Contact team",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4199,7 +4684,7 @@
       "buttons": [
         {
           "label": "Request follow-up",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4247,19 +4732,19 @@
       "buttons": [
         {
           "label": "Outreach",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Events",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Education",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Fundraising",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -4308,19 +4793,19 @@
       "buttons": [
         {
           "label": "Program",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Speaker",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Partnership",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Materials",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -4369,7 +4854,7 @@
       "buttons": [
         {
           "label": "Start partnership inquiry",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -4399,6 +4884,68 @@
       ]
     },
     {
+      "id": "departments_overview",
+      "category": "Departments",
+      "examples": [
+        "departments",
+        "company departments",
+        "department directory"
+      ],
+      "keywords": [
+        "departments",
+        "teams",
+        "directory",
+        "organization"
+      ],
+      "response": "Liquid Soldier has dedicated teams for leadership and governance; medical, wellness and research; Administration and HR; Technology and Digital; Brand, Marketing and Media; Sales, Retail and Customer Experience; Finance, Strategy and Growth; and Community, Education and Outreach.",
+      "followUps": [
+        "Which team are you trying to reach?"
+      ],
+      "buttons": [
+        {
+          "label": "Human Resources",
+          "action": "context"
+        },
+        {
+          "label": "Technology & IT",
+          "action": "context"
+        },
+        {
+          "label": "Marketing & PR",
+          "action": "context"
+        },
+        {
+          "label": "Sales",
+          "action": "context"
+        },
+        {
+          "label": "Finance",
+          "action": "context"
+        },
+        {
+          "label": "Community",
+          "action": "context"
+        }
+      ],
+      "memory": {
+        "topic": "departments",
+        "retainEntities": true,
+        "allowPronounReference": true,
+        "pauseOnTopicSwitch": true,
+        "resumeSuggestion": true
+      },
+      "leadCapture": "none",
+      "leadFields": [],
+      "department": "Administration",
+      "url": "https://liquidsoldier.com/liquid-soldier-pages/",
+      "liveDataOnly": false,
+      "medicalSafety": false,
+      "sourceBasis": [
+        "approved_chatbox_faq",
+        "live_website_audit_2026-09-03"
+      ]
+    },
+    {
       "id": "leadership",
       "category": "Departments",
       "examples": [
@@ -4418,15 +4965,15 @@
       "buttons": [
         {
           "label": "Executive Team",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Executive Committee",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Advisory Committee",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -4438,7 +4985,7 @@
       },
       "leadCapture": "none",
       "leadFields": [],
-      "department": "Administration",
+      "department": "Leadership & Governance",
       "url": "https://liquidsoldier.com/leadership-governance/",
       "liveDataOnly": true,
       "medicalSafety": false,
@@ -4467,7 +5014,8 @@
       "buttons": [
         {
           "label": "View Executive Team",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/leadership-governance/executive-team/"
         }
       ],
       "memory": {
@@ -4479,7 +5027,7 @@
       },
       "leadCapture": "none",
       "leadFields": [],
-      "department": "Administration",
+      "department": "Executive Team",
       "url": "https://liquidsoldier.com/leadership-governance/executive-team/",
       "liveDataOnly": true,
       "medicalSafety": false,
@@ -4507,7 +5055,8 @@
       "buttons": [
         {
           "label": "View committee",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/leadership-governance/executive-committee/"
         }
       ],
       "memory": {
@@ -4519,7 +5068,7 @@
       },
       "leadCapture": "none",
       "leadFields": [],
-      "department": "Administration",
+      "department": "Executive Committee",
       "url": "https://liquidsoldier.com/leadership-governance/executive-committee/",
       "liveDataOnly": true,
       "medicalSafety": false,
@@ -4547,7 +5096,8 @@
       "buttons": [
         {
           "label": "View Advisory Committee",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/leadership-governance/advisory-committee/"
         }
       ],
       "memory": {
@@ -4559,7 +5109,7 @@
       },
       "leadCapture": "none",
       "leadFields": [],
-      "department": "Administration",
+      "department": "Advisory Committee",
       "url": "https://liquidsoldier.com/leadership-governance/advisory-committee/",
       "liveDataOnly": true,
       "medicalSafety": false,
@@ -4588,11 +5138,11 @@
       "buttons": [
         {
           "label": "Medical Committee",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Product safety",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -4604,7 +5154,7 @@
       },
       "leadCapture": "none",
       "leadFields": [],
-      "department": "Administration",
+      "department": "Medical Committee",
       "url": "https://liquidsoldier.com/medical-wellness-research/medical-committee/",
       "liveDataOnly": false,
       "medicalSafety": true,
@@ -4632,19 +5182,19 @@
       "buttons": [
         {
           "label": "Products",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Program",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Partnership",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Professional inquiry",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -4656,7 +5206,7 @@
       },
       "leadCapture": "none",
       "leadFields": [],
-      "department": "Administration",
+      "department": "Health and Wellness",
       "url": "https://liquidsoldier.com/medical-wellness-research/health-and-wellness/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -4684,7 +5234,7 @@
       "buttons": [
         {
           "label": "Start request",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4702,7 +5252,7 @@
         "requestedPerson",
         "purpose"
       ],
-      "department": "Administration",
+      "department": "Executive Assistants",
       "url": "https://liquidsoldier.com/people-administration/executive-assistants/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -4731,15 +5281,15 @@
       "buttons": [
         {
           "label": "Website problem",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Account problem",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Business inquiry",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4758,7 +5308,7 @@
         "device",
         "issue"
       ],
-      "department": "Administration",
+      "department": "Technology & IT Team",
       "url": "https://liquidsoldier.com/technology-digital/technology-it-team/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -4787,15 +5337,15 @@
       "buttons": [
         {
           "label": "Service inquiry",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Partnership",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Report website issue",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4813,7 +5363,7 @@
         "organization",
         "request"
       ],
-      "department": "Administration",
+      "department": "Web Design Team",
       "url": "https://liquidsoldier.com/technology-digital/web-design-team/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -4843,19 +5393,19 @@
       "buttons": [
         {
           "label": "Advertising",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Co-marketing",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Sponsorship",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Other",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -4873,7 +5423,7 @@
         "organization",
         "proposal"
       ],
-      "department": "Administration",
+      "department": "Brand & Marketing",
       "url": "https://liquidsoldier.com/brand-marketing-media/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -4902,19 +5452,19 @@
       "buttons": [
         {
           "label": "Press inquiry",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Interview",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Statement",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Other",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -4933,7 +5483,7 @@
         "deadline",
         "request"
       ],
-      "department": "Administration",
+      "department": "Public Relations",
       "url": "https://liquidsoldier.com/brand-marketing-media/public-relations/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -4964,15 +5514,15 @@
       "buttons": [
         {
           "label": "Content",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Partnership",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Report account",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4991,7 +5541,7 @@
         "url",
         "issue"
       ],
-      "department": "Administration",
+      "department": "Social Media",
       "url": "https://liquidsoldier.com/brand-marketing-media/social-media/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -5020,15 +5570,15 @@
       "buttons": [
         {
           "label": "Brand assets",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Usage permission",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Partnership",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -5046,7 +5596,7 @@
         "organization",
         "intendedUse"
       ],
-      "department": "Administration",
+      "department": "Social Branding Department",
       "url": "https://liquidsoldier.com/brand-marketing-media/social-branding-department/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -5076,19 +5626,19 @@
       "buttons": [
         {
           "label": "Retail",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Wholesale",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Distribution",
-          "action": "intent_or_link"
+          "action": "lead"
         },
         {
           "label": "Bulk order",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -5107,7 +5657,7 @@
         "request",
         "estimatedVolume"
       ],
-      "department": "Administration",
+      "department": "Sales Team",
       "url": "https://liquidsoldier.com/sales-retail-customer-experience/sales-team/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -5136,19 +5686,19 @@
       "buttons": [
         {
           "label": "Billing",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Vendor finance",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Investing",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Corporate finance",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -5160,7 +5710,7 @@
       },
       "leadCapture": "none",
       "leadFields": [],
-      "department": "Administration",
+      "department": "Finance",
       "url": "https://liquidsoldier.com/finance-strategy-growth/finance/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -5190,19 +5740,19 @@
       "buttons": [
         {
           "label": "Invoice",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Payment record",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Vendor document",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Other",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -5221,7 +5771,7 @@
         "invoiceNumber",
         "request"
       ],
-      "department": "Administration",
+      "department": "Accounting",
       "url": "https://liquidsoldier.com/finance-strategy-growth/accounting/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -5251,15 +5801,15 @@
       "buttons": [
         {
           "label": "Acquisition",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Merger",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Strategic transaction",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -5278,7 +5828,7 @@
         "transactionType",
         "summary"
       ],
-      "department": "Administration",
+      "department": "Merger & Acquisitions",
       "url": "https://liquidsoldier.com/finance-strategy-growth/merger-acquisitions/",
       "liveDataOnly": false,
       "medicalSafety": false,
@@ -5308,19 +5858,19 @@
       "buttons": [
         {
           "label": "New concept",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Improvement",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Supplier",
-          "action": "intent_or_link"
+          "action": "context"
         },
         {
           "label": "Collaboration",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -5338,8 +5888,74 @@
         "organization",
         "conceptSummary"
       ],
-      "department": "Administration",
+      "department": "Product Development",
       "url": "https://liquidsoldier.com/finance-strategy-growth/product-development/",
+      "liveDataOnly": false,
+      "medicalSafety": false,
+      "sourceBasis": [
+        "approved_chatbox_faq",
+        "live_website_audit_2026-09-03"
+      ]
+    },
+    {
+      "id": "policies_overview",
+      "category": "Policies",
+      "examples": [
+        "policies",
+        "website policies",
+        "show me your policies"
+      ],
+      "keywords": [
+        "policies",
+        "legal pages",
+        "rules"
+      ],
+      "response": "Liquid Soldier publishes policies covering privacy, cookies, terms and conditions, acceptable use, community conduct, accessibility, confidentiality and data protection, and Marketplace returns.",
+      "followUps": [
+        "Which policy do you need?"
+      ],
+      "buttons": [
+        {
+          "label": "Privacy Policy",
+          "action": "link",
+          "url": "https://liquidsoldier.com/terms-and-conditions/"
+        },
+        {
+          "label": "Terms and Conditions",
+          "action": "link",
+          "url": "https://liquidsoldier.com/terms-and-conditions/"
+        },
+        {
+          "label": "Cookie Policy",
+          "action": "link",
+          "url": "https://liquidsoldier.com/terms-and-conditions/"
+        },
+        {
+          "label": "Acceptable Use Policy",
+          "action": "link",
+          "url": "https://liquidsoldier.com/terms-and-conditions/"
+        },
+        {
+          "label": "Community Guidelines",
+          "action": "link",
+          "url": "https://liquidsoldier.com/terms-and-conditions/"
+        },
+        {
+          "label": "Marketplace Returns",
+          "action": "context"
+        }
+      ],
+      "memory": {
+        "topic": "policies",
+        "retainEntities": true,
+        "allowPronounReference": true,
+        "pauseOnTopicSwitch": true,
+        "resumeSuggestion": true
+      },
+      "leadCapture": "none",
+      "leadFields": [],
+      "department": "Legal / Administration",
+      "url": "https://liquidsoldier.com/terms-and-conditions/",
       "liveDataOnly": false,
       "medicalSafety": false,
       "sourceBasis": [
@@ -5367,11 +5983,13 @@
       "buttons": [
         {
           "label": "Privacy Policy",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/privacy-policy/"
         },
         {
           "label": "Cookie Policy",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/privacy-policy/"
         }
       ],
       "memory": {
@@ -5412,11 +6030,12 @@
       "buttons": [
         {
           "label": "Terms and Conditions",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/terms-and-conditions/"
         },
         {
           "label": "Additional Terms",
-          "action": "intent_or_link"
+          "action": "context"
         }
       ],
       "memory": {
@@ -5457,11 +6076,13 @@
       "buttons": [
         {
           "label": "Acceptable Use Policy",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/acceptable-use-policy/"
         },
         {
           "label": "Community Guidelines",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/acceptable-use-policy/"
         }
       ],
       "memory": {
@@ -5502,11 +6123,12 @@
       "buttons": [
         {
           "label": "Community Guidelines",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/community-guidelines/"
         },
         {
           "label": "Report concern",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -5547,11 +6169,13 @@
       "buttons": [
         {
           "label": "Cookie Policy",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/cookie-policy/"
         },
         {
           "label": "Privacy Policy",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/cookie-policy/"
         }
       ],
       "memory": {
@@ -5593,11 +6217,12 @@
       "buttons": [
         {
           "label": "Accessibility Statement",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/accessibility-statement/"
         },
         {
           "label": "Report barrier",
-          "action": "intent_or_link"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -5645,11 +6270,13 @@
       "buttons": [
         {
           "label": "Data Protection Statement",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/confidentiality-data-protection-statement/"
         },
         {
           "label": "Privacy Policy",
-          "action": "intent_or_link"
+          "action": "link",
+          "url": "https://liquidsoldier.com/confidentiality-data-protection-statement/"
         }
       ],
       "memory": {
