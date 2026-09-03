@@ -48,15 +48,17 @@
       "buttons": [
         {
           "label": "Explore products",
-          "action": "context"
+          "action": "intent",
+          "intentId": "product_overview"
         },
         {
           "label": "Our mission",
-          "action": "context"
+          "action": "intent",
+          "intentId": "mission_values"
         },
         {
           "label": "Opportunities",
-          "action": "context"
+          "action": "system"
         }
       ],
       "memory": {
@@ -98,19 +100,22 @@
       "buttons": [
         {
           "label": "Shop",
-          "action": "context"
+          "action": "intent",
+          "intentId": "product_overview"
         },
         {
           "label": "Business opportunities",
-          "action": "context"
+          "action": "system"
         },
         {
           "label": "Community",
-          "action": "context"
+          "action": "intent",
+          "intentId": "community_partnership"
         },
         {
           "label": "Departments",
-          "action": "context"
+          "action": "intent",
+          "intentId": "departments_overview"
         }
       ],
       "memory": {
@@ -151,15 +156,18 @@
       "buttons": [
         {
           "label": "How purchases help",
-          "action": "context"
+          "action": "intent",
+          "intentId": "charity_supported"
         },
         {
           "label": "Donate",
-          "action": "context"
+          "action": "intent",
+          "intentId": "donate"
         },
         {
           "label": "About us",
-          "action": "context"
+          "action": "link",
+          "url": "https://liquidsoldier.com/about-us/"
         }
       ],
       "memory": {
@@ -201,11 +209,13 @@
       "buttons": [
         {
           "label": "Donate",
-          "action": "context"
+          "action": "intent",
+          "intentId": "donate"
         },
         {
           "label": "Community outreach",
-          "action": "context"
+          "action": "intent",
+          "intentId": "community_partnership"
         }
       ],
       "memory": {
@@ -245,12 +255,13 @@
       "buttons": [
         {
           "label": "Donate",
-          "action": "context"
+          "action": "intent",
+          "intentId": "donate"
         },
         {
           "label": "Investor information",
           "action": "link",
-          "url": "https://liquidsoldier.com/about-us/"
+          "url": "https://liquidsoldier.com/investor-information/"
         },
         {
           "label": "Contact team",
@@ -296,11 +307,12 @@
       "buttons": [
         {
           "label": "Contact us",
-          "action": "lead"
+          "action": "link",
+          "url": "https://liquidsoldier.com/contact-us/"
         },
         {
           "label": "Ask the team",
-          "action": "context"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -344,19 +356,22 @@
       "buttons": [
         {
           "label": "Customer support",
-          "action": "context"
+          "action": "intent",
+          "intentId": "customer_service"
         },
         {
           "label": "Franchising",
-          "action": "context"
+          "action": "intent",
+          "intentId": "franchise_overview"
         },
         {
           "label": "Investing",
-          "action": "context"
+          "action": "intent",
+          "intentId": "investment_overview"
         },
         {
           "label": "Other",
-          "action": "context"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -403,19 +418,22 @@
       "buttons": [
         {
           "label": "Shop",
-          "action": "context"
+          "action": "intent",
+          "intentId": "product_overview"
         },
         {
           "label": "Order help",
-          "action": "context"
+          "action": "intent",
+          "intentId": "order_support_overview"
         },
         {
           "label": "Opportunities",
-          "action": "context"
+          "action": "system"
         },
         {
           "label": "Policies",
-          "action": "context"
+          "action": "intent",
+          "intentId": "policies_overview"
         }
       ],
       "memory": {
@@ -513,19 +531,23 @@
       "buttons": [
         {
           "label": "Coffee",
-          "action": "context"
+          "action": "intent",
+          "intentId": "coffee_overview"
         },
         {
           "label": "Supplements",
-          "action": "context"
+          "action": "intent",
+          "intentId": "supplement_overview"
         },
         {
           "label": "CBD / ItsAllMedical",
-          "action": "context"
+          "action": "intent",
+          "intentId": "cbd_overview"
         },
         {
           "label": "Marketplace",
-          "action": "context"
+          "action": "intent",
+          "intentId": "marketplace_overview"
         }
       ],
       "memory": {
@@ -569,20 +591,67 @@
       "buttons": [
         {
           "label": "Energy",
-          "action": "context"
+          "action": "set_entity",
+          "field": "shoppingGoal",
+          "response": "For energy-oriented options, compare the current coffee and supplement listings.",
+          "nextButtons": [
+            {
+              "label": "Coffee",
+              "action": "intent",
+              "intentId": "coffee_overview"
+            },
+            {
+              "label": "Supplements",
+              "action": "intent",
+              "intentId": "supplement_overview"
+            }
+          ]
         },
         {
           "label": "General wellness",
-          "action": "context"
+          "action": "set_entity",
+          "field": "shoppingGoal",
+          "response": "For general wellness, compare the current supplement and CBD information without relying on medical claims.",
+          "nextButtons": [
+            {
+              "label": "Supplements",
+              "action": "intent",
+              "intentId": "supplement_overview"
+            },
+            {
+              "label": "CBD information",
+              "action": "intent",
+              "intentId": "cbd_overview"
+            }
+          ]
         },
         {
           "label": "Gift",
-          "action": "context"
+          "action": "set_entity",
+          "field": "shoppingGoal",
+          "response": "For gifts, you can compare coffee, apparel, and collectibles.",
+          "nextButtons": [
+            {
+              "label": "Coffee",
+              "action": "intent",
+              "intentId": "coffee_overview"
+            },
+            {
+              "label": "Clothing",
+              "action": "intent",
+              "intentId": "clothing"
+            },
+            {
+              "label": "Collectibles",
+              "action": "intent",
+              "intentId": "collectibles"
+            }
+          ]
         },
         {
           "label": "Browse categories",
-          "action": "link",
-          "url": "https://liquidsoldier.com/sales-retail-customer-experience/"
+          "action": "intent",
+          "intentId": "product_overview"
         }
       ],
       "memory": {
@@ -624,19 +693,23 @@
       "buttons": [
         {
           "label": "Coffee",
-          "action": "context"
+          "action": "intent",
+          "intentId": "coffee_overview"
         },
         {
           "label": "Supplements",
-          "action": "context"
+          "action": "intent",
+          "intentId": "supplement_overview"
         },
         {
           "label": "CBD",
-          "action": "context"
+          "action": "intent",
+          "intentId": "cbd_overview"
         },
         {
           "label": "Marketplace",
-          "action": "context"
+          "action": "intent",
+          "intentId": "marketplace_overview"
         }
       ],
       "memory": {
@@ -677,19 +750,23 @@
       "buttons": [
         {
           "label": "Coffee",
-          "action": "context"
+          "action": "intent",
+          "intentId": "coffee_overview"
         },
         {
           "label": "Supplements",
-          "action": "context"
+          "action": "intent",
+          "intentId": "supplement_overview"
         },
         {
           "label": "CBD",
-          "action": "context"
+          "action": "intent",
+          "intentId": "cbd_overview"
         },
         {
           "label": "Marketplace",
-          "action": "context"
+          "action": "intent",
+          "intentId": "marketplace_overview"
         }
       ],
       "memory": {
@@ -779,7 +856,8 @@
       "buttons": [
         {
           "label": "Find product",
-          "action": "context"
+          "action": "intent",
+          "intentId": "product_overview"
         },
         {
           "label": "Contact product team",
@@ -830,7 +908,8 @@
         },
         {
           "label": "Other products",
-          "action": "context"
+          "action": "intent",
+          "intentId": "product_overview"
         }
       ],
       "memory": {
@@ -875,7 +954,8 @@
         },
         {
           "label": "Marketplace",
-          "action": "context"
+          "action": "intent",
+          "intentId": "marketplace_overview"
         }
       ],
       "memory": {
@@ -922,7 +1002,8 @@
         },
         {
           "label": "Payment problem",
-          "action": "context"
+          "action": "intent",
+          "intentId": "cart_issue"
         }
       ],
       "memory": {
@@ -1010,12 +1091,13 @@
       "buttons": [
         {
           "label": "Checkout",
-          "action": "context"
+          "action": "link",
+          "url": "https://liquidsoldier.com/checkout/"
         },
         {
           "label": "Privacy policy",
           "action": "link",
-          "url": "https://liquidsoldier.com/sales-retail-customer-experience/"
+          "url": "https://liquidsoldier.com/privacy-policy/"
         }
       ],
       "memory": {
@@ -1058,11 +1140,12 @@
         {
           "label": "Open cart",
           "action": "link",
-          "url": "https://liquidsoldier.com/sales-retail-customer-experience/"
+          "url": "https://liquidsoldier.com/cart/"
         },
         {
           "label": "Shipping help",
-          "action": "context"
+          "action": "intent",
+          "intentId": "shipping_overview"
         }
       ],
       "memory": {
@@ -1285,7 +1368,8 @@
         },
         {
           "label": "No order number",
-          "action": "lead"
+          "action": "intent",
+          "intentId": "order_not_found"
         },
         {
           "label": "Marketplace order",
@@ -1337,15 +1421,18 @@
       "buttons": [
         {
           "label": "Liquid Soldier order",
-          "action": "context"
+          "action": "intent",
+          "intentId": "order_support_overview"
         },
         {
           "label": "Marketplace order",
-          "action": "context"
+          "action": "intent",
+          "intentId": "marketplace_vendor_shipping"
         },
         {
           "label": "Track order",
-          "action": "context"
+          "action": "intent",
+          "intentId": "order_tracking"
         }
       ],
       "memory": {
@@ -1387,11 +1474,12 @@
         {
           "label": "Open cart",
           "action": "link",
-          "url": "https://liquidsoldier.com/contact-us/"
+          "url": "https://liquidsoldier.com/cart/"
         },
         {
           "label": "Shipping policy",
-          "action": "context"
+          "action": "intent",
+          "intentId": "shipping_overview"
         }
       ],
       "memory": {
@@ -1432,15 +1520,55 @@
       "buttons": [
         {
           "label": "Cancel order",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Change address",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Change item",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -1492,7 +1620,8 @@
         },
         {
           "label": "Return policy",
-          "action": "context"
+          "action": "intent",
+          "intentId": "return_refund"
         }
       ],
       "memory": {
@@ -1544,7 +1673,8 @@
         },
         {
           "label": "Track another shipment",
-          "action": "context"
+          "action": "intent",
+          "intentId": "order_tracking"
         }
       ],
       "memory": {
@@ -1693,19 +1823,60 @@
       "buttons": [
         {
           "label": "Order",
-          "action": "context"
+          "action": "set_entity",
+          "field": "issueType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Vendor",
-          "action": "context"
+          "action": "set_entity",
+          "field": "issueType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Website",
-          "action": "context"
+          "action": "intent",
+          "intentId": "technology_it"
         },
         {
           "label": "Other",
-          "action": "context"
+          "action": "set_entity",
+          "field": "issueType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -1757,11 +1928,13 @@
         },
         {
           "label": "Help me choose",
-          "action": "context"
+          "action": "intent",
+          "intentId": "product_recommendation"
         },
         {
           "label": "Coffee availability",
-          "action": "context"
+          "action": "intent",
+          "intentId": "product_availability"
         }
       ],
       "memory": {
@@ -1808,11 +1981,39 @@
         },
         {
           "label": "Whole bean",
-          "action": "context"
+          "action": "set_entity",
+          "field": "coffeeFormat",
+          "response": "I’ll remember that you prefer whole bean.",
+          "nextButtons": [
+            {
+              "label": "Browse coffee",
+              "action": "link",
+              "url": "https://liquidsoldier.com/liquid-soldier-coffee/"
+            },
+            {
+              "label": "Check availability",
+              "action": "intent",
+              "intentId": "product_availability"
+            }
+          ]
         },
         {
           "label": "Ground",
-          "action": "context"
+          "action": "set_entity",
+          "field": "coffeeFormat",
+          "response": "I’ll remember that you prefer ground coffee.",
+          "nextButtons": [
+            {
+              "label": "Browse coffee",
+              "action": "link",
+              "url": "https://liquidsoldier.com/liquid-soldier-coffee/"
+            },
+            {
+              "label": "Check availability",
+              "action": "intent",
+              "intentId": "product_availability"
+            }
+          ]
         }
       ],
       "memory": {
@@ -1902,7 +2103,8 @@
         },
         {
           "label": "Safety guidance",
-          "action": "context"
+          "action": "intent",
+          "intentId": "product_ingredients"
         }
       ],
       "memory": {
@@ -1997,7 +2199,8 @@
       "buttons": [
         {
           "label": "Find product",
-          "action": "context"
+          "action": "intent",
+          "intentId": "supplement_overview"
         },
         {
           "label": "Contact support",
@@ -2049,7 +2252,8 @@
         },
         {
           "label": "Ingredients",
-          "action": "context"
+          "action": "intent",
+          "intentId": "product_ingredients"
         }
       ],
       "memory": {
@@ -2091,11 +2295,13 @@
       "buttons": [
         {
           "label": "Find product",
-          "action": "context"
+          "action": "intent",
+          "intentId": "supplement_overview"
         },
         {
           "label": "Safety guidance",
-          "action": "context"
+          "action": "intent",
+          "intentId": "supplement_safety"
         }
       ],
       "memory": {
@@ -2137,7 +2343,8 @@
       "buttons": [
         {
           "label": "Emergency guidance",
-          "action": "context"
+          "action": "intent",
+          "intentId": "medical_emergency"
         },
         {
           "label": "Report product issue",
@@ -2246,7 +2453,8 @@
         },
         {
           "label": "CBD safety",
-          "action": "context"
+          "action": "intent",
+          "intentId": "cbd_drug_interaction"
         }
       ],
       "memory": {
@@ -2381,11 +2589,13 @@
       "buttons": [
         {
           "label": "Find CBD product",
-          "action": "context"
+          "action": "intent",
+          "intentId": "cbd_overview"
         },
         {
           "label": "Ingredients",
-          "action": "context"
+          "action": "intent",
+          "intentId": "product_ingredients"
         }
       ],
       "memory": {
@@ -2426,12 +2636,17 @@
       "buttons": [
         {
           "label": "CBD support",
-          "action": "context"
+          "action": "intent",
+          "intentId": "cbd_customer_service"
         },
         {
           "label": "View ItsAllMedical",
           "action": "link",
           "url": "https://liquidsoldier.com/itsallmedical/"
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -2707,11 +2922,12 @@
         {
           "label": "Browse stores",
           "action": "link",
-          "url": "https://liquidsoldier.com/marketplace-information/"
+          "url": "https://liquidsoldier.com/store-listing/"
         },
         {
           "label": "Marketplace help",
-          "action": "context"
+          "action": "intent",
+          "intentId": "marketplace_support"
         }
       ],
       "memory": {
@@ -2751,11 +2967,13 @@
       "buttons": [
         {
           "label": "Shipping times",
-          "action": "context"
+          "action": "intent",
+          "intentId": "shipping_time"
         },
         {
           "label": "Track order",
-          "action": "context"
+          "action": "intent",
+          "intentId": "order_tracking"
         },
         {
           "label": "Report issue",
@@ -2806,7 +3024,8 @@
         },
         {
           "label": "Vendor standards",
-          "action": "context"
+          "action": "intent",
+          "intentId": "vendor_requirements"
         }
       ],
       "memory": {
@@ -2856,7 +3075,8 @@
         },
         {
           "label": "Vendor requirements",
-          "action": "context"
+          "action": "intent",
+          "intentId": "vendor_requirements"
         }
       ],
       "memory": {
@@ -3006,11 +3226,13 @@
       "buttons": [
         {
           "label": "Vendor login",
-          "action": "context"
+          "action": "link",
+          "url": "https://liquidsoldier.com/vendor-login/"
         },
         {
           "label": "Login help",
-          "action": "context"
+          "action": "intent",
+          "intentId": "vendor_password"
         }
       ],
       "memory": {
@@ -3160,15 +3382,55 @@
       "buttons": [
         {
           "label": "Add product",
-          "action": "context"
+          "action": "set_entity",
+          "field": "listingRequest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Edit listing",
-          "action": "context"
+          "action": "set_entity",
+          "field": "listingRequest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Listing problem",
-          "action": "context"
+          "action": "set_entity",
+          "field": "listingRequest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -3270,7 +3532,19 @@
       "buttons": [
         {
           "label": "Leave review",
-          "action": "context"
+          "action": "set_entity",
+          "field": "reviewRequest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Report review",
@@ -3316,19 +3590,71 @@
       "buttons": [
         {
           "label": "Not received",
-          "action": "context"
+          "action": "set_entity",
+          "field": "issueType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Damaged",
-          "action": "context"
+          "action": "set_entity",
+          "field": "issueType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Not as described",
-          "action": "context"
+          "action": "set_entity",
+          "field": "issueType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Refund issue",
-          "action": "context"
+          "action": "set_entity",
+          "field": "issueType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -3492,11 +3818,13 @@
         },
         {
           "label": "Apply",
-          "action": "context"
+          "action": "intent",
+          "intentId": "franchise_apply"
         },
         {
           "label": "Keep researching",
-          "action": "context"
+          "action": "intent",
+          "intentId": "franchise_overview"
         }
       ],
       "memory": {
@@ -3550,7 +3878,8 @@
         },
         {
           "label": "Franchise application",
-          "action": "context"
+          "action": "intent",
+          "intentId": "franchise_apply"
         }
       ],
       "memory": {
@@ -3599,15 +3928,40 @@
       "buttons": [
         {
           "label": "Yes",
-          "action": "context"
+          "action": "set_entity",
+          "field": "businessExperience",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "No",
-          "action": "context"
+          "action": "set_entity",
+          "field": "businessExperience",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Apply",
-          "action": "context"
+          "action": "intent",
+          "intentId": "franchise_apply"
         }
       ],
       "memory": {
@@ -3653,7 +4007,8 @@
         },
         {
           "label": "Apply",
-          "action": "context"
+          "action": "intent",
+          "intentId": "franchise_apply"
         }
       ],
       "memory": {
@@ -3696,25 +4051,65 @@
           "label": "ASAP",
           "action": "set_entity",
           "field": "timeline",
-          "value": "ASAP"
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "3-6 months",
           "action": "set_entity",
           "field": "timeline",
-          "value": "3-6 months"
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "6-12 months",
           "action": "set_entity",
           "field": "timeline",
-          "value": "6-12 months"
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Researching",
           "action": "set_entity",
           "field": "timeline",
-          "value": "Researching"
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         }
       ],
       "memory": {
@@ -3759,7 +4154,8 @@
         },
         {
           "label": "Costs",
-          "action": "context"
+          "action": "intent",
+          "intentId": "franchise_cost"
         }
       ],
       "memory": {
@@ -3805,7 +4201,8 @@
         },
         {
           "label": "Franchise application",
-          "action": "context"
+          "action": "intent",
+          "intentId": "franchise_apply"
         }
       ],
       "memory": {
@@ -3851,7 +4248,7 @@
         },
         {
           "label": "Guided inquiry",
-          "action": "context"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -3947,11 +4344,11 @@
       "category": "Investing",
       "examples": [
         "what is the minimum investment",
-        "what are the terms"
+        "what are the investment terms"
       ],
       "keywords": [
         "minimum investment",
-        "terms",
+        "investment terms",
         "valuation",
         "offering",
         "accredited"
@@ -4169,11 +4566,11 @@
       "buttons": [
         {
           "label": "Contributor inquiry",
-          "action": "context"
+          "action": "lead"
         },
         {
           "label": "Submit post",
-          "action": "context"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4222,7 +4619,7 @@
       "buttons": [
         {
           "label": "Start press inquiry",
-          "action": "context"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4271,19 +4668,71 @@
       "buttons": [
         {
           "label": "Content",
-          "action": "context"
+          "action": "set_entity",
+          "field": "partnershipType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Sponsorship",
-          "action": "context"
+          "action": "set_entity",
+          "field": "partnershipType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Podcast",
-          "action": "context"
+          "action": "set_entity",
+          "field": "partnershipType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Other",
-          "action": "context"
+          "action": "set_entity",
+          "field": "partnershipType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4394,7 +4843,8 @@
         },
         {
           "label": "Departments",
-          "action": "context"
+          "action": "intent",
+          "intentId": "departments_overview"
         },
         {
           "label": "Contact HR",
@@ -4594,7 +5044,8 @@
         },
         {
           "label": "How purchases help",
-          "action": "context"
+          "action": "intent",
+          "intentId": "charity_supported"
         }
       ],
       "memory": {
@@ -4635,11 +5086,13 @@
       "buttons": [
         {
           "label": "Direct donation",
-          "action": "context"
+          "action": "intent",
+          "intentId": "donate"
         },
         {
           "label": "Purchase proceeds",
-          "action": "context"
+          "action": "intent",
+          "intentId": "charity_supported"
         },
         {
           "label": "Contact team",
@@ -4732,19 +5185,71 @@
       "buttons": [
         {
           "label": "Outreach",
-          "action": "context"
+          "action": "set_entity",
+          "field": "volunteerInterest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Events",
-          "action": "context"
+          "action": "set_entity",
+          "field": "volunteerInterest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Education",
-          "action": "context"
+          "action": "set_entity",
+          "field": "volunteerInterest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Fundraising",
-          "action": "context"
+          "action": "set_entity",
+          "field": "volunteerInterest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4793,19 +5298,71 @@
       "buttons": [
         {
           "label": "Program",
-          "action": "context"
+          "action": "set_entity",
+          "field": "educationRequest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Speaker",
-          "action": "context"
+          "action": "set_entity",
+          "field": "educationRequest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Partnership",
-          "action": "context"
+          "action": "set_entity",
+          "field": "educationRequest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Materials",
-          "action": "context"
+          "action": "set_entity",
+          "field": "educationRequest",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4854,7 +5411,7 @@
       "buttons": [
         {
           "label": "Start partnership inquiry",
-          "action": "context"
+          "action": "lead"
         }
       ],
       "memory": {
@@ -4904,27 +5461,33 @@
       "buttons": [
         {
           "label": "Human Resources",
-          "action": "context"
+          "action": "intent",
+          "intentId": "human_resources"
         },
         {
           "label": "Technology & IT",
-          "action": "context"
+          "action": "intent",
+          "intentId": "technology_it"
         },
         {
           "label": "Marketing & PR",
-          "action": "context"
+          "action": "intent",
+          "intentId": "marketing"
         },
         {
           "label": "Sales",
-          "action": "context"
+          "action": "intent",
+          "intentId": "sales_team"
         },
         {
           "label": "Finance",
-          "action": "context"
+          "action": "intent",
+          "intentId": "finance"
         },
         {
           "label": "Community",
-          "action": "context"
+          "action": "intent",
+          "intentId": "community_partnership"
         }
       ],
       "memory": {
@@ -4965,15 +5528,18 @@
       "buttons": [
         {
           "label": "Executive Team",
-          "action": "context"
+          "action": "intent",
+          "intentId": "executive_team"
         },
         {
           "label": "Executive Committee",
-          "action": "context"
+          "action": "intent",
+          "intentId": "executive_committee"
         },
         {
           "label": "Advisory Committee",
-          "action": "context"
+          "action": "intent",
+          "intentId": "advisory_committee"
         }
       ],
       "memory": {
@@ -5138,11 +5704,13 @@
       "buttons": [
         {
           "label": "Medical Committee",
-          "action": "context"
+          "action": "link",
+          "url": "https://liquidsoldier.com/medical-wellness-research/medical-committee/"
         },
         {
           "label": "Product safety",
-          "action": "context"
+          "action": "intent",
+          "intentId": "supplement_safety"
         }
       ],
       "memory": {
@@ -5182,19 +5750,67 @@
       "buttons": [
         {
           "label": "Products",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Program",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Partnership",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Professional inquiry",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         }
       ],
       "memory": {
@@ -5337,11 +5953,35 @@
       "buttons": [
         {
           "label": "Service inquiry",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Partnership",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Report website issue",
@@ -5393,19 +6033,71 @@
       "buttons": [
         {
           "label": "Advertising",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Co-marketing",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Sponsorship",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Other",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -5452,19 +6144,60 @@
       "buttons": [
         {
           "label": "Press inquiry",
-          "action": "context"
+          "action": "intent",
+          "intentId": "press_inquiry"
         },
         {
           "label": "Interview",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Statement",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Other",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -5514,11 +6247,35 @@
       "buttons": [
         {
           "label": "Content",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Partnership",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Report account",
@@ -5570,15 +6327,55 @@
       "buttons": [
         {
           "label": "Brand assets",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Usage permission",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Partnership",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -5686,19 +6483,38 @@
       "buttons": [
         {
           "label": "Billing",
-          "action": "context"
+          "action": "intent",
+          "intentId": "customer_service"
         },
         {
           "label": "Vendor finance",
-          "action": "context"
+          "action": "intent",
+          "intentId": "accounting"
         },
         {
           "label": "Investing",
-          "action": "context"
+          "action": "intent",
+          "intentId": "investment_overview"
         },
         {
           "label": "Corporate finance",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -5708,8 +6524,14 @@
         "pauseOnTopicSwitch": true,
         "resumeSuggestion": true
       },
-      "leadCapture": "none",
-      "leadFields": [],
+      "leadCapture": "on_request",
+      "leadFields": [
+        "name",
+        "email",
+        "phone",
+        "organization",
+        "request"
+      ],
       "department": "Finance",
       "url": "https://liquidsoldier.com/finance-strategy-growth/finance/",
       "liveDataOnly": false,
@@ -5740,19 +6562,71 @@
       "buttons": [
         {
           "label": "Invoice",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Payment record",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Vendor document",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Other",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -5801,15 +6675,55 @@
       "buttons": [
         {
           "label": "Acquisition",
-          "action": "context"
+          "action": "set_entity",
+          "field": "transactionType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Merger",
-          "action": "context"
+          "action": "set_entity",
+          "field": "transactionType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Strategic transaction",
-          "action": "context"
+          "action": "set_entity",
+          "field": "transactionType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -5858,19 +6772,71 @@
       "buttons": [
         {
           "label": "New concept",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Improvement",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Supplier",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
         },
         {
           "label": "Collaboration",
-          "action": "context"
+          "action": "set_entity",
+          "field": "requestType",
+          "response": "Got it. I can route that to the right team.",
+          "nextButtons": [
+            {
+              "label": "Continue contact request",
+              "action": "lead"
+            },
+            {
+              "label": "Ask another question",
+              "action": "system"
+            }
+          ]
+        },
+        {
+          "label": "Contact the team",
+          "action": "lead"
         }
       ],
       "memory": {
@@ -5918,7 +6884,7 @@
         {
           "label": "Privacy Policy",
           "action": "link",
-          "url": "https://liquidsoldier.com/terms-and-conditions/"
+          "url": "https://liquidsoldier.com/privacy-policy/"
         },
         {
           "label": "Terms and Conditions",
@@ -5928,21 +6894,22 @@
         {
           "label": "Cookie Policy",
           "action": "link",
-          "url": "https://liquidsoldier.com/terms-and-conditions/"
+          "url": "https://liquidsoldier.com/cookie-policy/"
         },
         {
           "label": "Acceptable Use Policy",
           "action": "link",
-          "url": "https://liquidsoldier.com/terms-and-conditions/"
+          "url": "https://liquidsoldier.com/acceptable-use-policy/"
         },
         {
           "label": "Community Guidelines",
           "action": "link",
-          "url": "https://liquidsoldier.com/terms-and-conditions/"
+          "url": "https://liquidsoldier.com/community-guidelines/"
         },
         {
           "label": "Marketplace Returns",
-          "action": "context"
+          "action": "intent",
+          "intentId": "marketplace_return_policy"
         }
       ],
       "memory": {
@@ -5989,7 +6956,7 @@
         {
           "label": "Cookie Policy",
           "action": "link",
-          "url": "https://liquidsoldier.com/privacy-policy/"
+          "url": "https://liquidsoldier.com/cookie-policy/"
         }
       ],
       "memory": {
@@ -6035,7 +7002,8 @@
         },
         {
           "label": "Additional Terms",
-          "action": "context"
+          "action": "link",
+          "url": "https://liquidsoldier.com/terms-and-conditions/"
         }
       ],
       "memory": {
@@ -6082,7 +7050,7 @@
         {
           "label": "Community Guidelines",
           "action": "link",
-          "url": "https://liquidsoldier.com/acceptable-use-policy/"
+          "url": "https://liquidsoldier.com/community-guidelines/"
         }
       ],
       "memory": {
@@ -6175,7 +7143,7 @@
         {
           "label": "Privacy Policy",
           "action": "link",
-          "url": "https://liquidsoldier.com/cookie-policy/"
+          "url": "https://liquidsoldier.com/privacy-policy/"
         }
       ],
       "memory": {
@@ -6276,7 +7244,7 @@
         {
           "label": "Privacy Policy",
           "action": "link",
-          "url": "https://liquidsoldier.com/confidentiality-data-protection-statement/"
+          "url": "https://liquidsoldier.com/privacy-policy/"
         }
       ],
       "memory": {

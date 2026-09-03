@@ -27,7 +27,7 @@ In `index.html`, set `window.LIQUID_SOLDIER_CHAT_CONFIG.leadEndpoint` to an HTTP
 
 The payload contains:
 
-- source and timestamp
+- source, timestamp, and a unique submission ID for backend deduplication
 - page URL and browser user agent
 - detected intent and destination department
 - collected lead fields
@@ -35,13 +35,15 @@ The payload contains:
 - intent history
 - full visitor/bot transcript
 
-No lead summary is shown to the visitor. After an accepted response from the endpoint, the visitor sees only the success confirmation. The included prototype simulates success when no endpoint is configured; set `demoSubmissionWhenEndpointMissing` to `false` before production.
+No lead summary is shown to the visitor. After an accepted response from the endpoint, the visitor sees only the success confirmation. When no endpoint is configured, this public prototype clearly identifies the handoff as a prototype test rather than claiming that a team received it. Set `demoSubmissionWhenEndpointMissing` to `false` before production so an unconfigured endpoint routes visitors to Contact Us instead.
 
 Do not put private API keys in this front-end file. Authenticate and forward leads from a server-side endpoint. Configure CORS to allow the production website origin, validate and rate-limit submissions, sanitize all fields, log consent as required, and return a 2xx status only after the lead has been accepted.
 
 ## Matching and conversation behavior
 
-The browser engine combines phrase/keyword scoring, typo-tolerant token comparison, synonyms, active-topic weighting, and multi-intent detection. It keeps the current and previous topics, queues a second intent when appropriate, allows immediate topic switching, understands short pronoun follow-ups in the active context, and never disables free text.
+The browser engine combines phrase/keyword scoring, typo-tolerant token comparison, synonyms, explicit-topic priority, active-topic weighting, and multi-intent detection. It keeps the current and previous topics, exposes a queued second intent as a guided option, allows immediate topic switching, understands short pronoun follow-ups in the active context, and keeps free-text entry available.
+
+All guided choices in `intents.json` use explicit actions (`intent`, `link`, `lead`, `set_entity`, or `system`) so buttons do not rely on fuzzy rerouting. Contact collection can be paused for a new question and resumed, emergency wording always takes priority, and restart/reload safeguards prevent stale prompts or duplicate automatic submissions.
 
 Safety and accuracy rules in the intent library prevent stored prices, availability, leadership names, financial terms, or jurisdiction-dependent facts from being presented as permanently current. Medical questions are limited to label guidance, healthcare-professional referral, and urgent emergency routing.
 

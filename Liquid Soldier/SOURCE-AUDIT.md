@@ -39,6 +39,13 @@ The chatbot does not permanently assert current product price, inventory, shippi
 
 The chatbot does not diagnose, recommend personalized doses, promise health outcomes, provide legal or tax advice, or guarantee franchise/investment performance. Emergency symptom language routes the visitor to emergency services before any product-report workflow.
 
+## Release verification
+
+- 259 business-intent example phrasings were exercised in a real browser and reached their intended intent.
+- 98 end-to-end checks covered high-risk routing, guided buttons, topic switching, contextual follow-ups, multi-intent queuing, lead validation, pause/resume, emergency priority, restart/reload safety, transparent demo submission, console errors, and mobile fit.
+- All 36 unique HTTPS destinations used by guided buttons returned a successful live response. The additional telephone and email actions were checked for valid `tel:` and `mailto:` formats.
+- Every guided choice has an explicit action and every lead-enabled business intent has a working contact action.
+
 ## Deployment note
 
 The current site exposes duplicate and legacy utility routes. Before production, the client should confirm which storefront/account system is canonical and whether all listed public policies are approved and current. This package deliberately links only to the clearest relevant public pages and treats changing details as live-data-only.
