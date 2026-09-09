@@ -1,4 +1,4 @@
-// Keep thirty options easy to compare without a wall of controls.
+// Keep the options easy to compare without a wall of controls.
 function setupReviewRounds() {
   const options = document.querySelector('#options');
   const buttons = [...options.querySelectorAll('[data-option]')];
@@ -6,6 +6,7 @@ function setupReviewRounds() {
   rounds.className = 'review-rounds';
   rounds.setAttribute('aria-label', 'Choose a set of design concepts');
   rounds.innerHTML = [
+    ...(buttons.length > 30 ? [[3, '31–35', 'Dark case studies']] : []),
     [2, '21–30', 'New studio directions'],
     [1, '11–20', 'Second collection'],
     [0, '01–10', 'Original collection']
