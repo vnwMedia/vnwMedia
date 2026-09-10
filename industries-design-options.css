@@ -8,3 +8,10 @@
 .proof .section-heading{width:80%;max-width:none}
 .proof .section-heading h2,.proof .section-heading .lead{max-width:none}
 @media(max-width:1000px){.proof .section-heading{width:100%}}
+
+/* Keep the FAQ introduction in view while reading the questions. */
+.industry-faq-intro{position:sticky;top:112px;align-self:start;margin-bottom:0}
+.industry-faq-intro .section-heading{margin-bottom:0}
+.industry-faq-cta{margin-top:28px;background:#00aeef;color:#fff;transition:background-color .2s ease}
+.industry-faq-cta:hover,.industry-faq-cta:focus-visible{background:#008ac0;color:#fff}
+@media(max-width:760px),(max-height:600px){.industry-faq-intro{position:static;margin-bottom:28px}}
