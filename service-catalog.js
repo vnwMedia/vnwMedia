@@ -14,7 +14,7 @@ const SERVICE_CATALOG = [
     ],
     "overview": "From a focused business website to a larger platform, we plan the pages, design the experience, and develop a clear path from first visit to inquiry.",
     "scope": "Page counts, integrations, revisions, and launch schedules depend on the selected project scope.",
-    "image": "assets/south-carolina-motors.png",
+    "image": "assets/brooklyn-motors-website.png",
     "addon": false
   },
   {

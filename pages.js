@@ -11,7 +11,7 @@ const DATA = {
     ["Retail & eCommerce","retail-ecommerce","Product clarity, shopping paths, local retail visibility, campaigns, and repeat-customer systems.","https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=84"]
   ],
   cases: [
-    ["South Carolina Motors","south-carolina-motors","Automotive","South Carolina Motors supports vehicle shoppers and collision repair customers. We provided web design/redesign, SEO, PPC, GBP, GEO, and social media to support visibility and inquiries.","assets/scm-collision-center-cars-hero.jpg","https://www.southcarolinamotors.com/"],
+    ["Brooklyn Motors", "brooklyn-motors", "Automotive & Auto Body", "Brooklyn Motors provides collision and auto body repair in Brooklyn, New York. We provide web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO to support repair discovery and inquiries.", "assets/brooklyn-motors-hero.jpg", "https://www.brooklynmotorsny.com/"],
     ["La Rosa Chicken and Grill", "la-rosa-chicken-grill", "Restaurants & Hospitality", "La Rosa Chicken and Grill is a restaurant brand. We provide SEO for 11 locations, Google Business Profile Management, and Google Business Profile Search Ads.", "assets/la-rosa-chicken-grill-hero.webp", "https://larosachicken.com/"],
     ["H2Bros Plumbing","h2bros-plumbing","Home Services","H2Bros Plumbing & Heating serves homes, businesses, and new construction across New Jersey. We provided web design/redesign, SEO, and PPC to support local visibility and plumbing inquiries.","assets/h2bros-plumbing-hero.jpg","https://h2brosplumbing.com/"]
   ],
@@ -112,7 +112,7 @@ function cards(items,type){
 }
 
 function capabilityTicker(){
-  const clients=["South Carolina Motors","La Rosa Chicken and Grill","H2Bros Plumbing","Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Kahn Yuniver Law","Grill Point","Kid’s World Preschool","Senior Comfort","Brooklyn Motors","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds","Honeydrop","Marlboro Jewish Day Camp","Travel Mama","Pollack SEO","A2Z Academy"];
+  const clients=["Brooklyn Motors","La Rosa Chicken and Grill","H2Bros Plumbing","Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Kahn Yuniver Law","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds","Honeydrop","Marlboro Jewish Day Camp","Travel Mama","Pollack SEO","A2Z Academy"];
   return `<section class="trust-strip work-client-ticker" data-nav-theme="dark" aria-label="VNW Media clients"><div class="trust-track"><small>Selected Client Work</small><i></i>${[...clients,...clients].map(x=>`<span>${x}</span>`).join("")}</div></section>`;
 }
 
@@ -173,7 +173,7 @@ function workCreativeOptions(){
   const visualLabels=["Strategy screen","Trust system","Lead path"];
   const label=(n,name,note)=>`<div class="wco-label"><span>Option ${n}</span><strong>${name}</strong><small>${note}</small></div>`;
   return `<section class="wco-intro section" id="page-content" data-nav-theme="light"><div class="shell"><p class="section-tag">New Creative Set</p><h2>Less dashboard. More visual story.</h2><p>These directions use project imagery, expressive typography, editorial composition, and more distinctive client-proof moments.</p></div></section>
-  <section class="wco-option wco-lens section" data-nav-theme="light"><div class="shell">${label("11","Project Lens","Image-led · Layered · Premium")}<div class="wco-lens-stage"><div class="wco-lens-image"><img src="${img(images[0])}" alt="South Carolina Motors website project"><span>Selected Project / 01</span></div><div class="wco-lens-copy"><p class="section-tag">How Projects Move</p><h2>See the work taking shape.</h2><div>${steps.map((x,i)=>`<article><span>0${i+1}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></div></div><blockquote class="wco-lens-proof"><span>Client Perspective</span><p>“${quotes[0][2]}”</p><footer>${quotes[0][0]} · ${quotes[0][1]}</footer></blockquote></div></section>
+  <section class="wco-option wco-lens section" data-nav-theme="light"><div class="shell">${label("11","Project Lens","Image-led · Layered · Premium")}<div class="wco-lens-stage"><div class="wco-lens-image"><img src="${img(images[0])}" alt="Marketing strategy illustration"><span>Selected Project / 01</span></div><div class="wco-lens-copy"><p class="section-tag">How Projects Move</p><h2>See the work taking shape.</h2><div>${steps.map((x,i)=>`<article><span>0${i+1}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></div></div><blockquote class="wco-lens-proof"><span>Client Perspective</span><p>“${quotes[0][2]}”</p><footer>${quotes[0][0]} · ${quotes[0][1]}</footer></blockquote></div></section>
   <section class="wco-option wco-paper section" data-nav-theme="light"><div class="shell">${label("12","Studio Scrapbook","Tactile · Human · Unexpected")}<div class="wco-paper-board"><div class="wco-paper-title"><p class="section-tag">How Projects Move</p><h2>Good work rarely begins in a straight line.</h2><p>Research, ideas, proof, screens, and decisions gradually become one clear direction.</p></div>${steps.map((x,i)=>`<article class="wco-paper-note note-${i+1}"><span>0${i+1}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}<figure class="wco-paper-photo"><img src="${img(images[1])}" alt="Marketing strategy illustration"><figcaption>Built around confidence and easier action.</figcaption></figure><blockquote class="wco-paper-quote"><span>Client Perspective</span><p>“${quotes[1][2]}”</p><footer>${quotes[1][0]} · ${quotes[1][1]}</footer></blockquote></div></div></section>
   <section class="wco-option wco-swiss section" data-nav-theme="light"><div class="shell">${label("13","Swiss Evidence","Graphic · Minimal · Confident")}<div class="wco-swiss-head"><div><p class="section-tag">How Projects Move</p><h2>Clarity is the process.</h2></div><strong>04<br>CONNECTED<br>PHASES</strong></div><div class="wco-swiss-grid">${steps.map((x,i)=>`<article><span>${i+1}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div><div class="wco-swiss-proof"><img src="${img(images[2])}" alt="H2Bros Plumbing website project"><div><span>Client Perspective</span><blockquote>“${quotes[2][2]}”</blockquote><footer>${quotes[2][0]} · ${quotes[2][1]}</footer></div></div></div></section>
   <section class="wco-option wco-cinema section" data-nav-theme="dark"><div class="shell">${label("14","Cinematic Chapters","Immersive · Visual · Story-driven")}<div class="wco-cinema-stage"><img src="${img(images[1])}" alt="Marketing strategy illustration"><div class="wco-cinema-overlay"><p class="section-tag">How Projects Move</p><h2>One story.<br>Four chapters.</h2><div class="wco-cinema-chapters">${steps.map((x,i)=>`<article><span>0${i+1}</span><strong>${x[0]}</strong></article>`).join("")}</div></div></div><div class="wco-cinema-proof"><div><span>Client Perspective</span><strong>Creative work feels stronger when the process feels dependable.</strong></div>${quotes.slice(0,2).map(x=>`<blockquote><p>“${x[2]}”</p><footer>${x[0]} · ${x[1]}</footer></blockquote>`).join("")}</div></div></section>
@@ -227,7 +227,7 @@ function homeProcessOptions(){
 function workPageOne(){
   const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media","SEO · 11 locations":"seo","Google Business Profile Management":"google-business-profile","Google Business Profile Search Ads":"google-ppc"};
   const projectScopes=[
-    ["Web Design","SEO","PPC","GBP","GEO","SMM"],
+    ["Web Design","SEO","Google Business Profile Management","Google Business Profile Search Ads","PPC","GEO"],
     ["SEO · 11 locations","Google Business Profile Management","Google Business Profile Search Ads"],
     ["Web Design","SEO","PPC"]
   ];
@@ -243,7 +243,7 @@ function workPageOne(){
     ["Build","Bring design, copy, development, SEO foundations, tracking, and launch details together.","assets/work-process-build.jpg"],
     ["Improve","Use real customer questions and performance signals to guide the next useful refinement.","assets/work-process-improve.jpg"]
   ];
-  const moreWork=["Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Kahn Yuniver Law","Grill Point","Kid’s World Preschool","Senior Comfort","Brooklyn Motors","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds"];
+  const moreWork=["Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Kahn Yuniver Law","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds"];
   return `<section class="work work-agency-featured section" id="page-content"><div class="shell"><div class="work-agency-head reveal"><div><p class="section-tag">Selected Work</p><h2>Different industries. The same focus on clarity, trust, and action.</h2></div><p>Each project begins with a different business problem. The work below shows how strategy, design, content, search context, and lead paths come together around the customer’s next decision.</p></div><div class="work-grid">${DATA.cases.map((x,i)=>`<article class="work-card work-agency-card reveal"><img src="${img(x[4])}" alt="${esc(x[0])}"><div><span>${esc(x[2])}</span><h3>${esc(x[0])}</h3><p>${esc(x[3])}</p><ul aria-label="Services provided for ${esc(x[0])}">${projectScopes[i].map(scope=>`<li><a class="work-service-pill" href="${path(`services/${scopePages[scope]}.html`)}">${scope}</a></li>`).join("")}</ul><a class="work-case-link" href="${path(`case-studies/${x[1]}.html`)}" aria-label="Read ${esc(x[0])} case study"><b>Read case study ↗</b></a></div></article>`).join("")}</div><div class="portfolio-list reveal">${moreWork.map((x,i)=>`<a href="${path("contact.html")}"><span>${String(i+4).padStart(2,"0")}</span><strong>${x}</strong><i>Discuss this work ↗</i></a>`).join("")}</div></div></section>
   <section class="work-agency-method section" data-nav-theme="dark"><div class="shell work-agency-method-grid"><div class="work-agency-method-copy reveal"><p class="section-tag">What Connects The Work</p><h2>More than a gallery. A working digital system.</h2><p>Strong agency work should explain what changed, why it matters, and how the pieces support the business—not just display polished screens.</p><a class="pill pill-blue" href="${path("contact.html")}">Discuss your opportunity <span>↗</span></a></div><div class="work-agency-principles">${principles.map((x,i)=>`<article class="reveal"><span>${String(i+1).padStart(2,"0")}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></div></section>
   <section class="work-agency-process work-agency-process-option1 section" id="work-process" data-nav-theme="light"><div class="shell"><div class="work-agency-process-head reveal"><div><p class="section-tag">How Projects Move</p><h2>From first question to the next improvement.</h2></div><a class="pill pill-blue" href="${path("contact.html")}">Plan your project <span>↗</span></a></div><div class="work-agency-process-grid">${processSteps.map((x,i)=>`<article class="reveal"><figure><img src="${img(x[2])}" alt="${esc(x[0])} project phase"><span>${String(i+1).padStart(2,"0")}</span></figure><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}</div></div></section>
@@ -318,7 +318,7 @@ function workOptionThree(){
 
 function workOptionFour(){
   const layers=[["Message","Can a visitor understand the offer within seconds?"],["Proof","Are reviews, project examples, and credibility signals visible?"],["Path","Are calls, forms, quotes, and booking actions easy to find?"],["Search","Do services, locations, and intent have clear content paths?"],["Mobile","Does the experience work for high-intent phone users?"],["Measure","Can future marketing be judged by calls, forms, and lead quality?"]];
-  return `<section class="work-dashboard section" id="page-content"><div class="shell"><div class="work-dashboard-head reveal"><p class="section-tag">Option 4 / Conversion Dashboard</p><h2>A Work page that explains how stronger websites create stronger lead flow.</h2><p>This design makes VNW look analytical and practical by showing the layers behind each project: message, proof, path, search, mobile, and measurement.</p></div><div class="work-dashboard-grid">${layers.map((x,i)=>`<article class="reveal"><span>${String(i+1).padStart(2,"0")}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}</div></div></section><section class="work-dashboard-projects section"><div class="shell"><div class="case-gallery-head reveal"><div><p class="section-tag">Project Dashboard</p><h2>Selected work mapped by business goal.</h2></div><a class="pill pill-blue" href="${path("contact.html")}">Audit my website <span>↗</span></a></div><div class="work-dashboard-cards">${DATA.cases.map((x,i)=>`<article class="case-dashboard-card reveal"><img src="${img(x[4])}" alt="${esc(x[0])} work visual"><div><p class="section-tag">${esc(x[2])}</p><h2>${esc(x[0])}</h2><dl><dt>Goal</dt><dd>${esc(x[3])}</dd><dt>Primary CTA</dt><dd>${i===0?"Call or request vehicle details":i===1?"Find a location, call, or order":"Tap to call or submit service details"}</dd><dt>SEO opportunity</dt><dd>${i===0?"Inventory and dealership discovery":i===1?"Local restaurant discovery for 11 locations":"Local plumbing and emergency service intent"}</dd></dl></div></article>`).join("")}</div></div></section>${workFAQ()}`;
+  return `<section class="work-dashboard section" id="page-content"><div class="shell"><div class="work-dashboard-head reveal"><p class="section-tag">Option 4 / Conversion Dashboard</p><h2>A Work page that explains how stronger websites create stronger lead flow.</h2><p>This design makes VNW look analytical and practical by showing the layers behind each project: message, proof, path, search, mobile, and measurement.</p></div><div class="work-dashboard-grid">${layers.map((x,i)=>`<article class="reveal"><span>${String(i+1).padStart(2,"0")}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}</div></div></section><section class="work-dashboard-projects section"><div class="shell"><div class="case-gallery-head reveal"><div><p class="section-tag">Project Dashboard</p><h2>Selected work mapped by business goal.</h2></div><a class="pill pill-blue" href="${path("contact.html")}">Audit my website <span>↗</span></a></div><div class="work-dashboard-cards">${DATA.cases.map((x,i)=>`<article class="case-dashboard-card reveal"><img src="${img(x[4])}" alt="${esc(x[0])} work visual"><div><p class="section-tag">${esc(x[2])}</p><h2>${esc(x[0])}</h2><dl><dt>Goal</dt><dd>${esc(x[3])}</dd><dt>Primary CTA</dt><dd>${i===0?"Call or ask about a repair":i===1?"Find a location, call, or order":"Tap to call or submit service details"}</dd><dt>SEO opportunity</dt><dd>${i===0?"Collision repair and local discovery":i===1?"Local restaurant discovery for 11 locations":"Local plumbing and emergency service intent"}</dd></dl></div></article>`).join("")}</div></div></section>${workFAQ()}`;
 }
 
 function workOptionFive(){
@@ -444,7 +444,7 @@ function caseStudiesPage(){
     ["03","Search aligned","Match the page structure to how customers actually look.","Local intent, service categories, clear page hierarchy."],
     ["04","Lead ready","Create a system that can keep improving after launch.","Analytics, campaign paths, conversion points, practical next steps."]
   ];
-  const portfolio=["Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Kahn Yuniver Law","Grill Point","Kid’s World Preschool","Senior Comfort","Brooklyn Motors","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds"];
+  const portfolio=["Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Kahn Yuniver Law","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds"];
   return `<section class="cases-showroom section" id="page-content"><div class="shell">
     <div class="cases-intro reveal"><p class="section-tag">Selected Builds</p><h2>Websites treated like sales rooms, not online brochures.</h2><p>Each case starts with the business decision we need to influence: call, request an estimate, book a tour, browse inventory, or ask for help.</p></div>
     <div class="case-feature reveal">
@@ -469,12 +469,12 @@ function caseStudiesOptionTwo(){
   const cases=[
     {
       item:DATA.cases[0],
-      objective:"Help shoppers understand inventory, trust the dealership, and contact the team without wandering through a cluttered path.",
-      challenge:"Automotive buyers want speed, visuals, and confidence. The experience needs to make vehicles easy to browse while keeping phone calls and inquiry actions close.",
-      strategy:"Create a vehicle-first journey with strong visual hierarchy, simple navigation, mobile-ready contact points, and trust cues that support dealership credibility.",
-      deliverables:["Inventory-focused UX","Responsive web design","Lead form direction","Click-to-call paths","Local SEO structure","Trust messaging"],
-      path:["Browse vehicles","Review business credibility","Call or request details","Continue follow-up"],
-      details:["Clearer vehicle discovery for high-intent visitors","A stronger visual system around featured inventory","Contact routes designed for desktop and mobile behavior"]
+      objective:"Support collision-repair discovery and clear contact paths.",
+      challenge:"Drivers need useful repair information and a recognizable local business.",
+      strategy:"Connect web design, SEO, profile management, profile search ads, PPC, and GEO.",
+      deliverables:["Web Design","SEO","Google Business Profile Management","Google Business Profile Search Ads","PPC","GEO"],
+      path:["Find the shop","Understand repair services","Contact the business","Discuss the repair"],
+      details:["Clear repair information","Organic local visibility","Relevant paid search"]
     },
     {
       item:DATA.cases[1],
@@ -566,7 +566,7 @@ function caseStudyHub(){
 
 function caseStudiesOptionThree(){
   const journeys=[
-    [DATA.cases[0],"The shopper wants confidence before contact.","Vehicle shoppers are filtering quickly. They need inventory clarity, dealership credibility, and a fast path to a real conversation.","We structure the experience around browsing, trust, and direct inquiry so interest does not disappear between pages.",["Inventory browsing","Dealer credibility","Mobile call flow"]],
+    [DATA.cases[0],"The driver needs clear repair information.","Collision-repair customers need to understand the shop, its services, and the next step.","We connect web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO.",["Repair discovery","Local visibility","Contact paths"]],
     [DATA.cases[1],"The guest wants the right nearby restaurant.","Restaurant discovery is local. Each of the 11 locations needs relevant search visibility and useful profile information.","We provide SEO, Google Business Profile Management, and Google Business Profile Search Ads.",["Local discovery","11 locations","Restaurant information"]],
     [DATA.cases[2],"The homeowner has a problem and wants help now.","Home-service traffic is high intent. The page has to communicate availability, coverage, and a phone-first next step immediately.","We prioritize urgent CTAs, service-area confidence, and simple problem-to-call movement.",["Emergency action","Local relevance","Phone-first UX"]]
   ];
@@ -583,9 +583,9 @@ function caseStudiesOptionFour(){
   const rows=DATA.cases.map((x,i)=>[
     x,
     [
-      i===0?"Search and referral visitors reviewing vehicles.":i===1?"Local guests comparing restaurants.":"Urgent homeowners searching for a local plumber.",
-      i===0?"Inventory-led page flow with dealership proof.":i===1?"SEO, managed profiles, and GBP Search Ads.":"Direct-response service-area and call structure.",
-      i===0?"Vehicle discovery, calls, form inquiries.":i===1?"Restaurant discovery, calls, directions, and orders.":"Emergency calls, quote requests, local service validation."
+      i===0?"Drivers searching for collision repair.":i===1?"Local guests comparing restaurants.":"Urgent homeowners searching for a local plumber.",
+      i===0?"Repair information with local business context.":i===1?"SEO, managed profiles, and GBP Search Ads.":"Direct-response service-area and call structure.",
+      i===0?"Repair discovery, calls, form inquiries.":i===1?"Restaurant discovery, calls, directions, and orders.":"Emergency calls, quote requests, local service validation."
     ]
   ]);
   return `<section class="case-dashboard section" id="page-content"><div class="shell">
@@ -623,51 +623,106 @@ function caseOptionFAQ(){
   return `<section class="case-option-faq faq section"><div class="shell faq-grid"><div class="faq-intro reveal"><p class="section-tag">Case Study FAQ</p><h2>Details that make the proof more useful.</h2><p>These answers add helpful SEO content and reduce buyer uncertainty before a strategy call.</p><a class="text-arrow" href="${path("contact.html")}">Ask about your case study <span>↗</span></a></div><div class="faq-list reveal">${qs.map((x,i)=>`<details ${i===0?"open":""}><summary>${x[0]}<span>+</span></summary><p>${x[1]}</p></details>`).join("")}</div></div></section>`;
 }
 
-function southCarolinaMotorsCaseStudy(){
-  const signals=[
-    ["Inventory","Vehicle discovery"],
-    ["Trust","Dealership credibility"],
-    ["Mobile","Call and inquiry path"],
-    ["Search","Local automotive visibility"]
-  ];
-  const approach=[
-    ["Treated inventory clarity as the job.","A dealership visitor is not reading slowly. They are comparing vehicles, scanning trust cues, and deciding whether this business is worth contacting."],
-    ["Made the dealership easier to understand at the moment of intent.","The page is structured around local buying behavior: vehicle interest, location, credibility, and a clear next step."],
-    ["Moved the action closer to the decision.","Calls, inquiry prompts, and sales-contact language belong near the points where a shopper is already asking: is it available, can I trust them, and what happens next?"]
-  ];
-  const services=[
-    ["inventory-ux","Web Design","The page experience should make the inventory path feel immediate. For South Carolina Motors, that means orienting shoppers around available vehicles, dealership context, and the next action instead of burying the contact moment behind generic page sections.","Vehicle discovery"],
-    ["local-seo","SEO","Our SEO work for South Carolina Motors focuses on helping drivers discover its collision-repair and automotive services through organic search. The focus is clear service content, useful location information, internal links, and technical site foundations that connect relevant searches with a direct path to call or request an estimate.","Organic search","Discuss SEO"],
-    ["ppc","PPC","Our pay-per-click advertising work focuses on connecting South Carolina Motors with drivers actively searching for automotive and collision-repair services. Relevant search terms, location targeting, focused ad messaging, and clear landing-page actions shape the campaign approach, with calls and estimate inquiries as the intended next steps.","Paid search","Discuss PPC"],
-    ["google-business","GBP Organic & Paid Search","Our Google Business Profile (GBP) work connects organic local visibility with paid search. The organic focus is accurate business details, service information, photos, and review content. On the paid side, linked Google Ads location assets can support local advertising across Search and Maps. Paid placements remain separate from organic visibility.","Local visibility","Discuss GBP visibility"],
-    ["geo","GEO","Our Generative Engine Optimization (GEO) work focuses on making South Carolina Motors’ services, locations, and expertise clear to AI-assisted search. Helpful answers, consistent business information, and accessible page content support that work alongside SEO. The goal is a business that is easier to understand and reference; AI mentions and citations are not guaranteed.","AI search readiness","Discuss GEO"],
-    ["vehicle-inquiry","Vehicle Inquiry CTAs","Calls and forms work best when they appear near the point of decision. The page should help visitors ask about availability, schedule a conversation, or take the next buying step without feeling like they have to hunt for contact information.","Lead path"],
-    ["dealer-proof","Dealership Trust Signals","Automotive shoppers want reassurance. Location clarity, simple messaging, real business cues, reviews, and transparent next steps make the dealership feel easier to trust before the shopper reaches out.","Confidence"],
-    ["mobile-development","Mobile Responsive Development","Many dealership visitors arrive from mobile search. The design has to make browsing, calling, tapping, and submitting an inquiry feel natural on a phone, not just acceptable on desktop.","Mobile action"],
-    ["content-architecture","Content Architecture","The content should answer practical buying questions: what kind of dealership this is, what vehicles or categories matter, why shoppers can trust the business, and how to begin the conversation.","Page clarity"],
-    ["tracking","Analytics & Lead Tracking","The page should be ready to measure calls, form starts, vehicle-interest clicks, source quality, and the moments where visitors move from browsing to real sales intent.","Measurement"]
-  ];
-  return renderClientCaseStudy({signals, approach, services, ...{
-  "name": "South Carolina Motors",
-  "kicker": "Used car dealership · Automotive",
-  "intro": "A dealership website shaped around inventory discovery, local trust, and a faster path from vehicle interest to contact.",
-  "hero": "assets/scm-collision-center-cars-hero.jpg",
-  "heroAlt": "Enhanced photo of SC Motors Collision Center with three digitally added cars parked in front",
-  "challengeTitle": "Win attention before shoppers compare away.",
-  "challengeOne": "South Carolina Motors needs to win attention in a category where shoppers compare quickly and hesitate easily. Visitors arrive with practical questions about inventory, location, vehicle availability, price range, business credibility, and what happens after they reach out.",
-  "challengeTwo": "The challenge is not just to make the site look polished. The page has to make the dealership feel easier to evaluate, easier to trust, and easier to contact from the exact moment a shopper starts browsing.",
-  "approachTitle": "Build the page around the buyer’s next decision.",
-  "mockup": "assets/scm-graphic-options/selected-location-screen.png",
-  "mockupAlt": "South Carolina Motors website mockup on a laptop and phone in front of a circular photo of SC Motors Collision Center",
-  "storyTitle": "Clarity at every click.",
-  "storyOne": "For a dealership, the website is often the bridge between a search result and a sales conversation. If the visitor cannot quickly understand what is available, why the dealership is credible, and how to ask the right question, the site creates friction instead of momentum.",
-  "storyTwo": "This South Carolina Motors direction pulls the main decision points into one clearer system: inventory interest, dealership trust, local visibility, mobile action, and follow-up readiness. The result is a page story that feels less like a brochure and more like a buying path.",
-  "storyThree": "Instead of inventing performance numbers, this case study focuses on the strategic work a dealership page needs to do before meaningful measurement can happen: make the visitor confident, make the offer legible, and make the next step obvious.",
-  "heroWidth": 1672,
-  "heroHeight": 941,
-  "mockupWidth": 1448,
-  "mockupHeight": 1086
-}});
+function brooklynMotorsCaseStudy(){
+  return renderClientCaseStudy({
+  "name": "Brooklyn Motors",
+  "kicker": "Collision & Auto Body Repair · Brooklyn, New York",
+  "intro": "Web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO.",
+  "hero": "assets/brooklyn-motors-hero.jpg",
+  "heroAlt": "Brooklyn Motors collision center and vehicles outside its facility",
+  "heroWidth": 1920,
+  "heroHeight": 950,
+  "mockup": "assets/brooklyn-motors-website.png",
+  "mockupAlt": "Brooklyn Motors website with collision repair information",
+  "mockupWidth": 1440,
+  "mockupHeight": 1000,
+  "signals": [
+    [
+      "Repair",
+      "Collision and auto body"
+    ],
+    [
+      "Search",
+      "SEO and GEO"
+    ],
+    [
+      "Profiles",
+      "Organic local visibility"
+    ],
+    [
+      "Ads",
+      "PPC and GBP Search Ads"
+    ]
+  ],
+  "challengeTitle": "Help drivers find the right repair information.",
+  "challengeOne": "Drivers looking for collision repair need to understand the business, its services, and how to contact the shop. Brooklyn Motors needs a clear digital presence that supports those decisions.",
+  "challengeTwo": "The website, organic search, Google Business Profile, and paid search should give visitors a consistent picture of the business while making the next step easy to find.",
+  "approachTitle": "Connect the website with local discovery.",
+  "approach": [
+    [
+      "Explain the repair experience.",
+      "Use web design to present repair information and direct contact options clearly."
+    ],
+    [
+      "Support organic visibility.",
+      "Connect SEO, Google Business Profile Management, and GEO with useful service and location information."
+    ],
+    [
+      "Support paid search separately.",
+      "Use PPC and Google Business Profile Search Ads to support relevant repair searches; advertising does not replace organic visibility."
+    ]
+  ],
+  "storyTitle": "From local search to a repair conversation.",
+  "storyOne": "Our Brooklyn Motors engagement combines web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO.",
+  "storyTwo": "The website gives drivers a place to understand the shop and contact the business. Search and profile work support discovery, while paid campaigns provide a separate route to relevant inquiries.",
+  "storyThree": "This case study describes the confirmed service scope. It does not claim unverified traffic, ranking, lead, or revenue increases.",
+  "visualCaption": "Brooklyn Motors website",
+  "visualDetail": "Collision repair information",
+  "services": [
+    [
+      "web-design",
+      "Web Design",
+      "Our web design work focuses on presenting collision-repair information, local business context, and clear contact options for Brooklyn Motors.",
+      "Website experience",
+      "Discuss web design"
+    ],
+    [
+      "seo",
+      "SEO",
+      "Our SEO work supports organic discovery of Brooklyn Motors and its repair services through useful service information and local search relevance.",
+      "Organic search",
+      "Discuss SEO"
+    ],
+    [
+      "google-business-profile",
+      "Google Business Profile Management",
+      "We manage Google Business Profile information to support organic local visibility and help drivers find useful details about the shop. Organic profile visibility is separate from paid advertising.",
+      "Organic local visibility",
+      "Discuss profile management"
+    ],
+    [
+      "gbp-search-ads",
+      "Google Business Profile Search Ads",
+      "We provide Google Business Profile Search Ads as a paid component of the engagement, supporting local discovery alongside organic profile management.",
+      "Paid local search",
+      "Discuss profile search ads"
+    ],
+    [
+      "ppc",
+      "PPC",
+      "Pay-per-click advertising supports relevant collision-repair searches and directs interested drivers toward useful information and contact options.",
+      "Paid search",
+      "Discuss PPC"
+    ],
+    [
+      "geo",
+      "GEO",
+      "Generative Engine Optimization focuses on making Brooklyn Motors and its repair services understandable in AI-assisted search through clear, consistent information. AI mentions and citations are not guaranteed.",
+      "AI search readiness",
+      "Discuss GEO"
+    ]
+  ]
+});
 }
 
 function renderClientCaseStudy(config){
@@ -1201,7 +1256,7 @@ function bootPages(){
   if(topPages[id]) content=topPage(id);
   if(!content && id?.startsWith("service-")) content=detail("service",DATA.services.find(x=>x[1]===id.slice(8))||DATA.services[0]);
   if(!content && id?.startsWith("industry-")) content=detail("industry",DATA.industries.find(x=>x[1]===id.slice(9))||DATA.industries[0]);
-  if(id==="case-south-carolina-motors") content=southCarolinaMotorsCaseStudy();
+  if(id==="case-brooklyn-motors") content=brooklynMotorsCaseStudy();
   if(id?.startsWith("case-") && CLIENT_CASE_STUDIES[id.slice(5)]) content=renderClientCaseStudy(CLIENT_CASE_STUDIES[id.slice(5)]);
   if(!content && id?.startsWith("case-")) content=detail("case",DATA.cases.find(x=>x[1]===id.slice(5))||DATA.cases[0]);
   if(!content && id?.startsWith("resource-")) content=detail("resource",DATA.resources.find(x=>x[1]===id.slice(9))||DATA.resources[0]);
