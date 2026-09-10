@@ -11,3 +11,15 @@
 @media(max-width:1150px){.industries-live .story-band>div{padding:40px}.industries-live .story-band h2{font-size:38px}}
 @media(max-width:760px){.industries-live .section{padding-block:56px}.industries-live .eyebrow{font-size:10px}.industries-live .three-col{grid-template-columns:1fr;gap:34px}.industries-live .faq-grid{grid-template-columns:1fr;gap:5px}.industries-live .section-heading{margin-bottom:30px}.industries-live .section-heading .lead{font-size:16px}.industries-live .cinema-hero{min-height:600px;padding-top:70px}.industries-live .cinema-hero h1{font-size:clamp(40px,9vw,50px)}.industries-live .cinema-hero>.wrap{padding-block:65px}.industries-live .story-band{grid-template-columns:1fr}.industries-live .story-band>img{height:290px;min-height:0}.industries-live .story-band.reverse>img{order:0}.industries-live .story-band>div{padding:35px 5% 45px}.industries-live .story-band h2{font-size:37px}.industries-live .closing h2{font-size:39px}}
 @media(max-width:600px){body[data-page="industries"] .footer-grid>*{min-width:0}body[data-page="industries"] .footer-service-pillar,body[data-page="industries"] .footer-service-group{min-width:0}body[data-page="industries"] .footer a,body[data-page="industries"] .footer span{white-space:normal;overflow-wrap:anywhere}}
+
+/* Keep alternating copy inside the same outer columns as the header logo. */
+@media(min-width:761px){
+  .industries-live .story-band{grid-template-columns:calc((100% - var(--shell))/2) minmax(0,1fr) minmax(0,1fr) calc((100% - var(--shell))/2)}
+  .industries-live .story-band>img{grid-column:1/3;grid-row:1}
+  .industries-live .story-band>div{grid-column:3;grid-row:1;min-width:0;padding-inline:40px 0}
+  .industries-live .story-band.reverse>img{grid-column:3/5}
+  .industries-live .story-band.reverse>div{grid-column:2;padding-inline:0 40px}
+}
+@media(max-width:760px){
+  .industries-live .story-band>div{width:var(--shell);margin-inline:auto;padding-inline:0}
+}
