@@ -225,11 +225,11 @@ function homeProcessOptions(){
 }
 
 function workPageOne(){
-  const scopePages={"Web Design / Redesign":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media"};
+  const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media"};
   const projectScopes=[
-    ["Web Design / Redesign","SEO","PPC","GBP","GEO","SMM"],
-    ["Web Design / Redesign","SEO","PPC","GBP","GEO","SMM"],
-    ["Web Design / Redesign","SEO","PPC"]
+    ["Web Design","SEO","PPC","GBP","GEO","SMM"],
+    ["Web Design","SEO","PPC","GBP","GEO","SMM"],
+    ["Web Design","SEO","PPC"]
   ];
   const principles=[
     ["Strategy","Start with the business goal, audience, offer, and decision the website needs to support."],
@@ -636,7 +636,7 @@ function southCarolinaMotorsCaseStudy(){
     ["Moved the action closer to the decision.","Calls, inquiry prompts, and sales-contact language belong near the points where a shopper is already asking: is it available, can I trust them, and what happens next?"]
   ];
   const services=[
-    ["inventory-ux","Web Design / Redesign","The page experience should make the inventory path feel immediate. For South Carolina Motors, that means orienting shoppers around available vehicles, dealership context, and the next action instead of burying the contact moment behind generic page sections.","Vehicle discovery"],
+    ["inventory-ux","Web Design","The page experience should make the inventory path feel immediate. For South Carolina Motors, that means orienting shoppers around available vehicles, dealership context, and the next action instead of burying the contact moment behind generic page sections.","Vehicle discovery"],
     ["local-seo","SEO","Our SEO work for South Carolina Motors focuses on helping drivers discover its collision-repair and automotive services through organic search. The focus is clear service content, useful location information, internal links, and technical site foundations that connect relevant searches with a direct path to call or request an estimate.","Organic search","Discuss SEO"],
     ["ppc","PPC","Our pay-per-click advertising work focuses on connecting South Carolina Motors with drivers actively searching for automotive and collision-repair services. Relevant search terms, location targeting, focused ad messaging, and clear landing-page actions shape the campaign approach, with calls and estimate inquiries as the intended next steps.","Paid search","Discuss PPC"],
     ["google-business","GBP Organic & Paid Search","Our Google Business Profile (GBP) work connects organic local visibility with paid search. The organic focus is accurate business details, service information, photos, and review content. On the paid side, linked Google Ads location assets can support local advertising across Search and Maps. Paid placements remain separate from organic visibility.","Local visibility","Discuss GBP visibility"],
@@ -758,7 +758,7 @@ const CLIENT_CASE_STUDIES={
     "services": [
       [
         "repair-ux",
-        "Web Design / Redesign",
+        "Web Design",
         "Organize collision-repair information around the questions drivers bring to the site. The shop identity, services, and estimate path should be immediately recognizable.",
         "Repair clarity"
       ],
@@ -873,7 +873,7 @@ const CLIENT_CASE_STUDIES={
     "services": [
       [
         "service-ux",
-        "Web Design / Redesign",
+        "Web Design",
         "Help visitors distinguish plumbing repairs, heating work, and planned installations. Clear categories make the site useful to homeowners, business owners, and new-construction customers.",
         "Service discovery"
       ],
