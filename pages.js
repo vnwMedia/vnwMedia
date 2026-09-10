@@ -12,7 +12,7 @@ const DATA = {
   ],
   cases: [
     ["Brooklyn Motors", "brooklyn-motors", "Automotive & Auto Body", "Brooklyn Motors provides collision and auto body repair in Brooklyn, New York. We provide web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO to support repair discovery and inquiries.", "assets/brooklyn-motors-hero.jpg", "https://www.brooklynmotorsny.com/"],
-    ["La Rosa Chicken and Grill", "la-rosa-chicken-grill", "Restaurants & Hospitality", "La Rosa Chicken and Grill is a restaurant brand. We provide SEO for 11 locations, Google Business Profile Management, and Google Business Profile Search Ads.", "assets/la-rosa-chicken-grill-hero.webp", "https://larosachicken.com/"],
+    ["La Rosa Chicken and Grill", "la-rosa-chicken-grill", "Restaurants & Hospitality", "La Rosa Chicken and Grill is a restaurant brand. We provide SEO for 11 locations, Google Business Profile Management, and Google Business Profile Search Ads.", "assets/la-rosa-portfolio-hero.jpg", "https://larosachicken.com/"],
     ["H2Bros Plumbing","h2bros-plumbing","Home Services","H2Bros Plumbing & Heating serves homes, businesses, and new construction across New Jersey. We provided web design/redesign, SEO, and PPC to support local visibility and plumbing inquiries.","assets/h2bros-plumbing-hero.jpg","https://h2brosplumbing.com/"]
   ],
   resources: [
@@ -762,14 +762,14 @@ const CLIENT_CASE_STUDIES={
     "name": "La Rosa Chicken and Grill",
     "kicker": "Restaurants & Hospitality · SEO for 11 locations",
     "intro": "SEO for 11 locations, Google Business Profile Management, and Google Business Profile Search Ads.",
-    "hero": "assets/la-rosa-chicken-grill-hero.webp",
-    "heroAlt": "La Rosa Chicken and Grill restaurant exterior",
-    "heroWidth": 394,
-    "heroHeight": 310,
-    "mockup": "assets/la-rosa-chicken-grill-hero.webp",
-    "mockupAlt": "La Rosa Chicken and Grill restaurant exterior",
-    "mockupWidth": 394,
-    "mockupHeight": 310,
+    "hero": "assets/la-rosa-portfolio-hero.jpg",
+    "heroAlt": "La Rosa Chicken and Grill food spread with its logo at the center",
+    "heroWidth": 1920,
+    "heroHeight": 1080,
+    "mockup": "assets/la-rosa-portfolio-hero.jpg",
+    "mockupAlt": "La Rosa Chicken and Grill food spread with its logo at the center",
+    "mockupWidth": 1920,
+    "mockupHeight": 1080,
     "signals": [
         [
             "11",
@@ -811,7 +811,7 @@ const CLIENT_CASE_STUDIES={
     "storyTwo": "The goal is to help guests move from a local restaurant search to useful information about where to visit or order. This engagement is focused on search visibility and Google Business Profiles; website design is not part of the scope described here.",
     "storyThree": "This case study documents the confirmed services. It does not claim unverified ranking, traffic, order, or revenue gains.",
     "visualCaption": "La Rosa Chicken and Grill",
-    "visualDetail": "Restaurant location",
+    "visualDetail": "La Rosa menu imagery",
     "services": [
         [
             "seo",
