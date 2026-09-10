@@ -23,3 +23,9 @@
 @media(max-width:760px){
   .industries-live .story-band>div{width:var(--shell);margin-inline:auto;padding-inline:0}
 }
+
+/* Match the standard 610px desktop banner and responsive hero baseline. */
+.industries-live .cinema-hero{min-height:610px}
+.industries-live .cinema-hero>.wrap{padding-block:40px}
+@media(max-width:800px){.industries-live .cinema-hero{min-height:540px;padding-top:72px}}
+@media(max-width:560px){.industries-live .cinema-hero{min-height:580px}}
