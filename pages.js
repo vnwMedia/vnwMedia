@@ -11,7 +11,7 @@ const DATA = {
     ["Retail & eCommerce","retail-ecommerce","Product clarity, shopping paths, local retail visibility, campaigns, and repeat-customer systems.","https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=84"]
   ],
   cases: [
-    ["Brooklyn Motors", "brooklyn-motors", "Automotive & Auto Body", "Brooklyn Motors provides collision and auto body repair in Brooklyn, New York. We provide web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO to support repair discovery and inquiries.", "assets/brooklyn-motors-hero.jpg", "https://www.brooklynmotorsny.com/"],
+    ["Brooklyn Motors", "brooklyn-motors", "Automotive & Auto Body", "Brooklyn Motors provides collision and auto body repair in Brooklyn, New York. We provide web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO to support repair discovery and inquiries.", "assets/brooklyn-motors-banner.jpg", "https://www.brooklynmotorsny.com/"],
     ["La Rosa Chicken and Grill", "la-rosa-chicken-grill", "Restaurants & Hospitality", "La Rosa Chicken and Grill is a restaurant brand. We provide SEO for 11 locations, Google Business Profile Management, Google Business Profile Search Ads, and Reputation Management.", "assets/la-rosa-portfolio-hero.jpg", "https://larosachicken.com/"],
     ["H2Bros Plumbing","h2bros-plumbing","Home Services","H2Bros Plumbing & Heating serves homes, businesses, and new construction across New Jersey. We provided web design/redesign, SEO, and PPC to support local visibility and plumbing inquiries.","assets/h2bros-plumbing-hero.jpg","https://h2brosplumbing.com/"]
   ],
@@ -628,8 +628,8 @@ function brooklynMotorsCaseStudy(){
   "name": "Brooklyn Motors",
   "kicker": "Collision & Auto Body Repair · Brooklyn, New York",
   "intro": "Web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO.",
-  "hero": "assets/brooklyn-motors-hero.jpg",
-  "heroAlt": "Brooklyn Motors collision center and vehicles outside its facility",
+  "hero": "assets/brooklyn-motors-banner.jpg",
+  "heroAlt": "Blue sports car outside the Brooklyn Motors collision center",
   "heroWidth": 1920,
   "heroHeight": 950,
   "mockup": "assets/brooklyn-motors-website.png",
