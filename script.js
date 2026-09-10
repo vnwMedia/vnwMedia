@@ -396,6 +396,40 @@ if (testimonialTicker && testimonialTickerTrack) {
     testimonialTickerTrack.style.setProperty("--testimonial-loop-distance", `${firstClone.offsetLeft - firstCard.offsetLeft}px`);
   };
 
+  // Enhance originals and visual loop copies without changing the ticker motion.
+  const reviewCards = Array.from(testimonialTickerTrack.children);
+  reviewCards.forEach((card, index) => {
+    const quote = card.querySelector("blockquote");
+    const name = card.querySelector("footer strong").textContent;
+    quote.id = `ticker-review-${index}`;
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "testimonial-read-more";
+    toggle.textContent = "Read more ↗";
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", quote.id);
+    toggle.setAttribute("aria-label", `Read full review by ${name}`);
+    if (card.classList.contains("testimonial-ticker-clone")) toggle.tabIndex = -1;
+    quote.after(toggle);
+    card.classList.add("review-collapsible");
+    toggle.addEventListener("click", () => {
+      const expanded = card.classList.toggle("review-expanded");
+      toggle.setAttribute("aria-expanded", String(expanded));
+      toggle.setAttribute("aria-label", `${expanded ? "Collapse" : "Read full"} review by ${name}`);
+      toggle.textContent = expanded ? "Read less ↑" : "Read more ↗";
+    });
+  });
+  const updateReviewOverflow = () => {
+    reviewCards.forEach(card => {
+      if (card.classList.contains("review-expanded")) return;
+      const quote = card.querySelector("blockquote");
+      card.querySelector(".testimonial-read-more").hidden = quote.scrollHeight <= quote.clientHeight + 1;
+    });
+  };
+  updateReviewOverflow();
+  document.fonts.ready.then(updateReviewOverflow);
+  addEventListener("resize", updateReviewOverflow, { passive: true });
+
   // Begin with the newest review whenever this section enters the viewport.
   // Disabling the animation offscreen also resets its timeline without
   // overriding the existing hover, focus, or reduced-motion pause behavior.

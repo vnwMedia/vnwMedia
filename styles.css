@@ -2344,3 +2344,16 @@ body[data-page="home"] .plan-assurance b{flex:0 0 auto;color:var(--orange);font-
 
 .story2-proof-copy>.text-arrow{background:var(--orange);color:#fff}
 .story2-proof-copy>.text-arrow:hover,.story2-proof-copy>.text-arrow:focus-visible{background:#008ac0;color:#fff}
+
+/* Compact review cards: keep the existing ticker and typography. */
+.testimonial-ticker-card.review-collapsible{height:275px;flex-shrink:0;align-self:flex-start}
+.review-collapsible .testimonial-card-top{margin-bottom:20px;flex-shrink:0}
+.testimonial-ticker-card.review-collapsible blockquote{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;flex-shrink:0;margin-bottom:0}
+.testimonial-ticker-card.review-collapsible footer{margin-top:auto;padding-top:10px;flex-shrink:0}
+.testimonial-read-more{display:block;align-self:flex-start;flex-shrink:0;padding:8px 0;min-height:32px;border:0;background:transparent;color:var(--orange);font:500 11px/1.5 Inter,sans-serif;cursor:pointer}
+.testimonial-read-more[hidden]{display:none}
+.testimonial-read-more:hover{color:#d79a32}
+.testimonial-read-more:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.testimonial-ticker-card.review-expanded{height:auto}
+.testimonial-ticker-card.review-expanded blockquote{display:block;overflow:visible}
+@media(max-width:560px){.testimonial-ticker-card.review-collapsible{height:270px}.testimonial-ticker-card.review-expanded{height:auto}}
