@@ -2334,3 +2334,10 @@ body[data-page="home"] .plan-assurance b{flex:0 0 auto;color:var(--orange);font-
 .work-agency-card .work-service-pill{position:relative;z-index:2;display:block;max-width:100%;padding:6px 9px;border:1px solid #dedbd6;border-radius:999px;color:#666;background:#fff;font-size:10px;line-height:1.2;transition:background-color .18s,color .18s,border-color .18s}
 .work-agency-card .work-service-pill:hover,.work-agency-card .work-service-pill:focus-visible{background:transparent;border-color:#00aeef;color:#008bbb}
 .work-agency-card .work-service-pill:focus-visible{outline:2px solid #071b24;outline-offset:3px}
+
+/* Match the Industries explore links without changing project destinations. */
+.work-agency-card .work-case-link{display:inline-block;padding:8px 0;border-bottom:1px solid currentColor;color:#111516;font-size:14px;font-weight:600}
+.work-agency-card .work-case-link b{color:inherit;font-size:inherit;font-weight:inherit}
+.work-agency-card .work-case-link:hover,.work-agency-card .work-case-link:focus-visible{color:#008bbb}
+.work-agency-card .work-case-link:focus-visible{outline:3px solid #00aeef;outline-offset:5px}
+.work-agency-card .work-case-link:focus-visible::after{outline:none}
