@@ -2324,3 +2324,13 @@ body[data-page="home"] .plan-assurance b{flex:0 0 auto;color:var(--orange);font-
 .sdc-content-actions p{margin:0;color:#bcc6ca;font-size:11px;line-height:1.6}
 .sdc-content-insights .sdc-content-disclaimer{margin:13px 0 0;color:#98a5aa;font-size:10px;line-height:1.5}
 @media(max-width:600px){.sdc-content-actions{grid-template-columns:1fr;gap:16px}.sdc-content-actions h3{font-size:14px}.sdc-content-actions p{font-size:12px}.sdc-content-insights .sdc-content-disclaimer{font-size:11px}}
+
+/* Independent service links above the project card's case-study click area. */
+.work-agency-card{position:relative}
+.work-agency-card .work-case-link::after{content:"";position:absolute;inset:0;z-index:1}
+.work-agency-card .work-case-link:focus-visible{outline:none}
+.work-agency-card .work-case-link:focus-visible::after{outline:3px solid #0089ba;outline-offset:-4px;border-radius:20px}
+.work-agency-card li{padding:0;border:0}
+.work-agency-card .work-service-pill{position:relative;z-index:2;display:block;max-width:100%;padding:6px 9px;border:1px solid #dedbd6;border-radius:999px;color:#666;background:#fff;font-size:10px;line-height:1.2;transition:background-color .18s,color .18s,border-color .18s}
+.work-agency-card .work-service-pill:hover,.work-agency-card .work-service-pill:focus-visible{background:#00aeef;border-color:#00aeef;color:#071b24}
+.work-agency-card .work-service-pill:focus-visible{outline:2px solid #071b24;outline-offset:3px}
