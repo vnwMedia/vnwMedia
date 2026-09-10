@@ -396,6 +396,19 @@ if (testimonialTicker && testimonialTickerTrack) {
     testimonialTickerTrack.style.setProperty("--testimonial-loop-distance", `${firstClone.offsetLeft - firstCard.offsetLeft}px`);
   };
 
+  // Begin with the newest review whenever this section enters the viewport.
+  // Disabling the animation offscreen also resets its timeline without
+  // overriding the existing hover, focus, or reduced-motion pause behavior.
+  testimonialTickerTrack.style.animationName = "none";
+  const testimonialVisibilityObserver = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      testimonialTickerTrack.style.removeProperty("animation-name");
+    } else {
+      testimonialTickerTrack.style.animationName = "none";
+    }
+  }, { threshold: 0 });
+  testimonialVisibilityObserver.observe(testimonialTicker);
+
   updateTestimonialTickerDistance();
   addEventListener("load", updateTestimonialTickerDistance);
   addEventListener("resize", updateTestimonialTickerDistance, { passive: true });
