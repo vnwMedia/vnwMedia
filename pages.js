@@ -967,7 +967,7 @@ function storyPage(){
   const teamMembers=[
     ["Vlad","assets/team-vlad-headshot.png"],
     ["Lily","assets/team-lily-headshot.png"],
-    ["Meherun Nesa","assets/team-meherun-headshot.png"],
+    ["Vanessa","assets/team-meherun-headshot.png"],
     ["John","assets/team-john-portrait.png"]
   ];
   const beliefs=[
