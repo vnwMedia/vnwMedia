@@ -29,3 +29,7 @@
 .industries-live .cinema-hero>.wrap{padding-block:40px}
 @media(max-width:800px){.industries-live .cinema-hero{min-height:540px;padding-top:72px}}
 @media(max-width:560px){.industries-live .cinema-hero{min-height:580px}}
+
+.industries-live .proof .section-heading{width:80%;max-width:none}
+.industries-live .proof .section-heading h2,.industries-live .proof .section-heading .lead{max-width:none}
+@media(max-width:1000px){.industries-live .proof .section-heading{width:100%}}
