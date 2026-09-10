@@ -7,9 +7,9 @@ const darkDirections = [
  ['The Night Edition','An editorial cover story, a compact client index, and magazine-style project reports.']
 ];
 const darkSolutions = [
- 'We provided SEO, PPC, Google Business Profile, GEO, and social media to support vehicle discovery and local visibility.',
- 'We provided SEO, PPC, Google Business Profile, GEO, and social media to support discovery of the shop and its repair services.',
- 'We provided SEO and PPC to support local visibility and plumbing inquiries across the business’s service offering.'
+ 'We provided web design/redesign, SEO, PPC, Google Business Profile, GEO, and social media to support vehicle discovery and local visibility.',
+ 'We provided web design/redesign, SEO, PPC, Google Business Profile, GEO, and social media to support discovery of the shop and its repair services.',
+ 'We provided web design/redesign, SEO, and PPC to support local visibility and plumbing inquiries across the business’s service offering.'
 ];
 function darkTicker(p) {
  const items = p.services.map(s=>`<span>${services[s]}</span>`).join('');

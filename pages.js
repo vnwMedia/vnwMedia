@@ -11,9 +11,9 @@ const DATA = {
     ["Retail & eCommerce","retail-ecommerce","Product clarity, shopping paths, local retail visibility, campaigns, and repeat-customer systems.","https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=84"]
   ],
   cases: [
-    ["South Carolina Motors","south-carolina-motors","Automotive","South Carolina Motors helps drivers find vehicles and collision repair support. We aligned SEO, PPC, GBP, GEO, and social media to strengthen local visibility and qualified leads.","assets/scm-collision-center-cars-hero.jpg","https://www.southcarolinamotors.com/"],
-    ["Rice’s Collision","rices-collision","Auto Body","Rice’s Collision helps West Hempstead drivers navigate auto body repairs and estimates. We aligned SEO, PPC, GBP, GEO, and social media to increase local visibility and estimate requests.","assets/rices-collision-hero.jpg","https://rices-collision.com/"],
-    ["H2Bros Plumbing","h2bros-plumbing","Home Services","H2Bros Plumbing & Heating serves residential, commercial, and new-construction clients across New Jersey. We focused SEO and PPC on stronger local visibility and qualified plumbing leads.","assets/h2bros-plumbing-hero.jpg","https://h2brosplumbing.com/"]
+    ["South Carolina Motors","south-carolina-motors","Automotive","South Carolina Motors supports vehicle shoppers and collision repair customers. We provided web design/redesign, SEO, PPC, GBP, GEO, and social media to support visibility and inquiries.","assets/scm-collision-center-cars-hero.jpg","https://www.southcarolinamotors.com/"],
+    ["Rice’s Collision","rices-collision","Auto Body","Rice’s Collision helps West Hempstead drivers with auto body repairs and estimates. We provided web design/redesign, SEO, PPC, GBP, GEO, and social media to support visibility and estimate requests.","assets/rices-collision-hero.jpg","https://rices-collision.com/"],
+    ["H2Bros Plumbing","h2bros-plumbing","Home Services","H2Bros Plumbing & Heating serves homes, businesses, and new construction across New Jersey. We provided web design/redesign, SEO, and PPC to support local visibility and plumbing inquiries.","assets/h2bros-plumbing-hero.jpg","https://h2brosplumbing.com/"]
   ],
   resources: [
     ["Website Redesign Readiness Checklist","website-redesign-checklist","Know when focused improvements are enough—and when the website is holding growth back.","https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=1400&q=84"],
@@ -226,9 +226,9 @@ function homeProcessOptions(){
 
 function workPageOne(){
   const projectScopes=[
-    ["SEO","PPC","GBP","GEO","SMM"],
-    ["SEO","PPC","GBP","GEO","SMM"],
-    ["SEO","PPC"]
+    ["Web Design / Redesign","SEO","PPC","GBP","GEO","SMM"],
+    ["Web Design / Redesign","SEO","PPC","GBP","GEO","SMM"],
+    ["Web Design / Redesign","SEO","PPC"]
   ];
   const principles=[
     ["Strategy","Start with the business goal, audience, offer, and decision the website needs to support."],
@@ -635,7 +635,7 @@ function southCarolinaMotorsCaseStudy(){
     ["Moved the action closer to the decision.","Calls, inquiry prompts, and sales-contact language belong near the points where a shopper is already asking: is it available, can I trust them, and what happens next?"]
   ];
   const services=[
-    ["inventory-ux","Inventory-Led Website UX","The page experience should make the inventory path feel immediate. For South Carolina Motors, that means orienting shoppers around available vehicles, dealership context, and the next action instead of burying the contact moment behind generic page sections.","Vehicle discovery"],
+    ["inventory-ux","Web Design / Redesign","The page experience should make the inventory path feel immediate. For South Carolina Motors, that means orienting shoppers around available vehicles, dealership context, and the next action instead of burying the contact moment behind generic page sections.","Vehicle discovery"],
     ["local-seo","SEO","Our SEO work for South Carolina Motors focuses on helping drivers discover its collision-repair and automotive services through organic search. The focus is clear service content, useful location information, internal links, and technical site foundations that connect relevant searches with a direct path to call or request an estimate.","Organic search","Discuss SEO"],
     ["ppc","PPC","Our pay-per-click advertising work focuses on connecting South Carolina Motors with drivers actively searching for automotive and collision-repair services. Relevant search terms, location targeting, focused ad messaging, and clear landing-page actions shape the campaign approach, with calls and estimate inquiries as the intended next steps.","Paid search","Discuss PPC"],
     ["google-business","GBP Organic & Paid Search","Our Google Business Profile (GBP) work connects organic local visibility with paid search. The organic focus is accurate business details, service information, photos, and review content. On the paid side, linked Google Ads location assets can support local advertising across Search and Maps. Paid placements remain separate from organic visibility.","Local visibility","Discuss GBP visibility"],
@@ -757,7 +757,7 @@ const CLIENT_CASE_STUDIES={
     "services": [
       [
         "repair-ux",
-        "Repair-Focused Website UX",
+        "Web Design / Redesign",
         "Organize collision-repair information around the questions drivers bring to the site. The shop identity, services, and estimate path should be immediately recognizable.",
         "Repair clarity"
       ],
@@ -872,7 +872,7 @@ const CLIENT_CASE_STUDIES={
     "services": [
       [
         "service-ux",
-        "Service-Focused Website UX",
+        "Web Design / Redesign",
         "Help visitors distinguish plumbing repairs, heating work, and planned installations. Clear categories make the site useful to homeowners, business owners, and new-construction customers.",
         "Service discovery"
       ],
