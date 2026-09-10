@@ -1083,6 +1083,7 @@ function contact(){
 }
 
 function topPage(id){
+  if(id==="industries") return renderIndustriesPage();
   const p=topPages[id];
   if(id==="work-process-modern-options") return workProcessModernOptions();
   if(id==="our-process-design-options") return ourProcessDesignOptions();
