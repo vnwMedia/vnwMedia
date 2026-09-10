@@ -2348,7 +2348,7 @@ body[data-page="home"] .plan-assurance b{flex:0 0 auto;color:var(--orange);font-
 /* Compact review cards: keep the existing ticker and typography. */
 .testimonial-ticker-card.review-collapsible{height:275px;flex-shrink:0;align-self:flex-start}
 .review-collapsible .testimonial-card-top{margin-bottom:20px;flex-shrink:0}
-.testimonial-ticker-card.review-collapsible blockquote{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;flex-shrink:0;margin-bottom:0}
+.testimonial-ticker-card.review-collapsible blockquote{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden;flex-shrink:0;margin-bottom:0}
 .testimonial-ticker-card.review-collapsible footer{margin-top:auto;padding-top:10px;flex-shrink:0}
 .testimonial-read-more{display:block;align-self:flex-start;flex-shrink:0;padding:8px 0;min-height:32px;border:0;background:transparent;color:var(--orange);font:500 11px/1.5 Inter,sans-serif;cursor:pointer}
 .testimonial-read-more[hidden]{display:none}
