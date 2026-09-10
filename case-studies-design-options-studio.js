@@ -89,7 +89,7 @@ function csOpenBriefs() {
 /* 28 — Customer Moments */
 const csMoments = [
   ['Explore.', '“Is this the right place for me?”', 'Help a shopper understand the business, the offer, and the route to a conversation.'],
-  ['Feel confident.', '“Who can help me with this repair?”', 'Make repair information, the shop, and the estimate process easier to understand.'],
+  ['Find your restaurant.', '“Which location is near me?”', 'Connect local searches with relevant restaurant information.'],
   ['Ask for help.', '“Can someone help with my project?”', 'Separate urgent service needs from planned work, then make the contact path clear.']
 ];
 function csCustomerMoments() {
@@ -113,7 +113,7 @@ function csStudioArchive() {
 function csAgencyBroadsheet() {
   const p = projects[1];
   return `<section class="cs-broadsheet wrap"><header class="cs-broadsheet-masthead">${csLabel('VNW MEDIA / CASE STUDIES', 'BUSINESS · SEARCH · EXPERIENCE')}<h2>The Work Review.</h2><div><span>SELECTED CLIENT STORIES</span><p>A clearer perspective on what makes a project relevant.</p></div></header>
-    <div class="cs-broadsheet-cover"><div class="cs-broadsheet-cover-copy"><p class="eyebrow">THE COVER STORY / ${p.industry}</p><h2>Confidence begins<br>with <em>clarity.</em></h2><p>${p.business}</p><p>${p.approach}</p>${read(p)}</div><a href="${url(p)}">${image(p)}<span>RICE’S COLLISION / WEST HEMPSTEAD</span></a><aside><p class="eyebrow">IN THIS EDITION</p>${csAllLinks()}<div><p class="eyebrow">THE COVER’S SERVICE MIX</p><p>${p.serviceCopy}</p></div></aside></div>
+    <div class="cs-broadsheet-cover"><div class="cs-broadsheet-cover-copy"><p class="eyebrow">THE COVER STORY / ${p.industry}</p><h2>Confidence begins<br>with <em>clarity.</em></h2><p>${p.business}</p><p>${p.approach}</p>${read(p)}</div><a href="${url(p)}">${image(p)}<span>LA ROSA CHICKEN AND GRILL / 11 LOCATIONS</span></a><aside><p class="eyebrow">IN THIS EDITION</p>${csAllLinks()}<div><p class="eyebrow">THE COVER’S SERVICE MIX</p><p>${p.serviceCopy}</p></div></aside></div>
     <section class="cs-broadsheet-stories">${[projects[0], projects[2]].map((p, i) => `<article><header><span class="eyebrow">STORY ${csNum(i + 1)}</span><span>${p.industry}</span></header><a href="${url(p)}">${image(p)}</a><h3>${p.headline}</h3><p class="cs-broadsheet-byline">THE BUSINESS / ${p.name}</p><p>${p.business}</p><p>${p.challenge}</p>${csScope(p)}${read(p)}</article>`).join('')}<aside><p class="eyebrow">THE EDITORIAL NOTE</p><h3>A case study is an invitation to ask better questions.</h3><p>What was the business problem? Which services were provided? How might your own customers be different?</p><p>Those answers tell you more than a familiar industry label alone.</p><a href="#new-faq" class="text-link">Questions before you start ↗</a></aside></section>
     <section class="cs-broadsheet-statement"><p class="eyebrow">THE NEXT STORY</p><h2>Let’s make your next<br>business decision <em>a clear one.</em></h2>${button('Discuss your project')}</section></section>`;
 }

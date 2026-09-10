@@ -12,7 +12,7 @@ const DATA = {
   ],
   cases: [
     ["South Carolina Motors","south-carolina-motors","Automotive","South Carolina Motors supports vehicle shoppers and collision repair customers. We provided web design/redesign, SEO, PPC, GBP, GEO, and social media to support visibility and inquiries.","assets/scm-collision-center-cars-hero.jpg","https://www.southcarolinamotors.com/"],
-    ["Rice’s Collision","rices-collision","Auto Body","Rice’s Collision helps West Hempstead drivers with auto body repairs and estimates. We provided web design/redesign, SEO, PPC, GBP, GEO, and social media to support visibility and estimate requests.","assets/rices-collision-hero.jpg","https://rices-collision.com/"],
+    ["La Rosa Chicken and Grill", "la-rosa-chicken-grill", "Restaurants & Hospitality", "La Rosa Chicken and Grill is a restaurant brand. We provide SEO for 11 locations, Google Business Profile Management, and Google Business Profile Search Ads.", "assets/la-rosa-chicken-grill-hero.webp", "https://larosachicken.com/"],
     ["H2Bros Plumbing","h2bros-plumbing","Home Services","H2Bros Plumbing & Heating serves homes, businesses, and new construction across New Jersey. We provided web design/redesign, SEO, and PPC to support local visibility and plumbing inquiries.","assets/h2bros-plumbing-hero.jpg","https://h2brosplumbing.com/"]
   ],
   resources: [
@@ -112,7 +112,7 @@ function cards(items,type){
 }
 
 function capabilityTicker(){
-  const clients=["South Carolina Motors","Rice’s Collision","H2Bros Plumbing","Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Kahn Yuniver Law","Grill Point","Kid’s World Preschool","Senior Comfort","Brooklyn Motors","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds","Honeydrop","Marlboro Jewish Day Camp","Travel Mama","Pollack SEO","A2Z Academy"];
+  const clients=["South Carolina Motors","La Rosa Chicken and Grill","H2Bros Plumbing","Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Kahn Yuniver Law","Grill Point","Kid’s World Preschool","Senior Comfort","Brooklyn Motors","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds","Honeydrop","Marlboro Jewish Day Camp","Travel Mama","Pollack SEO","A2Z Academy"];
   return `<section class="trust-strip work-client-ticker" data-nav-theme="dark" aria-label="VNW Media clients"><div class="trust-track"><small>Selected Client Work</small><i></i>${[...clients,...clients].map(x=>`<span>${x}</span>`).join("")}</div></section>`;
 }
 
@@ -174,9 +174,9 @@ function workCreativeOptions(){
   const label=(n,name,note)=>`<div class="wco-label"><span>Option ${n}</span><strong>${name}</strong><small>${note}</small></div>`;
   return `<section class="wco-intro section" id="page-content" data-nav-theme="light"><div class="shell"><p class="section-tag">New Creative Set</p><h2>Less dashboard. More visual story.</h2><p>These directions use project imagery, expressive typography, editorial composition, and more distinctive client-proof moments.</p></div></section>
   <section class="wco-option wco-lens section" data-nav-theme="light"><div class="shell">${label("11","Project Lens","Image-led · Layered · Premium")}<div class="wco-lens-stage"><div class="wco-lens-image"><img src="${img(images[0])}" alt="South Carolina Motors website project"><span>Selected Project / 01</span></div><div class="wco-lens-copy"><p class="section-tag">How Projects Move</p><h2>See the work taking shape.</h2><div>${steps.map((x,i)=>`<article><span>0${i+1}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></div></div><blockquote class="wco-lens-proof"><span>Client Perspective</span><p>“${quotes[0][2]}”</p><footer>${quotes[0][0]} · ${quotes[0][1]}</footer></blockquote></div></section>
-  <section class="wco-option wco-paper section" data-nav-theme="light"><div class="shell">${label("12","Studio Scrapbook","Tactile · Human · Unexpected")}<div class="wco-paper-board"><div class="wco-paper-title"><p class="section-tag">How Projects Move</p><h2>Good work rarely begins in a straight line.</h2><p>Research, ideas, proof, screens, and decisions gradually become one clear direction.</p></div>${steps.map((x,i)=>`<article class="wco-paper-note note-${i+1}"><span>0${i+1}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}<figure class="wco-paper-photo"><img src="${img(images[1])}" alt="Rice's Collision website project"><figcaption>Built around confidence and easier action.</figcaption></figure><blockquote class="wco-paper-quote"><span>Client Perspective</span><p>“${quotes[1][2]}”</p><footer>${quotes[1][0]} · ${quotes[1][1]}</footer></blockquote></div></div></section>
+  <section class="wco-option wco-paper section" data-nav-theme="light"><div class="shell">${label("12","Studio Scrapbook","Tactile · Human · Unexpected")}<div class="wco-paper-board"><div class="wco-paper-title"><p class="section-tag">How Projects Move</p><h2>Good work rarely begins in a straight line.</h2><p>Research, ideas, proof, screens, and decisions gradually become one clear direction.</p></div>${steps.map((x,i)=>`<article class="wco-paper-note note-${i+1}"><span>0${i+1}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}<figure class="wco-paper-photo"><img src="${img(images[1])}" alt="Marketing strategy illustration"><figcaption>Built around confidence and easier action.</figcaption></figure><blockquote class="wco-paper-quote"><span>Client Perspective</span><p>“${quotes[1][2]}”</p><footer>${quotes[1][0]} · ${quotes[1][1]}</footer></blockquote></div></div></section>
   <section class="wco-option wco-swiss section" data-nav-theme="light"><div class="shell">${label("13","Swiss Evidence","Graphic · Minimal · Confident")}<div class="wco-swiss-head"><div><p class="section-tag">How Projects Move</p><h2>Clarity is the process.</h2></div><strong>04<br>CONNECTED<br>PHASES</strong></div><div class="wco-swiss-grid">${steps.map((x,i)=>`<article><span>${i+1}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div><div class="wco-swiss-proof"><img src="${img(images[2])}" alt="H2Bros Plumbing website project"><div><span>Client Perspective</span><blockquote>“${quotes[2][2]}”</blockquote><footer>${quotes[2][0]} · ${quotes[2][1]}</footer></div></div></div></section>
-  <section class="wco-option wco-cinema section" data-nav-theme="dark"><div class="shell">${label("14","Cinematic Chapters","Immersive · Visual · Story-driven")}<div class="wco-cinema-stage"><img src="${img(images[1])}" alt="Rice's Collision project screen"><div class="wco-cinema-overlay"><p class="section-tag">How Projects Move</p><h2>One story.<br>Four chapters.</h2><div class="wco-cinema-chapters">${steps.map((x,i)=>`<article><span>0${i+1}</span><strong>${x[0]}</strong></article>`).join("")}</div></div></div><div class="wco-cinema-proof"><div><span>Client Perspective</span><strong>Creative work feels stronger when the process feels dependable.</strong></div>${quotes.slice(0,2).map(x=>`<blockquote><p>“${x[2]}”</p><footer>${x[0]} · ${x[1]}</footer></blockquote>`).join("")}</div></div></section>
+  <section class="wco-option wco-cinema section" data-nav-theme="dark"><div class="shell">${label("14","Cinematic Chapters","Immersive · Visual · Story-driven")}<div class="wco-cinema-stage"><img src="${img(images[1])}" alt="Marketing strategy illustration"><div class="wco-cinema-overlay"><p class="section-tag">How Projects Move</p><h2>One story.<br>Four chapters.</h2><div class="wco-cinema-chapters">${steps.map((x,i)=>`<article><span>0${i+1}</span><strong>${x[0]}</strong></article>`).join("")}</div></div></div><div class="wco-cinema-proof"><div><span>Client Perspective</span><strong>Creative work feels stronger when the process feels dependable.</strong></div>${quotes.slice(0,2).map(x=>`<blockquote><p>“${x[2]}”</p><footer>${x[0]} · ${x[1]}</footer></blockquote>`).join("")}</div></div></section>
   <section class="wco-option wco-gallery section" data-nav-theme="light"><div class="shell">${label("15","Gallery Walk","Curated · Spacious · Agency-led")}<div class="wco-gallery-head"><p class="section-tag">How Projects Move</p><h2>Walk through the thinking behind the screen.</h2></div><div class="wco-gallery-wall">${steps.map((x,i)=>`<article><figure><img src="${img(images[i%images.length])}" alt="VNW Media project example"><span>0${i+1}</span></figure><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}</div><div class="wco-gallery-proof"><div><p class="section-tag">Client Perspective</p><h3>The people behind the project matter as much as the pixels.</h3></div>${quotes.map(x=>`<blockquote><p>“${x[2]}”</p><footer>${x[0]} · ${x[1]}</footer></blockquote>`).join("")}</div></div></section>`;
 }
 
@@ -225,10 +225,10 @@ function homeProcessOptions(){
 }
 
 function workPageOne(){
-  const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media"};
+  const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media","SEO · 11 locations":"seo","Google Business Profile Management":"google-business-profile","Google Business Profile Search Ads":"google-ppc"};
   const projectScopes=[
     ["Web Design","SEO","PPC","GBP","GEO","SMM"],
-    ["Web Design","SEO","PPC","GBP","GEO","SMM"],
+    ["SEO · 11 locations","Google Business Profile Management","Google Business Profile Search Ads"],
     ["Web Design","SEO","PPC"]
   ];
   const principles=[
@@ -318,7 +318,7 @@ function workOptionThree(){
 
 function workOptionFour(){
   const layers=[["Message","Can a visitor understand the offer within seconds?"],["Proof","Are reviews, project examples, and credibility signals visible?"],["Path","Are calls, forms, quotes, and booking actions easy to find?"],["Search","Do services, locations, and intent have clear content paths?"],["Mobile","Does the experience work for high-intent phone users?"],["Measure","Can future marketing be judged by calls, forms, and lead quality?"]];
-  return `<section class="work-dashboard section" id="page-content"><div class="shell"><div class="work-dashboard-head reveal"><p class="section-tag">Option 4 / Conversion Dashboard</p><h2>A Work page that explains how stronger websites create stronger lead flow.</h2><p>This design makes VNW look analytical and practical by showing the layers behind each project: message, proof, path, search, mobile, and measurement.</p></div><div class="work-dashboard-grid">${layers.map((x,i)=>`<article class="reveal"><span>${String(i+1).padStart(2,"0")}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}</div></div></section><section class="work-dashboard-projects section"><div class="shell"><div class="case-gallery-head reveal"><div><p class="section-tag">Project Dashboard</p><h2>Selected work mapped by business goal.</h2></div><a class="pill pill-blue" href="${path("contact.html")}">Audit my website <span>↗</span></a></div><div class="work-dashboard-cards">${DATA.cases.map((x,i)=>`<article class="case-dashboard-card reveal"><img src="${img(x[4])}" alt="${esc(x[0])} work visual"><div><p class="section-tag">${esc(x[2])}</p><h2>${esc(x[0])}</h2><dl><dt>Goal</dt><dd>${esc(x[3])}</dd><dt>Primary CTA</dt><dd>${i===0?"Call or request vehicle details":i===1?"Request an estimate or call the shop":"Tap to call or submit service details"}</dd><dt>SEO opportunity</dt><dd>${i===0?"Inventory and dealership discovery":i===1?"Collision repair and auto body service intent":"Local plumbing and emergency service intent"}</dd></dl></div></article>`).join("")}</div></div></section>${workFAQ()}`;
+  return `<section class="work-dashboard section" id="page-content"><div class="shell"><div class="work-dashboard-head reveal"><p class="section-tag">Option 4 / Conversion Dashboard</p><h2>A Work page that explains how stronger websites create stronger lead flow.</h2><p>This design makes VNW look analytical and practical by showing the layers behind each project: message, proof, path, search, mobile, and measurement.</p></div><div class="work-dashboard-grid">${layers.map((x,i)=>`<article class="reveal"><span>${String(i+1).padStart(2,"0")}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}</div></div></section><section class="work-dashboard-projects section"><div class="shell"><div class="case-gallery-head reveal"><div><p class="section-tag">Project Dashboard</p><h2>Selected work mapped by business goal.</h2></div><a class="pill pill-blue" href="${path("contact.html")}">Audit my website <span>↗</span></a></div><div class="work-dashboard-cards">${DATA.cases.map((x,i)=>`<article class="case-dashboard-card reveal"><img src="${img(x[4])}" alt="${esc(x[0])} work visual"><div><p class="section-tag">${esc(x[2])}</p><h2>${esc(x[0])}</h2><dl><dt>Goal</dt><dd>${esc(x[3])}</dd><dt>Primary CTA</dt><dd>${i===0?"Call or request vehicle details":i===1?"Find a location, call, or order":"Tap to call or submit service details"}</dd><dt>SEO opportunity</dt><dd>${i===0?"Inventory and dealership discovery":i===1?"Local restaurant discovery for 11 locations":"Local plumbing and emergency service intent"}</dd></dl></div></article>`).join("")}</div></div></section>${workFAQ()}`;
 }
 
 function workOptionFive(){
@@ -448,7 +448,7 @@ function caseStudiesPage(){
   return `<section class="cases-showroom section" id="page-content"><div class="shell">
     <div class="cases-intro reveal"><p class="section-tag">Selected Builds</p><h2>Websites treated like sales rooms, not online brochures.</h2><p>Each case starts with the business decision we need to influence: call, request an estimate, book a tour, browse inventory, or ask for help.</p></div>
     <div class="case-feature reveal">
-      <a class="case-feature-media" href="${path(`case-studies/${featured[1]}.html`)}"><img src="${img(featured[4])}" alt="${esc(featured[0])} website preview"><span>Featured Case Study</span></a>
+      <a class="case-feature-media" href="${path(`case-studies/${featured[1]}.html`)}"><img src="${img(featured[4])}" alt="${esc(featured[0])} project image"><span>Featured Case Study</span></a>
       <div class="case-feature-copy"><p class="section-tag">${esc(featured[2])}</p><h2>${esc(featured[0])}</h2><p>${esc(featured[3])}</p><div class="case-feature-actions"><a class="pill pill-orange" href="${path(`case-studies/${featured[1]}.html`)}">Open the case <span>↗</span></a><a class="text-arrow" href="${featured[5]}" target="_blank" rel="noreferrer">Live website <span>↗</span></a></div></div>
     </div>
     <div class="case-metrics">${metrics.map(x=>`<article class="case-metric reveal"><strong>${x[0]}</strong><h3>${x[1]}</h3><p>${x[2]}</p></article>`).join("")}</div>
@@ -478,12 +478,12 @@ function caseStudiesOptionTwo(){
     },
     {
       item:DATA.cases[1],
-      objective:"Make an auto-body shop feel credible quickly, then guide visitors toward services, estimate requests, and direct contact.",
-      challenge:"Collision repair decisions are often urgent and trust-heavy. Visitors need to know the shop is experienced, responsive, and easy to work with.",
-      strategy:"Lead with credibility, simplify services, organize estimate-related actions, and create a calmer experience for customers dealing with a stressful repair moment.",
-      deliverables:["Credibility-first homepage","Service page structure","Estimate CTA planning","Reputation signals","Mobile contact flow","Content organization"],
-      path:["Confirm services","Build confidence","Request an estimate","Call the shop"],
-      details:["Trust signals placed earlier in the journey","Cleaner service explanations for faster decision-making","Conversion points designed around estimate and call intent"]
+      objective:"Support local discovery for 11 restaurant locations.",
+      challenge:"Guests need to find the right location and useful restaurant information.",
+      strategy:"Connect SEO, Google Business Profile Management, and Google Business Profile Search Ads.",
+      deliverables:["SEO for 11 locations","Google Business Profile Management","Google Business Profile Search Ads"],
+      path:["Search locally","Find a restaurant","Check location details","Visit or order"],
+      details:["Organic search for 11 locations","Managed Google Business Profiles","Paid local search visibility"]
     },
     {
       item:DATA.cases[2],
@@ -567,7 +567,7 @@ function caseStudyHub(){
 function caseStudiesOptionThree(){
   const journeys=[
     [DATA.cases[0],"The shopper wants confidence before contact.","Vehicle shoppers are filtering quickly. They need inventory clarity, dealership credibility, and a fast path to a real conversation.","We structure the experience around browsing, trust, and direct inquiry so interest does not disappear between pages.",["Inventory browsing","Dealer credibility","Mobile call flow"]],
-    [DATA.cases[1],"The customer is stressed and needs reassurance.","Collision repair visitors often arrive after a frustrating moment. The website needs to feel competent, calm, and easy to act on.","We bring services, estimate requests, reputation, and certifications into a cleaner decision path.",["Estimate intent","Service clarity","Reputation proof"]],
+    [DATA.cases[1],"The guest wants the right nearby restaurant.","Restaurant discovery is local. Each of the 11 locations needs relevant search visibility and useful profile information.","We provide SEO, Google Business Profile Management, and Google Business Profile Search Ads.",["Local discovery","11 locations","Restaurant information"]],
     [DATA.cases[2],"The homeowner has a problem and wants help now.","Home-service traffic is high intent. The page has to communicate availability, coverage, and a phone-first next step immediately.","We prioritize urgent CTAs, service-area confidence, and simple problem-to-call movement.",["Emergency action","Local relevance","Phone-first UX"]]
   ];
   return `<section class="case-editorial section" id="page-content"><div class="shell">
@@ -583,9 +583,9 @@ function caseStudiesOptionFour(){
   const rows=DATA.cases.map((x,i)=>[
     x,
     [
-      i===0?"Search and referral visitors reviewing vehicles.":i===1?"High-intent repair visitors comparing shops.":"Urgent homeowners searching for a local plumber.",
-      i===0?"Inventory-led page flow with dealership proof.":i===1?"Credibility-first service and estimate structure.":"Direct-response service-area and call structure.",
-      i===0?"Vehicle discovery, calls, form inquiries.":i===1?"Estimate requests, phone calls, service confidence.":"Emergency calls, quote requests, local service validation."
+      i===0?"Search and referral visitors reviewing vehicles.":i===1?"Local guests comparing restaurants.":"Urgent homeowners searching for a local plumber.",
+      i===0?"Inventory-led page flow with dealership proof.":i===1?"SEO, managed profiles, and GBP Search Ads.":"Direct-response service-area and call structure.",
+      i===0?"Vehicle discovery, calls, form inquiries.":i===1?"Restaurant discovery, calls, directions, and orders.":"Emergency calls, quote requests, local service validation."
     ]
   ]);
   return `<section class="case-dashboard section" id="page-content"><div class="shell">
@@ -684,7 +684,7 @@ function renderClientCaseStudy(config){
           <figure class="scm-ms-story-visual">
             <span class="section-tag">${esc(config.name)} / Digital Experience</span>
             <div class="scm-ms-story-stage"><img src="${img(config.mockup)}" alt="${esc(config.mockupAlt)}" width="${config.mockupWidth}" height="${config.mockupHeight}" loading="lazy" decoding="async"></div>
-            <figcaption><span>One experience. Every screen.</span><span>Desktop · Mobile</span></figcaption>
+            <figcaption><span>${esc(config.visualCaption||"One experience. Every screen.")}</span><span>${esc(config.visualDetail||"Desktop · Mobile")}</span></figcaption>
           </figure>
           <div class="scm-ms-story-copy">
             <h2 id="scm-story-title">${esc(config.storyTitle)}</h2>
@@ -703,121 +703,84 @@ function renderClientCaseStudy(config){
 
 // Client-specific content and imagery; all three pages share the same layout.
 const CLIENT_CASE_STUDIES={
-  "rices-collision": {
-    "name": "Rice’s Collision",
-    "kicker": "Collision Repair · West Hempstead, NY",
-    "intro": "An auto body website built around repair confidence, local discovery, and a clearer path to an estimate.",
-    "hero": "assets/rices-collision-hero.jpg",
-    "heroAlt": "Rice’s Collision storefront with its sign and vehicles outside",
-    "heroWidth": 1440,
-    "heroHeight": 962,
-    "mockup": "assets/rices-collision.png",
-    "mockupAlt": "Rice’s Collision website shown on desktop, laptop, tablet, and mobile screens",
-    "mockupWidth": 998,
-    "mockupHeight": 593,
+  "la-rosa-chicken-grill": {
+    "name": "La Rosa Chicken and Grill",
+    "kicker": "Restaurants & Hospitality · SEO for 11 locations",
+    "intro": "SEO for 11 locations, Google Business Profile Management, and Google Business Profile Search Ads.",
+    "hero": "assets/la-rosa-chicken-grill-hero.webp",
+    "heroAlt": "La Rosa Chicken and Grill restaurant exterior",
+    "heroWidth": 394,
+    "heroHeight": 310,
+    "mockup": "assets/la-rosa-chicken-grill-hero.webp",
+    "mockupAlt": "La Rosa Chicken and Grill restaurant exterior",
+    "mockupWidth": 394,
+    "mockupHeight": 310,
     "signals": [
-      [
-        "Repair",
-        "Auto body service clarity"
-      ],
-      [
-        "Trust",
-        "Shop and certification information"
-      ],
-      [
-        "Mobile",
-        "Call and estimate path"
-      ],
-      [
-        "Search",
-        "West Hempstead visibility"
-      ]
+        [
+            "11",
+            "Locations in SEO scope"
+        ],
+        [
+            "SEO",
+            "Organic search"
+        ],
+        [
+            "GBP",
+            "Profile management"
+        ],
+        [
+            "Ads",
+            "GBP Search Ads"
+        ]
     ],
-    "challengeTitle": "Make the next step clear after an accident.",
-    "challengeOne": "Drivers looking for collision repair often arrive with questions about vehicle damage, insurance, and where to turn. Rice’s Collision needs a website that makes its West Hempstead shop easy to find and its repair services easy to understand.",
-    "challengeTwo": "The experience should reduce uncertainty before the first call: show the business, explain the repair options, and give visitors a direct way to request an estimate.",
-    "approachTitle": "Build confidence before the first repair conversation.",
+    "challengeTitle": "Make each restaurant easier to find.",
+    "challengeOne": "For a restaurant brand with multiple locations, local discovery happens one neighborhood at a time. Guests need to identify the right restaurant and find useful location information.",
+    "challengeTwo": "The challenge is to support visibility for 11 locations while keeping each restaurant distinct and its Google Business Profile information consistent.",
+    "approachTitle": "Connect organic search, profiles, and search ads.",
     "approach": [
-      [
-        "Lead with the shop and its work.",
-        "Recognizable facility imagery and clear auto body messaging help drivers understand who they are contacting."
-      ],
-      [
-        "Organize information around repair questions.",
-        "Service, certification, insurance, and location information support visitors as they decide how to proceed."
-      ],
-      [
-        "Keep estimate requests within reach.",
-        "Calls and estimate prompts should sit close to the information that helps a driver choose the shop."
-      ]
+        [
+            "SEO for 11 locations.",
+            "Support organic restaurant discovery with a location-specific SEO focus."
+        ],
+        [
+            "Google Business Profile Management.",
+            "Manage the local business information that helps guests evaluate the relevant restaurant."
+        ],
+        [
+            "Google Business Profile Search Ads.",
+            "Support paid local discovery alongside the organic search and profile-management work."
+        ]
     ],
-    "storyTitle": "From repair questions to a clear next step.",
-    "storyOne": "For Rice’s Collision, the digital experience connects a local search with a conversation about getting a vehicle repaired. The page needs to make the shop recognizable while giving service and contact information room to breathe.",
-    "storyTwo": "The desktop and mobile presentation brings together collision-repair information, the shop’s identity, and appointment and estimate entry points. A driver should be able to move from checking the business to making contact without retracing their steps.",
-    "storyThree": "This case study describes the website and marketing direction, without claiming unverified increases in calls, rankings, or repair bookings.",
+    "storyTitle": "One restaurant brand. Eleven local search priorities.",
+    "storyOne": "Our scope for La Rosa Chicken and Grill covers SEO for 11 locations, Google Business Profile Management, and Google Business Profile Search Ads.",
+    "storyTwo": "The goal is to help guests move from a local restaurant search to useful information about where to visit or order. This engagement is focused on search visibility and Google Business Profiles; website design is not part of the scope described here.",
+    "storyThree": "This case study documents the confirmed services. It does not claim unverified ranking, traffic, order, or revenue gains.",
+    "visualCaption": "La Rosa Chicken and Grill",
+    "visualDetail": "Restaurant location",
     "services": [
-      [
-        "repair-ux",
-        "Web Design",
-        "Organize collision-repair information around the questions drivers bring to the site. The shop identity, services, and estimate path should be immediately recognizable.",
-        "Repair clarity"
-      ],
-      [
-        "local-seo",
-        "SEO",
-        "For Rice’s Collision, the organic-search direction centers on auto body repair in West Hempstead and Long Island. Relevant service pages and accurate location details help connect local repair searches with useful information.",
-        "Organic search"
-      ],
-      [
-        "ppc",
-        "PPC",
-        "The paid-search direction pairs collision-repair intent with a relevant estimate page. Location targeting and clear repair messaging should guide interested drivers toward a call or inquiry.",
-        "Paid search"
-      ],
-      [
-        "google-business",
-        "GBP Organic & Paid Search",
-        "Consistent shop details, facility photos, and service information support the Google Business Profile experience. If location-linked advertising is used, it should lead to the same accurate contact and estimate information.",
-        "Local visibility"
-      ],
-      [
-        "geo",
-        "GEO",
-        "Clear answers about repair services, the shop location, and estimate requests make Rice’s Collision easier to understand in AI-assisted search. This content approach complements SEO without promising AI mentions or citations.",
-        "AI search readiness"
-      ],
-      [
-        "estimate-requests",
-        "Estimate Request CTAs",
-        "Estimate and appointment prompts give drivers a clear next step. Keep contact options near repair information so a visitor can act while the relevant question is still in mind.",
-        "Lead path"
-      ],
-      [
-        "repair-proof",
-        "Collision Repair Trust Signals",
-        "Use real facility images and the client’s published certification information to support credibility. Keep credentials current and avoid implying that every certification applies to every repair or affiliated location.",
-        "Confidence"
-      ],
-      [
-        "mobile-development",
-        "Mobile Responsive Development",
-        "Drivers may look for a repair shop on their phones. Readable service information, easy-to-tap contact links, and a straightforward estimate path make that experience more useful.",
-        "Mobile action"
-      ],
-      [
-        "content-architecture",
-        "Content Architecture",
-        "Group auto body services, insurance information, shop details, and estimate guidance into clear paths. Keep Rice’s Collision’s West Hempstead identity distinct from other locations listed on the client website.",
-        "Page clarity"
-      ],
-      [
-        "tracking",
-        "Analytics & Lead Tracking",
-        "A measurement plan should distinguish phone-link clicks, estimate-form starts, completed inquiries, and traffic sources. Verified tracking data would be needed before reporting repair-booking results.",
-        "Measurement"
-      ]
+        [
+            "seo",
+            "SEO for 11 locations",
+            "Our SEO work covers 11 La Rosa Chicken and Grill locations, with a focus on making each restaurant relevant to local organic searches.",
+            "Organic search",
+            "Discuss restaurant SEO"
+        ],
+        [
+            "google-business-profile",
+            "Google Business Profile Management",
+            "We manage Google Business Profiles to support accurate, useful local restaurant information and a consistent customer-facing presence.",
+            "Local profiles",
+            "Discuss profile management"
+        ],
+        [
+            "google-ppc",
+            "Google Business Profile Search Ads",
+            "We provide Google Business Profile Search Ads as the paid-search component of the engagement, supporting local restaurant discovery alongside SEO and profile management.",
+            "Paid local search",
+            "Discuss local search ads"
+        ]
     ]
-  },
+},
   "h2bros-plumbing": {
     "name": "H2Bros Plumbing",
     "kicker": "Plumbing & Heating · New Jersey",
