@@ -2262,7 +2262,7 @@ body .site-header.site-header .nav-phone{display:none}
 .testimonial-ticker-footer{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:33px;padding-top:15px;border-top:1px solid #384044}
 .testimonial-ticker-footer>a{color:#9ba3a6;font-size:9px;letter-spacing:.12em;text-transform:uppercase;transition:color .2s ease}
 .testimonial-ticker-footer>a span{display:inline-block;margin-left:7px;color:#d79a32;transition:transform .2s ease}
-.testimonial-ticker-footer>a:hover,.testimonial-ticker-footer>a:focus-visible{color:var(--orange);outline:none}
+.testimonial-ticker-footer>a:hover,.testimonial-ticker-footer>a:focus-visible{color:#d79a32;outline:none}
 .testimonial-ticker-footer>a:hover span,.testimonial-ticker-footer>a:focus-visible span{transform:translate(3px,-3px)}
 .testimonial-ticker-toggle{display:flex;align-items:center;gap:13px;padding:8px 9px 8px 14px;border:1px solid #424b4e;border-radius:999px;color:#a6adaf;background:transparent;cursor:pointer;font-size:8px;letter-spacing:.11em;text-transform:uppercase}
 .testimonial-ticker-toggle b{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;color:#001116;background:var(--orange)}
