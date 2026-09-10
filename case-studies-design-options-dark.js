@@ -8,7 +8,7 @@ const darkDirections = [
 ];
 const darkSolutions = [
  'We provide web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO.',
- 'We provide SEO for 11 locations, Google Business Profile Management, and Google Business Profile Search Ads to support local restaurant discovery.',
+ 'We provide SEO for 11 locations, Google Business Profile Management, Google Business Profile Search Ads, and Reputation Management to support local restaurant discovery.',
  'We provided web design/redesign, SEO, and PPC to support local visibility and plumbing inquiries across the business’s service offering.'
 ];
 function darkTicker(p) {

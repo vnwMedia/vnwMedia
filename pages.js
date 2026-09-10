@@ -12,7 +12,7 @@ const DATA = {
   ],
   cases: [
     ["Brooklyn Motors", "brooklyn-motors", "Automotive & Auto Body", "Brooklyn Motors provides collision and auto body repair in Brooklyn, New York. We provide web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO to support repair discovery and inquiries.", "assets/brooklyn-motors-hero.jpg", "https://www.brooklynmotorsny.com/"],
-    ["La Rosa Chicken and Grill", "la-rosa-chicken-grill", "Restaurants & Hospitality", "La Rosa Chicken and Grill is a restaurant brand. We provide SEO for 11 locations, Google Business Profile Management, and Google Business Profile Search Ads.", "assets/la-rosa-portfolio-hero.jpg", "https://larosachicken.com/"],
+    ["La Rosa Chicken and Grill", "la-rosa-chicken-grill", "Restaurants & Hospitality", "La Rosa Chicken and Grill is a restaurant brand. We provide SEO for 11 locations, Google Business Profile Management, Google Business Profile Search Ads, and Reputation Management.", "assets/la-rosa-portfolio-hero.jpg", "https://larosachicken.com/"],
     ["H2Bros Plumbing","h2bros-plumbing","Home Services","H2Bros Plumbing & Heating serves homes, businesses, and new construction across New Jersey. We provided web design/redesign, SEO, and PPC to support local visibility and plumbing inquiries.","assets/h2bros-plumbing-hero.jpg","https://h2brosplumbing.com/"]
   ],
   resources: [
@@ -225,10 +225,10 @@ function homeProcessOptions(){
 }
 
 function workPageOne(){
-  const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media","SEO · 11 locations":"seo","Google Business Profile Management":"google-business-profile","Google Business Profile Search Ads":"google-ppc"};
+  const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media","Reputation Management":"reputation-management","SEO · 11 locations":"seo","Google Business Profile Management":"google-business-profile","Google Business Profile Search Ads":"google-ppc"};
   const projectScopes=[
     ["Web Design","SEO","Google Business Profile Management","Google Business Profile Search Ads","PPC","GEO"],
-    ["SEO · 11 locations","Google Business Profile Management","Google Business Profile Search Ads"],
+    ["SEO · 11 locations","Google Business Profile Management","Google Business Profile Search Ads","Reputation Management"],
     ["Web Design","SEO","PPC"]
   ];
   const principles=[
@@ -480,8 +480,8 @@ function caseStudiesOptionTwo(){
       item:DATA.cases[1],
       objective:"Support local discovery for 11 restaurant locations.",
       challenge:"Guests need to find the right location and useful restaurant information.",
-      strategy:"Connect SEO, Google Business Profile Management, and Google Business Profile Search Ads.",
-      deliverables:["SEO for 11 locations","Google Business Profile Management","Google Business Profile Search Ads"],
+      strategy:"Connect SEO, Google Business Profile Management, Google Business Profile Search Ads, and Reputation Management.",
+      deliverables:["SEO for 11 locations","Google Business Profile Management","Google Business Profile Search Ads","Reputation Management"],
       path:["Search locally","Find a restaurant","Check location details","Visit or order"],
       details:["Organic search for 11 locations","Managed Google Business Profiles","Paid local search visibility"]
     },
@@ -761,7 +761,7 @@ const CLIENT_CASE_STUDIES={
   "la-rosa-chicken-grill": {
     "name": "La Rosa Chicken and Grill",
     "kicker": "Restaurants & Hospitality · SEO for 11 locations",
-    "intro": "SEO for 11 locations, Google Business Profile Management, and Google Business Profile Search Ads.",
+    "intro": "SEO for 11 locations, Google Business Profile Management, Google Business Profile Search Ads, and Reputation Management.",
     "hero": "assets/la-rosa-portfolio-hero.jpg",
     "heroAlt": "La Rosa Chicken and Grill food spread with its logo at the center",
     "heroWidth": 1920,
@@ -791,7 +791,7 @@ const CLIENT_CASE_STUDIES={
     "challengeTitle": "Make each restaurant easier to find.",
     "challengeOne": "For a restaurant brand with multiple locations, local discovery happens one neighborhood at a time. Guests need to identify the right restaurant and find useful location information.",
     "challengeTwo": "The challenge is to support visibility for 11 locations while keeping each restaurant distinct and its Google Business Profile information consistent.",
-    "approachTitle": "Connect organic search, profiles, and search ads.",
+    "approachTitle": "Connect local discovery with guest trust.",
     "approach": [
         [
             "SEO for 11 locations.",
@@ -804,10 +804,14 @@ const CLIENT_CASE_STUDIES={
         [
             "Google Business Profile Search Ads.",
             "Support paid local discovery alongside the organic search and profile-management work."
+        ],
+        [
+            "Support guest trust.",
+            "Use reputation management to stay attentive to customer feedback alongside local search and profile work."
         ]
     ],
     "storyTitle": "One restaurant brand. Eleven local search priorities.",
-    "storyOne": "Our scope for La Rosa Chicken and Grill covers SEO for 11 locations, Google Business Profile Management, and Google Business Profile Search Ads.",
+    "storyOne": "Our scope for La Rosa Chicken and Grill covers SEO for 11 locations, Google Business Profile Management, Google Business Profile Search Ads, and Reputation Management.",
     "storyTwo": "The goal is to help guests move from a local restaurant search to useful information about where to visit or order. This engagement is focused on search visibility and Google Business Profiles; website design is not part of the scope described here.",
     "storyThree": "This case study documents the confirmed services. It does not claim unverified ranking, traffic, order, or revenue gains.",
     "visualCaption": "La Rosa Chicken and Grill",
@@ -833,6 +837,13 @@ const CLIENT_CASE_STUDIES={
             "We provide Google Business Profile Search Ads as the paid-search component of the engagement, supporting local restaurant discovery alongside SEO and profile management.",
             "Paid local search",
             "Discuss local search ads"
+        ],
+        [
+            "reputation-management",
+            "Reputation Management",
+            "Our Reputation Management work for La Rosa Chicken and Grill supports guest trust by helping the business monitor customer feedback and respond thoughtfully to reviews. This complements local search visibility and Google Business Profile Management.",
+            "Guest trust",
+            "Discuss reputation management"
         ]
     ]
 },
