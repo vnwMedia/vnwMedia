@@ -2341,3 +2341,6 @@ body[data-page="home"] .plan-assurance b{flex:0 0 auto;color:var(--orange);font-
 .work-agency-card .work-case-link:hover,.work-agency-card .work-case-link:focus-visible{color:#008bbb}
 .work-agency-card .work-case-link:focus-visible{outline:3px solid #00aeef;outline-offset:5px}
 .work-agency-card .work-case-link:focus-visible::after{outline:none}
+
+.story2-proof-copy>.text-arrow{background:var(--orange);color:#fff}
+.story2-proof-copy>.text-arrow:hover,.story2-proof-copy>.text-arrow:focus-visible{background:#008ac0;color:#fff}
