@@ -1,0 +1,10 @@
+/* Selected option 16: image-led hero and shared service ticker. */
+.cs-live-hero{position:relative;isolation:isolate;min-height:760px;display:flex;align-items:center;background:#091014;overflow:hidden!important;padding:160px 0 76px}
+.cs-live-hero-image{position:absolute;inset:0;height:100%;object-fit:cover;object-position:center;z-index:-3}
+.cs-live-hero:after{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(5,12,16,.86),rgba(5,12,16,.3) 65%,rgba(5,12,16,.08)),linear-gradient(0deg,rgba(5,12,16,.55),transparent 50%)}
+.cs-live-hero-word{position:absolute;left:3%;top:105px;z-index:-1;color:rgba(255,255,255,.09);font:600 clamp(65px,12.7vw,210px)/1 Inter,sans-serif;letter-spacing:-.07em;white-space:nowrap;pointer-events:none}
+.cs-live-hero-copy{position:relative}.cs-live-hero .fc-hero-copy{max-width:670px}.cs-live-hero .fc-hero-copy>p:not(.fc-kicker){max-width:550px;opacity:1;color:#d1d8dc}.cs-live-hero .fc-hero-copy h1{font-size:clamp(48px,5.4vw,80px)!important}.cs-live-hero .fc-hero-copy .fc-kicker{color:#00aeef}
+.cs-live-hero .cs-live-hero-caption{margin-top:58px;font:500 10px/1.6 Inter,sans-serif;letter-spacing:.18em;color:#c6d1d7;opacity:1}
+#fc-page .trust-strip{overflow:hidden}#fc-page .trust-track span{font-size:16px}#fc-page .fc-faq a:focus-visible{outline:2px solid #00aeef;outline-offset:5px}
+@media(max-width:800px){.cs-live-hero{min-height:650px;padding:150px 0 60px}.cs-live-hero-image{object-position:62% center}.cs-live-hero:after{background:linear-gradient(90deg,#061016e8,#06101670)}.cs-live-hero-word{top:115px;font-size:12.7vw}.cs-live-hero .fc-hero-copy{max-width:560px}}
+@media(max-width:500px){.cs-live-hero{min-height:640px}.cs-live-hero .fc-hero-copy h1{font-size:46px!important}.cs-live-hero .fc-actions{align-items:flex-start;flex-direction:column}.cs-live-hero .cs-live-hero-caption{font-size:9px}.footer-grid{display:flex;flex-direction:column;gap:28px}.footer-grid>*{min-width:0;max-width:100%}.footer-services-grid{grid-template-columns:1fr!important}}
