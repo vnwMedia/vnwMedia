@@ -8,3 +8,8 @@
 #fc-page .trust-strip{overflow:hidden}#fc-page .trust-track span{font-size:16px}#fc-page .fc-faq a:focus-visible{outline:2px solid #00aeef;outline-offset:5px}
 @media(max-width:800px){.cs-live-hero{min-height:650px;padding:150px 0 60px}.cs-live-hero-image{object-position:62% center}.cs-live-hero:after{background:linear-gradient(90deg,#061016e8,#06101670)}.cs-live-hero-word{top:115px;font-size:12.7vw}.cs-live-hero .fc-hero-copy{max-width:560px}}
 @media(max-width:500px){.cs-live-hero{min-height:640px}.cs-live-hero .fc-hero-copy h1{font-size:46px!important}.cs-live-hero .fc-actions{align-items:flex-start;flex-direction:column}.cs-live-hero .cs-live-hero-caption{font-size:9px}.footer-grid{display:flex;flex-direction:column;gap:28px}.footer-grid>*{min-width:0;max-width:100%}.footer-services-grid{grid-template-columns:1fr!important}}
+
+/* Match the established inner-page hero dimensions. */
+.cs-live-hero{min-height:610px;padding:120px 0 50px}
+.cs-live-hero .cs-live-hero-caption{margin-top:26px}
+@media(max-width:800px){.cs-live-hero{min-height:580px;padding:110px 0 50px}}
