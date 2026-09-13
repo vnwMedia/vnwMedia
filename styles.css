@@ -2358,8 +2358,8 @@ body[data-page="home"] .plan-assurance b{flex:0 0 auto;color:var(--orange);font-
 .testimonial-ticker-card.review-expanded blockquote{display:block;overflow:visible}
 @media(max-width:560px){.testimonial-ticker-card.review-collapsible{height:270px}.testimonial-ticker-card.review-expanded{height:auto}}
 
-/* Original client logo layered over the La Rosa portfolio photo. */
-.work-larosa-media{position:relative;margin:0;overflow:hidden;aspect-ratio:16/10}
-.work-larosa-media>img:first-child{display:block;width:100%;height:100%;object-fit:cover}
-.work-card .work-larosa-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58%;max-width:250px;height:auto;aspect-ratio:auto;object-fit:contain;padding:0;background:transparent;border-radius:0;box-shadow:none;transition:none;pointer-events:none}
-.work-card:hover .work-larosa-logo{transform:translate(-50%,-50%)}
+/* Original client logos centered over portfolio photos. */
+.work-client-media{position:relative;margin:0;overflow:hidden;aspect-ratio:16/10}
+.work-client-media>img:first-child{display:block;width:100%;height:100%;object-fit:cover}
+.work-card .work-client-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58%;max-width:250px;height:auto;aspect-ratio:auto;object-fit:contain;padding:0;background:transparent;border-radius:0;box-shadow:none;transition:none;pointer-events:none}
+.work-card:hover .work-client-logo{transform:translate(-50%,-50%)}
