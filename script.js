@@ -107,11 +107,17 @@ function scheduleServicesMenuClose() {
 
 servicesTrigger?.setAttribute("aria-expanded", "false");
 
-servicesTrigger?.addEventListener("click", (event) => {
+// Clicking Services follows its landing-page link. Hover and focus still open
+// the dropdown; Arrow Down moves keyboard users directly into its service links.
+servicesTrigger?.addEventListener("keydown", (event) => {
+  if (event.key !== "ArrowDown") return;
   event.preventDefault();
-  event.stopPropagation();
-  const shouldOpen = !servicesDropdown?.classList.contains("mega-open") || !servicesMenuPinned;
-  setServicesMenuOpen(shouldOpen, shouldOpen);
+  setServicesMenuOpen(true, true);
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    if (document.activeElement === servicesTrigger) {
+      servicesDropdown?.querySelector(".mega-menu a")?.focus();
+    }
+  }));
 });
 
 servicesDropdown?.addEventListener("pointerenter", () => setServicesMenuOpen(true, servicesMenuPinned));
@@ -129,7 +135,7 @@ function initializeMobileNavigation() {
   const safe = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
   const arrow = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';
   const link = ([label, href], className = "") => `<a class="${className}" href="${navRoot}${safe(href)}"><span>${safe(label)}</span><span class="sm-arrow" aria-hidden="true">${arrow}</span></a>`;
-  const mainLinks = [['Our Story','our-story.html'],['Work','work.html'],['Industries','industries.html'],['Case Studies','case-studies.html'],['Resources','resources.html'],['Contact','contact.html']];
+  const mainLinks = [['Our Story','our-story.html'],['Work','work.html'],['Services','services.html'],['Industries','industries.html'],['Case Studies','case-studies.html'],['Resources','resources.html'],['Contact','contact.html']];
   const services = SERVICE_MENU_PILLARS.flatMap(pillar => pillar.groups.flatMap(group => group.links));
   const allServicesLink = () => link(['View all services','services.html#all-services'], 'sm-all-services');
   const dialog = document.createElement('dialog');
