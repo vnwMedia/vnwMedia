@@ -40,3 +40,13 @@
 .industries-live .industry-faq-cta{margin-top:28px;background:#00aeef;color:#fff;transition:background-color .2s ease}
 .industries-live .industry-faq-cta:hover,.industries-live .industry-faq-cta:focus-visible{background:#008ac0;color:#fff}
 @media(max-width:760px),(max-height:600px){.industries-live .industry-faq-intro{position:static;margin-bottom:28px}}
+
+/* Equal industry panels, using Hospitality's responsive image height as the baseline.
+   Equal grid tracks grow together when longer copy needs extra room. */
+.industries-live .stories{display:grid;grid-auto-rows:1fr}
+.industries-live .story-band{min-height:clamp(460px,37.5vw,590px)}
+.industries-live .story-band>img{contain:size;min-height:0;max-height:none;height:100%;width:100%;object-fit:cover}
+@media(max-width:760px){
+ .industries-live .story-band{min-height:0;grid-template-rows:290px 1fr}
+ .industries-live .story-band>img{height:290px}
+}
