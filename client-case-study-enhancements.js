@@ -4,27 +4,22 @@
       name:'Brooklyn Motors', number:'6', unit:'connected services',
       title:'A clear path from local search to collision repair.',
       copy:'Web Design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO work together to support repair discovery and inquiries in Brooklyn.',
-      cta:'Discuss your repair business', heading:'Discovery. Confidence. Contact.',
-      cards:[
-        ['WEB','Website experience','Make repair information easy to find','Web Design','Clear service information and contact options for drivers.'],
-        ['SEO','Organic discovery','Connect with local repair searches','SEO + Google Business Profile Management','Useful service content and consistent shop information.'],
-        ['PPC','Paid search','Support high-intent repair inquiries','PPC + Google Business Profile Search Ads','Relevant searches connected to clear inquiry destinations.'],
-        ['GEO','AI search readiness','Make the business easier to understand','Generative Engine Optimization','Clear, consistent collision-repair information for AI-assisted search.']
-      ]
+      cta:'Discuss your repair business'
     },
     'case-h2bros-plumbing':{
       name:'H2Bros Plumbing', number:'3', unit:'customer needs',
       title:'A clearer route to plumbing and heating help.',
       copy:'Connect residential, commercial, and new-construction customers with the right information. Web design, SEO, PPC, local profile visibility, GEO, and inquiry tracking support the customer journey.',
-      cta:'Discuss your service business', heading:'Find. Understand. Get in touch.',
-      cards:[
-        ['WEB','Service experience','Make plumbing and heating services clear','Web Design + Mobile Responsive Development','Service navigation, content architecture, and trust signals help customers choose their next step.'],
-        ['SEO','Search visibility','Support local service discovery','SEO + GEO','Useful New Jersey plumbing and heating content for organic and AI-assisted search.'],
-        ['GBP','Local discovery','Connect profiles with relevant inquiries','GBP Organic & Paid Search + PPC','Consistent business information and paid-search paths for repairs and planned projects.'],
-        ['CTAs','Customer contact','Make calls and quote requests easier','Service Inquiry CTAs + Analytics & Lead Tracking','Clear contact prompts and measurement of inquiry sources.']
-      ]
+      cta:'Discuss your service business'
     }
   };
+  // Design placeholders copied from La Rosa; not measured results for these clients.
+  const metrics=[
+    ['93,837','Impressions','Google Search Ad Reach','Google Business Profile Search Ads','Placeholder — client results pending'],
+    ['1,325','Website Clicks','Website Visits from GBP','From Google Business Profiles','Placeholder — client results pending'],
+    ['29,736','Profile Views','Google Business Profile Views','Google Business Profile Organic','Placeholder — client results pending'],
+    ['TOP 3','Local Rankings','Local Google Rankings','Tracked local Google search rankings','Placeholder — client rankings pending']
+  ];
   const config=configs[document.body.dataset.page];
   if(!config)return;
   const hero=document.querySelector('.scm-ms-hero');
@@ -48,5 +43,5 @@
   });
   ticker.append(track);hero.after(ticker);
   target.classList.add('lr-results');target.dataset.layout='3';
-  target.innerHTML=`<div class="shell"><div class="lr-location-layout"><aside class="lr-location"><p class="section-tag">SERVICE SCOPE</p><strong>${config.number}<span>${config.unit}</span></strong><h2>${config.title}</h2><p>${config.copy}</p><a href="../contact.html" class="pill pill-blue">${config.cta} ↗</a></aside><div><div class="lr-heading"><p class="section-tag">STRATEGY / ${config.name}</p><h2>${config.heading}</h2></div><div class="lr-grid">${config.cards.map((m,i)=>`<article class="lr-metric lr-metric-${i}"><span class="lr-index">0${i+1}</span><strong>${m[0]}</strong><span class="lr-metric-unit">${m[1]}</span><h3>${m[2]}</h3><p>${m[3]}</p><p class="lr-metric-detail">${m[4]}</p></article>`).join('')}</div></div></div><p class="lr-footnote">Service coverage shown for ${config.name}. Performance results will be added when client-specific reporting is available.</p></div>`;
+  target.innerHTML=`<div class="shell"><div class="lr-location-layout"><aside class="lr-location"><p class="section-tag">SERVICE SCOPE</p><strong>${config.number}<span>${config.unit}</span></strong><h2>${config.title}</h2><p>${config.copy}</p><a href="../contact.html" class="pill pill-blue">${config.cta} ↗</a></aside><div><div class="lr-heading"><p class="section-tag">PLACEHOLDER RESULTS / ${config.name}</p><h2>Discovery. Interest. Visibility.</h2></div><div class="lr-grid">${metrics.map((m,i)=>`<article class="lr-metric lr-metric-${i}"><span class="lr-index">0${i+1}</span><strong>${m[0]}</strong><span class="lr-metric-unit">${m[1]}</span><h3>${m[2]}</h3><p>${m[3]}</p><p class="lr-metric-detail">${m[4]}</p></article>`).join('')}</div></div></div><p class="lr-footnote">Design placeholders only. These figures match the La Rosa example and are not results for ${config.name}. Replace them with client-specific report totals, reporting dates, and ranking coverage before presenting them as measured outcomes.</p></div>`;
 })();
