@@ -4,6 +4,20 @@
   const selector = '.trust-track, .res-mag-marquee, .res-cmd-strip > .shell, .res-bento-scroll > div, .res-signal-marquee > div, .res-dispatch-strip > div, .ticker-track';
 
   function initializeTickers() {
+    // Every service detail uses the same capabilities strip as the homepage.
+    if (document.body.dataset.page?.startsWith('service-')) {
+      const hero = document.querySelector('main .csp-hero, main .inner-hero');
+      if (hero && !hero.nextElementSibling?.matches('.trust-strip[aria-label="VNW Media capabilities"]')) {
+        const strip = document.createElement('section');
+        strip.className = 'trust-strip';
+        strip.dataset.navTheme = 'dark';
+        strip.setAttribute('aria-label', 'VNW Media capabilities');
+        const track = document.createElement('div');
+        track.className = 'trust-track';
+        strip.append(track);
+        hero.after(strip);
+      }
+    }
     const records = [];
     document.querySelectorAll(selector).forEach(track => {
       if (track.dataset.loopTicker) return;
