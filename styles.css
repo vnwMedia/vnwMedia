@@ -2410,3 +2410,11 @@ body[data-page^="service-"] .csp-hero-media img{position:absolute;inset:0;height
  body[data-page^="service-"] .csp-hero-proof{margin-top:16px;gap:6px}
  body[data-page^="service-"] .csp-hero-proof span{padding:6px 8px;font-size:8px}
 }
+
+/* Panoramic service photography: retain the people and screens on narrow crops. */
+body[data-page^="service-"] .csp-hero-media img{object-position:70% 50%}
+body[data-page^="service-"] .inner-hero-bg{background-position:70% 50%}
+@media(max-width:800px){
+ body[data-page^="service-"] .csp-hero-media img{object-position:76% 50%}
+ body[data-page^="service-"] .inner-hero-bg{background-position:76% 50%}
+}

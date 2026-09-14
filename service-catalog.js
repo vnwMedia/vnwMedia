@@ -190,7 +190,7 @@ const SERVICE_CATALOG = [
     ],
     "overview": "Explain your business clearly and give visitors useful reasons to take the next step. Our content work supports websites, organic search, AI visibility, and customer communication.",
     "scope": "Content can be part of a marketing plan or commissioned separately; volume and research requirements are agreed in advance.",
-    "image": "assets/case-system-stack.svg",
+    "image": "assets/service-heroes/content-writing-v2.jpg",
     "addon": false
   },
   {
@@ -270,7 +270,7 @@ const SERVICE_CATALOG = [
     ],
     "overview": "Turn video material into focused content for your social channels and campaigns. We shape edits around the message, format, and next step.",
     "scope": "Short-form editing is an add-on; video ad creative is included in applicable combination packages. Production and filming are not assumed.",
-    "image": "assets/case-system-stack.svg",
+    "image": "assets/service-heroes/video-editing-v2.jpg",
     "addon": true
   },
   {
