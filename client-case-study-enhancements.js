@@ -6,11 +6,11 @@
       copy:'Web Design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO work together to support repair discovery and inquiries in Brooklyn.',
       cta:'Discuss your repair business'
     },
-    'case-h2bros-plumbing':{
-      name:'H2Bros Plumbing', number:'3', unit:'customer needs',
-      title:'A clearer route to plumbing and heating help.',
-      copy:'Connect residential, commercial, and new-construction customers with the right information. Web design, SEO, PPC, local profile visibility, GEO, and inquiry tracking support the customer journey.',
-      cta:'Discuss your service business'
+    'case-kypcl':{
+      name:'KYPCL', number:'6', unit:'connected services',
+      title:'A clearer route from legal search to consultation.',
+      copy:'SEO, Google Business Profile, Google Business Search Ads, Reputation Management, Web Design, and Lead Generation. Together, these services support discovery, trust, and consultation inquiries.',
+      cta:'Discuss your law firm'
     }
   };
   // Design placeholders copied from La Rosa; not measured results for these clients.

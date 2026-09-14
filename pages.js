@@ -13,7 +13,7 @@ const DATA = {
   cases: [
     ["Brooklyn Motors", "brooklyn-motors", "Automotive & Auto Body", "Brooklyn Motors provides collision and auto body repair in Brooklyn, New York. We provide web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO to support repair discovery and inquiries.", "assets/brooklyn-motors-banner.jpg", "https://www.brooklynmotorsny.com/"],
     ["La Rosa Chicken and Grill", "la-rosa-chicken-grill", "Restaurants & Hospitality", "La Rosa Chicken and Grill is a restaurant brand. We provide SEO for 11 locations, Google Business Profile Management, Google Business Profile Search Ads, and Reputation Management.", "assets/la-rosa-portfolio-hero.jpg", "https://larosachicken.com/"],
-    ["H2Bros Plumbing","h2bros-plumbing","Home Services","H2Bros Plumbing & Heating serves homes, businesses, and new construction across New Jersey. We provided web design/redesign, SEO, and PPC to support local visibility and plumbing inquiries.","assets/h2bros-plumbing-hero.jpg","https://h2brosplumbing.com/"]
+    ["KYPCL", "kypcl", "Legal & Professional Services", "KYPCL (Kahn Yuniver Law) serves individuals and businesses across Brooklyn, Manhattan, and greater New York City. We provide SEO, Google Business Profile, Google Business Search Ads, Reputation Management, Web Design, and Lead Generation to support visibility, trust, and consultation inquiries.", "assets/kypcl-hero.webp", "https://kypcl.com/"]
   ],
   resources: [
     ["Website Redesign Readiness Checklist","website-redesign-checklist","Know when focused improvements are enough—and when the website is holding growth back.","https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=1400&q=84"],
@@ -112,7 +112,7 @@ function cards(items,type){
 }
 
 function capabilityTicker(){
-  const clients=["Brooklyn Motors","La Rosa Chicken and Grill","H2Bros Plumbing","Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Kahn Yuniver Law","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds","Honeydrop","Marlboro Jewish Day Camp","Travel Mama","Pollack SEO","A2Z Academy"];
+  const clients=["Brooklyn Motors","La Rosa Chicken and Grill","KYPCL","Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds","Honeydrop","Marlboro Jewish Day Camp","Travel Mama","Pollack SEO","A2Z Academy"];
   return `<section class="trust-strip work-client-ticker" data-nav-theme="dark" aria-label="VNW Media clients"><div class="trust-track"><small>Selected Client Work</small><i></i>${[...clients,...clients].map(x=>`<span>${x}</span>`).join("")}</div></section>`;
 }
 
@@ -175,7 +175,7 @@ function workCreativeOptions(){
   return `<section class="wco-intro section" id="page-content" data-nav-theme="light"><div class="shell"><p class="section-tag">New Creative Set</p><h2>Less dashboard. More visual story.</h2><p>These directions use project imagery, expressive typography, editorial composition, and more distinctive client-proof moments.</p></div></section>
   <section class="wco-option wco-lens section" data-nav-theme="light"><div class="shell">${label("11","Project Lens","Image-led · Layered · Premium")}<div class="wco-lens-stage"><div class="wco-lens-image"><img src="${img(images[0])}" alt="Marketing strategy illustration"><span>Selected Project / 01</span></div><div class="wco-lens-copy"><p class="section-tag">How Projects Move</p><h2>See the work taking shape.</h2><div>${steps.map((x,i)=>`<article><span>0${i+1}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></div></div><blockquote class="wco-lens-proof"><span>Client Perspective</span><p>“${quotes[0][2]}”</p><footer>${quotes[0][0]} · ${quotes[0][1]}</footer></blockquote></div></section>
   <section class="wco-option wco-paper section" data-nav-theme="light"><div class="shell">${label("12","Studio Scrapbook","Tactile · Human · Unexpected")}<div class="wco-paper-board"><div class="wco-paper-title"><p class="section-tag">How Projects Move</p><h2>Good work rarely begins in a straight line.</h2><p>Research, ideas, proof, screens, and decisions gradually become one clear direction.</p></div>${steps.map((x,i)=>`<article class="wco-paper-note note-${i+1}"><span>0${i+1}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}<figure class="wco-paper-photo"><img src="${img(images[1])}" alt="Marketing strategy illustration"><figcaption>Built around confidence and easier action.</figcaption></figure><blockquote class="wco-paper-quote"><span>Client Perspective</span><p>“${quotes[1][2]}”</p><footer>${quotes[1][0]} · ${quotes[1][1]}</footer></blockquote></div></div></section>
-  <section class="wco-option wco-swiss section" data-nav-theme="light"><div class="shell">${label("13","Swiss Evidence","Graphic · Minimal · Confident")}<div class="wco-swiss-head"><div><p class="section-tag">How Projects Move</p><h2>Clarity is the process.</h2></div><strong>04<br>CONNECTED<br>PHASES</strong></div><div class="wco-swiss-grid">${steps.map((x,i)=>`<article><span>${i+1}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div><div class="wco-swiss-proof"><img src="${img(images[2])}" alt="H2Bros Plumbing website project"><div><span>Client Perspective</span><blockquote>“${quotes[2][2]}”</blockquote><footer>${quotes[2][0]} · ${quotes[2][1]}</footer></div></div></div></section>
+  <section class="wco-option wco-swiss section" data-nav-theme="light"><div class="shell">${label("13","Swiss Evidence","Graphic · Minimal · Confident")}<div class="wco-swiss-head"><div><p class="section-tag">How Projects Move</p><h2>Clarity is the process.</h2></div><strong>04<br>CONNECTED<br>PHASES</strong></div><div class="wco-swiss-grid">${steps.map((x,i)=>`<article><span>${i+1}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div><div class="wco-swiss-proof"><img src="${img(images[2])}" alt="Website lead-path design example"><div><span>Client Perspective</span><blockquote>“${quotes[2][2]}”</blockquote><footer>${quotes[2][0]} · ${quotes[2][1]}</footer></div></div></div></section>
   <section class="wco-option wco-cinema section" data-nav-theme="dark"><div class="shell">${label("14","Cinematic Chapters","Immersive · Visual · Story-driven")}<div class="wco-cinema-stage"><img src="${img(images[1])}" alt="Marketing strategy illustration"><div class="wco-cinema-overlay"><p class="section-tag">How Projects Move</p><h2>One story.<br>Four chapters.</h2><div class="wco-cinema-chapters">${steps.map((x,i)=>`<article><span>0${i+1}</span><strong>${x[0]}</strong></article>`).join("")}</div></div></div><div class="wco-cinema-proof"><div><span>Client Perspective</span><strong>Creative work feels stronger when the process feels dependable.</strong></div>${quotes.slice(0,2).map(x=>`<blockquote><p>“${x[2]}”</p><footer>${x[0]} · ${x[1]}</footer></blockquote>`).join("")}</div></div></section>
   <section class="wco-option wco-gallery section" data-nav-theme="light"><div class="shell">${label("15","Gallery Walk","Curated · Spacious · Agency-led")}<div class="wco-gallery-head"><p class="section-tag">How Projects Move</p><h2>Walk through the thinking behind the screen.</h2></div><div class="wco-gallery-wall">${steps.map((x,i)=>`<article><figure><img src="${img(images[i%images.length])}" alt="VNW Media project example"><span>0${i+1}</span></figure><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}</div><div class="wco-gallery-proof"><div><p class="section-tag">Client Perspective</p><h3>The people behind the project matter as much as the pixels.</h3></div>${quotes.map(x=>`<blockquote><p>“${x[2]}”</p><footer>${x[0]} · ${x[1]}</footer></blockquote>`).join("")}</div></div></section>`;
 }
@@ -225,11 +225,11 @@ function homeProcessOptions(){
 }
 
 function workPageOne(){
-  const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media","Reputation Management":"reputation-management","SEO · 11 locations":"seo","Google Business Profile Management":"google-business-profile","Google Business Profile Search Ads":"google-ppc"};
+  const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media","Reputation Management":"reputation-management","SEO · 11 locations":"seo","Google Business Profile Management":"google-business-profile","Google Business Profile Search Ads":"google-ppc","Google Business Profile":"google-business-profile","Google Business Search Ads":"google-ppc","Lead Generation":"lead-generation"};
   const projectScopes=[
     ["Web Design","SEO","Google Business Profile Management","Google Business Profile Search Ads","PPC","GEO"],
     ["SEO · 11 locations","Google Business Profile Management","Google Business Profile Search Ads","Reputation Management"],
-    ["Web Design","SEO","PPC"]
+    ["SEO", "Google Business Profile", "Google Business Search Ads", "Reputation Management", "Web Design", "Lead Generation"]
   ];
   const principles=[
     ["Strategy","Start with the business goal, audience, offer, and decision the website needs to support."],
@@ -243,7 +243,7 @@ function workPageOne(){
     ["Build","Bring design, copy, development, SEO foundations, tracking, and launch details together.","assets/work-process-build.jpg"],
     ["Improve","Use real customer questions and performance signals to guide the next useful refinement.","assets/work-process-improve.jpg"]
   ];
-  const moreWork=["Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Kahn Yuniver Law","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds"];
+  const moreWork=["Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds"];
   return `<section class="work work-agency-featured section" id="page-content"><div class="shell"><div class="work-agency-head reveal"><div><p class="section-tag">Selected Work</p><h2>Different industries. The same focus on clarity, trust, and action.</h2></div><p>Each project begins with a different business problem. The work below shows how strategy, design, content, search context, and lead paths come together around the customer’s next decision.</p></div><div class="work-grid">${DATA.cases.map((x,i)=>`<article class="work-card work-agency-card reveal">${["la-rosa-chicken-grill","brooklyn-motors"].includes(x[1])?`<figure class="work-client-media"><img src="${img(x[4])}" alt="${esc(x[0])}"><img class="work-client-logo" src="${img(x[1]==="brooklyn-motors"?"assets/brooklyn-motors-logo-supplied.png":"assets/la-rosa-logo-white-text.svg")}" alt="${esc(x[0])} logo"></figure>`:`<img src="${img(x[4])}" alt="${esc(x[0])}">`}<div><span>${esc(x[2])}</span><h3>${esc(x[0])}</h3><p>${esc(x[3])}</p><ul aria-label="Services provided for ${esc(x[0])}">${projectScopes[i].map(scope=>`<li><a class="work-service-pill" href="${path(`services/${scopePages[scope]}.html`)}">${scope}</a></li>`).join("")}</ul><a class="work-case-link" href="${path(`case-studies/${x[1]}.html`)}" aria-label="Read ${esc(x[0])} case study"><b>Read case study ↗</b></a></div></article>`).join("")}</div><div class="portfolio-list reveal">${moreWork.map((x,i)=>`<a href="${path("contact.html")}"><span>${String(i+4).padStart(2,"0")}</span><strong>${x}</strong><i>Discuss this work ↗</i></a>`).join("")}</div></div></section>
   <section class="work-agency-method section" data-nav-theme="dark"><div class="shell work-agency-method-grid"><div class="work-agency-method-copy reveal"><p class="section-tag">What Connects The Work</p><h2>More than a gallery. A working digital system.</h2><p>Strong agency work should explain what changed, why it matters, and how the pieces support the business—not just display polished screens.</p><a class="pill pill-blue" href="${path("contact.html")}">Discuss your opportunity <span>↗</span></a></div><div class="work-agency-principles">${principles.map((x,i)=>`<article class="reveal"><span>${String(i+1).padStart(2,"0")}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></div></section>
   <section class="work-agency-process work-agency-process-option1 section" id="work-process" data-nav-theme="light"><div class="shell"><div class="work-agency-process-head reveal"><div><p class="section-tag">How Projects Move</p><h2>From first question to the next improvement.</h2></div><a class="pill pill-blue" href="${path("contact.html")}">Plan your project <span>↗</span></a></div><div class="work-agency-process-grid">${processSteps.map((x,i)=>`<article class="reveal"><figure><img src="${img(x[2])}" alt="${esc(x[0])} project phase"><span>${String(i+1).padStart(2,"0")}</span></figure><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}</div></div></section>
@@ -444,7 +444,7 @@ function caseStudiesPage(){
     ["03","Search aligned","Match the page structure to how customers actually look.","Local intent, service categories, clear page hierarchy."],
     ["04","Lead ready","Create a system that can keep improving after launch.","Analytics, campaign paths, conversion points, practical next steps."]
   ];
-  const portfolio=["Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Kahn Yuniver Law","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds"];
+  const portfolio=["Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds"];
   return `<section class="cases-showroom section" id="page-content"><div class="shell">
     <div class="cases-intro reveal"><p class="section-tag">Selected Builds</p><h2>Websites treated like sales rooms, not online brochures.</h2><p>Each case starts with the business decision we need to influence: call, request an estimate, book a tour, browse inventory, or ask for help.</p></div>
     <div class="case-feature reveal">
@@ -847,121 +847,109 @@ const CLIENT_CASE_STUDIES={
         ]
     ]
 },
-  "h2bros-plumbing": {
-    "name": "H2Bros Plumbing",
-    "kicker": "Plumbing & Heating · New Jersey",
-    "intro": "A service website that connects plumbing and heating needs with clear information, local trust, and an easy way to request help.",
-    "hero": "assets/h2bros-plumbing-hero.jpg",
-    "heroAlt": "Bathroom sinks and plumbing fixtures featured on the H2Bros Plumbing website",
-    "heroWidth": 1280,
-    "heroHeight": 853,
-    "mockup": "assets/h2bros-plumbing.png",
-    "mockupAlt": "H2Bros Plumbing and Heating website shown on desktop, laptop, tablet, and mobile screens",
-    "mockupWidth": 998,
-    "mockupHeight": 593,
+  "kypcl": {
+    "name": "KYPCL",
+    "kicker": "Legal & Professional Services · New York City",
+    "intro": "SEO, Google Business Profile, Google Business Search Ads, Reputation Management, Web Design, and Lead Generation.",
+    "hero": "assets/kypcl-hero.webp",
+    "heroAlt": "Kahn Yuniver Law featured on the KYPCL website",
+    "heroWidth": 800,
+    "heroHeight": 704,
+    "mockup": "assets/kypcl-website.png",
+    "mockupAlt": "KYPCL website showing the firm and consultation options",
+    "mockupWidth": 1440,
+    "mockupHeight": 1000,
     "signals": [
-      [
-        "Services",
-        "Plumbing and heating"
-      ],
-      [
-        "Trust",
-        "Clear business information"
-      ],
-      [
-        "Mobile",
-        "Call and quote requests"
-      ],
-      [
-        "Search",
-        "New Jersey service discovery"
-      ]
+        [
+            "Search",
+            "SEO and local visibility"
+        ],
+        [
+            "Profile",
+            "Google Business Profile"
+        ],
+        [
+            "Trust",
+            "Reputation Management"
+        ],
+        [
+            "Leads",
+            "Consultation inquiries"
+        ]
     ],
-    "challengeTitle": "Help customers find the right service quickly.",
-    "challengeOne": "A homeowner with a plumbing problem and a property manager planning an installation have different questions. H2Bros Plumbing needs to serve both without making either visitor search through unrelated information.",
-    "challengeTwo": "The website should distinguish urgent help from planned work, explain the service offering, and make it simple to call or request a quote from any screen.",
-    "approachTitle": "Organize the experience around the customer’s problem.",
+    "challengeTitle": "Build confidence before the first consultation.",
+    "challengeOne": "People seeking legal help need to understand the firm, identify a relevant practice area, and find a clear way to request a consultation.",
+    "challengeTwo": "The website, local profile, advertising, and reputation should present a consistent picture of KYPCL while making the next step clear for prospective clients.",
+    "approachTitle": "Connect legal discovery with client trust.",
     "approach": [
-      [
-        "Make services easy to recognize.",
-        "Plain-language service categories help visitors connect a plumbing or heating need with the right information."
-      ],
-      [
-        "Support urgent and planned inquiries.",
-        "Prominent contact options serve immediate needs, while service details give planned projects space for consideration."
-      ],
-      [
-        "Keep the mobile path simple.",
-        "Readable content, clear buttons, and short inquiry paths help customers make contact from their phones."
-      ]
+        [
+            "Make the firm easy to understand.",
+            "Use Web Design to explain practice areas and present clear consultation options."
+        ],
+        [
+            "Support organic local discovery.",
+            "Connect SEO and Google Business Profile information with relevant legal services and the firm’s New York City presence."
+        ],
+        [
+            "Reach prospective clients through paid search.",
+            "Use Google Business Search Ads to connect legal searches with useful practice-area information."
+        ],
+        [
+            "Support trust and consultation inquiries.",
+            "Bring Reputation Management and Lead Generation together around accurate information, thoughtful feedback handling, and clear contact paths."
+        ]
     ],
-    "storyTitle": "Clear services. Easier contact.",
-    "storyOne": "H2Bros Plumbing & Heating serves residential, commercial, and new-construction needs in New Jersey. Its website needs to explain that scope while keeping the first contact simple.",
-    "storyTwo": "The device mockup shows the client’s own website, with plumbing imagery, service navigation, and contact options. The case-study layout connects that presentation to a practical goal: helping visitors identify the right service and ask for help.",
-    "storyThree": "The focus is on service clarity and inquiry design. No unverified response-time guarantees, booking increases, or search results are presented as measured outcomes.",
+    "storyTitle": "From a legal question to a clear next step.",
+    "storyOne": "KYPCL (Kahn Yuniver Law) serves individuals and businesses across Brooklyn, Manhattan, and greater New York City.",
+    "storyTwo": "Our work brings SEO, Google Business Profile, Google Business Search Ads, Reputation Management, Web Design, and Lead Generation into a connected digital presence. Practice-area information helps prospective clients understand the firm, while clear contact options support consultation inquiries.",
+    "storyThree": "This case study describes the service scope. The metric cards remain labeled design placeholders until client-specific reporting is available.",
+    "visualCaption": "KYPCL website",
+    "visualDetail": "Practice areas · Firm information · Contact",
     "services": [
-      [
-        "service-ux",
-        "Web Design",
-        "Help visitors distinguish plumbing repairs, heating work, and planned installations. Clear categories make the site useful to homeowners, business owners, and new-construction customers.",
-        "Service discovery"
-      ],
-      [
-        "local-seo",
-        "SEO",
-        "The search direction connects New Jersey plumbing and heating needs with relevant service pages. Accurate business details and useful local content support discovery without inventing service areas.",
-        "Organic search"
-      ],
-      [
-        "ppc",
-        "PPC",
-        "Paid-search planning should separate urgent repair intent from installation and replacement inquiries. Relevant landing pages and clear contact options help each visitor reach the appropriate next step.",
-        "Paid search"
-      ],
-      [
-        "google-business",
-        "GBP Organic & Paid Search",
-        "Keep the business name, phone number, services, and service-area details consistent. Any location-linked advertising should use the same accurate information and a clear inquiry destination.",
-        "Local visibility"
-      ],
-      [
-        "geo",
-        "GEO",
-        "Plain-language descriptions of plumbing and heating services help people and AI-assisted search understand H2Bros. Service answers and consistent business information support this direction without guaranteeing AI visibility.",
-        "AI search readiness"
-      ],
-      [
-        "service-inquiries",
-        "Service Inquiry CTAs",
-        "Make calling and requesting a quote easy to find. Inquiry prompts should help customers describe their plumbing or heating need without requiring a long form before the first conversation.",
-        "Lead path"
-      ],
-      [
-        "business-proof",
-        "Plumbing & Heating Trust Signals",
-        "Show the client’s identity, clear contact details, and relevant service imagery. Any credentials, customer reviews, or availability claims should remain accurate and current.",
-        "Confidence"
-      ],
-      [
-        "mobile-development",
-        "Mobile Responsive Development",
-        "Customers may need help while away from a desktop. Simple navigation, readable service content, and accessible contact buttons keep the mobile experience practical.",
-        "Mobile action"
-      ],
-      [
-        "content-architecture",
-        "Content Architecture",
-        "Organize water heaters, sump pumps, fixtures, water filters, and boilers into understandable service paths. Keep emergency inquiries and planned project requests easy to distinguish.",
-        "Page clarity"
-      ],
-      [
-        "tracking",
-        "Analytics & Lead Tracking",
-        "Plan measurement around phone-link clicks, quote requests, and inquiry sources. Separate plumbing and heating interest where possible, and report booked work only when verified data is available.",
-        "Measurement"
-      ]
+        [
+            "seo",
+            "SEO",
+            "Our SEO work connects relevant legal searches with clear practice-area content and local firm information. The focus is helping prospective clients find and understand KYPCL.",
+            "Organic search",
+            "Discuss SEO"
+        ],
+        [
+            "google-business-profile",
+            "Google Business Profile",
+            "We manage Google Business Profile details so people can find consistent firm information, contact options, and legal services through local search. Organic profile visibility is separate from paid advertising.",
+            "Organic local visibility",
+            "Discuss Google Business Profile"
+        ],
+        [
+            "gbp-search-ads",
+            "Google Business Search Ads",
+            "Google Business Search Ads support paid local discovery for relevant legal inquiries. Advertising and landing pages connect prospective clients with useful practice-area information and consultation options.",
+            "Paid local search",
+            "Discuss Google Business Search Ads"
+        ],
+        [
+            "reputation-management",
+            "Reputation Management",
+            "Reputation Management supports trust through customer-feedback monitoring and thoughtful responses that respect client confidentiality. Reviews and responses should remain accurate and appropriate for a legal practice.",
+            "Client trust",
+            "Discuss Reputation Management"
+        ],
+        [
+            "web-design",
+            "Web Design",
+            "Our Web Design work organizes practice areas, firm information, and contact options into a clear experience across desktop and mobile. Visitors can understand the firm and find the next step.",
+            "Website experience",
+            "Discuss Web Design"
+        ],
+        [
+            "lead-generation",
+            "Lead Generation",
+            "Lead Generation connects search and website visits with clear consultation requests and contact options. Inquiry paths support prospective-client intake without promising case acceptance or legal outcomes.",
+            "Consultation inquiries",
+            "Discuss Lead Generation"
+        ]
     ]
-  }
+}
 };
 
 function caseStudiesOptionSix(){
