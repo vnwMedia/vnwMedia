@@ -2364,5 +2364,7 @@ body[data-page="home"] .plan-assurance b{flex:0 0 auto;color:var(--orange);font-
 .work-card .work-client-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58%;max-width:250px;height:auto;aspect-ratio:auto;object-fit:contain;padding:0;background:transparent;border-radius:0;box-shadow:none;transition:none;pointer-events:none}
 .work-card:hover .work-client-logo{transform:translate(-50%,-50%)}
 
-/* Darken only the La Rosa portfolio photo, preserving the logo colors. */
-.work-client-media>img:first-child[src$="la-rosa-portfolio-hero.jpg"]{filter:brightness(.6)}
+/* Reduce each portfolio photo another 20% from its previous brightness; logos stay unchanged. */
+.work-client-media>img:first-child[src$="la-rosa-portfolio-hero.jpg"]{filter:brightness(.48)}
+
+.work-client-media>img:first-child[src$="brooklyn-motors-banner.jpg"]{filter:brightness(.8)}
