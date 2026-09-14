@@ -477,3 +477,7 @@ html{scroll-behavior: smooth; scroll-padding-top: 70px;}
  .resources-live main .article-hero h1{font-size:38px}
  .resources-live main .article-hero .breadcrumb{margin-bottom:24px}
 }
+
+/* Keep the article-library introduction together above the category filters. */
+.resources-live main .browse-section > .section-heading{display:block}
+.resources-live main .browse-section > .section-heading > p{max-width:720px;margin:20px 0 0;text-align:left}
