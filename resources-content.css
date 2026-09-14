@@ -486,3 +486,9 @@ html{scroll-behavior: smooth; scroll-padding-top: 70px;}
 .resources-live main .read-link{transition:color .2s ease}
 .resources-live main .read-link:hover,.resources-live main .read-link:focus-visible{color:#00aeef}
 @media(prefers-reduced-motion:reduce){.resources-live main .read-link{transition:none}}
+
+/* Category filters: rollover feedback without obscuring the selected state. */
+.resources-live main .filters button{cursor:pointer;transition:color .2s ease,background-color .2s ease,border-color .2s ease}
+.resources-live main .filters button:hover,.resources-live main .filters button:focus-visible{color:#00aeef;border-color:#00aeef;background:rgba(0,174,239,.1)}
+.resources-live main .filters button[aria-pressed="true"]:hover,.resources-live main .filters button[aria-pressed="true"]:focus-visible{color:#07141a;background:#00aeef;border-color:#00aeef}
+@media(prefers-reduced-motion:reduce){.resources-live main .filters button{transition:none}}
