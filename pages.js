@@ -227,9 +227,9 @@ function homeProcessOptions(){
 function workPageOne(){
   const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media","Reputation Management":"reputation-management","SEO · 11 locations":"seo","Google Business Profile Management":"google-business-profile","Google Business Profile Search Ads":"google-ppc","Google Business Profile":"google-business-profile","Google Business Search Ads":"google-ppc","Lead Generation":"lead-generation"};
   const projectScopes=[
-    ["Web Design","SEO","Google Business Profile Management","Google Business Profile Search Ads","PPC","GEO"],
+    ["Web Design","SEO","Google Business Profile Management","Google Business Profile Search Ads","PPC","GEO","Reputation Management"],
     ["SEO · 11 locations","Google Business Profile Management","Google Business Profile Search Ads","Reputation Management"],
-    ["SEO", "Google Business Profile", "Google Business Search Ads", "Reputation Management", "Web Design", "Lead Generation"]
+    ["Web Design", "SEO", "Google Business Profile", "Google Business Search Ads", "Reputation Management", "Lead Generation"]
   ];
   const principles=[
     ["Strategy","Start with the business goal, audience, offer, and decision the website needs to support."],
