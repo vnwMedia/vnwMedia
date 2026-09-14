@@ -2368,3 +2368,7 @@ body[data-page="home"] .plan-assurance b{flex:0 0 auto;color:var(--orange);font-
 .work-client-media>img:first-child[src$="la-rosa-portfolio-hero.jpg"]{filter:brightness(.36)}
 
 .work-client-media>img:first-child[src$="brooklyn-motors-banner.jpg"]{filter:brightness(.6)}
+
+/* Match the dark portfolio-photo treatment; recolor only the transparent KYPCL logo. */
+.work-client-media>img:first-child[src$="kypcl-hero.webp"]{filter:brightness(.36)}
+.work-card .work-client-logo[src$="kypcl-logo-supplied.png"]{filter:brightness(0) invert(1) drop-shadow(0 3px 5px rgba(0,0,0,.7))}
