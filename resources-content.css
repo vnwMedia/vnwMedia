@@ -481,3 +481,8 @@ html{scroll-behavior: smooth; scroll-padding-top: 70px;}
 /* Keep the article-library introduction together above the category filters. */
 .resources-live main .browse-section > .section-heading{display:block}
 .resources-live main .browse-section > .section-heading > p{max-width:720px;margin:20px 0 0;text-align:left}
+
+/* Article links retain their underline and gain clear pointer/keyboard feedback. */
+.resources-live main .read-link{transition:color .2s ease}
+.resources-live main .read-link:hover,.resources-live main .read-link:focus-visible{color:#00aeef}
+@media(prefers-reduced-motion:reduce){.resources-live main .read-link{transition:none}}
