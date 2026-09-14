@@ -9,5 +9,5 @@
 
 /* Match the homepage FAQ's bounded sticky introduction on desktop. */
 @media(min-width:901px) and (min-height:700px){
-  body[data-page="case-la-rosa-chicken-grill"] .scm-ms-ca-panel:first-child{position:sticky;top:115px;align-self:start}
+  body:is([data-page="case-la-rosa-chicken-grill"],[data-page="case-brooklyn-motors"],[data-page="case-h2bros-plumbing"]) .scm-ms-ca-panel:first-child{position:sticky;top:115px;align-self:start}
 }
