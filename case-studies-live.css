@@ -13,6 +13,3 @@
 .cs-live-hero{min-height:610px;padding:120px 0 50px}
 .cs-live-hero .cs-live-hero-caption{margin-top:26px}
 @media(max-width:800px){.cs-live-hero{min-height:580px;padding:110px 0 50px}}
-
-/* Stack the full-width client sections without separator gaps. */
-body[data-page="cases-hub"] .dk-collection>.dk-contrast-case+.dk-contrast-case{margin-top:0}
