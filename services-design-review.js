@@ -18,14 +18,12 @@
  const a = (label,href='contact.html',outline=false) => `<a class="sd-button${outline?' sd-outline':''}" href="${href}">${label}</a>`;
  const tag = t => `<p class="sd-kicker">${t}</p>`;
  const number = n => String(n).padStart(2,'0');
- const groups = SERVICE_MENU_PILLARS.map(p=>({name:p.name,links:p.groups.flatMap(g=>g.links)}));
- // Include the additional catalog offerings as well as every navigation service.
- const known = new Set(groups.flatMap(g=>g.links.map(x=>x[1])));
- SERVICE_CATALOG.forEach(s=>{const href=`services/${s.slug}.html`;if(!known.has(href)){groups[0].links.push([s.name,href]);known.add(href)}});
+ // The Services dropdown is the single source for names, order, and groupings.
+ const groups = SERVICE_MENU_PILLARS.map(p=>({name:p.name,groups:p.groups,links:p.groups.flatMap(g=>g.links)}));
  const descriptions=['Build a brand and digital experience people understand, remember, and choose.','Show up in the right places and make a lasting connection with your audience.','Turn attention into inquiries, then support the conversations that follow.'];
  const scenes=['web-design','seo','google-ppc'];
  const sceneAlts=['Designers reviewing a business website on a desktop monitor','Search specialists reviewing website visibility together','Marketing specialists discussing a paid-search campaign'];
- const links=(g,detail=false)=>g.links.map(([name,url])=>{const item=SERVICE_CATALOG.find(x=>url===`services/${x.slug}.html`);return `<a href="${url}"><span>${esc(name)}</span>${detail&&item?`<small>${esc(item.description)}</small>`:''}</a>`}).join('');
+ const links=(g,detail=false)=>g.groups.map(section=>`<h4 class="sd-service-group-label">${esc(section.name)}</h4>`+section.links.map(([name,url])=>{const item=SERVICE_CATALOG.find(x=>url===`services/${x.slug}.html`);return `<a href="${url}"><span>${esc(name)}</span>${detail&&item?`<small>${esc(item.description)}</small>`:''}</a>`}).join('')).join('');
  const heading=(k,h,p='')=>`<div class="sd-section-heading">${tag(k)}<h2>${h}</h2>${p?`<p>${p}</p>`:''}</div>`;
  const directory=(variant='grid',tone='dark')=>`<section class="sd-band sd-${tone} sd-directory sd-directory-${variant}" id="all-services"><div class="sd-shell">${heading('The complete service collection','The expertise.<br>The right combination.','Explore every service, or talk with us about where to begin.')}<div class="sd-service-groups">${groups.map((g,i)=>`<article><header><span class="sd-index">${number(i+1)}</span><h3>${g.name}</h3><p>${descriptions[i]}</p></header><div class="sd-service-links">${links(g,variant==='ledger')}</div></article>`).join('')}</div></div></section>`;
  const pillars=(tone='light')=>`<section class="sd-band sd-${tone} sd-pillars"><div class="sd-shell">${heading('One connected approach','From first impression<br>to the next conversation.')}<div class="sd-pillar-grid">${groups.map((g,i)=>`<article>${photo(scenes[i],sceneAlts[i])}<div>${tag(number(i+1)+' / '+g.name)}<h3>${['Make it unmistakable.','Make it discoverable.','Make it actionable.'][i]}</h3><p>${descriptions[i]}</p></div></article>`).join('')}</div></div></section>`;

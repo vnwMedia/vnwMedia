@@ -8,3 +8,7 @@
 @media(prefers-reduced-motion:reduce){.sd-site #sd-app *{scroll-behavior:auto;transition:none!important}}
 
 .sd-site #sd-app h1{max-width:none}
+
+/* Match the dropdown's subgroups as well as its service labels and order. */
+.sd-site #sd-app .sd-service-group-label{grid-column:1/-1;margin:28px 0 6px;color:var(--sd-blue);font:600 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.sd-site #sd-app .sd-service-group-label:first-child{margin-top:0}

@@ -5,7 +5,7 @@ The production `services.html` is unchanged.
 
 - Shared source: `services-design-review.js` and `services-design-review.css`.
 - Entry pages: `service-option-01.html` through `service-option-10.html`.
-- Service links come from the shared menu and service catalog, including the additional content and video offerings.
+- Service names, destinations, order, pillars, and subgroups come exclusively from the Services dropdown (SERVICE_MENU_PILLARS). Services outside that menu are not added to the concepts.
 - Photography reuses the original photorealistic service-scene assets in `assets/service-heroes/`; these depict workplace scenarios, not verified client results. Asset provenance is documented there.
 - The JPEG files in this folder are actual browser screenshots at 1440 × 980, captured for the review gallery.
 - All concepts include the standard site navigation and shared footer, and alternate dark and light content sections.
