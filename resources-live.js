@@ -1,1 +1,17 @@
-(()=>{const search=document.querySelector('.browse-section input[type=search]');if(!search)return;let active='All';const buttons=[...document.querySelectorAll('[data-filter]')];function update(){let count=0;document.querySelectorAll('.browse-section .story').forEach(el=>{el.hidden=!((active==='All'||el.dataset.category===active)&&el.dataset.search.includes(search.value.trim().toLowerCase()));if(!el.hidden)count++;});document.querySelector('.empty').hidden=count>0;document.querySelector('.result-count').textContent=`${count} ${count===1?'article':'articles'}`;}buttons.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;buttons.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));update();}));search.addEventListener('input',update);})();
+(() => {
+  const section = document.querySelector('.browse-section');
+  if (!section) return;
+  const buttons = [...section.querySelectorAll('[data-filter]')];
+  const articles = [...section.querySelectorAll('.story')];
+  buttons.forEach(button => button.addEventListener('click', () => {
+    const active = button.dataset.filter;
+    let count = 0;
+    articles.forEach(article => {
+      article.hidden = active !== 'All' && article.dataset.category !== active;
+      if (!article.hidden) count++;
+    });
+    buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    section.querySelector('.empty').hidden = count > 0;
+    section.querySelector('.result-count').textContent = `${count} ${count === 1 ? 'article' : 'articles'}`;
+  }));
+})();
