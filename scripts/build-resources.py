@@ -8,7 +8,7 @@ BASE='https://vnwmedia.github.io/vnwMedia/'
 def nav(prefix=''):
  return '<header class="site-header"></header>'
 def footer(prefix=''):
- return f'<section class="closing wrap tone-band tone-light"><p class="eyebrow">Make the next move count</p><h2>Good ideas deserve<br>a clear plan.</h2><a href="{prefix}contact.html" class="cta">Talk about your business</a></section><footer class="footer wrap tone-band tone-dark"><a href="{prefix}index.html">VNW MEDIA</a><p>Websites. Visibility. Growth.</p><a href="{prefix}resources.html">Resources</a><small>© 2026 VNW Media LLC. Photography via Unsplash.</small></footer>'
+ return f'<section class="closing wrap tone-band tone-light"><p class="eyebrow">Make the next move count</p><h2>Good ideas deserve<br>a clear plan.</h2><a href="{prefix}contact.html" class="cta">Talk about your business</a></section><footer class="footer wrap tone-band tone-dark"><a href="{prefix}index.html">VNW MEDIA</a><p>Websites. Visibility. Growth.</p><a href="{prefix}resources.html">Resources</a><small>© 2026 VNW Media LLC. Article photography via Unsplash.</small></footer>'
 def pic(p,prefix='',loading='lazy'):
  return f'<img src="{prefix}{p["photo"]}" alt="{e(p["alt"])}" loading="{loading}" width="2000" height="1333">'
 def url(p,prefix=''):return prefix+'resources/'+p['slug']+'.html'
