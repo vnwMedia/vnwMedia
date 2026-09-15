@@ -6,7 +6,7 @@
 .seamless-track>.ticker-cycle{display:flex;align-items:center;flex:0 0 auto;gap:var(--ticker-gap,48px);width:max-content;max-width:none;margin:0;padding:0 var(--ticker-gap,48px) 0 0;animation:none!important;transform:none!important}
 .seamless-track>.ticker-cycle>*{flex:0 0 auto}
 .seamless-track.ticker-ready{animation:vnw-ticker-loop var(--ticker-duration,40s) linear infinite!important}
-.ticker-window:is(:hover,:focus-within)>.seamless-track{animation-play-state:paused!important}
+.ticker-window:focus-within>.seamless-track{animation-play-state:paused!important}
 @keyframes vnw-ticker-loop{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 @media(max-width:560px){.trust-track{--ticker-gap:30px}}
 @media(prefers-reduced-motion:reduce){

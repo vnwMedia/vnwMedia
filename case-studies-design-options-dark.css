@@ -17,7 +17,7 @@
 .dc-ticker-label{flex:0 0 250px;padding:22px 25px;background:#061a2520;font-size:13px;font-weight:600}.dc-ticker-label small{display:block;font-size:9px;letter-spacing:.12em;margin-top:6px}
 .dc-ticker-window{overflow:hidden;flex:1;min-width:0}.dc-ticker-track{display:flex;width:max-content;animation:dc-scroll 35s linear infinite}.dc-ticker-track>div{display:flex;align-items:center;flex-shrink:0}.dc-ticker-track span{font:26px var(--serif);padding:0 26px;border-right:1px solid #07526b66;white-space:nowrap}
 .dc-ticker button{flex-shrink:0;border:1px solid #07516a;background:transparent;color:#062633;border-radius:30px;padding:10px 15px;margin:15px;font:12px var(--sans)}
-.dc-ticker:hover .dc-ticker-track,.dc-ticker:focus-within .dc-ticker-track,.dc-paused .dc-ticker-track{animation-play-state:paused}
+.dc-ticker:focus-within .dc-ticker-track,.dc-paused .dc-ticker-track{animation-play-state:paused}
 @keyframes dc-scroll{to{transform:translateX(-25%)}}
 .dc-brief{display:grid;grid-template-columns:1fr 1fr;gap:65px}.dc-brief section{border-top:1px solid var(--line);padding-top:26px}.dc-brief p:not(.eyebrow){font-size:16px;max-width:550px}.dc-direction{margin-top:18px}
 .dc-case-bottom{display:grid;grid-template-columns:.8fr 1.4fr auto;gap:40px;align-items:start;border-top:1px solid var(--line);margin-top:45px;padding-top:25px}.dc-case-bottom p:not(.eyebrow){font-size:14px;margin-top:12px}.dc-case-bottom .text-link{align-self:end}
