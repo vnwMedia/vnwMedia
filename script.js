@@ -20,6 +20,10 @@ if (document.readyState === "loading") {
 const siteHeaderElement = document.querySelector(".site-header");
 const isNestedPage = /\/(?:services|industries|case-studies|resources)\//.test(location.pathname);
 const navRoot = isNestedPage ? "../" : "";
+// Preserve old successful-submission links, but show confirmation on its own page.
+if (new URLSearchParams(location.search).get("inquiry") === "sent") {
+  location.replace(`${navRoot}thank-you.html`);
+}
 // Keep every footer and the homepage service directory aligned with the catalog.
 document.querySelectorAll("footer h4").forEach(heading => {
   if (heading.textContent.trim().toLowerCase() !== "services") return;
@@ -436,18 +440,9 @@ if (testimonialTicker && testimonialTickerTrack) {
   document.fonts.ready.then(updateReviewOverflow);
   addEventListener("resize", updateReviewOverflow, { passive: true });
 
-  // Begin with the newest review whenever this section enters the viewport.
-  // Disabling the animation offscreen also resets its timeline without
-  // overriding the existing hover, focus, or reduced-motion pause behavior.
-  testimonialTickerTrack.style.animationName = "none";
-  const testimonialVisibilityObserver = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) {
-      testimonialTickerTrack.style.removeProperty("animation-name");
-    } else {
-      testimonialTickerTrack.style.animationName = "none";
-    }
-  }, { threshold: 0 });
-  testimonialVisibilityObserver.observe(testimonialTicker);
+  // Keep one continuous timeline as the page scrolls in and out of view.
+  // Hover, touch and keyboard focus do not pause or reset the reviews.
+  // The stylesheet still honors the device's reduced-motion preference.
 
   updateTestimonialTickerDistance();
   addEventListener("load", updateTestimonialTickerDistance);
@@ -465,6 +460,7 @@ if (heroForm) {
 forms.forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (!form.reportValidity()) return;
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
     const phone = String(data.get("phone") || "").trim();
@@ -476,7 +472,7 @@ forms.forEach((form) => {
     const subject = encodeURIComponent(`VNW Media strategy request${company ? ` — ${company}` : ""}`);
     const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nCompany: ${company}\nWebsite: ${website}\nInterest: ${interest}\n\nGoals:\n${message}`);
     location.href = `mailto:contactus@vnwmedia.com?subject=${subject}&body=${body}`;
-    const status = form.querySelector(".form-status");
-    if (status) status.textContent = `Thanks${name ? `, ${name}` : ""}. Your email app is opening now.`;
+    // Mailto cannot confirm delivery. Explain the remaining step on the new page.
+    setTimeout(() => location.assign(`${navRoot}thank-you.html?delivery=email`), 300);
   });
 });

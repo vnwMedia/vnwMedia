@@ -27,8 +27,13 @@ for(const record of inventory.records){
   const main=document.querySelector('main');
   if(!main)throw Error('Missing main');
   const heading=document.querySelector('h1');
+  const backgrounds=[];
+  function scan(el,path){ const image=getComputedStyle(el).backgroundImage;
+   if(image.includes('url(')&&!el.style.backgroundImage.includes('url('))backgrounds.push({path,tag:el.tagName.toLowerCase(),classes:el.className,image});
+   [...el.children].forEach((child,i)=>scan(child,[...path,i])); }
+  scan(main,[]);
   return {title:heading?.textContent.trim()||document.title,document_title:document.title,
-   html:main.outerHTML,header:document.querySelector('.site-header')?.outerHTML,
+   backgrounds,html:main.outerHTML,header:document.querySelector('.site-header')?.outerHTML,
    footer:document.querySelector('#vnw-site-footer')?.outerHTML,
    body_attributes:Object.fromEntries([...document.body.attributes].map(a=>[a.name,a.value])),
    inline_styles:[...document.querySelectorAll('head style')].map(x=>x.textContent),
@@ -44,5 +49,6 @@ for(const record of inventory.records){
  console.log(record.source);
 }
 fs.writeFileSync(path.join(out,'export.json'),JSON.stringify({baseline:inventory.baseline_commit,records},null,2));
+fs.writeFileSync(path.join(root,'wordpress/theme/vnw-media/elementor/backgrounds.json'),JSON.stringify(Object.fromEntries(records.filter(r=>r.backgrounds).map(r=>[r.source,r.backgrounds.map(b=>({...b,image:b.image.replaceAll('file://'+root+'/','{{THEME}}')}))]))));
 await browser.close();
 })();

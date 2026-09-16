@@ -1017,7 +1017,7 @@ function storyPage(){
     <section class="story2-chapters section" data-nav-theme="light" id="process"><div class="shell story2-chapter-grid"><aside class="reveal"><p class="section-tag">Our Process</p><h2>A clear path from idea to launch to improvement.</h2><p>Each phase reduces uncertainty and turns scattered goals into a more useful digital presence.</p><div class="hero-actions"><a class="pill pill-blue" href="${path("contact.html")}">Discuss your project <span aria-hidden="true">↗</span></a></div></aside><div>${chapters.map((x,i)=>`<article class="reveal"><span>${String(i+1).padStart(2,"0")}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}</div></div></section>
     <section class="story2-proof section" data-nav-theme="dark" id="why-vnw"><div class="shell story2-proof-grid"><div class="story2-proof-copy reveal"><p class="section-tag">What We Bring Together</p><h2>One team thinking across the full digital decision path.</h2><p>That means the story, pages, campaigns, visibility, proof, and follow-up can support each other instead of competing for attention.</p><a class="text-arrow" href="${path("services.html")}">Explore services <span>↗</span></a></div><div class="story2-proof-cloud reveal">${proof.map(x=>`<span>${x}</span>`).join("")}</div></div></section>
     <section class="story2-faq faq section" data-nav-theme="light" id="faq"><div class="shell faq-grid"><div class="faq-intro reveal"><p class="section-tag">Our Story FAQ</p><h2>Helpful answers for buyers comparing digital partners.</h2><p>This page gives both people and search engines a clearer understanding of who VNW Media is and how the agency helps.</p></div><div class="faq-list reveal">${faqs.map((x,i)=>`<details ${i===0?"open":""}><summary>${x[0]}<span>+</span></summary><p>${x[1]}</p></details>`).join("")}</div></div></section>
-    ${nextChapterCTA()}`;
+    `;
 }
 
 function process(){
@@ -1252,6 +1252,10 @@ function detail(kind,item){
 function bootPages(){
   const app=document.querySelector("#app"), id=document.body.dataset.page;
   let content="";
+  if(id==="thank-you") {
+    const emailDraft=new URLSearchParams(location.search).get("delivery")==="email";
+    content=`<section class="thank-you-page section" data-nav-theme="dark"><div class="shell"><p class="section-tag">Thank you</p><h1>Thanks for reaching out.</h1><p>${emailDraft?"Your email app has been asked to open your request. Please send the draft to complete your inquiry. This website cannot confirm email delivery.":"Thank you for contacting VNW Media. We look forward to discussing your business and your next steps."}</p><div class="thank-you-actions"><a class="pill pill-blue pill-large" href="${path("index.html")}">Back to homepage <span aria-hidden="true">↗</span></a><a class="pill pill-outline pill-large" href="tel:17328200609">Call us</a></div><p class="thank-you-help">${emailDraft?"No email draft opened? You can email us directly at":"Need to add anything? Email us at"} <a href="mailto:contactus@vnwmedia.com">contactus@vnwmedia.com</a>.</p></div></section>`;
+  }
   if(topPages[id]) content=topPage(id);
   if(!content && id?.startsWith("service-")) content=detail("service",DATA.services.find(x=>x[1]===id.slice(8))||DATA.services[0]);
   if(!content && id?.startsWith("industry-")) content=detail("industry",DATA.industries.find(x=>x[1]===id.slice(9))||DATA.industries[0]);

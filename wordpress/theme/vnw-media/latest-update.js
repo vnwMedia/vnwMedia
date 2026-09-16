@@ -1,0 +1,5 @@
+document.getElementById('vnw-latest-start').addEventListener('click',async function(){
+ const button=this,out=document.getElementById('vnw-latest-status');button.disabled=true;out.textContent='Preparing pages…\n';
+ async function call(id){const response=await fetch(ajaxurl,{method:'POST',body:new URLSearchParams({action:'vnw_latest_update',_ajax_nonce:button.dataset.nonce,page_id:id})});const data=await response.json();if(!data.success)throw Error(data.data);return data.data;}
+ try{const pages=await call(0);for(const page of pages){try{out.textContent+=page.title+': '+await call(page.id)+'\n';}catch(e){out.textContent+=page.title+': FAILED — '+e.message+'\n';}}out.textContent+='Finished. Review any skipped or failed pages above.';}catch(e){out.textContent+='Stopped: '+e.message;}finally{button.disabled=false;}
+});

@@ -1,5 +1,5 @@
 {
-  "baseline_commit": "f0a2c9adc7f0df60d1a73b1ef54dbe6507cbe5de",
+  "baseline_commit": "c03d1fc52d45610f6db6dd42926fa6429116443b",
   "records": [
     {
       "source": "index.html",
@@ -10,15 +10,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "styles.css?v=227",
-        "tickers.css?v=2",
-        "site-footer.css?v=1"
+        "styles.css?v=228",
+        "tickers.css?v=3",
+        "site-footer.css?v=1",
+        "site-buttons.css?v=1"
       ],
       "scripts": [
         "service-catalog.js?v=20260910-brooklyn",
-        "script.js?v=145",
-        "tickers.js?v=1",
-        "site-footer.js?v=1"
+        "script.js?v=147",
+        "tickers.js?v=2",
+        "site-footer.js?v=1",
+        "site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 2
@@ -33,16 +35,18 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "styles.css?v=227",
-        "tickers.css?v=2",
-        "site-footer.css?v=1"
+        "styles.css?v=228",
+        "tickers.css?v=3",
+        "site-footer.css?v=1",
+        "site-buttons.css?v=1"
       ],
       "scripts": [
         "service-catalog.js?v=20260910-brooklyn",
-        "pages.js?v=20260910-brooklyn-banner",
-        "script.js?v=145",
-        "tickers.js?v=1",
-        "site-footer.js?v=1"
+        "pages.js?v=20260916-story-no-chapter",
+        "script.js?v=147",
+        "tickers.js?v=2",
+        "site-footer.js?v=1",
+        "site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -57,16 +61,18 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "styles.css?v=227",
-        "tickers.css?v=2",
-        "site-footer.css?v=1"
+        "styles.css?v=228",
+        "tickers.css?v=3",
+        "site-footer.css?v=1",
+        "site-buttons.css?v=1"
       ],
       "scripts": [
         "service-catalog.js?v=20260910-brooklyn",
         "pages.js?v=20260914-service-pills",
-        "script.js?v=145",
-        "tickers.js?v=1",
-        "site-footer.js?v=1"
+        "script.js?v=147",
+        "tickers.js?v=2",
+        "site-footer.js?v=1",
+        "site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -83,16 +89,18 @@
         ]
       },
       "styles": [
-        "styles.css?v=227",
+        "styles.css?v=228",
         "services-design-review.css?v=3",
         "site-footer.css?v=1",
-        "tickers.css?v=2"
+        "tickers.css?v=3",
+        "site-buttons.css?v=1"
       ],
       "scripts": [
         "service-catalog.js?v=20260914-heroes",
-        "script.js?v=145",
+        "script.js?v=147",
         "site-footer.js?v=1",
-        "tickers.js?v=1"
+        "tickers.js?v=2",
+        "site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -107,18 +115,20 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "styles.css?v=227",
+        "styles.css?v=228",
         "industries-page.css?v=7",
-        "tickers.css?v=2",
-        "site-footer.css?v=1"
+        "tickers.css?v=3",
+        "site-footer.css?v=1",
+        "site-buttons.css?v=1"
       ],
       "scripts": [
         "service-catalog.js?v=20260910-brooklyn",
-        "industries-page.js?v=20260910-brooklyn-banner",
+        "industries-page.js?v=20260916-six-service-pills",
         "pages.js?v=20260910-brooklyn-banner",
-        "script.js?v=145",
-        "tickers.js?v=1",
-        "site-footer.js?v=1"
+        "script.js?v=147",
+        "tickers.js?v=2",
+        "site-footer.js?v=1",
+        "site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -133,20 +143,22 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "styles.css?v=227",
+        "styles.css?v=228",
         "case-studies-fresh-options.css?v=1",
         "case-studies-fresh-dark.css?v=2",
-        "case-studies-live.css?v=4",
-        "tickers.css?v=2",
-        "site-footer.css?v=1"
+        "case-studies-live.css?v=8",
+        "tickers.css?v=3",
+        "site-footer.css?v=1",
+        "site-buttons.css?v=1"
       ],
       "scripts": [
         "service-catalog.js?v=20260910-brooklyn",
         "pages.js?v=20260914-kypcl",
-        "case-studies-fresh-options.js?v=20260914-kypcl",
-        "script.js?v=145",
-        "tickers.js?v=1",
-        "site-footer.js?v=1"
+        "case-studies-fresh-options.js?v=20260916-cinematic",
+        "script.js?v=147",
+        "tickers.js?v=2",
+        "site-footer.js?v=1",
+        "site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -163,17 +175,19 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
-        "styles.css?v=227",
-        "resources-content.css?v=5",
-        "tickers.css?v=2",
-        "site-footer.css?v=1"
+        "styles.css?v=228",
+        "resources-content.css?v=6",
+        "tickers.css?v=3",
+        "site-footer.css?v=1",
+        "site-buttons.css?v=1"
       ],
       "scripts": [
         "service-catalog.js?v=20260914-heroes",
-        "script.js?v=145",
+        "script.js?v=147",
         "resources-live.js?v=2",
         "tickers.js?v=2",
-        "site-footer.js?v=1"
+        "site-footer.js?v=1",
+        "site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -188,16 +202,18 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "styles.css?v=227",
-        "tickers.css?v=2",
-        "site-footer.css?v=1"
+        "styles.css?v=228",
+        "tickers.css?v=3",
+        "site-footer.css?v=1",
+        "site-buttons.css?v=1"
       ],
       "scripts": [
         "service-catalog.js?v=20260910-brooklyn",
         "pages.js?v=20260910-brooklyn-banner",
-        "script.js?v=145",
-        "tickers.js?v=1",
-        "site-footer.js?v=1"
+        "script.js?v=147",
+        "tickers.js?v=2",
+        "site-footer.js?v=1",
+        "site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -212,16 +228,18 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "styles.css?v=227",
-        "tickers.css?v=2",
-        "site-footer.css?v=1"
+        "styles.css?v=228",
+        "tickers.css?v=3",
+        "site-footer.css?v=1",
+        "site-buttons.css?v=1"
       ],
       "scripts": [
         "service-catalog.js?v=20260910-brooklyn",
         "pages.js?v=20260910-brooklyn-banner",
-        "script.js?v=145",
-        "tickers.js?v=1",
-        "site-footer.js?v=1"
+        "script.js?v=147",
+        "tickers.js?v=2",
+        "site-footer.js?v=1",
+        "site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -235,17 +253,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -259,17 +279,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -283,17 +305,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -307,16 +331,18 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -330,17 +356,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -354,17 +382,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -378,17 +408,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -402,17 +434,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -426,17 +460,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -450,17 +486,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -474,17 +512,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -498,17 +538,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -522,17 +564,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -546,17 +590,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -570,17 +616,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -594,17 +642,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -618,17 +668,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -642,17 +694,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -666,17 +720,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -690,16 +746,18 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -713,17 +771,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -737,17 +797,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -761,17 +823,19 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
         "../create-service-content.js?v=5",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../tickers.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -790,15 +854,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 1
@@ -817,15 +883,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 1
@@ -844,15 +912,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 1
@@ -871,15 +941,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 1
@@ -898,15 +970,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 1
@@ -925,15 +999,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 1
@@ -952,15 +1028,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 1
@@ -979,15 +1057,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 1
@@ -1001,18 +1081,20 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../la-rosa-case-study.css?v=20260914-kypcl",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
         "../pages.js?v=20260914-kypcl",
         "../client-case-study-enhancements.js?v=20260914-kypcl",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1022,8 +1104,12 @@
       "type": "redirect",
       "source_title": "KYPCL Case Study | VNW Media",
       "body_attributes": {},
-      "styles": [],
-      "scripts": [],
+      "styles": [
+        "../site-buttons.css?v=1"
+      ],
+      "scripts": [
+        "../site-buttons.js?v=1"
+      ],
       "redirect": "0;url=kypcl.html",
       "form_count": 0
     },
@@ -1036,18 +1122,20 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../la-rosa-case-study.css?v=20260914-kypcl",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
         "../pages.js?v=20260914-kypcl",
         "../client-case-study-enhancements.js?v=20260914-kypcl",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1061,18 +1149,20 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../la-rosa-case-study.css?v=20260914-kypcl",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
         "../pages.js?v=20260914-kypcl",
-        "../la-rosa-case-study.js?v=5",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../la-rosa-case-study.js?v=7",
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1082,8 +1172,12 @@
       "type": "redirect",
       "source_title": "Client case study | VNW Media",
       "body_attributes": {},
-      "styles": [],
-      "scripts": [],
+      "styles": [
+        "../site-buttons.css?v=1"
+      ],
+      "scripts": [
+        "../site-buttons.js?v=1"
+      ],
       "redirect": "0;url=la-rosa-chicken-grill.html",
       "form_count": 0
     },
@@ -1092,8 +1186,12 @@
       "type": "redirect",
       "source_title": "Client case study | VNW Media",
       "body_attributes": {},
-      "styles": [],
-      "scripts": [],
+      "styles": [
+        "../site-buttons.css?v=1"
+      ],
+      "scripts": [
+        "../site-buttons.js?v=1"
+      ],
       "redirect": "0;url=brooklyn-motors.html",
       "form_count": 0
     },
@@ -1109,15 +1207,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../resources-content.css?v=5",
-        "../site-footer.css?v=1"
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../resources-live.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1134,15 +1234,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../resources-content.css?v=5",
-        "../site-footer.css?v=1"
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../resources-live.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1159,15 +1261,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../resources-content.css?v=5",
-        "../site-footer.css?v=1"
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../resources-live.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1184,15 +1288,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../resources-content.css?v=5",
-        "../site-footer.css?v=1"
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../resources-live.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1209,15 +1315,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../resources-content.css?v=5",
-        "../site-footer.css?v=1"
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../resources-live.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1231,16 +1339,18 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1254,16 +1364,18 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1280,15 +1392,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../resources-content.css?v=5",
-        "../site-footer.css?v=1"
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../resources-live.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1305,15 +1419,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../resources-content.css?v=5",
-        "../site-footer.css?v=1"
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../resources-live.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1330,15 +1446,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../resources-content.css?v=5",
-        "../site-footer.css?v=1"
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../resources-live.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1355,15 +1473,17 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../resources-content.css?v=5",
-        "../site-footer.css?v=1"
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../resources-live.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1377,16 +1497,18 @@
         "data-depth": "1"
       },
       "styles": [
-        "../styles.css?v=227",
-        "../tickers.css?v=2",
-        "../site-footer.css?v=1"
+        "../styles.css?v=228",
+        "../tickers.css?v=3",
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260910-brooklyn",
         "../pages.js?v=20260910-brooklyn-banner",
-        "../script.js?v=145",
-        "../tickers.js?v=1",
-        "../site-footer.js?v=1"
+        "../script.js?v=147",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
@@ -1403,18 +1525,38 @@
       },
       "styles": [
         "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
-        "../styles.css?v=227",
+        "../styles.css?v=228",
         "../resources-content.css?v=5",
-        "../site-footer.css?v=1"
+        "../site-footer.css?v=1",
+        "../site-buttons.css?v=1"
       ],
       "scripts": [
         "../service-catalog.js?v=20260914-heroes",
-        "../script.js?v=145",
+        "../script.js?v=147",
         "../resources-live.js?v=2",
-        "../site-footer.js?v=1"
+        "../site-footer.js?v=1",
+        "../site-buttons.js?v=1"
       ],
       "redirect": null,
       "form_count": 0
+    },
+    {
+      "source": "thank-you.html",
+      "type": "page",
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "styles.css?v=228",
+        "thank-you.css?v=2",
+        "site-footer.css?v=1",
+        "site-buttons.css?v=1"
+      ],
+      "scripts": [
+        "service-catalog.js?v=20260910-brooklyn",
+        "pages.js?v=20260916-thank-you",
+        "script.js?v=147",
+        "site-footer.js?v=1",
+        "site-buttons.js?v=1"
+      ]
     }
   ]
 }

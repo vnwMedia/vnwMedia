@@ -1,0 +1,240 @@
+[
+  {
+    "width": 1440,
+    "file": "index.html",
+    "source": {
+      "height": 9220.15625,
+      "hero": 934,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 9220.15625,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 1440,
+    "file": "our-story.html",
+    "source": {
+      "height": 5062.03125,
+      "hero": 610,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 5062.03125,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 1440,
+    "file": "work.html",
+    "source": {
+      "height": 5916.59375,
+      "hero": 610,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 5916.59375,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 1440,
+    "file": "services.html",
+    "source": {
+      "height": 4170.203125,
+      "hero": 610,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 4170.203125,
+      "hero": 610,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 1440,
+    "file": "industries.html",
+    "source": {
+      "height": 5501.78125,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 5501.78125,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 1440,
+    "file": "case-studies.html",
+    "source": {
+      "height": 6043.625,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 6043.625,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 1440,
+    "file": "resources.html",
+    "source": {
+      "height": 4819.203125,
+      "hero": 610,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 4819.203125,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 1440,
+    "file": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow.html",
+    "source": {
+      "height": 4790.515625,
+      "hero": 610,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 4790.515625,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 390,
+    "file": "index.html",
+    "source": {
+      "height": 17646.03125,
+      "hero": 1179.609375,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 17646.03125,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 390,
+    "file": "our-story.html",
+    "source": {
+      "height": 7783.140625,
+      "hero": 679.15625,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 7783.140625,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 390,
+    "file": "work.html",
+    "source": {
+      "height": 10115.328125,
+      "hero": 751.546875,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 10115.328125,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 390,
+    "file": "services.html",
+    "source": {
+      "height": 6557.8125,
+      "hero": 627.21875,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 6557.8125,
+      "hero": 627.21875,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 390,
+    "file": "industries.html",
+    "source": {
+      "height": 7864.515625,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 7864.515625,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 390,
+    "file": "case-studies.html",
+    "source": {
+      "height": 8243.796875,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 8243.796875,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 390,
+    "file": "resources.html",
+    "source": {
+      "height": 8646.71875,
+      "hero": 580,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 8646.71875,
+      "overflow": false,
+      "broken": []
+    }
+  },
+  {
+    "width": 390,
+    "file": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow.html",
+    "source": {
+      "height": 7313.796875,
+      "hero": 580,
+      "overflow": false,
+      "broken": []
+    },
+    "wordpress": {
+      "height": 7313.796875,
+      "overflow": false,
+      "broken": []
+    }
+  }
+]

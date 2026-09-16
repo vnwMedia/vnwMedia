@@ -43,6 +43,7 @@ add_action('wp_enqueue_scripts',function(){
  wp_enqueue_script('vnw-interactions',get_template_directory_uri().'/interactions.js',['vnw-catalog'],null,true);
  wp_add_inline_script('vnw-interactions','window.vnwSite='.wp_json_encode(['home'=>trailingslashit(home_url()),'theme'=>trailingslashit(get_template_directory_uri())]).';','before');
  wp_enqueue_script('vnw-tickers',get_template_directory_uri().'/tickers.js',['vnw-interactions'],null,true);
+ wp_enqueue_script('vnw-buttons',get_template_directory_uri().'/site-buttons.js',['vnw-interactions'],'0.3.0',true);
  wp_enqueue_script('vnw-resources',get_template_directory_uri().'/resources-live.js',['vnw-interactions'],null,true);
 });
 function vnw_import() {
@@ -96,7 +97,7 @@ function vnw_prepare_forms($html){
 }
 function vnw_contact(){
  $return=wp_validate_redirect(esc_url_raw(wp_unslash($_POST['return_to']??'')),home_url('/contact.html'));
- $finish=function($status)use($return){wp_safe_redirect(add_query_arg('inquiry',$status,$return));exit;};
+ $finish=function($status)use($return){wp_safe_redirect($status==='sent'?home_url('/thank-you.html'):add_query_arg('inquiry',$status,$return));exit;};
  if($_SERVER['REQUEST_METHOD']!=='POST'||!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['vnw_nonce']??'')),'vnw_contact'))$finish('error');
  if(!empty($_POST['vnw_company_url']))$finish('error');
  $email=sanitize_email(wp_unslash($_POST['email']??''));$name=sanitize_text_field(wp_unslash($_POST['name']??''));
@@ -118,3 +119,5 @@ add_action('wp_head',function(){
 add_action('save_post_post',function($id,$post,$update){if(!$update && !wp_is_post_revision($id))update_post_meta($id,'_vnw_resource','1');},10,3);
 
 require_once __DIR__.'/elementor/integration.php';
+
+require_once __DIR__."/latest-update.php";

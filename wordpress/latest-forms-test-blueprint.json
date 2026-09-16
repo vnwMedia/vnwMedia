@@ -1,0 +1,44 @@
+{
+  "steps": [
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/vnw-test-mail.php",
+      "data": "<?php\nadd_filter('pre_wp_mail',function($return,$atts){update_option('vnw_test_mail',$atts);return true;},10,2);\nadd_action('rest_api_init',function(){register_rest_route('vnw-test/v1','/mail',['methods'=>'GET','permission_callback'=>'__return_true','callback'=>function(){return get_option('vnw_test_mail');}]);});\n"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/elementor.latest-stable.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "vnw-media"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; vnw_import(); update_option('blog_public', 0);"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $before=wp_count_posts('page')->publish+wp_count_posts('post')->publish; if(vnw_import()!==0)throw new Exception('Import not idempotent'); $after=wp_count_posts('page')->publish+wp_count_posts('post')->publish; if($before!==$after)throw new Exception('Import duplicated content');"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $items=get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']); if(count($items)!==57)throw new Exception('Wrong content count'); foreach($items as $item)if(get_post_meta($item->ID,'_vnw_source',true)==='index.html' && substr_count($item->post_content,'<form')!==2)throw new Exception('Missing forms');"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; foreach(get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']) as $p) vnw_elementor_convert($p->ID);"
+    }
+  ],
+  "login": true,
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "latest"
+  }
+}

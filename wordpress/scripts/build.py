@@ -61,7 +61,7 @@ home=manifest[0]
 # Copy design assets only, never the old page-generation application.
 shutil.copytree(root/'assets',theme/'assets',dirs_exist_ok=True,ignore=shutil.ignore_patterns('.DS_Store'))
 for file in root.glob('*.css'):shutil.copy2(file,theme/file.name)
-for name in ['service-catalog.js','tickers.js','resources-live.js','favicon.ico']:
+for name in ['service-catalog.js','tickers.js','resources-live.js','site-buttons.js','favicon.ico']:
  shutil.copy2(root/name,theme/name)
 script=(root/'script.js').read_text()
 a=script.index('const siteHeaderElement');b=script.index('function markCurrentPrimaryNavigation')

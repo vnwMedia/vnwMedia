@@ -492,3 +492,6 @@ html{scroll-behavior: smooth; scroll-padding-top: 70px;}
 .resources-live main .filters button:hover,.resources-live main .filters button:focus-visible{color:#00aeef;border-color:#00aeef;background:rgba(0,174,239,.1)}
 .resources-live main .filters button[aria-pressed="true"]:hover,.resources-live main .filters button[aria-pressed="true"]:focus-visible{color:#07141a;background:#00aeef;border-color:#00aeef}
 @media(prefers-reduced-motion:reduce){.resources-live main .filters button{transition:none}}
+
+/* Reuse the homepage pill classes for the Resources hero action. */
+.resources-live main .cover-five .pill-blue{color:#fff;margin-top:40px}

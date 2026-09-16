@@ -1,0 +1,12 @@
+/* Shared homepage button baseline. Keep this after page-specific styles. */
+:root{--site-button-blue:#00aeef;--site-button-hover:#008ac0;--site-button-radius:9999px}
+html body :is(button,input[type="submit"],input[type="button"],[role="button"],a.pill,a.cta,a.button,a.fc-button,a.nc-button,a.mp-button,a.sd-button,a.promo-button,a.tab-cta,a.option-button,a.sm-cta,a.mobile-plan){border-radius:var(--site-button-radius)!important}
+html body :is(a,button,input).site-button{display:inline-flex!important;max-width:100%!important;box-sizing:border-box!important;white-space:normal!important;align-items:center!important;justify-content:center!important;gap:18px!important;min-height:46px!important;padding:11px 24px!important;border-width:1px;border-style:solid;font-family:Inter,system-ui,sans-serif!important;font-size:14px!important;font-weight:500!important;line-height:1.55!important;text-decoration:none!important;text-align:center!important;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,color .2s ease}
+html body .site-button-primary{background:var(--site-button-blue)!important;color:#fff!important;border-color:transparent!important}
+html body .site-button-primary:is(:hover,:focus-visible){background:var(--site-button-hover)!important;color:#fff!important}
+html body .site-button-outline{background:transparent!important}
+html body .site-control-blue{color:#fff!important}
+html body .site-button-arrow{display:inline-block;flex:none;color:inherit!important;font:inherit!important;line-height:1!important;margin:0!important}
+html body .site-button:focus-visible{outline:3px solid var(--site-button-blue);outline-offset:4px}
+html body .site-button:disabled{cursor:not-allowed;opacity:.6}
+@media(prefers-reduced-motion:reduce){html body .site-button{transition:none}}

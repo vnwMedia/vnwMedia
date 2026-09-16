@@ -1,0 +1,43 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/elementor.latest-stable.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "vnw-media"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; vnw_import(); update_option('blog_public', 0);"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $before=wp_count_posts('page')->publish+wp_count_posts('post')->publish; if(vnw_import()!==0)throw new Exception('Import not idempotent'); $after=wp_count_posts('page')->publish+wp_count_posts('post')->publish; if($before!==$after)throw new Exception('Import duplicated content');"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $items=get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']); if(count($items)!==57)throw new Exception('Wrong content count'); foreach($items as $item)if(get_post_meta($item->ID,'_vnw_source',true)==='index.html' && substr_count($item->post_content,'<form')!==2)throw new Exception('Missing forms');"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; foreach(get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']) as $p) vnw_elementor_convert($p->ID);"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire '/wordpress/wp-load.php';\n$previous=json_decode(file_get_contents(get_template_directory().'/content/previous-pages.json'),true);\n$catalog=json_decode(file_get_contents(get_template_directory().'/elementor/previous-sections.json'),true);\n$ids=[];\nforeach($previous as $r){\n if($r['type']==='redirect')continue;\n $id=get_posts(['post_type'=>['page','post'],'meta_key'=>'_vnw_source','meta_value'=>$r['source'],'numberposts'=>1])[0]->ID;\n kses_remove_filters();wp_update_post(wp_slash(['ID'=>$id,'post_content'=>$r['post_content']??$r['html'],'post_title'=>$r['title'],'post_excerpt'=>$r['description']]));kses_init_filters();\n $elements=[];foreach($catalog['pages'][$r['source']]['sections'] as $key)$elements[]=['id'=>substr($key,0,7),'elType'=>'widget','widgetType'=>'vnw-section-'.$key,'settings'=>[],'elements'=>[]];\n update_post_meta($id,'_elementor_data',wp_slash(wp_json_encode($elements)));update_post_meta($id,'_vnw_elementor',1);update_post_meta($id,'_elementor_edit_mode','builder');\n $ids[]=$id;\n}\n$id=$ids[0];$raw=get_post_meta($id,'_elementor_data',true);$edited=json_decode($raw,true);$edited[0]['settings']['field_9']='Protected manual edit';update_post_meta($id,'_elementor_data',wp_slash(wp_json_encode($edited)));$saved=get_post_meta($id,'_elementor_data',true);\nif(vnw_refresh_latest($id)!=='Skipped: Elementor content was edited'||get_post_meta($id,'_elementor_data',true)!==$saved)throw new Exception('Edited Elementor content not protected');\nupdate_post_meta($id,'_elementor_data',wp_slash($raw));\n$body=get_post($id)->post_content;wp_update_post(wp_slash(['ID'=>$id,'post_content'=>$body.'<p>Manual edit</p>']));\nif(vnw_refresh_latest($id)!=='Skipped: page content was edited')throw new Exception('Edited content not protected');\nkses_remove_filters();wp_update_post(wp_slash(['ID'=>$id,'post_content'=>$body]));kses_init_filters();\nforeach($ids as $id){$result=vnw_refresh_latest($id);if($result!=='Updated to latest design')throw new Exception($id.': '.$result);if(vnw_refresh_latest($id)!=='Already current; edits retained')throw new Exception('Not idempotent');if(!get_post_meta($id,'_vnw_before_030',true))throw new Exception('Missing recovery snapshot');}\n"
+    }
+  ],
+  "login": true,
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "latest"
+  }
+}

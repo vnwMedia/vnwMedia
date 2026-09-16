@@ -1,3 +1,7 @@
+# Current release: 0.3.0
+
+See LATEST-EXPORT-0.3.0.md for current source, installation, verification and limitations. Earlier entries below are historical.
+
 # 0.2.1 staging conversion correction
 
 The user installed 0.2.0. Many marketing pages were blocked by the exact-string protection check, while some articles converted. Read-only inspection of the public staging homepage confirmed that its markup matches the bundled page exactly after normalizing non-ASCII numeric entities (arrows and emoji). The 0.2.1 comparison fixes this false positive without ignoring real text, image, attribute or markup changes. The diagnostic did not modify hosting. See elementor-encoding-test-blueprint.json for regression coverage.

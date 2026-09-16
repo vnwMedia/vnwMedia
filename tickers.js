@@ -57,7 +57,6 @@
         viewport.tabIndex = 0;
         viewport.setAttribute('role', 'region');
         viewport.setAttribute('aria-label', track.parentElement.getAttribute('aria-label') || 'Scrolling topics');
-        viewport.setAttribute('aria-description', 'Focus here to pause the ticker.');
       }
       track.before(viewport);
       viewport.append(track);
@@ -118,7 +117,8 @@
         })) refresh();
       });
       records.forEach(({viewport}) => observer.observe(viewport));
-      addEventListener('resize', refresh, {passive:true});
+      // Observe width changes only: mobile browser chrome can resize the
+      // viewport height while scrolling, which must not restart the loop.
       document.fonts?.addEventListener('loadingdone', refresh);
     });
   }

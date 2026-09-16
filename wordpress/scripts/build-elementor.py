@@ -6,7 +6,7 @@ root=Path(__file__).resolve().parents[1]/'theme/vnw-media'
 backgrounds=json.loads((root/'elementor/backgrounds.json').read_text())
 records=json.loads((root/'content/pages.json').read_text()); sections={}; pages={}
 def widget(node,seed):
- key=hashlib.sha256(seed.encode()).hexdigest()[:12];fields={}
+ key=hashlib.sha256((seed+':'+str(node)).encode()).hexdigest()[:12];fields={}
  title=node.select_one('h1,h2,h3')
  label=(title.get_text(' ',strip=True) if title else node.get('id') or ' '.join(node.get('class',[])) or node.name)[:90]
  def field(typ,value,label):
@@ -45,5 +45,7 @@ for r in records:
 
  keys=[widget(n,r['source']+':'+str(i)) for i,n in enumerate(list(main.children)) if isinstance(n,Tag)]
  pages[r['source']]={'sections':keys,'main_attributes':main.attrs}
+previous=json.loads((root/'elementor/previous-sections.json').read_text())
+sections={**previous['sections'],**sections}
 (root/'elementor/sections.json').write_text(json.dumps({'sections':sections,'pages':pages},ensure_ascii=False))
 print(len(pages),'pages;',len(sections),'editable section widgets;',sum(len(s['fields']) for s in sections.values()),'controls')
