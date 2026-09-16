@@ -6,7 +6,9 @@ body_class($attrs['class']??[]);echo ' ';
 foreach($attrs as $name=>$value)if($name==='id'||str_starts_with($name,'data-'))echo esc_attr($name).'="'.esc_attr(is_array($value)?implode(' ',$value):$value).'" ';
 ?>><?php wp_body_open(); echo vnw_expand(file_get_contents(__DIR__.'/content/header.html')); ?>
 <?php
-if(have_posts()):while(have_posts()):the_post();
+if(!empty($GLOBALS['vnw_bundled_thank_you']) && $r):
+ echo vnw_expand($r['post_content']??$r['html']);
+elseif(have_posts()):while(have_posts()):the_post();
  if($r && vnw_elementor_enabled(get_the_ID())) {
   $page=vnw_elementor_catalog()['pages'][$r['source']];
   echo '<main';

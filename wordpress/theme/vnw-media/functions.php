@@ -9,7 +9,7 @@ function vnw_expand($html) {
  return str_replace(['{{HOME}}','{{THEME}}','{{FORM_ACTION}}'], [trailingslashit(home_url()),trailingslashit(get_template_directory_uri()),admin_url('admin-post.php')], $html);
 }
 function vnw_record() {
- $source = get_post_meta(get_queried_object_id(), '_vnw_source', true);
+ $source = !empty($GLOBALS['vnw_bundled_thank_you']) ? 'thank-you.html' : get_post_meta(get_queried_object_id(), '_vnw_source', true);
  foreach (vnw_records() as $record) if ($record['source'] === $source) return $record;
  if(is_singular('post')){foreach(vnw_records() as $record)if($record['type']==='post' && str_contains($record['html'],'{{POST_CONTENT}}')){$record['source']='native-post';$record['document_title']=get_the_title().' | VNW Media';$record['description']=get_the_excerpt();$record['schemas']=[];return $record;}}
  return null;
@@ -35,17 +35,35 @@ add_action('template_redirect',function(){
  $base=trim(parse_url(home_url(),PHP_URL_PATH)??'','/');if($base && str_starts_with($path,$base.'/'))$path=substr($path,strlen($base)+1);
  foreach(vnw_records() as $r)if($r['type']==='redirect' && $path===$r['source']){wp_safe_redirect(home_url('/'.$r['target']),301);exit;}
 });
+// Theme replacement does not import new database pages. Keep the bundled
+// confirmation route available until the explicit importer creates its editable page.
+add_action('template_redirect',function(){
+ if(!is_404())return;
+ $path=untrailingslashit(wp_parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH)??'');
+ $expected=untrailingslashit(wp_parse_url(home_url('/thank-you.html'),PHP_URL_PATH));
+ if($path!==$expected)return;
+ $GLOBALS['vnw_bundled_thank_you']=true;
+ $GLOBALS['wp_query']->is_404=false;
+ status_header(200);
+},1);
 add_action('wp_enqueue_scripts',function(){
  $r=vnw_record();if(!$r)$r=vnw_records()[0];
- foreach($r['styles'] as $i=>$url)wp_enqueue_style('vnw-'.$i,vnw_expand($url),[],null);
+ // Elementor's base image/reset rules must precede the source design rules.
+ $deps=array_values(array_filter(wp_styles()->queue,fn($handle)=>str_starts_with($handle,'elementor-')));
+ foreach($r['styles'] as $i=>$url){
+  $expanded=vnw_expand($url);
+  if(str_contains($expanded,get_template_directory_uri().'/'))$expanded=add_query_arg('vnw_build','0.3.1',$expanded);
+  wp_enqueue_style('vnw-'.$i,$expanded,$deps,null);
+  $deps=['vnw-'.$i];
+ }
  foreach($r['inline_styles'] as $css)wp_add_inline_style('vnw-'.(count($r['styles'])-1),vnw_expand($css));
  wp_enqueue_script('vnw-catalog',get_template_directory_uri().'/service-catalog.js',[],null,true);
  wp_enqueue_script('vnw-interactions',get_template_directory_uri().'/interactions.js',['vnw-catalog'],null,true);
  wp_add_inline_script('vnw-interactions','window.vnwSite='.wp_json_encode(['home'=>trailingslashit(home_url()),'theme'=>trailingslashit(get_template_directory_uri())]).';','before');
  wp_enqueue_script('vnw-tickers',get_template_directory_uri().'/tickers.js',['vnw-interactions'],null,true);
- wp_enqueue_script('vnw-buttons',get_template_directory_uri().'/site-buttons.js',['vnw-interactions'],'0.3.0',true);
+ wp_enqueue_script('vnw-buttons',get_template_directory_uri().'/site-buttons.js',['vnw-interactions'],'0.3.1',true);
  wp_enqueue_script('vnw-resources',get_template_directory_uri().'/resources-live.js',['vnw-interactions'],null,true);
-});
+},100);
 function vnw_import() {
  $count=0;$home=0;
  foreach(vnw_records() as $i=>$r){

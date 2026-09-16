@@ -12,3 +12,6 @@ main .work-agency-process-option1 .work-agency-process-grid figure { margin:0 0 
 
 body.admin-bar .site-header { top:32px; }
 @media (max-width:782px) { body.admin-bar .site-header { top:46px; } }
+
+/* Match the source hero rule; Elementor img has greater specificity. */
+main .cs-live-hero-image { height:100%; }

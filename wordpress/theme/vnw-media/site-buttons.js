@@ -8,6 +8,7 @@
   }
   function normalize() {
     document.querySelectorAll(ctas).forEach(link => {
+      if (link.closest('#wpadminbar')) return;
       link.classList.add('site-button');
       const outline = link.classList.contains('pill-outline') || link.classList.contains('sd-outline') || link.classList.contains('outline');
       link.classList.toggle('site-button-outline', outline);
@@ -23,6 +24,7 @@
       }
     });
     document.querySelectorAll(controls).forEach(control => {
+      if (control.closest('#wpadminbar')) return;
       const submit = control.matches('input[type="submit"],button[type="submit"]') || (control.matches('button:not([type])') && !!control.closest('form'));
       if (submit) control.classList.add('site-button', 'site-button-primary');
       // Only correct blue controls' text; selected-state and toggle logic stay intact.

@@ -67,8 +67,8 @@ add_action('admin_menu', function() {
 });
 add_action('wp_enqueue_scripts', function() {
  if (!vnw_elementor_enabled(get_queried_object_id())) return;
- wp_enqueue_style('vnw-elementor', get_template_directory_uri().'/elementor/editor.css',[], '0.3.0');
- if (\Elementor\Plugin::$instance->editor->is_edit_mode()) wp_enqueue_script('vnw-elementor-preview',get_template_directory_uri().'/elementor/preview.js',[], '0.3.0',true);
+ wp_enqueue_style('vnw-elementor', get_template_directory_uri().'/elementor/editor.css',[], '0.3.1');
+ if (\Elementor\Plugin::$instance->editor->is_edit_mode()) wp_enqueue_script('vnw-elementor-preview',get_template_directory_uri().'/elementor/preview.js',[], '0.3.1',true);
 }, 100);
 
 add_action('wp_ajax_vnw_visual_convert',function() {
