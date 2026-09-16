@@ -1252,6 +1252,10 @@ function detail(kind,item){
 function bootPages(){
   const app=document.querySelector("#app"), id=document.body.dataset.page;
   let content="";
+  if(id==="thank-you") {
+    const emailDraft=new URLSearchParams(location.search).get("delivery")==="email";
+    content=`<section class="thank-you-page section" data-nav-theme="dark"><div class="shell"><p class="section-tag">Thank you</p><h1>Thanks for reaching out.</h1><p>${emailDraft?"Your email app has been asked to open your request. Please send the draft to complete your inquiry. This website cannot confirm email delivery.":"Thank you for contacting VNW Media. We look forward to discussing your business and your next steps."}</p><div class="thank-you-actions"><a class="pill pill-blue pill-large" href="${path("index.html")}">Back to homepage <span aria-hidden="true">↗</span></a><a class="pill pill-outline pill-large" href="tel:17328200609">Call us</a></div><p class="thank-you-help">${emailDraft?"No email draft opened? You can email us directly at":"Need to add anything? Email us at"} <a href="mailto:contactus@vnwmedia.com">contactus@vnwmedia.com</a>.</p></div></section>`;
+  }
   if(topPages[id]) content=topPage(id);
   if(!content && id?.startsWith("service-")) content=detail("service",DATA.services.find(x=>x[1]===id.slice(8))||DATA.services[0]);
   if(!content && id?.startsWith("industry-")) content=detail("industry",DATA.industries.find(x=>x[1]===id.slice(9))||DATA.industries[0]);

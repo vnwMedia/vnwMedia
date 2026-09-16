@@ -1,0 +1,8 @@
+.thank-you-page{min-height:70vh;padding:180px 0 100px;background:#111;color:#fff}
+.thank-you-page h1{max-width:850px;margin-bottom:30px}
+.thank-you-page p:not(.section-tag){max-width:680px;color:#bdbdbd;font-size:var(--vnw-type-body);line-height:1.7}
+.thank-you-actions{display:flex;flex-wrap:wrap;gap:16px;margin:36px 0}
+.thank-you-page .thank-you-help{margin-top:42px;font-size:var(--vnw-type-small)}
+.thank-you-help a{color:#00aeef;overflow-wrap:anywhere}
+.thank-you-page a:focus-visible{outline:3px solid #00aeef;outline-offset:5px}
+@media(max-width:640px){.thank-you-page{padding:140px 0 70px}.thank-you-actions{flex-direction:column;align-items:flex-start}}
