@@ -1,0 +1,1420 @@
+{
+  "baseline_commit": "f0a2c9adc7f0df60d1a73b1ef54dbe6507cbe5de",
+  "records": [
+    {
+      "source": "index.html",
+      "type": "page",
+      "source_title": "VNW Media | Web Design & Digital Marketing in New Jersey",
+      "body_attributes": {
+        "data-page": "home"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "styles.css?v=227",
+        "tickers.css?v=2",
+        "site-footer.css?v=1"
+      ],
+      "scripts": [
+        "service-catalog.js?v=20260910-brooklyn",
+        "script.js?v=145",
+        "tickers.js?v=1",
+        "site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 2
+    },
+    {
+      "source": "our-story.html",
+      "type": "page",
+      "source_title": null,
+      "body_attributes": {
+        "data-page": "story",
+        "data-depth": "0"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "styles.css?v=227",
+        "tickers.css?v=2",
+        "site-footer.css?v=1"
+      ],
+      "scripts": [
+        "service-catalog.js?v=20260910-brooklyn",
+        "pages.js?v=20260910-brooklyn-banner",
+        "script.js?v=145",
+        "tickers.js?v=1",
+        "site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "work.html",
+      "type": "page",
+      "source_title": null,
+      "body_attributes": {
+        "data-page": "work",
+        "data-depth": "0"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "styles.css?v=227",
+        "tickers.css?v=2",
+        "site-footer.css?v=1"
+      ],
+      "scripts": [
+        "service-catalog.js?v=20260910-brooklyn",
+        "pages.js?v=20260914-service-pills",
+        "script.js?v=145",
+        "tickers.js?v=1",
+        "site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services.html",
+      "type": "page",
+      "source_title": "Services | VNW Media",
+      "body_attributes": {
+        "class": [
+          "sd-site",
+          "sd-concept-1",
+          "services-landing"
+        ]
+      },
+      "styles": [
+        "styles.css?v=227",
+        "services-design-review.css?v=3",
+        "site-footer.css?v=1",
+        "tickers.css?v=2"
+      ],
+      "scripts": [
+        "service-catalog.js?v=20260914-heroes",
+        "script.js?v=145",
+        "site-footer.js?v=1",
+        "tickers.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "industries.html",
+      "type": "page",
+      "source_title": null,
+      "body_attributes": {
+        "data-page": "industries",
+        "data-depth": "0"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "styles.css?v=227",
+        "industries-page.css?v=7",
+        "tickers.css?v=2",
+        "site-footer.css?v=1"
+      ],
+      "scripts": [
+        "service-catalog.js?v=20260910-brooklyn",
+        "industries-page.js?v=20260910-brooklyn-banner",
+        "pages.js?v=20260910-brooklyn-banner",
+        "script.js?v=145",
+        "tickers.js?v=1",
+        "site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "case-studies.html",
+      "type": "page",
+      "source_title": "Web Design & Digital Marketing Case Studies | VNW Media",
+      "body_attributes": {
+        "data-page": "cases-hub",
+        "data-depth": "0"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "styles.css?v=227",
+        "case-studies-fresh-options.css?v=1",
+        "case-studies-fresh-dark.css?v=2",
+        "case-studies-live.css?v=4",
+        "tickers.css?v=2",
+        "site-footer.css?v=1"
+      ],
+      "scripts": [
+        "service-catalog.js?v=20260910-brooklyn",
+        "pages.js?v=20260914-kypcl",
+        "case-studies-fresh-options.js?v=20260914-kypcl",
+        "script.js?v=145",
+        "tickers.js?v=1",
+        "site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources.html",
+      "type": "page",
+      "source_title": "Resources | VNW Media",
+      "body_attributes": {
+        "class": [
+          "resources-live",
+          "concept-5"
+        ]
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+        "styles.css?v=227",
+        "resources-content.css?v=5",
+        "tickers.css?v=2",
+        "site-footer.css?v=1"
+      ],
+      "scripts": [
+        "service-catalog.js?v=20260914-heroes",
+        "script.js?v=145",
+        "resources-live.js?v=2",
+        "tickers.js?v=2",
+        "site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "contact.html",
+      "type": "page",
+      "source_title": null,
+      "body_attributes": {
+        "data-page": "contact",
+        "data-depth": "0"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "styles.css?v=227",
+        "tickers.css?v=2",
+        "site-footer.css?v=1"
+      ],
+      "scripts": [
+        "service-catalog.js?v=20260910-brooklyn",
+        "pages.js?v=20260910-brooklyn-banner",
+        "script.js?v=145",
+        "tickers.js?v=1",
+        "site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "clients.html",
+      "type": "page",
+      "source_title": null,
+      "body_attributes": {
+        "data-page": "clients",
+        "data-depth": "0"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "styles.css?v=227",
+        "tickers.css?v=2",
+        "site-footer.css?v=1"
+      ],
+      "scripts": [
+        "service-catalog.js?v=20260910-brooklyn",
+        "pages.js?v=20260910-brooklyn-banner",
+        "script.js?v=145",
+        "tickers.js?v=1",
+        "site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/app-design-development.html",
+      "type": "page",
+      "source_title": "App Design & Development in New Jersey | VNW Media",
+      "body_attributes": {
+        "data-page": "service-app-design-development",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/brand-strategy.html",
+      "type": "page",
+      "source_title": "Brand Strategy Agency in New Jersey | VNW Media",
+      "body_attributes": {
+        "data-page": "service-brand-strategy",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/community-management.html",
+      "type": "page",
+      "source_title": "Community Management Services | VNW Media",
+      "body_attributes": {
+        "data-page": "service-community-management",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/content-writing.html",
+      "type": "page",
+      "source_title": "Content Writing | VNW Media",
+      "body_attributes": {
+        "data-page": "service-content-writing",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/crm-automation.html",
+      "type": "page",
+      "source_title": "CRM Integration & Marketing Automation | VNW Media",
+      "body_attributes": {
+        "data-page": "service-crm-automation",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/ecommerce.html",
+      "type": "page",
+      "source_title": "eCommerce Web Design in New Jersey | VNW Media",
+      "body_attributes": {
+        "data-page": "service-ecommerce",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/email-marketing.html",
+      "type": "page",
+      "source_title": "Email Marketing Services in New Jersey | VNW Media",
+      "body_attributes": {
+        "data-page": "service-email-marketing",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/geo.html",
+      "type": "page",
+      "source_title": "AI Visibility & GEO Services | VNW Media",
+      "body_attributes": {
+        "data-page": "service-geo",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/google-business-profile.html",
+      "type": "page",
+      "source_title": "Google Business Profile Management | VNW Media",
+      "body_attributes": {
+        "data-page": "service-google-business-profile",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/google-ppc.html",
+      "type": "page",
+      "source_title": "Google Ads & PPC Management in New Jersey | VNW Media",
+      "body_attributes": {
+        "data-page": "service-google-ppc",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/graphic-design.html",
+      "type": "page",
+      "source_title": "Graphic Design Services in New Jersey | VNW Media",
+      "body_attributes": {
+        "data-page": "service-graphic-design",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/landing-pages.html",
+      "type": "page",
+      "source_title": "Landing Page Design & Development | VNW Media",
+      "body_attributes": {
+        "data-page": "service-landing-pages",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/lead-generation.html",
+      "type": "page",
+      "source_title": "Lead Generation & Digital Marketing | VNW Media",
+      "body_attributes": {
+        "data-page": "service-lead-generation",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/paid-social.html",
+      "type": "page",
+      "source_title": "Paid Social Advertising Services | VNW Media",
+      "body_attributes": {
+        "data-page": "service-paid-social",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/reputation-management.html",
+      "type": "page",
+      "source_title": "Online Reputation Management | VNW Media",
+      "body_attributes": {
+        "data-page": "service-reputation-management",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/seo.html",
+      "type": "page",
+      "source_title": "SEO Services in New Jersey | VNW Media",
+      "body_attributes": {
+        "data-page": "service-seo",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/social-media-consultation.html",
+      "type": "page",
+      "source_title": "Social Media Consultation in New Jersey | VNW Media",
+      "body_attributes": {
+        "data-page": "service-social-media-consultation",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/social-media.html",
+      "type": "page",
+      "source_title": "Social Media Management in New Jersey | VNW Media",
+      "body_attributes": {
+        "data-page": "service-social-media",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/text-marketing.html",
+      "type": "page",
+      "source_title": "SMS Marketing Services | VNW Media",
+      "body_attributes": {
+        "data-page": "service-text-marketing",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/video-editing.html",
+      "type": "page",
+      "source_title": "Short-Form Video & Ad Creative | VNW Media",
+      "body_attributes": {
+        "data-page": "service-video-editing",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/web-design.html",
+      "type": "page",
+      "source_title": "Web Design & Development in New Jersey | VNW Media",
+      "body_attributes": {
+        "data-page": "service-web-design",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/website-maintenance.html",
+      "type": "page",
+      "source_title": "Website Maintenance Services in New Jersey | VNW Media",
+      "body_attributes": {
+        "data-page": "service-website-maintenance",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "services/yelp-seo.html",
+      "type": "page",
+      "source_title": "Yelp SEO & Visibility Services | VNW Media",
+      "body_attributes": {
+        "data-page": "service-yelp-seo",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../create-service-content.js?v=5",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "industries/auto-repair.html",
+      "type": "page",
+      "source_title": "Automotive & Auto Body Marketing | VNW Media",
+      "body_attributes": {
+        "class": [
+          "industry-landing",
+          "lp-food",
+          "industry-mockup-04"
+        ],
+        "data-page": "industry-auto"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 1
+    },
+    {
+      "source": "industries/day-care.html",
+      "type": "page",
+      "source_title": "Daycare & Education Marketing | VNW Media",
+      "body_attributes": {
+        "class": [
+          "industry-landing",
+          "lp-food",
+          "industry-mockup-04"
+        ],
+        "data-page": "industry-daycare"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 1
+    },
+    {
+      "source": "industries/healthcare.html",
+      "type": "page",
+      "source_title": "Medical, Dental & Eye Care Marketing | VNW Media",
+      "body_attributes": {
+        "class": [
+          "industry-landing",
+          "lp-food",
+          "industry-mockup-04"
+        ],
+        "data-page": "industry-healthcare"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 1
+    },
+    {
+      "source": "industries/home-services-contractors.html",
+      "type": "page",
+      "source_title": "Home Services & Contractors Marketing | VNW Media",
+      "body_attributes": {
+        "class": [
+          "industry-landing",
+          "lp-food",
+          "industry-mockup-04"
+        ],
+        "data-page": "industry-home-services"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 1
+    },
+    {
+      "source": "industries/legal-professional-services.html",
+      "type": "page",
+      "source_title": "Legal & Professional Services Marketing | VNW Media",
+      "body_attributes": {
+        "class": [
+          "industry-landing",
+          "lp-food",
+          "industry-mockup-04"
+        ],
+        "data-page": "industry-legal"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 1
+    },
+    {
+      "source": "industries/real-estate.html",
+      "type": "page",
+      "source_title": "Real Estate & Property Marketing | VNW Media",
+      "body_attributes": {
+        "class": [
+          "industry-landing",
+          "lp-food",
+          "industry-mockup-04"
+        ],
+        "data-page": "industry-real-estate"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 1
+    },
+    {
+      "source": "industries/restaurant.html",
+      "type": "page",
+      "source_title": "Restaurant & Hospitality Marketing | VNW Media",
+      "body_attributes": {
+        "class": [
+          "industry-landing",
+          "lp-food",
+          "industry-mockup-04"
+        ],
+        "data-page": "industry-restaurant"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 1
+    },
+    {
+      "source": "industries/retail-ecommerce.html",
+      "type": "page",
+      "source_title": "Retail & eCommerce Marketing | VNW Media",
+      "body_attributes": {
+        "class": [
+          "industry-landing",
+          "lp-food",
+          "industry-mockup-04"
+        ],
+        "data-page": "industry-retail"
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap",
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 1
+    },
+    {
+      "source": "case-studies/brooklyn-motors.html",
+      "type": "page",
+      "source_title": "Brooklyn Motors Case Study | VNW Media",
+      "body_attributes": {
+        "data-page": "case-brooklyn-motors",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../la-rosa-case-study.css?v=20260914-kypcl",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../pages.js?v=20260914-kypcl",
+        "../client-case-study-enhancements.js?v=20260914-kypcl",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "case-studies/h2bros-plumbing.html",
+      "type": "redirect",
+      "source_title": "KYPCL Case Study | VNW Media",
+      "body_attributes": {},
+      "styles": [],
+      "scripts": [],
+      "redirect": "0;url=kypcl.html",
+      "form_count": 0
+    },
+    {
+      "source": "case-studies/kypcl.html",
+      "type": "page",
+      "source_title": "KYPCL Case Study | VNW Media",
+      "body_attributes": {
+        "data-page": "case-kypcl",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../la-rosa-case-study.css?v=20260914-kypcl",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../pages.js?v=20260914-kypcl",
+        "../client-case-study-enhancements.js?v=20260914-kypcl",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "case-studies/la-rosa-chicken-grill.html",
+      "type": "page",
+      "source_title": "La Rosa Chicken and Grill Case Study | VNW Media",
+      "body_attributes": {
+        "data-page": "case-la-rosa-chicken-grill",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../la-rosa-case-study.css?v=20260914-kypcl",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../pages.js?v=20260914-kypcl",
+        "../la-rosa-case-study.js?v=5",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "case-studies/rices-collision.html",
+      "type": "redirect",
+      "source_title": "Client case study | VNW Media",
+      "body_attributes": {},
+      "styles": [],
+      "scripts": [],
+      "redirect": "0;url=la-rosa-chicken-grill.html",
+      "form_count": 0
+    },
+    {
+      "source": "case-studies/south-carolina-motors.html",
+      "type": "redirect",
+      "source_title": "Client case study | VNW Media",
+      "body_attributes": {},
+      "styles": [],
+      "scripts": [],
+      "redirect": "0;url=brooklyn-motors.html",
+      "form_count": 0
+    },
+    {
+      "source": "resources/accelerate-business-growth-with-results-driven-ppc-advertising.html",
+      "type": "post",
+      "source_title": "Build a More Focused PPC Advertising Strategy | VNW Media",
+      "body_attributes": {
+        "class": [
+          "resources-live",
+          "article-page"
+        ]
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+        "../styles.css?v=227",
+        "../resources-content.css?v=5",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../script.js?v=145",
+        "../resources-live.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey.html",
+      "type": "post",
+      "source_title": "Build a Stronger SEO Foundation in New Jersey | VNW Media",
+      "body_attributes": {
+        "class": [
+          "resources-live",
+          "article-page"
+        ]
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+        "../styles.css?v=227",
+        "../resources-content.css?v=5",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../script.js?v=145",
+        "../resources-live.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey.html",
+      "type": "post",
+      "source_title": "Build a Stronger Online Presence in New Jersey | VNW Media",
+      "body_attributes": {
+        "class": [
+          "resources-live",
+          "article-page"
+        ]
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+        "../styles.css?v=227",
+        "../resources-content.css?v=5",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../script.js?v=145",
+        "../resources-live.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth.html",
+      "type": "post",
+      "source_title": "Plan a Better Business Website and Online Store | VNW Media",
+      "body_attributes": {
+        "class": [
+          "resources-live",
+          "article-page"
+        ]
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+        "../styles.css?v=227",
+        "../resources-content.css?v=5",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../script.js?v=145",
+        "../resources-live.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow.html",
+      "type": "post",
+      "source_title": "From Likes to Leads: Social Media for Local Businesses | VNW Media",
+      "body_attributes": {
+        "class": [
+          "resources-live",
+          "article-page"
+        ]
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+        "../styles.css?v=227",
+        "../resources-content.css?v=5",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../script.js?v=145",
+        "../resources-live.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/landing-page-blueprint.html",
+      "type": "post",
+      "source_title": null,
+      "body_attributes": {
+        "data-page": "resource-landing-page-blueprint",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/local-seo-growth-guide.html",
+      "type": "post",
+      "source_title": null,
+      "body_attributes": {
+        "data-page": "resource-local-seo-growth-guide",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow.html",
+      "type": "post",
+      "source_title": "Website Design That Supports Your Next Stage of Growth | VNW Media",
+      "body_attributes": {
+        "class": [
+          "resources-live",
+          "article-page"
+        ]
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+        "../styles.css?v=227",
+        "../resources-content.css?v=5",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../script.js?v=145",
+        "../resources-live.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth.html",
+      "type": "post",
+      "source_title": "Turn Clicks Into Customers with a Connected Digital Strategy | VNW Media",
+      "body_attributes": {
+        "class": [
+          "resources-live",
+          "article-page"
+        ]
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+        "../styles.css?v=227",
+        "../resources-content.css?v=5",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../script.js?v=145",
+        "../resources-live.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/turn-search-visibility-into-real-business-growth-in-new-york.html",
+      "type": "post",
+      "source_title": "Turn Search Visibility Into Business Growth in New York | VNW Media",
+      "body_attributes": {
+        "class": [
+          "resources-live",
+          "article-page"
+        ]
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+        "../styles.css?v=227",
+        "../resources-content.css?v=5",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../script.js?v=145",
+        "../resources-live.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/turn-social-media-into-your-strongest-growth-channel.html",
+      "type": "post",
+      "source_title": "Turn Social Media Into a Stronger Growth Channel | VNW Media",
+      "body_attributes": {
+        "class": [
+          "resources-live",
+          "article-page"
+        ]
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+        "../styles.css?v=227",
+        "../resources-content.css?v=5",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../script.js?v=145",
+        "../resources-live.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/website-redesign-checklist.html",
+      "type": "post",
+      "source_title": null,
+      "body_attributes": {
+        "data-page": "resource-website-redesign-checklist",
+        "data-depth": "1"
+      },
+      "styles": [
+        "../styles.css?v=227",
+        "../tickers.css?v=2",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260910-brooklyn",
+        "../pages.js?v=20260910-brooklyn-banner",
+        "../script.js?v=145",
+        "../tickers.js?v=1",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    },
+    {
+      "source": "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth.html",
+      "type": "post",
+      "source_title": "How to Choose a Digital Marketing Partner | VNW Media",
+      "body_attributes": {
+        "class": [
+          "resources-live",
+          "article-page"
+        ]
+      },
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+        "../styles.css?v=227",
+        "../resources-content.css?v=5",
+        "../site-footer.css?v=1"
+      ],
+      "scripts": [
+        "../service-catalog.js?v=20260914-heroes",
+        "../script.js?v=145",
+        "../resources-live.js?v=2",
+        "../site-footer.js?v=1"
+      ],
+      "redirect": null,
+      "form_count": 0
+    }
+  ]
+}
