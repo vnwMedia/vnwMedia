@@ -116,3 +116,5 @@ add_action('wp_head',function(){
 });
 
 add_action('save_post_post',function($id,$post,$update){if(!$update && !wp_is_post_revision($id))update_post_meta($id,'_vnw_resource','1');},10,3);
+
+require_once __DIR__.'/elementor/integration.php';

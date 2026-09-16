@@ -1,0 +1,592 @@
+[
+  {
+    "source": "index.html",
+    "status": 200,
+    "h1": "Editable headline verification",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "our-story.html",
+    "status": 200,
+    "h1": "Built like a growth partner, not just another vendor.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "work.html",
+    "status": 200,
+    "h1": "Websites and marketing systems built to earn the next customer.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services.html",
+    "status": 200,
+    "h1": "Good strategy.Beautiful execution.Better connected.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "industries.html",
+    "status": 200,
+    "h1": "Every businesshas a world of its own.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "case-studies.html",
+    "status": 200,
+    "h1": "Real businesses.Purposeful work.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources.html",
+    "status": 200,
+    "h1": "Behind everybetter business,a better question.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "contact.html",
+    "status": 200,
+    "h1": "Tell us where growth feels stuck.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "clients.html",
+    "status": 200,
+    "h1": "Creative enough to stand out. Dependable enough to trust.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/app-design-development.html",
+    "status": 200,
+    "h1": "Turn a useful idea into a focused digital product.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/brand-strategy.html",
+    "status": 200,
+    "h1": "Build a brand people understand, remember, and choose.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/community-management.html",
+    "status": 200,
+    "h1": "Turn comments, messages, and mentions into stronger customer relationships.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/content-writing.html",
+    "status": 200,
+    "h1": "Content Writing",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/crm-automation.html",
+    "status": 200,
+    "h1": "Connect inquiries, customer data, and follow-up without losing the human handoff.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/ecommerce.html",
+    "status": 200,
+    "h1": "Turn product discovery into a smoother path to purchase.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/email-marketing.html",
+    "status": 200,
+    "h1": "Stay useful after the first visit, inquiry, or purchase.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/geo.html",
+    "status": 200,
+    "h1": "Help search and AI systems understand why your business is relevant.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/google-business-profile.html",
+    "status": 200,
+    "h1": "Show up with accurate information when local customers are ready to act.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/google-ppc.html",
+    "status": 200,
+    "h1": "Reach high-intent customers with campaigns built to be measured.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/graphic-design.html",
+    "status": 200,
+    "h1": "Creative that makes every customer touchpoint feel connected.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/landing-pages.html",
+    "status": 200,
+    "h1": "Give every campaign a clearer path from click to action.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/lead-generation.html",
+    "status": 200,
+    "h1": "Connect demand, proof, and follow-up into a clearer lead system.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/paid-social.html",
+    "status": 200,
+    "h1": "Put relevant creative in front of the audiences most likely to care.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/reputation-management.html",
+    "status": 200,
+    "h1": "Build a review and response system that strengthens customer trust.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/seo.html",
+    "status": 200,
+    "h1": "Build search visibility around the services and locations that matter.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/social-media-consultation.html",
+    "status": 200,
+    "h1": "Give your team a clearer social strategy and a plan it can maintain.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/social-media.html",
+    "status": 200,
+    "h1": "Keep the brand active, recognizable, and worth following.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/text-marketing.html",
+    "status": 200,
+    "h1": "Reach opted-in customers with timely messages built for action.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/video-editing.html",
+    "status": 200,
+    "h1": "Short-Form Video & Ad Creative",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/web-design.html",
+    "status": 200,
+    "h1": "A website built to earn trust and move the right visitor forward.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/website-maintenance.html",
+    "status": 200,
+    "h1": "Keep the website secure, current, accurate, and ready to perform.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "services/yelp-seo.html",
+    "status": 200,
+    "h1": "Make the Yelp profile more complete, credible, and easier to act on.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "industries/auto-repair.html",
+    "status": 200,
+    "h1": "Make the next estimate, repair, or service visit easier to choose.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "industries/day-care.html",
+    "status": 200,
+    "h1": "Earn parent trust before the first tour.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "industries/healthcare.html",
+    "status": 200,
+    "h1": "Make the next appointment feel easier to schedule.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "industries/home-services-contractors.html",
+    "status": 200,
+    "h1": "Make the next call, quote, or booked job easier to choose.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "industries/legal-professional-services.html",
+    "status": 200,
+    "h1": "Authority must be clear before trust can begin.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "industries/real-estate.html",
+    "status": 200,
+    "h1": "Own a clearer position in the market.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "industries/restaurant.html",
+    "status": 200,
+    "h1": "Make the next table, order, or stay feel easy to choose.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "industries/retail-ecommerce.html",
+    "status": 200,
+    "h1": "Turn product attention into confident action.",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "case-studies/brooklyn-motors.html",
+    "status": 200,
+    "h1": "Brooklyn Motors",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "case-studies/h2bros-plumbing.html",
+    "status": 200,
+    "h1": "KYPCL",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "case-studies/kypcl.html",
+    "status": 200,
+    "h1": "KYPCL",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "case-studies/la-rosa-chicken-grill.html",
+    "status": 200,
+    "h1": "La Rosa Chicken and Grill",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "case-studies/rices-collision.html",
+    "status": 200,
+    "h1": "La Rosa Chicken and Grill",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "case-studies/south-carolina-motors.html",
+    "status": 200,
+    "h1": "Brooklyn Motors",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/accelerate-business-growth-with-results-driven-ppc-advertising.html",
+    "status": 200,
+    "h1": "Build a More Focused PPC Advertising Strategy",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey.html",
+    "status": 200,
+    "h1": "Build a Stronger SEO Foundation in New Jersey",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey.html",
+    "status": 200,
+    "h1": "Build a Stronger Online Presence in New Jersey",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth.html",
+    "status": 200,
+    "h1": "Plan a Better Business Website and Online Store",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow.html",
+    "status": 200,
+    "h1": "From Likes to Leads: Social Media for Local Businesses",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/landing-page-blueprint.html",
+    "status": 200,
+    "h1": "Lead Generation Landing Page Blueprint",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/local-seo-growth-guide.html",
+    "status": 200,
+    "h1": "Local SEO Growth Guide",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow.html",
+    "status": 200,
+    "h1": "Website Design That Supports Your Next Stage of Growth",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth.html",
+    "status": 200,
+    "h1": "Turn Clicks Into Customers with a Connected Digital Strategy",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/turn-search-visibility-into-real-business-growth-in-new-york.html",
+    "status": 200,
+    "h1": "Turn Search Visibility Into Business Growth in New York",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/turn-social-media-into-your-strongest-growth-channel.html",
+    "status": 200,
+    "h1": "Turn Social Media Into a Stronger Growth Channel",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/website-redesign-checklist.html",
+    "status": 200,
+    "h1": "Website Redesign Readiness Checklist",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  },
+  {
+    "source": "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth.html",
+    "status": 200,
+    "h1": "How to Choose a Digital Marketing Partner",
+    "header": 1,
+    "footer": 1,
+    "overflow": false,
+    "placeholders": false,
+    "errors": []
+  }
+]

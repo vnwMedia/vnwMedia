@@ -1,0 +1,39 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/elementor.3.32.5.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "vnw-media"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; vnw_import(); update_option('blog_public', 0);"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $before=wp_count_posts('page')->publish+wp_count_posts('post')->publish; if(vnw_import()!==0)throw new Exception('Import not idempotent'); $after=wp_count_posts('page')->publish+wp_count_posts('post')->publish; if($before!==$after)throw new Exception('Import duplicated content');"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $items=get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']); if(count($items)!==56)throw new Exception('Wrong content count'); foreach($items as $item)if(get_post_meta($item->ID,'_vnw_source',true)==='index.html' && substr_count($item->post_content,'<form')!==2)throw new Exception('Missing forms');"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; foreach(get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']) as $p) vnw_elementor_convert($p->ID);"
+    }
+  ],
+  "login": true,
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "6.7.2"
+  }
+}

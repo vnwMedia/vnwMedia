@@ -2,11 +2,17 @@
 <!doctype html><html <?php language_attributes(); ?>><head><meta charset="<?php bloginfo('charset'); ?>"><meta name="viewport" content="width=device-width,initial-scale=1"><?php wp_head(); ?></head>
 <body <?php
 $attrs=$r['body_attributes']??[];
-foreach($attrs as $name=>$value)if($name==='class'||$name==='id'||str_starts_with($name,'data-'))echo esc_attr($name).'="'.esc_attr(is_array($value)?implode(' ',$value):$value).'" ';
+body_class($attrs['class']??[]);echo ' ';
+foreach($attrs as $name=>$value)if($name==='id'||str_starts_with($name,'data-'))echo esc_attr($name).'="'.esc_attr(is_array($value)?implode(' ',$value):$value).'" ';
 ?>><?php wp_body_open(); echo vnw_expand(file_get_contents(__DIR__.'/content/header.html')); ?>
 <?php
 if(have_posts()):while(have_posts()):the_post();
- if($r){
+ if($r && vnw_elementor_enabled(get_the_ID())) {
+  $page=vnw_elementor_catalog()['pages'][$r['source']];
+  echo '<main';
+  foreach($page['main_attributes'] as $name=>$value) if($name==='id'||$name==='class'||str_starts_with($name,'data-')) echo ' '.esc_attr($name).'="'.esc_attr(is_array($value)?implode(' ',$value):$value).'"';
+  echo '>';the_content();echo '</main>';
+ }elseif($r){
  $html=$r['type']==='post' && str_contains($r['html'],'{{POST_CONTENT}}')?$r['html']:get_the_content();
  $html=str_replace(['{{POST_CONTENT}}','{{POST_TITLE}}','{{POST_GRID}}'],[get_the_content(),esc_html(get_the_title()),$r['source']==='resources.html'?vnw_grid():''],$html);
  if($r['source']==='native-post'){

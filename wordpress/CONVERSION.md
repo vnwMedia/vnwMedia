@@ -1,3 +1,11 @@
+# Current update: Elementor editing, 0.2.0
+
+The 0.1.0 theme is installed by the user on redesign.vnwmedia.net. The 0.2.0 update is prepared locally, not yet installed on hosting. See ELEMENTOR-EDITING.md for the new section-based visual editing workflow, verification, and limitations. No live website or other hosted site was changed.
+
+The earlier runtime launch flags were not sufficient to pin Playground versions when the blueprint overrode them. The new Elementor compatibility blueprint explicitly pins WordPress 6.7.2 / PHP 8.2. Older statements below about exact runtime versions should be read as superseded by this correction.
+
+## Previous 0.1.0 implementation record
+
 # VNW Media WordPress conversion
 
 ## Current status — September 16, 2026

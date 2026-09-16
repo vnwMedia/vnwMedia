@@ -1,0 +1,35 @@
+{
+  "title": "Services | VNW Media",
+  "faq": true,
+  "dropdownLinks": 24,
+  "tickerMovesOnHover": true,
+  "filter": [
+    "Websites",
+    "Websites"
+  ],
+  "forms": [
+    {
+      "action": "http://127.0.0.1:9405/",
+      "method": "get",
+      "nonce": false
+    },
+    {
+      "action": "http://127.0.0.1:9405/wp-admin/admin-post.php",
+      "method": "post",
+      "nonce": true
+    },
+    {
+      "action": "http://127.0.0.1:9405/wp-admin/admin-post.php",
+      "method": "post",
+      "nonce": true
+    }
+  ],
+  "invalidForm": {
+    "status": 302,
+    "location": "http://127.0.0.1:9405/contact.html?inquiry=error"
+  },
+  "mobile": {
+    "src": "http://127.0.0.1:9405/wp-content/themes/vnw-media/assets/vnwMedia-LogoBlk.png",
+    "loaded": true
+  }
+}

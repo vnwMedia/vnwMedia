@@ -1,0 +1,14 @@
+/* Preserve the original section geometry through Elementor's wrappers. */
+body:not(.elementor-editor-active) main > .elementor,
+body:not(.elementor-editor-active) main > .elementor > .elementor-element,
+body:not(.elementor-editor-active) main > .elementor > .elementor-element > .elementor-widget-container { display: contents; }
+.elementor-widget-container { font-family: inherit; }
+.elementor-editor-active .reveal { opacity: 1 !important; transform: none !important; }
+.elementor-editor-active main > .elementor > .elementor-element { width: 100%; }
+
+main .home-process-contact-grid figure { margin:0 0 21px !important; }
+
+main .work-agency-process-option1 .work-agency-process-grid figure { margin:0 0 20px !important; }
+
+body.admin-bar .site-header { top:32px; }
+@media (max-width:782px) { body.admin-bar .site-header { top:46px; } }
