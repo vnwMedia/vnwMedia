@@ -21,3 +21,8 @@
 
 /* Supporting copy uses the same available width as its section heading. */
 body[data-page="cases-hub"] .fc-reason .fc-heading>p:last-child:not(.fc-kicker){width:100%;max-width:none}
+
+/* A bright, readable FAQ section on the live Case Studies page. */
+body[data-page="cases-hub"] #fc-page .fc-faq{background:#fff;color:#111719;--fc-line:#d5d6d3}
+body[data-page="cases-hub"] #fc-page .fc-faq .fc-kicker{color:#0089b5}
+body[data-page="cases-hub"] #fc-page .fc-faq details p a{color:#0089b5}
