@@ -1,8 +1,10 @@
-.thank-you-page{min-height:70vh;padding:180px 0 100px;background:#111;color:#fff}
-.thank-you-page h1{max-width:850px;margin-bottom:30px}
-.thank-you-page p:not(.section-tag){max-width:680px;color:#bdbdbd;font-size:var(--vnw-type-body);line-height:1.7}
+.thank-you-page{min-height:760px;min-height:max(760px,80vh);padding:210px 0 110px;background-color:#111;background-image:linear-gradient(90deg,rgba(4,10,14,.86) 0%,rgba(4,10,14,.76) 35%,rgba(4,10,14,.36) 58%,rgba(4,10,14,.12) 100%),url('assets/thank-you-hero-v1.jpg');background-size:cover;background-position:center;color:#fff}
+.thank-you-page h1{max-width:620px;margin-bottom:30px}
+.thank-you-page .section-tag{color:#ddd}
+.thank-you-page p:not(.section-tag){max-width:550px;color:#eee;font-size:var(--vnw-type-body);line-height:1.7}
 .thank-you-actions{display:flex;flex-wrap:wrap;gap:16px;margin:36px 0}
 .thank-you-page .thank-you-help{margin-top:42px;font-size:var(--vnw-type-small)}
 .thank-you-help a{color:#00aeef;overflow-wrap:anywhere}
 .thank-you-page a:focus-visible{outline:3px solid #00aeef;outline-offset:5px}
-@media(max-width:640px){.thank-you-page{padding:140px 0 70px}.thank-you-actions{flex-direction:column;align-items:flex-start}}
+@media(max-width:900px){.thank-you-page{background-position:62% center;background-image:linear-gradient(90deg,rgba(4,10,14,.9),rgba(4,10,14,.65)),url('assets/thank-you-hero-v1.jpg')}}
+@media(max-width:640px){.thank-you-page{min-height:700px;padding:150px 0 70px;background-position:68% center}.thank-you-actions{flex-direction:column;align-items:flex-start}}
