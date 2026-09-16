@@ -441,7 +441,8 @@ if (testimonialTicker && testimonialTickerTrack) {
   addEventListener("resize", updateReviewOverflow, { passive: true });
 
   // Keep one continuous timeline as the page scrolls in and out of view.
-  // Hover, touch and keyboard focus do not pause or reset the reviews.
+  // Desktop hover pauses through CSS; touch and focus keep the reviews moving.
+  // Leaving the ticker resumes the same timeline without restarting it.
   // The stylesheet still honors the device's reduced-motion preference.
 
   updateTestimonialTickerDistance();
