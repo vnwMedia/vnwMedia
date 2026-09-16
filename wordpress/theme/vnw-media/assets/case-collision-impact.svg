@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Auto body trust and estimate visual</title>
+  <desc id="desc">A strong collision repair marketing visual with estimate cards, certification badges, vehicle repair cues, and trust signals.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#080808"/><stop offset=".5" stop-color="#121212"/><stop offset="1" stop-color="#0a2635"/></linearGradient>
+    <radialGradient id="glow" cx=".2" cy=".2" r=".8"><stop offset="0" stop-color="#00aeef" stop-opacity=".38"/><stop offset="1" stop-color="#00aeef" stop-opacity="0"/></radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#glow)"/>
+  <g opacity=".16" stroke="#fff">
+    <path d="M120 0v900M300 0v900M480 0v900M660 0v900M840 0v900M1020 0v900"/>
+    <path d="M0 132h1200M0 286h1200M0 440h1200M0 594h1200M0 748h1200"/>
+  </g>
+  <circle cx="274" cy="228" r="122" fill="#00aeef" opacity=".25" filter="url(#blur)"/>
+  <g transform="translate(150 128)">
+    <rect width="380" height="266" rx="34" fill="#fff" fill-opacity=".11" stroke="#fff" stroke-opacity=".18"/>
+    <rect x="34" y="38" width="180" height="16" rx="8" fill="#fff" fill-opacity=".74"/>
+    <rect x="34" y="72" width="250" height="10" rx="5" fill="#fff" fill-opacity=".3"/>
+    <rect x="34" y="112" width="312" height="84" rx="22" fill="#00aeef"/>
+    <path d="M74 155h230" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+    <path d="M74 180h148" stroke="#fff" stroke-opacity=".6" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(626 88)">
+    <rect width="360" height="410" rx="42" fill="#f7fbff"/>
+    <path d="M48 206c28-68 91-104 174-98 68 5 116 41 144 108l24 56H24Z" fill="#111"/>
+    <path d="M84 210c24-42 62-64 112-64 55 0 94 23 116 66Z" fill="#00aeef"/>
+    <circle cx="102" cy="290" r="44" fill="#111"/>
+    <circle cx="272" cy="290" r="44" fill="#111"/>
+    <path d="M64 70h232" stroke="#111" stroke-width="16" stroke-linecap="round"/>
+    <path d="M64 102h158" stroke="#111" stroke-opacity=".32" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(152 510)">
+    <rect width="238" height="178" rx="30" fill="#fff" fill-opacity=".09" stroke="#fff" stroke-opacity=".16"/>
+    <circle cx="72" cy="76" r="34" fill="#00aeef"/>
+    <path d="M126 58h70M126 84h48M44 128h152" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".72"/>
+  </g>
+  <g transform="translate(430 550)">
+    <rect width="238" height="178" rx="30" fill="#fff" fill-opacity=".09" stroke="#fff" stroke-opacity=".16"/>
+    <path d="M64 112l42-58 34 40 24-22 34 40" fill="none" stroke="#00aeef" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50 132h140" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".68"/>
+  </g>
+  <g transform="translate(708 550)">
+    <rect width="238" height="178" rx="30" fill="#00aeef"/>
+    <path d="M72 84l30 30 72-82" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M56 138h126" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".65"/>
+  </g>
+</svg>

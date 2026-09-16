@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Automotive website growth visual</title>
+  <desc id="desc">A bold automotive lead-generation visual with a vehicle silhouette, inventory cards, map pins, and conversion signals.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05070b"/><stop offset=".54" stop-color="#0b1824"/><stop offset="1" stop-color="#03293d"/></linearGradient>
+    <radialGradient id="halo" cx=".68" cy=".28" r=".65"><stop offset="0" stop-color="#00aeef" stop-opacity=".55"/><stop offset="1" stop-color="#00aeef" stop-opacity="0"/></radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#halo)"/>
+  <g opacity=".18" stroke="#9be7ff">
+    <path d="M0 160H1200M0 320H1200M0 480H1200M0 640H1200M0 800H1200"/>
+    <path d="M150 0V900M300 0V900M450 0V900M600 0V900M750 0V900M900 0V900M1050 0V900"/>
+  </g>
+  <ellipse cx="600" cy="646" rx="440" ry="72" fill="#00aeef" opacity=".18" filter="url(#soft)"/>
+  <path d="M226 568c42-88 116-154 224-168l94-84c34-30 78-46 124-44l132 6c67 3 126 41 158 100l44 82 58 26c27 12 44 39 44 69v48H172v-24c0-6 20-11 54-11Z" fill="#eefaff" opacity=".94"/>
+  <path d="M400 424h420c28 0 52 18 62 44l26 68H304l38-58c14-33 29-54 58-54Z" fill="#06121a"/>
+  <path d="M462 420l98-82c24-20 54-30 85-28l120 7c36 2 68 22 86 53l30 52Z" fill="#00aeef" opacity=".76"/>
+  <circle cx="362" cy="612" r="82" fill="#05070b"/>
+  <circle cx="362" cy="612" r="42" fill="#00aeef"/>
+  <circle cx="912" cy="612" r="82" fill="#05070b"/>
+  <circle cx="912" cy="612" r="42" fill="#00aeef"/>
+  <g transform="translate(96 110)">
+    <rect width="306" height="188" rx="28" fill="#fff" fill-opacity=".1" stroke="#fff" stroke-opacity=".18"/>
+    <rect x="28" y="31" width="110" height="14" rx="7" fill="#00aeef"/>
+    <rect x="28" y="66" width="238" height="10" rx="5" fill="#fff" fill-opacity=".55"/>
+    <rect x="28" y="95" width="176" height="10" rx="5" fill="#fff" fill-opacity=".28"/>
+    <rect x="28" y="132" width="96" height="32" rx="16" fill="#00aeef"/>
+  </g>
+  <g transform="translate(805 112)">
+    <rect width="274" height="238" rx="32" fill="#fff" fill-opacity=".11" stroke="#fff" stroke-opacity=".18"/>
+    <path d="M64 82c0-36 29-65 65-65s65 29 65 65c0 57-65 124-65 124S64 139 64 82Z" fill="#00aeef"/>
+    <circle cx="129" cy="82" r="24" fill="#06121a"/>
+  </g>
+  <path d="M102 752h996" stroke="#00aeef" stroke-width="8" stroke-linecap="round" opacity=".75"/>
+</svg>

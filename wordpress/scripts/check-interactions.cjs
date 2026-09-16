@@ -1,0 +1,10 @@
+const {chromium}=require('/Users/vnwmediallc/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');const fs=require('fs');
+(async()=>{let b=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});let p=await b.newPage({viewport:{width:1440,height:1000}});await p.route('https://**',r=>r.abort());let result={};
+await p.goto('http://127.0.0.1:9402/services.html');result.title=await p.title();let faq=p.locator('#services-faq details').nth(1);await faq.locator('summary').click();result.faq=await faq.getAttribute('open')!==null;
+await p.locator('.nav-services-trigger').hover();result.dropdownLinks=await p.locator('.nav-services a').count();
+let track=p.locator('.trust-strip .seamless-track').first();await p.locator('.trust-strip').scrollIntoViewIfNeeded();await p.locator('.trust-strip').hover();let a=await track.evaluate(x=>getComputedStyle(x).transform);await p.waitForTimeout(300);result.tickerMovesOnHover=a!==await track.evaluate(x=>getComputedStyle(x).transform);
+await p.goto('http://127.0.0.1:9402/resources.html');await p.locator('[data-filter="Websites"]').click();result.filter=await p.locator('.browse-section .story:not([hidden])').evaluateAll(xs=>xs.map(x=>x.dataset.category));
+await p.goto('http://127.0.0.1:9402/');result.forms=await p.locator('form').evaluateAll(fs=>fs.map(f=>({action:f.getAttribute('action'),method:f.method,nonce:!!f.querySelector('[name=vnw_nonce]')})));
+const response=await p.request.post('http://127.0.0.1:9402/wp-admin/admin-post.php',{form:{action:'vnw_contact',name:'Test',email:'invalid',return_to:'https://example.com'},maxRedirects:0});result.invalidForm={status:response.status(),location:response.headers().location};
+await p.setViewportSize({width:390,height:844});await p.locator('.nav-toggle').click();result.mobile=await p.locator('.sm-logo img').evaluate(i=>({src:i.src,loaded:i.complete&&i.naturalWidth>0}));
+console.log(JSON.stringify(result,null,2));fs.writeFileSync('/private/tmp/vnw-wp-interactions.json',JSON.stringify(result,null,2));await b.close();})();

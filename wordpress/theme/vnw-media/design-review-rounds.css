@@ -1,0 +1,17 @@
+.review-rounds { display: flex; gap: 8px; margin-top: 30px; }
+.review-rounds button { display: flex; flex: 1; align-items: center; gap: 15px; text-align: left; border: 1px solid #b8c1bd; background: transparent; padding: 15px 18px; }
+.review-rounds strong { font-size: 14px; font-weight: 600; }
+.review-rounds span { font-size: 11px; color: #626d6c; }
+.review-rounds [aria-pressed="true"] { background: #00aeef; border-color: #00aeef; color: #0a2732; }
+.review-rounds [aria-pressed="true"] span { color: #0a2732; }
+#options { margin-top: 12px; }
+#options button[hidden] { display: none; }
+#options button:nth-child(11)::before { content: none; }
+#options button:nth-child(n+11) { border-top: 1px solid #d6d6d0; }
+#options button:nth-child(n+21) { border-top: 3px solid #00aeef; }
+@media (max-width: 760px) {
+  .review-rounds { gap: 6px; }
+  .review-rounds button { display: grid; gap: 5px; padding: 11px 9px; }
+  .review-rounds strong { font-size: 12px; }
+  .review-rounds span { font-size: 9px; line-height: 1.4; }
+}

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Home services urgent lead-generation visual</title>
+  <desc id="desc">A dramatic plumbing and home services lead-generation visual with emergency call signals, service area grid, and water-flow energy.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#031017"/><stop offset=".55" stop-color="#072737"/><stop offset="1" stop-color="#05070b"/></linearGradient>
+    <radialGradient id="water" cx=".33" cy=".55" r=".7"><stop offset="0" stop-color="#00aeef" stop-opacity=".52"/><stop offset="1" stop-color="#00aeef" stop-opacity="0"/></radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#water)"/>
+  <path d="M0 644c130-78 244-70 342 24 114 110 250 106 410-12 153-113 305-134 448-64v308H0Z" fill="#00aeef" opacity=".16"/>
+  <path d="M0 716c144-66 268-50 372 48 113 106 250 104 410-6 144-100 284-122 418-68" fill="none" stroke="#75dcff" stroke-width="6" opacity=".35"/>
+  <g transform="translate(136 110)">
+    <rect width="390" height="500" rx="44" fill="#fff" fill-opacity=".1" stroke="#fff" stroke-opacity=".16"/>
+    <rect x="44" y="52" width="302" height="76" rx="22" fill="#00aeef"/>
+    <path d="M86 88h138M86 112h84" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+    <g transform="translate(54 176)" stroke="#fff" stroke-opacity=".24">
+      <path d="M0 0h282M0 70h282M0 140h282M0 210h282"/>
+      <path d="M70 0v280M140 0v280M210 0v280"/>
+    </g>
+    <path d="M112 216c0-42 34-76 76-76s76 34 76 76c0 74-76 156-76 156s-76-82-76-156Z" fill="#00aeef"/>
+    <circle cx="188" cy="216" r="28" fill="#031017"/>
+  </g>
+  <g transform="translate(630 126)">
+    <rect width="390" height="250" rx="42" fill="#f8fbff"/>
+    <path d="M52 82h182" stroke="#111" stroke-width="16" stroke-linecap="round"/>
+    <path d="M52 120h112" stroke="#111" stroke-opacity=".35" stroke-width="10" stroke-linecap="round"/>
+    <rect x="52" y="164" width="154" height="46" rx="23" fill="#00aeef"/>
+    <path d="M278 58c46 36 70 78 70 126" fill="none" stroke="#111" stroke-width="22" stroke-linecap="round"/>
+    <path d="M300 176c-42 26-70 58-82 96" fill="none" stroke="#00aeef" stroke-width="20" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(650 470)">
+    <circle cx="108" cy="108" r="108" fill="#00aeef"/>
+    <path d="M70 96c34-48 72-48 106 0M88 130c20-26 44-26 64 0" fill="none" stroke="#fff" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="108" cy="160" r="10" fill="#fff"/>
+  </g>
+  <g transform="translate(830 502)">
+    <rect width="194" height="146" rx="28" fill="#fff" fill-opacity=".1" stroke="#fff" stroke-opacity=".18"/>
+    <path d="M44 56h106M44 88h72" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".78"/>
+  </g>
+</svg>

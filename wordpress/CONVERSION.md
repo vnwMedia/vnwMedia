@@ -1,34 +1,43 @@
 # VNW Media WordPress conversion
 
-## Status
-Preparation only. The separate working copy and source inventory are created. No WordPress theme has been completed or installed. No hosting changes have been made.
+## Current status — September 16, 2026
+First custom-theme build is running in an isolated WordPress Playground installation (WordPress 6.7.2 / PHP 8.2, matching the staging screenshot). It has NOT been installed on Hostinger and is NOT approved for production deployment.
 
-## Protected baseline
-The static website remains on main. WordPress work stays on wordpress/conversion until staging acceptance. The September 16 backup is preserved. Do not deploy this branch to GitHub Pages or overwrite an existing Hostinger website.
+## Scope and protection
+- Static main website remains unchanged, with its previously verified backup preserved.
+- Work is on wordpress/conversion only.
+- User created redesign.vnwmedia.net in Hostinger; only screenshots have been provided, not authenticated tool access.
+- User declined a backup of the old vnwmedia.net site. Do not request or create that backup.
+- Eventually replace vnwmedia.net only. Never touch the other hosted sites.
 
-## Required outcome
-Preserve the approved website one to one: typography, spacing, imagery, header/dropdown, footer, responsive layouts, service and review tickers, filters, FAQs, links, and animations. Do not replace it with a stock theme or page-builder approximation.
+## Implemented
+- Custom theme retaining original CSS, imagery, header, footer, responsive layouts and interactions.
+- Explicit staging-only admin importer: 43 pages and 13 native posts; 3 legacy redirects.
+- Server-rendered content, not an iframe or an empty page depending on the old page-generation app.
+- Original .html routes; native WordPress links for imported posts/pages.
+- Native post/category query for Resources, preserving its original ten-card selection/order; unrelated pre-existing posts are excluded. New posts created with this theme use a matching article template.
+- Imported posts with article-body markup can be edited through WordPress; the three older guide pages retain full-layout HTML content. Imported marketing pages use custom HTML content. This is not an Elementor rebuild and does not provide visual block controls for every section.
+- Form handler sends through WordPress wp_mail to contactus@vnwmedia.com, with nonce validation, input sanitization, honeypot and rate limit. No third-party form processor or frontend credentials.
+- Repeated imports skip previously imported content, preserving edits; they do not delete old content.
 
-## Implementation approach
-- Custom WordPress theme using the existing design assets and styling.
-- Import published page content into WordPress pages and blog articles into posts, with dedicated templates for each content family.
-- Resolve JavaScript-generated content into template/content structures; do not rely on empty WordPress pages that only launch the old static application.
-- Preserve legacy .html URLs or define tested permanent redirects, including the existing redirect stubs.
-- Exclude design-option review pages from public production navigation; preserve their sources in this version.
-- Keep navigation, footer, categories, blog listing, and internal links connected to WordPress content.
-- No frontend email credentials. Use a server-side form handler with validation, spam protection, and configured authenticated mail delivery to contactus@vnwmedia.com.
-- FormSubmit is NOT approved. Its proposed integration was blocked and must not be applied without explicit authorization.
+## Verified locally
+- All 59 source routes loaded, one shared header/footer each, no JavaScript errors in first complete route audit.
+- 8 representative pages compared at 1440px and 390px: matching main-content heights, no horizontal overflow or broken images. External requests/fonts were blocked equally for comparison. This is not a claim of exhaustive pixel-perfect verification.
+- FAQs, Services dropdown, mobile menu/logo, category filtering, ticker movement while hovered.
+- Both homepage forms preserved, POST action and nonce present; invalid submissions rejected without sending mail.
+- See qa/ for captured machine-readable reports.
 
-## Hosting requirements
-Hostinger staging or a separate WordPress installation, with a supplied URL and authorized access. Do not assume staging is included in the account plan. No DNS, billing, production replacement, or email configuration changes without explicit approval.
+## Remaining acceptance work
+- Staging security cleanup/review of cloned old theme and plugins before activation. The existing installation reported many vulnerabilities; do not publish that legacy stack unchanged.
+- Staging visual checks with production fonts and actual hosting/cache/plugins, including tablet sizes and every content family.
+- Test editing a native page and creating/publishing an article in the staging admin.
+- Configure authenticated hosting mail, verify legitimate submission reaches contactus@vnwmedia.com, and verify spam/error behavior. wp_mail success only means accepted for sending, not inbox delivery.
+- Validate new-post presentation and featured-image workflow with user content.
+- Final redirect, SEO, accessibility, and security review before publishing to vnwmedia.net.
 
-## Acceptance checks
-- Actual WordPress runtime testing, not only PHP source inspection or a static mockup.
-- Side-by-side screenshots at desktop, tablet, and mobile widths against baseline.
-- Navigation, services menus, blog filtering, accordion interactions, ticker behavior, and footer checks.
-- No broken assets, links, duplicate IDs, console errors, or mobile overflow.
-- Actual form delivery confirmed at the destination inbox before claiming it works.
-- Installable package, database/content import, restoration steps, and rollback instructions.
-
-## Current dependencies
-Hosting URL and access have not been supplied. PHP, WordPress CLI, and Docker were not found on the current shell PATH. Provision a verified local WordPress runtime or authorized staging installation before runtime acceptance.
+## Build/test
+- scripts/export.cjs captures the approved static content before ticker cloning and interaction setup.
+- scripts/build.py normalizes content and copies original design assets. Rerun it after source edits; handwritten PHP files remain intact.
+- test-blueprint.json creates a disposable local WordPress fixture and verifies import counts/idempotency. Never upload the test blueprint to hosting.
+- Official @wp-playground/cli 3.1.54 was installed under /private/tmp/vnw-wp-runtime for local testing. No global runtime or live hosting changes were made.
+- Package only theme/vnw-media as the vnw-media directory inside the ZIP.
