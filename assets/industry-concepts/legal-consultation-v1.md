@@ -1,0 +1,10 @@
+# Legal consultation industry image
+
+Final website asset: `assets/industry-concepts/legal-consultation-v1.jpg`.
+
+Created with the built-in image-generation tool; saved as a web-optimized JPEG. Photorealistic illustrative scene, not a photograph of actual client professionals or customers. Replaces only the Legal & Professional Services industry marketing image; page copy and layout remain unchanged.
+
+## Final generation prompt
+
+Use case: photorealistic-natural. Asset type: photographic image for a Legal & Professional Services industry website section titled 'Build confidence before the consultation.' Primary request: a believable, premium professional consultation that communicates expertise, attentive listening and trust, not a close-up of signing paperwork. Scene: a refined contemporary law office with warm wood shelving, understated bound legal reference books and daylight through glass. Subject: an experienced female attorney in her late forties wearing a tailored navy blazer, seated across a desk from an adult male client in smart casual clothes, listening attentively with calm direct eye contact while explaining a document. Both faces clearly visible in three-quarter view, natural relaxed serious expressions, reassuring rather than exaggerated smiling. A slim closed folder and a few discreet papers on the desk, no readable client information. Style: photorealistic editorial business photography, authentic skin detail, fabric texture and realistic hands, natural lighting, not CGI or an illustration. Composition: landscape 3:2 medium-wide eye-level shot; faces and interaction near the central area, generous headroom and framing suitable for a half-width website section and responsive cropping. Warm neutral materials, navy attire, soft daylight, credible professional atmosphere. Constraints: no icons, no illustrations, no cartoon, no gavel or scales-of-justice props, no floating graphics, no text overlay, no watermarks, no company logos or client branding. Generic illustrative people and office, not actual VNW Media clients or staff.
+
