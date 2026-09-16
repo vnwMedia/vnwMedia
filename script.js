@@ -440,18 +440,9 @@ if (testimonialTicker && testimonialTickerTrack) {
   document.fonts.ready.then(updateReviewOverflow);
   addEventListener("resize", updateReviewOverflow, { passive: true });
 
-  // Begin with the newest review whenever this section enters the viewport.
-  // Disabling the animation offscreen also resets its timeline without
-  // overriding the existing hover, focus, or reduced-motion pause behavior.
-  testimonialTickerTrack.style.animationName = "none";
-  const testimonialVisibilityObserver = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) {
-      testimonialTickerTrack.style.removeProperty("animation-name");
-    } else {
-      testimonialTickerTrack.style.animationName = "none";
-    }
-  }, { threshold: 0 });
-  testimonialVisibilityObserver.observe(testimonialTicker);
+  // Keep one continuous timeline as the page scrolls in and out of view.
+  // Hover, touch and keyboard focus do not pause or reset the reviews.
+  // The stylesheet still honors the device's reduced-motion preference.
 
   updateTestimonialTickerDistance();
   addEventListener("load", updateTestimonialTickerDistance);
