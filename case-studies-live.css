@@ -13,3 +13,8 @@
 .cs-live-hero{min-height:610px;padding:120px 0 50px}
 .cs-live-hero .cs-live-hero-caption{margin-top:26px}
 @media(max-width:800px){.cs-live-hero{min-height:580px;padding:110px 0 50px}}
+
+/* Keep the discovery introduction together in view, matching the FAQ behavior. */
+@media(min-width:801px) and (min-height:651px){
+ body[data-page="cases-hub"] .fc-discovery .fc-two>div:first-child{position:sticky;top:112px;align-self:start}
+}
