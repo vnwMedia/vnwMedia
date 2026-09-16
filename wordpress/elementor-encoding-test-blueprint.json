@@ -1,0 +1,39 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/elementor.3.32.5.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "vnw-media"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; vnw_import(); update_option('blog_public', 0);"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $before=wp_count_posts('page')->publish+wp_count_posts('post')->publish; if(vnw_import()!==0)throw new Exception('Import not idempotent'); $after=wp_count_posts('page')->publish+wp_count_posts('post')->publish; if($before!==$after)throw new Exception('Import duplicated content');"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $items=get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']); if(count($items)!==56)throw new Exception('Wrong content count'); foreach($items as $item)if(get_post_meta($item->ID,'_vnw_source',true)==='index.html' && substr_count($item->post_content,'<form')!==2)throw new Exception('Missing forms');"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php';\n$ok=function($test,$message){if(!$test)throw new Exception($message);};\n$ok(vnw_elementor_import_signature('A \u2197 \ud83d\ude4c')===vnw_elementor_import_signature('A &#x2197; &#128588;'),'Equivalent Unicode references differ');\n$ok(vnw_elementor_import_signature('&#X2197;')==='\u2197','Uppercase entity not normalized');\n$ok(vnw_elementor_import_signature('&lt;b&gt;')!==vnw_elementor_import_signature('<b>'),'Markup protection lost');\n$ok(vnw_elementor_import_signature('&#60;b&#62;')!==vnw_elementor_import_signature('<b>'),'ASCII entity protection lost');\n$ok(vnw_elementor_import_signature('<p>Hello</p>')!==vnw_elementor_import_signature('<p>Changed</p>'),'Text protection lost');\n$ok(vnw_elementor_import_signature('<img src=\"a.jpg\">')!==vnw_elementor_import_signature('<img src=\"b.jpg\">'),'Image protection lost');\n$ok(vnw_elementor_import_signature('<p class=\"a\">Same</p>')!==vnw_elementor_import_signature('<p class=\"b\">Same</p>'),'Attribute protection lost');\n$items=get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']);\nforeach($items as $p){\n $encoded=str_replace(['\u2197','\ud83d\ude4c'],['&#x2197;','&#128588;'],$p->post_content);\n kses_remove_filters();try{wp_update_post(wp_slash(['ID'=>$p->ID,'post_content'=>$encoded]));}finally{kses_init_filters();}\n $before=get_post($p->ID)->post_content;\n $ok(vnw_elementor_convert($p->ID)==='Converted successfully','Conversion failed');\n $ok(get_post($p->ID)->post_content===$before,'Original content was changed');\n $data=get_post_meta($p->ID,'_elementor_data',true);\n $ok(vnw_elementor_convert($p->ID)==='Already editable; left unchanged','Retry did not skip');\n $ok(get_post_meta($p->ID,'_elementor_data',true)===$data,'Retry changed Elementor data');\n}\n// A genuinely edited imported page must still be blocked before any Elementor writes.\n$id=wp_insert_post(['post_type'=>'page','post_status'=>'draft','post_title'=>'Conversion protection test','post_content'=>'A real user edit']);\nupdate_post_meta($id,'_vnw_source','index.html');\n$blocked=false;try{vnw_elementor_convert($id);}catch(RuntimeException $e){$blocked=str_contains($e->getMessage(),'content changes');}\n$ok($blocked && !get_post_meta($id,'_elementor_data',true),'Real edit was not protected');wp_delete_post($id,true);\necho 'PASS: Unicode normalization, edit protection, 56 conversions, fallback preservation, retry idempotency';\n"
+    }
+  ],
+  "login": true,
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "6.7.2"
+  }
+}

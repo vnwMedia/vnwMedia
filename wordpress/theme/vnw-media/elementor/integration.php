@@ -12,6 +12,17 @@ add_action('elementor/widgets/register', function($manager) {
 function vnw_elementor_enabled($id) {
  return did_action('elementor/loaded') && get_post_meta($id, '_vnw_elementor', true) && get_post_meta($id, '_elementor_edit_mode', true) === 'builder';
 }
+/** Normalize only equivalent non-ASCII numeric character references.
+ * Do not decode ASCII entities: &lt; and < can represent different markup.
+ * Keep whitespace, attributes and element structure intact to protect real edits.
+ */
+function vnw_elementor_import_signature($html) {
+ return trim(preg_replace_callback('/&#(?:x[0-9a-f]+|[0-9]+);/i', function($match) {
+  $entity=$match[0];
+  $point=strtolower($entity[2])==='x'?hexdec(substr($entity,3,-1)):(int)substr($entity,2,-1);
+  return $point>=128?html_entity_decode($entity,ENT_QUOTES|ENT_HTML5,'UTF-8'):$entity;
+ },$html));
+}
 function vnw_elementor_convert($id) {
  if (!did_action('elementor/loaded')) throw new RuntimeException('Activate Elementor before converting pages.');
  if (get_post_meta($id, '_elementor_data', true)) return 'Already editable; left unchanged';
@@ -23,7 +34,7 @@ function vnw_elementor_convert($id) {
  foreach (vnw_records() as $r) if ($r['source'] === $source) $record = $r;
  // Do not replace content edited since import with the bundled design.
  $baseline = $record['post_content'] ?? $record['html'];
- if (trim($post->post_content) !== trim($baseline)) throw new RuntimeException('This page has content changes since import. It was left unchanged for manual review.');
+ if (vnw_elementor_import_signature($post->post_content) !== vnw_elementor_import_signature($baseline)) throw new RuntimeException('This page has content changes since import. It was left unchanged for manual review.');
  $elements = [];
  foreach ($page['sections'] as $key) {
   $elements[] = ['id'=>substr($key,0,7), 'elType'=>'widget', 'widgetType'=>'vnw-section-'.$key, 'settings'=>[], 'elements'=>[]];
@@ -56,8 +67,8 @@ add_action('admin_menu', function() {
 });
 add_action('wp_enqueue_scripts', function() {
  if (!vnw_elementor_enabled(get_queried_object_id())) return;
- wp_enqueue_style('vnw-elementor', get_template_directory_uri().'/elementor/editor.css',[], '0.2.0');
- if (\Elementor\Plugin::$instance->editor->is_edit_mode()) wp_enqueue_script('vnw-elementor-preview',get_template_directory_uri().'/elementor/preview.js',[], '0.2.0',true);
+ wp_enqueue_style('vnw-elementor', get_template_directory_uri().'/elementor/editor.css',[], '0.2.1');
+ if (\Elementor\Plugin::$instance->editor->is_edit_mode()) wp_enqueue_script('vnw-elementor-preview',get_template_directory_uri().'/elementor/preview.js',[], '0.2.1',true);
 }, 100);
 
 add_action('wp_ajax_vnw_visual_convert',function() {

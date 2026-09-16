@@ -1,8 +1,8 @@
-# VNW Media visual editing — theme 0.2.0
+# VNW Media visual editing — theme 0.2.1
 
 ## Install on staging only
 1. In redesign.vnwmedia.net, open Appearance → Themes → Add New → Upload Theme.
-2. Upload `vnw-media-wordpress-elementor-0.2.0.zip`. Choose **Replace active with uploaded**. Do not upload the static website backup ZIP.
+2. Upload `vnw-media-wordpress-elementor-0.2.1.zip`. Choose **Replace active with uploaded**. Do not upload the static website backup ZIP.
 3. Leave the existing Elementor plugin active. This ZIP does not install, upgrade, or downgrade plugins.
 4. Open Appearance → VNW Visual Editing. Start with the homepage, or use **Enable visual editing for all unchanged imported pages**. Keep the tab open until finished.
 5. Pages already using Elementor are skipped. Pages changed since the original import are also skipped for manual review; their edits are not overwritten.
@@ -26,3 +26,6 @@ Local tests covered loading all 59 routes; comparison of eight representative pa
 A disposable compatibility test used WordPress 6.7.2 / PHP 8.2 / Elementor 3.32.5. A separate current-version local test also passed text and image saving. The older plugin is a test fixture only, not bundled or recommended for installation. Existing hosting plugins, caching, fonts, and exact Elementor version still require a staging review.
 
 Forms retain the existing WordPress handler addressed to contactus@vnwmedia.com. Email inbox delivery is still awaiting confirmation; a successful submission is not proof of delivery. Do not publish staging to vnwmedia.net until visual and functional review is complete.
+
+## 0.2.1 correction
+WordPress can store arrows and emoji as numeric HTML character references. The import comparison now treats those equivalent Unicode encodings as equal. It still compares actual text, image URLs, attributes, structure and whitespace, and does not decode ASCII entities. Already converted pages and original fallback content are retained. Rerun the conversion after uploading 0.2.1; no reset is needed.

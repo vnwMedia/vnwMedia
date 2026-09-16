@@ -1,3 +1,7 @@
+# 0.2.1 staging conversion correction
+
+The user installed 0.2.0. Many marketing pages were blocked by the exact-string protection check, while some articles converted. Read-only inspection of the public staging homepage confirmed that its markup matches the bundled page exactly after normalizing non-ASCII numeric entities (arrows and emoji). The 0.2.1 comparison fixes this false positive without ignoring real text, image, attribute or markup changes. The diagnostic did not modify hosting. See elementor-encoding-test-blueprint.json for regression coverage.
+
 # Current update: Elementor editing, 0.2.0
 
 The 0.1.0 theme is installed by the user on redesign.vnwmedia.net. The 0.2.0 update is prepared locally, not yet installed on hosting. See ELEMENTOR-EDITING.md for the new section-based visual editing workflow, verification, and limitations. No live website or other hosted site was changed.
