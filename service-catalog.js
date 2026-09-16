@@ -379,7 +379,7 @@ function serviceDirectoryMarkup(root = "", compact = false) {
 function serviceFooterMarkup(root = "") {
   const safe = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
   const pillars = SERVICE_MENU_PILLARS.map(pillar => `<section class="footer-service-pillar"><h5>${safe(pillar.name)}</h5>${pillar.groups.map(group => `<div class="footer-service-group"><h6>${safe(group.name)}</h6>${group.links.map(([label, href]) => `<a href="${root}${safe(href)}">${safe(label)}</a>`).join("")}</div>`).join("")}</section>`).join("");
-  return `<h4>Services</h4><div class="footer-service-pillars">${pillars}</div><a class="footer-all-services" href="${root}services.html#all-services">Explore all services ↗</a>`;
+  return `<h4>Services</h4><div class="footer-service-pillars">${pillars}</div>`;
 }
 
 // Canonical service labels used by the navigation and menu studies.
