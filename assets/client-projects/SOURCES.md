@@ -44,4 +44,4 @@ The `*-desktop.jpg` and `*-mobile.jpg` files are actual screenshots captured fro
 - Art of Construction logo: https://www.artofconstructionnyc.com/wp-content/themes/art-of-construction/images/logo.webp
 - Art of Construction hero: https://www.artofconstructionnyc.com/wp-content/uploads/2026/05/banner.webp
 
-Assets are stored locally to avoid hotlink dependencies. The SkyRex and Platinum logos receive a white CSS treatment on dark photography; source logo files are unchanged. Some logos have limited native resolution. Replace them with higher-resolution client originals if those become available.
+Assets are stored locally to avoid hotlink dependencies. The SkyRex, CTI Logistics, ForDoz Pharma, and Platinum logos receive a white CSS treatment on dark photography; source logo files are unchanged. Some logos have limited native resolution. Replace them with higher-resolution client originals if those become available.

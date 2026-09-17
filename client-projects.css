@@ -1,6 +1,8 @@
 /* Additional projects reuse the approved Selected Work cards and case-study layout. */
 .work-project-media>img:first-child{filter:brightness(.45)}
 .work-project-media[data-project="skyrex-inc"] .work-client-logo,
+.work-project-media[data-project="cti-logistics"] .work-client-logo,
+.work-project-media[data-project="fordoz-pharma"] .work-client-logo,
 .work-project-media[data-project="platinum-valet-parking"] .work-client-logo{filter:brightness(0) invert(1) drop-shadow(0 3px 5px rgba(0,0,0,.7))}
 .work-project-media[data-project="coin-jewelry-gallery-boca-raton"] .work-client-logo{width:35%;max-width:150px}
 .work-project-media[data-project="nj-steps-to-success"] .work-client-logo{width:43%;max-width:190px}
