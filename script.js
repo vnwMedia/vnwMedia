@@ -47,7 +47,7 @@ if (siteHeaderElement) {
     <a class="logo" href="${navRoot}index.html" aria-label="VNW Media home"><img src="${navRoot}assets/vnwMedia-LogoBlk.png" alt="VNW Media"></a>
     <a class="nav-phone" href="tel:17328200609" aria-label="Call VNW Media at (732) 820-0609"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.09 9.89a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.83.56 2.79.69A2 2 0 0 1 22 16.92z"/></svg></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-mobile-menu" aria-haspopup="dialog"><span class="sr-only">Open mobile menu</span><i></i><i></i></button>
-    <div class="nav-menu" id="nav-menu"><a href="${navRoot}our-story.html">Our Story</a>${servicesMegaNav}<a href="${navRoot}work.html?v=31">Our Work</a><a href="${navRoot}industries.html">Industries</a><a href="${navRoot}case-studies.html">Case Studies</a><a href="${navRoot}resources.html">Resources</a></div>
+    <div class="nav-menu" id="nav-menu"><a href="${navRoot}our-story.html">Our Story</a>${servicesMegaNav}<a href="${navRoot}work.html?v=31">Our Work</a><a href="${navRoot}industries.html">Industries</a><a href="${navRoot}resources.html">Resources</a></div>
     <div class="nav-actions"><a class="pill pill-blue" href="${navRoot}contact.html">Get Started</a></div>
   </nav>`;
 }
@@ -139,7 +139,7 @@ function initializeMobileNavigation() {
   const safe = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
   const arrow = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';
   const link = ([label, href], className = "") => `<a class="${className}" href="${navRoot}${safe(href)}"><span>${safe(label)}</span><span class="sm-arrow" aria-hidden="true">${arrow}</span></a>`;
-  const mainLinks = [['Our Story','our-story.html'],['Services','services.html'],['Our Work','work.html'],['Industries','industries.html'],['Case Studies','case-studies.html'],['Resources','resources.html'],['Contact','contact.html']];
+  const mainLinks = [['Our Story','our-story.html'],['Services','services.html'],['Our Work','work.html'],['Industries','industries.html'],['Resources','resources.html'],['Contact','contact.html']];
   const services = SERVICE_MENU_PILLARS.flatMap(pillar => pillar.groups.flatMap(group => group.links));
   const allServicesLink = () => link(['View all services','services.html#all-services'], 'sm-all-services');
   const dialog = document.createElement('dialog');
