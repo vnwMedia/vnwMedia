@@ -1,0 +1,13 @@
+/* Additional projects reuse the approved Selected Work cards and case-study layout. */
+.work-project-media>img:first-child{filter:brightness(.45)}
+.work-project-media[data-project="skyrex-inc"] .work-client-logo,
+.work-project-media[data-project="platinum-valet-parking"] .work-client-logo{filter:brightness(0) invert(1) drop-shadow(0 3px 5px rgba(0,0,0,.7))}
+.work-project-media[data-project="coin-jewelry-gallery-boca-raton"] .work-client-logo{width:35%;max-width:150px}
+.work-project-media[data-project="nj-steps-to-success"] .work-client-logo{width:43%;max-width:190px}
+.work-project-media[data-project="catanzaros-power-washing"] .work-client-logo{width:48%;max-width:190px}
+.work-project-media[data-project="h2bros-plumbing"] .work-client-logo{width:70%;max-width:280px}
+.client-project-screens{display:block;min-height:0;padding:26px 0 36px}
+.client-project-screens>img:first-child{width:88%;height:auto;border:1px solid #d7d9da;border-radius:12px;box-shadow:0 16px 40px rgba(17,30,37,.12)}
+.client-project-screens>.client-project-mobile{position:absolute;right:0;bottom:0;width:24%;height:auto;border:5px solid #101417;border-radius:18px;box-shadow:0 10px 30px rgba(17,30,37,.2)}
+.scm-ms-story-copy>.pill{margin-top:16px}
+@media(max-width:560px){.client-project-screens{padding:16px 0 25px}.client-project-screens>.client-project-mobile{border-width:3px;border-radius:12px}}

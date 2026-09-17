@@ -112,7 +112,7 @@ function cards(items,type){
 }
 
 function capabilityTicker(){
-  const clients=["Brooklyn Motors","La Rosa Chicken and Grill","KYPCL","Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds","Honeydrop","Marlboro Jewish Day Camp","Travel Mama","Pollack SEO","A2Z Academy"];
+  const clients=typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined"?[...DATA.cases.map(item=>item[0]),...ADDITIONAL_CLIENT_PROJECTS.map(item=>item.name)]:["Brooklyn Motors","La Rosa Chicken and Grill","KYPCL","Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds","Honeydrop","Marlboro Jewish Day Camp","Travel Mama","Pollack SEO","A2Z Academy"];
   return `<section class="trust-strip work-client-ticker" data-nav-theme="dark" aria-label="VNW Media clients"><div class="trust-track"><small>Selected Client Work</small><i></i>${[...clients,...clients].map(x=>`<span>${x}</span>`).join("")}</div></section>`;
 }
 
@@ -224,6 +224,28 @@ function homeProcessOptions(){
   <section class="hpo-option hpo-stack section" id="process-option-5" data-nav-theme="light"><div class="shell">${optionLabel("05","The Client Confidence Stack","Strategic · Outcome-led · Conversion-focused","")}<div class="hpo-stack-grid"><aside><p class="section-tag">Our Process</p><h2>Make every phase answer the question: “Why should they choose us?”</h2><p>This option ties the internal agency process to the customer’s buying decision, which makes it especially strong for a lead-generation homepage.</p><a class="pill pill-blue" href="${path("contact.html")}">Build my growth stack <span>↗</span></a></aside><div class="hpo-stack-layers">${steps.map((x,i)=>`<article><div><span>0${i+1}</span><h3>${x[0]}</h3></div><p>${x[1]}</p><small>${metrics[i]}</small></article>`).join("")}</div></div></div></section>`;
 }
 
+function renderAdditionalProjectCard(project){
+  return `<article class="work-card work-agency-card reveal"><figure class="work-client-media work-project-media" data-project="${esc(project.slug)}"><img src="${img(project.hero)}" alt="${esc(project.heroAlt)}" width="1920" height="1080" loading="lazy"><img class="work-client-logo" src="${img(project.logo)}" alt="${esc(project.name)} logo" loading="lazy"></figure><div><span>${esc(project.industry)}</span><h3>${esc(project.name)}</h3><p>${esc(project.summary)} Our work connects web design, SEO, Google Business Profile, GBP Search Ads, and GEO / AI Marketing.</p><ul aria-label="Services provided for ${esc(project.name)}">${ADDITIONAL_PROJECT_SERVICES.map(service=>`<li><a class="work-service-pill" href="${path(`services/${service[4]}.html`)}">${esc(service[1])}</a></li>`).join("")}</ul><a class="work-case-link" href="${path(`case-studies/${project.slug}.html`)}" aria-label="Read ${esc(project.name)} case study"><b>Read case study ↗</b></a></div></article>`;
+}
+
+function renderAdditionalClientCaseStudy(project){
+  return renderClientCaseStudy({
+    name:project.name, kicker:project.industry, intro:project.summary,
+    hero:project.hero, heroAlt:project.heroAlt, heroWidth:1920, heroHeight:1080,
+    yearLabel:'Web Design · Search · AI', website:project.website,
+    mockup:project.desktop, mockupAlt:`${project.name} website on desktop`, mockupWidth:1440, mockupHeight:1000,
+    mockupMobile:project.mobile, visualCaption:'The live client website.', visualDetail:'Desktop · Mobile',
+    signals:project.focus, challengeTitle:project.headline, challengeOne:project.challenge,
+    challengeTwo:`Our engagement connects Web Design, SEO, Google Business Profile, GBP Search Ads, and GEO / AI Marketing around the needs of ${project.audience}.`,
+    approachTitle:'One business. A connected digital direction.',
+    approach:[['Website clarity.',project.design],['Relevant search content.',project.search],['Local business context.',project.local],['AI-ready explanations.',project.geo]],
+    storyTitle:project.storyTitle, storyOne:project.story,
+    storyTwo:`The experience is shaped for ${project.audience}, with ${project.location} providing the relevant location context.`,
+    storyThree:'Web design, organic search, Google Business Profile, paid profile discovery, and GEO / AI Marketing connect around a shared goal: helping the right audience understand the business and find a clear next step.',
+    services:ADDITIONAL_PROJECT_SERVICES.map(service=>[service[0],service[1],project[service[2]],service[3],`Discuss ${service[1]}`])
+  });
+}
+
 function workPageOne(){
   const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media","Reputation Management":"reputation-management","SEO · 11 locations":"seo","Google Business Profile Management":"google-business-profile","Google Business Profile Search Ads":"google-ppc","Google Business Profile":"google-business-profile","Google Business Search Ads":"google-ppc","Lead Generation":"lead-generation"};
   const projectScopes=[
@@ -243,8 +265,8 @@ function workPageOne(){
     ["Build","Bring design, copy, development, SEO foundations, tracking, and launch details together.","assets/work-process-build.jpg"],
     ["Improve","Use real customer questions and performance signals to guide the next useful refinement.","assets/work-process-improve.jpg"]
   ];
-  const moreWork=["Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds"];
-  return `<section class="work work-agency-featured section" id="page-content"><div class="shell"><div class="work-agency-head reveal"><div><p class="section-tag">Selected Work</p><h2>Different industries. The same focus on clarity, trust, and action.</h2></div><p>Each project begins with a different business problem. The work below shows how strategy, design, content, search context, and lead paths come together around the customer’s next decision.</p></div><div class="work-grid">${DATA.cases.map((x,i)=>`<article class="work-card work-agency-card reveal">${["la-rosa-chicken-grill","brooklyn-motors","kypcl"].includes(x[1])?`<figure class="work-client-media"><img src="${img(x[4])}" alt="${esc(x[0])}"><img class="work-client-logo" src="${img(x[1]==="brooklyn-motors"?"assets/brooklyn-motors-logo-supplied.png":x[1]==="kypcl"?"assets/kypcl-logo-supplied.png":"assets/la-rosa-logo-white-text.svg")}" alt="${esc(x[0])} logo"></figure>`:`<img src="${img(x[4])}" alt="${esc(x[0])}">`}<div><span>${esc(x[2])}</span><h3>${esc(x[0])}</h3><p>${esc(x[3])}</p><ul aria-label="Services provided for ${esc(x[0])}">${projectScopes[i].map(scope=>`<li><a class="work-service-pill" href="${path(`services/${scopePages[scope]}.html`)}">${scope}</a></li>`).join("")}</ul><a class="work-case-link" href="${path(`case-studies/${x[1]}.html`)}" aria-label="Read ${esc(x[0])} case study"><b>Read case study ↗</b></a></div></article>`).join("")}</div><div class="portfolio-list reveal">${moreWork.map((x,i)=>`<a href="${path("contact.html")}"><span>${String(i+4).padStart(2,"0")}</span><strong>${x}</strong><i>Discuss this work ↗</i></a>`).join("")}</div></div></section>
+  const additionalProjects=typeof ADDITIONAL_CLIENT_PROJECTS==="undefined"?[]:ADDITIONAL_CLIENT_PROJECTS;
+  return `<section class="work work-agency-featured section" id="page-content"><div class="shell"><div class="work-agency-head reveal"><div><p class="section-tag">Selected Work</p><h2>Different industries. The same focus on clarity, trust, and action.</h2></div><p>Each project begins with a different business problem. The work below shows how strategy, design, content, search context, and lead paths come together around the customer’s next decision.</p></div><div class="work-grid">${DATA.cases.map((x,i)=>`<article class="work-card work-agency-card reveal">${["la-rosa-chicken-grill","brooklyn-motors","kypcl"].includes(x[1])?`<figure class="work-client-media"><img src="${img(x[4])}" alt="${esc(x[0])}"><img class="work-client-logo" src="${img(x[1]==="brooklyn-motors"?"assets/brooklyn-motors-logo-supplied.png":x[1]==="kypcl"?"assets/kypcl-logo-supplied.png":"assets/la-rosa-logo-white-text.svg")}" alt="${esc(x[0])} logo"></figure>`:`<img src="${img(x[4])}" alt="${esc(x[0])}">`}<div><span>${esc(x[2])}</span><h3>${esc(x[0])}</h3><p>${esc(x[3])}</p><ul aria-label="Services provided for ${esc(x[0])}">${projectScopes[i].map(scope=>`<li><a class="work-service-pill" href="${path(`services/${scopePages[scope]}.html`)}">${scope}</a></li>`).join("")}</ul><a class="work-case-link" href="${path(`case-studies/${x[1]}.html`)}" aria-label="Read ${esc(x[0])} case study"><b>Read case study ↗</b></a></div></article>`).join("")}${additionalProjects.map(renderAdditionalProjectCard).join("")}</div></div></section>
   <section class="work-agency-method section" data-nav-theme="dark"><div class="shell work-agency-method-grid"><div class="work-agency-method-copy reveal"><p class="section-tag">What Connects The Work</p><h2>More than a gallery. A working digital system.</h2><p>Strong agency work should explain what changed, why it matters, and how the pieces support the business—not just display polished screens.</p><a class="pill pill-blue" href="${path("contact.html")}">Discuss your opportunity <span>↗</span></a></div><div class="work-agency-principles">${principles.map((x,i)=>`<article class="reveal"><span>${String(i+1).padStart(2,"0")}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></div></section>
   <section class="work-agency-process work-agency-process-option1 section" id="work-process" data-nav-theme="light"><div class="shell"><div class="work-agency-process-head reveal"><div><p class="section-tag">How Projects Move</p><h2>From first question to the next improvement.</h2></div><a class="pill pill-blue" href="${path("contact.html")}">Plan your project <span>↗</span></a></div><div class="work-agency-process-grid">${processSteps.map((x,i)=>`<article class="reveal"><figure><img src="${img(x[2])}" alt="${esc(x[0])} project phase"><span>${String(i+1).padStart(2,"0")}</span></figure><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}</div></div></section>
   ${googleTestimonials()}
@@ -731,21 +753,21 @@ function renderClientCaseStudy(config){
   const detailSections=services.map((x,i)=>`<section class="scm-ms-service reveal" id="${x[0]}" data-nav-theme="dark"><div class="scm-ms-service-grid"><div class="scm-ms-service-title"><span>${String(i+1).padStart(2,"0")} / ${x[3]}</span><h2>${x[1]}</h2></div><div class="scm-ms-service-copy"><p>${x[2]}</p><a class="scm-ms-inline-cta" href="${path("contact.html")}">${x[4]||"Discuss this part of the build"} <span>↗</span></a></div></div></section>`).join("");
   return `
     <div class="scm-ms-page">
-      <section class="scm-ms-hero" id="page-content" data-nav-theme="dark"><div class="scm-ms-hero-bg"><img src="${img(config.hero)}" alt="${esc(config.heroAlt)}" width="${config.heroWidth}" height="${config.heroHeight}" fetchpriority="high"></div><div class="shell scm-ms-hero-inner reveal"><p class="scm-ms-kicker">${esc(config.kicker)}</p><h1>${esc(config.name)}</h1><p>${esc(config.intro)}</p><span>2026</span></div></section>
+      <section class="scm-ms-hero" id="page-content" data-nav-theme="dark"><div class="scm-ms-hero-bg"><img src="${img(config.hero)}" alt="${esc(config.heroAlt)}" width="${config.heroWidth}" height="${config.heroHeight}" fetchpriority="high"></div><div class="shell scm-ms-hero-inner reveal"><p class="scm-ms-kicker">${esc(config.kicker)}</p><h1>${esc(config.name)}</h1><p>${esc(config.intro)}</p><span>${esc(config.yearLabel||"2026")}</span></div></section>
       <section class="scm-ms-signals" data-nav-theme="dark"><div class="shell scm-ms-signal-grid">${signals.map(x=>`<article class="reveal"><strong>${x[0]}</strong><span>${x[1]}</span></article>`).join("")}</div></section>
       <section class="scm-ms-challenge-approach" data-nav-theme="dark"><div class="shell scm-ms-ca-grid reveal"><article class="scm-ms-ca-panel"><p class="section-tag">The Challenge</p><h2>${esc(config.challengeTitle)}</h2><div class="scm-ms-ca-copy"><p>${esc(config.challengeOne)}</p><p>${esc(config.challengeTwo)}</p></div></article><article class="scm-ms-ca-panel"><p class="section-tag">Our Approach</p><h2>${esc(config.approachTitle)}</h2><div class="scm-ms-approach-list">${approach.map(x=>`<article><b>—</b><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></article></div></section>
       <section class="scm-ms-story" id="digital-experience" data-nav-theme="light" aria-labelledby="scm-story-title">
         <div class="shell scm-ms-story-grid reveal">
           <figure class="scm-ms-story-visual">
             <span class="section-tag">${esc(config.name)} / Digital Experience</span>
-            <div class="scm-ms-story-stage"><img src="${img(config.mockup)}" alt="${esc(config.mockupAlt)}" width="${config.mockupWidth}" height="${config.mockupHeight}" loading="lazy" decoding="async"></div>
+            <div class="scm-ms-story-stage${config.mockupMobile?" client-project-screens":""}"><img src="${img(config.mockup)}" alt="${esc(config.mockupAlt)}" width="${config.mockupWidth}" height="${config.mockupHeight}" loading="lazy" decoding="async">${config.mockupMobile?`<img class="client-project-mobile" src="${img(config.mockupMobile)}" alt="${esc(config.name)} website on mobile" width="390" height="844" loading="lazy" decoding="async">`:""}</div>
             <figcaption><span>${esc(config.visualCaption||"One experience. Every screen.")}</span><span>${esc(config.visualDetail||"Desktop · Mobile")}</span></figcaption>
           </figure>
           <div class="scm-ms-story-copy">
             <h2 id="scm-story-title">${esc(config.storyTitle)}</h2>
             <p>${esc(config.storyOne)}</p>
             <p>${esc(config.storyTwo)}</p>
-            <p>${esc(config.storyThree)}</p>
+            <p>${esc(config.storyThree)}</p>${config.website?`<a class="pill pill-blue" href="${esc(config.website)}" target="_blank" rel="noopener noreferrer">Visit client website <span aria-hidden="true">↗</span></a>`:""}
           </div>
         </div>
       </section>
@@ -1261,6 +1283,10 @@ function bootPages(){
   if(!content && id?.startsWith("industry-")) content=detail("industry",DATA.industries.find(x=>x[1]===id.slice(9))||DATA.industries[0]);
   if(id==="case-brooklyn-motors") content=brooklynMotorsCaseStudy();
   if(id?.startsWith("case-") && CLIENT_CASE_STUDIES[id.slice(5)]) content=renderClientCaseStudy(CLIENT_CASE_STUDIES[id.slice(5)]);
+  if(id?.startsWith("case-") && typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined"){
+    const project=ADDITIONAL_CLIENT_PROJECTS.find(item=>item.slug===id.slice(5));
+    if(project) content=renderAdditionalClientCaseStudy(project);
+  }
   if(!content && id?.startsWith("case-")) content=detail("case",DATA.cases.find(x=>x[1]===id.slice(5))||DATA.cases[0]);
   if(!content && id?.startsWith("resource-")) content=detail("resource",DATA.resources.find(x=>x[1]===id.slice(9))||DATA.resources[0]);
   const pageTitle=topPages[id]?.[0] || content.match(/<h1>(.*?)<\/h1>/)?.[1] || "VNW Media";
