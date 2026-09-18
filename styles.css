@@ -2150,6 +2150,10 @@ body .site-header.site-header .nav-phone{display:none}
 .csp-scope-copy li{padding:13px 0;border-bottom:1px solid #343b3e;color:#e6e9ea;font-size:12px}
 .csp-scope-note{margin-top:auto!important;color:#758084!important;font-size:10px!important}
 .csp-process{background:#f4f1eb}
+.csp-process .csp-section-head{grid-template-columns:1fr;gap:22px;text-align:left}
+.csp-process .csp-section-head .section-tag{margin:0}
+.csp-process .csp-section-head>div,.csp-process .csp-section-head h2{max-width:1000px}
+.csp-process .csp-section-head>div>p{max-width:1000px}
 .csp-process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .csp-process-grid article{min-height:260px;display:flex;flex-direction:column;padding:22px;border:1px solid #d6d1ca;border-radius:22px;background:#fff}
 .csp-process-grid article>div{margin-top:auto}
