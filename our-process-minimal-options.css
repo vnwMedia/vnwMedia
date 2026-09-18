@@ -1,6 +1,21 @@
 /* Compact agency concepts. Text follows the shared navigation shell;
  photographic bleed is deliberate and clipped, never a boxed card. */
 .lv-site{--ml-rail:280px;--ml-bleed:calc((var(--shell) - 100vw)/2 - var(--ml-rail))}.lv-site .pn-loop{padding:45px 0}.lv-site .pn-loop-stage{padding:38px 0}.lv-site .pn-loop-stage:first-child{padding-top:0}.lv-site .pn-loop-stage h2{font-size:60px!important;margin:0}.lv-site .pn-loop-deck{font-size:23px;margin:15px 0 20px}.lv-site .pn-loop-text p{font-size:14px;margin:0 0 20px;line-height:1.65}.lv-site .pn-loop-outputs{margin:20px 0 12px;padding:16px 0}.lv-site .pn-loop-outputs .eyebrow{margin-bottom:12px}.lv-site .pn-loop-outputs ul{grid-template-columns:repeat(2,1fr);gap:0 20px}.lv-site .pn-loop-outputs li{font-size:11px;padding:4px 0}.lv-site .pn-loop-number{font-size:100px;top:20px}.lv-site .pn-loop-hero{min-height:450px}.lv-site .pn-hero>.wrap{padding:50px 0}.lv-site .pn-hero h1{font-size:70px!important;margin-top:15px}.lv-site .pn-hero p:not(.eyebrow){margin:20px 0 25px;font-size:16px}.lv-site .pn-services,.lv-site .pn-faq{padding:55px 0}.lv-site .pn-end{padding:65px 0}.lv-site .pn-service-grid{margin-top:30px}.lv-site .pn-loop-rail a{padding:14px 16px}.lv-site .pn-loop-rail{z-index:4}.lv-site .pn-loop-stage{isolation:isolate}.lv-stage-story>img{margin:20px 0;height:280px}.lv-site .pn-loop-stage .pill{margin-top:7px}
+/* Minimal Journal: open, alternating full-width stage bands and linked services. */
+.ml-option-5 .pn-loop-stage{border-bottom:1px solid #62747e;padding-bottom:42px}
+.ml-option-5 .pn-loop-stage:not(:first-child){padding-top:42px}
+.ml-option-5 .pn-loop-stage:before{content:'';position:absolute;top:0;bottom:0;left:var(--ml-bleed);width:100vw;z-index:-1;background:#10191d}
+.ml-option-5 .pn-loop-stage:nth-child(even):before{background:#18272f}
+.ml-option-5 .lv-stage-heading{border-top:2px solid #00aeef;padding-top:20px}
+.ml-option-5 .pn-loop-number{top:50px}
+.ml-option-5 .mj-services{margin:24px 0 25px;padding-top:20px;border-top:1px solid #425159}
+.ml-option-5 .mj-services .eyebrow{margin-bottom:8px;color:#65dcff}
+.ml-option-5 .mj-service-note{font-size:11px;color:#aab8bf;margin:0 0 14px}
+.ml-option-5 .mj-service-links{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.ml-option-5 .mj-service-links a{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:12px;line-height:1.5;padding:11px 0;border-bottom:1px solid #425159;color:#e0e7eb}
+.ml-option-5 .mj-service-links a span{color:#00aeef;flex:none}
+.ml-option-5 .mj-service-links a:hover,.ml-option-5 .mj-service-links a:focus-visible{color:#65dcff;border-color:#00aeef}
+@media(max-width:520px){.ml-option-5 .mj-service-links{grid-template-columns:1fr}.ml-option-5 .mj-service-links a{padding:12px 0}}
 /* 1: open compact copy, then an actual viewport-wide photograph. */
 .ml-option-1 .lv-stage-story>img{width:100vw;max-width:none;margin-left:var(--ml-bleed);height:310px;object-position:center}.ml-option-1 .pn-loop-number{color:#ffffff0b}.ml-option-1 .pn-loop-rail{background:linear-gradient(90deg,#10191dfa,#10191dd9);padding:10px 0}.ml-option-1 .pn-loop-outputs{margin-top:20px}
 /* 2: all stage content integrated directly over a full-width photograph. */
