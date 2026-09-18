@@ -3,6 +3,29 @@
 (() => {
   const selector = '.trust-track, .res-mag-marquee, .res-cmd-strip > .shell, .res-bento-scroll > div, .res-signal-marquee > div, .res-dispatch-strip > div, .ticker-track';
 
+  // Lead with digital marketing; website development and brand services follow.
+  // This presentation order and label apply only to the shared capabilities ticker.
+  const capabilityOrder = [
+    'seo', 'google-ppc', 'social-media', 'geo',
+    'social-media-consultation', 'community-management', 'yelp-seo',
+    'google-business-profile', 'reputation-management', 'lead-generation',
+    'paid-social', 'email-marketing', 'text-marketing', 'crm-automation',
+    'web-design', 'ecommerce', 'website-maintenance', 'app-design-development',
+    'landing-pages', 'brand-strategy', 'graphic-design'
+  ];
+
+  function capabilityNames() {
+    const links = SERVICE_MENU_PILLARS.flatMap(pillar => pillar.groups.flatMap(group => group.links));
+    const rank = href => {
+      const slug = href.match(/services\/([^/.]+)\.html$/)?.[1];
+      const index = capabilityOrder.indexOf(slug);
+      return index < 0 ? capabilityOrder.length : index;
+    };
+    return [...new Set(links.sort((a, b) => rank(a[1]) - rank(b[1])).map(([name, href]) =>
+      href.endsWith('/community-management.html') ? 'Content Management' : name
+    ))];
+  }
+
   function initializeTickers() {
     // Every service detail uses the same capabilities strip as the homepage.
     if (document.body.dataset.page?.startsWith('service-')) {
@@ -27,7 +50,7 @@
       const gap = originalStyle.columnGap === 'normal' ? '48px' : originalStyle.columnGap;
       const isServices = track.closest('[aria-label="VNW Media capabilities"]') && typeof SERVICE_MENU_PILLARS !== 'undefined';
       if (isServices) {
-        const names = [...new Set(SERVICE_MENU_PILLARS.flatMap(pillar => pillar.groups.flatMap(group => group.links.map(([name]) => name))))];
+        const names = capabilityNames();
         const intro = document.createElement('small');
         intro.textContent = 'Built to move businesses forward';
         const divider = document.createElement('i');
