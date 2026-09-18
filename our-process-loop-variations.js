@@ -32,8 +32,30 @@ const loop=[
 const stageLabels=['Strategy','Creative','Activate','Improve'];
 const stageCtas=[['Discuss your goals','contact.html'],['Explore our services','services.html'],['Explore campaign services','services/google-ppc.html'],['Plan your next step','contact.html']];
 const action=i=>'<a class="pill pill-blue" href="'+stageCtas[i][1]+'">'+stageCtas[i][0]+' <span aria-hidden="true">↗</span></a>';
+let highlightFrame=0;
+function updateStageHighlight(){
+ const stages=[...document.querySelectorAll('.lv-site .pn-loop-stage')];
+ const marker=Math.max(210,innerHeight*.35);
+ let current=null;
+ if(stages.length&&stages[0].getBoundingClientRect().top<=marker&&stages.at(-1).getBoundingClientRect().bottom>marker){
+  current=stages[0];
+  stages.forEach(stage=>{if(stage.getBoundingClientRect().top<=marker)current=stage;});
+ }
+ document.querySelectorAll('.lv-site .pn-loop-rail a').forEach(link=>{
+  if(current&&link.dataset.jump===current.id)link.setAttribute('aria-current','step');
+  else link.removeAttribute('aria-current');
+ });
+}
+function queueStageHighlight(){
+ if(highlightFrame)return;
+ highlightFrame=requestAnimationFrame(()=>{highlightFrame=0;updateStageHighlight();});
+}
+window.addEventListener('scroll',queueStageHighlight,{passive:true});
+window.addEventListener('resize',queueStageHighlight,{passive:true});
+document.addEventListener('load',queueStageHighlight,true);
 function render(n){
-const body='<section class="pn-loop" data-nav-theme="dark"><div class="wrap pn-loop-grid"><nav class="pn-loop-rail" aria-label="Process stages">'+loop.map((s,i)=>'<a href="#stage-'+i+'" data-jump="stage-'+i+'"><span>0'+(i+1)+'</span>'+stageLabels[i]+'</a>').join('')+'</nav><div>'+loop.map((s,i)=>'<article class="pn-loop-stage" id="stage-'+i+'"><span class="pn-loop-number" aria-hidden="true">0'+(i+1)+'</span><div class="lv-stage-heading">'+'<h2>'+stageLabels[i]+'</h2><p class="pn-loop-deck">'+s[1]+'</p></div><div class="lv-stage-story"><div class="pn-loop-text"><p>'+s[3]+'</p><p>'+s[4]+'</p></div>'+img(s[2])+'</div><div class="pn-loop-outputs">'+kicker('What moves forward')+'<ul>'+s[5].map(t=>'<li>'+t+'</li>').join('')+'</ul></div>'+action(i)+'</article>').join('')+note+'</div></div></section>';
+queueStageHighlight();
+const body='<section class="pn-loop" data-nav-theme="dark"><div class="wrap pn-loop-grid"><nav class="pn-loop-rail" aria-label="Process stages">'+loop.map((s,i)=>'<a href="#stage-'+i+'" data-jump="stage-'+i+'"><span>0'+(i+1)+'</span>'+stageLabels[i]+'</a>').join('')+'</nav><div>'+loop.map((s,i)=>'<article class="pn-loop-stage" id="stage-'+i+'"><span class="pn-loop-number" aria-hidden="true">0'+(i+1)+'</span><div class="lv-stage-heading">'+'<h2>'+stageLabels[i]+'</h2><p class="pn-loop-deck">'+s[1]+'</p></div><div class="lv-stage-story"><div class="pn-loop-text"><p>'+s[3]+' '+s[4]+'</p></div>'+img(s[2])+'</div><div class="pn-loop-outputs">'+kicker('What moves forward')+'<ul>'+s[5].map(t=>'<li>'+t+'</li>').join('')+'</ul></div>'+action(i)+'</article>').join('')+note+'</div></div></section>';
 const page=document.querySelector('#process-new');page.innerHTML='<div class="lv-site lv-option-'+n+'"><section class="pn-hero pn-loop-hero" data-nav-theme="dark">'+img(10,'pn-cover',true)+'<div class="wrap">'+kicker('Our process')+'<h1>Clear strategy.<br><em>Connected action.</em></h1><p>A practical journey from understanding your business<br>to building, launching, and improving the agreed work.</p>'+button('Find your starting point')+'</div></section>'+body+services()+faq()+end()+'</div>';page.dataset.option=n;document.title=concepts[n-1]+' — Marketing Loop Variations | VNW Media';document.querySelectorAll('[data-option]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.option===n)));document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.getElementById(a.dataset.jump)?.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});}));
 }
 document.querySelector('#pp-options').innerHTML=concepts.map((s,i)=>'<button type="button" data-option="'+(i+1)+'" aria-pressed="false"><span>0'+(i+1)+'</span>'+s+'</button>').join('');document.querySelector('#pp-options').addEventListener('click',e=>{let b=e.target.closest('[data-option]');if(!b)return;history.pushState(null,'','#option-'+b.dataset.option);render(+b.dataset.option);window.scrollTo({top:0,behavior:'instant'});});const load=()=>render(+location.hash.match(/^#option-([1-5])$/)?.[1]||1);window.addEventListener('popstate',load);window.addEventListener('hashchange',load);load();
