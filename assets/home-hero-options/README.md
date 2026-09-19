@@ -9,3 +9,4 @@ All prompts requested a cinematic 16:9 homepage background, realistic people and
 3. `option-3.png` — overhead campaign-planning table with tactile materials and hands at work.
 4. `option-4.png` — architectural blue-hour agency studio viewed through glass.
 5. `option-5.png` — restrained creative-director scene with a large digital display.
+6. `video-option-6/hero-studio.mp4` — eight-second, photorealistic creative-studio video generated with Sora 2 Pro at 1920×1080. The website implementation is muted, autoplaying, looping, inline, and uses `poster.webp` when motion is unavailable or reduced motion is requested.
