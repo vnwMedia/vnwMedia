@@ -2331,7 +2331,11 @@ body[data-page="home"] .plan-assurance b{flex:0 0 auto;color:var(--orange);font-
 @media(max-width:600px){.sdc-content-actions{grid-template-columns:1fr;gap:16px}.sdc-content-actions h3{font-size:14px}.sdc-content-actions p{font-size:12px}.sdc-content-insights .sdc-content-disclaimer{font-size:11px}}
 
 /* Independent service links above the project card's case-study click area. */
-.work-agency-card{position:relative}
+.work-agency-card{position:relative;display:flex;flex-direction:column}
+.work-agency-card>figure{flex-shrink:0}
+.work-agency-card>div{display:flex;flex-direction:column;flex:1;align-items:flex-start}
+.work-agency-card>div>.work-case-link{margin-top:auto}
+.work-agency-card>div>ul{margin-bottom:24px}
 .work-agency-card .work-case-link::after{content:"";position:absolute;inset:0;z-index:1}
 .work-agency-card .work-case-link:focus-visible{outline:none}
 .work-agency-card .work-case-link:focus-visible::after{outline:3px solid #0089ba;outline-offset:-4px;border-radius:20px}
