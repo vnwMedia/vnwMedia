@@ -6,3 +6,4 @@
 .hp-process .fw-reverse .fw-link{color:#fff}
 .hp-process .fw-copy .fw-link:hover,.hp-process .fw-copy .fw-link:focus-visible{color:#008bbb}
 .hp-process .fw-copy .fw-link:focus-visible{outline:3px solid #00aeef;outline-offset:5px}
+.hp-process .fw-band:not(.fw-reverse){background:#eeeae3}
