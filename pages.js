@@ -1181,7 +1181,7 @@ function topPage(id){
   if(id==="cases-10") body=caseStudiesOptionTen();
   if(id==="clients") body=testimonials();
   if(id==="resources") body=`<section class="resources-page section" id="page-content"><div class="shell">${cards(DATA.resources,"resource")}</div></section>${faq()}`;
-  if(id==="contact") body=contact();
+  if(id==="contact") body=contact()+googleTestimonials("contact-reviews");
   return hero(...p)+body;
 }
 
