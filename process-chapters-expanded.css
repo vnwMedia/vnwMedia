@@ -22,13 +22,3 @@ body.cx-page{background:#eeeae3;color:#141b1e}.cx-page .site-header{position:rel
  .cx-editorial img{height:185px}
  .cx-editorial .cx-copy{padding:24px}
 }
-/* Fit complete photographs inside compact panels instead of cropping with cover. */
-.cx-cinema img,.cx-editorial img{object-fit:contain;object-position:center}
-.cx-cinema article:first-child img{object-position:right center}
-@media(max-width:760px){
- .cx-cinema article,.cx-cinema article:first-child{display:flex;flex-direction:column;min-height:0}
- .cx-cinema img,.cx-cinema article:first-child img{position:relative;height:auto;width:100%;object-position:center}
- .cx-cinema article:after,.cx-cinema article:first-child:after{display:none}
- .cx-cinema .cx-copy,.cx-cinema article:first-child .cx-copy{min-height:0;padding:23px}
- .cx-editorial img{height:auto;contain:none;align-self:center}
-}
