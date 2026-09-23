@@ -7,3 +7,14 @@
 .hp-process .fw-copy .fw-link:hover,.hp-process .fw-copy .fw-link:focus-visible{color:#008bbb}
 .hp-process .fw-copy .fw-link:focus-visible{outline:3px solid #00aeef;outline-offset:5px}
 .hp-process .fw-band:not(.fw-reverse){background:#eeeae3}
+.hp-process .fw-intro{padding-block:80px 64px}
+.hp-process .fw-intro .eyebrow{margin-bottom:26px}
+.hp-process .fw-intro h2{margin-bottom:26px}
+.hp-process .fw-band{min-height:420px}
+.hp-process .fw-copy{padding-block:48px}
+@media(max-width:760px){
+ .hp-process .fw-intro{padding-block:56px 48px}
+ .hp-process .fw-band{min-height:0}
+ .hp-process .fw-band>img{height:290px}
+ .hp-process .fw-copy,.hp-process .fw-reverse .fw-copy{padding-block:42px 48px}
+}
