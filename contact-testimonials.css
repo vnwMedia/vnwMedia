@@ -3,7 +3,7 @@ body[data-page="contact"] #contact-reviews{background:#eeeae3;color:#141b1e}
 #contact-reviews .testimonial-ticker-heading h2{color:#141b1e}
 #contact-reviews .section-tag,#contact-reviews .testimonial-google-summary p,#contact-reviews .testimonial-card-top{color:#626c70}
 #contact-reviews .testimonial-google-summary p strong{color:#141b1e}
-#contact-reviews .testimonial-ticker-card{background:transparent;color:#303a3e;border-color:#d4cec4}
+#contact-reviews .testimonial-ticker-card{background:#fff;color:#303a3e;border-color:#d4cec4}
 #contact-reviews .testimonial-ticker-card footer strong{color:#916015}
 #contact-reviews .testimonial-ticker-footer{border-color:#dedbd6}
 #contact-reviews .testimonial-ticker-footer>a{color:#536167}
