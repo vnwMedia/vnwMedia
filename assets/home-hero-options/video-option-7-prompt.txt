@@ -1,0 +1,13 @@
+Use case: silent looping homepage hero background for a premium digital marketing agency
+Primary request: a cinematic photorealistic leadership meeting where an agency strategist presents an integrated SEO and paid search plan to two fictional adult business leaders
+Scene/background: sophisticated dark conference studio with warm wood, architectural glass, a large wall display, and a clean central table
+Subject: three diverse fictional adult professionals in understated business-casual clothing
+Action: the strategist makes one calm gesture toward an abstract performance chart while the two clients study the display and exchange a subtle nod
+Camera: very slow stabilized dolly-in, wide 16:9 composition, 35mm lens, one continuous shot, no cuts
+Lighting/mood: moody blue-hour window light, warm practical accents, serious but optimistic, premium editorial-commercial photography
+Color palette: charcoal, black, cream, warm amber, restrained cyan-blue
+Style/format: photorealistic cinematic natural grain, high-end agency campaign
+Timing/beats: eight seconds of restrained natural movement with a smooth looping cadence
+Audio: none
+Constraints: keep left and right quarters relatively dark and visually quiet for homepage copy and a lead form; position people and display mainly in the middle third; screen shows only abstract charts, curves, and blocks with no readable words or numbers; realistic faces, hands, and reflections; no logos, no text, no icons, no illustrations, no watermark
+Avoid: stock-photo posing, handshakes, fake holograms, floating UI, neon cyberpunk, bright office, abrupt motion, camera shake, flicker, morphing faces or hands
