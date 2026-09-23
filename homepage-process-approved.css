@@ -20,4 +20,4 @@
  .hp-process .fw-band>img{height:290px}
  .hp-process .fw-copy,.hp-process .fw-reverse .fw-copy{padding-block:42px 48px}
 }
-@media(max-width:560px){.hp-process .fw-intro h2{font-size:42px!important}}
+@media(max-width:560px){.hp-process .fw-intro h2{font-size:40px!important}}
