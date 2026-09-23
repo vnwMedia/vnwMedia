@@ -27,8 +27,8 @@
   }
 
   function initializeTickers() {
-    // Every service detail uses the same capabilities strip as the homepage.
-    if (document.body.dataset.page?.startsWith('service-')) {
+    // Service details and Contact share the homepage capabilities strip.
+    if (document.body.dataset.page?.startsWith('service-') || document.body.dataset.page === 'contact') {
       const hero = document.querySelector('main .csp-hero, main .inner-hero');
       if (hero && !hero.nextElementSibling?.matches('.trust-strip[aria-label="VNW Media capabilities"]')) {
         const strip = document.createElement('section');
