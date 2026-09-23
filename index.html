@@ -284,12 +284,11 @@
           <form class="plan-form reveal" aria-label="Request a digital plan">
             <input name="name" required placeholder="Full name" aria-label="Full name" />
             <input name="email" type="email" required placeholder="Work email" aria-label="Work email" />
+            <input name="phone" type="tel" placeholder="Phone" aria-label="Phone" />
             <input name="company" placeholder="Company" aria-label="Company" />
-            <select name="interest" aria-label="Service interest">
-              <option>Service interest</option><option>Website design</option><option>SEO</option><option>Google PPC</option><option>Social media</option><option>Full digital strategy</option>
-            </select>
-            <textarea class="full" name="message" rows="4" placeholder="Tell us about your goals" aria-label="Tell us about your goals"></textarea>
-            <button type="submit">Request a Plan</button>
+            <input name="website" class="full" type="url" placeholder="Website (optional)" aria-label="Website (optional)" />
+            <textarea class="full" name="message" rows="5" placeholder="Tell us what you want to improve" aria-label="Tell us what you want to improve"></textarea>
+            <button type="submit">Request My Plan</button>
             <p class="form-status full" role="status" aria-live="polite"></p>
           </form>
         </div>
