@@ -1252,6 +1252,31 @@ function serviceDiagnosticCTA(service){
 }
 
 function createServiceDetail(service,data){
+  const faqCTA={
+    'brand-strategy':'Discuss your brand strategy',
+    'graphic-design':'Discuss your design needs',
+    'web-design':'Plan your website',
+    'ecommerce':'Plan your online store',
+    'app-design-development':'Discuss your app idea',
+    'landing-pages':'Plan your landing page',
+    'website-maintenance':'Discuss website support',
+    'content-writing':'Discuss your content needs',
+    'video-editing':'Discuss your video project',
+    'seo':'Discuss your SEO strategy',
+    'google-ppc':'Plan your PPC campaign',
+    'social-media':'Plan your social strategy',
+    'social-media-consultation':'Discuss your social strategy',
+    'community-management':'Plan your content strategy',
+    'geo':'Discuss AI search visibility',
+    'yelp-seo':'Discuss your Yelp visibility',
+    'google-business-profile':'Discuss your local visibility',
+    'reputation-management':'Discuss your online reputation',
+    'lead-generation':'Plan your lead generation',
+    'paid-social':'Plan your social ad campaign',
+    'email-marketing':'Plan your email campaign',
+    'text-marketing':'Plan your SMS campaign',
+    'crm-automation':'Discuss your automation needs'
+  }[service.slug]||`Discuss ${service.name}`;
   const existingSchema=document.querySelector('script[data-create-service-schema]');
   if(existingSchema) existingSchema.remove();
   const schema=document.createElement('script');
@@ -1277,7 +1302,7 @@ function createServiceDetail(service,data){
     ${serviceDiagnosticCTA(service)}
     <section class="csp-visibility section" data-nav-theme="light"><div class="shell"><div class="csp-section-head"><p class="section-tag">SEO, PPC &amp; AI visibility</p><div><h2>Built to support discovery and conversion.</h2><p>The page or product experience should work with organic search, paid campaigns, measurement, and the way AI-assisted discovery interprets useful business information.</p></div></div><div class="csp-visibility-grid">${data.visibility.map((item,index)=>`<article><span>0${index+1}</span><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></article>`).join("")}</div></div></section>
     <section class="csp-related section" data-nav-theme="dark"><div class="shell csp-related-grid"><div><p class="section-tag">Connected services</p><h2>Build the right combination around the goal.</h2><p>${esc(service.name)} can work on its own or connect with strategy, visibility, advertising, automation, and ongoing support.</p><a class="pill pill-blue" href="${path("services.html#all-services")}">View all services <span>↗</span></a></div><div class="csp-related-list">${related.map((item,index)=>`<a href="${path(`services/${item.slug}.html`)}"><span>0${index+1}</span><div><h3>${esc(item.name)}</h3><p>${esc(item.description)}</p></div><b>↗</b></a>`).join("")}</div></div></section>
-    <section class="csp-faq section" id="faq" data-nav-theme="light"><div class="shell csp-faq-grid"><div class="csp-faq-intro"><p class="section-tag">${esc(service.name)} FAQ</p><h2>Useful answers before we begin.</h2><p>Every project is scoped to the business, platform, and priorities. These answers cover the questions we hear most often.</p><a class="pill pill-blue" href="${path("contact.html")}">Contact Us <span aria-hidden="true">↗</span></a></div><div class="csp-faq-list">${data.faqs.map((item,index)=>`<details ${index===0?"open":""}><summary>${esc(item[0])}<span>+</span></summary><p>${esc(item[1])}</p></details>`).join("")}</div></div></section>
+    <section class="csp-faq section" id="faq" data-nav-theme="light"><div class="shell csp-faq-grid"><div class="csp-faq-intro"><p class="section-tag">${esc(service.name)} FAQ</p><h2>Useful answers before we begin.</h2><p>Every project is scoped to the business, platform, and priorities. These answers cover the questions we hear most often.</p><a class="pill pill-blue" href="${path("contact.html")}">${esc(faqCTA)} <span aria-hidden="true">↗</span></a></div><div class="csp-faq-list">${data.faqs.map((item,index)=>`<details ${index===0?"open":""}><summary>${esc(item[0])}<span>+</span></summary><p>${esc(item[1])}</p></details>`).join("")}</div></div></section>
     ${nextChapterCTA()}
   </div>`;
 }
