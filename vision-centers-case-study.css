@@ -1,23 +1,15 @@
-.scm-ms-story-stage.vision-laptop-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px;padding:26px 12px;background:#eeeae3;min-height:0;overflow:visible}
-.vision-laptop{margin:0;min-width:0}
-.vision-laptop-screen{margin:0 7px;border:6px solid #20272b;border-top-width:9px;border-radius:9px 9px 2px 2px;overflow:hidden;background:#20272b;box-shadow:0 7px 14px #0002}
-.vision-laptop-grid .vision-laptop-screen img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:0;box-shadow:none}
-.vision-laptop-base{height:8px;border-radius:1px 1px 60% 60%;background:linear-gradient(#d4d7d8,#92999e);position:relative}
-.vision-laptop-base:before{content:"";position:absolute;top:0;left:40%;width:20%;height:3px;border-radius:0 0 4px 4px;background:#697177}
-.vision-laptop-grid .vision-laptop figcaption{display:block;padding:12px 0 0;border:0;text-align:center;color:#30383b;font:500 12px/1.5 Inter,sans-serif}
-/* Staggered editorial showcase with metallic device detailing. */
-.scm-ms-story-stage.vision-laptop-grid{gap:34px 22px;padding:32px 24px 70px;background:radial-gradient(ellipse at 80% 35%,#29414a,transparent 60%),linear-gradient(145deg,#182329,#0a1115);overflow:hidden;border:1px solid #35434a}
-.vision-showcase-heading{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:20px;border-bottom:1px solid #ffffff26;color:#fff;font:400 28px/1.1 Fraunces,serif}
-.vision-showcase-heading span{max-width:95px;color:#8fa6b0;font:500 9px/1.6 Inter,sans-serif;letter-spacing:.14em;text-align:right;text-transform:uppercase}
-.vision-laptop:nth-of-type(even){transform:translateY(36px)}
-.vision-laptop-screen{margin:0 5px;padding:5px 4px 4px;border:1px solid #738089;border-radius:7px 7px 1px 1px;background:linear-gradient(135deg,#3f4a51,#11181d);box-shadow:0 20px 25px #0006}
-.vision-laptop-screen:before{content:"";display:block;width:2px;height:2px;border-radius:50%;background:#85949b;margin:0 auto 4px}
-.vision-laptop-base{height:5px;background:linear-gradient(#d7dfe3,#68757e);box-shadow:0 10px 14px #0005}
-.vision-laptop-base:before{height:2px;background:#4e5a63}
-.vision-laptop-grid .vision-laptop figcaption{padding:16px 4px 0;text-align:left;color:#edf1f3;font:400 17px/1.2 Fraunces,serif}
-.vision-laptop figcaption:before{display:block;color:#39b8e7;font:500 9px/1 Inter,sans-serif;letter-spacing:.13em;margin-bottom:8px}
-.vision-laptop:nth-of-type(1) figcaption:before{content:"01 / NASSAU FULTON"}
-.vision-laptop:nth-of-type(2) figcaption:before{content:"02 / BROADWAY"}
-.vision-laptop:nth-of-type(3) figcaption:before{content:"03 / ABSOLUTE"}
-.vision-laptop:nth-of-type(4) figcaption:before{content:"04 / AMERICAN"}
-@media(max-width:500px){.scm-ms-story-stage.vision-laptop-grid{gap:25px 14px;padding:24px 14px 52px}.vision-showcase-heading{font-size:24px}.vision-laptop-grid .vision-laptop figcaption{font-size:14px}.vision-laptop:nth-of-type(even){transform:translateY(22px)}}
+/* Overlapping browser windows on the unchanged section background. */
+.scm-ms-story-stage.vision-browser-stack{position:relative;display:block;background:transparent;border:0;padding:12px 0 28px;min-height:0;overflow:visible}
+.vision-browser{position:relative;width:88%;margin:0;border:1px solid #d3d6d8;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 12px 28px #15252f1a}
+.vision-browser+.vision-browser{margin-top:-20%}
+.vision-browser:nth-child(even){margin-left:12%}
+.vision-browser:nth-child(1){z-index:1}
+.vision-browser:nth-child(2){z-index:2}
+.vision-browser:nth-child(3){z-index:3}
+.vision-browser:nth-child(4){z-index:4}
+.vision-browser-bar{display:flex;align-items:center;gap:9px;height:32px;padding:0 12px;background:#f3f4f4;border-bottom:1px solid #ddd;color:#5b6469;font:400 10px/1.2 Inter,sans-serif}
+.vision-browser-dots{display:flex;gap:4px;flex-shrink:0}
+.vision-browser-dots i{width:5px;height:5px;border-radius:50%;background:#bdc3c6}
+.vision-browser-address{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vision-browser-stack .vision-browser img{display:block;width:100%;height:auto;aspect-ratio:16/8;max-height:none;border-radius:0;box-shadow:none;object-fit:cover;object-position:top}
+@media(max-width:500px){.vision-browser-bar{height:27px;padding:0 8px;font-size:8px;gap:7px}.vision-browser{border-radius:6px}.vision-browser+.vision-browser{margin-top:-12%}}
