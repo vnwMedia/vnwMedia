@@ -17,4 +17,12 @@
   hero.after(ticker);
   target.classList.add('lr-results');target.dataset.layout='3';
   target.innerHTML=`<div class="shell"><div class="lr-location-layout"><aside class="lr-location"><p class="section-tag">CONFIRMED SERVICE SCOPE</p><strong>4<span>websites · 4 locations</span></strong><h2>A local search strategy for every vision center.</h2><p>Google Business Profile, organic SEO, and reputation management across all four locations.</p><a href="../contact.html" class="pill pill-blue">Discuss your locations ↗</a></aside><div><div class="lr-heading"><p class="section-tag">RESULTS / VISION CENTERS</p><h2>Standout visibility. Meaningful interest.</h2></div><div class="lr-grid">${metrics.map((m,i)=>`<article class="lr-metric lr-metric-${i}"><span class="lr-index">0${i+1}</span><strong>${m[0]}</strong><span class="lr-metric-unit">${m[1]}</span><h3>${m[2]}</h3><p>${m[3]}</p><p class="lr-metric-detail">${m[4]}</p></article>`).join('')}</div></div></div></div>`;
+  const stage=document.querySelector('.scm-ms-story-stage');
+  const locations=[['nassau','Nassau Fulton Vision Center'],['broadway','Broadway Vision at 170th'],['absolute','Absolute Vision Center'],['american','American Vision Center']];
+  if(stage){
+    stage.classList.add('vision-laptop-grid');
+    stage.innerHTML=locations.map(([slug,name])=>`<figure class="vision-laptop"><div class="vision-laptop-screen"><img src="../assets/vision-centers-${slug}.jpg" alt="${name} website displayed on a laptop" width="1440" height="960" loading="lazy"></div><div class="vision-laptop-base" aria-hidden="true"></div><figcaption>${name}</figcaption></figure>`).join('');
+    const caption=stage.parentElement.querySelector(':scope > figcaption');
+    if(caption)caption.innerHTML='<span>Vision Centers</span><span>Four locations. Four websites.</span>';
+  }
 })();
