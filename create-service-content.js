@@ -234,8 +234,8 @@ Object.assign(CREATE_SERVICE_PAGES, {
     "lede": "Channel audits, audience direction, content systems, workshops, and practical recommendations for businesses managing social media internally.",
     "hero": "assets/service-heroes/social-media-consultation-v2.jpg",
     "heroAlt": "A marketing consultant meeting a small business owner at a desk, pointing to a social content performance report and photo-based feed on a monitor.",
-    "feature": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=84",
-    "featureAlt": "Marketing workshop with team members and planning notes",
+    "feature": "assets/service-heroes/social-consultation-content-studio.jpg",
+    "featureAlt": "Social media team reviewing photographic posts and a content calendar while creating campaign content in a modern studio",
     "introHeading": "Replace guesswork with a focused channel and content plan.",
     "introBody": "Consultation is designed for teams that can execute but need a sharper direction. We identify where the current presence loses clarity and turn recommendations into a workable calendar, workflow, and measurement approach.",
     "outcomes": [
