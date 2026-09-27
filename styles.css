@@ -2140,19 +2140,21 @@ body .site-header.site-header .nav-phone{display:none}
 .csp-outcomes span,.csp-process-grid article>span,.csp-visibility-grid article>span{color:var(--orange);font-size:10px;letter-spacing:.14em}
 .csp-outcomes h3{margin:24px 0 12px;font-size:30px;line-height:1}
 .csp-outcomes p{margin:0;color:#666;font-size:12px}
-.csp-scope{color:#fff;background:#0b0d0e}
-.csp-scope-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:0;overflow:hidden;border:1px solid #303638;border-radius:28px;background:#121617}
-.csp-scope figure{position:relative;min-height:680px;margin:0;overflow:hidden}
+.create-service-page .csp-scope{padding:0;color:#fff;background:#0e191f}
+.csp-scope .csp-scope-grid{display:grid;width:100%;max-width:none;margin:0;grid-template-columns:1fr 1fr;gap:0;overflow:hidden;border:0;border-radius:0;background:#0e191f}
+.csp-scope figure{position:relative;min-height:0;margin:0;overflow:hidden}
 .csp-scope figure:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.62))}
-.csp-scope figure img{width:100%;height:100%;object-fit:cover}
+.csp-scope figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .csp-scope figcaption{position:absolute;z-index:1;left:25px;bottom:22px;color:#fff;font-size:9px;letter-spacing:.13em;text-transform:uppercase}
-.csp-scope-copy{display:flex;flex-direction:column;padding:55px}
+.csp-scope .csp-scope-copy{display:flex;flex-direction:column;justify-content:center;padding:48px clamp(28px,4vw,80px)}
 .csp-scope-copy .section-tag{color:#8f999d}
 .csp-scope-copy h2{color:#fff}
 .csp-scope-copy>p:not(.section-tag){color:#9fa9ad}
-.csp-scope-copy ul{margin:28px 0 30px;padding:0;list-style:none;border-top:1px solid #343b3e}
+.csp-scope-copy ul{margin:22px 0;padding:0;list-style:none;border-top:1px solid #343b3e}
 .csp-scope-copy li{padding:13px 0;border-bottom:1px solid #343b3e;color:#e6e9ea;font-size:12px}
-.csp-scope-note{margin-top:auto!important;color:#758084!important;font-size:10px!important}
+.csp-scope-note{margin:0!important;color:#758084!important;font-size:10px!important}
+@media(min-width:1100px){.csp-scope-copy ul{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}.csp-scope-copy h2{font-size:clamp(42px,3.5vw,58px)}}
+@media(max-width:1000px){.csp-scope .csp-scope-grid{grid-template-columns:1fr}.csp-scope .csp-scope-grid>figure{min-height:0;height:360px}.csp-scope .csp-scope-copy{padding:40px 6%}}
 .csp-process{background:#f4f1eb}
 .csp-process .csp-section-head{grid-template-columns:1fr;gap:22px;text-align:left}
 .csp-process .csp-section-head .section-tag{margin:0}
