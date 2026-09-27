@@ -7,6 +7,11 @@
 
 .lr-metric-unit{display:block;color:#08afe3;font:500 14px/1.5 Inter,sans-serif;margin-top:8px}.lr-metric .lr-metric-detail{margin-top:10px}.lr-results[data-layout="3"] .lr-metric p{max-width:none}
 
+/* Keep scope counts and their labels together across every client case study. */
+.lr-location>strong{display:flex;align-items:baseline;gap:16px;white-space:nowrap;font-size:clamp(72px,8vw,120px)}
+.lr-location>strong span{display:inline;margin:0;white-space:nowrap;font-size:clamp(12px,1.15vw,16px)}
+@media(max-width:500px){.lr-location>strong{font-size:76px;gap:12px}.lr-location>strong span{font-size:14px}}
+
 /* Match the homepage FAQ's bounded sticky introduction on desktop. */
 @media(min-width:901px) and (min-height:700px){
   body:is([data-page="case-la-rosa-chicken-grill"],[data-page="case-brooklyn-motors"],[data-page="case-kypcl"]) .scm-ms-ca-panel:first-child{position:sticky;top:115px;align-self:start}
