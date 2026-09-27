@@ -2151,7 +2151,8 @@ body .site-header.site-header .nav-phone{display:none}
 .csp-scope-copy h2{color:#fff}
 .csp-scope-copy>p:not(.section-tag){color:#9fa9ad}
 .csp-scope-copy ul{margin:36px 0 30px;padding:0;list-style:none;border-top:1px solid #343b3e}
-.csp-scope-copy li{padding:19px 0;border-bottom:1px solid #343b3e;color:#e6e9ea;font-size:12px}
+.csp-scope-copy li{position:relative;padding:19px 0 19px 25px;border-bottom:1px solid #343b3e;color:#e6e9ea;font-size:12px}
+.csp-scope-copy li::before{content:"";position:absolute;left:2px;top:24px;width:6px;height:10px;border:solid #00aeef;border-width:0 2px 2px 0;transform:rotate(45deg)}
 .csp-scope-note{margin:0!important;color:#758084!important;font-size:10px!important}
 @media(min-width:1100px){.csp-scope-copy ul{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}.csp-scope-copy h2{font-size:clamp(42px,3.5vw,58px)}}
 @media(max-width:1000px){.csp-scope .csp-scope-grid{grid-template-columns:1fr}.csp-scope .csp-scope-grid>figure{min-height:0;height:420px}.csp-scope .csp-scope-copy{min-height:0;padding:56px 6%}}
