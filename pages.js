@@ -71,7 +71,7 @@ const topPages = {
   "cases-10":["Case Studies Option 10","A blueprint/spec-sheet case library.","A technical but stylish case-study page using spec cards, requirements, decisions, modules, and launch-ready recommendations.","assets/case-automotive-impact.svg"],
   clients:["Clients & Reviews","Creative enough to stand out. Dependable enough to trust.","A long-term digital partner for organizations that value responsive communication, thoughtful recommendations, and work that performs.","https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=84"],
   resources:["Resources","Clearer thinking for your next digital move.","Practical website, local SEO, and lead-generation guidance for business owners planning what comes next.","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=84"],
-  contact:["Get Started","Tell us where growth feels stuck.","Share your business, website, and goals. We’ll help identify the clearest path toward stronger visibility, trust, and lead flow.","https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=84"]
+  contact:["Get Started","Let’s talk about what’s next for your business.","Share your business, website, and goals. We’ll help identify the clearest path toward stronger visibility, trust, and lead flow.","https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=84"]
 };
 
 const depth = document.body.dataset.depth === "1" ? "../" : "";
