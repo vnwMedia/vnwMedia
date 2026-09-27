@@ -175,7 +175,7 @@ const ADDITIONAL_CLIENT_PROJECTS = [
 ].map(project => ({
   ...project,
   hero: project.slug === 'h2bros-plumbing' ? 'assets/h2bros-plumbing-hero.jpg' : `assets/client-projects/${project.slug}-hero.${project.heroExtension}`,
-  logo: `assets/client-projects/${project.slug}-logo.${project.logoExtension}`,
+  logo: `assets/client-projects/${project.slug}-logo.${project.logoExtension}${project.slug === 'catanzaros-power-washing' ? '?v=original-892' : ''}`,
   desktop: `assets/client-projects/${project.slug}-desktop.jpg`,
   mobile: `assets/client-projects/${project.slug}-mobile.jpg`
 }));
