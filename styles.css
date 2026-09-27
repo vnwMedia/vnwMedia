@@ -1348,7 +1348,7 @@ body .site-header.site-header .mega-wide .mega-columns{
 }
 /* Follow the FAQ introduction: stay below navigation, bounded by the approach. */
 @media(min-width:901px) and (min-height:700px){
-  .scm-ms-ca-panel:first-child{position:sticky;top:115px;align-self:start}
+  .scm-ms-ca-panel:first-child,.lr-location-layout>.lr-location{position:sticky;top:115px;align-self:start}
 }
 .scm-ms-ca-panel + .scm-ms-ca-panel{
   padding-left:70px;
