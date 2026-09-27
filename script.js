@@ -403,7 +403,11 @@ if (testimonialTicker && testimonialTickerTrack) {
     const firstCard = testimonialTickerTrack.children[0];
     const firstClone = testimonialTickerTrack.children[originalCards.length];
     if (!firstCard || !firstClone) return;
-    testimonialTickerTrack.style.setProperty("--testimonial-loop-distance", `${firstClone.offsetLeft - firstCard.offsetLeft}px`);
+    const distance = firstClone.offsetLeft - firstCard.offsetLeft;
+    // A shared pixels-per-second rate stays consistent across review counts and widths.
+    const pixelsPerSecond = 22;
+    testimonialTickerTrack.style.setProperty("--testimonial-loop-distance", `${distance}px`);
+    testimonialTickerTrack.style.animationDuration = `${distance / pixelsPerSecond}s`;
   };
 
   // Enhance originals and visual loop copies without changing the ticker motion.
@@ -446,6 +450,7 @@ if (testimonialTicker && testimonialTickerTrack) {
   // The stylesheet still honors the device's reduced-motion preference.
 
   updateTestimonialTickerDistance();
+  document.fonts.ready.then(updateTestimonialTickerDistance);
   addEventListener("load", updateTestimonialTickerDistance);
   addEventListener("resize", updateTestimonialTickerDistance, { passive: true });
 
