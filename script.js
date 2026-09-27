@@ -404,10 +404,7 @@ if (testimonialTicker && testimonialTickerTrack) {
     const firstClone = testimonialTickerTrack.children[originalCards.length];
     if (!firstCard || !firstClone) return;
     const distance = firstClone.offsetLeft - firstCard.offsetLeft;
-    // A shared pixels-per-second rate stays consistent across review counts and widths.
-    const pixelsPerSecond = 22;
     testimonialTickerTrack.style.setProperty("--testimonial-loop-distance", `${distance}px`);
-    testimonialTickerTrack.style.animationDuration = `${distance / pixelsPerSecond}s`;
   };
 
   // Enhance originals and visual loop copies without changing the ticker motion.
