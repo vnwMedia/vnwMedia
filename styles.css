@@ -2222,6 +2222,10 @@ body .site-header.site-header .nav-phone{display:none}
 .csp-faq-intro>.pill{margin-top:28px}
 .scm-ms-hero h1 .case-hero-client-logo{display:block;width:480px;max-width:100%;height:auto;max-height:160px;object-fit:contain;object-position:left center;filter:none}
 .scm-ms-hero h1 .case-hero-client-logo-white{filter:brightness(0) invert(1)}
+body[data-page="case-nycadsco"] .scm-ms-hero{min-height:495px;padding:125px 0 56px}
+body[data-page="case-nycadsco"] .scm-ms-hero h1 .case-hero-client-logo{width:360px!important;max-width:75%}
+@media(max-width:900px){body[data-page="case-nycadsco"] .scm-ms-hero{min-height:420px;padding:120px 0 46px}}
+@media(max-width:560px){body[data-page="case-nycadsco"] .scm-ms-hero{min-height:360px;padding:110px 0 39px}}
 @media(max-width:600px){.scm-ms-hero h1 .case-hero-client-logo{max-height:120px}}
 body[data-page="contact"] .inner-hero h1{max-width:none;font-size:clamp(36px,5vw,76px)}
 body[data-page="contact"] .contact-headline-highlight{color:#00aeef}
