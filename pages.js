@@ -766,8 +766,10 @@ function renderClientCaseStudy(config){
   const primaryLogos={"NYCADSCO":"assets/nycadsco-logo.webp","SFADSCO":"assets/sfadsco-logo.webp","Brooklyn Motors":"assets/brooklyn-motors-logo-supplied.png","La Rosa Chicken and Grill":"assets/la-rosa-logo-white-text.svg","KYPCL":"assets/kypcl-logo-supplied.png"};
   const logoProject=typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined"?ADDITIONAL_CLIENT_PROJECTS.find(project=>project.name===config.name):null;
   const heroLogo=primaryLogos[config.name]||logoProject?.logo;
+  // Do not enlarge small source assets; an SVG wrapper may still contain a raster.
+  const logoWidths={'NYCADSCO':500,'SFADSCO':1536,'Brooklyn Motors':259,'La Rosa Chicken and Grill':219,'KYPCL':400,'SkyRex Inc.':133,'CTI Logistics':265,'ForDoz Pharma':252,'Platinum Valet Parking':301,'Raidex Construction LLC':258,'Catanzaro’s Power Washing':892,'Coin & Jewelry Gallery of Boca Raton':175,'NJ Steps to Success':206,'H2Bros Plumbing & Heating':356,'Art of Construction':230};
   const whiteLogo=logoProject&&['skyrex-inc','cti-logistics','fordoz-pharma','platinum-valet-parking'].includes(logoProject.slug);
-  const clientHeading=heroLogo?`<img class="case-hero-client-logo${whiteLogo?' case-hero-client-logo-white':''}" src="${img(heroLogo)}" alt="${esc(config.name)}">`:esc(config.name);
+  const clientHeading=heroLogo?`<img class="case-hero-client-logo${whiteLogo?' case-hero-client-logo-white':''}" style="width:${Math.min(480,logoWidths[config.name]||240)}px" src="${img(heroLogo)}" alt="${esc(config.name)}">`:esc(config.name);
   const businessIntroductions={
     "Brooklyn Motors":"Brooklyn Motors is a collision and auto body repair business in Brooklyn, New York, helping drivers restore their vehicles after damage.",
     "La Rosa Chicken and Grill":"La Rosa Chicken and Grill is a multi-location restaurant brand serving chicken and grilled meals. Its locations serve guests looking for a local place to dine or order food.",
@@ -1351,6 +1353,8 @@ function bootPages(){
   titleDecoder.innerHTML=pageTitle;
   const customServiceSlug=id?.startsWith("service-")?id.slice(8):"";
   const preserveAuthoredTitle=typeof CREATE_SERVICE_PAGES!=="undefined" && !!(customServiceSlug==="seo"?CREATE_SERVICE_PAGES.searchOptimization:CREATE_SERVICE_PAGES[customServiceSlug]);
+  const logoTitle=pageTitle.match(/<img[^>]+alt="([^"]+)"/);
+  if(logoTitle) titleDecoder.innerHTML=logoTitle[1];
   if(!preserveAuthoredTitle) document.title=`${titleDecoder.value} | VNW Media`;
   app.innerHTML=header()+`<main>${content}</main>`+footer();
 }
