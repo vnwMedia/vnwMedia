@@ -116,7 +116,14 @@ function cards(items,type){
 
 function capabilityTicker(){
   const portfolioClients=typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined"?ADDITIONAL_CLIENT_PROJECTS.map(item=>item.name):["SkyRex Inc.","CTI Logistics","ForDoz Pharma","Platinum Valet Parking","Raidex Construction LLC","Catanzaro’s Power Washing","Coin & Jewelry Gallery of Boca Raton","NJ Steps to Success","H2Bros Plumbing & Heating","Art of Construction"];
-  const clients=[...new Set([...DATA.cases.map(item=>item[0]),...portfolioClients])];
+  const otherClients=["Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds","Honeydrop","Marlboro Jewish Day Camp","Travel Mama","Pollack SEO","A2Z Academy"];
+  const seenClients=new Set();
+  const clients=[...DATA.cases.map(item=>item[0]),...portfolioClients,...otherClients].filter(name=>{
+    const key=name.toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9]/g, "");
+    if(seenClients.has(key)) return false;
+    seenClients.add(key);
+    return true;
+  });
   return `<section class="trust-strip work-client-ticker" data-nav-theme="dark" aria-label="VNW Media clients"><div class="trust-track"><small>Selected Client Work</small><i></i>${[...clients,...clients].map(x=>`<span>${x}</span>`).join("")}</div></section>`;
 }
 
