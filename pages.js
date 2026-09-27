@@ -102,7 +102,8 @@ function footer(){
 }
 
 function hero(title,headline,text,image){
-  return `<section class="inner-hero" id="top" data-nav-theme="dark"><div class="inner-hero-bg" style="background-image:linear-gradient(90deg,rgba(8,8,8,.94),rgba(8,8,8,.65),rgba(8,8,8,.38)),url('${img(image)}')"></div><div class="shell inner-hero-copy reveal"><p class="eyebrow">${esc(title)}</p><h1>${esc(headline)}</h1><p class="hero-lede">${esc(text)}</p><div class="hero-actions"><a class="pill pill-orange pill-large" href="${path("contact.html")}">Get Your Strategy <span>↗</span></a><a class="pill pill-outline pill-large" href="#page-content">Explore</a></div></div></section>`;
+  const formattedHeadline=document.body.dataset.page==='contact'?'<span class="contact-headline-line">Let’s talk about <span class="contact-headline-highlight">What’s Next</span> for</span><br>your business.':esc(headline);
+  return `<section class="inner-hero" id="top" data-nav-theme="dark"><div class="inner-hero-bg" style="background-image:linear-gradient(90deg,rgba(8,8,8,.94),rgba(8,8,8,.65),rgba(8,8,8,.38)),url('${img(image)}')"></div><div class="shell inner-hero-copy reveal"><p class="eyebrow">${esc(title)}</p><h1>${formattedHeadline}</h1><p class="hero-lede">${esc(text)}</p><div class="hero-actions"><a class="pill pill-orange pill-large" href="${path("contact.html")}">Get Your Strategy <span>↗</span></a><a class="pill pill-outline pill-large" href="#page-content">Explore</a></div></div></section>`;
 }
 
 function cards(items,type){
