@@ -1,10 +1,11 @@
 (()=>{
   if(document.body.dataset.page!=='case-vision-centers')return;
-  const locations=[
-    ['Nassau Fulton Vision Center','https://nassaufultonvisioncenter.com/','nassau'],
-    ['Broadway Vision at 170th','https://www.broadwayvisionnyc.com/','broadway'],
-    ['Absolute Vision Center','https://www.absolutevisioncenter.com/','absolute'],
-    ['American Vision Center','https://www.americanvisioncenterqueens.com/','american']
+  // No client-specific performance reports have been supplied.
+  const metrics=[
+    ['—','Impressions','Visibility in Local Search','Search impressions for the four vision centers.','Reporting data pending'],
+    ['—','Website Clicks','Local Discovery Becomes Website Interest','Website clicks from Google Business Profiles across the four locations.','Reporting data pending'],
+    ['—','Profile Views','An Organic Search Presence','Google Business Profile views from people discovering the locations locally.','Reporting data pending'],
+    ['—','Local Rankings','Local Search Visibility','Location-specific rankings for tracked eye-care search terms.','Reporting data pending']
   ];
   const hero=document.querySelector('.scm-ms-hero');
   const target=document.querySelector('.scm-ms-signals');
@@ -15,5 +16,5 @@
   ticker.innerHTML='<div class="trust-track"><small>Vision Centers</small><i aria-hidden="true"></i><span>Google Business Profile Management</span><span>Organic SEO</span><span>Reputation Management</span></div>';
   hero.after(ticker);
   target.classList.add('lr-results');target.dataset.layout='3';
-  target.innerHTML=`<div class="shell"><div class="lr-location-layout"><aside class="lr-location"><p class="section-tag">CONFIRMED SERVICE SCOPE</p><strong>4<span>websites · 4 locations</span></strong><h2>A local search strategy for every vision center.</h2><p>Google Business Profile, organic SEO, and reputation management across all four locations.</p><a href="../contact.html" class="pill pill-blue">Discuss your locations ↗</a></aside><div><div class="lr-heading"><p class="section-tag">THE FOUR VISION CENTERS</p><h2>Distinct practices. Connected support.</h2></div><div class="lr-grid">${locations.map((x,i)=>`<article class="lr-metric"><span class="lr-index">0${i+1}</span><img src="../assets/vision-centers-${x[2]}.jpg" alt="${x[0]} website" width="1440" height="960" loading="lazy" style="display:block;width:100%;height:auto"><h3>${x[0]}</h3><p>Google Business Profile · Organic SEO · Reputation Management</p><a class="scm-ms-inline-cta" href="${x[1]}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${x[0]} website">Visit website ↗</a></article>`).join('')}</div></div></div></div>`;
+  target.innerHTML=`<div class="shell"><div class="lr-location-layout"><aside class="lr-location"><p class="section-tag">CONFIRMED SERVICE SCOPE</p><strong>4<span>websites · 4 locations</span></strong><h2>A local search strategy for every vision center.</h2><p>Google Business Profile, organic SEO, and reputation management across all four locations.</p><a href="../contact.html" class="pill pill-blue">Discuss your locations ↗</a></aside><div><div class="lr-heading"><p class="section-tag">RESULTS / VISION CENTERS</p><h2>Standout visibility. Meaningful interest.</h2></div><div class="lr-grid">${metrics.map((m,i)=>`<article class="lr-metric lr-metric-${i}"><span class="lr-index">0${i+1}</span><strong>${m[0]}</strong><span class="lr-metric-unit">${m[1]}</span><h3>${m[2]}</h3><p>${m[3]}</p><p class="lr-metric-detail">${m[4]}</p></article>`).join('')}</div></div></div></div>`;
 })();
