@@ -1043,7 +1043,7 @@ function storyPage(){
   const teamMembers=[
     ["Vlad","assets/team-vlad-headshot.png"],
     ["Lily","assets/team-lily-headshot.png"],
-    ["Vanessa","assets/team-meherun-headshot.png"],
+    ["Vanessa","assets/team-vanessa-natural-v2.jpg"],
     ["John","assets/team-john-portrait.png"]
   ];
   const beliefs=[
