@@ -1,0 +1,32 @@
+/* Main landing-page hero labels use the Our Story treatment. */
+body[data-page="story"] .inner-hero .eyebrow,
+body[data-page="work"] .inner-hero .eyebrow,
+body[data-page="contact"] .inner-hero .eyebrow,
+.sd-site .sd-hero .sd-kicker,
+.industries-live .cinema-hero .eyebrow,
+.resources-live main .cover-five .eyebrow {
+  display:flex!important;
+  align-items:center;
+  gap:14px!important;
+  font:400 12px/1.5 Inter,Arial,sans-serif!important;
+  letter-spacing:.22em!important;
+  text-transform:uppercase;
+  color:#00aeef!important;
+  margin:0 0 22px!important;
+}
+body[data-page="story"] .inner-hero .eyebrow::before,
+body[data-page="work"] .inner-hero .eyebrow::before,
+body[data-page="contact"] .inner-hero .eyebrow::before,
+.sd-site .sd-hero .sd-kicker::before,
+.industries-live .cinema-hero .eyebrow::before,
+.resources-live main .cover-five .eyebrow::before {
+  content:"";display:block;width:20px;height:1px;flex:0 0 20px;background:currentColor;
+}
+.sd-site :is(#sd-app,.sd-content) .sd-hero h1 {
+  font-family:Fraunces,Georgia,serif!important;
+  font-size:clamp(40px,4.4vw,72px)!important;
+  line-height:1.05!important;letter-spacing:-.025em!important;
+  max-width:none!important;
+}
+.sd-site .sd-hero .services-headline-first{white-space:nowrap}
+@media(max-width:760px){.sd-site .sd-hero .services-headline-first{white-space:normal}}
