@@ -27,6 +27,22 @@
   }
 
   function initializeTickers() {
+    // Portfolio heroes use the exact same catalog, labels, and pace as Home.
+    const page = document.body.dataset.page || '';
+    if (page === 'work' || page === 'cases-hub' || page.startsWith('case-')) {
+      const hero = document.querySelector('.scm-ms-hero, .cs-live-hero, main .inner-hero');
+      if (hero) {
+        let strip = hero.nextElementSibling;
+        if (!strip?.matches('.trust-strip')) {
+          strip = document.createElement('section');
+          hero.after(strip);
+        }
+        strip.className = 'trust-strip';
+        strip.dataset.navTheme = 'dark';
+        strip.setAttribute('aria-label', 'VNW Media capabilities');
+        strip.innerHTML = '<div class="trust-track"></div>';
+      }
+    }
     // Service details and Contact share the homepage capabilities strip.
     if (document.body.dataset.page?.startsWith('service-') || document.body.dataset.page === 'contact') {
       const hero = document.querySelector('main .csp-hero, main .inner-hero');
