@@ -763,6 +763,11 @@ function brooklynMotorsCaseStudy(){
 }
 
 function renderClientCaseStudy(config){
+  const primaryLogos={"NYCADSCO":"assets/nycadsco-logo.webp","SFADSCO":"assets/sfadsco-logo.webp","Brooklyn Motors":"assets/brooklyn-motors-logo-supplied.png","La Rosa Chicken and Grill":"assets/la-rosa-logo-white-text.svg","KYPCL":"assets/kypcl-logo-supplied.png"};
+  const logoProject=typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined"?ADDITIONAL_CLIENT_PROJECTS.find(project=>project.name===config.name):null;
+  const heroLogo=primaryLogos[config.name]||logoProject?.logo;
+  const whiteLogo=logoProject&&['skyrex-inc','cti-logistics','fordoz-pharma','platinum-valet-parking'].includes(logoProject.slug);
+  const clientHeading=heroLogo?`<img class="case-hero-client-logo${whiteLogo?' case-hero-client-logo-white':''}" src="${img(heroLogo)}" alt="${esc(config.name)}">`:esc(config.name);
   const businessIntroductions={
     "Brooklyn Motors":"Brooklyn Motors is a collision and auto body repair business in Brooklyn, New York, helping drivers restore their vehicles after damage.",
     "La Rosa Chicken and Grill":"La Rosa Chicken and Grill is a multi-location restaurant brand serving chicken and grilled meals. Its locations serve guests looking for a local place to dine or order food.",
@@ -777,7 +782,7 @@ function renderClientCaseStudy(config){
   const detailSections=services.map((x,i)=>`<section class="scm-ms-service reveal" id="${x[0]}" data-nav-theme="dark"><div class="scm-ms-service-grid"><div class="scm-ms-service-title"><span>${String(i+1).padStart(2,"0")} / ${x[3]}</span><h2>${x[1]}</h2></div><div class="scm-ms-service-copy"><p>${x[2]}</p><a class="scm-ms-inline-cta" href="${path("contact.html")}">${x[4]||"Discuss this part of the build"} <span>↗</span></a></div></div></section>`).join("");
   return `
     <div class="scm-ms-page">
-      <section class="scm-ms-hero" id="page-content" data-nav-theme="dark"><div class="scm-ms-hero-bg"><img src="${img(config.hero)}" alt="${esc(config.heroAlt)}" width="${config.heroWidth}" height="${config.heroHeight}" fetchpriority="high"></div><div class="shell scm-ms-hero-inner reveal"><p class="scm-ms-kicker">${esc(config.kicker)}</p><h1>${esc(config.name)}</h1><p>${esc(config.intro)}</p><span>${esc(config.yearLabel||"2026")}</span></div></section>
+      <section class="scm-ms-hero" id="page-content" data-nav-theme="dark"><div class="scm-ms-hero-bg"><img src="${img(config.hero)}" alt="${esc(config.heroAlt)}" width="${config.heroWidth}" height="${config.heroHeight}" fetchpriority="high"></div><div class="shell scm-ms-hero-inner reveal"><p class="scm-ms-kicker">${esc(config.kicker)}</p><h1>${clientHeading}</h1><p>${esc(config.intro)}</p><span>${esc(config.yearLabel||"2026")}</span></div></section>
       <section class="scm-ms-signals" data-nav-theme="dark"><div class="shell scm-ms-signal-grid">${signals.map(x=>`<article class="reveal"><strong>${x[0]}</strong><span>${x[1]}</span></article>`).join("")}</div></section>
       <section class="scm-ms-challenge-approach" data-nav-theme="dark"><div class="shell scm-ms-ca-grid reveal"><article class="scm-ms-ca-panel"><p class="section-tag">The Challenge</p><h2>${esc(config.challengeTitle)}</h2><div class="scm-ms-ca-copy">${businessIntro?`<p class="case-business-intro">${esc(businessIntro)}</p>`:""}<p>${esc(config.challengeOne)}</p><p>${esc(config.challengeTwo)}</p></div></article><article class="scm-ms-ca-panel"><p class="section-tag">Our Approach</p><h2>${esc(config.approachTitle)}</h2><div class="scm-ms-approach-list">${approach.map(x=>`<article><b>—</b><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></article></div></section>
       <section class="scm-ms-story" id="digital-experience" data-nav-theme="light" aria-labelledby="scm-story-title">

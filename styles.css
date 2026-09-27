@@ -2219,6 +2219,9 @@ body .site-header.site-header .nav-phone{display:none}
 .csp-faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:90px}
 .csp-faq-intro{position:sticky;top:120px;align-self:start}
 .csp-faq-intro>.pill{margin-top:28px}
+.scm-ms-hero h1 .case-hero-client-logo{display:block;width:480px;max-width:100%;height:auto;max-height:160px;object-fit:contain;object-position:left center;filter:drop-shadow(0 3px 5px rgba(0,0,0,.35))}
+.scm-ms-hero h1 .case-hero-client-logo-white{filter:brightness(0) invert(1) drop-shadow(0 3px 5px rgba(0,0,0,.35))}
+@media(max-width:600px){.scm-ms-hero h1 .case-hero-client-logo{max-height:120px}}
 body[data-page="contact"] .inner-hero h1{max-width:none;font-size:clamp(36px,5vw,76px)}
 body[data-page="contact"] .contact-headline-highlight{color:#00aeef}
 @media(min-width:1001px){body[data-page="contact"] .contact-headline-line{white-space:nowrap}}
