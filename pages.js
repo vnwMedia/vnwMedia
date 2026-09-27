@@ -1358,6 +1358,7 @@ function bootPages(){
   const logoTitle=pageTitle.match(/<img[^>]+alt="([^"]+)"/);
   if(logoTitle) titleDecoder.innerHTML=logoTitle[1];
   if(!preserveAuthoredTitle) document.title=`${titleDecoder.value} | VNW Media`;
+  if(id?.startsWith("case-")) content+=googleTestimonials("case-reviews").replace('data-nav-theme="dark"','data-nav-theme="light"');
   app.innerHTML=header()+`<main>${content}</main>`+footer();
 }
 bootPages();

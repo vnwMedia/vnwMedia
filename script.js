@@ -60,7 +60,7 @@ function markCurrentPrimaryNavigation() {
   else if (/\/work(?:-[^/]+)?\.html$/.test(currentPath)) section = "work";
   else if (/\/services(?:\.html|\/)/.test(currentPath)) section = "services";
   else if (/\/industries(?:\.html|\/)/.test(currentPath)) section = "industries";
-  else if (/\/case-studies(?:\.html|\/)/.test(currentPath)) section = "case-studies";
+  else if (/\/case-studies(?:\.html|\/)/.test(currentPath)) section = "work";
   else if (/\/resources(?:\.html|\/)/.test(currentPath)) section = "resources";
 
   const primaryLinks = {
