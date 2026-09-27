@@ -115,7 +115,8 @@ function cards(items,type){
 }
 
 function capabilityTicker(){
-  const clients=typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined"?[...DATA.cases.map(item=>item[0]),...ADDITIONAL_CLIENT_PROJECTS.map(item=>item.name)]:["Brooklyn Motors","La Rosa Chicken and Grill","KYPCL","Best Pro Service","Leo Mikityanskiy","NJ Steps to Success","Grill Point","Kid’s World Preschool","Senior Comfort","Best Blinds","Urgent Doctor","Quality Wellness Group","Adamco Diamonds","Honeydrop","Marlboro Jewish Day Camp","Travel Mama","Pollack SEO","A2Z Academy"];
+  const portfolioClients=typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined"?ADDITIONAL_CLIENT_PROJECTS.map(item=>item.name):["SkyRex Inc.","CTI Logistics","ForDoz Pharma","Platinum Valet Parking","Raidex Construction LLC","Catanzaro’s Power Washing","Coin & Jewelry Gallery of Boca Raton","NJ Steps to Success","H2Bros Plumbing & Heating","Art of Construction"];
+  const clients=[...new Set([...DATA.cases.map(item=>item[0]),...portfolioClients])];
   return `<section class="trust-strip work-client-ticker" data-nav-theme="dark" aria-label="VNW Media clients"><div class="trust-track"><small>Selected Client Work</small><i></i>${[...clients,...clients].map(x=>`<span>${x}</span>`).join("")}</div></section>`;
 }
 
