@@ -238,7 +238,7 @@ function renderAdditionalClientCaseStudy(project){
     yearLabel:'Web Design · Search · AI', website:project.website,
     mockup:project.desktop, mockupAlt:`${project.name} website on desktop`, mockupWidth:1440, mockupHeight:1000,
     mockupMobile:project.mobile, visualCaption:'The live client website.', visualDetail:'Desktop · Mobile',
-    signals:project.focus, challengeTitle:project.headline, challengeOne:project.challenge,
+    signals:project.focus, businessIntro:project.name+' — '+project.summary, challengeTitle:project.headline, challengeOne:project.challenge,
     challengeTwo:`Our engagement connects Web Design, SEO, Google Business Profile, GBP Search Ads, and GEO / AI Marketing around the needs of ${project.audience}.`,
     approachTitle:'One business. A connected digital direction.',
     approach:[['Website clarity.',project.design],['Relevant search content.',project.search],['Local business context.',project.local],['AI-ready explanations.',project.geo]],
@@ -754,6 +754,15 @@ function brooklynMotorsCaseStudy(){
 }
 
 function renderClientCaseStudy(config){
+  const businessIntroductions={
+    "Brooklyn Motors":"Brooklyn Motors is a collision and auto body repair business in Brooklyn, New York, helping drivers restore their vehicles after damage.",
+    "La Rosa Chicken and Grill":"La Rosa Chicken and Grill is a multi-location restaurant brand serving chicken and grilled meals. Its locations serve guests looking for a local place to dine or order food.",
+    "KYPCL":"KYPCL (Kahn Yuniver Law) is a law firm serving individuals and businesses across Brooklyn, Manhattan, and greater New York City with legal advice and representation.",
+    "Vision Centers":"Vision Centers brings together Nassau Fulton, Broadway, Absolute, and American Vision Centers. These eye-care practices offer eye exams, prescription eyewear, and contact lenses to their local communities.",
+    "NYCADSCO":"NYCADSCO is an outdoor advertising and media planning agency in New York City. Its services include subway, bus, bus shelter, billboard, and street-poster advertising.",
+    "SFADSCO":"SFADSCO is an outdoor advertising and media planning agency serving San Francisco. Its services include Muni, BART, cable car, billboard, and street-level advertising."
+  };
+  const businessIntro=config.businessIntro||businessIntroductions[config.name];
   const {signals, approach, services}=config;
   const serviceNav=services.map(x=>`<a class="pill pill-outline" href="#${x[0]}">${x[1]}</a>`).join("");
   const detailSections=services.map((x,i)=>`<section class="scm-ms-service reveal" id="${x[0]}" data-nav-theme="dark"><div class="scm-ms-service-grid"><div class="scm-ms-service-title"><span>${String(i+1).padStart(2,"0")} / ${x[3]}</span><h2>${x[1]}</h2></div><div class="scm-ms-service-copy"><p>${x[2]}</p><a class="scm-ms-inline-cta" href="${path("contact.html")}">${x[4]||"Discuss this part of the build"} <span>↗</span></a></div></div></section>`).join("");
@@ -761,7 +770,7 @@ function renderClientCaseStudy(config){
     <div class="scm-ms-page">
       <section class="scm-ms-hero" id="page-content" data-nav-theme="dark"><div class="scm-ms-hero-bg"><img src="${img(config.hero)}" alt="${esc(config.heroAlt)}" width="${config.heroWidth}" height="${config.heroHeight}" fetchpriority="high"></div><div class="shell scm-ms-hero-inner reveal"><p class="scm-ms-kicker">${esc(config.kicker)}</p><h1>${esc(config.name)}</h1><p>${esc(config.intro)}</p><span>${esc(config.yearLabel||"2026")}</span></div></section>
       <section class="scm-ms-signals" data-nav-theme="dark"><div class="shell scm-ms-signal-grid">${signals.map(x=>`<article class="reveal"><strong>${x[0]}</strong><span>${x[1]}</span></article>`).join("")}</div></section>
-      <section class="scm-ms-challenge-approach" data-nav-theme="dark"><div class="shell scm-ms-ca-grid reveal"><article class="scm-ms-ca-panel"><p class="section-tag">The Challenge</p><h2>${esc(config.challengeTitle)}</h2><div class="scm-ms-ca-copy"><p>${esc(config.challengeOne)}</p><p>${esc(config.challengeTwo)}</p></div></article><article class="scm-ms-ca-panel"><p class="section-tag">Our Approach</p><h2>${esc(config.approachTitle)}</h2><div class="scm-ms-approach-list">${approach.map(x=>`<article><b>—</b><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></article></div></section>
+      <section class="scm-ms-challenge-approach" data-nav-theme="dark"><div class="shell scm-ms-ca-grid reveal"><article class="scm-ms-ca-panel"><p class="section-tag">The Challenge</p><h2>${esc(config.challengeTitle)}</h2><div class="scm-ms-ca-copy">${businessIntro?`<p class="case-business-intro">${esc(businessIntro)}</p>`:""}<p>${esc(config.challengeOne)}</p><p>${esc(config.challengeTwo)}</p></div></article><article class="scm-ms-ca-panel"><p class="section-tag">Our Approach</p><h2>${esc(config.approachTitle)}</h2><div class="scm-ms-approach-list">${approach.map(x=>`<article><b>—</b><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></article></div></section>
       <section class="scm-ms-story" id="digital-experience" data-nav-theme="light" aria-labelledby="scm-story-title">
         <div class="shell scm-ms-story-grid reveal">
           <figure class="scm-ms-story-visual">
