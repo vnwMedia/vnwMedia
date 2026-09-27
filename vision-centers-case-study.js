@@ -21,7 +21,7 @@
   const locations=[['nassau','Nassau Fulton Vision Center'],['broadway','Broadway Vision at 170th'],['absolute','Absolute Vision Center'],['american','American Vision Center']];
   if(stage){
     stage.classList.add('vision-laptop-grid');
-    stage.innerHTML=locations.map(([slug,name])=>`<figure class="vision-laptop"><div class="vision-laptop-screen"><img src="../assets/vision-centers-${slug}.jpg" alt="${name} website displayed on a laptop" width="1440" height="960" loading="lazy"></div><div class="vision-laptop-base" aria-hidden="true"></div><figcaption>${name}</figcaption></figure>`).join('');
+    stage.innerHTML='<div class="vision-showcase-heading">Four local identities.<span>One connected presence</span></div>'+locations.map(([slug,name])=>`<figure class="vision-laptop"><div class="vision-laptop-screen"><img src="../assets/vision-centers-${slug}.jpg" alt="${name} website displayed on a laptop" width="1440" height="960" loading="lazy"></div><div class="vision-laptop-base" aria-hidden="true"></div><figcaption>${name}</figcaption></figure>`).join('');
     const caption=stage.parentElement.querySelector(':scope > figcaption');
     if(caption)caption.innerHTML='<span>Vision Centers</span><span>Four locations. Four websites.</span>';
   }

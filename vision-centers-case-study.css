@@ -5,4 +5,19 @@
 .vision-laptop-base{height:8px;border-radius:1px 1px 60% 60%;background:linear-gradient(#d4d7d8,#92999e);position:relative}
 .vision-laptop-base:before{content:"";position:absolute;top:0;left:40%;width:20%;height:3px;border-radius:0 0 4px 4px;background:#697177}
 .vision-laptop-grid .vision-laptop figcaption{display:block;padding:12px 0 0;border:0;text-align:center;color:#30383b;font:500 12px/1.5 Inter,sans-serif}
-@media(max-width:500px){.scm-ms-story-stage.vision-laptop-grid{grid-template-columns:1fr;gap:24px;padding:24px 20px}}
+/* Staggered editorial showcase with metallic device detailing. */
+.scm-ms-story-stage.vision-laptop-grid{gap:34px 22px;padding:32px 24px 70px;background:radial-gradient(ellipse at 80% 35%,#29414a,transparent 60%),linear-gradient(145deg,#182329,#0a1115);overflow:hidden;border:1px solid #35434a}
+.vision-showcase-heading{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:20px;border-bottom:1px solid #ffffff26;color:#fff;font:400 28px/1.1 Fraunces,serif}
+.vision-showcase-heading span{max-width:95px;color:#8fa6b0;font:500 9px/1.6 Inter,sans-serif;letter-spacing:.14em;text-align:right;text-transform:uppercase}
+.vision-laptop:nth-of-type(even){transform:translateY(36px)}
+.vision-laptop-screen{margin:0 5px;padding:5px 4px 4px;border:1px solid #738089;border-radius:7px 7px 1px 1px;background:linear-gradient(135deg,#3f4a51,#11181d);box-shadow:0 20px 25px #0006}
+.vision-laptop-screen:before{content:"";display:block;width:2px;height:2px;border-radius:50%;background:#85949b;margin:0 auto 4px}
+.vision-laptop-base{height:5px;background:linear-gradient(#d7dfe3,#68757e);box-shadow:0 10px 14px #0005}
+.vision-laptop-base:before{height:2px;background:#4e5a63}
+.vision-laptop-grid .vision-laptop figcaption{padding:16px 4px 0;text-align:left;color:#edf1f3;font:400 17px/1.2 Fraunces,serif}
+.vision-laptop figcaption:before{display:block;color:#39b8e7;font:500 9px/1 Inter,sans-serif;letter-spacing:.13em;margin-bottom:8px}
+.vision-laptop:nth-of-type(1) figcaption:before{content:"01 / NASSAU FULTON"}
+.vision-laptop:nth-of-type(2) figcaption:before{content:"02 / BROADWAY"}
+.vision-laptop:nth-of-type(3) figcaption:before{content:"03 / ABSOLUTE"}
+.vision-laptop:nth-of-type(4) figcaption:before{content:"04 / AMERICAN"}
+@media(max-width:500px){.scm-ms-story-stage.vision-laptop-grid{gap:25px 14px;padding:24px 14px 52px}.vision-showcase-heading{font-size:24px}.vision-laptop-grid .vision-laptop figcaption{font-size:14px}.vision-laptop:nth-of-type(even){transform:translateY(22px)}}
