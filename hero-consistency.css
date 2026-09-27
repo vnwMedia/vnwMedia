@@ -1,4 +1,6 @@
 /* Main landing-page hero labels use the Our Story treatment. */
+.resources-live main .cover-five h1{max-width:none;font-size:clamp(40px,4.4vw,72px)}
+@media(min-width:761px){.resources-live .resources-headline-first{white-space:nowrap}}
 body[data-page="story"] .inner-hero .eyebrow,
 body[data-page="work"] .inner-hero .eyebrow,
 body[data-page="contact"] .inner-hero .eyebrow,
