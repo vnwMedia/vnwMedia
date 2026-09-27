@@ -1346,6 +1346,10 @@ body .site-header.site-header .mega-wide .mega-columns{
 .scm-ms-ca-panel{
   min-width:0;
 }
+/* Follow the FAQ introduction: stay below navigation, bounded by the approach. */
+@media(min-width:901px) and (min-height:700px){
+  .scm-ms-ca-panel:first-child{position:sticky;top:115px;align-self:start}
+}
 .scm-ms-ca-panel + .scm-ms-ca-panel{
   padding-left:70px;
   border-left:1px solid rgba(255,255,255,.11);
