@@ -1,0 +1,31 @@
+/* Shared image-hero spacing: content never crowds the section below it. */
+html body :is(.hero,.inner-hero,.scm-ms-hero),
+html body.services-landing .sd-hero,
+html body .industries-live .cinema-hero,
+html body.resources-live .cover-five{
+  box-sizing:border-box;
+  height:auto!important;
+  min-height:610px!important;
+  padding:150px 0 90px!important;
+  align-items:end!important;
+}
+html body.services-landing .sd-hero>.sd-shell,
+html body .industries-live .cinema-hero>.wrap{
+  padding-block:0!important;
+}
+html body .hero-copy{padding-top:0}
+@media(max-width:800px){
+  html body :is(.hero,.inner-hero,.scm-ms-hero),
+  html body.services-landing .sd-hero,
+  html body .industries-live .cinema-hero,
+  html body.resources-live .cover-five{
+    min-height:540px!important;
+    padding:130px 0 70px!important;
+  }
+}
+@media(max-width:560px){
+  html body :is(.hero,.inner-hero,.scm-ms-hero),
+  html body.services-landing .sd-hero,
+  html body .industries-live .cinema-hero,
+  html body.resources-live .cover-five{min-height:580px!important}
+}
