@@ -1,3 +1,5 @@
+/* Only hero heading labels use the shared Our Story highlight blue. */
+html body :is(.hero,[class*="-hero"],.cover-five) :is(.eyebrow,.section-tag,.sd-kicker,.team-cinema-eyebrow,.case-editorial-kicker,.scm-ms-kicker,.fc-kicker,.nc-eyebrow,.pb-kicker,.pd-eyebrow,.pp-kicker,.promo-kicker,.q-kicker,.up-kicker){color:#00aeef!important}
 /* Diagnostic section labels stay white; charts and CTAs retain their accents. */
 html body .csp-performance-check .csp-check-copy > .section-tag{color:#fff!important}
 /* Shared leading rule for heading labels, including dynamically rendered pages.
