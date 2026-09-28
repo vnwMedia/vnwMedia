@@ -2,7 +2,7 @@
 .aoc-option-split .lr-location-layout,.aoc-option-three .lr-location-layout{gap:32px}
 .aoc-option-split .lr-location-layout>div,.aoc-option-three .lr-location-layout>div{min-width:0}
 @media(min-width:901px){
-  .aoc-option-split .lr-location-layout{grid-template-columns:minmax(0,33fr) minmax(0,67fr)}
+  .aoc-option-split .lr-location-layout{grid-template-columns:minmax(0,2fr) minmax(0,3fr)}
   .aoc-option-split .aoc-service-result{padding:14px}
   .aoc-option-split .aoc-card-top h3{font-size:12px}
   .aoc-option-split .aoc-service-result h4{font-size:13px}
