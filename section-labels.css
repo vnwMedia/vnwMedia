@@ -1,0 +1,22 @@
+/* Shared leading rule for heading labels, including dynamically rendered pages.
+   Reuses ::before so labels that already have a rule never receive a second one.
+   Typography, color and surrounding spacing remain owned by each section. */
+html body :is(.section-tag,.eyebrow,.sd-kicker,.team-cinema-eyebrow,.case-editorial-kicker,.scm-ms-kicker,.fc-kicker,.nc-eyebrow,.pb-kicker,.pd-eyebrow,.pp-kicker,.promo-kicker,.q-kicker,.up-kicker){
+  display:flex!important;
+  align-items:center!important;
+  gap:16px!important;
+}
+html body :is(.section-tag,.eyebrow,.sd-kicker,.team-cinema-eyebrow,.case-editorial-kicker,.scm-ms-kicker,.fc-kicker,.nc-eyebrow,.pb-kicker,.pd-eyebrow,.pp-kicker,.promo-kicker,.q-kicker,.up-kicker)::before{
+  content:""!important;
+  display:block!important;
+  position:static!important;
+  flex:0 0 28px!important;
+  width:28px!important;
+  height:1px!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:currentColor!important;
+  transform:none!important;
+}
