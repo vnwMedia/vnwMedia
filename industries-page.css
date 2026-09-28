@@ -1,4 +1,5 @@
 /* Approved cinematic Industries layout, isolated from the shared site chrome. */
+.industries-live .industry-faq-description{margin-top:24px;max-width:440px;font-size:16px;line-height:1.65}
 .industries-live .story-band>img[src$="contractor-homeowner-v1.jpg"]{object-position:center 30%}
 /* Shift the legal photo down from its centered crop to reveal more headroom. */
 .industries-live .story-band>img[src$="legal-advice-v2.jpg"]{object-position:center 30%}
