@@ -1,3 +1,5 @@
+/* Diagnostic section labels stay white; charts and CTAs retain their accents. */
+html body .csp-performance-check .csp-check-copy > .section-tag{color:#fff!important}
 /* Shared leading rule for heading labels, including dynamically rendered pages.
    Reuses ::before so labels that already have a rule never receive a second one.
    Typography, color and surrounding spacing remain owned by each section. */
