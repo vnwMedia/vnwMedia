@@ -5,6 +5,9 @@ html body :is(a,button,input).site-button{display:inline-flex!important;max-widt
 html body .site-button-primary{background:var(--site-button-blue)!important;color:#fff!important;border-color:transparent!important}
 html body .site-button-primary:is(:hover,:focus-visible){background:var(--site-button-hover)!important;color:#fff!important}
 html body .site-button-outline{background:transparent!important}
+/* Match Contact's blue text and border hover on outlined Explore Services CTAs. */
+html body a.site-explore-services:not(.site-button-primary):is(:hover,:focus-visible){color:var(--site-button-blue)!important;border-color:var(--site-button-blue)!important}
+html body a.site-explore-services:is(:hover,:focus-visible) span{color:inherit!important}
 html body .site-control-blue{color:#fff!important}
 html body .site-button-arrow{display:inline-block;flex:none;color:inherit!important;font:inherit!important;line-height:1!important;margin:0!important}
 html body .site-button:focus-visible{outline:3px solid var(--site-button-blue);outline-offset:4px}

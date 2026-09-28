@@ -7,6 +7,9 @@
     return !!rgb && +rgb[1] < 70 && +rgb[2] >= 100 && +rgb[3] >= 150 && (rgb[4] === undefined || +rgb[4] >= .9);
   }
   function normalize() {
+    document.querySelectorAll('a').forEach(link => {
+      if (/^explore services\s*[↗→]?$/i.test(link.textContent.trim())) link.classList.add('site-explore-services');
+    });
     document.querySelectorAll(ctas).forEach(link => {
       link.classList.add('site-button');
       const outline = link.classList.contains('pill-outline') || link.classList.contains('sd-outline') || link.classList.contains('outline');
