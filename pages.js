@@ -341,7 +341,7 @@ function workFAQ(){
     ["Can results be measured after launch?","Yes. When tracking and platform access are available, the work can be evaluated through relevant signals such as calls, forms, appointment actions, visibility, engagement, sales, or lead quality."],
     ["How should a business start?","Start with a review of the current website, business goals, customer journey, service areas, and marketing channels. From there, VNW can recommend the right scope and priority order."]
   ];
-  return `<section class="work-faq faq section"><div class="shell faq-grid"><div class="faq-intro reveal"><p class="section-tag">Work FAQ</p><h2>Useful details before you choose an agency.</h2><p>These answers add context for searchers comparing web design and digital marketing companies.</p><a class="text-arrow" href="${path("contact.html")}">Ask about your project <span>↗</span></a></div><div class="faq-list reveal">${qs.map((x,i)=>`<details ${i===0?"open":""}><summary>${x[0]}<span>+</span></summary><p>${x[1]}</p></details>`).join("")}</div></div></section>`;
+  return `<section class="work-faq faq section"><div class="shell faq-grid"><div class="faq-intro reveal"><p class="section-tag">Work FAQ</p><h2>Useful details before you choose an agency.</h2><p>These answers add context for searchers comparing web design and digital marketing companies.</p><a class="text-arrow pill pill-blue site-button site-button-primary" href="${path("contact.html")}">Ask about your project <span class="site-button-arrow" aria-hidden="true">↗</span></a></div><div class="faq-list reveal">${qs.map((x,i)=>`<details ${i===0?"open":""}><summary>${x[0]}<span>+</span></summary><p>${x[1]}</p></details>`).join("")}</div></div></section>`;
 }
 
 function workOptionTwo(){
