@@ -4,8 +4,14 @@
   const index = clients.indexOf(document.body.dataset.page?.replace(/^case-/, ''));
   if (index < 0) return;
   const section = document.querySelector('.scm-ms-signals.lr-results');
-  const ticker = document.querySelector('.scm-ms-hero')?.nextElementSibling;
-  const names = [...new Set([...ticker.querySelectorAll('.trust-track > span')].map(el => el.textContent.trim()))];
+  // Read the confirmed scope, not the animated ticker (which is rebuilt by tickers.js).
+  const specialScopes = {
+    'sfadsco':['SEO','PPC','Google Business Profile Organic Management','Reputation Management'],
+    'nycadsco':['SEO','PPC','Google Business Profile Organic Management','Reputation Management'],
+    'vision-centers':['Google Business Profile Management','Organic SEO','Reputation Management'],
+    'la-rosa-chicken-grill':['SEO for 11 locations','Google Business Profile Management','Google Business Profile Search Ads','Reputation Management']
+  };
+  const names = specialScopes[clients[index]] || [...new Set([...document.querySelectorAll('.scm-ms-work nav a')].map(el => el.textContent.trim()))];
   if (!section || !names.length) return;
   const esc = text => String(text).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const original = section.querySelector('.lr-grid').innerHTML;
