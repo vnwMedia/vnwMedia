@@ -387,10 +387,9 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
-const testimonialTicker = document.querySelector("[data-testimonial-ticker]");
-const testimonialTickerTrack = testimonialTicker?.querySelector(".testimonial-ticker-track");
-
-if (testimonialTicker && testimonialTickerTrack) {
+document.querySelectorAll("[data-testimonial-ticker]").forEach(testimonialTicker => {
+  const testimonialTickerTrack = testimonialTicker.querySelector(".testimonial-ticker-track");
+  if (!testimonialTickerTrack) return;
   const originalCards = Array.from(testimonialTickerTrack.children);
   originalCards.forEach((card) => {
     const clone = card.cloneNode(true);
@@ -400,6 +399,13 @@ if (testimonialTicker && testimonialTickerTrack) {
   });
 
   const updateTestimonialTickerDistance = () => {
+    // Offset the initial card, but keep overflow clipping at the browser edge.
+    const section = testimonialTicker.closest(".testimonial-ticker-section");
+    const anchor = section?.querySelector(".testimonial-ticker-shell") || document.querySelector("header .logo");
+    const inset = anchor ? Math.max(0, anchor.getBoundingClientRect().left - testimonialTicker.getBoundingClientRect().left) : 0;
+    testimonialTicker.style.boxSizing = "border-box";
+    testimonialTicker.style.paddingLeft = `${inset}px`;
+    testimonialTickerTrack.style.padding = "0";
     const firstCard = testimonialTickerTrack.children[0];
     const firstClone = testimonialTickerTrack.children[originalCards.length];
     if (!firstCard || !firstClone) return;
@@ -451,7 +457,7 @@ if (testimonialTicker && testimonialTickerTrack) {
   addEventListener("load", updateTestimonialTickerDistance);
   addEventListener("resize", updateTestimonialTickerDistance, { passive: true });
 
-}
+});
 
 if (heroForm) {
   const mobileCtaObserver = new IntersectionObserver((entries) => {
