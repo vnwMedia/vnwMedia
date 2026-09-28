@@ -1,4 +1,6 @@
 /* Approved cinematic Industries layout, isolated from the shared site chrome. */
+/* Keep both faces and headroom visible when the portrait fills a wide panel. */
+.industries-live .story-band>img[src$="legal-advice-v2.jpg"]{object-position:center 15%}
 @media(min-width:761px){.industries-live .story-band.reverse .education-diagonal{grid-column:3/5;grid-row:1;order:2}}
 .industries-live .education-diagonal{position:relative;margin:0;overflow:hidden;min-width:0;background:#fff;align-self:stretch}
 .industries-live .education-diagonal>img{position:absolute;top:0;height:100%;width:62%;max-width:none;object-fit:cover}
