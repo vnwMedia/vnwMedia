@@ -1,0 +1,8 @@
+Built-in image generation, photorealistic-natural, September 27 2026.
+Shared prompt: Portrait 4:5 editorial website photograph. Natural human skin texture and believable anatomy, candid unposed work, soft natural daylight, sophisticated neutral color grading. Keep main people and activity near center with crop room for diagonal website panels. No illustration, icons, logos, watermark, readable text, artificial glossy skin or exaggerated expressions.
+
+home-services-v2.jpg: A Black female HVAC technician about 35 with short natural hair, wearing a charcoal work shirt, working alone checking an outdoor air conditioner at a suburban house. Standing three-quarter view, tool bag beside her. No homeowner.
+
+auto-body-service-v2.jpg: An East Asian male collision repair specialist about 55, clean shaven with close cropped gray hair and safety glasses, wearing burgundy work coveralls, carefully checking alignment of a detached silver car door mounted on a workshop stand. Authentic auto body workshop. No tablet, no client.
+
+professional-team-v2.jpg: A South Asian female business consultant with long black hair in a low ponytail, wearing a cream blazer, standing at a wall-mounted display discussing a simple financial chart with a bald Black male colleague in glasses and a light blue shirt. Contemporary professional advisory office. Mid-shot standing collaboration, not a seated document consultation.
