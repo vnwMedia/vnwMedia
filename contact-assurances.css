@@ -1,0 +1,5 @@
+/* Contact reassurance items follow the open blue-check treatment. */
+body[data-page="contact"] .plan-assurance{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px;overflow:visible}
+body[data-page="contact"] .plan-assurance>span{display:flex;align-items:flex-start;justify-content:flex-start;gap:10px;min-width:0;min-height:0;padding:0;border:0;border-radius:0;background:none;overflow:visible;color:#dedede;font-size:12px;font-weight:600;line-height:1.4;text-align:left;white-space:normal;text-transform:uppercase}
+body[data-page="contact"] .plan-assurance b{flex:none;color:#00aeef;font-size:20px;line-height:1.1}
+@media(max-width:600px){body[data-page="contact"] .plan-assurance{grid-template-columns:1fr;gap:18px;padding-bottom:0;scroll-snap-type:none}}
