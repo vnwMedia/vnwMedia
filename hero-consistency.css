@@ -32,6 +32,9 @@ body[data-page="contact"] .inner-hero .eyebrow::before,
 }
 .sd-site .sd-hero .services-headline-first{white-space:nowrap}
 @media(max-width:760px){.sd-site .sd-hero .services-headline-first{white-space:normal}}
+/* Services keeps its desktop headline size; narrower layouts wrap instead of scaling. */
+.sd-site.services-landing :is(#sd-app,.sd-content) .sd-hero h1{font-size:72px!important}
+.sd-site.services-landing .sd-hero .services-headline-first{white-space:normal}
 .industry-hero-actions,.resources-live main .resource-hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
 .resources-live main .resource-hero-actions{margin-top:40px}
 .resources-live main .resource-hero-actions .pill{margin-top:0}
