@@ -1,0 +1,10 @@
+/* Consistent client scope/results proportions, without changing report content. */
+body .lr-location-layout{gap:32px}
+body .lr-location-layout>*{min-width:0}
+body .lr-location-layout .lr-heading h2{white-space:normal;overflow-wrap:break-word}
+@media(min-width:901px){
+  body .lr-location-layout{grid-template-columns:minmax(0,45fr) minmax(0,55fr)}
+}
+@media(max-width:900px){
+  body .lr-location-layout{grid-template-columns:minmax(0,1fr)}
+}
