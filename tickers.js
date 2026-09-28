@@ -112,7 +112,7 @@
 
     function build(record) {
       const {track, viewport, cycle, templates, speed} = record;
-      // Keep the visible ticker entrance on the header logo's left edge.
+      // Align the initial position with the logo without clipping that inset.
       // Only these service/client/topic windows are touched, never reviews.
       const logo = document.querySelector('header .logo, .site-header .logo, .logo');
       const inset = logo ? Math.max(0, logo.getBoundingClientRect().left - viewport.getBoundingClientRect().left) : 0;
