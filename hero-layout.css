@@ -7,13 +7,48 @@ html body.resources-live .cover-five{
   height:auto!important;
   min-height:610px!important;
   padding:150px 0 90px!important;
-  align-items:end!important;
+  align-items:start!important;
 }
 html body.services-landing .sd-hero>.sd-shell,
 html body .industries-live .cinema-hero>.wrap{
   padding-block:0!important;
 }
 html body .hero-copy{padding-top:0}
+/* Match the navigation/logo column and start all copy at the same top inset. */
+html body :is(.hero,.inner-hero,.scm-ms-hero)>.shell,
+html body.services-landing .sd-hero>.sd-shell,
+html body .industries-live .cinema-hero>.wrap,
+html body.resources-live .cover-five>.wrap{
+  width:var(--shell)!important;
+  max-width:none!important;
+  margin-inline:auto!important;
+  padding-inline:0!important;
+  align-self:start!important;
+}
+/* The same 22px / .7s entrance used by Our Story and Our Work. */
+@keyframes shared-hero-enter{
+  from{opacity:0;transform:translateY(22px)}
+  to{opacity:1;transform:translateY(0)}
+}
+html body .hero .hero-copy,
+html body .inner-hero>.inner-hero-copy,
+html body .scm-ms-hero>.shell,
+html body.services-landing .sd-hero>.sd-shell,
+html body .industries-live .cinema-hero>.wrap,
+html body.resources-live .cover-five>.wrap{
+  animation:shared-hero-enter .7s ease both;
+  transition:none;
+}
+@media(prefers-reduced-motion:reduce){
+  html body .hero .hero-copy,
+  html body .inner-hero>.inner-hero-copy,
+  html body .scm-ms-hero>.shell,
+  html body.services-landing .sd-hero>.sd-shell,
+  html body .industries-live .cinema-hero>.wrap,
+  html body.resources-live .cover-five>.wrap{
+    animation:none;opacity:1;transform:none;
+  }
+}
 @media(max-width:800px){
   html body :is(.hero,.inner-hero,.scm-ms-hero),
   html body.services-landing .sd-hero,
