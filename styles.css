@@ -239,7 +239,6 @@ body.home-services-full-scroll .services-scrollbar .service-card:nth-child(3n+1)
 
 /* Imported Our Story narrative */
 .story2-team-live-option4{position:relative;color:#fff;background:radial-gradient(circle at 20% 44%,rgba(0,174,239,.22),transparent 32%),#090909;overflow:hidden}
-.story2-team-live-option4:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:88px 88px;opacity:.55}
 .story2-team-live-option4>.shell{position:relative;z-index:2}
 .story2-live-cinema{padding:14px 0}
 .team-cinema{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:center}
