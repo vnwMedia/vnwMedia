@@ -112,6 +112,11 @@
 
     function build(record) {
       const {track, viewport, cycle, templates, speed} = record;
+      // Keep the visible ticker entrance on the header logo's left edge.
+      // Only these service/client/topic windows are touched, never reviews.
+      const logo = document.querySelector('header .logo, .site-header .logo, .logo');
+      const inset = logo ? Math.max(0, logo.getBoundingClientRect().left - viewport.getBoundingClientRect().left) : 0;
+      viewport.style.setProperty('--ticker-logo-inset', `${inset}px`);
       track.classList.remove('ticker-ready');
       track.querySelectorAll('.ticker-cycle-copy').forEach(copy => copy.remove());
       cycle.replaceChildren(...templates.map(item => item.cloneNode(true)));
@@ -156,6 +161,7 @@
         })) refresh();
       });
       records.forEach(({viewport}) => observer.observe(viewport));
+      window.addEventListener('resize', refresh, {passive:true});
       // Observe width changes only: mobile browser chrome can resize the
       // viewport height while scrolling, which must not restart the loop.
       document.fonts?.addEventListener('loadingdone', refresh);

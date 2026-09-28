@@ -2,6 +2,7 @@
 .trust-track{--ticker-gap:48px}
 .ticker-window{display:block!important;flex:1 1 auto;min-width:0;max-width:100%;width:100%!important;padding:0!important;overflow:hidden;animation:none!important;transform:none!important}
 .ticker-window:focus-visible{outline:2px solid #42b1e5;outline-offset:-2px}
+.ticker-window{box-sizing:border-box;padding-left:var(--ticker-logo-inset,0px)!important;clip-path:inset(0 0 0 var(--ticker-logo-inset,0px))}
 .seamless-track{display:flex!important;align-items:center;flex:0 0 auto;width:max-content!important;max-width:none;gap:0!important;padding-inline:0!important;margin:0!important;white-space:nowrap;animation:none!important;will-change:transform}
 .seamless-track>.ticker-cycle{display:flex;align-items:center;flex:0 0 auto;gap:var(--ticker-gap,48px);width:max-content;max-width:none;margin:0;padding:0 var(--ticker-gap,48px) 0 0;animation:none!important;transform:none!important}
 .seamless-track>.ticker-cycle>*{flex:0 0 auto}
