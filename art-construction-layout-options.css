@@ -1,0 +1,16 @@
+/* Isolated layout alternatives; the existing case study and preview are unchanged. */
+.aoc-option-split .lr-location-layout,.aoc-option-three .lr-location-layout{gap:32px}
+.aoc-option-split .lr-location-layout>div,.aoc-option-three .lr-location-layout>div{min-width:0}
+@media(min-width:901px){
+  .aoc-option-split .lr-location-layout{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
+  .aoc-option-split .aoc-results-preview .lr-heading h2{font-size:clamp(20px,2vw,27px)}
+  .aoc-option-split .aoc-service-result{padding:14px}
+  .aoc-option-split .aoc-card-top h3{font-size:12px}
+  .aoc-option-split .aoc-service-result h4{font-size:13px}
+  .aoc-option-three .lr-location-layout{grid-template-columns:minmax(0,3fr) minmax(0,7fr)}
+  .aoc-option-three .aoc-results-preview .lr-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .aoc-option-three .aoc-service-result{padding:16px}
+}
+@media(max-width:900px){
+  .aoc-option-split .lr-location-layout,.aoc-option-three .lr-location-layout{grid-template-columns:1fr}
+}
