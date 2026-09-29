@@ -622,8 +622,8 @@ Object.assign(CREATE_SERVICE_PAGES, {
     "lede": "Profile optimization, posts, photos, reviews, services, Q&A, and reporting for stronger visibility across Google Search and Maps.",
     "hero": "assets/service-heroes/google-business-profile-v2.jpg",
     "heroAlt": "A local search specialist helping a business owner update their business profile on a widescreen monitor showing storefront photographs, opening hours and listing details.",
-    "feature": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
-    "featureAlt": "Local business district representing customers searching nearby",
+    "feature": "assets/service-heroes/google-business-profile-management-v3.jpg",
+    "featureAlt": "A local business owner and marketing consultant reviewing storefront photos, business hours, customer reviews, and map listing details on a laptop.",
     "introHeading": "Give local searchers the facts, proof, and next step they need.",
     "introBody": "Google Business Profile is often the first experience a local customer has with a company. We keep the profile complete and current while connecting it to the website, reviews, services, and local search strategy.",
     "outcomes": [
@@ -719,8 +719,8 @@ Object.assign(CREATE_SERVICE_PAGES, {
     "lede": "Generative engine optimization, entity clarity, structured information, expert content, and prompt testing that complement traditional SEO.",
     "hero": "assets/service-heroes/geo-visibility-review-v3.jpg",
     "heroAlt": "A marketing consultant and business owner review local search results and business profile information on a laptop.",
-    "feature": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=84",
-    "featureAlt": "Close view of modern computing technology supporting artificial intelligence",
+    "feature": "assets/service-heroes/geo-search-audit-feature-v1.jpg",
+    "featureAlt": "A search strategist reviewing business mentions and source citations on a desktop monitor during a GEO audit.",
     "introHeading": "Make the business easier to identify, verify, and reference.",
     "introBody": "AI visibility begins with the same fundamentals people need: accurate facts, clear expertise, useful answers, credible sources, and consistent entities. GEO adds testing and content patterns for answer engines without replacing SEO.",
     "outcomes": [
