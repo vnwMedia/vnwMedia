@@ -1,5 +1,5 @@
 /* Shared image-hero spacing: content never crowds the section below it. */
-html body :is(.hero,.inner-hero,.scm-ms-hero),
+html body:not([data-page="home"]) :is(.hero,.inner-hero,.scm-ms-hero),
 html body.services-landing .sd-hero,
 html body .industries-live .cinema-hero,
 html body.resources-live .cover-five{
@@ -13,9 +13,9 @@ html body.services-landing .sd-hero>.sd-shell,
 html body .industries-live .cinema-hero>.wrap{
   padding-block:0!important;
 }
-html body .hero-copy{padding-top:0}
+html body:not([data-page="home"]) .hero-copy{padding-top:0}
 /* Match the navigation/logo column and start all copy at the same top inset. */
-html body :is(.hero,.inner-hero,.scm-ms-hero)>.shell,
+html body:not([data-page="home"]) :is(.hero,.inner-hero,.scm-ms-hero)>.shell,
 html body.services-landing .sd-hero>.sd-shell,
 html body .industries-live .cinema-hero>.wrap,
 html body.resources-live .cover-five>.wrap{
@@ -55,7 +55,7 @@ html body[data-page="home"] .hero .reveal{
   }
 }
 @media(max-width:800px){
-  html body :is(.hero,.inner-hero,.scm-ms-hero),
+  html body:not([data-page="home"]) :is(.hero,.inner-hero,.scm-ms-hero),
   html body.services-landing .sd-hero,
   html body .industries-live .cinema-hero,
   html body.resources-live .cover-five{
@@ -64,7 +64,7 @@ html body[data-page="home"] .hero .reveal{
   }
 }
 @media(max-width:560px){
-  html body :is(.hero,.inner-hero,.scm-ms-hero),
+  html body:not([data-page="home"]) :is(.hero,.inner-hero,.scm-ms-hero),
   html body.services-landing .sd-hero,
   html body .industries-live .cinema-hero,
   html body.resources-live .cover-five{min-height:580px!important}
