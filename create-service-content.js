@@ -137,8 +137,8 @@ Object.assign(CREATE_SERVICE_PAGES, {
     "lede": "Strategy, content planning, publishing, short-form creative, and reporting connected to your broader marketing goals.",
     "hero": "assets/service-heroes/social-media-v2.jpg",
     "heroAlt": "A social media manager arranging real lifestyle photographs into a publishing calendar on a desktop screen while a colleague reviews a phone.",
-    "feature": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=84",
-    "featureAlt": "Creative marketing team collaborating around a table",
+    "feature": "assets/service-heroes/social-media-management-team-v1.jpg",
+    "featureAlt": "Three social media managers seated around a table with laptops and a monitor showing a publishing calendar, post previews, and engagement analytics.",
     "introHeading": "Create a consistent presence without posting simply to stay busy.",
     "introBody": "A useful social program gives the audience a reason to notice, understand, and engage with the business. We connect content themes, formats, publishing, and measurement to real offers and customer questions.",
     "outcomes": [
