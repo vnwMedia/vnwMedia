@@ -39,6 +39,11 @@ html body.resources-live .cover-five>.wrap{
   animation:shared-hero-enter .7s ease both;
   transition:none;
 }
+/* Homepage hero is immediately visible, including its existing reveal elements. */
+html body[data-page="home"] .hero .hero-copy,
+html body[data-page="home"] .hero .reveal{
+  animation:none;transition:none;opacity:1;transform:none;
+}
 @media(prefers-reduced-motion:reduce){
   html body .hero .hero-copy,
   html body .inner-hero>.inner-hero-copy,
