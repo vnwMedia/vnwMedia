@@ -1398,8 +1398,8 @@ Object.assign(CREATE_SERVICE_PAGES, {
     "lede": "CRM setup, website forms, lifecycle workflows, lead routing, email and SMS automation, APIs, and reporting designed around how the team works.",
     "hero": "assets/service-heroes/crm-automation-v2.jpg",
     "heroAlt": "A CRM consultant and sales manager reviewing a customer pipeline table and follow-up schedule on a widescreen monitor.",
-    "feature": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=84",
-    "featureAlt": "Team reviewing customer pipeline and automation data",
+    "feature": "assets/service-heroes/crm-automation-follow-up-v1.jpg",
+    "featureAlt": "An operations coordinator reviewing a CRM customer pipeline and automated email, appointment, and follow-up workflow.",
     "introHeading": "Reduce manual gaps between a customer action and the team's next response.",
     "introBody": "Automation should support a clear process rather than hide a broken one. We map data, ownership, timing, exceptions, and reporting before connecting forms, platforms, and follow-up workflows.",
     "outcomes": [
