@@ -2449,3 +2449,12 @@ body[data-page^="service-"] .inner-hero-bg{background-position:70% 50%}
  body[data-page^="service-"] .inner-hero-bg{background-position:76% 50%}
 }
 .footer h3{margin:8px 0 18px;color:#fff;font-size:14px}
+[class*="faq" i] summary,
+[id*="faq" i] summary,
+.nc-questions summary{transition:color .18s ease}
+[class*="faq" i] summary:hover,
+[class*="faq" i] summary:focus-visible,
+[id*="faq" i] summary:hover,
+[id*="faq" i] summary:focus-visible,
+.nc-questions summary:hover,
+.nc-questions summary:focus-visible{color:var(--orange)}
