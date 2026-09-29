@@ -5,8 +5,8 @@ const CREATE_SERVICE_PAGES = {
     lede: "Clarify your position, message, personality, and visual direction before the next website, campaign, or stage of growth.",
     hero: "assets/service-heroes/brand-strategy-v2.jpg",
     heroAlt: "Three brand strategists discussing printed customer research and typography samples beside a large monitor showing a restrained photographic website brand presentation.",
-    feature: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
-    featureAlt: "Business team reviewing ideas together at a strategy meeting",
+    feature: "assets/service-heroes/brand-strategy-workshop-v1.jpg",
+    featureAlt: "A small-business founder and brand strategist reviewing packaging directions and brand materials in a neighborhood shop.",
     introHeading: "Turn what makes your business different into a clear market position.",
     introBody: "A strong brand gives every customer touchpoint a consistent point of view. We connect audience research, competitive context, messaging, and creative direction so your website and marketing tell one credible story.",
     outcomes: [
