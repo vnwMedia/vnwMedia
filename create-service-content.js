@@ -913,8 +913,8 @@ Object.assign(CREATE_SERVICE_PAGES, {
     "lede": "A coordinated mix of website, SEO, paid media, landing pages, reputation, tracking, and nurture built around qualified opportunities.",
     "hero": "assets/service-heroes/lead-generation-v2.jpg",
     "heroAlt": "A growth specialist and business owner reviewing a lead-inquiry table, appointment statuses and campaign-source columns on a desktop monitor.",
-    "feature": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=84",
-    "featureAlt": "Marketing team analyzing campaign performance together",
+    "feature": "assets/service-heroes/lead-generation-qualified-inquiries-v1.jpg",
+    "featureAlt": "A business owner and marketing specialist reviewing new customer inquiries and their follow-up status on a laptop.",
     "introHeading": "Create a dependable path from customer intent to qualified conversation.",
     "introBody": "Lead generation works best as a connected system. We align the offer, traffic source, landing experience, proof, tracking, qualification, and follow-up so the business can see where opportunities come from and what needs improvement.",
     "outcomes": [
