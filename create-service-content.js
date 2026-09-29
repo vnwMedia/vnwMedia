@@ -1107,8 +1107,8 @@ Object.assign(CREATE_SERVICE_PAGES, {
     "lede": "Paid social strategy, audience planning, campaign creative, tracking, landing pages, and optimization shaped around the offer and customer journey.",
     "hero": "assets/service-heroes/paid-social-v2.jpg",
     "heroAlt": "A paid social strategist and creative colleague reviewing an ad campaign dashboard next to real photographic ad creatives on a monitor.",
-    "feature": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1600&q=84",
-    "featureAlt": "Person reviewing social media content and campaign activity on a phone",
+    "feature": "assets/service-heroes/paid-social-campaign-review-v1.jpg",
+    "featureAlt": "A paid-social strategist reviewing sponsored creative previews and campaign performance on a monitor and smartphone.",
     "introHeading": "Combine audience, offer, creative, and destination into one campaign idea.",
     "introBody": "Paid social interrupts rather than answers a direct search. Strong campaigns earn attention quickly, create relevance, and make the next step feel worthwhile. We plan each layer together and learn through structured testing.",
     "outcomes": [
