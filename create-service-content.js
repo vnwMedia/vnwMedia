@@ -428,8 +428,8 @@ Object.assign(CREATE_SERVICE_PAGES, {
     "lede": "Technical SEO, on-page strategy, local visibility, useful content, and measurement designed to attract qualified organic demand.",
     "hero": "assets/service-heroes/seo-v2.jpg",
     "heroAlt": "Two search marketing analysts reviewing a realistic organic search performance dashboard with line plots, query rows and ranking columns on a desktop monitor.",
-    "feature": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=84",
-    "featureAlt": "Marketing team reviewing organic search analytics and performance data",
+    "feature": "assets/service-heroes/seo-performance-review-v1.jpg",
+    "featureAlt": "A small-business owner reviewing SEO performance charts and organic search traffic on a laptop, with the full person and screen in view.",
     "introHeading": "Help the right customer find a useful answer and a credible next step.",
     "introBody": "SEO connects search intent to a technically sound website, helpful pages, local signals, and measurable actions. We prioritize the opportunities most relevant to the business rather than chasing traffic without purpose.",
     "outcomes": [
