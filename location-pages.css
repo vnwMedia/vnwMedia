@@ -39,3 +39,12 @@
 .location-directory-cta h2{font-size:40px}.location-directory-cta p{color:#bac2c4}
 @media(max-width:1000px){.location-hero-form{max-width:620px;justify-self:start}.location-state-grid{grid-template-columns:1fr}.location-state-card>p:not(.section-tag){min-height:auto}}
 @media(max-width:640px){.location-hero-form{max-width:none}.location-state-card{padding:25px}.location-directory-hero{padding:145px 0 60px}}
+
+/* Clear, consistent hover and keyboard-focus feedback for location-page CTAs. */
+body:is(.industry-location,.location-directory-page) main :is(a.pill,a.text-arrow,button[type="submit"],input[type="submit"],input[type="button"],[role="button"]){transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease,border-color .2s ease,color .2s ease}
+body:is(.industry-location,.location-directory-page) main :is(a.pill,a.text-arrow,button[type="submit"],input[type="submit"],input[type="button"],[role="button"]):is(:hover,:focus-visible){transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.16)}
+body:is(.industry-location,.location-directory-page) main :is(a.pill,a.text-arrow,button[type="submit"],input[type="submit"],input[type="button"],[role="button"]):active{transform:translateY(0);box-shadow:0 3px 10px rgba(0,0,0,.12)}
+body:is(.industry-location,.location-directory-page) main a.text-arrow:is(:hover,:focus-visible){color:#fff;background:#008ac0}
+body:is(.industry-location,.location-directory-page) main :is(a.pill,a.text-arrow)>span:last-child{transition:transform .2s ease}
+body:is(.industry-location,.location-directory-page) main :is(a.pill,a.text-arrow):is(:hover,:focus-visible)>span:last-child{transform:translate(3px,-3px)}
+@media(prefers-reduced-motion:reduce){body:is(.industry-location,.location-directory-page) main :is(a.pill,a.text-arrow,button[type="submit"],input[type="submit"],input[type="button"],[role="button"]),body:is(.industry-location,.location-directory-page) main :is(a.pill,a.text-arrow)>span:last-child{transition:none}}
