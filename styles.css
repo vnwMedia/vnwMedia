@@ -2139,23 +2139,6 @@ body .site-header.site-header .nav-phone{display:none}
 .csp-outcomes span,.csp-process-grid article>span,.csp-visibility-grid article>span{color:var(--orange);font-size:10px;letter-spacing:.14em}
 .csp-outcomes h3{margin:24px 0 12px;font-size:30px;line-height:1}
 .csp-outcomes p{margin:0;color:#666;font-size:12px}
-.csp-seo-areas{background:#f4f1eb;color:#111}
-.csp-seo-areas-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:80px;align-items:start}
-.csp-seo-areas-intro{position:sticky;top:120px;align-self:start}
-.csp-seo-areas-intro .section-tag{color:#707577}
-.csp-seo-areas-intro h2{max-width:520px;margin:0 0 20px;font-size:58px;line-height:.96;letter-spacing:-.04em}
-.csp-seo-areas-intro>p:not(.section-tag){max-width:500px;color:#666;font-size:15px}
-.csp-seo-areas-intro .pill{margin-top:20px}
-.csp-seo-areas-list{border-top:1px solid #d7d3cd}
-.csp-seo-areas-list a{display:grid;grid-template-columns:42px 1fr 20px;gap:18px;align-items:start;padding:25px 0;border-bottom:1px solid #d7d3cd;transition:padding .2s,color .2s}
-.csp-seo-areas-list a:hover,.csp-seo-areas-list a:focus-visible{padding-left:10px;color:#00aeef}
-.csp-seo-areas-list a:focus-visible{outline:2px solid #00aeef;outline-offset:4px}
-.csp-seo-areas-list a>span{color:#858b8e;font-size:9px}
-.csp-seo-areas-list h3{margin:0 0 7px;font-size:28px;line-height:1}
-.csp-seo-areas-list p{margin:0;color:#666;font-size:11px}
-.csp-seo-areas-list b{color:#00aeef;font-weight:400}
-@media(max-width:1000px){.csp-seo-areas-grid{grid-template-columns:1fr;gap:45px}.csp-seo-areas-intro{position:static}}
-@media(max-width:600px){.csp-seo-areas{padding:78px 0}.csp-seo-areas-intro h2{font-size:42px}.csp-seo-areas-list a{grid-template-columns:32px 1fr 18px;gap:10px}.csp-seo-areas-list h3{font-size:24px}}
 .create-service-page .csp-scope{padding:0;color:#fff;background:#0e191f}
 .csp-scope .csp-scope-grid{display:grid;width:100%;max-width:none;margin:0;grid-template-columns:1fr 1fr;gap:0;overflow:hidden;border:0;border-radius:0;background:#0e191f}
 .csp-scope figure{position:relative;min-height:0;margin:0;overflow:hidden}
