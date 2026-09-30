@@ -162,19 +162,51 @@ const SERVICE_CATALOG = [
     "addon": false
   },
   {
-    "group": "Search & Local Visibility",
-    "slug": "geo",
-    "name": "AI Visibility & GEO",
-    "description": "Content, structured data, and testing for discovery through AI-assisted search.",
+    "group": "AI Visibility",
+    "slug": "aeo",
+    "name": "AEO – Answer Engine Optimization",
+    "description": "Answer-focused content and site structure designed to make clear responses easier to find and understand.",
     "includes": [
-      "AI visibility audits and baseline prompt testing",
-      "FAQ, service-intent, and comparison content",
-      "Schema and business-information consistency",
-      "Authority content and monthly performance reporting"
+      "Question and answer intent research",
+      "Direct-answer content and information architecture",
+      "FAQ and relevant structured-data recommendations",
+      "Answer visibility monitoring and improvement priorities"
     ],
-    "overview": "Help search engines and AI systems understand your services, location, and expertise. Generative Engine Optimization complements SEO through clear content, consistent facts, and ongoing testing.",
-    "scope": "The selected plan determines content and authority work. No service can guarantee AI recommendations, mentions, or citations.",
-    "image": "assets/case-system-stack.svg",
+    "overview": "Help customers find clear, useful responses to their questions. AEO aligns content and page structure with answer-oriented searches while supporting a strong SEO foundation.",
+    "scope": "Content, structured-data, and monitoring needs vary by site and industry. No placement in a featured answer or answer engine is guaranteed.",
+    "image": "assets/service-heroes/seo-v2.jpg",
+    "addon": false
+  },
+  {
+    "group": "AI Visibility",
+    "slug": "geo",
+    "name": "GEO – Generative Engine Optimization",
+    "description": "Entity clarity, expert content, structured information, and testing for generative search visibility.",
+    "includes": [
+      "Entity and source visibility audits",
+      "Generative-search prompt and citation baselines",
+      "Expert, comparison, and service-intent content",
+      "Structured information and ongoing reporting"
+    ],
+    "overview": "Make your business and expertise easier for generative search systems to interpret and verify. GEO strengthens the clarity, evidence, and useful content that support accurate representation.",
+    "scope": "Research, publishing, and monitoring are scoped to the business and its search landscape. AI mentions, recommendations, and citations cannot be guaranteed.",
+    "image": "assets/service-heroes/geo-v2.jpg",
+    "addon": false
+  },
+  {
+    "group": "AI Visibility",
+    "slug": "aio",
+    "name": "AIO – AI Optimization",
+    "description": "A broader readiness program for making site information accessible to AI-powered discovery and assistance.",
+    "includes": [
+      "AI accessibility and content-readiness review",
+      "Crawlable, indexable, machine-readable page structure",
+      "Business facts, entities, and structured-data alignment",
+      "Testing, reporting, and prioritized recommendations"
+    ],
+    "overview": "Improve how clearly your website communicates with people and the AI-powered tools they use. AIO brings technical readiness, useful content, and consistent business information into one practical optimization plan.",
+    "scope": "The work depends on the site platform, existing SEO, and business priorities. This service does not guarantee AI-generated recommendations or visibility.",
+    "image": "assets/service-heroes/content-writing-v2.jpg",
     "addon": false
   },
   {
@@ -387,7 +419,8 @@ const SERVICE_MENU_LABELS = {
   'web-design':'Web Design & Development','ecommerce':'eCommerce','website-maintenance':'Website Maintenance',
   'app-design-development':'App Design & Development','landing-pages':'Landing Pages',
   'brand-strategy':'Brand & Strategy','graphic-design':'Graphic Design','seo':'SEO','yelp-seo':'Yelp SEO & Visibility',
-  'google-business-profile':'Google Business Profile','geo':'AI Visibility & GEO','content-writing':'Content Writing',
+  'google-business-profile':'Google Business Profile','aeo':'AEO – Answer Engine Optimization',
+  'geo':'GEO – Generative Engine Optimization','aio':'AIO – AI Optimization','content-writing':'Content Writing',
   'lead-generation':'Lead Generation','google-ppc':'Google Pay Per Click Advertising','paid-social':'Paid Social Ads',
   'crm-automation':'CRM & Automation','video-editing':'Video & Ad Creative','social-media':'Social Media Management',
   'social-media-consultation':'Social Media Consultation','community-management':'Community Management',
@@ -406,10 +439,11 @@ const SERVICE_MENU_PILLARS = [
   ]},
   {name:'Connect', description:'Reach the people who need your business.', groups:[
     {name:'Social Media Strategy', links:['social-media','social-media-consultation','community-management'].map(serviceMenuLink)},
-    {name:'SEO & Local Visibility', links:['seo','yelp-seo','google-business-profile','geo','reputation-management'].map(serviceMenuLink)}
+    {name:'SEO & Local Visibility', links:['seo','yelp-seo','google-business-profile','reputation-management'].map(serviceMenuLink)}
   ]},
   {name:'Convert', description:'Turn interest into leads and customers.', groups:[
     {name:'Paid Advertising', links:['lead-generation','google-ppc','paid-social'].map(serviceMenuLink)},
+    {name:'AI Visibility', links:['aeo','geo','aio'].map(serviceMenuLink)},
     {name:'Email, SMS & Automation', links:['email-marketing','text-marketing','crm-automation'].map(serviceMenuLink)}
   ]}
 ];

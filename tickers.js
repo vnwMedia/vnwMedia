@@ -21,9 +21,12 @@
       const index = capabilityOrder.indexOf(slug);
       return index < 0 ? capabilityOrder.length : index;
     };
-    return [...new Set(links.sort((a, b) => rank(a[1]) - rank(b[1])).map(([name, href]) =>
-      href.endsWith('/community-management.html') ? 'Content Management' : name
-    ))];
+    return [...new Set(links.sort((a, b) => rank(a[1]) - rank(b[1])).map(([name, href]) => {
+      const slug = href.match(/services\/([^/.]+)\.html$/)?.[1];
+      if (slug === 'aeo' || slug === 'aio') return null;
+      if (slug === 'geo') return 'AI Visibility';
+      return href.endsWith('/community-management.html') ? 'Content Management' : name;
+    }).filter(Boolean))];
   }
 
   function initializeTickers() {

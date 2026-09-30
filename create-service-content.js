@@ -713,41 +713,86 @@ Object.assign(CREATE_SERVICE_PAGES, {
       "landing-pages"
     ]
   },
+  "aeo": {
+    "eyebrow": "AEO / Answer Engine Optimization",
+    "headline": "Make your best answers easy to find, understand, and use.",
+    "lede": "Answer-focused content, clear page structure, and useful structured information aligned with the questions your customers actually ask.",
+    "hero": "assets/service-heroes/seo-v2.jpg",
+    "heroAlt": "Search specialists reviewing customer queries and organic search performance together on a desktop display.",
+    "feature": "assets/service-heroes/seo-performance-review-v1.jpg",
+    "featureAlt": "A business owner and search strategist reviewing website traffic and search performance on a laptop.",
+    "introHeading": "Give each important question a clear, credible answer.",
+    "introBody": "Answer Engine Optimization (AEO) organizes useful information around the questions people bring to search and answer tools. We make the response direct and well-supported while keeping the page valuable to human readers.",
+    "outcomes": [
+      ["Find question intent", "Research the questions, comparisons, and follow-up searches customers use before choosing a provider."],
+      ["Write direct answers", "Lead with a clear response, then give enough context, evidence, and detail to be genuinely useful."],
+      ["Organize the information", "Use descriptive headings, logical page structure, internal links, and relevant structured-data recommendations."],
+      ["Review answer visibility", "Track priority queries, featured answer opportunities, and changes in how information is surfaced."]
+    ],
+    "included": [
+      "Customer question and answer-intent research",
+      "Page and content opportunity mapping",
+      "Direct-answer copy and useful supporting detail",
+      "FAQ, heading, and information-structure improvements",
+      "Relevant schema recommendations and implementation guidance",
+      "Answer visibility monitoring and prioritized refinements"
+    ],
+    "process": [
+      ["Discover", "Identify what customers ask and where current pages leave important questions unanswered."],
+      ["Prioritize", "Select high-value questions based on customer relevance, business fit, and existing authority."],
+      ["Improve", "Create or refine clear answers and the surrounding evidence, structure, and links."],
+      ["Measure", "Review search presentation and query coverage, then refine content as needs change."]
+    ],
+    "visibility": [
+      ["Organic search", "A technically sound, useful page remains the foundation for search discovery."],
+      ["Answer results", "Concise, well-supported responses can improve eligibility for relevant answer features, without guaranteeing placement."],
+      ["AI-assisted answers", "Clear facts and context help answer systems interpret a response accurately; inclusion depends on the platform and query."]
+    ],
+    "faqs": [
+      ["What is Answer Engine Optimization?", "AEO is the practice of making useful, accurate information easier to find and interpret in answer-oriented search experiences."],
+      ["How is AEO different from SEO?", "AEO emphasizes direct answers and question-led content, while SEO covers broader technical, content, authority, and search-intent foundations. The practices work together."],
+      ["Can AEO guarantee a featured snippet or answer placement?", "No. Search platforms determine what appears and change their systems over time. We improve content quality and structure without promising placement."],
+      ["What pages benefit from AEO?", "Service pages, FAQs, comparisons, process explanations, and other pages that address real customer questions can benefit when they provide distinct value."],
+      ["Does AEO require special schema?", "Not always. We recommend structured data only when it accurately describes the page and follows applicable search-engine guidelines."],
+      ["How do you measure AEO work?", "Measurement may include query coverage, organic impressions, search-result features, qualified visits, and changes to priority pages."]
+    ],
+    "related": ["seo", "geo", "aio", "content-writing"]
+  },
   "geo": {
-    "eyebrow": "AI Visibility & GEO",
-    "headline": "Help search and AI systems understand why your business is relevant.",
-    "lede": "Generative engine optimization, entity clarity, structured information, expert content, and prompt testing that complement traditional SEO.",
+    "eyebrow": "GEO / Generative Engine Optimization",
+    "headline": "Help generative search systems understand and verify your expertise.",
+    "lede": "Entity clarity, expert-led content, supporting sources, and prompt-based evaluation for generative search discovery.",
     "hero": "assets/service-heroes/geo-visibility-review-v3.jpg",
     "heroAlt": "A marketing consultant and business owner review local search results and business profile information on a laptop.",
     "feature": "assets/service-heroes/geo-search-audit-feature-v1.jpg",
     "featureAlt": "A search strategist reviewing business mentions and source citations on a desktop monitor during a GEO audit.",
-    "introHeading": "Make the business easier to identify, verify, and reference.",
-    "introBody": "AI visibility begins with the same fundamentals people need: accurate facts, clear expertise, useful answers, credible sources, and consistent entities. GEO adds testing and content patterns for answer engines without replacing SEO.",
+    "introHeading": "Make your business easier to identify, verify, and cite.",
+    "introBody": "Generative Engine Optimization (GEO) focuses on the information and evidence that generative search systems may use when composing responses. We strengthen factual consistency, expert context, and useful source material while keeping traditional SEO central.",
     "outcomes": [
       [
-        "Clarify the entity",
-        "Align names, services, locations, people, credentials, and relationships across trusted sources."
+        "Clarify your entities",
+        "Align your business name, services, locations, people, credentials, and relationships across credible sources."
       ],
       [
-        "Answer real questions",
-        "Create concise, specific content around decisions, comparisons, processes, and customer concerns."
+        "Build source-worthy content",
+        "Publish specific, original explanations that address customer decisions, comparisons, processes, and concerns."
       ],
       [
-        "Strengthen evidence",
-        "Improve expert attribution, citations, first-party proof, reviews, and supporting references."
+        "Strengthen supporting evidence",
+        "Improve expert attribution, first-party proof, references, and consistency across trusted business sources."
       ],
       [
-        "Test visibility",
-        "Track representative prompts, citations, mentions, source patterns, and content gaps over time."
+        "Evaluate generative results",
+        "Review representative prompts, mentions, citations, source patterns, and factual accuracy over time."
       ]
     ],
     "included": [
-      "AI visibility and entity audit",
-      "Baseline prompt and citation testing",
-      "FAQ, comparison, service-intent, and expert content",
-      "Schema and structured-information recommendations",
-      "Business fact, profile, and citation consistency",
-      "Ongoing testing, reporting, and content priorities"
+      "Generative search and entity audit",
+      "Baseline prompt, mention, and citation analysis",
+      "Expert, comparison, and service-intent content planning",
+      "Structured information and source recommendations",
+      "Business facts and entity consistency review",
+      "Ongoing evaluation, reporting, and content priorities"
     ],
     "process": [
       [
@@ -773,42 +818,73 @@ Object.assign(CREATE_SERVICE_PAGES, {
         "Crawlability, authority, intent coverage, and useful content remain essential inputs."
       ],
       [
-        "Paid insight",
-        "Campaign queries and landing-page behavior reveal customer language worth answering clearly."
+        "Source context",
+        "Generative responses may draw on different source types; reviewing citations helps identify useful gaps and strengthen factual context."
       ],
       [
         "Generative discovery",
-        "Entity consistency, expert evidence, direct answers, and citations improve the chance of accurate interpretation, not guaranteed inclusion."
+        "Consistent entities, expert evidence, and credible references help systems interpret the business; they do not guarantee a mention or citation."
       ]
     ],
     "faqs": [
-      [
-        "What is GEO?",
-        "Generative Engine Optimization focuses on making information easier for AI-assisted search and answer systems to understand, verify, and reference."
-      ],
-      [
-        "Is GEO different from SEO?",
-        "It adds prompt testing, entity clarity, citation analysis, and answer-focused content, but it still depends heavily on strong SEO, authority, and useful webpages."
-      ],
-      [
-        "Can you guarantee mentions in AI answers?",
-        "No. Systems, models, sources, and outputs change frequently. We improve clarity and evidence without promising citations or recommendations."
-      ],
-      [
-        "What content supports AI visibility?",
-        "Clear service pages, FAQs, comparisons, expert explanations, original data, case evidence, accurate profiles, and consistent business facts can all help."
-      ],
-      [
-        "How do you report on GEO?",
-        "Reporting can include baseline prompts, mentions, citations, source patterns, factual accuracy, content gaps, and changes over time."
-      ]
+      ["What is Generative Engine Optimization?", "GEO reviews how generative search systems may interpret and source information about a business, then improves the clarity and evidence available on the site and across relevant sources."],
+      ["How does GEO relate to SEO?", "GEO complements SEO. Crawlable pages, useful content, expertise, and a strong technical foundation remain important; GEO adds attention to entity consistency, source context, and generative-result evaluation."],
+      ["Can GEO guarantee AI mentions or citations?", "No. Generative systems, their sources, and their outputs change, and no provider can control them. We focus on accuracy, useful content, and measurable evaluation."],
+      ["What work can improve GEO readiness?", "Clear service information, expert attribution, credible supporting references, consistent business facts, and well-structured content can all contribute."],
+      ["How do you evaluate GEO progress?", "We compare a defined set of prompts over time and review factual accuracy, brand mentions, cited sources, and gaps. Results are directional, not a promise of placement."],
+      ["Is GEO the same as writing content for AI?", "No. The goal is useful, trustworthy information for people first, supported by clear structure and accurate facts—not generic copy written to manipulate a model."]
     ],
     "related": [
+      "aeo",
+      "aio",
       "seo",
-      "content-writing",
-      "google-business-profile",
-      "reputation-management"
+      "content-writing"
     ]
+  },
+  "aio": {
+    "eyebrow": "AIO / AI Optimization",
+    "headline": "Make your digital presence clearer for people and AI-powered tools.",
+    "lede": "A practical review of technical accessibility, content clarity, business facts, and measurement for an evolving AI landscape.",
+    "hero": "assets/service-heroes/content-writing-v2.jpg",
+    "heroAlt": "A content strategist reviewing a digital content plan and website information with a colleague.",
+    "feature": "assets/service-heroes/geo-search-audit-feature-v1.jpg",
+    "featureAlt": "A digital strategist reviewing structured business information and content quality on a monitor.",
+    "introHeading": "Build a site that communicates clearly across new discovery tools.",
+    "introBody": "AI Optimization (AIO) is a broad readiness practice: make important information accessible, understandable, consistent, and useful. We focus on sound technical and editorial improvements rather than chasing short-lived AI tricks.",
+    "outcomes": [
+      ["Improve machine access", "Review crawlability, indexability, rendered content, and technical barriers that hide useful information."],
+      ["Clarify key information", "Make services, people, locations, policies, and business facts explicit and consistent."],
+      ["Strengthen content quality", "Improve accuracy, attribution, organization, and usefulness across priority pages."],
+      ["Create a measured plan", "Prioritize updates based on customer value, site readiness, and observable changes."]
+    ],
+    "included": [
+      "AI-readiness and content-accessibility audit",
+      "Crawlability, rendering, and indexation review",
+      "Business facts, entities, and source consistency checks",
+      "Content clarity, attribution, and structured-data recommendations",
+      "Priority implementation roadmap for key pages",
+      "Ongoing validation and performance reporting"
+    ],
+    "process": [
+      ["Review", "Assess technical access, content, business facts, and the existing search foundation."],
+      ["Prioritize", "Identify high-impact fixes and separate durable improvements from speculative tactics."],
+      ["Optimize", "Improve access, clarity, structure, and factual consistency across important pages."],
+      ["Validate", "Recheck implementation and monitor useful indicators as AI tools and search experiences evolve."]
+    ],
+    "visibility": [
+      ["Technical foundation", "Accessible, indexable pages and clean site structure help systems process important information."],
+      ["Trusted content", "Specific, accurate, attributed content serves customers and provides clearer context to discovery systems."],
+      ["Responsible measurement", "We track implementation and observable discovery signals without promising inclusion in AI answers."]
+    ],
+    "faqs": [
+      ["What does AI Optimization mean?", "AIO is a broad term for improving digital content and systems so AI-powered tools can access, interpret, and use information more accurately."],
+      ["How is AIO different from AEO and GEO?", "AIO is the broader readiness umbrella. AEO focuses on answer-oriented queries and content; GEO focuses on generative search systems, source context, and citations."],
+      ["Does AIO mean using AI to write all website content?", "No. Our work centers on accurate, useful content and sound technical practices. AI tools may support research or workflows, but human review and subject-matter accuracy remain essential."],
+      ["Can AIO guarantee that AI tools recommend my business?", "No. AI products and response systems change, and recommendations are outside a provider’s control. We improve clarity and accessibility without guaranteeing outcomes."],
+      ["What parts of a website are reviewed?", "Depending on the project, we review crawlability, rendering, indexation, page structure, business facts, content quality, attribution, and structured-data opportunities."],
+      ["Is AI Optimization a replacement for SEO?", "No. AIO should build on good SEO: useful pages, technical health, authority, and accurate business information remain important."]
+    ],
+    "related": ["aeo", "geo", "seo", "content-writing"]
   },
   "reputation-management": {
     "eyebrow": "Online Reputation Management",
