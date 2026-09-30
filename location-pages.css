@@ -7,23 +7,15 @@
 .industry-location main>.indl-section.location-overview .indl-head p:not(.section-tag),.industry-location main>.indl-section.location-overview .indl-card-grid p{color:#666!important}
 .industry-location main>.indl-section.location-overview .indl-card-grid,.industry-location main>.indl-section.location-overview .indl-card-grid article{border-color:#d8d4cf!important}
 .location-overview .indl-head{align-items:start}
-.location-overview .indl-head h2,.location-system .indl-head h2,.location-related .indl-head h2{max-width:690px}
+.location-overview .indl-head h2,.location-system .indl-head h2{max-width:690px}
 .location-area-note{margin-top:24px!important;padding-top:20px;border-top:1px solid #d6d0c8;font-size:14px}
 .location-area-note strong{color:#111}
 .location-overview .indl-card-grid article{background:#fff;border-color:#ded9d2}
 .location-overview .indl-card-grid article span{color:#00a6e8}
 .location-showcase{background:#fff;color:#111}
 .location-reviews{background:#161a1f}
-.location-related{background:#f4f0e9;color:#111}
-.industry-location main>.location-related{background:#f4f0e9;color:#111}
-.location-related .indl-head{margin-bottom:30px}
-.location-related-links{border-top:1px solid #d8d4cf}
-.location-related-links a{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:18px 0;border-bottom:1px solid #d8d4cf;font-size:17px;transition:color .2s ease}
-.location-related-links a span{color:#00a6e8;font-size:21px}
-.location-related-links a:hover{color:#008fc9}
 .location-faq .indl-faq-intro .pill{margin-top:18px}
 .location-faq .indl-faq-list summary:hover,.location-faq .indl-faq-list summary:focus-visible{color:#009fdc}
-.location-final{background:radial-gradient(circle at 78% 18%,rgba(0,174,239,.26),transparent 31%),#080808}
 .location-directory{background:#f4f0e9;color:#111;padding-bottom:80px}
 .location-directory-hero{padding:190px 0 75px;background:#10171a;color:#fff}
 .location-directory-hero h1{max-width:1000px;margin:18px 0;font-size:clamp(50px,7vw,88px);line-height:.93;letter-spacing:-.05em}
