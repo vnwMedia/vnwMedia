@@ -131,6 +131,39 @@ const SERVICE_CATALOG = [
   },
   {
     "group": "Search & Local Visibility",
+    "slug": "local-seo",
+    "name": "Local SEO",
+    "description": "Local search strategy for service areas, location pages, profiles, and nearby customer discovery.",
+    "includes": ["Local search and service-area research", "Location and service-page recommendations", "Business profile and citation alignment", "Local visibility and inquiry reporting"],
+    "overview": "Help nearby customers find accurate, useful information about your business. Local SEO connects service-area content, business profiles, and local signals to support discovery and action.",
+    "scope": "Location coverage and content depend on the business and its real service footprint. No map placement or search position is guaranteed.",
+    "image": "assets/service-heroes/local-seo-v1.jpg",
+    "addon": false
+  },
+  {
+    "group": "Search & Local Visibility",
+    "slug": "technical-seo",
+    "name": "Technical SEO",
+    "description": "Crawlability, indexation, site structure, performance, and technical search foundations.",
+    "includes": ["Crawl and indexation audit", "Redirect, canonical, and sitemap review", "Performance and mobile usability review", "Prioritized fix guidance and validation"],
+    "overview": "Give search engines a clear, reliable path through your website. We investigate technical barriers, explain their impact, and prioritize practical fixes for your platform.",
+    "scope": "Implementation depends on platform, access, development resources, and the agreed scope. Technical changes do not guarantee rankings.",
+    "image": "assets/service-heroes/technical-seo-v1.jpg",
+    "addon": false
+  },
+  {
+    "group": "Search & Local Visibility",
+    "slug": "content-seo",
+    "name": "Content SEO",
+    "description": "Search-led page planning and improvements that connect customer questions with credible content.",
+    "includes": ["Keyword, question, and intent research", "Content gap and page-purpose review", "Service-page, FAQ, and resource planning", "Editorial roadmap and performance review"],
+    "overview": "Create useful search content that helps customers understand your services and make an informed next move. We prioritize clear, accurate pages over unnecessary volume.",
+    "scope": "Research, writing, subject-matter review, and publishing support depend on the agreed project scope.",
+    "image": "assets/service-heroes/content-seo-v1.jpg",
+    "addon": false
+  },
+  {
+    "group": "Search & Local Visibility",
     "slug": "yelp-seo",
     "name": "Yelp SEO & Visibility",
     "description": "Yelp profile optimization, content improvements, and ongoing visibility management.",
@@ -418,7 +451,8 @@ function serviceFooterMarkup(root = "") {
 const SERVICE_MENU_LABELS = {
   'web-design':'Web Design & Development','ecommerce':'eCommerce','website-maintenance':'Website Maintenance',
   'app-design-development':'App Design & Development','landing-pages':'Landing Pages',
-  'brand-strategy':'Brand & Strategy','graphic-design':'Graphic Design','seo':'SEO','yelp-seo':'Yelp SEO & Visibility',
+  'brand-strategy':'Brand & Strategy','graphic-design':'Graphic Design','seo':'SEO','local-seo':'Local SEO',
+  'technical-seo':'Technical SEO','content-seo':'Content SEO','yelp-seo':'Yelp SEO & Visibility',
   'google-business-profile':'Google Business Profile','aeo':'AEO – Answer Engine Optimization',
   'geo':'GEO – Generative Engine Optimization','aio':'AIO – AI Optimization','content-writing':'Content Writing',
   'lead-generation':'Lead Generation','google-ppc':'Google Pay Per Click Advertising','paid-social':'Paid Social Ads',
@@ -439,7 +473,7 @@ const SERVICE_MENU_PILLARS = [
   ]},
   {name:'Connect', description:'Reach the people who need your business.', groups:[
     {name:'Social Media Strategy', links:['social-media','social-media-consultation','community-management'].map(serviceMenuLink)},
-    {name:'SEO & Local Visibility', links:['seo','yelp-seo','google-business-profile','reputation-management'].map(serviceMenuLink)}
+    {name:'SEO & Local Visibility', links:['seo','local-seo','technical-seo','content-seo','google-business-profile','yelp-seo','reputation-management'].map(serviceMenuLink)}
   ]},
   {name:'Convert', description:'Turn interest into leads and customers.', groups:[
     {name:'Paid Advertising', links:['lead-generation','google-ppc','paid-social'].map(serviceMenuLink)},

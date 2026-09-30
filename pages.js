@@ -1228,7 +1228,7 @@ function serviceDiagnosticCTA(service){
     "web-design":"website","website-maintenance":"website","app-design-development":"website",
     "ecommerce":"commerce","landing-pages":"lead",
     "brand-strategy":"content","graphic-design":"content","video-editing":"content","social-media":"content","social-media-consultation":"content","community-management":"content",
-    "seo":"search","aeo":"search","geo":"search","aio":"search","content-writing":"search",
+    "seo":"search","local-seo":"local","technical-seo":"search","content-seo":"search","aeo":"search","geo":"search","aio":"search","content-writing":"search",
     "yelp-seo":"local","google-business-profile":"local",
     "reputation-management":"reputation",
     "lead-generation":"growth","google-ppc":"campaign","paid-social":"campaign",
@@ -1275,6 +1275,9 @@ function createServiceDetail(service,data){
     'content-writing':'Discuss your content needs',
     'video-editing':'Discuss your video project',
     'seo':'Discuss your SEO strategy',
+    'local-seo':'Discuss your local SEO strategy',
+    'technical-seo':'Discuss your technical SEO',
+    'content-seo':'Discuss your content SEO',
     'aeo':'Discuss your answer strategy',
     'geo':'Discuss your GEO strategy',
     'aio':'Discuss your AI optimization plan',
@@ -1291,6 +1294,11 @@ function createServiceDetail(service,data){
     'text-marketing':'Plan your SMS campaign',
     'crm-automation':'Discuss your automation needs'
   }[service.slug]||`Discuss ${service.name}`;
+  const heroCTA={
+    'local-seo':'Discuss your local SEO strategy',
+    'technical-seo':'Discuss your technical SEO',
+    'content-seo':'Discuss your content SEO'
+  }[service.slug]||'Discuss your project';
   const existingSchema=document.querySelector('script[data-create-service-schema]');
   if(existingSchema) existingSchema.remove();
   const schema=document.createElement('script');
@@ -1307,7 +1315,7 @@ function createServiceDetail(service,data){
   const related=(data.related||[]).map(slug=>SERVICE_CATALOG.find(item=>item.slug===slug)).filter(Boolean);
   return `<div class="create-service-page">
     <section class="csp-hero" id="top" data-nav-theme="dark">
-      <div class="csp-hero-copy"><div class="csp-hero-copy-inner"><p class="eyebrow">${esc(data.eyebrow)}</p><h1>${esc(data.headline)}</h1><p class="hero-lede">${esc(data.lede)}</p><div class="csp-hero-actions"><a class="pill pill-blue pill-large" href="${path("contact.html")}">Discuss your project <span>↗</span></a><a class="pill pill-outline pill-large" href="#what-we-help">See how we help</a></div><div class="csp-hero-proof"><span>Strategy-led</span><span>Responsive design</span><span>Search &amp; campaign ready</span></div></div></div>
+      <div class="csp-hero-copy"><div class="csp-hero-copy-inner"><p class="eyebrow">${esc(data.eyebrow)}</p><h1>${esc(data.headline)}</h1><p class="hero-lede">${esc(data.lede)}</p><div class="csp-hero-actions"><a class="pill pill-blue pill-large" href="${path("contact.html")}">${esc(heroCTA)} <span>↗</span></a><a class="pill pill-outline pill-large" href="#what-we-help">See how we help</a></div><div class="csp-hero-proof"><span>Strategy-led</span><span>Responsive design</span><span>Search &amp; campaign ready</span></div></div></div>
       <figure class="csp-hero-media"><img src="${img(data.hero)}" alt="${esc(data.heroAlt)}"><figcaption>${esc(service.name)} / VNW Media</figcaption></figure>
     </section>
     <section class="csp-help section" id="what-we-help" data-nav-theme="light"><div class="shell"><div class="csp-section-head"><p class="section-tag">What we can help you do</p><div><h2>${esc(data.introHeading)}</h2><p>${esc(data.introBody)}</p></div></div><div class="csp-outcomes">${data.outcomes.map((item,index)=>`<article><span>0${index+1}</span><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></article>`).join("")}</div></div></section>

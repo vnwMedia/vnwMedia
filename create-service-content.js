@@ -513,11 +513,146 @@ Object.assign(CREATE_SERVICE_PAGES, {
       ]
     ],
     "related": [
-      "google-business-profile",
-      "geo",
-      "landing-pages",
-      "google-ppc"
+      "local-seo",
+      "technical-seo",
+      "content-seo",
+      "google-business-profile"
     ]
+  },
+  "local-seo": {
+    "eyebrow": "Local SEO",
+    "headline": "Help nearby customers find the right business and take the next step.",
+    "lede": "Local search strategy for service areas, location pages, business listings, and the signals that connect your business to nearby customers.",
+    "hero": "assets/service-heroes/local-seo-v1.jpg",
+    "heroAlt": "A neighborhood shop owner and local search specialist reviewing a business listing and map together on a laptop.",
+    "feature": "assets/service-heroes/google-business-profile-management-v3.jpg",
+    "featureAlt": "A local business profile being reviewed as part of a local search visibility plan.",
+    "introHeading": "Make local search useful for the people looking for you nearby.",
+    "introBody": "Local SEO helps search engines and customers understand what your business offers, where you serve people, and how to contact or visit you. We align your website, service-area information, business profiles, and local content around accurate, helpful details.",
+    "outcomes": [
+      ["Clarify service areas", "Make the locations and communities you serve clear without creating thin or repetitive location pages."],
+      ["Improve local relevance", "Align page content, services, business details, and local signals with the searches that matter to your business."],
+      ["Strengthen customer confidence", "Keep contact details, hours, services, and profile information accurate and easy to act on."],
+      ["Measure meaningful actions", "Review local visibility alongside calls, direction requests, form submissions, and qualified inquiries where tracking is available."]
+    ],
+    "included": [
+      "Service-area and local search opportunity review",
+      "Local keyword, competitor, and intent research",
+      "Location-page and service-page recommendations",
+      "Google Business Profile and citation consistency review",
+      "Internal linking and local structured-data guidance",
+      "Local visibility reporting and prioritized next steps"
+    ],
+    "process": [
+      ["Understand", "Review your services, coverage area, locations, current search presence, and customer journey."],
+      ["Prioritize", "Identify the pages, profiles, and information gaps with the clearest business value."],
+      ["Improve", "Strengthen useful location and service content, business information, and local connections."],
+      ["Refine", "Measure visibility and customer actions, then adjust priorities as the business and search landscape change."]
+    ],
+    "visibility": [
+      ["Website and location pages", "Helpful service-area content makes your coverage clear without implying locations you do not serve."],
+      ["Google Business Profile", "Accurate categories, services, hours, and customer information support local discovery and action."],
+      ["Reviews and citations", "Consistent business facts and active attention to customer feedback reinforce trust across local sources."]
+    ],
+    "faqs": [
+      ["What is included in local SEO?", "Scope can include local search research, location and service pages, Google Business Profile alignment, citation consistency, internal links, and reporting. The priorities depend on your locations, business model, and current site."],
+      ["Do I need a physical office in every city I serve?", "No. Service-area businesses can serve multiple communities without a staffed office in each one. Content and profiles should accurately reflect your real operations and follow the platform’s current guidelines."],
+      ["Can you guarantee a top position in Google Maps?", "No. Local rankings are determined by Google and vary by searcher, query, competition, and other factors. We focus on accurate information, useful pages, and sound optimization rather than guaranteed positions."],
+      ["Will you create a page for every town nearby?", "Only when each page can provide genuinely useful, distinct information. Repeating the same copy with swapped city names is not a helpful long-term strategy."],
+      ["How do you measure local SEO progress?", "Depending on access and tracking, reporting can include local search visibility, profile actions, calls, direction requests, website visits, and qualified inquiries."],
+      ["How is local SEO different from managing Google Business Profile?", "Local SEO considers your whole local search presence, including your website and service-area content. Google Business Profile management focuses on the profile itself; the two can work together."]
+    ],
+    "related": ["seo", "google-business-profile", "yelp-seo", "reputation-management"]
+  },
+  "technical-seo": {
+    "eyebrow": "Technical SEO",
+    "headline": "Give search engines a clear, reliable path through your website.",
+    "lede": "Technical reviews and improvements that support crawlability, indexation, performance, mobile usability, and a dependable search foundation.",
+    "hero": "assets/service-heroes/technical-seo-v1.jpg",
+    "heroAlt": "Two web specialists reviewing a website health dashboard with crawl, indexing, and performance signals on a desktop monitor.",
+    "feature": "assets/service-heroes/seo-performance-review-v1.jpg",
+    "featureAlt": "A business owner and search specialist reviewing website performance and technical SEO data on a laptop.",
+    "introHeading": "Make the important pages accessible, understandable, and dependable.",
+    "introBody": "Technical SEO addresses the site structure and implementation details that can affect how search engines discover, render, and index pages—and how people experience them. We investigate issues, explain their impact, and prioritize fixes that fit your platform and resources.",
+    "outcomes": [
+      ["Improve crawlability", "Help search engines reach the pages that matter through clear architecture, internal links, and crawl controls."],
+      ["Resolve indexation issues", "Review coverage, canonicalization, redirects, and duplicate or low-value URLs."],
+      ["Support a better experience", "Assess performance, mobile usability, accessibility basics, and page behavior as part of sound site quality."],
+      ["Reduce technical uncertainty", "Turn audit findings into clear implementation notes, priorities, and validation steps."]
+    ],
+    "included": [
+      "Crawl, indexation, and site-structure audit",
+      "Canonical, redirect, sitemap, and robots review",
+      "Core page-speed and mobile usability investigation",
+      "Structured-data and technical metadata review",
+      "Internal-link and duplicate-page recommendations",
+      "Fix prioritization, implementation guidance, and validation"
+    ],
+    "process": [
+      ["Crawl", "Review how the site is structured and how important pages can be discovered and accessed."],
+      ["Diagnose", "Separate confirmed issues from warnings and explain which pages or user journeys they affect."],
+      ["Prioritize", "Order fixes by impact, effort, risk, and the capabilities of your platform."],
+      ["Validate", "Recheck completed work and monitor relevant search and site-health signals over time."]
+    ],
+    "visibility": [
+      ["Search foundations", "Clear indexation, canonical, and crawl signals help search engines interpret your site consistently."],
+      ["Page experience", "Performance and mobile usability affect how people interact with pages and can support broader quality goals."],
+      ["Useful content", "Technical improvements work best when the pages being surfaced answer real customer needs clearly."]
+    ],
+    "faqs": [
+      ["What does a technical SEO audit check?", "The review can cover crawlability, indexation, site architecture, redirects, canonical tags, sitemaps, robots directives, structured data, internal links, and selected performance or mobile issues."],
+      ["Will an audit fix every issue automatically?", "An audit identifies and prioritizes findings. Implementation depends on the site platform, access, scope, and whether development or third-party support is needed."],
+      ["Can technical SEO guarantee higher rankings?", "No. Technical work can remove barriers and improve clarity, but rankings depend on many factors outside a single audit or provider’s control."],
+      ["Will you work with our current developer or platform?", "We can prepare recommendations for your existing team and discuss implementation support based on the platform and access available."],
+      ["How long does a technical SEO project take?", "Timing depends on site size, issue severity, platform complexity, and implementation resources. Findings are usually prioritized so the most consequential work can be addressed first."],
+      ["How do you verify that a fix worked?", "We recheck affected URLs and relevant crawl, indexation, performance, or search-console signals when the necessary access and data are available."]
+    ],
+    "related": ["seo", "local-seo", "content-seo", "web-design"]
+  },
+  "content-seo": {
+    "eyebrow": "Content SEO",
+    "headline": "Create useful search content that earns attention and builds trust.",
+    "lede": "Search-led planning and page improvements that connect real customer questions with clear, credible website content.",
+    "hero": "assets/service-heroes/content-seo-v1.jpg",
+    "heroAlt": "A content strategist and local business owner planning useful website pages together with drafts and a laptop.",
+    "feature": "assets/service-heroes/content-writing-v2.jpg",
+    "featureAlt": "A content writer shaping clear website messaging and search-focused copy at a desk.",
+    "introHeading": "Answer the questions customers actually bring to the search bar.",
+    "introBody": "Content SEO connects search intent with helpful pages that explain your services, expertise, and next steps. We look for gaps and opportunities, then shape a practical content plan that supports organic discovery without filling the site with repetitive or thin pages.",
+    "outcomes": [
+      ["Understand search intent", "Research what people need to know before choosing a service, provider, or solution."],
+      ["Clarify page purpose", "Give each page a distinct role and connect related information with thoughtful internal links."],
+      ["Build credible answers", "Use accurate service details, expertise, examples, and useful explanations to support customer decisions."],
+      ["Improve what is already there", "Refresh existing pages when clearer structure, updated facts, or stronger coverage can help."]
+    ],
+    "included": [
+      "Keyword, question, and search-intent research",
+      "Content gap and competing-page review",
+      "Service-page, resource, and FAQ content planning",
+      "Page briefs, headings, metadata, and internal-link recommendations",
+      "Existing content review and refresh priorities",
+      "Editorial roadmap and search performance measurement"
+    ],
+    "process": [
+      ["Listen", "Learn about your services, customers, sales questions, proof, and business goals."],
+      ["Research", "Map relevant search themes and questions to the pages that can answer them best."],
+      ["Shape", "Create briefs or content that is accurate, readable, distinct, and aligned with the intended page purpose."],
+      ["Learn", "Review organic visibility and engagement, then update the plan as customer needs and priorities evolve."]
+    ],
+    "visibility": [
+      ["Service pages", "Specific, useful service content helps visitors understand fit, scope, and the next step."],
+      ["Supporting resources", "Guides and answers can address research-stage questions and connect readers to relevant services."],
+      ["Trust and clarity", "Consistent facts, original expertise, and clear explanations help people evaluate what they read."]
+    ],
+    "faqs": [
+      ["What is content SEO?", "Content SEO plans and improves website content around relevant search intent. It considers what people need to know, which page should answer them, and how that page connects to your services and customer journey."],
+      ["Does content SEO mean publishing lots of blog posts?", "No. The right plan may focus on improving core service pages, adding a useful FAQ, consolidating overlapping pages, or creating a small number of genuinely helpful resources."],
+      ["Do you write the content or just provide recommendations?", "We can discuss research and planning, content briefs, writing, and revisions. Deliverables depend on the agreed scope and any subject-matter review required."],
+      ["How do you keep content accurate?", "We work from business information and subject-matter input, flag claims that need confirmation, and build review into the process. The client remains responsible for approving factual and regulated claims."],
+      ["How long does SEO content take to perform?", "Results vary with competition, site authority, technical health, content quality, and search demand. We measure performance over time and do not promise rankings or traffic levels."],
+      ["Can existing pages be improved instead of creating new ones?", "Often, yes. We review existing coverage first and may recommend updating, consolidating, or clarifying current pages before adding more content."]
+    ],
+    "related": ["seo", "technical-seo", "local-seo", "content-writing"]
   },
   "yelp-seo": {
     "eyebrow": "Yelp SEO & Visibility",
