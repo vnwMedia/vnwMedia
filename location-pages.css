@@ -2,8 +2,10 @@
 .location-hero-form h2{margin:0 0 18px;text-align:center;font-size:20px;line-height:1.2;text-transform:uppercase;letter-spacing:.035em}
 .location-hero-form button{width:100%;min-height:44px;border:0;border-radius:14px;color:#fff;background:var(--orange);font-size:13px;font-weight:600;text-transform:uppercase;cursor:pointer}
 .location-ticker{background:#111}
-.location-overview{background:#f4f0e9;color:#111}
-.industry-location main>.location-overview{background:#f4f0e9;color:#111}
+.location-overview{background:#fff;color:#111}
+.industry-location main>.indl-section.location-overview{background:#fff!important;color:#111}
+.industry-location main>.indl-section.location-overview .indl-head p:not(.section-tag),.industry-location main>.indl-section.location-overview .indl-card-grid p{color:#666!important}
+.industry-location main>.indl-section.location-overview .indl-card-grid,.industry-location main>.indl-section.location-overview .indl-card-grid article{border-color:#d8d4cf!important}
 .location-overview .indl-head{align-items:start}
 .location-overview .indl-head h2,.location-system .indl-head h2,.location-related .indl-head h2{max-width:690px}
 .location-area-note{margin-top:24px!important;padding-top:20px;border-top:1px solid #d6d0c8;font-size:14px}
