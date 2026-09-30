@@ -1005,7 +1005,7 @@ Object.assign(CREATE_SERVICE_PAGES, {
     ]
   },
   "google-ppc": {
-    "eyebrow": "Pay Per Click Advertising",
+    "eyebrow": "Google Pay Per Click Advertising",
     "headline": "Reach high-intent customers with campaigns built to be measured.",
     "lede": "Google Search, Display, Shopping, YouTube, remarketing, landing pages, tracking, and ongoing optimization around real business goals.",
     "hero": "assets/service-heroes/google-ppc-v2.jpg",

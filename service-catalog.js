@@ -212,7 +212,7 @@ const SERVICE_CATALOG = [
   {
     "group": "Ads & Lead Generation",
     "slug": "google-ppc",
-    "name": "Pay Per Click Advertising",
+    "name": "Google Pay Per Click Advertising",
     "description": "Google Search, Display, Shopping, YouTube, local campaigns, and remarketing.",
     "includes": [
       "Campaign audits, setup, and audience targeting",
@@ -388,7 +388,7 @@ const SERVICE_MENU_LABELS = {
   'app-design-development':'App Design & Development','landing-pages':'Landing Pages',
   'brand-strategy':'Brand & Strategy','graphic-design':'Graphic Design','seo':'SEO','yelp-seo':'Yelp SEO & Visibility',
   'google-business-profile':'Google Business Profile','geo':'AI Visibility & GEO','content-writing':'Content Writing',
-  'lead-generation':'Lead Generation','google-ppc':'PPC Advertising','paid-social':'Paid Social Ads',
+  'lead-generation':'Lead Generation','google-ppc':'Google Pay Per Click Advertising','paid-social':'Paid Social Ads',
   'crm-automation':'CRM & Automation','video-editing':'Video & Ad Creative','social-media':'Social Media Management',
   'social-media-consultation':'Social Media Consultation','community-management':'Community Management',
   'reputation-management':'Reputation Management','email-marketing':'Email Marketing','text-marketing':'SMS Marketing'
