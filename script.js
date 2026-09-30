@@ -19,7 +19,9 @@ if (document.readyState === "loading") {
 
 const siteHeaderElement = document.querySelector(".site-header");
 const isNestedPage = /\/(?:services|industries|case-studies|resources)\//.test(location.pathname);
-const navRoot = isNestedPage ? "../" : "";
+const declaredDepth = Number.parseInt(document.body?.dataset.depth || "", 10);
+const navDepth = Number.isFinite(declaredDepth) ? Math.max(0, declaredDepth) : (isNestedPage ? 1 : 0);
+const navRoot = "../".repeat(navDepth);
 // Preserve old successful-submission links, but show confirmation on its own page.
 if (new URLSearchParams(location.search).get("inquiry") === "sent") {
   location.replace(`${navRoot}thank-you.html`);
