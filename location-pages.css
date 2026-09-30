@@ -13,19 +13,8 @@
 .location-overview .indl-card-grid article{background:#fff;border-color:#ded9d2}
 .location-overview .indl-card-grid article span{color:#00a6e8}
 .location-showcase{background:#fff;color:#111}
-.location-reviews{padding:110px 0;background:#10171a;color:#fff}
-.location-reviews-head{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:45px}
-.location-reviews-head h2{max-width:750px;margin:0;font-size:clamp(42px,5vw,62px);line-height:.98;letter-spacing:-.04em}
-.location-rating{display:grid;grid-template-columns:auto auto;column-gap:8px;align-items:center;white-space:nowrap}
-.location-rating span{grid-column:1/-1;color:#00a6e8;letter-spacing:.14em}
-.location-rating strong{font:400 35px/1 Fraunces,serif}.location-rating small{color:#aab2b5}
-.location-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.location-review-grid figure{min-height:270px;display:flex;flex-direction:column;margin:0;padding:28px;border:1px solid #334047;background:#141f24}
-.location-review-grid figure>span{color:#8f9a9f;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
-.location-review-grid blockquote{margin:25px 0 auto;font:400 18px/1.45 Inter,sans-serif;color:#e1e5e6}
-.location-review-grid figcaption{margin-top:25px;color:#2bb4eb;font-size:12px}
-.location-reviews>.shell>.text-arrow{display:inline-block;margin-top:28px;color:#fff}
-.location-review-note{color:#829095;font-size:11px}
+.location-reviews{background:#161a1f}
+.location-review-note{margin:0;color:#829095;font-size:11px;letter-spacing:0;text-transform:none}
 .location-related{background:#f4f0e9;color:#111}
 .industry-location main>.location-related{background:#f4f0e9;color:#111}
 .location-related .indl-head{margin-bottom:30px}
@@ -49,5 +38,5 @@
 .location-state-card>div a span{color:#00a6e8}
 .location-directory-cta{margin-top:34px;padding:50px 0;background:#10171a;color:#fff}
 .location-directory-cta h2{font-size:40px}.location-directory-cta p{color:#bac2c4}
-@media(max-width:1000px){.location-hero-form{max-width:620px;justify-self:start}.location-review-grid{grid-template-columns:1fr 1fr}.location-state-grid{grid-template-columns:1fr}.location-state-card>p:not(.section-tag){min-height:auto}}
-@media(max-width:640px){.location-hero-form{max-width:none}.location-reviews-head{align-items:start;flex-direction:column}.location-review-grid{grid-template-columns:1fr}.location-state-card{padding:25px}.location-directory-hero{padding:145px 0 60px}}
+@media(max-width:1000px){.location-hero-form{max-width:620px;justify-self:start}.location-state-grid{grid-template-columns:1fr}.location-state-card>p:not(.section-tag){min-height:auto}}
+@media(max-width:640px){.location-hero-form{max-width:none}.location-state-card{padding:25px}.location-directory-hero{padding:145px 0 60px}}

@@ -393,12 +393,20 @@ document.querySelectorAll("[data-testimonial-ticker]").forEach(testimonialTicker
   const testimonialTickerTrack = testimonialTicker.querySelector(".testimonial-ticker-track");
   if (!testimonialTickerTrack) return;
   const originalCards = Array.from(testimonialTickerTrack.children);
-  originalCards.forEach((card) => {
+  const appendReviewSet = () => originalCards.forEach((card) => {
     const clone = card.cloneNode(true);
     clone.setAttribute("aria-hidden", "true");
     clone.classList.add("testimonial-ticker-clone");
     testimonialTickerTrack.append(clone);
   });
+  appendReviewSet();
+  const firstClone = testimonialTickerTrack.children[originalCards.length];
+  const firstCard = testimonialTickerTrack.children[0];
+  if (firstCard && firstClone) {
+    const groupWidth = firstClone.offsetLeft - firstCard.offsetLeft;
+    const minimumLoopWidth = testimonialTicker.clientWidth + groupWidth;
+    while (testimonialTickerTrack.scrollWidth < minimumLoopWidth) appendReviewSet();
+  }
 
   const updateTestimonialTickerDistance = () => {
     // Offset the initial card, but keep overflow clipping at the browser edge.
