@@ -19,7 +19,11 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
 .preview-intro{padding:56px 0 52px;background:var(--cream);border-bottom:1px solid var(--line)}
 .section-tag{margin:0 0 18px;color:#7a7f80;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
 .preview-intro h1{max-width:900px;margin:0 0 15px;font-size:clamp(42px,5vw,64px);line-height:.98;letter-spacing:-.045em}
-.preview-intro p:last-child{max-width:760px;margin:0;color:var(--muted);font-size:15px;line-height:1.65}
+.preview-intro p:not(.section-tag){max-width:760px;margin:0;color:var(--muted);font-size:15px;line-height:1.65}
+.preview-option-nav{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.preview-option-nav a{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid #d3cec5;color:#333;font-size:10px;font-weight:600;letter-spacing:.04em;transition:border-color .18s ease,color .18s ease}
+.preview-option-nav a:hover,.preview-option-nav a:focus-visible{border-color:var(--blue);color:#007dad;outline:none}
+.preview-option-nav span{color:#008fc7;font-size:9px;letter-spacing:.13em}
 
 .option{padding:76px 0 88px}
 .option-label{display:flex;align-items:center;gap:12px;margin:0 0 32px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
@@ -77,6 +81,100 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
 .tile-feature h3{max-width:430px;font-size:clamp(34px,4vw,52px)}
 .tile-08{grid-column:span 2}
 .tile-08 h3{max-width:430px;font-size:clamp(26px,3vw,38px)}
+
+/* Option 03 · editorial decision wheel: a static vector, not a data chart. */
+.option-wheel{background:#f4f0e9}
+.wheel-layout{display:grid;grid-template-columns:minmax(340px,.86fr) minmax(0,1.14fr);gap:62px;align-items:center;padding-top:8px}
+.decision-wheel{position:relative;width:min(100%,500px);margin-inline:auto;aspect-ratio:1}
+.decision-wheel>svg{width:100%;height:100%;overflow:visible}
+.wheel-ground{fill:#e8e2d8;stroke:#d2cbc0;stroke-width:1}
+.wheel-sectors path{fill:#172024;stroke:#f4f0e9;stroke-width:2}
+.wheel-sectors path:nth-child(2n){fill:#202a2e}
+.wheel-sectors path:nth-child(4n){fill:#103c4c}
+.wheel-inner-ring{fill:none;stroke:#6c7779;stroke-width:1;stroke-dasharray:2 6}
+.wheel-core-ring{fill:#f4f0e9;stroke:#c4bdb2;stroke-width:1}
+.wheel-spokes{fill:none;stroke:#748083;stroke-width:1}
+.wheel-steps{fill:#f4f0e9;font:600 10px Inter,Arial,sans-serif;letter-spacing:1.4px;text-anchor:middle}
+.wheel-pins{fill:var(--blue);stroke:#f4f0e9;stroke-width:4}
+.wheel-center{position:absolute;inset:50% auto auto 50%;display:flex;flex-direction:column;align-items:center;justify-content:center;width:35%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;text-align:center;color:#111719;background:#f4f0e9}
+.wheel-center span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#697276}
+.wheel-center strong{font:400 clamp(27px,3vw,39px)/.96 Fraunces,Georgia,serif;letter-spacing:-.04em}
+.wheel-center small{margin-top:10px;color:#6b7375;font-size:9px;line-height:1.4}
+.wheel-index{border-top:1px solid #d0c9be}
+.wheel-index-label{margin:0;padding:15px 0;color:#737a7c;font-size:9px!important;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.wheel-index>a{display:grid;grid-template-columns:36px 1fr 20px;align-items:center;gap:12px;min-height:51px;border-top:1px solid #d0c9be;transition:color .18s ease}
+.wheel-index>a:hover{color:#008fc7}
+.wheel-index>a>span{color:#008fc7;font-size:9px;letter-spacing:.12em}
+.wheel-index>a>strong{font:400 18px/1.15 Fraunces,Georgia,serif}
+.wheel-index>a>i{color:#008fc7;font-style:normal}
+
+/* Option 04 · a linear branch diagram makes market paths easy to scan. */
+.option-tree{background:#fff}
+.tree-stage{position:relative;min-height:402px;padding-top:129px;isolation:isolate}
+.tree-lines{position:absolute;z-index:-1;inset:0;width:100%;height:100%;overflow:visible}
+.tree-lines path{fill:none;stroke:#c8c9c5;stroke-width:1.4;vector-effect:non-scaling-stroke}
+.tree-lines .tree-accent{stroke:var(--blue);stroke-width:2}
+.tree-lines g{fill:var(--blue);stroke:#fff;stroke-width:3}
+.tree-root{position:absolute;top:4px;left:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:270px;min-height:57px;padding:8px 22px;transform:translateX(-50%);border:1px solid #ccd0d0;background:#f4f0e9;text-align:center}
+.tree-root span{color:#008fc7;font-size:8px;font-weight:600;letter-spacing:.16em}
+.tree-root strong{margin-top:3px;font:400 18px/1.12 Fraunces,Georgia,serif}
+.tree-groups{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.tree-group{min-width:0;padding-top:14px;border-top:1px solid #c8c9c5}
+.tree-group>p{margin:0 0 11px;color:#737a7c;font-size:8px;font-weight:600;letter-spacing:.12em;white-space:nowrap}
+.tree-group>a{position:relative;display:grid;grid-template-columns:26px minmax(0,1fr) 16px;align-items:center;gap:7px;min-height:61px;padding:8px 7px;border-top:1px solid #e3e0da;font:400 16px/1.1 Fraunces,Georgia,serif;transition:color .18s ease,border-color .18s ease}
+.tree-group>a:hover{color:#008fc7;border-color:#00aeef}
+.tree-group>a span{color:#008fc7;font:600 8px Inter,Arial,sans-serif;letter-spacing:.1em}
+.tree-group>a i{color:#008fc7;font:normal 14px Inter,Arial,sans-serif}
+.tree-caption{display:flex;align-items:center;gap:9px;margin:13px 0 0;color:#777f81;font-size:11px!important}
+.tree-caption span{width:7px;height:7px;border-radius:50%;background:var(--blue)}
+
+/* Option 05 · repeated vector routes describe the journey, not performance data. */
+.option-signal{color:#f5f4f0;background:#121719}
+.option-signal .option-label{color:#c6cdce}
+.option-signal .option-copy .section-tag{color:#9da6a8}
+.option-signal .option-copy h2{color:#fff}
+.option-signal .option-side p{color:#b8c0c2}
+.signal-matrix{border-top:1px solid #475155}
+.signal-heading{display:grid;grid-template-columns:minmax(280px,1.1fr) repeat(3,minmax(0,.6fr));align-items:center;min-height:44px;border-bottom:1px solid #475155;color:#929da0}
+.signal-heading span{font-size:8px;font-weight:600;letter-spacing:.15em;text-align:center;text-transform:uppercase}
+.signal-heading span:first-child{text-align:left}
+.signal-row{display:grid;grid-template-columns:minmax(280px,1.1fr) minmax(0,1.8fr);align-items:center;min-height:70px;border-bottom:1px solid #343e42;transition:background-color .18s ease,color .18s ease}
+.signal-row:hover,.signal-row:focus-visible{color:var(--blue);background:#182125;outline-offset:-2px}
+.signal-market{display:grid;grid-template-columns:34px minmax(0,1fr) 19px;align-items:center;gap:11px;padding-right:16px}
+.signal-market i{color:var(--blue);font-size:9px;font-style:normal;letter-spacing:.12em}
+.signal-market strong{font:400 20px/1.12 Fraunces,Georgia,serif}
+.signal-market b{color:var(--blue);font:400 16px Inter,Arial,sans-serif}
+.signal-path{display:block;width:100%;padding:0 15px}
+.signal-path svg{display:block;width:100%;height:28px;overflow:visible}
+.signal-path path{fill:none;stroke:#526064;stroke-width:1.5;vector-effect:non-scaling-stroke}
+.signal-path circle{fill:#121719;stroke:var(--blue);stroke-width:2;vector-effect:non-scaling-stroke}
+.signal-row:hover .signal-path path{stroke:var(--blue)}
+.signal-row:hover .signal-path circle{fill:var(--blue)}
+
+/* Option 06 · an isometric SVG market landscape gives the directory a spatial metaphor. */
+.option-blueprint{background:#f4f0e9}
+.blueprint-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(340px,.8fr);gap:48px;align-items:center}
+.market-blueprint{position:relative;overflow:hidden;background:#eae4da}
+.market-blueprint>svg{display:block;width:100%;height:auto}
+.blueprint-ground{fill:#e4ddd2;stroke:#c8bfb3;stroke-width:1.4}
+.blueprint-grid{fill:none;stroke:#c9c1b6;stroke-width:1}
+.blueprint-road{fill:none;stroke:#a9a298;stroke-width:1.5;stroke-dasharray:5 7}
+.blueprint-plaza{fill:#d6edf4;stroke:#00aeef;stroke-width:1.6}
+.blueprint-block path{fill:#182125;stroke:#596568;stroke-width:1.1;vector-effect:non-scaling-stroke}
+.blueprint-block path:nth-child(2){fill:#2a3539}
+.blueprint-block path:nth-child(3){fill:#111719}
+.block-three path:first-child,.block-six path:first-child{fill:#007da8;stroke:#00aeef}
+.blueprint-beacons{fill:var(--blue);stroke:#eae4da;stroke-width:4}
+.blueprint-hub{fill:#00aeef;stroke:#eae4da;stroke-width:5}
+.blueprint-hub-mark{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round}
+.blueprint-register{fill:none;stroke:#838987;stroke-width:1.3}
+.blueprint-caption{position:absolute;right:15px;bottom:14px;left:15px;color:#697276;font-size:8px;font-weight:600;letter-spacing:.15em;text-align:center;text-transform:uppercase}
+.blueprint-index{border-top:1px solid #c9c2b8}
+.blueprint-index>a{display:grid;grid-template-columns:30px minmax(0,1fr) 18px;align-items:center;gap:11px;min-height:50px;border-bottom:1px solid #c9c2b8;transition:color .18s ease}
+.blueprint-index>a:hover{color:#008fc7}
+.blueprint-index>a span{color:#008fc7;font-size:9px;letter-spacing:.12em}
+.blueprint-index>a strong{font:400 18px/1.1 Fraunces,Georgia,serif}
+.blueprint-index>a i{color:#008fc7;font-style:normal}
 .preview-footer{padding:24px 0;color:#aeb6b8;background:#111719}
 .preview-footer .shell{display:flex;justify-content:space-between;gap:20px;align-items:center}
 .preview-footer span,.preview-footer a{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
@@ -95,6 +193,18 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
   .industry-mosaic{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(210px,auto)}
   .tile-feature{grid-column:span 2;grid-row:auto;min-height:340px}
   .tile-08{grid-column:span 2}
+  .wheel-layout{grid-template-columns:minmax(270px,.8fr) minmax(0,1.2fr);gap:30px}
+  .wheel-index>a>strong{font-size:16px}
+  .tree-stage{min-height:426px;padding-top:132px}
+  .tree-groups{gap:8px}
+  .tree-group>p{font-size:7px;letter-spacing:.08em}
+  .tree-group>a{grid-template-columns:22px minmax(0,1fr) 14px;gap:5px;padding-inline:4px;font-size:14px}
+  .signal-heading{grid-template-columns:minmax(230px,1.1fr) repeat(3,minmax(0,.6fr))}
+  .signal-row{grid-template-columns:minmax(230px,1.1fr) minmax(0,1.8fr)}
+  .signal-market strong{font-size:18px}
+  .blueprint-layout{grid-template-columns:minmax(0,1fr) minmax(270px,.88fr);gap:28px}
+  .blueprint-index>a{min-height:46px}
+  .blueprint-index>a strong{font-size:16px}
 }
 @media(max-width:600px){
   :root{--shell:calc(100% - 40px)}
@@ -103,7 +213,7 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
   .preview-mark{padding:7px 9px;font-size:7px;letter-spacing:.1em}
   .preview-intro{padding:42px 0}
   .preview-intro h1{font-size:43px}
-  .preview-intro p:last-child{font-size:14px}
+  .preview-intro p:not(.section-tag){font-size:14px}
   .option{padding:54px 0 62px}
   .option-label{margin-bottom:24px;font-size:9px}
   .option-head{gap:19px;margin-bottom:30px}
@@ -124,4 +234,29 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
   .tile-feature h3{font-size:38px}
   .tile-08 h3{font-size:32px}
   .preview-footer .shell{align-items:flex-start;flex-direction:column;gap:10px}
+  .preview-option-nav{gap:7px}
+  .preview-option-nav a{padding:8px 9px;font-size:9px}
+  .wheel-layout{grid-template-columns:1fr;gap:25px}
+  .decision-wheel{width:min(100%,390px)}
+  .wheel-index>a{min-height:49px}
+  .tree-stage{min-height:0;padding:83px 0 0}
+  .tree-lines{display:none}
+  .tree-root{top:0;min-width:0;width:100%;min-height:58px;transform:none;left:0}
+  .tree-groups{grid-template-columns:1fr;gap:0;padding-left:17px;border-left:1px solid var(--blue)}
+  .tree-group{position:relative;padding:14px 0 3px}
+  .tree-group:before{position:absolute;top:0;left:-18px;width:8px;height:8px;border:2px solid #fff;border-radius:50%;background:var(--blue);content:""}
+  .tree-group>p{font-size:8px;letter-spacing:.12em}
+  .tree-group>a{min-height:54px;padding:7px 4px;font-size:17px}
+  .tree-caption{font-size:10px!important}
+  .signal-heading{grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:38px}
+  .signal-heading span:first-child{text-align:left}
+  .signal-heading span:nth-child(n+2){display:none}
+  .signal-heading:after{grid-column:2;content:"Customer decision path";color:#929da0;font-size:8px;font-weight:600;letter-spacing:.12em;text-align:center;text-transform:uppercase}
+  .signal-row{grid-template-columns:1fr;gap:0;padding:10px 0}
+  .signal-market{min-height:38px;padding-right:0}
+  .signal-market strong{font-size:19px}
+  .signal-path{padding:0 9px 0 45px}
+  .blueprint-layout{grid-template-columns:1fr;gap:25px}
+  .blueprint-index>a{min-height:49px}
+  .blueprint-caption{font-size:7px}
 }

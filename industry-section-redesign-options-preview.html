@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Homepage Industries · Two Design Options | VNW Media</title>
-  <meta name="description" content="Two preview-only redesign concepts for the VNW Media homepage industries section." />
+  <title>Homepage Industries · Six Design Options | VNW Media</title>
+  <meta name="description" content="Six preview-only redesign concepts for the VNW Media homepage industries section, including four custom vector directions." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="industry-section-redesign-options-preview.css" />
+  <link rel="stylesheet" href="site-buttons.css?v=20260928-explore-hover" />
 </head>
 <body>
   <header class="preview-bar">
@@ -19,14 +20,22 @@
     <section class="preview-intro">
       <div class="shell">
         <p class="section-tag">Homepage · Industries</p>
-        <h1>Two ways to show how different markets shape the work.</h1>
-        <p>Both directions keep the existing headline, message, eight industries, and destinations. One turns the list into a connected customer-decision map; the other makes it an image-led editorial atlas.</p>
+        <h1>Six ways to show how different markets shape the work.</h1>
+        <p>All six directions keep the existing headline, message, eight industries, and destinations. The first pair explores a customer-decision map and a photo-led atlas; the next four use custom vector systems to tell the story.</p>
+        <nav class="preview-option-nav" aria-label="Jump to an industry section concept">
+          <a href="#option-01"><span>01</span> Decision map</a>
+          <a href="#option-02"><span>02</span> Industry atlas</a>
+          <a href="#option-03"><span>03</span> Buyer wheel</a>
+          <a href="#option-04"><span>04</span> Market tree</a>
+          <a href="#option-05"><span>05</span> Signal grid</a>
+          <a href="#option-06"><span>06</span> Isometric blueprint</a>
+        </nav>
       </div>
     </section>
 
     <section class="option option-map" aria-labelledby="map-title">
       <div class="shell">
-        <p class="option-label"><i></i><b>Option 01</b> · Industry decision map</p>
+        <p class="option-label" id="option-01"><i></i><b>Option 01</b> · Industry decision map</p>
         <div class="option-head">
           <div class="option-copy">
             <p class="section-tag">Industries</p>
@@ -74,7 +83,7 @@
 
     <section class="option option-atlas" aria-labelledby="atlas-title">
       <div class="shell">
-        <p class="option-label"><i></i><b>Option 02</b> · The industry atlas</p>
+        <p class="option-label" id="option-02"><i></i><b>Option 02</b> · The industry atlas</p>
         <div class="option-head atlas-head">
           <div class="option-copy">
             <p class="section-tag">Industries</p>
@@ -98,7 +107,165 @@
         </div>
       </div>
     </section>
+
+    <section class="option option-wheel" aria-labelledby="wheel-title">
+      <div class="shell">
+        <p class="option-label" id="option-03"><i></i><b>Option 03</b> · The buyer decision wheel</p>
+        <div class="option-head">
+          <div class="option-copy">
+            <p class="section-tag">Industries</p>
+            <h2 id="wheel-title">Strategy shaped around how your customers actually choose.</h2>
+          </div>
+          <div class="option-side">
+            <p>Different industries have different buying cycles, trust signals, search behavior, and conversion points. We build around those realities.</p>
+            <a class="pill" href="contact.html">Discuss your industry <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="wheel-layout">
+          <div class="decision-wheel" role="img" aria-label="Custom vector wheel illustrating four customer decision moments: find, compare, trust, and act">
+            <svg viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+              <circle class="wheel-ground" cx="300" cy="300" r="270" />
+              <g class="wheel-sectors">
+                <path d="M300 300 300 70 A230 230 0 0 1 462.63 137.37Z" />
+                <path d="M300 300 462.63 137.37 A230 230 0 0 1 530 300Z" />
+                <path d="M300 300 530 300 A230 230 0 0 1 462.63 462.63Z" />
+                <path d="M300 300 462.63 462.63 A230 230 0 0 1 300 530Z" />
+                <path d="M300 300 300 530 A230 230 0 0 1 137.37 462.63Z" />
+                <path d="M300 300 137.37 462.63 A230 230 0 0 1 70 300Z" />
+                <path d="M300 300 70 300 A230 230 0 0 1 137.37 137.37Z" />
+                <path d="M300 300 137.37 137.37 A230 230 0 0 1 300 70Z" />
+              </g>
+              <circle class="wheel-inner-ring" cx="300" cy="300" r="151" />
+              <circle class="wheel-core-ring" cx="300" cy="300" r="104" />
+              <path class="wheel-spokes" d="M300 70v126m162.63-58.63-89.1 89.1M530 300H404m58.63 162.63-89.1-89.1M300 530V404m-162.63 58.63 89.1-89.1M70 300h126m-58.63-162.63 89.1 89.1" />
+              <g class="wheel-steps"><text x="300" y="116">FIND</text><text x="484" y="304" transform="rotate(90 484 304)">COMPARE</text><text x="300" y="494">TRUST</text><text x="116" y="304" transform="rotate(-90 116 304)">ACT</text></g>
+              <g class="wheel-pins"><circle cx="388" cy="88" r="5"/><circle cx="512" cy="212" r="5"/><circle cx="512" cy="388" r="5"/><circle cx="388" cy="512" r="5"/><circle cx="212" cy="512" r="5"/><circle cx="88" cy="388" r="5"/><circle cx="88" cy="212" r="5"/><circle cx="212" cy="88" r="5"/></g>
+            </svg>
+            <div class="wheel-center"><span>Customer</span><strong>choice</strong><small>Four moments.<br>One connected view.</small></div>
+          </div>
+          <div class="wheel-index">
+            <p class="wheel-index-label">Eight markets · four decision moments</p>
+            <a href="industries/home-services-contractors.html?v=95"><span>01</span><strong>Home Services &amp; Contractors</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/healthcare.html?v=95"><span>02</span><strong>Medical, Dental &amp; Eye Care</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/auto-repair.html?v=95"><span>03</span><strong>Automotive &amp; Auto Body</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/restaurant.html?v=95"><span>04</span><strong>Restaurants &amp; Hospitality</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/day-care.html?v=95"><span>05</span><strong>Daycare &amp; Education</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/legal-professional-services.html?v=95"><span>06</span><strong>Legal &amp; Professional Services</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/real-estate.html?v=95"><span>07</span><strong>Real Estate &amp; Property</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/retail-ecommerce.html?v=95"><span>08</span><strong>Retail &amp; eCommerce</strong><i aria-hidden="true">↗</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="option option-tree" aria-labelledby="tree-title">
+      <div class="shell">
+        <p class="option-label" id="option-04"><i></i><b>Option 04</b> · The market tree</p>
+        <div class="option-head">
+          <div class="option-copy">
+            <p class="section-tag">Industries</p>
+            <h2 id="tree-title">Strategy shaped around how your customers actually choose.</h2>
+          </div>
+          <div class="option-side">
+            <p>Different industries have different buying cycles, trust signals, search behavior, and conversion points. We build around those realities.</p>
+            <a class="pill" href="contact.html">Discuss your industry <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="tree-stage" aria-label="A branching map from customer decisions into eight industry paths">
+          <svg class="tree-lines" viewBox="0 0 1200 392" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M600 50v45M150 95h900M150 95v72m300-72v72m300-72v72m300-72v72M150 220v74m300-74v74m300-74v74m300-74v74" />
+            <path class="tree-accent" d="M600 50v45M150 95h900" />
+            <g><circle cx="150" cy="167" r="5"/><circle cx="450" cy="167" r="5"/><circle cx="750" cy="167" r="5"/><circle cx="1050" cy="167" r="5"/><circle cx="150" cy="294" r="5"/><circle cx="450" cy="294" r="5"/><circle cx="750" cy="294" r="5"/><circle cx="1050" cy="294" r="5"/></g>
+          </svg>
+          <div class="tree-root"><span>START WITH THE CUSTOMER</span><strong>What do they need to decide?</strong></div>
+          <div class="tree-groups">
+            <article class="tree-group"><p>01 · LOCAL EXPERTISE</p><a href="industries/home-services-contractors.html?v=95"><span>01</span>Home Services &amp; Contractors<i aria-hidden="true">↗</i></a><a href="industries/auto-repair.html?v=95"><span>03</span>Automotive &amp; Auto Body<i aria-hidden="true">↗</i></a></article>
+            <article class="tree-group"><p>02 · CARE &amp; LEARNING</p><a href="industries/healthcare.html?v=95"><span>02</span>Medical, Dental &amp; Eye Care<i aria-hidden="true">↗</i></a><a href="industries/day-care.html?v=95"><span>05</span>Daycare &amp; Education<i aria-hidden="true">↗</i></a></article>
+            <article class="tree-group"><p>03 · PLACES &amp; COMMERCE</p><a href="industries/restaurant.html?v=95"><span>04</span>Restaurants &amp; Hospitality<i aria-hidden="true">↗</i></a><a href="industries/retail-ecommerce.html?v=95"><span>08</span>Retail &amp; eCommerce<i aria-hidden="true">↗</i></a></article>
+            <article class="tree-group"><p>04 · ADVICE &amp; PROPERTY</p><a href="industries/legal-professional-services.html?v=95"><span>06</span>Legal &amp; Professional Services<i aria-hidden="true">↗</i></a><a href="industries/real-estate.html?v=95"><span>07</span>Real Estate &amp; Property<i aria-hidden="true">↗</i></a></article>
+          </div>
+        </div>
+        <p class="tree-caption"><span></span>One customer-first strategy branches into the context each market needs.</p>
+      </div>
+    </section>
+
+    <section class="option option-signal" aria-labelledby="signal-title">
+      <div class="shell">
+        <p class="option-label" id="option-05"><i></i><b>Option 05</b> · The buyer-journey signal grid</p>
+        <div class="option-head">
+          <div class="option-copy">
+            <p class="section-tag">Industries</p>
+            <h2 id="signal-title">Strategy shaped around how your customers actually choose.</h2>
+          </div>
+          <div class="option-side">
+            <p>Different industries have different buying cycles, trust signals, search behavior, and conversion points. We build around those realities.</p>
+            <a class="pill" href="contact.html">Discuss your industry <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="signal-matrix" role="table" aria-label="Industry paths across discover, trust, and act">
+          <div class="signal-heading" role="row"><span role="columnheader">Industry</span><span role="columnheader">Discover</span><span role="columnheader">Build trust</span><span role="columnheader">Take action</span></div>
+          <a class="signal-row" role="row" href="industries/home-services-contractors.html?v=95"><span class="signal-market" role="cell"><i>01</i><strong>Home Services &amp; Contractors</strong><b aria-hidden="true">↗</b></span><span class="signal-path" role="cell" aria-label="Discover, build trust, take action"><svg viewBox="0 0 360 28" aria-hidden="true"><path d="M12 14h336"/><circle cx="12" cy="14" r="5"/><circle cx="180" cy="14" r="5"/><circle cx="348" cy="14" r="5"/></svg></span></a>
+          <a class="signal-row" role="row" href="industries/healthcare.html?v=95"><span class="signal-market" role="cell"><i>02</i><strong>Medical, Dental &amp; Eye Care</strong><b aria-hidden="true">↗</b></span><span class="signal-path" role="cell" aria-label="Discover, build trust, take action"><svg viewBox="0 0 360 28" aria-hidden="true"><path d="M12 14h336"/><circle cx="12" cy="14" r="5"/><circle cx="180" cy="14" r="5"/><circle cx="348" cy="14" r="5"/></svg></span></a>
+          <a class="signal-row" role="row" href="industries/auto-repair.html?v=95"><span class="signal-market" role="cell"><i>03</i><strong>Automotive &amp; Auto Body</strong><b aria-hidden="true">↗</b></span><span class="signal-path" role="cell" aria-label="Discover, build trust, take action"><svg viewBox="0 0 360 28" aria-hidden="true"><path d="M12 14h336"/><circle cx="12" cy="14" r="5"/><circle cx="180" cy="14" r="5"/><circle cx="348" cy="14" r="5"/></svg></span></a>
+          <a class="signal-row" role="row" href="industries/restaurant.html?v=95"><span class="signal-market" role="cell"><i>04</i><strong>Restaurants &amp; Hospitality</strong><b aria-hidden="true">↗</b></span><span class="signal-path" role="cell" aria-label="Discover, build trust, take action"><svg viewBox="0 0 360 28" aria-hidden="true"><path d="M12 14h336"/><circle cx="12" cy="14" r="5"/><circle cx="180" cy="14" r="5"/><circle cx="348" cy="14" r="5"/></svg></span></a>
+          <a class="signal-row" role="row" href="industries/day-care.html?v=95"><span class="signal-market" role="cell"><i>05</i><strong>Daycare &amp; Education</strong><b aria-hidden="true">↗</b></span><span class="signal-path" role="cell" aria-label="Discover, build trust, take action"><svg viewBox="0 0 360 28" aria-hidden="true"><path d="M12 14h336"/><circle cx="12" cy="14" r="5"/><circle cx="180" cy="14" r="5"/><circle cx="348" cy="14" r="5"/></svg></span></a>
+          <a class="signal-row" role="row" href="industries/legal-professional-services.html?v=95"><span class="signal-market" role="cell"><i>06</i><strong>Legal &amp; Professional Services</strong><b aria-hidden="true">↗</b></span><span class="signal-path" role="cell" aria-label="Discover, build trust, take action"><svg viewBox="0 0 360 28" aria-hidden="true"><path d="M12 14h336"/><circle cx="12" cy="14" r="5"/><circle cx="180" cy="14" r="5"/><circle cx="348" cy="14" r="5"/></svg></span></a>
+          <a class="signal-row" role="row" href="industries/real-estate.html?v=95"><span class="signal-market" role="cell"><i>07</i><strong>Real Estate &amp; Property</strong><b aria-hidden="true">↗</b></span><span class="signal-path" role="cell" aria-label="Discover, build trust, take action"><svg viewBox="0 0 360 28" aria-hidden="true"><path d="M12 14h336"/><circle cx="12" cy="14" r="5"/><circle cx="180" cy="14" r="5"/><circle cx="348" cy="14" r="5"/></svg></span></a>
+          <a class="signal-row" role="row" href="industries/retail-ecommerce.html?v=95"><span class="signal-market" role="cell"><i>08</i><strong>Retail &amp; eCommerce</strong><b aria-hidden="true">↗</b></span><span class="signal-path" role="cell" aria-label="Discover, build trust, take action"><svg viewBox="0 0 360 28" aria-hidden="true"><path d="M12 14h336"/><circle cx="12" cy="14" r="5"/><circle cx="180" cy="14" r="5"/><circle cx="348" cy="14" r="5"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="option option-blueprint" aria-labelledby="blueprint-title">
+      <div class="shell">
+        <p class="option-label" id="option-06"><i></i><b>Option 06</b> · The isometric market blueprint</p>
+        <div class="option-head">
+          <div class="option-copy">
+            <p class="section-tag">Industries</p>
+            <h2 id="blueprint-title">Strategy shaped around how your customers actually choose.</h2>
+          </div>
+          <div class="option-side">
+            <p>Different industries have different buying cycles, trust signals, search behavior, and conversion points. We build around those realities.</p>
+            <a class="pill" href="contact.html">Discuss your industry <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="blueprint-layout">
+          <div class="market-blueprint" role="img" aria-label="Custom isometric vector drawing of eight distinct market blocks connected around a shared customer-decision plaza">
+            <svg viewBox="0 0 900 600" aria-hidden="true" focusable="false">
+              <path class="blueprint-ground" d="M450 35 850 240 450 455 50 240Z" />
+              <path class="blueprint-grid" d="M150 188 550 393M250 137 650 342M350 86 750 291M250 291 650 86M350 342 750 137M450 393 850 188" />
+              <path class="blueprint-road" d="M450 83v263M150 240h600" />
+              <path class="blueprint-plaza" d="M450 160 605 240 450 320 295 240Z" />
+              <g class="blueprint-block block-one"><path d="M145 154v-37l38-20 38 20v37l-38 20Z"/><path d="M145 117v-45l38-20 38 20v45l-38 20Z"/><path d="m145 72 38 20 38-20"/><path d="M183 92v45"/></g>
+              <g class="blueprint-block block-two"><path d="M274 219v-33l34-18 34 18v33l-34 18Z"/><path d="M274 186v-53l34-18 34 18v53l-34 18Z"/><path d="m274 133 34 18 34-18"/><path d="M308 151v53"/></g>
+              <g class="blueprint-block block-three"><path d="M404 86v-28l30-16 30 16v28l-30 17Z"/><path d="M404 58V30l30-16 30 16v28l-30 17Z"/><path d="m404 30 30 16 30-16"/><path d="M434 46v28"/></g>
+              <g class="blueprint-block block-four"><path d="M539 153v-38l38-20 38 20v38l-38 20Z"/><path d="M539 115V78l38-20 38 20v37l-38 20Z"/><path d="m539 78 38 20 38-20"/><path d="M577 98v37"/></g>
+              <g class="blueprint-block block-five"><path d="M210 332v-29l31-16 31 16v29l-31 16Z"/><path d="M210 303v-40l31-16 31 16v40l-31 17Z"/><path d="m210 263 31 17 31-17"/><path d="M241 280v40"/></g>
+              <g class="blueprint-block block-six"><path d="M340 398v-39l39-20 39 20v39l-39 20Z"/><path d="M340 359v-31l39-20 39 20v31l-39 20Z"/><path d="m340 328 39 20 39-20"/><path d="M379 348v31"/></g>
+              <g class="blueprint-block block-seven"><path d="M605 332v-45l43-22 43 22v45l-43 22Z"/><path d="M605 287v-40l43-22 43 22v40l-43 22Z"/><path d="m605 247 43 22 43-22"/><path d="M648 269v40"/></g>
+              <g class="blueprint-block block-eight"><path d="M730 219v-31l32-17 32 17v31l-32 17Z"/><path d="M730 188v-42l32-17 32 17v42l-32 17Z"/><path d="m730 146 32 17 32-17"/><path d="M762 163v42"/></g>
+              <g class="blueprint-beacons"><circle cx="183" cy="72" r="5"/><circle cx="308" cy="133" r="5"/><circle cx="434" cy="30" r="5"/><circle cx="577" cy="78" r="5"/><circle cx="241" cy="263" r="5"/><circle cx="379" cy="328" r="5"/><circle cx="648" cy="247" r="5"/><circle cx="762" cy="146" r="5"/></g>
+              <circle class="blueprint-hub" cx="450" cy="240" r="39" />
+              <path class="blueprint-hub-mark" d="M433 240h34m-17-17v34" />
+              <path class="blueprint-register" d="M30 72h35m-35 0v35m840 386h-35m35 0v-35" />
+            </svg>
+            <span class="blueprint-caption">Eight market contexts · one connected strategy</span>
+          </div>
+          <div class="blueprint-index" aria-label="Explore industries">
+            <a href="industries/home-services-contractors.html?v=95"><span>01</span><strong>Home Services &amp; Contractors</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/healthcare.html?v=95"><span>02</span><strong>Medical, Dental &amp; Eye Care</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/auto-repair.html?v=95"><span>03</span><strong>Automotive &amp; Auto Body</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/restaurant.html?v=95"><span>04</span><strong>Restaurants &amp; Hospitality</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/day-care.html?v=95"><span>05</span><strong>Daycare &amp; Education</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/legal-professional-services.html?v=95"><span>06</span><strong>Legal &amp; Professional Services</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/real-estate.html?v=95"><span>07</span><strong>Real Estate &amp; Property</strong><i aria-hidden="true">↗</i></a>
+            <a href="industries/retail-ecommerce.html?v=95"><span>08</span><strong>Retail &amp; eCommerce</strong><i aria-hidden="true">↗</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="preview-footer"><div class="shell"><span>VNW MEDIA · HOMEPAGE INDUSTRY SECTION STUDY</span><a href="index.html#industries">Return to homepage ↗</a></div></footer>
+  <script defer src="site-buttons.js?v=20260928-explore-hover"></script>
 </body>
 </html>
