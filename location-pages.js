@@ -152,6 +152,86 @@
   function cardMarkup(items, className = "indl-card-grid") {
     return `<div class="${className}">${items.map((item, i) => `<article><span>0${i + 1}</span><h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p></article>`).join("")}</div>`;
   }
+  function channelJunctionMarkup(data, facts) {
+    const plans = {
+      "Digital Marketing": {
+        sources: ["Organic search", "Paid search", "Social media", "Referrals"],
+        experience: "Clear website experience",
+        outcome: "Qualified inquiry",
+        outcomeDetail: "A useful next step",
+        description: "Organic search, paid search, social media, and referrals converge at a clear website experience, then lead to an inquiry and a learning loop."
+      },
+      SEO: {
+        sources: ["Local search", "Technical SEO", "Service content", "Reviews & listings"],
+        experience: "Useful service pages",
+        outcome: "Qualified search inquiry",
+        outcomeDetail: "Relevant discovery to action",
+        description: "Local search, technical SEO, useful service content, and business listings support service pages that can turn relevant discovery into an inquiry."
+      },
+      "Web Design": {
+        sources: ["Customer needs", "Clear structure", "Trust signals", "Conversion paths"],
+        experience: "Responsive website",
+        outcome: "Clear next action",
+        outcomeDetail: "Call · form · booking",
+        description: "Customer needs, clear page structure, trust signals, and conversion paths come together in a responsive website that makes the next action clear."
+      },
+      "Google PPC": {
+        sources: ["Search intent", "Local targeting", "Ad messaging", "Lead tracking"],
+        experience: "Relevant landing page",
+        outcome: "Qualified ad inquiry",
+        outcomeDetail: "Measure · learn · refine",
+        description: "Search intent, local targeting, ad messaging, and lead tracking connect through a relevant landing page to a qualified inquiry and ongoing optimization."
+      }
+    };
+    const plan = plans[data.service] || plans["Digital Marketing"];
+    const id = `junction-${data.region}-${data.service.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+    const sourceMarkup = plan.sources.map((source, index) => {
+      const y = 83 + index * 66;
+      const centerY = y + 24;
+      return `<path class="junction-route" d="M 318 ${centerY} C 370 ${centerY} 388 211 438 211" marker-end="url(#${id}-arrow)"></path><rect class="junction-source-box" x="42" y="${y}" width="276" height="48" rx="3"></rect><circle class="junction-source-dot" cx="65" cy="${centerY}" r="4"></circle><text class="junction-source-label" x="82" y="${centerY + 4}">${escapeHtml(source)}</text>`;
+    }).join("");
+    const mapLabel = `${data.service} in ${facts.state}`;
+    return `<figure class="location-junction">
+      <div class="location-junction-scroll" role="region" tabindex="0" aria-label="${escapeHtml(mapLabel)} channel map">
+        <svg class="location-junction-svg" viewBox="0 0 1220 410" role="img" aria-labelledby="${id}-title ${id}-description">
+          <title id="${id}-title">${escapeHtml(mapLabel)} · channel junction</title>
+          <desc id="${id}-description">${escapeHtml(plan.description)}</desc>
+          <defs>
+            <pattern id="${id}-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M 28 0 L 0 0 0 28" fill="none" stroke="#e3ded6" stroke-width="1"></path></pattern>
+            <marker id="${id}-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#00aeef"></path></marker>
+            <marker id="${id}-return-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#798487"></path></marker>
+          </defs>
+          <rect class="junction-board" x="10" y="10" width="1200" height="390" rx="4"></rect>
+          <rect class="junction-grid" x="11" y="11" width="1198" height="388" rx="4" fill="url(#${id}-grid)" opacity=".58"></rect>
+          <text class="junction-column-label" x="42" y="55">WAYS TO BE FOUND</text>
+          <text class="junction-column-label" x="470" y="55">ONE USEFUL EXPERIENCE</text>
+          <text class="junction-column-label" x="900" y="55">THE NEXT STEP</text>
+          ${sourceMarkup}
+          <circle class="junction-meet-point" cx="438" cy="211" r="6"></circle>
+          <path class="junction-route junction-route-main" d="M 445 211 H 476" marker-end="url(#${id}-arrow)"></path>
+          <rect class="junction-browser" x="478" y="112" width="334" height="196" rx="4"></rect>
+          <path class="junction-browser-top" d="M 482 116 H 808 V 151 H 482 Z"></path>
+          <circle class="junction-browser-dot" cx="500" cy="133" r="4"></circle><circle class="junction-browser-dot" cx="514" cy="133" r="4"></circle><circle class="junction-browser-dot" cx="528" cy="133" r="4"></circle>
+          <path class="junction-browser-rule" d="M 548 133 H 600 M 726 133 H 748 M 757 133 H 780"></path>
+          <text class="junction-site-kicker" x="502" y="181">BUILT AROUND THE CUSTOMER</text>
+          <text class="junction-site-title" x="502" y="220">${escapeHtml(plan.experience)}</text>
+          <text class="junction-site-detail" x="502" y="245">CLEAR OFFER · USEFUL PROOF · EASY ACTION</text>
+          <rect class="junction-site-button" x="502" y="265" width="132" height="25" rx="12.5"></rect>
+          <text class="junction-site-button-text" x="568" y="281" text-anchor="middle">Take the next step</text>
+          <path class="junction-route junction-route-main" d="M 812 211 H 900" marker-end="url(#${id}-arrow)"></path>
+          <rect class="junction-outcome-box" x="902" y="163" width="264" height="96" rx="3"></rect>
+          <circle class="junction-outcome-dot" cx="928" cy="191" r="5"></circle>
+          <text class="junction-outcome-kicker" x="945" y="194">A MEANINGFUL CONVERSION</text>
+          <text class="junction-outcome-title" x="928" y="224">${escapeHtml(plan.outcome)}</text>
+          <text class="junction-outcome-detail" x="928" y="244">${escapeHtml(plan.outcomeDetail)}</text>
+          <path class="junction-route-return" d="M 1034 259 V 357 H 646 V 309" marker-end="url(#${id}-return-arrow)"></path>
+          <rect class="junction-feedback-plate" x="744" y="341" width="197" height="30" rx="15"></rect>
+          <text class="junction-feedback-label" x="842.5" y="360" text-anchor="middle">MEASURE · LEARN · REFINE</text>
+        </svg>
+      </div>
+      <figcaption class="location-junction-hint">On smaller screens, scroll the map horizontally to follow the path.</figcaption>
+    </figure>`;
+  }
   function reviewMarkup() {
     return `<section class="testimonials testimonial-ticker-section section" id="reviews" data-nav-theme="dark">
       <div class="shell testimonial-ticker-shell">
@@ -177,7 +257,7 @@
       <section class="trust-strip indl-ticker location-ticker" aria-label="${escapeHtml(data.service)} focus areas"><div class="trust-track"><small>Built around your market</small><i></i><span>${escapeHtml(data.service)}</span><span>Customer experience</span><span>Search visibility</span><span>Local relevance</span><span>Qualified leads</span><span>Clear measurement</span><span>Practical next steps</span></div></section>
       <section class="indl-showcase mockup-direction-section location-showcase" data-nav-theme="light"><div class="shell indl-showcase-grid"><div class="indl-showcase-media"><img src="${asset(data.showcaseImage)}" alt="${escapeHtml(data.showcaseAlt)}" loading="lazy"></div><article class="indl-showcase-copy"><p class="section-tag">Local market context</p><h2>${escapeHtml(data.showcaseTitle)}</h2><p>${escapeHtml(data.showcaseText)}</p><div class="indl-tags">${tags}</div><a class="text-arrow" href="${contact}">Plan your next step <span>↗</span></a></article></div></section>
       <section class="indl-section industry-system-section location-system location-approach" id="local-approach" data-nav-theme="light"><div class="shell"><div class="location-approach-head"><div class="location-approach-copy"><p class="section-tag">How the work fits together · One connected approach</p><h2>${escapeHtml(data.systemTitle)}</h2><p><strong>${escapeHtml(data.service)} for ${facts.state}.</strong> ${escapeHtml(data.systemIntro)}</p><p>${escapeHtml(facts.context)}</p><a class="pill pill-blue location-approach-cta" href="${contact}">Discuss your project <span>↗</span></a></div></div><div class="location-pathway">${pathway}</div></div></section>
-      <section class="indl-section location-overview decision-section" data-nav-theme="light"><div class="shell"><div class="indl-head"><p class="section-tag">${escapeHtml(data.service)} in ${facts.state}</p><h2>${escapeHtml(data.introTitle)}</h2><p>${escapeHtml(data.intro)}</p><p class="location-area-note"><strong>Markets we can discuss</strong><br>${escapeHtml(facts.places)}. Coverage is confirmed against your actual service area.</p></div>${cardMarkup(data.cards)}</div></section>
+      <section class="indl-section location-overview decision-section" data-nav-theme="light"><div class="shell"><div class="indl-head"><p class="section-tag">${escapeHtml(data.service)} in ${facts.state}</p><h2>${escapeHtml(data.introTitle)}</h2><p>${escapeHtml(data.intro)}</p><p class="location-area-note"><strong>Markets we can discuss</strong><br>${escapeHtml(facts.places)}. Coverage is confirmed against your actual service area.</p></div>${channelJunctionMarkup(data, facts)}${cardMarkup(data.cards, "location-junction-steps")}</div></section>
       ${reviewMarkup()}
       <section class="indl-faq location-faq" id="faq" data-nav-theme="light"><div class="shell indl-faq-grid"><div class="indl-faq-intro"><p class="section-tag">${escapeHtml(data.service)} in ${facts.state} · FAQs</p><h2>Useful answers before we begin.</h2><p>Every project depends on the business, market, and priorities. Here are a few common questions.</p><a class="pill pill-blue" href="${contact}">Ask about your project <span>↗</span></a></div><div class="indl-faq-list">${faq}</div></div></section>
     </main>`;

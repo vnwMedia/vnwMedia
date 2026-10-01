@@ -46,3 +46,43 @@
 .location-directory-cta h2{font-size:40px}.location-directory-cta p{color:#bac2c4}
 @media(max-width:1000px){.location-hero-form{max-width:620px;justify-self:start}.location-state-grid{grid-template-columns:1fr}.location-state-card>p:not(.section-tag){min-height:auto}.location-approach .location-approach-copy{width:100%}.location-approach .location-approach-cta{margin:14px 0 0}.location-pathway{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:0}.location-path-step{min-height:245px}.location-path-step:nth-child(2){margin-right:0;border-right:0}.location-path-step:nth-child(1),.location-path-step:nth-child(2){border-bottom:1px solid #d5d0c8}.location-path-step:nth-child(3),.location-path-step:nth-child(4){padding-top:29px}.location-path-step:nth-child(3):before,.location-path-step:nth-child(4):before{top:-9px}}
 @media(max-width:640px){.location-hero-form{max-width:none}.location-state-card{padding:25px}.location-directory-hero{padding:145px 0 60px}.location-approach .location-approach-head{margin-bottom:42px}.location-approach .location-approach-copy h2{font-size:42px}.location-approach .location-approach-copy>p:not(.section-tag){font-size:15px}.location-pathway{grid-template-columns:1fr;margin-left:7px;border-top:0;border-left:1px solid #d2cdc6}.location-path-step,.location-path-step:nth-child(3),.location-path-step:nth-child(4){min-height:0;margin:0 0 26px;padding:0 0 28px 26px;border-right:0;border-bottom:1px solid #d5d0c8}.location-path-step:last-child{margin-bottom:0;border-bottom:0}.location-path-step:before,.location-path-step:nth-child(3):before,.location-path-step:nth-child(4):before{top:1px;left:-8px}.location-path-index{margin:0 0 13px}.location-path-step h3{max-width:none;margin-bottom:9px;font-size:30px}.location-path-step p{max-width:none}}
+.location-overview .indl-head{width:80%;max-width:none;margin-bottom:36px}
+.location-overview .indl-head h2,.location-overview .indl-head p:not(.section-tag){max-width:none}
+.location-junction{margin:0}
+.location-junction-scroll{overflow-x:auto;overscroll-behavior-inline:contain;border:1px solid #d8d4cf;background:#f8f5ef;scrollbar-color:#00aeef #e4dfd7;scrollbar-width:thin}
+.location-junction-scroll:focus-visible{outline:2px solid #00aeef;outline-offset:4px}
+.location-junction-svg{display:block;width:100%;min-width:860px;height:auto}
+.junction-board{fill:#f8f5ef;stroke:#d8d4cf;stroke-width:1}
+.junction-column-label{fill:#7d8587;font:600 9px Inter,Arial,sans-serif;letter-spacing:1.35px}
+.junction-route{fill:none;stroke:#00aeef;stroke-width:1.8;opacity:.68}
+.junction-route-main{stroke-width:2.5;opacity:1}
+.junction-route-return{fill:none;stroke:#798487;stroke-width:1.6;stroke-dasharray:4 6;opacity:.9}
+.junction-source-box{fill:#fff;stroke:#d8d4cf;stroke-width:1}
+.junction-source-dot,.junction-meet-point{fill:#00aeef}
+.junction-source-label{fill:#24292a;font:500 12px Inter,Arial,sans-serif}
+.junction-browser{fill:#fff;stroke:#bfc7c7;stroke-width:1.2}
+.junction-browser-top{fill:#141a1d}
+.junction-browser-dot{fill:#00aeef}
+.junction-browser-rule{fill:none;stroke:#7e8a8d;stroke-width:3;stroke-linecap:round}
+.junction-site-kicker{fill:#6c7578;font:600 8px Inter,Arial,sans-serif;letter-spacing:1px}
+.junction-site-title{fill:#15191a;font:400 20px Fraunces,Georgia,serif}
+.junction-site-detail{fill:#747b7d;font:600 7px Inter,Arial,sans-serif;letter-spacing:.75px}
+.junction-site-button{fill:#00aeef}
+.junction-site-button-text{fill:#fff;font:600 8px Inter,Arial,sans-serif}
+.junction-outcome-box{fill:#141a1d;stroke:#141a1d}
+.junction-outcome-dot{fill:#00aeef}
+.junction-outcome-kicker{fill:#a6afb1;font:600 7px Inter,Arial,sans-serif;letter-spacing:.9px}
+.junction-outcome-title{fill:#fff;font:400 17px Fraunces,Georgia,serif}
+.junction-outcome-detail{fill:#aab2b4;font:400 8px Inter,Arial,sans-serif}
+.junction-feedback-plate{fill:#f8f5ef;stroke:#d8d4cf;stroke-width:1}
+.junction-feedback-label{fill:#687275;font:600 8px Inter,Arial,sans-serif;letter-spacing:1px}
+.location-junction-hint{display:none}
+.location-junction-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:28px;border-top:1px solid #d8d4cf}
+.location-junction-steps article{min-height:206px;display:flex;flex-direction:column;padding:23px 22px 8px;border:0;border-right:1px solid #d8d4cf;background:transparent!important;color:#111!important}
+.location-junction-steps article:first-child{padding-left:0}
+.location-junction-steps article:last-child{padding-right:0;border-right:0}
+.location-junction-steps span{color:#00a6e8!important;font-size:10px;letter-spacing:.14em}
+.location-junction-steps h3{margin:auto 0 10px;color:#111;font:400 clamp(25px,2.4vw,32px)/1 Fraunces,Georgia,serif}
+.location-junction-steps p{max-width:290px;margin:0;color:#666!important;font-size:13px;line-height:1.55}
+@media(max-width:1000px){.location-overview .indl-head{width:100%}.location-junction-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.location-junction-steps article{min-height:180px;padding:21px;border-bottom:1px solid #d8d4cf}.location-junction-steps article:first-child{padding-left:0}.location-junction-steps article:nth-child(2){padding-right:0;border-right:0}.location-junction-steps article:nth-child(3){padding-left:0}.location-junction-steps article:last-child{padding-right:0;border-bottom:0}}
+@media(max-width:640px){.location-junction-svg{min-width:900px}.location-junction-hint{display:block;margin:9px 0 0;color:#777;font-size:11px}.location-junction-steps{grid-template-columns:1fr;margin-top:20px}.location-junction-steps article,.location-junction-steps article:first-child,.location-junction-steps article:nth-child(2),.location-junction-steps article:nth-child(3),.location-junction-steps article:last-child{min-height:0;padding:18px 0;border-right:0;border-bottom:1px solid #d8d4cf}.location-junction-steps article:last-child{border-bottom:0}.location-junction-steps h3{margin:20px 0 8px;font-size:28px}.location-junction-steps p{max-width:none}}
