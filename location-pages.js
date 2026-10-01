@@ -152,6 +152,36 @@
   function cardMarkup(items, className = "indl-card-grid") {
     return `<div class="${className}">${items.map((item, i) => `<article><span>0${i + 1}</span><h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p></article>`).join("")}</div>`;
   }
+  function websiteBlueprintMarkup(data, facts) {
+    const stages = {
+      "Digital Marketing": ["Strategy", "Experience", "Visibility", "Follow-up"],
+      SEO: ["Research", "Technical", "Content", "Measurement"],
+      "Web Design": ["Structure", "Design", "Content", "Launch"],
+      "Google PPC": ["Targeting", "Campaign", "Landing page", "Tracking"]
+    }[data.service] || ["Structure", "Design", "Content", "Launch"];
+    const id = `blueprint-${data.region}-${data.service.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+    const labels = stages.map((stage, index) => `<text class="location-blueprint-callout-label" x="${index % 2 === 0 ? 9 : 580}" y="${index < 2 ? 101 : 366}">0${index + 1} · ${escapeHtml(stage.toUpperCase())}</text>`).join("");
+    const steps = data.offerings.map((item, index) => `<article><span class="location-blueprint-step-no">0${index + 1}</span><div><h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p></div></article>`).join("");
+    return `<div class="location-blueprint-layout">
+      <figure class="location-blueprint-visual">
+        <div class="location-blueprint-scroll" role="region" tabindex="0" aria-label="${escapeHtml(data.service)} website blueprint for ${facts.state}">
+          <svg viewBox="0 0 700 455" role="img" aria-labelledby="${id}-title ${id}-desc">
+            <title id="${id}-title">${escapeHtml(data.service)} website blueprint</title>
+            <desc id="${id}-desc">A website wireframe surrounded by four connected stages: ${stages.map(escapeHtml).join(", ")}.</desc>
+            <rect class="location-blueprint-browser-frame" x="100" y="48" width="500" height="350" rx="7"/><path class="location-blueprint-browser-bar" d="M107 55h486v31H107z"/><circle class="location-blueprint-browser-dot" cx="124" cy="70" r="4"/><circle class="location-blueprint-browser-dot" cx="139" cy="70" r="4"/><circle class="location-blueprint-browser-dot" cx="154" cy="70" r="4"/><rect class="location-blueprint-screen-panel" x="119" y="101" width="462" height="275"/>
+            <rect class="location-blueprint-screen-dark" x="119" y="101" width="462" height="94"/><rect class="location-blueprint-screen-line" x="140" y="118" width="54" height="5" rx="2"/><rect class="location-blueprint-screen-line" x="433" y="118" width="32" height="4" rx="2"/><rect class="location-blueprint-screen-line" x="474" y="118" width="37" height="4" rx="2"/><rect class="location-blueprint-screen-line" x="519" y="118" width="42" height="4" rx="2"/>
+            <text class="location-blueprint-screen-label" x="140" y="147">A CLEAR SERVICE STORY</text><rect class="location-blueprint-screen-gray" x="140" y="160" width="226" height="6" rx="3"/><rect class="location-blueprint-screen-gray" x="140" y="174" width="180" height="5" rx="2"/><rect class="location-blueprint-screen-blue" x="388" y="144" width="168" height="37" rx="3"/>
+            <rect class="location-blueprint-screen-gray" x="140" y="215" width="150" height="8" rx="3"/><rect class="location-blueprint-screen-line" x="140" y="235" width="186" height="5" rx="2"/><rect class="location-blueprint-screen-line" x="140" y="248" width="164" height="5" rx="2"/><rect class="location-blueprint-screen-line" x="140" y="261" width="176" height="5" rx="2"/>
+            <rect class="location-blueprint-screen-blue" x="140" y="283" width="110" height="32" rx="3"/><rect class="location-blueprint-screen-gray" x="140" y="337" width="122" height="25" rx="2"/><rect class="location-blueprint-screen-gray" x="274" y="337" width="122" height="25" rx="2"/><rect class="location-blueprint-screen-gray" x="408" y="337" width="148" height="25" rx="2"/>
+            <path class="location-blueprint-callout-line" d="M31 113H78L119 138M669 113H625L557 160M31 345H78L140 299M669 345H625L581 348"/><circle class="location-blueprint-callout-dot" cx="119" cy="138" r="4"/><circle class="location-blueprint-callout-dot" cx="557" cy="160" r="4"/><circle class="location-blueprint-callout-dot" cx="140" cy="299" r="4"/><circle class="location-blueprint-callout-dot" cx="581" cy="348" r="4"/>
+            ${labels}
+            <text class="location-blueprint-screen-heading" x="140" y="229">A site visitors can use.</text><text class="location-blueprint-screen-small" x="140" y="277">Clear service paths · useful proof · easy next steps</text>
+          </svg>
+        </div>
+      </figure>
+      <div class="location-blueprint-list">${steps}</div>
+    </div>`;
+  }
   function channelJunctionMarkup(data, facts) {
     const plans = {
       "Digital Marketing": {
@@ -249,14 +279,13 @@
     </section>`;
   }
   function pageMarkup(data, facts) {
-    const pathway = data.offerings.map((item, i) => `<article class="location-path-step"><span class="location-path-index">0${i + 1}</span><h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p></article>`).join("");
     const faq = data.faq.map(([question, answer], i) => `<details${i === 0 ? " open" : ""}><summary>${escapeHtml(question)}<span aria-hidden="true">+</span></summary><p>${escapeHtml(answer)}</p></details>`).join("");
     const tags = data.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join("");
     return `<main id="top" class="location-main">
       <section class="indl-hero location-hero" data-nav-theme="dark"><div class="indl-hero-media"><img src="${asset(`assets/location-heroes/${data.image}`)}" alt="${escapeHtml(data.alt)}" fetchpriority="high"></div><div class="indl-hero-shade"></div><div class="shell indl-hero-inner"><div class="indl-hero-copy"><p class="section-tag">${escapeHtml(data.service)} · ${facts.state}</p><h1>${escapeHtml(data.hero)}</h1><p>${escapeHtml(data.lead)}</p><div class="indl-actions"><a class="pill pill-blue pill-large" href="${contact}">Discuss ${escapeHtml(data.service)} in ${facts.state} <span>↗</span></a><a class="pill pill-outline pill-large" href="#local-approach">Explore the approach</a></div></div>${heroFormMarkup(data, facts)}</div></section>
       <section class="trust-strip indl-ticker location-ticker" aria-label="${escapeHtml(data.service)} focus areas"><div class="trust-track"><small>Built around your market</small><i></i><span>${escapeHtml(data.service)}</span><span>Customer experience</span><span>Search visibility</span><span>Local relevance</span><span>Qualified leads</span><span>Clear measurement</span><span>Practical next steps</span></div></section>
       <section class="indl-showcase mockup-direction-section location-showcase" data-nav-theme="light"><div class="shell indl-showcase-grid"><div class="indl-showcase-media"><img src="${asset(data.showcaseImage)}" alt="${escapeHtml(data.showcaseAlt)}" loading="lazy"></div><article class="indl-showcase-copy"><p class="section-tag">Local market context</p><h2>${escapeHtml(data.showcaseTitle)}</h2><p>${escapeHtml(data.showcaseText)}</p><div class="indl-tags">${tags}</div><a class="text-arrow" href="${contact}">Plan your next step <span>↗</span></a></article></div></section>
-      <section class="indl-section industry-system-section location-system location-approach" id="local-approach" data-nav-theme="light"><div class="shell"><div class="location-approach-head"><div class="location-approach-copy"><p class="section-tag">How the work fits together · One connected approach</p><h2>${escapeHtml(data.systemTitle)}</h2><p><strong>${escapeHtml(data.service)} for ${facts.state}.</strong> ${escapeHtml(data.systemIntro)}</p><p>${escapeHtml(facts.context)}</p><a class="pill pill-blue location-approach-cta" href="${contact}">Discuss your project <span>↗</span></a></div></div><div class="location-pathway">${pathway}</div></div></section>
+      <section class="indl-section industry-system-section location-system location-approach" id="local-approach" data-nav-theme="dark"><div class="shell"><div class="location-approach-head"><div class="location-approach-copy"><p class="section-tag">How the work fits together · One connected approach</p><h2>${escapeHtml(data.systemTitle)}</h2><p><strong>${escapeHtml(data.service)} for ${facts.state}.</strong> ${escapeHtml(data.systemIntro)}</p><p>${escapeHtml(facts.context)}</p><a class="pill pill-blue location-approach-cta" href="${contact}">Discuss your project <span>↗</span></a></div></div>${websiteBlueprintMarkup(data, facts)}</div></section>
       <section class="indl-section location-overview decision-section" data-nav-theme="light"><div class="shell"><div class="indl-head"><p class="section-tag">${escapeHtml(data.service)} in ${facts.state}</p><h2>${escapeHtml(data.introTitle)}</h2><p>${escapeHtml(data.intro)}</p><p class="location-area-note"><strong>Markets we can discuss</strong><br>${escapeHtml(facts.places)}. Coverage is confirmed against your actual service area.</p></div>${channelJunctionMarkup(data, facts)}${cardMarkup(data.cards, "location-junction-steps")}</div></section>
       ${reviewMarkup()}
       <section class="indl-faq location-faq" id="faq" data-nav-theme="light"><div class="shell indl-faq-grid"><div class="indl-faq-intro"><p class="section-tag">${escapeHtml(data.service)} in ${facts.state} · FAQs</p><h2>Useful answers before we begin.</h2><p>Every project depends on the business, market, and priorities. Here are a few common questions.</p><a class="pill pill-blue" href="${contact}">Ask about your project <span>↗</span></a></div><div class="indl-faq-list">${faq}</div></div></section>

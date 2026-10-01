@@ -86,3 +86,37 @@
 .location-junction-steps p{max-width:290px;margin:0;color:#666!important;font-size:13px;line-height:1.55}
 @media(max-width:1000px){.location-overview .indl-head{width:100%}.location-junction-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.location-junction-steps article{min-height:180px;padding:21px;border-bottom:1px solid #d8d4cf}.location-junction-steps article:first-child{padding-left:0}.location-junction-steps article:nth-child(2){padding-right:0;border-right:0}.location-junction-steps article:nth-child(3){padding-left:0}.location-junction-steps article:last-child{padding-right:0;border-bottom:0}}
 @media(max-width:640px){.location-junction-svg{min-width:900px}.location-junction-hint{display:block;margin:9px 0 0;color:#777;font-size:11px}.location-junction-steps{grid-template-columns:1fr;margin-top:20px}.location-junction-steps article,.location-junction-steps article:first-child,.location-junction-steps article:nth-child(2),.location-junction-steps article:nth-child(3),.location-junction-steps article:last-child{min-height:0;padding:18px 0;border-right:0;border-bottom:1px solid #d8d4cf}.location-junction-steps article:last-child{border-bottom:0}.location-junction-steps h3{margin:20px 0 8px;font-size:28px}.location-junction-steps p{max-width:none}}
+.industry-location main>.indl-section.location-approach{background:#111719!important;color:#f6f5f1!important}
+.location-approach .location-approach-head{display:block;margin:0}
+.location-approach .location-approach-copy{width:70%;max-width:850px}
+.location-approach .location-approach-copy>.section-tag{margin:0 0 24px;color:#9da6a8!important}
+.location-approach .location-approach-copy h2{max-width:none;margin:0 0 19px;color:#fff!important;font-size:clamp(42px,5vw,66px);line-height:.98;letter-spacing:-.04em}
+.location-approach .location-approach-copy>p:not(.section-tag){max-width:none;margin:0 0 13px;color:#bdc5c6!important;font-size:15px;line-height:1.65}
+.location-approach .location-approach-copy>p strong{color:#fff!important}
+.location-approach .location-approach-cta{display:inline-flex;margin:20px 0 0;white-space:nowrap}
+.location-blueprint-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center;margin-top:42px;padding-top:36px;border-top:1px solid #3b4448}
+.location-blueprint-visual{min-width:0;margin:0}
+.location-blueprint-scroll{overflow-x:auto;scrollbar-color:#00aeef #283135;scrollbar-width:thin}
+.location-blueprint-scroll:focus-visible{outline:2px solid #00aeef;outline-offset:4px}
+.location-blueprint-visual svg{display:block;width:100%;height:auto}
+.location-blueprint-browser-frame{fill:#eae7e0;stroke:#546064;stroke-width:2}
+.location-blueprint-browser-bar{fill:#d8d5ce}
+.location-blueprint-browser-dot{fill:#00aeef}
+.location-blueprint-screen-panel{fill:#fff}
+.location-blueprint-screen-dark{fill:#141b1e}
+.location-blueprint-screen-blue{fill:#00aeef}
+.location-blueprint-screen-gray{fill:#d7dce0}
+.location-blueprint-screen-line{fill:#9ba3a5}
+.location-blueprint-screen-label{fill:#eaf0f0;font:500 11px Inter,Arial,sans-serif;letter-spacing:1px}
+.location-blueprint-screen-heading{fill:#171a1b;font:400 18px Fraunces,Georgia,serif}
+.location-blueprint-screen-small{fill:#676f71;font:400 8px Inter,Arial,sans-serif}
+.location-blueprint-callout-line{fill:none;stroke:#00aeef;stroke-width:2}
+.location-blueprint-callout-dot{fill:#00aeef}
+.location-blueprint-callout-label{fill:#36b9eb;font:600 9px Inter,Arial,sans-serif;letter-spacing:1px}
+.location-blueprint-list{border-top:1px solid #3b4448}
+.location-blueprint-list article{display:grid;grid-template-columns:36px minmax(0,1fr);gap:15px;padding:16px 0;border-bottom:1px solid #3b4448}
+.location-blueprint-step-no{padding-top:3px;color:#00aeef;font-size:10px;font-weight:600;letter-spacing:.16em}
+.location-blueprint-list h3{margin:0 0 6px;color:#fff;font:400 25px/1 Fraunces,Georgia,serif;letter-spacing:-.025em}
+.location-blueprint-list p{margin:0;color:#adb6b8;font-size:12px;line-height:1.55}
+@media(max-width:1000px){.location-approach .location-approach-copy{width:100%}.location-blueprint-layout{grid-template-columns:1fr;gap:32px}}
+@media(max-width:560px){.location-approach .location-approach-copy h2{font-size:40px}.location-approach .location-approach-copy>p:not(.section-tag){font-size:14px}.location-blueprint-layout{margin-top:29px;padding-top:25px;gap:20px}.location-blueprint-visual svg{width:560px;max-width:none}.location-blueprint-list article{padding:14px 0}.location-blueprint-list h3{font-size:23px}}
