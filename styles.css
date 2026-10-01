@@ -1925,7 +1925,8 @@ body h2{
 .service-detail-grid p:not(.section-tag){color:#626262}
 .service-deliverables{list-style:none;padding:0;margin:0;border-top:1px solid #d4d0c9}
 .service-deliverables li{padding:20px 0;border-bottom:1px solid #d4d0c9;font-size:18px}
-.footer-grid:has(.footer-services){grid-template-columns:1.05fr 2.5fr 1.45fr;gap:54px}
+.footer-grid:has(.footer-services){grid-template-columns:1.25fr 1.1fr 1.2fr 1.1fr 1.65fr;gap:28px}
+.footer-services,.footer-service-pillars{display:contents}
 .footer-services{min-width:0}
 .footer-service-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px;align-items:start}
 .footer-service-links a{font-size:13px;line-height:1.5;overflow-wrap:anywhere}
@@ -2322,7 +2323,7 @@ body[data-page="contact"] .contact-headline-highlight{color:#00aeef}
 .footer-service-group a{display:block;padding:3px 0;color:#aaa;font-size:11px;line-height:1.35}
 .footer-service-group a:hover,.footer-service-group a:focus-visible{color:var(--orange)}
 .footer-services .footer-all-services{display:inline-flex;gap:8px;margin-top:23px;font-size:12px}
-@media(max-width:1100px){.footer-grid:has(.footer-services){grid-template-columns:1fr 2fr;gap:38px}.footer-company{grid-column:1/-1}.footer-service-pillars{gap:20px}}
+@media(max-width:1100px){.footer-grid:has(.footer-services){grid-template-columns:1fr 2fr;gap:38px}.footer-services{display:block}.footer-service-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.footer-company{grid-column:1/-1}}
 @media(max-width:800px){.footer-grid:has(.footer-services){grid-template-columns:1fr}.footer-about,.footer-company{grid-column:auto}.footer-service-pillars{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-service-pillar:last-child{grid-column:1/-1}}
 @media(max-width:560px){.footer-service-pillars{grid-template-columns:1fr}.footer-service-pillar:last-child{grid-column:auto}.footer-service-pillar{padding-top:18px;border-top:1px solid #292929}.footer-service-group a{font-size:12px}}
 @media(max-width:560px){.plan-copy h2 span{white-space:normal}}
