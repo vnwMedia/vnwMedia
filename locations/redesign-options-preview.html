@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Locations Design Options | VNW Media</title>
+  <meta name="description" content="Two visual directions for the VNW Media New Jersey and New York service-area directory.">
+  <link rel="stylesheet" href="../styles.css?v=20260930-footer-company-contact-v4">
+  <link rel="stylesheet" href="../location-pages.css?v=20261001-locations-directory-v1">
+  <style>
+    body.locations-preview{background:#f4f0e9;color:#111}
+    .locations-preview-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px max(24px,calc((100vw - 1152px)/2));color:#fff;background:#111719}
+    .locations-preview-bar img{width:188px;height:auto}
+    .locations-preview-bar span{color:#aab2b4;font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+    .locations-preview-intro{padding:92px 0 54px}
+    .locations-preview-intro .section-tag,.location-option-label span{color:#00a6e8;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+    .locations-preview-intro h1{max-width:880px;margin:0 0 18px;font-size:clamp(48px,7vw,78px);line-height:.94;letter-spacing:-.045em}
+    .locations-preview-intro p:not(.section-tag){max-width:670px;color:#646b6d}
+    .location-option{padding:80px 0 105px;border-top:1px solid #d8d2ca}
+    .location-option-heading{display:grid;grid-template-columns:1fr .72fr;gap:60px;align-items:end;margin-bottom:36px}
+    .location-option-label{display:flex;gap:14px;align-items:center;margin-bottom:20px;color:#747b7e;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+    .location-option-label:before{width:28px;height:1px;background:#7f8789;content:""}
+    .location-option-heading h2{max-width:720px;margin:0;font-size:clamp(40px,5vw,58px);line-height:.98;letter-spacing:-.04em}
+    .location-option-heading>p{max-width:430px;margin:0;color:#646b6d;font-size:14px}
+    .atlas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .atlas-card{overflow:hidden;border:1px solid #d8d2ca;background:#fff}
+    .atlas-image{position:relative;height:260px;overflow:hidden;background:#151b1d}
+    .atlas-image:after{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,12,13,.4),transparent 70%),linear-gradient(0deg,rgba(8,12,13,.45),transparent 60%);content:""}
+    .atlas-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .atlas-card:hover .atlas-image img{transform:scale(1.025)}
+    .atlas-image strong{position:absolute;z-index:1;left:26px;bottom:17px;color:#fff;font:400 70px/.9 Fraunces,serif;letter-spacing:-.05em}
+    .atlas-image small{position:absolute;z-index:1;right:24px;bottom:25px;color:#fff;font-size:9px;letter-spacing:.18em;text-transform:uppercase}
+    .atlas-copy{padding:27px 30px 29px}
+    .atlas-copy .section-tag{margin-bottom:12px;font-size:9px}
+    .atlas-copy h3{margin:0 0 12px;font-size:36px;line-height:.98}
+    .atlas-copy>p:not(.section-tag){min-height:75px;margin:0 0 20px;color:#646b6d;font-size:13px}
+    .atlas-links{border-top:1px solid #ded9d2}
+    .atlas-links a{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #ded9d2;font-size:13px;transition:color .2s,padding .2s}
+    .atlas-links a:hover,.atlas-links a:focus-visible{padding-inline:5px;color:#009fdc;outline:none}
+    .atlas-links span{color:#00a6e8}
+    .option-routes{color:#fff;background:#111719}
+    .option-routes .location-option-heading>p{color:#aeb7b9}
+    .market-routes{border-top:1px solid #394246}
+    .market-route{display:grid;grid-template-columns:.72fr 1.28fr;gap:50px;align-items:stretch;padding:30px 0;border-bottom:1px solid #394246}
+    .market-route-title{position:relative;display:flex;flex-direction:column;justify-content:center;padding-left:30px}
+    .market-route-title:before{position:absolute;left:0;top:50%;width:12px;height:12px;border:2px solid #00aeef;border-radius:50%;background:#111719;box-shadow:0 0 0 5px rgba(0,174,239,.12);content:"";transform:translateY(-50%)}
+    .market-route-title span{color:#00aeef;font-size:10px;font-weight:600;letter-spacing:.15em}
+    .market-route-title h3{margin:12px 0 9px;font-size:44px;line-height:.95}
+    .market-route-title p{max-width:430px;margin:0;color:#aab2b4;font-size:12px}
+    .market-route-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    .market-route-links a{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:17px 18px;border:1px solid #354044;background:#151d20;color:#f5f3ee;font-size:14px;transition:border-color .2s,background .2s,color .2s}
+    .market-route-links a:hover,.market-route-links a:focus-visible{border-color:#00aeef;background:#10232a;color:#fff;outline:none}
+    .market-route-links span{color:#00aeef;font-size:18px}
+    .locations-preview-end{padding:25px 0 55px;color:#72797b;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    @media(max-width:800px){.location-option-heading{grid-template-columns:1fr;gap:20px}.market-route{grid-template-columns:1fr;gap:25px}}
+    @media(max-width:600px){.locations-preview-bar{align-items:flex-start;flex-direction:column;padding:15px 20px}.locations-preview-bar img{width:162px}.locations-preview-intro{padding:70px 0 40px}.location-option{padding:60px 0 75px}.atlas-grid{grid-template-columns:1fr}.atlas-image{height:205px}.atlas-copy{padding:23px 21px}.atlas-copy h3{font-size:32px}.atlas-copy>p:not(.section-tag){min-height:0}.market-route{padding:25px 0}.market-route-title h3{font-size:38px}.market-route-links{grid-template-columns:1fr}.market-route-links a{min-height:62px}}
+  </style>
+</head>
+<body class="locations-preview">
+  <header class="locations-preview-bar"><a href="../index.html" aria-label="VNW Media home"><img src="../assets/vnwMedia-LogoBlk.png" alt="VNW Media"></a><span>Locations · Design directions</span></header>
+  <main>
+    <section class="locations-preview-intro"><div class="shell"><p class="section-tag">New Jersey &amp; New York</p><h1>Two ways to make the right market feel closer.</h1><p>Explore two visual directions for the location directory. Both keep the same service links and market-specific information; the difference is how visitors orient themselves.</p></div></section>
+    <section class="location-option"><div class="shell"><header class="location-option-heading"><div><p class="location-option-label"><span>Option 01 · Regional atlas</span></p><h2>Choose a market through place and perspective.</h2></div><p>Image-led editorial cards give each state its own sense of place, then keep the four service paths clear and easy to scan.</p></header><div class="atlas-grid">
+      <article class="atlas-card"><div class="atlas-image"><img src="../assets/location-heroes/nj-digital-marketing.jpg" alt="Business owners reviewing a website together"><strong>NJ</strong><small>01 / New Jersey</small></div><div class="atlas-copy"><p class="section-tag">Morganville · Statewide coverage</p><h3>New Jersey</h3><p>VNW Media is based in Morganville and works with businesses across New Jersey. Plans reflect each company’s actual service footprint and goals.</p><div class="atlas-links"><a href="new-jersey/digital-marketing-new-jersey/">Digital marketing <span>↗</span></a><a href="new-jersey/seo-new-jersey/">SEO <span>↗</span></a><a href="new-jersey/web-design-new-jersey/">Web design <span>↗</span></a><a href="new-jersey/ppc-new-jersey/">Google Ads <span>↗</span></a></div></div></article>
+      <article class="atlas-card"><div class="atlas-image"><img src="../assets/location-heroes/ny-digital-marketing.jpg" alt="New York business team discussing a digital project"><strong>NY</strong><small>02 / New York</small></div><div class="atlas-copy"><p class="section-tag">Remote-first · Local context</p><h3>New York</h3><p>Collaborative planning for New York businesses, shaped around the communities they serve, their customers, and market context.</p><div class="atlas-links"><a href="new-york/digital-marketing-new-york/">Digital marketing <span>↗</span></a><a href="new-york/seo-new-york/">SEO <span>↗</span></a><a href="new-york/web-design-new-york/">Web design <span>↗</span></a><a href="new-york/ppc-new-york/">Google Ads <span>↗</span></a></div></div></article>
+    </div></div></section>
+    <section class="location-option option-routes"><div class="shell"><header class="location-option-heading"><div><p class="location-option-label"><span>Option 02 · Market routes</span></p><h2>Start with the place. Follow the path that fits.</h2></div><p>A darker, more graphic index treats each state as a clear starting point and the service pages as connected routes—not a stack of cards.</p></header><div class="market-routes">
+      <article class="market-route"><div class="market-route-title"><span>01 / MARKET</span><h3>New Jersey</h3><p>Local perspective, with service coverage confirmed against the business’s real operating area.</p></div><div class="market-route-links"><a href="new-jersey/digital-marketing-new-jersey/">Digital marketing <span>↗</span></a><a href="new-jersey/seo-new-jersey/">SEO <span>↗</span></a><a href="new-jersey/web-design-new-jersey/">Web design <span>↗</span></a><a href="new-jersey/ppc-new-jersey/">Google Ads <span>↗</span></a></div></article>
+      <article class="market-route"><div class="market-route-title"><span>02 / MARKET</span><h3>New York</h3><p>Remote-first collaboration shaped around the places your business genuinely serves.</p></div><div class="market-route-links"><a href="new-york/digital-marketing-new-york/">Digital marketing <span>↗</span></a><a href="new-york/seo-new-york/">SEO <span>↗</span></a><a href="new-york/web-design-new-york/">Web design <span>↗</span></a><a href="new-york/ppc-new-york/">Google Ads <span>↗</span></a></div></article>
+    </div></div></section>
+  </main>
+  <footer class="locations-preview-end"><div class="shell">VNW Media · Location directory design preview</div></footer>
+</body>
+</html>
