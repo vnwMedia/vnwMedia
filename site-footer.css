@@ -309,7 +309,7 @@
 #vnw-site-footer .footer-service-group a:hover,#vnw-site-footer .footer-service-group a:focus-visible{color: var(--orange);}
 #vnw-site-footer .footer-services .footer-all-services{display: inline-flex; gap: 8px; margin-top: 23px; font-size: 12px;}
 @media (max-width: 1100px){#vnw-site-footer .footer-grid:has(.footer-services){grid-template-columns: 1fr 2fr; gap: 38px;}
-#vnw-site-footer .footer-services{display: block;}
+#vnw-site-footer .footer-grid > div.footer-services{display: block;}
 #vnw-site-footer .footer-service-pillars{display: grid; grid-template-columns: repeat(3, minmax(0px, 1fr)); gap: 20px;}
 #vnw-site-footer .footer-company{grid-column: 1 / -1;}
 #vnw-site-footer .footer-service-pillars{gap: 20px;}}
