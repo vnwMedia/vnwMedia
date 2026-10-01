@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Location Overview Redesign Options | VNW Media</title>
+  <meta name="description" content="Four visual directions for the location-page overview section. Preview only; no live pages changed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root{--blue:#00aeef;--ink:#121212;--warm:#f4f0e9;--line:#d9d4cc}
+    body{background:#e9e6df;color:var(--ink)}
+    .preview-bar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:15px max(28px,calc((100vw - 1320px)/2));color:#f6f4f0;background:#111719}
+    .preview-brand{display:flex;align-items:center;gap:18px}.preview-brand img{width:164px;height:auto}.preview-brand span,.preview-badge{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}.preview-badge{padding:8px 11px;border:1px solid #445057;border-radius:999px;color:#c8d2d4}
+    .preview-intro{padding:54px 0 42px;background:#f4f0e9}.preview-intro .shell{max-width:1320px}.preview-intro .section-tag{margin-bottom:17px}.preview-intro h1{max-width:900px;margin:0 0 15px;font-size:clamp(44px,6vw,76px);line-height:.96;letter-spacing:-.045em}.preview-intro>div>p:last-child{max-width:700px;margin:0;color:#656b6d;font-size:16px}
+    .option{padding:68px 0 84px}.option .shell{max-width:1320px}.option-label{display:flex;align-items:center;gap:15px;margin:0 0 26px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}.option-label b{color:var(--blue);font-weight:600}.option-label i{width:24px;height:1px;background:currentColor;opacity:.55}
+    .option h2{margin:0 0 20px;font:400 clamp(40px,5vw,65px)/.98 Fraunces,Georgia,serif;letter-spacing:-.04em}.option p{font-family:Inter,system-ui,sans-serif}.option .intro-copy{margin:0;color:#62686a;font-size:16px;line-height:1.62}.option .intro-copy strong{color:#181818;font-weight:600}.market-note{padding-top:17px;border-top:1px solid var(--line);color:#646a6c;font-size:13px;line-height:1.55}.market-note strong{display:block;margin-bottom:4px;color:#171717;font-weight:600}
+    .step-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:43px;border-top:1px solid var(--line)}.step-row article{min-height:198px;padding:22px 23px 16px 0}.step-row article+article{padding-left:23px;border-left:1px solid var(--line)}.step-row .step-no,.step-card .step-no{display:block;margin-bottom:27px;color:var(--blue);font-size:10px;font-weight:600;letter-spacing:.16em}.step-row h3,.step-card h3,.dark-step h3{margin:0 0 10px;font:400 clamp(23px,2.6vw,33px)/1.02 Fraunces,Georgia,serif;letter-spacing:-.025em}.step-row p,.step-card p,.dark-step p{margin:0;color:#686e70;font-size:13px;line-height:1.55}
+    /* Option 01 — bright editorial split, generous margins, one human moment. */
+    .option-one{background:#f4f0e9}.editorial-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.82fr);gap:70px;align-items:center}.editorial-copy{max-width:760px}.editorial-copy .market-note{max-width:700px;margin-top:27px}.editorial-photo{position:relative;min-height:430px;margin:0;overflow:hidden;background:#ddd3c5}.editorial-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%}.editorial-photo:after{position:absolute;inset:auto 0 0;height:20%;background:linear-gradient(transparent,rgba(0,0,0,.25));content:""}.editorial-photo figcaption{position:absolute;z-index:1;right:18px;bottom:16px;color:#fff;font-size:9px;letter-spacing:.15em;text-transform:uppercase}
+    /* Option 02 — high-contrast, cinematic, with the steps treated as an editorial sequence. */
+    .option-two{color:#f6f4f0;background:#101719}.option-two .option-label{color:#c5cbcc}.dark-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:62px;align-items:stretch}.dark-photo{position:relative;min-height:620px;margin:0;overflow:hidden;background:#20282b}.dark-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:59% center}.dark-photo:after{position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(5,8,9,.76));content:""}.dark-photo figcaption{position:absolute;z-index:1;right:22px;bottom:20px;left:22px;color:#fff;font-size:9px;letter-spacing:.15em;text-transform:uppercase}.dark-copy{display:flex;flex-direction:column;justify-content:center;padding:18px 0}.dark-copy .section-tag{color:#9aa2a4}.dark-copy h2{max-width:740px;color:#fff}.dark-copy .intro-copy{max-width:760px;color:#bdc4c5}.dark-copy .intro-copy strong,.dark-copy .market-note strong{color:#fff}.dark-copy .market-note{margin-top:24px;border-color:#394247;color:#c0c7c8}.dark-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:42px;border-top:1px solid #394247;border-bottom:1px solid #394247}.dark-step{min-height:228px;padding:21px 18px 20px 0}.dark-step+.dark-step{padding-left:18px;border-left:1px solid #394247}.dark-step h3{color:#fff}.dark-step p{color:#aab3b5}
+    /* Option 03 — a small local-business picture story paired with compact step cards. */
+    .option-three{background:#fff}.market-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:66px;align-items:center}.market-copy{max-width:690px}.market-copy .market-note{margin-top:24px}.photo-mosaic{display:grid;grid-template-columns:1.35fr .9fr;grid-template-rows:180px 180px;gap:10px}.photo-mosaic figure{position:relative;min-width:0;min-height:0;margin:0;overflow:hidden;background:#ddd}.photo-mosaic img{width:100%;height:100%;object-fit:cover}.photo-mosaic .mosaic-main{grid-row:1 / span 2}.photo-mosaic .mosaic-main img{object-position:55% center}.photo-mosaic .mosaic-top img{object-position:center 43%}.photo-mosaic .mosaic-bottom img{object-position:62% 40%}.photo-mosaic figcaption{position:absolute;right:10px;bottom:9px;padding:6px 8px;color:#fff;background:rgba(18,18,18,.72);font-size:8px;letter-spacing:.12em;text-transform:uppercase}.market-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:40px;border-top:1px solid #d8d4cf;border-left:1px solid #d8d4cf}.step-card{min-height:190px;padding:23px 25px;border-right:1px solid #d8d4cf;border-bottom:1px solid #d8d4cf;background:#fbfaf8}.step-card .step-no{margin-bottom:22px}.step-card h3{max-width:390px}.step-card p{max-width:460px}
+    /* Option 04 — custom, code-native vector showing a conceptual search-to-inquiry journey. */
+    .option-four{background:#f4f0e9}.vector-head{display:grid;grid-template-columns:1.05fr .95fr;gap:74px;align-items:end}.vector-head .intro-copy{max-width:610px}.vector-head .market-note{max-width:610px;margin-top:22px}.journey-visual{margin-top:45px;padding:24px 26px 18px;border:1px solid #d8d2c8;background:#fbfaf7}.journey-visual svg{display:block;width:100%;height:auto;overflow:visible}.journey-visual .street{fill:none;stroke:#ddd8cf;stroke-width:2}.journey-visual .route{fill:none;stroke:#00aeef;stroke-linecap:round;stroke-linejoin:round;stroke-width:4}.journey-visual .node{fill:#fbfaf7;stroke:#00aeef;stroke-width:4}.journey-visual .node-core{fill:#00aeef}.journey-visual .svg-index{fill:#009ed8;font:600 13px Inter,Arial,sans-serif;letter-spacing:2px}.journey-visual .svg-label{fill:#171717;font:400 19px Fraunces,Georgia,serif}.journey-visual .end-card{fill:#111719}.journey-visual .end-title{fill:#fff;font:500 13px Inter,Arial,sans-serif;letter-spacing:1px}.journey-visual .end-copy{fill:#b8c0c2;font:400 10px Inter,Arial,sans-serif}.vector-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:18px}.vector-steps article{padding:17px 12px 0 0;border-top:1px solid #d4cec5}.vector-steps .step-no{display:block;margin-bottom:11px;color:var(--blue);font-size:10px;font-weight:600;letter-spacing:.16em}.vector-steps h3{margin:0 0 8px;font:400 22px/1.03 Fraunces,Georgia,serif}.vector-steps p{margin:0;color:#666d70;font-size:12px;line-height:1.5}
+    @media(max-width:850px){.preview-bar{padding:13px 20px}.preview-brand img{width:140px}.preview-intro{padding:42px 0 30px}.option{padding:52px 0 60px}.editorial-grid,.dark-grid,.market-grid,.vector-head{grid-template-columns:1fr;gap:34px}.editorial-copy,.market-copy{max-width:760px}.editorial-photo{min-height:380px}.dark-photo{min-height:400px}.dark-grid{gap:35px}.dark-copy{padding:0}.photo-mosaic{max-width:690px}.step-row{grid-template-columns:repeat(2,minmax(0,1fr))}.step-row article:nth-child(3){padding-left:0;border-left:0}.step-row article:nth-child(3),.step-row article:nth-child(4){border-top:1px solid var(--line)}.dark-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.dark-step:nth-child(3){padding-left:0;border-left:0}.dark-step:nth-child(3),.dark-step:nth-child(4){border-top:1px solid #394247}.vector-head{gap:0}.journey-visual{padding:15px 14px}.vector-steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px}}
+    @media(max-width:560px){.preview-bar{align-items:flex-start}.preview-brand{gap:10px}.preview-brand img{width:118px}.preview-brand span{max-width:100px;font-size:8px;line-height:1.4}.preview-badge{max-width:110px;font-size:8px;line-height:1.35;text-align:center}.preview-intro h1{font-size:43px}.option{padding:44px 0 48px}.option-label{margin-bottom:20px;font-size:9px}.option h2{font-size:40px}.option .intro-copy{font-size:14px}.editorial-photo{min-height:310px}.step-row{grid-template-columns:1fr;margin-top:28px}.step-row article,.step-row article+article,.step-row article:nth-child(3){min-height:0;padding:18px 0;border-left:0;border-top:1px solid var(--line)}.step-row article:first-child{border-top:0}.step-row .step-no{margin-bottom:12px}.step-row h3{font-size:27px}.dark-photo{min-height:320px}.dark-steps{grid-template-columns:1fr;margin-top:27px}.dark-step,.dark-step+.dark-step,.dark-step:nth-child(3){min-height:0;padding:18px 0;border-left:0;border-top:1px solid #394247}.dark-step:first-child{border-top:0}.dark-step .step-no{margin-bottom:12px}.dark-step h3{font-size:26px}.photo-mosaic{grid-template-columns:1.15fr .85fr;grid-template-rows:145px 145px;gap:7px}.market-steps{grid-template-columns:1fr;margin-top:28px}.step-card{min-height:0;padding:19px}.step-card .step-no{margin-bottom:12px}.step-card h3{font-size:26px}.vector-head{display:block}.journey-visual{margin-top:28px;padding:9px 6px}.journey-visual .svg-label{font-size:17px}.vector-steps{grid-template-columns:1fr;gap:13px}.vector-steps article{padding-top:13px}.vector-steps h3{font-size:24px}}
+    /* Lead-path family: keep all page copy together in a wide, readable block above its diagram. */
+    .vector-head,.leadpath-copy{display:block;width:80%;max-width:none}
+    .vector-head>div,.leadpath-copy>div{width:100%}
+    .vector-head h2,.leadpath-copy h2{max-width:none}
+    .vector-head .intro-copy,.leadpath-copy .intro-copy{max-width:none}
+    .vector-head .market-note,.leadpath-copy .market-note{max-width:none;margin-top:19px}
+    .leadpath-map{margin-top:38px}
+    .leadpath-map svg{min-width:0}
+    .leadpath-map .map-road{fill:none;stroke:#e1dcd3;stroke-width:2}
+    .leadpath-map .map-route{fill:none;stroke:#00aeef;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+    .leadpath-map .map-route-muted{fill:none;stroke:#9ba5a6;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    .leadpath-map .map-node{fill:#fbfaf7;stroke:#00aeef;stroke-width:4}
+    .leadpath-map .map-node-fill{fill:#00aeef}
+    .leadpath-map .map-card{fill:#fffdfa;stroke:#d9d4cc;stroke-width:1.5}
+    .leadpath-map .map-card-dark{fill:#111719}
+    .leadpath-map .map-tag{fill:#009ed8;font:600 12px Inter,Arial,sans-serif;letter-spacing:1.8px}
+    .leadpath-map .map-title{fill:#171717;font:400 18px Fraunces,Georgia,serif}
+    .leadpath-map .map-copy{fill:#62686a;font:400 11px Inter,Arial,sans-serif}
+    .leadpath-map .map-title-light{fill:#fff;font:500 13px Inter,Arial,sans-serif;letter-spacing:.8px}
+    .leadpath-map .map-copy-light{fill:#b8c0c2;font:400 10px Inter,Arial,sans-serif}
+    .leadpath-map .map-label{fill:#4f585b;font:600 10px Inter,Arial,sans-serif;letter-spacing:1.2px}
+    .map-caption{margin:11px 0 0;color:#73797a;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+    .option-five{background:#fff}
+    .option-six{background:#e9eff0}
+    .option-seven{color:#f6f4f0;background:#101719}
+    .option-seven .option-label{color:#c5cbcc}
+    .option-seven .intro-copy{color:#c1c8c9}
+    .option-seven .intro-copy strong,.option-seven .market-note strong{color:#fff}
+    .option-seven .market-note{border-color:#394247;color:#c0c7c8}
+    .option-seven .leadpath-map{border-color:#394247;background:#151d20}
+    .option-seven .leadpath-map .map-road{stroke:#2a3539}
+    .option-seven .leadpath-map .map-card{fill:#192327;stroke:#39474b}
+    .option-seven .leadpath-map .map-title{fill:#f6f4f0}
+    .option-seven .leadpath-map .map-copy{fill:#aab3b5}
+    .option-seven .map-caption{color:#9aa5a7}
+    .option-seven .vector-steps article{border-color:#394247}
+    .option-seven .vector-steps h3{color:#fff}
+    .option-seven .vector-steps p{color:#aab3b5}
+    @media(max-width:850px){.vector-head,.leadpath-copy{width:100%}}
+    @media(max-width:650px){.leadpath-map,.option-four .journey-visual{overflow-x:auto;overscroll-behavior-x:contain}.leadpath-map svg,.option-four .journey-visual svg{min-width:760px}.leadpath-map,.option-four .journey-visual{padding:12px 10px}.map-caption{font-size:9px}.map-caption:after{content:" · Scroll diagram horizontally on a narrow screen"}}
+  </style>
+  <link rel="stylesheet" href="site-buttons.css" />
+</head>
+<body class="location-options-preview">
+  <header class="preview-bar">
+    <div class="preview-brand"><img src="assets/vnwMedia-White.png" alt="VNW Media" /><span>Location section directions</span></div>
+    <span class="preview-badge">Preview only · not live</span>
+  </header>
+  <main>
+    <section class="preview-intro">
+      <div class="shell">
+        <p class="section-tag">Design exploration · 7 options</p>
+        <h1>Explore four lead-path map directions.</h1>
+        <p>Options 01–03 remain as earlier concepts. Options 04–07 focus on lead-path maps; Option 04 now keeps the New Jersey headline, paragraph, and markets note together across a wider 80% text area. Preview only—nothing on the live location pages has been changed.</p>
+      </div>
+    </section>
+
+    <section class="option option-one" aria-labelledby="option-one-title">
+      <div class="shell">
+        <p class="option-label"><i></i><b>Option 01</b> · The editorial conversation</p>
+        <div class="editorial-grid">
+          <div class="editorial-copy">
+            <p class="section-tag">Digital marketing in New Jersey</p>
+            <h2 id="option-one-title">One connected plan for the next customer conversation.</h2>
+            <p class="intro-copy">New Jersey businesses often need several digital channels to work together—not a disconnected list of tactics. We start with the audience, offer, service area, and strongest next action, then shape the right combination of website, SEO, paid media, social, and follow-up.</p>
+            <p class="market-note"><strong>Markets we can discuss</strong>Monmouth County, Middlesex County, Ocean County, Mercer County, and communities throughout New Jersey. Coverage is confirmed against your actual service area.</p>
+          </div>
+          <figure class="editorial-photo"><img src="assets/location-heroes/nj-digital-marketing.jpg" alt="Two women reviewing a website together in a welcoming local shop" /><figcaption>New Jersey · Business, people, place</figcaption></figure>
+        </div>
+        <div class="step-row">
+          <article><span class="step-no">01</span><h3>Start with the customer</h3><p>Clarify what people need, what makes your business a fit, and where the decision currently gets stuck.</p></article>
+          <article><span class="step-no">02</span><h3>Make the experience clearer</h3><p>Align your message, website, service pages, and calls to action so prospects know what to do next.</p></article>
+          <article><span class="step-no">03</span><h3>Connect discovery to action</h3><p>Coordinate organic search, Google Ads, social campaigns, landing pages, and measurement around the right audience.</p></article>
+          <article><span class="step-no">04</span><h3>Learn and improve</h3><p>Use meaningful inquiries and campaign signals to guide the next set of decisions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="option option-two" aria-labelledby="option-two-title">
+      <div class="shell">
+        <p class="option-label"><i></i><b>Option 02</b> · The growth-room story</p>
+        <div class="dark-grid">
+          <figure class="dark-photo"><img src="assets/case-studies-hero-team.jpg" alt="A small-business team discussing a digital project together" /><figcaption>Strategy is a conversation—not a checklist.</figcaption></figure>
+          <div class="dark-copy">
+            <p class="section-tag">Digital marketing in New Jersey</p>
+            <h2 id="option-two-title">One connected plan for the next customer conversation.</h2>
+            <p class="intro-copy">New Jersey businesses often need several digital channels to work together—not a disconnected list of tactics. We start with the audience, offer, service area, and strongest next action, then shape the right combination of website, SEO, paid media, social, and follow-up.</p>
+            <p class="market-note"><strong>Markets we can discuss</strong>Monmouth County, Middlesex County, Ocean County, Mercer County, and communities throughout New Jersey. Coverage is confirmed against your actual service area.</p>
+          </div>
+        </div>
+        <div class="dark-steps">
+          <article class="dark-step"><span class="step-no">01</span><h3>Start with the customer</h3><p>Clarify what people need, what makes your business a fit, and where the decision currently gets stuck.</p></article>
+          <article class="dark-step"><span class="step-no">02</span><h3>Make the experience clearer</h3><p>Align your message, website, service pages, and calls to action so prospects know what to do next.</p></article>
+          <article class="dark-step"><span class="step-no">03</span><h3>Connect discovery to action</h3><p>Coordinate organic search, Google Ads, social campaigns, landing pages, and measurement around the right audience.</p></article>
+          <article class="dark-step"><span class="step-no">04</span><h3>Learn and improve</h3><p>Use meaningful inquiries and campaign signals to guide the next set of decisions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="option option-three" aria-labelledby="option-three-title">
+      <div class="shell">
+        <p class="option-label"><i></i><b>Option 03</b> · The local market mosaic</p>
+        <div class="market-grid">
+          <div class="market-copy">
+            <p class="section-tag">Digital marketing in New Jersey</p>
+            <h2 id="option-three-title">One connected plan for the next customer conversation.</h2>
+            <p class="intro-copy">New Jersey businesses often need several digital channels to work together—not a disconnected list of tactics. We start with the audience, offer, service area, and strongest next action, then shape the right combination of website, SEO, paid media, social, and follow-up.</p>
+            <p class="market-note"><strong>Markets we can discuss</strong>Monmouth County, Middlesex County, Ocean County, Mercer County, and communities throughout New Jersey. Coverage is confirmed against your actual service area.</p>
+          </div>
+          <div class="photo-mosaic" aria-label="People and neighborhood business imagery">
+            <figure class="mosaic-main"><img src="assets/location-heroes/nj-digital-marketing.jpg" alt="Local business owners sharing ideas around a website" /><figcaption>People first</figcaption></figure>
+            <figure class="mosaic-top"><img src="assets/industry-concepts/professional-team-v2.jpg" alt="Business partners reviewing performance together" /><figcaption>Shared direction</figcaption></figure>
+            <figure class="mosaic-bottom"><img src="assets/industry-concepts/business-neighborhood-hero-v1.jpg" alt="A neighborhood street of independent businesses" /><figcaption>Local context</figcaption></figure>
+          </div>
+        </div>
+        <div class="market-steps">
+          <article class="step-card"><span class="step-no">01</span><h3>Start with the customer</h3><p>Clarify what people need, what makes your business a fit, and where the decision currently gets stuck.</p></article>
+          <article class="step-card"><span class="step-no">02</span><h3>Make the experience clearer</h3><p>Align your message, website, service pages, and calls to action so prospects know what to do next.</p></article>
+          <article class="step-card"><span class="step-no">03</span><h3>Connect discovery to action</h3><p>Coordinate organic search, Google Ads, social campaigns, landing pages, and measurement around the right audience.</p></article>
+          <article class="step-card"><span class="step-no">04</span><h3>Learn and improve</h3><p>Use meaningful inquiries and campaign signals to guide the next set of decisions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="option option-four" aria-labelledby="option-four-title">
+      <div class="shell">
+        <p class="option-label"><i></i><b>Option 04</b> · The lead-path map <span style="font-weight:400;letter-spacing:.08em">(custom vector)</span></p>
+        <div class="vector-head">
+          <p class="section-tag">Digital marketing in New Jersey</p>
+          <h2 id="option-four-title">One connected plan for the next customer conversation.</h2>
+          <p class="intro-copy">New Jersey businesses often need several digital channels to work together—not a disconnected list of tactics. We start with the audience, offer, service area, and strongest next action, then shape the right combination of website, SEO, paid media, social, and follow-up.</p>
+          <p class="market-note"><strong>Markets we can discuss</strong>Monmouth County, Middlesex County, Ocean County, Mercer County, and communities throughout New Jersey. Coverage is confirmed against your actual service area.</p>
+        </div>
+        <div class="journey-visual">
+          <svg viewBox="0 0 1120 250" role="img" aria-labelledby="lead-map-title lead-map-desc">
+            <title id="lead-map-title">A four-step local lead journey</title>
+            <desc id="lead-map-desc">A blue route connects customer understanding, clearer experience, discovery, and ongoing improvement to a qualified inquiry.</desc>
+            <path class="street" d="M16 42H1104M16 208H1104M110 16V234M390 16V234M690 16V234M980 16V234" />
+            <path class="street" d="M16 125H1104M250 16V234M540 16V234M835 16V234" />
+            <path class="route" d="M84 144C172 144 167 83 270 83S372 176 466 176s112-91 207-91 111 79 201 79h84" />
+            <g transform="translate(84 144)"><circle class="node" r="12"/><circle class="node-core" r="4"/><text class="svg-index" x="-9" y="-30">01</text><text class="svg-label" x="-30" y="44">Customer</text></g>
+            <g transform="translate(270 83)"><circle class="node" r="12"/><circle class="node-core" r="4"/><text class="svg-index" x="-9" y="-30">02</text><text class="svg-label" x="-49" y="44">Experience</text></g>
+            <g transform="translate(466 176)"><circle class="node" r="12"/><circle class="node-core" r="4"/><text class="svg-index" x="-9" y="-30">03</text><text class="svg-label" x="-42" y="44">Discovery</text></g>
+            <g transform="translate(673 85)"><circle class="node" r="12"/><circle class="node-core" r="4"/><text class="svg-index" x="-9" y="-30">04</text><text class="svg-label" x="-39" y="44">Learning</text></g>
+            <rect class="end-card" x="850" y="89" width="205" height="76" rx="5"/><text class="end-title" x="872" y="120">QUALIFIED INQUIRY</text><text class="end-copy" x="872" y="143">A useful next conversation</text>
+          </svg>
+        </div>
+        <div class="vector-steps">
+          <article><span class="step-no">01 · CUSTOMER</span><h3>Start with the customer</h3><p>Clarify what people need, what makes your business a fit, and where the decision currently gets stuck.</p></article>
+          <article><span class="step-no">02 · EXPERIENCE</span><h3>Make the experience clearer</h3><p>Align your message, website, service pages, and calls to action so prospects know what to do next.</p></article>
+          <article><span class="step-no">03 · DISCOVERY</span><h3>Connect discovery to action</h3><p>Coordinate organic search, Google Ads, social campaigns, landing pages, and measurement around the right audience.</p></article>
+          <article><span class="step-no">04 · LEARNING</span><h3>Learn and improve</h3><p>Use meaningful inquiries and campaign signals to guide the next set of decisions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="option option-five" aria-labelledby="option-five-title">
+      <div class="shell">
+        <p class="option-label"><i></i><b>Option 05</b> · The channel junction <span style="font-weight:400;letter-spacing:.08em">(custom vector)</span></p>
+        <div class="leadpath-copy">
+          <p class="section-tag">Digital marketing in New Jersey</p>
+          <h2 id="option-five-title">One connected plan for the next customer conversation.</h2>
+          <p class="intro-copy">New Jersey businesses often need several digital channels to work together—not a disconnected list of tactics. We start with the audience, offer, service area, and strongest next action, then shape the right combination of website, SEO, paid media, social, and follow-up.</p>
+          <p class="market-note"><strong>Markets we can discuss</strong>Monmouth County, Middlesex County, Ocean County, Mercer County, and communities throughout New Jersey. Coverage is confirmed against your actual service area.</p>
+        </div>
+        <div class="journey-visual leadpath-map">
+          <svg viewBox="0 0 1120 330" role="img" aria-labelledby="junction-title junction-desc">
+            <title id="junction-title">A channel map converging on a useful inquiry</title>
+            <desc id="junction-desc">Organic search, paid search, social, and referrals join at a clear website experience, then lead to an inquiry and learning loop.</desc>
+            <path class="map-road" d="M180 37V293M465 37V293M760 37V293M1040 37V293M35 74H1085M35 162H1085M35 250H1085"/>
+            <text class="map-label" x="40" y="24">DISCOVERY ROUTES</text>
+            <text class="map-label" x="475" y="24">THE SHARED EXPERIENCE</text>
+            <text class="map-label" x="875" y="24">NEXT ACTION</text>
+            <path class="map-route" d="M210 78C300 78 318 130 400 130H510M210 142H510M210 206C300 206 318 170 400 170H510M210 270C300 270 318 183 400 183H510M690 150H842"/>
+            <path class="map-route-muted" d="M940 194C940 268 860 290 760 290H315C230 290 205 269 205 247"/>
+            <g><circle class="map-node" cx="210" cy="78" r="10"/><text class="map-title" x="47" y="66">Organic search</text></g>
+            <g><circle class="map-node" cx="210" cy="142" r="10"/><text class="map-title" x="47" y="130">Paid search</text></g>
+            <g><circle class="map-node" cx="210" cy="206" r="10"/><text class="map-title" x="47" y="194">Social</text></g>
+            <g><circle class="map-node" cx="210" cy="270" r="10"/><text class="map-title" x="47" y="258">Referrals</text></g>
+            <rect class="map-card" x="510" y="102" width="180" height="96" rx="5"/><text class="map-tag" x="530" y="127">THE WEBSITE</text><text class="map-title" x="530" y="154">Clear message</text><text class="map-copy" x="530" y="176">One useful next step</text>
+            <circle class="map-node" cx="842" cy="150" r="12"/><circle class="map-node-fill" cx="842" cy="150" r="4"/>
+            <rect class="map-card-dark" x="874" y="112" width="190" height="76" rx="5"/><text class="map-title-light" x="895" y="143">QUALIFIED INQUIRY</text><text class="map-copy-light" x="895" y="165">A real customer conversation</text>
+            <text class="map-label" x="393" y="281">MEASURE · LEARN · REFINE</text>
+          </svg>
+        </div>
+        <p class="map-caption">Multiple ways to be found · one clear path to get in touch</p>
+        <div class="vector-steps">
+          <article><span class="step-no">01 · CUSTOMER</span><h3>Start with the customer</h3><p>Clarify what people need, what makes your business a fit, and where the decision currently gets stuck.</p></article>
+          <article><span class="step-no">02 · EXPERIENCE</span><h3>Make the experience clearer</h3><p>Align your message, website, service pages, and calls to action so prospects know what to do next.</p></article>
+          <article><span class="step-no">03 · DISCOVERY</span><h3>Connect discovery to action</h3><p>Coordinate organic search, Google Ads, social campaigns, landing pages, and measurement around the right audience.</p></article>
+          <article><span class="step-no">04 · LEARNING</span><h3>Learn and improve</h3><p>Use meaningful inquiries and campaign signals to guide the next set of decisions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="option option-six" aria-labelledby="option-six-title">
+      <div class="shell">
+        <p class="option-label"><i></i><b>Option 06</b> · The customer decision tree <span style="font-weight:400;letter-spacing:.08em">(custom vector)</span></p>
+        <div class="leadpath-copy">
+          <p class="section-tag">Digital marketing in New Jersey</p>
+          <h2 id="option-six-title">One connected plan for the next customer conversation.</h2>
+          <p class="intro-copy">New Jersey businesses often need several digital channels to work together—not a disconnected list of tactics. We start with the audience, offer, service area, and strongest next action, then shape the right combination of website, SEO, paid media, social, and follow-up.</p>
+          <p class="market-note"><strong>Markets we can discuss</strong>Monmouth County, Middlesex County, Ocean County, Mercer County, and communities throughout New Jersey. Coverage is confirmed against your actual service area.</p>
+        </div>
+        <div class="journey-visual leadpath-map">
+          <svg viewBox="0 0 1120 350" role="img" aria-labelledby="tree-map-title tree-map-desc">
+            <title id="tree-map-title">A customer decision tree from need to inquiry</title>
+            <desc id="tree-map-desc">Different customer discovery paths branch from a local need, converge at a helpful website page, and lead to a call or form inquiry.</desc>
+            <path class="map-road" d="M70 42H1050M70 305H1050M170 32V320M440 32V320M700 32V320M950 32V320"/>
+            <path class="map-route" d="M115 175H245M245 175C320 175 315 78 395 78H515M245 175C320 175 315 175 395 175H515M245 175C320 175 315 272 395 272H515M695 175H840M840 175C900 175 886 104 950 104M840 175C900 175 886 246 950 246"/>
+            <circle class="map-node" cx="115" cy="175" r="13"/><circle class="map-node-fill" cx="115" cy="175" r="4"/>
+            <text class="map-tag" x="76" y="136">LOCAL NEED</text><text class="map-title" x="73" y="216">“Who can help?”</text>
+            <circle class="map-node" cx="395" cy="78" r="10"/><text class="map-title" x="310" y="56">Search</text>
+            <circle class="map-node" cx="395" cy="175" r="10"/><text class="map-title" x="310" y="153">Referral</text>
+            <circle class="map-node" cx="395" cy="272" r="10"/><text class="map-title" x="310" y="250">Campaign</text>
+            <rect class="map-card" x="515" y="127" width="180" height="96" rx="5"/><text class="map-tag" x="535" y="153">HELPFUL PAGE</text><text class="map-title" x="535" y="180">Clear answer</text><text class="map-copy" x="535" y="201">Proof · offer · next step</text>
+            <circle class="map-node" cx="840" cy="175" r="12"/><circle class="map-node-fill" cx="840" cy="175" r="4"/>
+            <rect class="map-card-dark" x="950" y="75" width="130" height="58" rx="5"/><text class="map-title-light" x="975" y="110">CALL</text>
+            <rect class="map-card-dark" x="950" y="217" width="130" height="58" rx="5"/><text class="map-title-light" x="975" y="252">FORM</text>
+            <text class="map-label" x="770" y="320">A CLEAR NEXT STEP, NOT A DEAD END</text>
+          </svg>
+        </div>
+        <p class="map-caption">Different discovery paths · a helpful experience · a choice of next step</p>
+        <div class="vector-steps">
+          <article><span class="step-no">01 · CUSTOMER</span><h3>Start with the customer</h3><p>Clarify what people need, what makes your business a fit, and where the decision currently gets stuck.</p></article>
+          <article><span class="step-no">02 · EXPERIENCE</span><h3>Make the experience clearer</h3><p>Align your message, website, service pages, and calls to action so prospects know what to do next.</p></article>
+          <article><span class="step-no">03 · DISCOVERY</span><h3>Connect discovery to action</h3><p>Coordinate organic search, Google Ads, social campaigns, landing pages, and measurement around the right audience.</p></article>
+          <article><span class="step-no">04 · LEARNING</span><h3>Learn and improve</h3><p>Use meaningful inquiries and campaign signals to guide the next set of decisions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="option option-seven" aria-labelledby="option-seven-title">
+      <div class="shell">
+        <p class="option-label"><i></i><b>Option 07</b> · The growth feedback loop <span style="font-weight:400;letter-spacing:.08em">(custom vector)</span></p>
+        <div class="leadpath-copy">
+          <p class="section-tag">Digital marketing in New Jersey</p>
+          <h2 id="option-seven-title">One connected plan for the next customer conversation.</h2>
+          <p class="intro-copy">New Jersey businesses often need several digital channels to work together—not a disconnected list of tactics. We start with the audience, offer, service area, and strongest next action, then shape the right combination of website, SEO, paid media, social, and follow-up.</p>
+          <p class="market-note"><strong>Markets we can discuss</strong>Monmouth County, Middlesex County, Ocean County, Mercer County, and communities throughout New Jersey. Coverage is confirmed against your actual service area.</p>
+        </div>
+        <div class="journey-visual leadpath-map">
+          <svg viewBox="0 0 1120 350" role="img" aria-labelledby="loop-title loop-desc">
+            <title id="loop-title">A continuous improvement loop for local lead generation</title>
+            <desc id="loop-desc">Four connected stages—understand, create, reach, and learn—circle a qualified-inquiry outcome, with performance signals returning to planning.</desc>
+            <path class="map-road" d="M90 175H1030M560 25V325"/>
+            <path class="map-route" d="M345 83C405 34 493 28 560 28S715 43 775 91C830 135 839 218 792 269C745 318 651 324 560 324S381 307 333 265C281 218 284 131 345 83Z"/>
+            <path class="map-route-muted" d="M792 269C720 269 699 245 666 222"/>
+            <circle class="map-node" cx="345" cy="83" r="13"/><circle class="map-node-fill" cx="345" cy="83" r="4"/>
+            <circle class="map-node" cx="775" cy="91" r="13"/><circle class="map-node-fill" cx="775" cy="91" r="4"/>
+            <circle class="map-node" cx="792" cy="269" r="13"/><circle class="map-node-fill" cx="792" cy="269" r="4"/>
+            <circle class="map-node" cx="333" cy="265" r="13"/><circle class="map-node-fill" cx="333" cy="265" r="4"/>
+            <text class="map-tag" x="283" y="52">01 · UNDERSTAND</text><text class="map-title" x="278" y="119">Customer</text>
+            <text class="map-tag" x="734" y="59">02 · CREATE</text><text class="map-title" x="731" y="128">Experience</text>
+            <text class="map-tag" x="748" y="314">03 · REACH</text><text class="map-title" x="750" y="246">Discovery</text>
+            <text class="map-tag" x="258" y="314">04 · LEARN</text><text class="map-title" x="272" y="242">Signals</text>
+            <rect class="map-card" x="455" y="132" width="210" height="88" rx="44"/><text class="map-tag" x="493" y="163">THE OUTCOME</text><text class="map-title" x="482" y="191">Qualified inquiry</text>
+            <text class="map-label" x="455" y="341">INSIGHT FROM EACH RESULT SHAPES THE NEXT CYCLE</text>
+          </svg>
+        </div>
+        <p class="map-caption">A continuous path: customer insight informs the next improvement</p>
+        <div class="vector-steps">
+          <article><span class="step-no">01 · CUSTOMER</span><h3>Start with the customer</h3><p>Clarify what people need, what makes your business a fit, and where the decision currently gets stuck.</p></article>
+          <article><span class="step-no">02 · EXPERIENCE</span><h3>Make the experience clearer</h3><p>Align your message, website, service pages, and calls to action so prospects know what to do next.</p></article>
+          <article><span class="step-no">03 · DISCOVERY</span><h3>Connect discovery to action</h3><p>Coordinate organic search, Google Ads, social campaigns, landing pages, and measurement around the right audience.</p></article>
+          <article><span class="step-no">04 · LEARNING</span><h3>Learn and improve</h3><p>Use meaningful inquiries and campaign signals to guide the next set of decisions.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="site-buttons.js" defer></script>
+</body>
+</html>
