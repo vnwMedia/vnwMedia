@@ -91,15 +91,11 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
 .wheel-sectors path{fill:#172024;stroke:#f4f0e9;stroke-width:2}
 .wheel-sectors path:nth-child(2n){fill:#202a2e}
 .wheel-sectors path:nth-child(4n){fill:#103c4c}
-.wheel-inner-ring{fill:none;stroke:#6c7779;stroke-width:1;stroke-dasharray:2 6}
 .wheel-core-ring{fill:#f4f0e9;stroke:#c4bdb2;stroke-width:1}
-.wheel-spokes{fill:none;stroke:#748083;stroke-width:1}
 .wheel-steps{fill:#f4f0e9;font:600 10px Inter,Arial,sans-serif;letter-spacing:1.4px;text-anchor:middle}
-.wheel-pins{fill:var(--blue);stroke:#f4f0e9;stroke-width:4}
 .wheel-center{position:absolute;inset:50% auto auto 50%;display:flex;flex-direction:column;align-items:center;justify-content:center;width:35%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;text-align:center;color:#111719;background:#f4f0e9}
 .wheel-center span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#697276}
 .wheel-center strong{font:400 clamp(27px,3vw,39px)/.96 Fraunces,Georgia,serif;letter-spacing:-.04em}
-.wheel-center small{margin-top:10px;color:#6b7375;font-size:9px;line-height:1.4}
 .wheel-index{border-top:1px solid #d0c9be}
 .wheel-index-label{margin:0;padding:15px 0;color:#737a7c;font-size:9px!important;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
 .wheel-index>a{display:grid;grid-template-columns:36px 1fr 20px;align-items:center;gap:12px;min-height:51px;border-top:1px solid #d0c9be;transition:color .18s ease}
@@ -114,7 +110,6 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
 .tree-lines{position:absolute;z-index:-1;inset:0;width:100%;height:100%;overflow:visible}
 .tree-lines path{fill:none;stroke:#c8c9c5;stroke-width:1.4;vector-effect:non-scaling-stroke}
 .tree-lines .tree-accent{stroke:var(--blue);stroke-width:2}
-.tree-lines g{fill:var(--blue);stroke:#fff;stroke-width:3}
 .tree-root{position:absolute;top:4px;left:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:270px;min-height:57px;padding:8px 22px;transform:translateX(-50%);border:1px solid #ccd0d0;background:#f4f0e9;text-align:center}
 .tree-root span{color:#008fc7;font-size:8px;font-weight:600;letter-spacing:.16em}
 .tree-root strong{margin-top:3px;font:400 18px/1.12 Fraunces,Georgia,serif}
@@ -134,22 +129,21 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
 .option-signal .option-copy .section-tag{color:#9da6a8}
 .option-signal .option-copy h2{color:#fff}
 .option-signal .option-side p{color:#b8c0c2}
-.signal-matrix{border-top:1px solid #475155}
-.signal-heading{display:grid;grid-template-columns:minmax(280px,1.1fr) repeat(3,minmax(0,.6fr));align-items:center;min-height:44px;border-bottom:1px solid #475155;color:#929da0}
-.signal-heading span{font-size:8px;font-weight:600;letter-spacing:.15em;text-align:center;text-transform:uppercase}
-.signal-heading span:first-child{text-align:left}
-.signal-row{display:grid;grid-template-columns:minmax(280px,1.1fr) minmax(0,1.8fr);align-items:center;min-height:70px;border-bottom:1px solid #343e42;transition:background-color .18s ease,color .18s ease}
-.signal-row:hover,.signal-row:focus-visible{color:var(--blue);background:#182125;outline-offset:-2px}
-.signal-market{display:grid;grid-template-columns:34px minmax(0,1fr) 19px;align-items:center;gap:11px;padding-right:16px}
-.signal-market i{color:var(--blue);font-size:9px;font-style:normal;letter-spacing:.12em}
-.signal-market strong{font:400 20px/1.12 Fraunces,Georgia,serif}
-.signal-market b{color:var(--blue);font:400 16px Inter,Arial,sans-serif}
-.signal-path{display:block;width:100%;padding:0 15px}
-.signal-path svg{display:block;width:100%;height:28px;overflow:visible}
-.signal-path path{fill:none;stroke:#526064;stroke-width:1.5;vector-effect:non-scaling-stroke}
-.signal-path circle{fill:#121719;stroke:var(--blue);stroke-width:2;vector-effect:non-scaling-stroke}
-.signal-row:hover .signal-path path{stroke:var(--blue)}
-.signal-row:hover .signal-path circle{fill:var(--blue)}
+.signal-stages{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 30px;padding-top:9px}
+.signal-stages>svg{position:absolute;top:0;left:0;width:100%;height:32px;overflow:visible}
+.signal-stages>svg path{fill:none;stroke:#455055;stroke-width:1.5;vector-effect:non-scaling-stroke}
+.signal-stages>svg circle{fill:#121719;stroke:var(--blue);stroke-width:2;vector-effect:non-scaling-stroke}
+.signal-stages>div{display:flex;flex-direction:column;gap:5px;padding-top:31px}
+.signal-stages>div:nth-of-type(2){align-items:center}
+.signal-stages>div:nth-of-type(3){align-items:flex-end}
+.signal-stages span{color:var(--blue);font-size:9px;letter-spacing:.13em}
+.signal-stages strong{font:400 24px/1.1 Fraunces,Georgia,serif}
+.signal-markets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:36px;border-top:1px solid #414a4e}
+.signal-markets>a{display:grid;grid-template-columns:32px minmax(0,1fr) 18px;align-items:center;gap:10px;min-height:56px;border-bottom:1px solid #343e42;transition:color .18s ease}
+.signal-markets>a:hover,.signal-markets>a:focus-visible{color:var(--blue)}
+.signal-markets>a>span{color:var(--blue);font-size:9px;letter-spacing:.12em}
+.signal-markets>a>strong{font:400 18px/1.13 Fraunces,Georgia,serif}
+.signal-markets>a>i{color:var(--blue);font-style:normal}
 
 /* Option 06 · an isometric SVG market landscape gives the directory a spatial metaphor. */
 .option-blueprint{background:#f4f0e9}
@@ -157,17 +151,11 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
 .market-blueprint{position:relative;overflow:hidden;background:#eae4da}
 .market-blueprint>svg{display:block;width:100%;height:auto}
 .blueprint-ground{fill:#e4ddd2;stroke:#c8bfb3;stroke-width:1.4}
-.blueprint-grid{fill:none;stroke:#c9c1b6;stroke-width:1}
 .blueprint-road{fill:none;stroke:#a9a298;stroke-width:1.5;stroke-dasharray:5 7}
 .blueprint-plaza{fill:#d6edf4;stroke:#00aeef;stroke-width:1.6}
-.blueprint-block path{fill:#182125;stroke:#596568;stroke-width:1.1;vector-effect:non-scaling-stroke}
-.blueprint-block path:nth-child(2){fill:#2a3539}
-.blueprint-block path:nth-child(3){fill:#111719}
-.block-three path:first-child,.block-six path:first-child{fill:#007da8;stroke:#00aeef}
-.blueprint-beacons{fill:var(--blue);stroke:#eae4da;stroke-width:4}
+.blueprint-block{fill:#182125;stroke:#596568;stroke-width:1.1;vector-effect:non-scaling-stroke}
 .blueprint-hub{fill:#00aeef;stroke:#eae4da;stroke-width:5}
 .blueprint-hub-mark{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round}
-.blueprint-register{fill:none;stroke:#838987;stroke-width:1.3}
 .blueprint-caption{position:absolute;right:15px;bottom:14px;left:15px;color:#697276;font-size:8px;font-weight:600;letter-spacing:.15em;text-align:center;text-transform:uppercase}
 .blueprint-index{border-top:1px solid #c9c2b8}
 .blueprint-index>a{display:grid;grid-template-columns:30px minmax(0,1fr) 18px;align-items:center;gap:11px;min-height:50px;border-bottom:1px solid #c9c2b8;transition:color .18s ease}
@@ -175,6 +163,42 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
 .blueprint-index>a span{color:#008fc7;font-size:9px;letter-spacing:.12em}
 .blueprint-index>a strong{font:400 18px/1.1 Fraunces,Georgia,serif}
 .blueprint-index>a i{color:#008fc7;font-style:normal}
+
+/* Three restrained directions: one route, grouped bands, and a quiet type index. */
+.option-path{background:#fff}
+.path-graphic{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 37px;padding-top:8px}
+.path-graphic svg{position:absolute;top:0;left:0;width:100%;height:31px;overflow:visible}
+.path-graphic svg path{fill:none;stroke:#d2d0ca;stroke-width:1.5;vector-effect:non-scaling-stroke}
+.path-graphic svg circle{fill:var(--blue);stroke:#fff;stroke-width:4;vector-effect:non-scaling-stroke}
+.path-graphic>div{display:flex;flex-direction:column;gap:5px;padding-top:31px}
+.path-graphic>div:nth-of-type(2){align-items:center}
+.path-graphic>div:nth-of-type(3){align-items:flex-end}
+.path-graphic span{color:#008fc7;font-size:9px;letter-spacing:.13em}
+.path-graphic strong{font:400 25px/1.1 Fraunces,Georgia,serif}
+.path-industries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:42px;border-top:1px solid var(--line)}
+.path-industries>a{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:57px;border-bottom:1px solid var(--line);font-size:15px;transition:color .18s ease}
+.path-industries>a:hover,.path-industries>a:focus-visible{color:#008fc7}
+.path-industries span{flex:none;color:#008fc7;font-size:9px;letter-spacing:.08em}
+.option-bands{color:#f5f4f0;background:#121719}
+.option-bands .option-label{color:#c6cdce}
+.option-bands .option-copy .section-tag{color:#9da6a8}
+.option-bands .option-copy h2{color:#fff}
+.option-bands .option-side p{color:#b8c0c2}
+.industry-bands{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #414a4e}
+.industry-bands>div{padding:23px 28px 18px 0;border-bottom:1px solid #414a4e}
+.industry-bands>div:nth-child(odd){padding-right:40px}
+.industry-bands>div:nth-child(even){padding-left:40px;border-left:1px solid #414a4e}
+.industry-bands>div>p{margin:0 0 10px;color:#8f999c;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.industry-bands a{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:41px;font:400 19px/1.1 Fraunces,Georgia,serif;transition:color .18s ease}
+.industry-bands a:hover,.industry-bands a:focus-visible{color:var(--blue)}
+.industry-bands a span{color:var(--blue);font:400 15px Inter,Arial,sans-serif}
+.option-index{background:var(--cream)}
+.simple-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:46px;border-top:1px solid #d2cbc0}
+.simple-index>a{display:grid;grid-template-columns:36px minmax(0,1fr) 18px;align-items:center;gap:11px;min-height:62px;border-bottom:1px solid #d2cbc0;transition:color .18s ease}
+.simple-index>a:hover,.simple-index>a:focus-visible{color:#008fc7}
+.simple-index>a>span{color:#008fc7;font-size:9px;letter-spacing:.12em}
+.simple-index>a>strong{font:400 21px/1.12 Fraunces,Georgia,serif}
+.simple-index>a>i{color:#008fc7;font-style:normal}
 .preview-footer{padding:24px 0;color:#aeb6b8;background:#111719}
 .preview-footer .shell{display:flex;justify-content:space-between;gap:20px;align-items:center}
 .preview-footer span,.preview-footer a{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
@@ -199,9 +223,8 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
   .tree-groups{gap:8px}
   .tree-group>p{font-size:7px;letter-spacing:.08em}
   .tree-group>a{grid-template-columns:22px minmax(0,1fr) 14px;gap:5px;padding-inline:4px;font-size:14px}
-  .signal-heading{grid-template-columns:minmax(230px,1.1fr) repeat(3,minmax(0,.6fr))}
-  .signal-row{grid-template-columns:minmax(230px,1.1fr) minmax(0,1.8fr)}
-  .signal-market strong{font-size:18px}
+  .signal-markets{column-gap:22px}
+  .signal-markets>a>strong{font-size:16px}
   .blueprint-layout{grid-template-columns:minmax(0,1fr) minmax(270px,.88fr);gap:28px}
   .blueprint-index>a{min-height:46px}
   .blueprint-index>a strong{font-size:16px}
@@ -248,15 +271,16 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400}
   .tree-group>p{font-size:8px;letter-spacing:.12em}
   .tree-group>a{min-height:54px;padding:7px 4px;font-size:17px}
   .tree-caption{font-size:10px!important}
-  .signal-heading{grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:38px}
-  .signal-heading span:first-child{text-align:left}
-  .signal-heading span:nth-child(n+2){display:none}
-  .signal-heading:after{grid-column:2;content:"Customer decision path";color:#929da0;font-size:8px;font-weight:600;letter-spacing:.12em;text-align:center;text-transform:uppercase}
-  .signal-row{grid-template-columns:1fr;gap:0;padding:10px 0}
-  .signal-market{min-height:38px;padding-right:0}
-  .signal-market strong{font-size:19px}
-  .signal-path{padding:0 9px 0 45px}
+  .signal-stages strong,.path-graphic strong{font-size:19px}
+  .signal-markets,.path-industries,.simple-index{grid-template-columns:1fr;column-gap:0}
+  .signal-markets>a>strong,.simple-index>a>strong{font-size:19px}
   .blueprint-layout{grid-template-columns:1fr;gap:25px}
   .blueprint-index>a{min-height:49px}
   .blueprint-caption{font-size:7px}
+  .path-graphic{margin-bottom:27px}
+  .path-industries>a{font-size:14px}
+  .industry-bands{grid-template-columns:1fr}
+  .industry-bands>div,.industry-bands>div:nth-child(odd),.industry-bands>div:nth-child(even){padding:17px 0;border-left:0}
+  .industry-bands a{font-size:18px}
+  .simple-index>a{min-height:55px}
 }
