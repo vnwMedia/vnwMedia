@@ -97,7 +97,7 @@ export const industries = [
     local: 'practice areas, jurisdictions or service reach, office locations, and intake capacity',
     secondTitle: 'Professional Services SEO', secondSlug: 'professional-services-seo', secondFocus: 'Organize substantive service pages around the actual questions and decision points clients face, with professional review of sensitive claims.',
     profileFocus: 'Keep eligible office profiles, hours, practitioner information, and contact links consistent with the firm’s real operations.',
-    ppcTitle: 'PPC for Law Firms', ppcFocus: 'Separate practice-area intent and geography, review ad language carefully, and measure qualified consultations rather than raw clicks.',
+    ppcTitle: 'PPC for Legal & Professional Services', ppcFocus: 'Separate practice-area intent and geography, review ad language carefully, and measure qualified consultations rather than raw clicks.',
     reputationFocus: 'Use feedback and responses carefully, preserving confidentiality and avoiding claims that imply a guaranteed result.',
     designFocus: 'Present practice areas, people, process, trust signals, and a discreet contact path in a calm, accessible experience.',
     process: [['Define fit', 'Clarify the matters or engagements the team actually handles.'], ['Explain the process', 'Set useful expectations without promising a result or replacing professional advice.'], ['Support contact', 'Give qualified prospects a clear, privacy-conscious way to begin.']],

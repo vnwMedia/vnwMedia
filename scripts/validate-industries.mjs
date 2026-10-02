@@ -20,7 +20,7 @@ for(const file of expected){
   if(!title) problems.push(`Missing title: ${file}`);
   else if(titles.has(title)) problems.push(`Duplicate title: ${title}`);
   else titles.add(title);
-  for(const needle of ['<main','<h1','<link rel="canonical"','name="description"','ind-faq','testimonial-ticker-section','site-footer.js','site-buttons.js']){
+  for(const needle of ['<main','<h1','<link rel="canonical"','name="description"','id="faq"','testimonial-ticker-section','location-pages.css','site-footer.js','site-buttons.js']){
     if(!html.includes(needle)) problems.push(`Missing ${needle}: ${file}`);
   }
   for(const [,url] of html.matchAll(/(?:href|src)="([^"]+)"/g)){
