@@ -410,19 +410,19 @@
   function directoryMarkup(regionOnly = "") {
     const states = Object.entries(areaFacts).filter(([slug]) => !regionOnly || slug === regionOnly);
     const stateCards = states.map(([slug, facts]) => {
-      const childLinks = Object.entries(pages).filter(([, page]) => page.region === slug).map(([pageSlug, page]) => `<a aria-label="${escapeHtml(`${page.service} in ${facts.state}`)}" href="${asset(`locations/${slug}/${pageSlug}/`)}">${escapeHtml(page.service)} in ${facts.state}</a>`).join("");
+      const childLinks = Object.entries(pages).filter(([, page]) => page.region === slug).map(([pageSlug, page]) => `<a class="location-service-link" aria-label="${escapeHtml(`${page.service} in ${facts.state}`)}" href="${asset(`locations/${slug}/${pageSlug}/`)}">${escapeHtml(page.service)}<span aria-hidden="true">↗</span></a>`).join("");
       const areaServiceGroups = Object.values(locationAreas).filter(area => area.region === slug).map(area => {
         const links = areaServiceLinks.map(([key, label]) => {
           const title = key === "ppc" ? `PPC / Google Ads in ${area.name}` : `${label} in ${area.name}`;
           const href = asset(`locations/${slug}/${area.slug}/${key}-${area.slug}/`);
-          return `<a aria-label="${escapeHtml(title)}" href="${href}">${escapeHtml(title)}</a>`;
+          return `<a class="location-service-link" aria-label="${escapeHtml(title)}" href="${href}">${escapeHtml(label)}<span aria-hidden="true">↗</span></a>`;
         }).join("");
-        return `<div class="location-state-link-group location-area-page-group"><h3>${escapeHtml(area.name)}</h3>${links}</div>`;
+        return `<section class="location-area-page-group" aria-labelledby="${slug}-${area.slug}-heading"><h4 id="${slug}-${area.slug}-heading">${escapeHtml(area.name)}</h4><div class="location-service-grid">${links}</div></section>`;
       }).join("");
       const stateCode = slug === "new-jersey" ? "NJ" : "NY";
       const imageName = slug === "new-jersey" ? "nj-digital-marketing.jpg" : "ny-digital-marketing.jpg";
       const imageAlt = slug === "new-jersey" ? "Business owners reviewing a website together" : "New York business team discussing a digital project";
-      return `<article class="location-state-card" id="${slug}" aria-labelledby="${slug}-heading"><div class="location-state-image"><img src="${asset(`assets/location-heroes/${imageName}`)}" alt="${imageAlt}" loading="lazy"><span>${stateCode}<i> / 0${slug === "new-jersey" ? "1" : "2"}</i></span></div><div class="location-state-copy"><p class="section-tag">${facts.state} · Location guides</p><h2 id="${slug}-heading">Digital growth for ${facts.state} businesses.</h2><p>${escapeHtml(facts.context)}</p><div class="location-state-links"><div class="location-state-link-group"><p>STATEWIDE SERVICES</p>${childLinks}</div><div class="location-state-link-group location-directory-area-group"><p>AREA SERVICES</p>${areaServiceGroups}</div></div></div></article>`;
+      return `<article class="location-state-card" id="${slug}" aria-labelledby="${slug}-heading"><div class="location-state-image"><img src="${asset(`assets/location-heroes/${imageName}`)}" alt="${imageAlt}" loading="lazy"><span>${stateCode}<i> / 0${slug === "new-jersey" ? "1" : "2"}</i></span></div><div class="location-state-copy"><p class="section-tag">${facts.state} · Location guides</p><h2 id="${slug}-heading">Digital growth for ${facts.state} businesses.</h2><p>${escapeHtml(facts.context)}</p><div class="location-state-links"><section class="location-state-link-group" aria-labelledby="${slug}-statewide-heading"><h3 class="location-directory-group-title" id="${slug}-statewide-heading">Statewide services</h3><div class="location-service-grid">${childLinks}</div></section><section class="location-state-link-group location-directory-area-group" aria-labelledby="${slug}-areas-heading"><h3 class="location-directory-group-title" id="${slug}-areas-heading">Area services</h3><div class="location-area-groups">${areaServiceGroups}</div></section></div></div></article>`;
     }).join("");
     const faqs = [
       ["Which locations are covered by these pages?", "This directory includes service pages for New Jersey and New York. We confirm the relevant communities and coverage against where your business actually operates."],
