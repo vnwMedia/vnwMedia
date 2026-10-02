@@ -65,15 +65,17 @@
 .location-state-copy .section-tag{margin-bottom:13px;color:#737b7e;font-size:10px}
 .location-state-copy h2{margin:0 0 13px;font-size:clamp(30px,3vw,40px);line-height:.98;letter-spacing:-.035em}
 .location-state-copy>p:not(.section-tag){min-height:118px;margin:0 0 22px;color:#646b6d;font-size:13px;line-height:1.6}
-.location-state-links{border-top:1px solid #ded9d2}
-.location-state-links a{display:flex;justify-content:space-between;gap:15px;padding:13px 0;border-bottom:1px solid #ded9d2;font-size:13px;transition:color .2s ease,padding .2s ease}
-.location-state-links a:hover,.location-state-links a:focus-visible{padding-inline:5px;color:#009fdc;outline:none}
+.location-state-links{display:grid;gap:20px;border-top:0}
+.location-state-links .location-state-link-group{display:flex;flex-wrap:wrap;align-items:baseline;gap:0}
+.location-state-links .location-state-link-group>p{flex:0 0 100%;margin:0 0 7px;color:#778083;font-size:9px;font-weight:700;letter-spacing:.13em}
+.location-state-links a{display:inline-flex;align-items:baseline;justify-content:flex-start;gap:5px;padding:3px 12px 3px 0;border:0;font-size:12px;line-height:1.45;transition:color .2s ease}
+.location-state-links .location-state-link-group>a+a:before{margin-right:8px;color:#a3a6a5;content:"·"}
+.location-state-links a:hover,.location-state-links a:focus-visible{padding-inline:0;color:#009fdc;outline:none}
 .location-state-links a span{color:#00a6e8}
-.location-state-link-group+.location-state-link-group{margin-top:22px}
-.location-state-link-group>p{margin:16px 0 3px;color:#778083;font-size:9px;font-weight:700;letter-spacing:.13em}
-.location-directory-area-group>.location-area-page-group{margin-top:14px;padding-top:8px;border-top:1px solid #e3ded8}
-.location-directory-area-group>.location-area-page-group:first-of-type{margin-top:8px}
-.location-directory-area-group>.location-area-page-group h3{margin:7px 0 2px;color:#24292a;font:600 12px/1.35 Inter,Arial,sans-serif;letter-spacing:.02em}
+.location-state-links .location-directory-area-group{gap:0}
+.location-directory-area-group>.location-area-page-group{flex:0 0 100%;margin:12px 0 0;padding:0;border:0}
+.location-directory-area-group>.location-area-page-group:first-of-type{margin-top:4px}
+.location-directory-area-group>.location-area-page-group h3{flex:0 0 100%;margin:0 0 4px;color:#24292a;font:600 12px/1.35 Inter,Arial,sans-serif;letter-spacing:.02em}
 .location-area-service-card{padding:0;overflow:hidden;border:1px solid #dcd6ce;background:#fff}
 .location-area-service-card .location-state-copy{display:flex;min-height:310px;flex-direction:column}
 .location-area-service-card .location-state-copy .section-tag{margin:0 0 13px;color:#737b7e;font-size:10px}
