@@ -346,3 +346,22 @@
 #vnw-site-footer .footer-grid > div:not(.footer-about):not(.footer-services) > :is(a,span){display:block;padding:3px 0;font-size:11px;line-height:1.35}
 #vnw-site-footer .footer-company-contact{margin-top:24px !important}
 @media (min-width: 801px){#vnw-site-footer .footer-grid > div:not(.footer-about){padding-top:12px}}
+
+/* Keep all four footer navigation pillars in an even two-column mobile grid. */
+@media (max-width: 800px){
+  #vnw-site-footer .footer-grid:has(.footer-services){
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    column-gap:clamp(16px,4vw,32px);
+    row-gap:36px;
+  }
+  #vnw-site-footer .footer-grid > div.footer-services,
+  #vnw-site-footer .footer-service-pillars{display:contents;}
+  #vnw-site-footer .footer-about{grid-column:1 / -1;}
+  #vnw-site-footer .footer-service-pillar:last-child,
+  #vnw-site-footer .footer-company{grid-column:auto;min-width:0;}
+  #vnw-site-footer .footer-service-pillar{min-width:0;}
+  #vnw-site-footer .footer-company :is(a,span){overflow-wrap:anywhere;}
+}
+@media (max-width: 560px){
+  #vnw-site-footer .footer-service-pillar{padding-top:0;border-top:0;}
+}
