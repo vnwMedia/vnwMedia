@@ -1156,7 +1156,7 @@ body .site-header.site-header .mega-wide .mega-columns{
 .scm-ms-page .scm-ms-hero .scm-ms-service-scope{
   display:block;
   max-width:none;
-  margin:10px 0 20px;
+  margin:0 0 15px;
   color:#f3efe8;
   font-size:clamp(11px,.9vw,13px)!important;
   font-weight:600;
@@ -1166,7 +1166,8 @@ body .site-header.site-header .mega-wide .mega-columns{
 }
 .scm-ms-service-scope i{
   padding:0 .25em;
-  color:var(--orange);
+  color:#fff;
+  font-size:1.25em;
   font-style:normal;
 }
 .scm-ms-hero{
