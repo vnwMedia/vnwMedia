@@ -71,13 +71,13 @@
 .location-state-links a span{color:#00a6e8}
 .location-state-link-group+.location-state-link-group{margin-top:22px}
 .location-state-link-group>p{margin:16px 0 3px;color:#778083;font-size:9px;font-weight:700;letter-spacing:.13em}
-.location-area-service-card{display:flex;min-height:270px;flex-direction:column;align-items:flex-start}
-.location-area-service-card .section-tag{margin:0 0 22px;color:#00a6e8;font-size:10px}
+.location-area-service-card{padding:0;overflow:hidden;border:1px solid #dcd6ce;background:#fff}
+.location-area-service-card .location-state-copy{display:flex;min-height:310px;flex-direction:column}
+.location-area-service-card .location-state-copy .section-tag{margin:0 0 13px;color:#737b7e;font-size:10px}
 .location-area-service-card h2{margin:0 0 14px;font-size:clamp(28px,3.2vw,40px)}
 .location-area-service-card h2 a{color:inherit;text-decoration:none}
-.location-area-service-card>p:not(.section-tag){min-height:0;margin:0 0 22px;color:#646b6d;font-size:14px;line-height:1.6}
-.location-area-service-card>.text-arrow{margin-top:auto;color:#009fdc;font-size:14px;font-weight:600;text-decoration:none}
-.location-area-service-card>.text-arrow span{margin-left:8px}
+.location-area-service-card .location-state-copy>p:not(.section-tag){min-height:100px;margin:0 0 22px;color:#646b6d;font-size:13px;line-height:1.6}
+.location-area-service-card .location-state-links{margin-top:auto}
 .location-area-context{margin-top:40px;padding-top:25px;border-top:1px solid #d8d2ca}
 .location-area-context>p:not(.section-tag){max-width:1000px;color:#626a6d;font-size:15px;line-height:1.65}
 .location-area-context>p strong{color:#171717}

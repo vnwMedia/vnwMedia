@@ -438,7 +438,12 @@
     const services = areaServiceLinks.map(([key, label, description], index) => {
       const href = asset(`locations/${area.region}/${area.slug}/${key}-${area.slug}/`);
       const title = key === "ppc" ? `PPC / Google Ads in ${area.name}` : `${label} in ${area.name}`;
-      return `<article class="location-state-card location-area-service-card"><p class="section-tag">0${index + 1} · ${escapeHtml(label)}</p><h2><a href="${href}">${escapeHtml(title)}</a></h2><p>${escapeHtml(description)}</p><a class="text-arrow" href="${href}">Explore ${escapeHtml(label)} <span>↗</span></a></article>`;
+      const sourceKey = key === "ppc" ? "ppc" : key;
+      const source = pages[`${sourceKey}-${area.region}`];
+      const image = source?.showcaseImage || `assets/location-heroes/${source?.image || area.image}`;
+      const imageAlt = source?.showcaseAlt || source?.alt || `${label} planning for ${area.name} businesses`;
+      const stateCode = area.region === "new-jersey" ? "NJ" : "NY";
+      return `<article class="location-state-card location-area-service-card"><div class="location-state-image"><img src="${asset(image)}" alt="${escapeHtml(imageAlt)}" loading="lazy"><span>${stateCode}<i> / 0${index + 1}</i></span></div><div class="location-state-copy"><p class="section-tag">${escapeHtml(area.name)} · ${escapeHtml(label)}</p><h2><a href="${href}">${escapeHtml(title)}</a></h2><p>${escapeHtml(description)}</p><div class="location-state-links"><a href="${href}">Explore ${escapeHtml(label)} in ${escapeHtml(area.name)}<span aria-hidden="true">↗</span></a></div></div></article>`;
     }).join("");
     const faqs = [
       [`Do you work with businesses serving ${area.name}?`, `Yes. VNW Media can work with businesses that serve ${area.name}. Projects are planned collaboratively, and market coverage is confirmed against the business's actual service area and goals.`],
