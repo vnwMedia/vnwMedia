@@ -71,6 +71,9 @@
 .location-state-links a span{color:#00a6e8}
 .location-state-link-group+.location-state-link-group{margin-top:22px}
 .location-state-link-group>p{margin:16px 0 3px;color:#778083;font-size:9px;font-weight:700;letter-spacing:.13em}
+.location-directory-area-group>.location-area-page-group{margin-top:14px;padding-top:8px;border-top:1px solid #e3ded8}
+.location-directory-area-group>.location-area-page-group:first-of-type{margin-top:8px}
+.location-directory-area-group>.location-area-page-group h3{margin:7px 0 2px;color:#24292a;font:600 12px/1.35 Inter,Arial,sans-serif;letter-spacing:.02em}
 .location-area-service-card{padding:0;overflow:hidden;border:1px solid #dcd6ce;background:#fff}
 .location-area-service-card .location-state-copy{display:flex;min-height:310px;flex-direction:column}
 .location-area-service-card .location-state-copy .section-tag{margin:0 0 13px;color:#737b7e;font-size:10px}
