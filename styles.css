@@ -1153,6 +1153,22 @@ body .site-header.site-header .mega-wide .mega-columns{
   letter-spacing:.24em;
   text-transform:uppercase;
 }
+.scm-ms-page .scm-ms-hero .scm-ms-service-scope{
+  display:block;
+  max-width:none;
+  margin:10px 0 20px;
+  color:#f3efe8;
+  font-size:clamp(11px,.9vw,13px)!important;
+  font-weight:600;
+  letter-spacing:.025em;
+  line-height:1.5!important;
+  white-space:nowrap;
+}
+.scm-ms-service-scope i{
+  padding:0 .25em;
+  color:var(--orange);
+  font-style:normal;
+}
 .scm-ms-hero{
   position:relative;
   isolation:isolate;
@@ -1208,6 +1224,9 @@ body .site-header.site-header .mega-wide .mega-columns{
   font-weight:700;
   letter-spacing:.18em;
   text-transform:uppercase;
+}
+@media(max-width:700px){
+  .scm-ms-page .scm-ms-hero .scm-ms-service-scope{font-size:12px!important;line-height:1.55!important;white-space:normal}
 }
 .scm-ms-signals{
   border-bottom:1px solid rgba(255,255,255,.11);

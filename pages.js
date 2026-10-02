@@ -25,6 +25,16 @@ const DATA = {
   ]
 };
 
+// Keep case-study hero service labels identical to the service pills on the Work page.
+const WORK_CASE_SERVICE_LABELS = {
+  "nycadsco": ["SEO", "PPC", "Google Business Profile Management", "Reputation Management"],
+  "sfadsco": ["SEO", "PPC", "Google Business Profile Management", "Reputation Management"],
+  "vision-centers": ["Google Business Profile Management", "SEO", "Reputation Management"],
+  "brooklyn-motors": ["Web Design", "SEO", "Google Business Profile Management", "Google Business Profile Search Ads", "PPC", "GEO", "Reputation Management"],
+  "la-rosa-chicken-grill": ["SEO · 11 locations", "Google Business Profile Management", "Google Business Profile Search Ads", "Reputation Management"],
+  "kypcl": ["Web Design", "SEO", "Google Business Profile", "Google Business Search Ads", "Reputation Management", "Lead Generation"]
+};
+
 const topPages = {
   story:["Our Story","Built like a growth partner, not just another vendor.","VNW Media helps businesses connect website design, search visibility, paid campaigns, content, reputation, and follow-up into one clearer growth system.","assets/story-hero-wireframe-wall-v2.png"],
   "work-hub":["Work Options","Choose the Work page experience you want to explore.","Ten different ways to present VNW Media’s portfolio, website design work, digital marketing projects, industries served, lead-generation strategy, proof points, FAQs, and conversion-focused calls to action.","assets/case-system-stack.svg"],
@@ -243,7 +253,7 @@ function renderAdditionalClientCaseStudy(project){
   return renderClientCaseStudy({
     name:project.name, kicker:project.industry, intro:project.summary,
     hero:project.hero, heroAlt:project.heroAlt, heroWidth:1920, heroHeight:1080,
-    yearLabel:'Web Design · Search · AI', website:project.website,
+    website:project.website,
     mockup:project.desktop, mockupAlt:`${project.name} website on desktop`, mockupWidth:1440, mockupHeight:1000,
     mockupMobile:project.mobile, visualCaption:'The live client website.', visualDetail:'Desktop · Mobile',
     signals:project.focus, businessIntro:project.name+' — '+project.summary, challengeTitle:project.headline, challengeOne:project.challenge,
@@ -261,14 +271,7 @@ function workPageOne(){
   const featuredOrder=["la-rosa-chicken-grill","nycadsco","vision-centers","sfadsco","brooklyn-motors","kypcl"];
   const featuredProjects=DATA.cases.map((project,index)=>({project,index})).sort((a,b)=>featuredOrder.indexOf(a.project[1])-featuredOrder.indexOf(b.project[1]));
   const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media","Reputation Management":"reputation-management","SEO · 11 locations":"seo","Google Business Profile Management":"google-business-profile","Google Business Profile Search Ads":"google-ppc","Google Business Profile":"google-business-profile","Google Business Search Ads":"google-ppc","Lead Generation":"lead-generation"};
-  const projectScopes=[
-    ["SEO","PPC","Google Business Profile Management","Reputation Management"],
-    ["SEO","PPC","Google Business Profile Management","Reputation Management"],
-    ["Google Business Profile Management","SEO","Reputation Management"],
-    ["Web Design","SEO","Google Business Profile Management","Google Business Profile Search Ads","PPC","GEO","Reputation Management"],
-    ["SEO · 11 locations","Google Business Profile Management","Google Business Profile Search Ads","Reputation Management"],
-    ["Web Design", "SEO", "Google Business Profile", "Google Business Search Ads", "Reputation Management", "Lead Generation"]
-  ];
+  const projectScopes=DATA.cases.map(project=>WORK_CASE_SERVICE_LABELS[project[1]]||[]);
   const principles=[
     ["Strategy","Start with the business goal, audience, offer, and decision the website needs to support."],
     ["Design","Build a visual system that makes the brand easier to trust and the content easier to understand."],
@@ -780,11 +783,20 @@ function renderClientCaseStudy(config){
   };
   const businessIntro=config.businessIntro||businessIntroductions[config.name];
   const {signals, approach, services}=config;
+  const workProject=DATA.cases.find(project=>project[0]===config.name);
+  const workServiceLabels=workProject
+    ? (WORK_CASE_SERVICE_LABELS[workProject[1]]||[])
+    : (typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined" && typeof ADDITIONAL_PROJECT_SERVICES!=="undefined" && ADDITIONAL_CLIENT_PROJECTS.some(project=>project.name===config.name)
+      ? ADDITIONAL_PROJECT_SERVICES.map(service=>service[1])
+      : []);
+  const workServiceLine=workServiceLabels.length
+    ? `<p class="scm-ms-service-scope" aria-label="Services provided for ${esc(config.name)}">${workServiceLabels.map(esc).join(" <i aria-hidden=\"true\">·</i> ")}</p>`
+    : "";
   const serviceNav=services.map(x=>`<a class="pill pill-outline" href="#${x[0]}">${x[1]}</a>`).join("");
   const detailSections=services.map((x,i)=>`<section class="scm-ms-service reveal" id="${x[0]}" data-nav-theme="dark"><div class="scm-ms-service-grid"><div class="scm-ms-service-title"><span>${String(i+1).padStart(2,"0")} / ${x[3]}</span><h2>${x[1]}</h2></div><div class="scm-ms-service-copy"><p>${x[2]}</p><a class="scm-ms-inline-cta" href="${path("contact.html")}">${x[4]||"Discuss this part of the build"} <span>↗</span></a></div></div></section>`).join("");
   return `
     <div class="scm-ms-page">
-      <section class="scm-ms-hero" id="page-content" data-nav-theme="dark"><div class="scm-ms-hero-bg"><img src="${img(config.hero)}" alt="${esc(config.heroAlt)}" width="${config.heroWidth}" height="${config.heroHeight}" fetchpriority="high"></div><div class="shell scm-ms-hero-inner reveal"><p class="scm-ms-kicker">${esc(config.kicker)}</p><h1>${clientHeading}</h1><p>${esc(config.intro)}</p><span>${esc(config.yearLabel||"2026")}</span></div></section>
+      <section class="scm-ms-hero" id="page-content" data-nav-theme="dark"><div class="scm-ms-hero-bg"><img src="${img(config.hero)}" alt="${esc(config.heroAlt)}" width="${config.heroWidth}" height="${config.heroHeight}" fetchpriority="high"></div><div class="shell scm-ms-hero-inner reveal"><p class="scm-ms-kicker">${esc(config.kicker)}</p>${workServiceLine}<h1>${clientHeading}</h1><p>${esc(config.intro)}</p><span>${esc(config.yearLabel||"2026")}</span></div></section>
       <section class="scm-ms-signals" data-nav-theme="dark"><div class="shell scm-ms-signal-grid">${signals.map(x=>`<article class="reveal"><strong>${x[0]}</strong><span>${x[1]}</span></article>`).join("")}</div></section>
       <section class="scm-ms-challenge-approach" data-nav-theme="dark"><div class="shell scm-ms-ca-grid reveal"><article class="scm-ms-ca-panel"><p class="section-tag">The Challenge</p><h2>${esc(config.challengeTitle)}</h2><div class="scm-ms-ca-copy">${businessIntro?`<p class="case-business-intro">${esc(businessIntro)}</p>`:""}<p>${esc(config.challengeOne)}</p><p>${esc(config.challengeTwo)}</p></div></article><article class="scm-ms-ca-panel"><p class="section-tag">Our Approach</p><h2>${esc(config.approachTitle)}</h2><div class="scm-ms-approach-list">${approach.map(x=>`<article><b>—</b><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></article></div></section>
       <section class="scm-ms-story" id="digital-experience" data-nav-theme="light" aria-labelledby="scm-story-title">
