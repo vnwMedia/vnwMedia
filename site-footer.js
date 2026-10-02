@@ -9,6 +9,13 @@
   const footer = holder.firstElementChild;
   footer.id = 'vnw-site-footer';
   footer.setAttribute('aria-label', 'VNW Media footer');
+  const locationsLink = footer.querySelector('.footer-company a[href$="locations/"]');
+  if (locationsLink && !footer.querySelector('.footer-company a[href$="industries.html"]')) {
+   const industriesLink = document.createElement('a');
+   industriesLink.href = new URL('industries.html', root).href;
+   industriesLink.textContent = 'Industries';
+   locationsLink.after(industriesLink);
+  }
   footer.querySelectorAll('[href], [src]').forEach(el => {
    const attr = el.hasAttribute('href') ? 'href' : 'src';
    const value = el.getAttribute(attr);

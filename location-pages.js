@@ -133,11 +133,125 @@
     }
   };
 
+  const locationAreas = {
+    "monmouth-county": {
+      slug: "monmouth-county", region: "new-jersey", stateName: "New Jersey", name: "Monmouth County",
+      places: "Communities across Monmouth County, including Middletown Township, Morganville, Freehold, and Red Bank, where your business actually operates",
+      context: "VNW Media is based in Morganville, New Jersey. For Monmouth County businesses, we shape recommendations around the communities they serve, customer needs, and the team's capacity—not a copied countywide template.",
+      summary: "A countywide starting point for businesses that need clear service-area messaging, useful search visibility, and a website experience built around the customers they can serve.",
+      image: "nj-digital-marketing.jpg"
+    },
+    "middletown": {
+      slug: "middletown", region: "new-jersey", stateName: "New Jersey", name: "Middletown, NJ",
+      places: "Middletown Township and nearby Monmouth County communities",
+      context: "VNW Media is based in Morganville, New Jersey. For a business serving Middletown Township, the right digital plan reflects its actual travel radius, customer journey, and the services it is ready to deliver.",
+      summary: "Focused digital support for Middletown-area businesses, from clearer service pages and local search signals to paid campaigns tied to practical coverage.",
+      image: "nj-digital-marketing.jpg"
+    },
+    "morganville": {
+      slug: "morganville", region: "new-jersey", stateName: "New Jersey", name: "Morganville, NJ",
+      places: "Morganville, Marlboro Township, and nearby Monmouth County communities where your business provides service",
+      context: "VNW Media is based in Morganville, New Jersey. We understand that nearby businesses can serve very different customers, so we align page content, search priorities, and campaign geography with each company's actual footprint.",
+      summary: "A practical digital growth starting point for Morganville businesses, grounded in accurate local information and the next action customers should take.",
+      image: "nj-digital-marketing.jpg"
+    },
+    "brooklyn": {
+      slug: "brooklyn", region: "new-york", stateName: "New York", name: "Brooklyn, NY",
+      places: "Brooklyn neighborhoods such as Downtown Brooklyn, Williamsburg, Bay Ridge, and nearby New York communities where your business operates",
+      context: "VNW Media works with New York businesses through a collaborative, remote-first process. For Brooklyn, we plan around neighborhood-level customer expectations and the areas a business can genuinely serve—not broad borough claims.",
+      summary: "Digital marketing, SEO, web design, and paid search for Brooklyn businesses, planned around neighborhood relevance and real operational coverage.",
+      image: "ny-digital-marketing.jpg"
+    },
+    "sheepshead-bay": {
+      slug: "sheepshead-bay", region: "new-york", stateName: "New York", name: "Sheepshead Bay, Brooklyn",
+      places: "Sheepshead Bay and nearby South Brooklyn neighborhoods, including Brighton Beach and Manhattan Beach, where your business actually operates",
+      context: "VNW Media partners with New York businesses remotely and collaboratively. For Sheepshead Bay, we keep location messaging specific to the services, customers, and South Brooklyn coverage a business can support.",
+      summary: "A focused starting point for businesses serving Sheepshead Bay and South Brooklyn, with useful local information instead of generic neighborhood-name repetition.",
+      image: "ny-digital-marketing.jpg"
+    }
+  };
+
+  const areaServiceLinks = [
+    ["digital-marketing", "Digital Marketing", "Connect your website, search, campaigns, and follow-up around a specific business goal."],
+    ["seo", "SEO", "Build useful local relevance, healthy technical foundations, and service content customers can act on."],
+    ["web-design", "Web Design", "Make services, neighborhood coverage, trust signals, and next steps clearer on every screen."],
+    ["ppc", "PPC / Google Ads", "Plan paid search around the right intent, actual coverage, landing pages, and lead quality."]
+  ];
+
+  function localizedAreaPage(area, serviceKey) {
+    const base = pages[`${serviceKey}-${area.region}`];
+    if (!base) return null;
+    const service = serviceKey === "ppc" ? "PPC" : base.service;
+    const market = area.name;
+    const data = {...base, region: `${area.region}-${area.slug}`, service};
+    const localFocus = {
+      "digital-marketing": {
+        hero: `Digital marketing for ${market} businesses, built around the next customer conversation.`,
+        lead: `Bring your website, search visibility, paid campaigns, and lead follow-up together around the customers and communities your ${market} business can serve.`,
+        introTitle: `A connected digital plan for ${market}.`,
+        intro: `Businesses in ${market} do not need a disconnected list of tactics. We start with the offer, customer journey, service footprint, and strongest next action, then coordinate the website, SEO, paid media, social, and follow-up that fit.`,
+        showcaseTitle: `Make each channel useful to the ${market} customer journey.`,
+        showcaseText: `A business serving ${market} may rely on calls, appointments, store visits, or estimate requests. We shape the digital plan around those actions and the nearby communities your team can genuinely support, then measure what happens after discovery.`
+      },
+      seo: {
+        hero: `Local SEO for businesses serving ${market}.`,
+        lead: `Connect technical site health, useful service content, and accurate location signals to the searches that matter to your business.`,
+        introTitle: `Build search visibility around real ${market} service coverage.`,
+        intro: `Effective local SEO helps customers and search engines understand what you offer, where you operate, and why a page is useful. We assess technical foundations, local business information, service pages, internal links, and customer questions before recommending work.`,
+        showcaseTitle: `Local search should mirror how your ${market} business operates.`,
+        showcaseText: `A storefront, appointment-based practice, and mobile service company each need different location signals. We align pages and business information with your actual ${market} coverage, avoid thin duplicate location copy, and track meaningful actions alongside search visibility.`
+      },
+      "web-design": {
+        hero: `Web design for ${market} businesses ready for a clearer customer experience.`,
+        lead: `Give visitors a responsive website that explains your services, supports local discovery, and makes the right next step easy.`,
+        introTitle: `A better website starts with the ${market} customer.`,
+        intro: `People may arrive from a local search, recommendation, or campaign. The site should help them quickly understand your offer, service area, proof, and next action. We plan structure, content, mobile experience, SEO foundations, and conversion paths around those decisions.`,
+        showcaseTitle: `Design around the way ${market} customers choose.`,
+        showcaseText: `A strong local website is not a city-name swap. We organize the customer journey, service details, trust signals, and calls to action around your business model and the ${market} communities you actually serve, with responsive layouts and launch checks built into the project.`
+      },
+      ppc: {
+        hero: `PPC and Google Ads for businesses serving ${market}.`,
+        lead: `Connect search intent, campaign geography, landing pages, budgets, and measurement around the inquiries your team is ready to handle.`,
+        introTitle: `Paid search for the ${market} demand you can serve.`,
+        intro: `Useful PPC management is more than launching ads. We align keyword intent, geographic settings, ad messaging, landing pages, tracking, and lead follow-up with your offer, budget, and operational capacity.`,
+        showcaseTitle: `Keep ${market} campaign targeting tied to real coverage.`,
+        showcaseText: `We plan campaign boundaries around where your business can deliver, not an arbitrary list of nearby place names. Search terms, landing-page relevance, budget, scheduling, and the quality of inquiries all inform ongoing optimization.`
+      }
+    }[serviceKey];
+    const localizedFaqQuestion = {
+      "digital-marketing": `What can digital marketing include for a business in ${market}?`,
+      seo: `How can SEO support a business serving ${market}?`,
+      "web-design": `What affects the scope of a website project in ${market}?`,
+      ppc: `How do you target Google Ads for a business serving ${market}?`
+    }[serviceKey];
+    const localizedFaqAnswer = {
+      "digital-marketing": `Depending on the goal, a plan can connect website strategy, SEO, paid media, social, landing pages, analytics, and lead follow-up. We recommend only the channels that fit the business and the customers it can serve in ${market}.`,
+      seo: `SEO can connect technical site health, useful service content, accurate business information, and relevant local pages. We first understand the services and communities the business genuinely serves in ${market}, then prioritize work around customer needs and measurable progress.`,
+      "web-design": `Scope depends on the site's size, content, design needs, functionality, integrations, and launch support. We clarify the customer journey and the places the business serves in ${market} before recommending a practical project scope.`,
+      ppc: `Campaign planning can include search intent, geographic settings, ad messaging, landing pages, conversion tracking, and optimization. We align targeting with the areas the business can genuinely serve in ${market}; ad spend and management scope are discussed before launch.`
+    }[serviceKey];
+    data.hero = localFocus.hero;
+    data.lead = localFocus.lead;
+    data.introTitle = localFocus.introTitle;
+    data.intro = localFocus.intro;
+    data.showcaseTitle = localFocus.showcaseTitle;
+    data.showcaseText = localFocus.showcaseText;
+    data.alt = `${base.service} planning for a business serving ${market}`;
+    data.faq = [
+      [localizedFaqQuestion, localizedFaqAnswer],
+      [`Do you work with businesses in ${market}?`, `Yes. VNW Media can work with businesses serving ${market}. The project is planned collaboratively, and location coverage is confirmed against the business's actual operations and goals.`],
+      [`Can campaigns or pages include nearby communities?`, `They can when those places match your real service footprint and the page or campaign provides useful information. ${area.places}.`],
+      [`Can I begin with only ${service}?`, `Yes. You can start with this priority and consider connected services only when they support the same business goal and are useful for your team.`],
+      [`Do you guarantee ${serviceKey === "seo" ? "rankings" : "leads or a specific result"}?`, `No. Outcomes depend on competition, budget, implementation, offer, customer experience, and other factors. We define practical measures and use available data to guide improvements without promising a fixed result.`]
+    ];
+    return {data, facts: {...area, state: market, market}};
+  }
+
   function escapeHtml(value) {
     return String(value).replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
   }
   function heroFormMarkup(data, facts) {
-    const interest = `${data.service} in ${facts.state}`;
+    const interest = `${data.service} in ${facts.market || facts.state}`;
     return `<form class="hero-form indl-hero-form location-hero-form" aria-label="Plan your ${escapeHtml(interest)} strategy">
       <h2>Plan your ${escapeHtml(data.service)} growth strategy</h2>
       <label class="icon-field"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><input name="name" autocomplete="name" required placeholder="Full Name" aria-label="Full Name" /></label>
@@ -157,7 +271,8 @@
       "Digital Marketing": ["Strategy", "Experience", "Visibility", "Follow-up"],
       SEO: ["Research", "Technical", "Content", "Measurement"],
       "Web Design": ["Structure", "Design", "Content", "Launch"],
-      "Google PPC": ["Targeting", "Campaign", "Landing page", "Tracking"]
+      "Google PPC": ["Targeting", "Campaign", "Landing page", "Tracking"],
+      PPC: ["Targeting", "Campaign", "Landing page", "Tracking"]
     }[data.service] || ["Structure", "Design", "Content", "Launch"];
     const id = `blueprint-${data.region}-${data.service.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
     const labels = stages.map((stage, index) => `<text class="location-blueprint-callout-label" x="${index % 2 === 0 ? 9 : 580}" y="${index < 2 ? 101 : 366}">0${index + 1} · ${escapeHtml(stage.toUpperCase())}</text>`).join("");
@@ -213,7 +328,7 @@
         description: "Search intent, local targeting, ad messaging, and lead tracking connect through a relevant landing page to a qualified inquiry and ongoing optimization."
       }
     };
-    const plan = plans[data.service] || plans["Digital Marketing"];
+    const plan = plans[data.service] || (data.service === "PPC" ? plans["Google PPC"] : plans["Digital Marketing"]);
     const id = `junction-${data.region}-${data.service.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
     const sourceMarkup = plan.sources.map((source, index) => {
       const y = 83 + index * 66;
@@ -279,14 +394,15 @@
     </section>`;
   }
   function pageMarkup(data, facts) {
+    const market = facts.market || facts.state;
     const faq = data.faq.map(([question, answer], i) => `<details${i === 0 ? " open" : ""}><summary>${escapeHtml(question)}<span aria-hidden="true">+</span></summary><p>${escapeHtml(answer)}</p></details>`).join("");
     const tags = data.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join("");
     return `<main id="top" class="location-main">
-      <section class="indl-hero location-hero" data-nav-theme="dark"><div class="indl-hero-media"><img src="${asset(`assets/location-heroes/${data.image}`)}" alt="${escapeHtml(data.alt)}" fetchpriority="high"></div><div class="indl-hero-shade"></div><div class="shell indl-hero-inner"><div class="indl-hero-copy"><p class="section-tag">${escapeHtml(data.service)} · ${facts.state}</p><h1>${escapeHtml(data.hero)}</h1><p>${escapeHtml(data.lead)}</p><div class="indl-actions"><a class="pill pill-blue pill-large" href="${contact}">Discuss ${escapeHtml(data.service)} in ${facts.state} <span>↗</span></a><a class="pill pill-outline pill-large" href="#local-approach">Explore the approach</a></div></div>${heroFormMarkup(data, facts)}</div></section>
+      <section class="indl-hero location-hero" data-nav-theme="dark"><div class="indl-hero-media"><img src="${asset(`assets/location-heroes/${data.image}`)}" alt="${escapeHtml(data.alt)}" fetchpriority="high"></div><div class="indl-hero-shade"></div><div class="shell indl-hero-inner"><div class="indl-hero-copy"><p class="section-tag">${escapeHtml(data.service)} · ${escapeHtml(market)}</p><h1>${escapeHtml(data.hero)}</h1><p>${escapeHtml(data.lead)}</p><div class="indl-actions"><a class="pill pill-blue pill-large" href="${contact}">Discuss ${escapeHtml(data.service)} in ${escapeHtml(market)} <span>↗</span></a><a class="pill pill-outline pill-large" href="#local-approach">Explore the approach</a></div></div>${heroFormMarkup(data, facts)}</div></section>
       <section class="trust-strip indl-ticker location-ticker" aria-label="${escapeHtml(data.service)} focus areas"><div class="trust-track"><small>Built around your market</small><i></i><span>${escapeHtml(data.service)}</span><span>Customer experience</span><span>Search visibility</span><span>Local relevance</span><span>Qualified leads</span><span>Clear measurement</span><span>Practical next steps</span></div></section>
       <section class="indl-showcase mockup-direction-section location-showcase" data-nav-theme="light"><div class="shell indl-showcase-grid"><div class="indl-showcase-media"><img src="${asset(data.showcaseImage)}" alt="${escapeHtml(data.showcaseAlt)}" loading="lazy"></div><article class="indl-showcase-copy"><p class="section-tag">Local market context</p><h2>${escapeHtml(data.showcaseTitle)}</h2><p>${escapeHtml(data.showcaseText)}</p><div class="indl-tags">${tags}</div><a class="text-arrow" href="${contact}">Plan your next step <span>↗</span></a></article></div></section>
-      <section class="indl-section industry-system-section location-system location-approach" id="local-approach" data-nav-theme="dark"><div class="shell"><div class="location-approach-head"><div class="location-approach-copy"><p class="section-tag">How the work fits together · One connected approach</p><h2>${escapeHtml(data.systemTitle)}</h2><p><strong>${escapeHtml(data.service)} for ${facts.state}.</strong> ${escapeHtml(data.systemIntro)}</p><p>${escapeHtml(facts.context)}</p><a class="pill pill-blue location-approach-cta" href="${contact}">Discuss your project <span>↗</span></a></div></div>${websiteBlueprintMarkup(data, facts)}</div></section>
-      <section class="indl-section location-overview decision-section" data-nav-theme="light"><div class="shell"><div class="indl-head"><p class="section-tag">${escapeHtml(data.service)} in ${facts.state}</p><h2>${escapeHtml(data.introTitle)}</h2><p>${escapeHtml(data.intro)}</p><p class="location-area-note"><strong>Markets we can discuss</strong><br>${escapeHtml(facts.places)}. Coverage is confirmed against your actual service area.</p></div>${channelJunctionMarkup(data, facts)}${cardMarkup(data.cards, "location-junction-steps")}</div></section>
+      <section class="indl-section industry-system-section location-system location-approach" id="local-approach" data-nav-theme="dark"><div class="shell"><div class="location-approach-head"><div class="location-approach-copy"><p class="section-tag">How the work fits together · One connected approach</p><h2>${escapeHtml(data.systemTitle)}</h2><p><strong>${escapeHtml(data.service)} for ${escapeHtml(market)}.</strong> ${escapeHtml(data.systemIntro)}</p><p>${escapeHtml(facts.context)}</p><a class="pill pill-blue location-approach-cta" href="${contact}">Discuss your project <span>↗</span></a></div></div>${websiteBlueprintMarkup(data, facts)}</div></section>
+      <section class="indl-section location-overview decision-section" data-nav-theme="light"><div class="shell"><div class="indl-head"><p class="section-tag">${escapeHtml(data.service)} in ${escapeHtml(market)}</p><h2>${escapeHtml(data.introTitle)}</h2><p>${escapeHtml(data.intro)}</p><p class="location-area-note"><strong>Markets we can discuss</strong><br>${escapeHtml(facts.places)}. Coverage is confirmed against your actual service area.</p></div>${channelJunctionMarkup(data, facts)}${cardMarkup(data.cards, "location-junction-steps")}</div></section>
       ${reviewMarkup()}
       <section class="indl-faq location-faq" id="faq" data-nav-theme="light"><div class="shell indl-faq-grid"><div class="indl-faq-intro"><p class="section-tag">${escapeHtml(data.service)} in ${facts.state} · FAQs</p><h2>Useful answers before we begin.</h2><p>Every project depends on the business, market, and priorities. Here are a few common questions.</p><a class="pill pill-blue" href="${contact}">Ask about your project <span>↗</span></a></div><div class="indl-faq-list">${faq}</div></div></section>
     </main>`;
@@ -295,14 +411,15 @@
     const states = Object.entries(areaFacts).filter(([slug]) => !regionOnly || slug === regionOnly);
     const stateCards = states.map(([slug, facts]) => {
       const childLinks = Object.entries(pages).filter(([, page]) => page.region === slug).map(([pageSlug, page]) => `<a href="${asset(`locations/${slug}/${pageSlug}/`)}">${escapeHtml(page.service)} in ${facts.state}<span aria-hidden="true">↗</span></a>`).join("");
+      const areaLinks = Object.values(locationAreas).filter(area => area.region === slug).map(area => `<a href="${asset(`locations/${slug}/${area.slug}/`)}">${escapeHtml(area.name)} area guide<span aria-hidden="true">↗</span></a>`).join("");
       const stateCode = slug === "new-jersey" ? "NJ" : "NY";
       const imageName = slug === "new-jersey" ? "nj-digital-marketing.jpg" : "ny-digital-marketing.jpg";
       const imageAlt = slug === "new-jersey" ? "Business owners reviewing a website together" : "New York business team discussing a digital project";
-      return `<article class="location-state-card" id="${slug}" aria-labelledby="${slug}-heading"><div class="location-state-image"><img src="${asset(`assets/location-heroes/${imageName}`)}" alt="${imageAlt}" loading="lazy"><span>${stateCode}<i> / 0${slug === "new-jersey" ? "1" : "2"}</i></span></div><div class="location-state-copy"><p class="section-tag">${facts.state} · Location guides</p><h2 id="${slug}-heading">Digital growth for ${facts.state} businesses.</h2><p>${escapeHtml(facts.context)}</p><div class="location-state-links">${childLinks}</div></div></article>`;
+      return `<article class="location-state-card" id="${slug}" aria-labelledby="${slug}-heading"><div class="location-state-image"><img src="${asset(`assets/location-heroes/${imageName}`)}" alt="${imageAlt}" loading="lazy"><span>${stateCode}<i> / 0${slug === "new-jersey" ? "1" : "2"}</i></span></div><div class="location-state-copy"><p class="section-tag">${facts.state} · Location guides</p><h2 id="${slug}-heading">Digital growth for ${facts.state} businesses.</h2><p>${escapeHtml(facts.context)}</p><div class="location-state-links"><div class="location-state-link-group"><p>STATEWIDE SERVICE PAGES</p>${childLinks}</div><div class="location-state-link-group"><p>AREA GUIDES</p>${areaLinks}</div></div></div></article>`;
     }).join("");
     const faqs = [
       ["Which locations are covered by these pages?", "This directory includes service pages for New Jersey and New York. We confirm the relevant communities and coverage against where your business actually operates."],
-      ["What services can I explore for each location?", "You can explore digital marketing, SEO, web design, and Google Ads pages for both New Jersey and New York."],
+      ["What services can I explore for each location?", "You can explore digital marketing, SEO, web design, and PPC / Google Ads pages. Area guides also connect those services to selected New Jersey and New York markets."],
       ["Do I need to be based in New Jersey or New York to work with VNW Media?", "These pages focus on those two markets. If your business operates elsewhere, tell us where you work and what you need; we can discuss whether the project is a fit."],
       ["How do I choose between digital marketing, SEO, web design, and Google Ads?", "Start with the business goal and the point where customers are getting stuck. You can begin with one priority; a broader mix only makes sense when the pieces support that goal."],
       ["Are the recommendations tailored to my actual service area?", "Yes. Market coverage is discussed in relation to your real service footprint, audience, capacity, and goals—not a copied list of nearby place names."]
@@ -311,13 +428,45 @@
     return `<main id="top" class="location-directory">
       <section class="inner-hero location-directory-hero" data-nav-theme="dark"><div class="inner-hero-bg" style="background-image:linear-gradient(90deg,rgba(8,8,8,.94),rgba(8,8,8,.68),rgba(8,8,8,.36)),url('${asset("assets/location-heroes/nj-digital-marketing.jpg")}')"></div><div class="shell inner-hero-copy reveal"><p class="eyebrow">Service areas · New Jersey &amp; New York</p><h1>Digital growth, grounded in the places you serve.</h1><p class="hero-lede">Explore focused digital marketing, SEO, web design, and Google Ads pages for businesses in New Jersey and New York—built around real markets, not one-size-fits-all location templates.</p><div class="hero-actions"><a class="pill pill-blue pill-large" href="#locations">Explore locations <span>↗</span></a><a class="pill pill-outline pill-large" href="${contact}">Talk with our team</a></div></div></section>
       <section class="trust-strip location-directory-ticker" data-nav-theme="dark" aria-label="VNW Media capabilities"><div class="trust-track"><small>Built to move businesses forward</small><i aria-hidden="true"></i><span>Web Design</span><span>SEO</span><span>Google Ads</span><span>Social Media</span><span>Brand Strategy</span><span>Content</span></div></section>
-      <section class="location-directory-markets" id="locations"><div class="shell"><header class="location-directory-heading"><p class="section-tag">Choose your market</p><h2>Start with the area your business serves.</h2><p>Two regional starting points. Four focused service pages in each, with coverage confirmed around your business.</p></header><div class="location-state-grid">${stateCards}</div></div></section>
+      <section class="location-directory-markets" id="locations"><div class="shell"><header class="location-directory-heading"><p class="section-tag">Choose your market</p><h2>Start with the area your business serves.</h2><p>Explore statewide service pages and focused guides for selected communities, with coverage confirmed around your real operations.</p></header><div class="location-state-grid">${stateCards}</div></div></section>
       ${reviewMarkup()}
       <section class="faq section location-directory-faq" id="faq" data-nav-theme="light"><div class="shell faq-grid"><div class="faq-intro reveal"><p class="section-tag">Locations FAQ</p><h2>Helpful answers for choosing a market and service.</h2><p>Learn how the location pages are organized and what to consider before deciding where to begin.</p><a class="pill pill-blue" href="${contact}">Ask about your market <span>↗</span></a></div><div class="faq-list reveal">${faqMarkup}</div></div></section>
     </main>`;
   }
+
+  function areaDirectoryMarkup(area) {
+    const services = areaServiceLinks.map(([key, label, description], index) => {
+      const href = asset(`locations/${area.region}/${area.slug}/${key}-${area.slug}/`);
+      const title = key === "ppc" ? `PPC / Google Ads in ${area.name}` : `${label} in ${area.name}`;
+      return `<article class="location-state-card location-area-service-card"><p class="section-tag">0${index + 1} · ${escapeHtml(label)}</p><h2><a href="${href}">${escapeHtml(title)}</a></h2><p>${escapeHtml(description)}</p><a class="text-arrow" href="${href}">Explore ${escapeHtml(label)} <span>↗</span></a></article>`;
+    }).join("");
+    const faqs = [
+      [`Do you work with businesses serving ${area.name}?`, `Yes. VNW Media can work with businesses that serve ${area.name}. Projects are planned collaboratively, and market coverage is confirmed against the business's actual service area and goals.`],
+      [`Do these pages mean VNW Media has an office in ${area.name}?`, `No. VNW Media is based in Morganville, New Jersey and works with New York businesses through a collaborative, remote-first process. These pages describe markets we can discuss, not a claim of a local office in every area.`],
+      [`Which service should I explore first?`, `Start with the business priority: digital marketing for a coordinated channel plan, SEO for organic discovery, web design for a clearer website experience, or PPC / Google Ads for paid search. You can begin with one.`],
+      [`Can you cover nearby towns or neighborhoods too?`, `Potential coverage is discussed based on where the business genuinely operates, customer needs, and team capacity. We avoid implying coverage or creating repetitive area pages where there is no distinct useful information.`]
+    ];
+    const faqMarkup = faqs.map(([question, answer], index) => `<details${index === 0 ? " open" : ""}><summary>${escapeHtml(question)}<span aria-hidden="true">+</span></summary><p>${escapeHtml(answer)}</p></details>`).join("");
+    const stateName = area.stateName;
+    const imageUrl = asset(`assets/location-heroes/${area.image}`);
+    return `<main id="top" class="location-directory location-area-directory">
+      <section class="inner-hero location-directory-hero" data-nav-theme="dark"><div class="inner-hero-bg" style="background-image:linear-gradient(90deg,rgba(8,8,8,.94),rgba(8,8,8,.68),rgba(8,8,8,.36)),url('${imageUrl}')"></div><div class="shell inner-hero-copy reveal"><p class="eyebrow">${escapeHtml(stateName)} · ${escapeHtml(area.name)} service area</p><h1>Digital growth shaped around ${escapeHtml(area.name)}.</h1><p class="hero-lede">${escapeHtml(area.summary)}</p><div class="hero-actions"><a class="pill pill-blue pill-large" href="#area-services">Explore services <span>↗</span></a><a class="pill pill-outline pill-large" href="${contact}">Talk with our team</a></div></div></section>
+      <section class="trust-strip location-directory-ticker" data-nav-theme="dark" aria-label="VNW Media capabilities"><div class="trust-track"><small>Built around your market</small><i aria-hidden="true"></i><span>Digital Marketing</span><span>SEO</span><span>Web Design</span><span>PPC / Google Ads</span><span>Local relevance</span><span>Clear measurement</span></div></section>
+      <section class="location-directory-markets location-area-services" id="area-services"><div class="shell"><header class="location-directory-heading"><p class="section-tag">Services for ${escapeHtml(area.name)}</p><h2>Choose the right starting point.</h2><p>Each service has its own page, information, and questions. Recommendations are grounded in your offer and actual coverage across ${escapeHtml(area.name)}.</p></header><div class="location-state-grid location-area-service-grid">${services}</div><div class="location-area-context"><p class="section-tag">Local market context</p><p>${escapeHtml(area.context)}</p><p><strong>Markets we can discuss</strong><br>${escapeHtml(area.places)}. Coverage is confirmed against your actual service area.</p></div></div></section>
+      ${reviewMarkup()}
+      <section class="faq section location-directory-faq" id="faq" data-nav-theme="light"><div class="shell faq-grid"><div class="faq-intro reveal"><p class="section-tag">${escapeHtml(area.name)} · FAQs</p><h2>Useful answers about local coverage.</h2><p>Understand how area pages fit into a service plan before deciding where to begin.</p><a class="pill pill-blue" href="${contact}">Ask about your market <span>↗</span></a></div><div class="faq-list reveal">${faqMarkup}</div></div></section>
+    </main>`;
+  }
+
   const pageId = document.body.dataset.locationPage;
   const app = document.getElementById("app");
-  if (pageId && pages[pageId]) app.innerHTML = pageMarkup(pages[pageId], areaFacts[pages[pageId].region]);
+  const areaSlug = document.body.dataset.locationArea;
+  const serviceKey = document.body.dataset.locationService;
+  if (areaSlug && locationAreas[areaSlug] && serviceKey) {
+    const localized = localizedAreaPage(locationAreas[areaSlug], serviceKey);
+    if (localized) app.innerHTML = pageMarkup(localized.data, localized.facts);
+  }
+  else if (areaSlug && locationAreas[areaSlug]) app.innerHTML = areaDirectoryMarkup(locationAreas[areaSlug]);
+  else if (pageId && pages[pageId]) app.innerHTML = pageMarkup(pages[pageId], areaFacts[pages[pageId].region]);
   else if (document.body.dataset.locationDirectory === "true") app.innerHTML = directoryMarkup(document.body.dataset.locationRegion || "");
 })();
