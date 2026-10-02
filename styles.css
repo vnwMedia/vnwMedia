@@ -1219,6 +1219,14 @@ body .site-header.site-header .mega-wide .mega-columns{
   font-size:clamp(20px,2.1vw,30px);
   line-height:1.22;
 }
+.scm-ms-page .scm-ms-hero .scm-ms-business-intro{
+  max-width:780px;
+  margin:0 0 16px;
+  color:#e5e7e7;
+  font-size:clamp(15px,1.15vw,18px)!important;
+  font-weight:400;
+  line-height:1.48!important;
+}
 .scm-ms-hero span{
   color:#a6a6a6;
   font-size:13px;
