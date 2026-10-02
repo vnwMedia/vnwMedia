@@ -69,3 +69,6 @@ html body[data-page="home"] .hero .reveal{
   html body .industries-live .cinema-hero,
   html body.resources-live .cover-five{min-height:580px!important}
 }
+/* Case-study client marks and copy belong near the bottom of the image hero. */
+html body[data-page^="case-"] .scm-ms-hero{align-items:flex-end!important}
+html body[data-page^="case-"] .scm-ms-hero>.shell{align-self:flex-end!important}
