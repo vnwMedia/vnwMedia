@@ -136,7 +136,7 @@
 .location-junction-steps article:first-child{padding-left:0}
 .location-junction-steps article:last-child{padding-right:0;border-right:0}
 .location-junction-steps span{color:#00a6e8!important;font-size:10px;letter-spacing:.14em}
-.location-junction-steps h3{margin:auto 0 10px;color:#111;font:400 clamp(25px,2.4vw,32px)/1 Fraunces,Georgia,serif}
+.location-junction-steps h3{margin:32px 0 10px;color:#111;font:400 clamp(25px,2.4vw,32px)/1 Fraunces,Georgia,serif}
 .location-junction-steps p{max-width:290px;margin:0;color:#666!important;font-size:13px;line-height:1.55}
 @media(max-width:1000px){.location-overview .indl-head{width:100%}.location-junction-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.location-junction-steps article{min-height:180px;padding:21px;border-bottom:1px solid #d8d4cf}.location-junction-steps article:first-child{padding-left:0}.location-junction-steps article:nth-child(2){padding-right:0;border-right:0}.location-junction-steps article:nth-child(3){padding-left:0}.location-junction-steps article:last-child{padding-right:0;border-bottom:0}}
 @media(max-width:640px){.location-junction-svg{min-width:900px}.location-junction-hint{display:block;margin:9px 0 0;color:#777;font-size:11px}.location-junction-steps{grid-template-columns:1fr;margin-top:20px}.location-junction-steps article,.location-junction-steps article:first-child,.location-junction-steps article:nth-child(2),.location-junction-steps article:nth-child(3),.location-junction-steps article:last-child{min-height:0;padding:18px 0;border-right:0;border-bottom:1px solid #d8d4cf}.location-junction-steps article:last-child{border-bottom:0}.location-junction-steps h3{margin:20px 0 8px;font-size:28px}.location-junction-steps p{max-width:none}}
