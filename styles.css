@@ -1156,17 +1156,21 @@ body .site-header.site-header .mega-wide .mega-columns{
 .scm-ms-page .scm-ms-hero .scm-ms-service-scope{
   display:block;
   max-width:none;
-  margin:0 0 15px;
-  color:#f3efe8;
+  margin:0;
+  color:#8c8c8c;
   font-size:clamp(11px,.9vw,13px)!important;
   font-weight:600;
   letter-spacing:.025em;
   line-height:1.5!important;
   white-space:nowrap;
 }
+.scm-ms-service-scope strong{
+  color:inherit;
+  font-weight:700;
+}
 .scm-ms-service-scope i{
   padding:0 .25em;
-  color:#fff;
+  color:inherit;
   font-size:1.25em;
   font-style:normal;
 }
@@ -1234,7 +1238,7 @@ body .site-header.site-header .mega-wide .mega-columns{
   letter-spacing:.18em;
   text-transform:uppercase;
 }
-@media(max-width:700px){
+@media(max-width:1100px){
   .scm-ms-page .scm-ms-hero .scm-ms-service-scope{font-size:12px!important;line-height:1.55!important;white-space:normal}
 }
 .scm-ms-signals{

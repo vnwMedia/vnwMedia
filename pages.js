@@ -790,13 +790,13 @@ function renderClientCaseStudy(config){
       ? ADDITIONAL_PROJECT_SERVICES.map(service=>service[1])
       : []);
   const workServiceLine=workServiceLabels.length
-    ? `<p class="scm-ms-service-scope" aria-label="Services provided for ${esc(config.name)}">${workServiceLabels.map(esc).join(" <i aria-hidden=\"true\">·</i> ")}</p>`
+    ? `<p class="scm-ms-service-scope" aria-label="Services offered for ${esc(config.name)}"><strong>Services Offered:</strong> ${workServiceLabels.map(esc).join(" <i aria-hidden=\"true\">·</i> ")}</p>`
     : "";
   const serviceNav=services.map(x=>`<a class="pill pill-outline" href="#${x[0]}">${x[1]}</a>`).join("");
   const detailSections=services.map((x,i)=>`<section class="scm-ms-service reveal" id="${x[0]}" data-nav-theme="dark"><div class="scm-ms-service-grid"><div class="scm-ms-service-title"><span>${String(i+1).padStart(2,"0")} / ${x[3]}</span><h2>${x[1]}</h2></div><div class="scm-ms-service-copy"><p>${x[2]}</p><a class="scm-ms-inline-cta" href="${path("contact.html")}">${x[4]||"Discuss this part of the build"} <span>↗</span></a></div></div></section>`).join("");
   return `
     <div class="scm-ms-page">
-      <section class="scm-ms-hero" id="page-content" data-nav-theme="dark"><div class="scm-ms-hero-bg"><img src="${img(config.hero)}" alt="${esc(config.heroAlt)}" width="${config.heroWidth}" height="${config.heroHeight}" fetchpriority="high"></div><div class="shell scm-ms-hero-inner reveal"><p class="scm-ms-kicker">${esc(config.kicker)}</p><h1>${clientHeading}</h1>${businessIntro?`<p class="scm-ms-business-intro">${esc(businessIntro)}</p>`:""}${workServiceLine}<span>${esc(config.yearLabel||"2026")}</span></div></section>
+      <section class="scm-ms-hero" id="page-content" data-nav-theme="dark"><div class="scm-ms-hero-bg"><img src="${img(config.hero)}" alt="${esc(config.heroAlt)}" width="${config.heroWidth}" height="${config.heroHeight}" fetchpriority="high"></div><div class="shell scm-ms-hero-inner reveal"><p class="scm-ms-kicker">${esc(config.kicker)}</p><h1>${clientHeading}</h1>${businessIntro?`<p class="scm-ms-business-intro">${esc(businessIntro)}</p>`:""}${workServiceLine}</div></section>
       <section class="scm-ms-signals" data-nav-theme="dark"><div class="shell scm-ms-signal-grid">${signals.map(x=>`<article class="reveal"><strong>${x[0]}</strong><span>${x[1]}</span></article>`).join("")}</div></section>
       <section class="scm-ms-challenge-approach" data-nav-theme="dark"><div class="shell scm-ms-ca-grid reveal"><article class="scm-ms-ca-panel"><p class="section-tag">The Challenge</p><h2>${esc(config.challengeTitle)}</h2><div class="scm-ms-ca-copy"><p>${esc(config.challengeOne)}</p><p>${esc(config.challengeTwo)}</p></div></article><article class="scm-ms-ca-panel"><p class="section-tag">Our Approach</p><h2>${esc(config.approachTitle)}</h2><div class="scm-ms-approach-list">${approach.map(x=>`<article><b>—</b><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></article></div></section>
       <section class="scm-ms-story" id="digital-experience" data-nav-theme="light" aria-labelledby="scm-story-title">
