@@ -16,3 +16,22 @@ document.querySelectorAll('[data-demo-action]').forEach((control) => {
     phone.feedbackTimer = setTimeout(() => feedback.classList.remove('is-visible'), 2600);
   });
 });
+
+document.querySelectorAll('[data-service-choice]').forEach((control) => {
+  control.addEventListener('click', () => {
+    const navigator = control.closest('.service-navigator');
+    const choices = [...navigator.querySelectorAll('[data-service-choice]')];
+    const selectedIndex = choices.indexOf(control);
+    const service = control.dataset.serviceChoice;
+    choices.forEach((choice) => {
+      const selected = choice === control;
+      choice.classList.toggle('is-selected', selected);
+      choice.setAttribute('aria-pressed', String(selected));
+    });
+    navigator.querySelector('.service-count').textContent = `0${selectedIndex + 1} / 03`;
+    navigator.querySelector('.service-progress span').style.width = `${(selectedIndex + 1) * 100 / 3}%`;
+    const next = navigator.querySelector('.service-next');
+    next.dataset.demoAction = `Explore ${service}`;
+    next.innerHTML = `Explore ${service} <span aria-hidden="true">↗</span>`;
+  });
+});
