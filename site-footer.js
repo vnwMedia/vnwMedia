@@ -24,6 +24,18 @@
   const services = [...footer.querySelectorAll('h4')].find(h => h.textContent === 'Services').parentElement;
   services.classList.add('footer-services');
   services.innerHTML = serviceFooterMarkup(root.href);
+  const [create, connect, convert] = services.querySelectorAll('.footer-service-pillar');
+  const company = footer.querySelector('.footer-company');
+  const columns = document.createElement('div');
+  columns.className = 'footer-nav-columns';
+  const left = document.createElement('div');
+  left.className = 'footer-nav-column footer-nav-column-left';
+  left.append(create, convert);
+  const right = document.createElement('div');
+  right.className = 'footer-nav-column footer-nav-column-right';
+  right.append(connect, company);
+  columns.append(left, right);
+  services.replaceChildren(columns);
   document.body.append(footer);
   footer.querySelector('a[href="#top"]').addEventListener('click', event => {
    event.preventDefault();

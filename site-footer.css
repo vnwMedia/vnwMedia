@@ -365,3 +365,33 @@
 @media (max-width: 560px){
   #vnw-site-footer .footer-service-pillar{padding-top:0;border-top:0;}
 }
+
+/* Stack each mobile footer column independently so the shorter lists do not leave blank rows. */
+#vnw-site-footer .footer-nav-columns,
+#vnw-site-footer .footer-nav-column{display:contents;}
+#vnw-site-footer .footer-nav-column-left .footer-service-pillar:first-child{order:1;}
+#vnw-site-footer .footer-nav-column-right .footer-service-pillar{order:2;}
+#vnw-site-footer .footer-nav-column-left .footer-service-pillar:last-child{order:3;}
+#vnw-site-footer .footer-company{display:flex;flex-direction:column;gap:0;min-width:0;order:4;font-size:13px;}
+#vnw-site-footer .footer-company > h4{margin:0 0 16px;color:var(--orange);font:600 11px/1.3 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;}
+#vnw-site-footer .footer-company > :is(a,span){display:block;padding:3px 0;font-size:11px;line-height:1.35;}
+@media (min-width:801px){
+  #vnw-site-footer .footer-company{padding-top:12px;}
+}
+@media (min-width:801px) and (max-width:1100px){
+  #vnw-site-footer .footer-nav-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start;}
+  #vnw-site-footer .footer-nav-column{display:flex;flex-direction:column;gap:32px;min-width:0;}
+  #vnw-site-footer .footer-service-pillar,
+  #vnw-site-footer .footer-company{padding-top:0;}
+}
+@media (max-width:800px){
+  #vnw-site-footer .footer-grid:has(.footer-services){grid-template-columns:minmax(0,1fr);row-gap:32px;}
+  #vnw-site-footer .footer-grid > div.footer-services{display:block;}
+  #vnw-site-footer .footer-about{grid-column:auto;}
+  #vnw-site-footer .footer-nav-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(16px,4vw,32px);align-items:start;}
+  #vnw-site-footer .footer-nav-column{display:flex;flex-direction:column;gap:32px;min-width:0;}
+  #vnw-site-footer .footer-service-pillar,
+  #vnw-site-footer .footer-company{padding-top:0;}
+  #vnw-site-footer .footer-service-pillar h5{margin-bottom:12px;}
+  #vnw-site-footer .footer-company > h4{margin-bottom:12px;}
+}
