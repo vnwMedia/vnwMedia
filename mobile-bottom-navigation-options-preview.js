@@ -9,7 +9,8 @@ document.querySelectorAll('[data-demo-action]').forEach((control) => {
       control.classList.add('is-current');
     }
 
-    feedback.textContent = `${action} — preview only. No page will open.`;
+    const result = action === 'Call us' ? 'No call was placed.' : action === 'Email us' ? 'No email was sent.' : 'No page will open.';
+    feedback.textContent = `${action} — preview only. ${result}`;
     feedback.classList.add('is-visible');
     clearTimeout(phone.feedbackTimer);
     phone.feedbackTimer = setTimeout(() => feedback.classList.remove('is-visible'), 2600);
