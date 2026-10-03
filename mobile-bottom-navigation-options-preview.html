@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex" />
   <meta name="theme-color" content="#111719" />
-  <title>Mobile Bottom Navigation · Nine Options | VNW Media</title>
-  <meta name="description" content="Nine preview-only mobile bottom navigation concepts for VNW Media." />
+  <title>Mobile Bottom Navigation · Fifteen Options | VNW Media</title>
+  <meta name="description" content="Fifteen preview-only mobile bottom navigation concepts for VNW Media." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="mobile-bottom-navigation-options-preview.css?v=3" />
+  <link rel="stylesheet" href="mobile-bottom-navigation-options-preview.css?v=4" />
   <link rel="stylesheet" href="site-buttons.css?v=20260928-explore-hover" />
-  <script defer src="mobile-bottom-navigation-options-preview.js?v=3"></script>
+  <script defer src="mobile-bottom-navigation-options-preview.js?v=4"></script>
   <script defer src="site-buttons.js?v=20260928-explore-hover"></script>
 </head>
 <body>
@@ -24,7 +24,7 @@
   <main>
     <section class="preview-intro">
       <div class="shell">
-        <p class="eyebrow">Mobile experience · nine options</p>
+        <p class="eyebrow">Mobile experience · fifteen options</p>
         <h1>A useful next step, always within reach.</h1>
         <p>Scroll inside each phone to see how the bottom action stays available. Tap the controls to preview their behavior; no calls or emails will be sent from this study.</p>
         <nav class="jump-nav" aria-label="Jump to a mobile navigation option">
@@ -37,6 +37,12 @@
           <a href="#option-07"><span>07</span> Conversation orbit</a>
           <a href="#option-08"><span>08</span> Contact card</a>
           <a href="#option-09"><span>09</span> Service navigator</a>
+          <a href="#option-10"><span>10</span> Twin contact pills</a>
+          <a href="#option-11"><span>11</span> Contact switch</a>
+          <a href="#option-12"><span>12</span> Numbered route</a>
+          <a href="#option-13"><span>13</span> Context dock</a>
+          <a href="#option-14"><span>14</span> Contact ladder</a>
+          <a href="#option-15"><span>15</span> Personal note</a>
         </nav>
       </div>
     </section>
@@ -223,9 +229,71 @@
         </div>
         <p class="concept-note"><b>Best for:</b> turning service discovery into a guided next step.</p>
       </article>
+
+      <div class="variation-heading"><p class="option-number">Six new variations · based on options 01–03</p><h2>Same purpose. Different feel.</h2><p>Two fresh versions of direct contact, two of the navigation dock, and two of the expandable contact bubble.</p></div>
+
+      <article class="concept" id="option-10">
+        <div class="concept-heading"><p class="option-number">Option 10 · Variation of 01</p><h2>Two actions, two floating pills.</h2><p>Call and email stay equally clear, but the heavy full-width bar becomes a lighter pair of independent actions.</p></div>
+        <div class="phone" aria-label="Phone preview of twin floating contact pills">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option ten"></div>
+          <div class="twin-contact" aria-label="Floating direct contact choices"><span class="twin-caption">A direct line to our team</span><div class="twin-actions"><button type="button" class="twin-call" data-demo-action="Call us">Call us <span aria-hidden="true">↗</span></button><button type="button" class="twin-email" data-demo-action="Email us">Email us <span aria-hidden="true">↗</span></button></div></div>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>Based on 01:</b> the quickest possible contact choice, with less visual weight.</p>
+      </article>
+
+      <article class="concept" id="option-11">
+        <div class="concept-heading"><p class="option-number">Option 11 · Variation of 01</p><h2>One button that adapts to you.</h2><p>Choose call or email in the small switch, then use one prominent next-step button. Tap the switch to compare both states.</p></div>
+        <div class="phone" aria-label="Phone preview of a call or email contact switch">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option eleven"></div>
+          <div class="contact-switch" aria-label="Choose a contact method"><div class="switch-top"><span>Start a conversation</span><span class="switch-indicator">01 / 02</span></div><div class="switch-modes" role="group" aria-label="Contact method"><button type="button" class="is-selected" data-contact-mode="Call us" aria-pressed="true">Call</button><button type="button" data-contact-mode="Email us" aria-pressed="false">Email</button></div><button type="button" class="switch-action" data-demo-action="Call us">Call us <span aria-hidden="true">↗</span></button></div>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>Based on 01:</b> two channels, but only one primary action at a time.</p>
+      </article>
+
+      <article class="concept" id="option-12">
+        <div class="concept-heading"><p class="option-number">Option 12 · Variation of 02</p><h2>A numbered route through the site.</h2><p>Typography and small index numbers replace the usual icon grid. The current destination is marked by a blue progress line.</p></div>
+        <div class="phone" aria-label="Phone preview of a numbered bottom navigation route">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option twelve"></div>
+          <nav class="route-dock" aria-label="Preview numbered mobile navigation"><button type="button" class="is-current" data-route-choice="Home" data-demo-action="Home" aria-pressed="true"><small>01</small><span>Home</span></button><button type="button" data-route-choice="Services" data-demo-action="Services" aria-pressed="false"><small>02</small><span>Services</span></button><button type="button" data-route-choice="Our Work" data-demo-action="Our Work" aria-pressed="false"><small>03</small><span>Work</span></button><button type="button" data-route-choice="Contact" data-demo-action="Contact" aria-pressed="false"><small>04</small><span>Contact</span></button></nav>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>Based on 02:</b> the same destinations in a more editorial, brand-led dock.</p>
+      </article>
+
+      <article class="concept" id="option-13">
+        <div class="concept-heading"><p class="option-number">Option 13 · Variation of 02</p><h2>Navigation that explains the next step.</h2><p>The dock shows three destinations; choosing one changes the short description and action underneath.</p></div>
+        <div class="phone" aria-label="Phone preview of an interactive contextual navigation dock">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option thirteen"></div>
+          <div class="context-dock" aria-label="Preview contextual mobile navigation"><div class="context-tabs" role="group" aria-label="Choose a destination"><button type="button" class="is-selected" data-context-choice="Services" aria-pressed="true">Services</button><button type="button" data-context-choice="Our Work" aria-pressed="false">Our Work</button><button type="button" data-context-choice="Contact" aria-pressed="false">Contact</button></div><div class="context-detail"><div><small>YOUR NEXT STEP</small><strong class="context-title">Find the right service.</strong></div><button type="button" class="context-go" data-demo-action="Explore Services" aria-label="Preview exploring services">↗</button></div></div>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>Based on 02:</b> fewer tabs, with a little context before the tap.</p>
+      </article>
+
+      <article class="concept" id="option-14">
+        <div class="concept-heading"><p class="option-number">Option 14 · Variation of 03</p><h2>A small contact ladder.</h2><p>A corner button unfolds upward into two neat choices. It stays out of the way until someone wants to connect.</p></div>
+        <div class="phone" aria-label="Phone preview of an expandable contact ladder">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option fourteen"></div>
+          <details class="contact-ladder" open><summary aria-label="Open or close contact ladder"><span aria-hidden="true">+</span><small>Talk</small></summary><div class="ladder-actions"><button type="button" data-demo-action="Email us"><span>Email us</span><b aria-hidden="true">↗</b></button><button type="button" data-demo-action="Call us"><span>Call us</span><b aria-hidden="true">↗</b></button></div></details>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>Based on 03:</b> a smaller expansion that hugs the edge.</p>
+      </article>
+
+      <article class="concept" id="option-15">
+        <div class="concept-heading"><p class="option-number">Option 15 · Variation of 03</p><h2>A note from the team.</h2><p>The bubble opens an editorial note rather than a standard menu, making the invitation feel more personal.</p></div>
+        <div class="phone" aria-label="Phone preview of an expandable contact note">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option fifteen"></div>
+          <details class="personal-note" open><summary aria-label="Open or close contact note"><span aria-hidden="true">✳</span><small>Ask us</small></summary><div class="note-panel"><span class="note-kicker">A PERSONAL INVITATION</span><strong>What are you hoping to improve?</strong><p>Tell us a little about your business. We can help find a sensible place to start.</p><div class="note-actions"><button type="button" data-demo-action="Call us">Call <span aria-hidden="true">↗</span></button><button type="button" data-demo-action="Email us">Email <span aria-hidden="true">↗</span></button></div></div></details>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>Based on 03:</b> a more human way to open the conversation.</p>
+      </article>
     </section>
 
-    <p class="preview-footer">Nine concepts for review · no site-wide mobile navigation has been changed.</p>
+    <p class="preview-footer">Fifteen concepts for review · no site-wide mobile navigation has been changed.</p>
   </main>
 </body>
 </html>
