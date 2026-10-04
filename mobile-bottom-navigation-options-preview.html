@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex" />
   <meta name="theme-color" content="#111719" />
-  <title>Mobile Bottom Navigation · Twenty-Two Options | VNW Media</title>
-  <meta name="description" content="Twenty-two preview-only mobile bottom navigation concepts for VNW Media." />
+  <title>Mobile Bottom Navigation · Twenty-Five Options | VNW Media</title>
+  <meta name="description" content="Twenty-five preview-only mobile bottom navigation concepts for VNW Media." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="mobile-bottom-navigation-options-preview.css?v=10" />
+  <link rel="stylesheet" href="mobile-bottom-navigation-options-preview.css?v=11" />
   <link rel="stylesheet" href="site-buttons.css?v=20260928-explore-hover" />
   <script defer src="mobile-bottom-navigation-options-preview.js?v=6"></script>
   <script defer src="site-buttons.js?v=20260928-explore-hover"></script>
@@ -24,7 +24,7 @@
   <main>
     <section class="preview-intro">
       <div class="shell">
-        <p class="eyebrow">Mobile experience · twenty-two options</p>
+        <p class="eyebrow">Mobile experience · twenty-five options</p>
         <h1>A useful next step, always within reach.</h1>
         <p>Scroll inside each phone to see how the bottom action stays available. Tap the controls to preview their behavior; no calls or emails will be sent from this study.</p>
         <nav class="jump-nav" aria-label="Jump to a mobile navigation option">
@@ -50,6 +50,9 @@
           <a href="#option-20"><span>20</span> Editorial invitation</a>
           <a href="#option-21"><span>21</span> Contact icon</a>
           <a href="#option-22"><span>22</span> Connect prompt</a>
+          <a href="#option-23"><span>23</span> Call/Email +15%</a>
+          <a href="#option-24"><span>24</span> Call/Email +25%</a>
+          <a href="#option-25"><span>25</span> Call/Email +50%</a>
         </nav>
       </div>
     </section>
@@ -405,9 +408,57 @@
         </div>
         <p class="concept-note"><b>Prompt led:</b> a brief cue explains the purpose without taking more vertical space.</p>
       </article>
+
+      <article class="concept" id="option-23">
+        <div class="concept-heading"><p class="option-number">Option 23 · Variation of 20</p><h2>Call &amp; Email · 15% larger.</h2><p>Keep the smaller “Let’s talk” trigger, then give the two revealed labels a modest boost from 10px to 11.5px.</p></div>
+        <div class="phone" aria-label="Phone preview with Call and Email text fifteen percent larger">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option twenty-three"></div>
+          <div class="slide-contact" data-contact-reveal-root>
+            <div class="slide-choices" id="option-23-choices" data-contact-choices aria-hidden="true" role="group" aria-label="Choose how to contact us">
+              <button type="button" data-demo-action="Call us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16.4v3a2 2 0 0 1-2.2 2A18.4 18.4 0 0 1 2.6 5.2 2 2 0 0 1 4.6 3h3a2 2 0 0 1 2 1.7l.4 2.5a2 2 0 0 1-.6 1.8l-1.5 1.5a14 14 0 0 0 5.6 5.6l1.5-1.5a2 2 0 0 1 1.8-.6l2.5.4a2 2 0 0 1 1.7 2Z"/></svg><span>Call</span></button>
+              <button type="button" data-demo-action="Email us"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Email</span></button>
+            </div>
+            <button type="button" class="slide-trigger" data-contact-reveal aria-expanded="false" aria-controls="option-23-choices" aria-label="Open call and email choices"><span class="slide-trigger-label">Let’s talk</span><span class="slide-trigger-close" aria-hidden="true">×</span></button>
+          </div>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>Subtle lift:</b> a touch more legible without changing the balance of the two pills.</p>
+      </article>
+
+      <article class="concept" id="option-24">
+        <div class="concept-heading"><p class="option-number">Option 24 · Variation of 20</p><h2>Call &amp; Email · 25% larger.</h2><p>The same reveal, with 12.5px labels and slightly larger icons for a clearer, still compact contact choice.</p></div>
+        <div class="phone" aria-label="Phone preview with Call and Email text twenty-five percent larger">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option twenty-four"></div>
+          <div class="slide-contact" data-contact-reveal-root>
+            <div class="slide-choices" id="option-24-choices" data-contact-choices aria-hidden="true" role="group" aria-label="Choose how to contact us">
+              <button type="button" data-demo-action="Call us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16.4v3a2 2 0 0 1-2.2 2A18.4 18.4 0 0 1 2.6 5.2 2 2 0 0 1 4.6 3h3a2 2 0 0 1 2 1.7l.4 2.5a2 2 0 0 1-.6 1.8l-1.5 1.5a14 14 0 0 0 5.6 5.6l1.5-1.5a2 2 0 0 1 1.8-.6l2.5.4a2 2 0 0 1 1.7 2Z"/></svg><span>Call</span></button>
+              <button type="button" data-demo-action="Email us"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Email</span></button>
+            </div>
+            <button type="button" class="slide-trigger" data-contact-reveal aria-expanded="false" aria-controls="option-24-choices" aria-label="Open call and email choices"><span class="slide-trigger-label">Let’s talk</span><span class="slide-trigger-close" aria-hidden="true">×</span></button>
+          </div>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>Balanced lift:</b> stronger readability while preserving comfortable space inside each pill.</p>
+      </article>
+
+      <article class="concept" id="option-25">
+        <div class="concept-heading"><p class="option-number">Option 25 · Variation of 20</p><h2>Call &amp; Email · 50% larger.</h2><p>A bolder 15px label and larger icon make the contact choices the clearest part of the expanded control.</p></div>
+        <div class="phone" aria-label="Phone preview with Call and Email text fifty percent larger">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option twenty-five"></div>
+          <div class="slide-contact" data-contact-reveal-root>
+            <div class="slide-choices" id="option-25-choices" data-contact-choices aria-hidden="true" role="group" aria-label="Choose how to contact us">
+              <button type="button" data-demo-action="Call us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16.4v3a2 2 0 0 1-2.2 2A18.4 18.4 0 0 1 2.6 5.2 2 2 0 0 1 4.6 3h3a2 2 0 0 1 2 1.7l.4 2.5a2 2 0 0 1-.6 1.8l-1.5 1.5a14 14 0 0 0 5.6 5.6l1.5-1.5a2 2 0 0 1 1.8-.6l2.5.4a2 2 0 0 1 1.7 2Z"/></svg><span>Call</span></button>
+              <button type="button" data-demo-action="Email us"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Email</span></button>
+            </div>
+            <button type="button" class="slide-trigger" data-contact-reveal aria-expanded="false" aria-controls="option-25-choices" aria-label="Open call and email choices"><span class="slide-trigger-label">Let’s talk</span><span class="slide-trigger-close" aria-hidden="true">×</span></button>
+          </div>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>Maximum clarity:</b> the largest type that still fits cleanly beside the true-circle close button.</p>
+      </article>
     </section>
 
-    <p class="preview-footer">Twenty-two concepts for review · no site-wide mobile navigation has been changed.</p>
+    <p class="preview-footer">Twenty-five concepts for review · no site-wide mobile navigation has been changed.</p>
   </main>
 </body>
 </html>
