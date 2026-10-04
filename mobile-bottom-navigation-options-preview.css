@@ -265,6 +265,7 @@ html body #option-16 .two-square-dock button{border-radius:3px!important}
 :is(#option-27,#option-29,#option-30) .slide-choices svg{width:21px;height:21px;stroke-width:1.65}
 :is(#option-27,#option-29,#option-30) .slide-contact{width:min(320px,calc(100% - 30px))}
 :is(#option-27,#option-29,#option-30) .slide-choices{gap:24px}
+#option-29 .slide-choices{gap:12px}
 #option-28 .slide-choices button{gap:5px;padding-inline:3px}
 #option-28 .icon-disc{display:grid;place-items:center;width:28px;height:28px;flex:none;border-radius:50%;color:var(--blue);background:#fff}
 #option-28 .slide-choices button+button .icon-disc{color:#111719}
