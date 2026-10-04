@@ -84,8 +84,7 @@
           <label>Your message<textarea name="message" rows="2" placeholder="What would you like to improve?" required></textarea></label>
         </form>
         <div class="vnw-mobile-email-sheet__footer">
-          <button class="vnw-mobile-email-sheet__send" type="submit" form="vnw-mobile-email-form">Continue to email <span aria-hidden="true">↗</span></button>
-          <p class="vnw-mobile-email-sheet__disclaimer">Opens a draft in your email app. Please press Send there.</p>
+          <button class="vnw-mobile-email-sheet__send" type="submit" form="vnw-mobile-email-form">Send message <span aria-hidden="true">↗</span></button>
           <p class="vnw-mobile-email-sheet__status" role="status" aria-live="polite"></p>
         </div>
       </section>`;
