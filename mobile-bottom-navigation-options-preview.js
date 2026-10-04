@@ -86,7 +86,7 @@ document.querySelectorAll('[data-email-panel]').forEach((panel) => {
   });
   panel.querySelector('[data-preview-form]').addEventListener('submit', (event) => {
     event.preventDefault();
-    panel.querySelector('.email-preview__status').textContent = 'Preview only — your message was not sent.';
+    panel.querySelector('.email-preview__status').textContent = 'Sending is not connected yet. Your message has not been delivered.';
   });
   panel.addEventListener('keydown', (event) => {
     if (event.key !== 'Tab') return;
