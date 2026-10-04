@@ -28,6 +28,7 @@ function setContactChoices(root, open, moveFocus = false) {
   const choices = root.querySelector('[data-contact-choices]');
   trigger.setAttribute('aria-expanded', String(open));
   choices.setAttribute('aria-hidden', String(!open));
+  choices.inert = !open;
   if (root.classList.contains('slide-contact')) {
     trigger.setAttribute('aria-label', open ? 'Close contact choices' : 'Open contact choices');
   }
@@ -37,6 +38,7 @@ function setContactChoices(root, open, moveFocus = false) {
 }
 
 document.querySelectorAll('[data-contact-reveal-root]').forEach((root) => {
+  root.querySelector('[data-contact-choices]').inert = true;
   root.querySelector('[data-contact-reveal]').addEventListener('click', () => {
     setContactChoices(root, !root.classList.contains('is-open'), true);
   });
