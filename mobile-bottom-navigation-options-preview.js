@@ -56,6 +56,61 @@ document.addEventListener('keydown', (event) => {
   });
 });
 
+function closeEmailPreview(panel) {
+  if (panel.hidden) return;
+  const phone = panel.closest('.phone');
+  const contact = phone.querySelector('[data-contact-reveal-root]');
+  panel.hidden = true;
+  phone.querySelector('.phone-content').inert = false;
+  contact.inert = false;
+  setContactChoices(contact, false);
+  contact.querySelector('[data-contact-reveal]').focus({preventScroll: true});
+}
+
+document.querySelectorAll('[data-email-preview]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const phone = button.closest('.phone');
+    const panel = phone.querySelector('[data-email-panel]');
+    panel.hidden = false;
+    panel.querySelector('.email-preview__status').textContent = '';
+    phone.querySelector('.phone-content').inert = true;
+    phone.querySelector('[data-contact-reveal-root]').inert = true;
+    // Focus the dialog itself so mobile keyboards and autofill do not appear until a field is chosen.
+    panel.querySelector('[role="dialog"]').focus({preventScroll: true});
+  });
+});
+
+document.querySelectorAll('[data-email-panel]').forEach((panel) => {
+  panel.addEventListener('click', (event) => {
+    if (event.target.closest('[data-email-close]')) closeEmailPreview(panel);
+  });
+  panel.querySelector('[data-preview-form]').addEventListener('submit', (event) => {
+    event.preventDefault();
+    panel.querySelector('.email-preview__status').textContent = 'Preview only — your message was not sent.';
+  });
+  panel.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+    const focusable = [...panel.querySelectorAll('button,input,textarea')];
+    const first = focusable[0];
+    const last = focusable.at(-1);
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+  const panel = document.querySelector('[data-email-panel]:not([hidden])');
+  if (!panel) return;
+  event.stopImmediatePropagation();
+  closeEmailPreview(panel);
+}, true);
+
 document.querySelectorAll('[data-service-choice]').forEach((control) => {
   control.addEventListener('click', () => {
     const navigator = control.closest('.service-navigator');
