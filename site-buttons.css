@@ -13,3 +13,26 @@ html body .site-button-arrow{display:inline-block;flex:none;color:inherit!import
 html body .site-button:focus-visible{outline:3px solid var(--site-button-blue);outline-offset:4px}
 html body .site-button:disabled{cursor:not-allowed;opacity:.6}
 @media(prefers-reduced-motion:reduce){html body .site-button{transition:none}}
+
+/* Option 27: site-wide mobile contact reveal. Hidden on desktop and in design studies. */
+html body .vnw-mobile-contact{display:none}
+@media(max-width:800px){
+  html body .vnw-mobile-contact{position:fixed;z-index:70;right:15px;bottom:calc(20px + env(safe-area-inset-bottom,0px));display:block;width:min(300px,calc(100vw - 30px));height:54px;font-family:Inter,system-ui,sans-serif;pointer-events:none}
+  html body .vnw-mobile-contact__trigger{position:absolute;right:0;bottom:0;display:grid;place-items:center;width:142px;height:54px;margin:0;padding:0;border:1px solid #10b9f2;border-radius:999px!important;color:#fff;background:#00aeef;box-shadow:0 8px 23px rgba(0,0,0,.26);cursor:pointer;white-space:nowrap;pointer-events:auto;transition:width .34s cubic-bezier(.2,.8,.2,1),background-color .34s}
+  html body .vnw-mobile-contact.is-open .vnw-mobile-contact__trigger{width:54px;border-radius:50%!important;background:#111719}
+  html body .vnw-mobile-contact__label{font:500 19px/1 Fraunces,Georgia,serif;letter-spacing:-.035em;transition:opacity .16s,transform .3s}
+  html body .vnw-mobile-contact.is-open .vnw-mobile-contact__label{opacity:0;transform:scale(.6)}
+  html body .vnw-mobile-contact__close{position:absolute;opacity:0;transform:rotate(-90deg) scale(.6);font:400 25px/1 Inter,system-ui,sans-serif;transition:opacity .2s,transform .34s}
+  html body .vnw-mobile-contact.is-open .vnw-mobile-contact__close{opacity:1;transform:rotate(0) scale(1)}
+  html body .vnw-mobile-contact__choices{position:absolute;right:62px;bottom:2px;left:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;height:50px;visibility:hidden;opacity:0;transform:translateX(40px) scale(.88);transform-origin:right center;transition:opacity .22s,transform .38s cubic-bezier(.2,.8,.2,1),visibility 0s linear .38s;pointer-events:none}
+  html body .vnw-mobile-contact.is-open .vnw-mobile-contact__choices{visibility:visible;opacity:1;transform:translateX(0) scale(1);transition-delay:.06s,0s,0s;pointer-events:auto}
+  html body .vnw-mobile-contact__choices a{display:flex;align-items:center;justify-content:center;gap:6px;min-width:0;padding:5px;border:1px solid #4c6670;border-radius:999px;color:#fff;background:#111719;box-shadow:0 7px 17px rgba(0,0,0,.22);font:700 14px/1.2 Inter,system-ui,sans-serif;text-decoration:none;white-space:nowrap;cursor:pointer}
+  html body .vnw-mobile-contact__choices a:first-child{border-color:#00aeef;background:#00aeef}
+  html body .vnw-mobile-contact__choices svg{width:21px;height:21px;flex:none;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+  html body .vnw-mobile-contact :is(a,button):is(:hover,:focus-visible){filter:brightness(1.12)}
+  html body .vnw-mobile-contact :is(a,button):focus-visible{outline:3px solid #00aeef;outline-offset:3px}
+  html body.mobile-menu-open .vnw-mobile-contact,html body.nav-open .vnw-mobile-contact{visibility:hidden;pointer-events:none}
+  html body.has-vnw-mobile-contact .mobile-plan{display:none!important}
+  html body.has-vnw-mobile-contact #vnw-site-footer{padding-bottom:calc(95px + env(safe-area-inset-bottom,0px))}
+}
+@media(prefers-reduced-motion:reduce){html body .vnw-mobile-contact__trigger,html body .vnw-mobile-contact__label,html body .vnw-mobile-contact__close,html body .vnw-mobile-contact__choices{transition:none}}
