@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex" />
   <meta name="theme-color" content="#111719" />
-  <title>Mobile Bottom Navigation · Sixteen Options | VNW Media</title>
-  <meta name="description" content="Sixteen preview-only mobile bottom navigation concepts for VNW Media." />
+  <title>Mobile Bottom Navigation · Nineteen Options | VNW Media</title>
+  <meta name="description" content="Nineteen preview-only mobile bottom navigation concepts for VNW Media." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="mobile-bottom-navigation-options-preview.css?v=6" />
+  <link rel="stylesheet" href="mobile-bottom-navigation-options-preview.css?v=7" />
   <link rel="stylesheet" href="site-buttons.css?v=20260928-explore-hover" />
-  <script defer src="mobile-bottom-navigation-options-preview.js?v=4"></script>
+  <script defer src="mobile-bottom-navigation-options-preview.js?v=5"></script>
   <script defer src="site-buttons.js?v=20260928-explore-hover"></script>
 </head>
 <body>
@@ -24,7 +24,7 @@
   <main>
     <section class="preview-intro">
       <div class="shell">
-        <p class="eyebrow">Mobile experience · sixteen options</p>
+        <p class="eyebrow">Mobile experience · nineteen options</p>
         <h1>A useful next step, always within reach.</h1>
         <p>Scroll inside each phone to see how the bottom action stays available. Tap the controls to preview their behavior; no calls or emails will be sent from this study.</p>
         <nav class="jump-nav" aria-label="Jump to a mobile navigation option">
@@ -44,6 +44,9 @@
           <a href="#option-14"><span>14</span> Contact ladder</a>
           <a href="#option-15"><span>15</span> Personal note</a>
           <a href="#option-16"><span>16</span> Call + email tiles</a>
+          <a href="#option-17"><span>17</span> Morphing choice</a>
+          <a href="#option-18"><span>18</span> Sliding pair</a>
+          <a href="#option-19"><span>19</span> One-tap shortcuts</a>
         </nav>
       </div>
     </section>
@@ -305,9 +308,55 @@
         </div>
         <p class="concept-note"><b>Based on 02:</b> two square-corner buttons for a call or an email.</p>
       </article>
+
+      <article class="concept" id="option-17">
+        <div class="concept-heading"><p class="option-number">Option 17 · Variation of 03</p><h2>One button becomes two choices.</h2><p>“Let’s talk” smoothly changes into Call and Email in the same floating capsule. No second panel or extra vertical space.</p></div>
+        <div class="phone" aria-label="Phone preview of an in-place morphing contact capsule">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option seventeen"></div>
+          <div class="morph-contact" data-contact-reveal-root>
+            <button type="button" class="morph-trigger" data-contact-reveal aria-expanded="false" aria-controls="option-17-choices">Let’s talk <span aria-hidden="true">↗</span></button>
+            <div class="morph-choices" id="option-17-choices" data-contact-choices aria-hidden="true" role="group" aria-label="Choose how to contact us">
+              <button type="button" data-demo-action="Call us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16.4v3a2 2 0 0 1-2.2 2A18.4 18.4 0 0 1 2.6 5.2 2 2 0 0 1 4.6 3h3a2 2 0 0 1 2 1.7l.4 2.5a2 2 0 0 1-.6 1.8l-1.5 1.5a14 14 0 0 0 5.6 5.6l1.5-1.5a2 2 0 0 1 1.8-.6l2.5.4a2 2 0 0 1 1.7 2Z"/></svg>Call us</button>
+              <button type="button" data-demo-action="Email us"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email us</button>
+            </div>
+          </div>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>One reveal tap:</b> the invitation transforms in place, then a choice starts the conversation.</p>
+      </article>
+
+      <article class="concept" id="option-18">
+        <div class="concept-heading"><p class="option-number">Option 18 · Variation of 03</p><h2>The bubble slides apart.</h2><p>Tap “Let’s talk” and two small actions slide out beside it on the same line. The original button becomes a close control.</p></div>
+        <div class="phone" aria-label="Phone preview of a sliding contact pair">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option eighteen"></div>
+          <div class="slide-contact" data-contact-reveal-root>
+            <div class="slide-choices" id="option-18-choices" data-contact-choices aria-hidden="true" role="group" aria-label="Choose how to contact us">
+              <button type="button" data-demo-action="Call us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16.4v3a2 2 0 0 1-2.2 2A18.4 18.4 0 0 1 2.6 5.2 2 2 0 0 1 4.6 3h3a2 2 0 0 1 2 1.7l.4 2.5a2 2 0 0 1-.6 1.8l-1.5 1.5a14 14 0 0 0 5.6 5.6l1.5-1.5a2 2 0 0 1 1.8-.6l2.5.4a2 2 0 0 1 1.7 2Z"/></svg><span>Call</span></button>
+              <button type="button" data-demo-action="Email us"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Email</span></button>
+            </div>
+            <button type="button" class="slide-trigger" data-contact-reveal aria-expanded="false" aria-controls="option-18-choices" aria-label="Open contact choices"><span class="slide-trigger-label">Let’s talk</span><span class="slide-trigger-close" aria-hidden="true">×</span></button>
+          </div>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>One reveal tap:</b> a small horizontal motion makes both choices visible without covering content.</p>
+      </article>
+
+      <article class="concept" id="option-19">
+        <div class="concept-heading"><p class="option-number">Option 19 · Variation of 03</p><h2>Ready in one tap.</h2><p>The “Let’s talk” cue stays compact while Call and Email are always available beside it. A subtle blue pulse draws attention.</p></div>
+        <div class="phone" aria-label="Phone preview of one-tap contact shortcuts">
+          <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option nineteen"></div>
+          <div class="direct-contact" role="group" aria-label="One-tap contact shortcuts">
+            <span class="direct-contact-label">Let’s talk<span aria-hidden="true">.</span></span>
+            <button type="button" data-demo-action="Call us" aria-label="Preview call us action"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16.4v3a2 2 0 0 1-2.2 2A18.4 18.4 0 0 1 2.6 5.2 2 2 0 0 1 4.6 3h3a2 2 0 0 1 2 1.7l.4 2.5a2 2 0 0 1-.6 1.8l-1.5 1.5a14 14 0 0 0 5.6 5.6l1.5-1.5a2 2 0 0 1 1.8-.6l2.5.4a2 2 0 0 1 1.7 2Z"/></svg><span>Call</span></button>
+            <button type="button" data-demo-action="Email us" aria-label="Preview email us action"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Email</span></button>
+          </div>
+          <p class="phone-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <p class="concept-note"><b>No reveal tap:</b> one touch on Call or Email is enough.</p>
+      </article>
     </section>
 
-    <p class="preview-footer">Sixteen concepts for review · no site-wide mobile navigation has been changed.</p>
+    <p class="preview-footer">Nineteen concepts for review · no site-wide mobile navigation has been changed.</p>
   </main>
 </body>
 </html>

@@ -22,6 +22,38 @@ document.querySelectorAll('[data-demo-action]').forEach((control) => {
   });
 });
 
+function setContactChoices(root, open, moveFocus = false) {
+  root.classList.toggle('is-open', open);
+  const trigger = root.querySelector('[data-contact-reveal]');
+  const choices = root.querySelector('[data-contact-choices]');
+  trigger.setAttribute('aria-expanded', String(open));
+  choices.setAttribute('aria-hidden', String(!open));
+  if (root.classList.contains('slide-contact')) {
+    trigger.setAttribute('aria-label', open ? 'Close contact choices' : 'Open contact choices');
+  }
+  if (moveFocus) {
+    (open ? choices.querySelector('button') : trigger).focus();
+  }
+}
+
+document.querySelectorAll('[data-contact-reveal-root]').forEach((root) => {
+  root.querySelector('[data-contact-reveal]').addEventListener('click', () => {
+    setContactChoices(root, !root.classList.contains('is-open'), true);
+  });
+  root.closest('.phone').addEventListener('click', (event) => {
+    if (root.classList.contains('is-open') && !root.contains(event.target)) {
+      setContactChoices(root, false);
+    }
+  });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+  document.querySelectorAll('[data-contact-reveal-root].is-open').forEach((root) => {
+    setContactChoices(root, false, true);
+  });
+});
+
 document.querySelectorAll('[data-service-choice]').forEach((control) => {
   control.addEventListener('click', () => {
     const navigator = control.closest('.service-navigator');
