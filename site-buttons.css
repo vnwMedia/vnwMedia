@@ -16,6 +16,8 @@ html body .site-button:disabled{cursor:not-allowed;opacity:.6}
 
 /* Option 27: site-wide mobile contact reveal. Hidden on desktop and in design studies. */
 html body .vnw-mobile-contact{display:none}
+html body .vnw-mobile-email-sheet[hidden]{display:none!important}
+html body .vnw-mobile-email-sheet{display:none}
 @media(max-width:800px){
   html body .vnw-mobile-contact{position:fixed;z-index:70;right:15px;bottom:calc(20px + env(safe-area-inset-bottom,0px));display:block;width:min(320px,calc(100vw - 30px));height:54px;font-family:Inter,system-ui,sans-serif;pointer-events:none}
   html body .vnw-mobile-contact__trigger{position:absolute;right:0;bottom:0;display:grid;place-items:center;width:142px;height:54px;margin:0;padding:0;border:1px solid #10b9f2;border-radius:999px!important;color:#fff;background:#00aeef;box-shadow:0 8px 23px rgba(0,0,0,.26);cursor:pointer;white-space:nowrap;pointer-events:auto;transition:width .34s cubic-bezier(.2,.8,.2,1),background-color .34s}
@@ -34,5 +36,29 @@ html body .vnw-mobile-contact{display:none}
   html body.mobile-menu-open .vnw-mobile-contact,html body.nav-open .vnw-mobile-contact{visibility:hidden;pointer-events:none}
   html body.has-vnw-mobile-contact .mobile-plan{display:none!important}
   html body.has-vnw-mobile-contact #vnw-site-footer{padding-bottom:calc(95px + env(safe-area-inset-bottom,0px))}
+  html body.vnw-mobile-email-open{overflow:hidden}
+  html body .vnw-mobile-email-sheet{position:fixed;z-index:1000;inset:0;display:flex;align-items:flex-end;overflow:hidden;font-family:Inter,system-ui,sans-serif}
+  html body .vnw-mobile-email-sheet__scrim{position:absolute;inset:0;background:rgba(8,15,18,.68);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+  html body .vnw-mobile-email-sheet__card{position:relative;display:flex;flex-direction:column;box-sizing:border-box;width:100%;height:min(620px,calc(100dvh - 20px));max-height:calc(100dvh - 20px);padding:18px 21px calc(19px + env(safe-area-inset-bottom,0px));overflow:hidden;overscroll-behavior:contain;border-radius:25px 25px 0 0;color:#111719;background:#f8f6f2;box-shadow:0 -15px 38px rgba(0,0,0,.2);animation:vnw-mobile-email-in .28s cubic-bezier(.2,.8,.2,1) both}
+  html body .vnw-mobile-email-sheet__grabber{display:block;width:37px;height:4px;flex:none;margin:0 auto 17px;border-radius:99px;background:#b7c0c3}
+  html body .vnw-mobile-email-sheet__heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}
+  html body .vnw-mobile-email-sheet__kicker{margin:0;color:#008fbf;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+  html body .vnw-mobile-email-sheet__close{display:grid;place-items:center;width:38px;height:38px;flex:none;padding:0;border:1px solid #bbc5c9;border-radius:50%!important;color:#23343a;background:transparent;font:400 25px/1 Inter,system-ui,sans-serif;cursor:pointer}
+  html body .vnw-mobile-email-sheet__card h2{margin:0 0 8px;font:400 clamp(31px,9vw,38px)/1.04 Fraunces,Georgia,serif;letter-spacing:-.035em}
+  html body .vnw-mobile-email-sheet__description{margin:0 0 18px;color:#5d686c;font-size:13px;line-height:1.4}
+  html body .vnw-mobile-email-sheet form{display:grid;gap:11px;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-right:3px;scrollbar-width:thin;scrollbar-color:#b1bfc4 transparent}
+  html body .vnw-mobile-email-sheet__pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  html body .vnw-mobile-email-sheet label{display:grid;gap:5px;min-width:0;color:#27343a;font-size:12px;font-weight:700}
+  html body .vnw-mobile-email-sheet :is(input,textarea){box-sizing:border-box;width:100%;min-height:43px;padding:9px 11px;border:1px solid #c9d0d2;border-radius:9px;color:#111719;background:#fff;font:400 16px/1.3 Inter,system-ui,sans-serif;resize:vertical}
+  html body .vnw-mobile-email-sheet textarea{min-height:68px}
+  html body .vnw-mobile-email-sheet :is(input,textarea)::placeholder{color:#9ba1a3}
+  html body .vnw-mobile-email-sheet :is(input,textarea,button):focus-visible{outline:2px solid #00aeef;outline-offset:2px}
+  html body .vnw-mobile-email-sheet__footer{flex:none;padding-top:12px;background:inherit}
+  html body button.vnw-mobile-email-sheet__send{display:flex!important;align-items:center!important;justify-content:space-between!important;width:100%;min-height:46px!important;margin:0;padding:8px 17px!important;border:0;color:#fff;background:#00aeef;font-size:15px!important;font-weight:700!important}
+  html body .vnw-mobile-email-sheet__send span{font-size:21px;font-weight:400}
+  html body .vnw-mobile-email-sheet__disclaimer{margin:10px 0 0;color:#747d81;font-size:11px;line-height:1.4;text-align:center}
+  html body .vnw-mobile-email-sheet__status{margin:8px 0 0;color:#007da9;font-size:11px;font-weight:700;text-align:center}
+  html body .vnw-mobile-email-sheet__status:empty{display:none}
 }
-@media(prefers-reduced-motion:reduce){html body .vnw-mobile-contact__trigger,html body .vnw-mobile-contact__label,html body .vnw-mobile-contact__close,html body .vnw-mobile-contact__choices{transition:none}}
+@keyframes vnw-mobile-email-in{from{transform:translateY(100%)}to{transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){html body .vnw-mobile-contact__trigger,html body .vnw-mobile-contact__label,html body .vnw-mobile-contact__close,html body .vnw-mobile-contact__choices{transition:none}html body .vnw-mobile-email-sheet__card{animation:none}}
