@@ -223,11 +223,12 @@ h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;font-weight:400}
 .note-actions button:first-child{border-color:var(--blue);color:#fff;background:var(--blue)}
 .note-actions button span{font-size:15px;font-weight:400}
 .note-actions button:hover,.note-actions button:focus-visible{filter:brightness(1.12)}
-.three-pill-dock{position:absolute;z-index:6;right:13px;bottom:21px;left:13px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
-.three-pill-dock button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0;min-height:58px;padding:7px 5px;border:1px solid #66777d;border-radius:999px;color:#fff;background:rgba(17,23,25,.96);box-shadow:0 8px 23px rgba(0,0,0,.26);font-size:10px;font-weight:700}
-.three-pill-dock button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.three-pill-dock .three-pill-call{border-color:var(--blue);background:var(--blue)}
-.three-pill-dock button:hover,.three-pill-dock button:focus-visible{border-color:#78d9fb;filter:brightness(1.12)}
+.two-square-dock{position:absolute;z-index:6;right:13px;bottom:21px;left:13px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.two-square-dock button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:0;min-height:64px;padding:8px 5px;border:1px solid #66777d;color:#fff;background:rgba(17,23,25,.96);box-shadow:0 8px 23px rgba(0,0,0,.26);font-size:11px;font-weight:700}
+html body #option-16 .two-square-dock button{border-radius:3px!important}
+.two-square-dock button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.two-square-dock .two-square-call{border-color:var(--blue);background:var(--blue)}
+.two-square-dock button:hover,.two-square-dock button:focus-visible{border-color:#78d9fb;filter:brightness(1.12)}
 #option-10 .phone-feedback,#option-12 .phone-feedback{bottom:113px}
 #option-11 .phone-feedback,#option-13 .phone-feedback{bottom:184px}
 #option-14 .phone-feedback{bottom:184px}
