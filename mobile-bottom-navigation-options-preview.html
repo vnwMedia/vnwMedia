@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="mobile-bottom-navigation-options-preview.css?v=18" />
   <link rel="stylesheet" href="site-buttons.css?v=20261004-mobile-email-send-label-v1" />
   <script defer src="mobile-bottom-navigation-options-preview.js?v=9"></script>
-  <script defer src="site-buttons.js?v=20261004-mobile-email-send-label-v1"></script>
+  <script defer src="site-buttons.js?v=20261004-mobile-business-field-v1"></script>
 </head>
 <body>
   <header class="preview-bar">
@@ -531,10 +531,13 @@
               <form id="option-29-form" data-preview-form>
                 <div class="email-preview__pair">
                   <label>Full name<input name="name" type="text" autocomplete="name" placeholder="Your name" required /></label>
-                  <label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="Your number" required /></label>
+                  <label>Business name<input name="company" type="text" autocomplete="organization" placeholder="Your business" required /></label>
                 </div>
-                <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@company.com" required /></label>
-                <label>Website (optional)<input name="website" type="url" autocomplete="url" placeholder="https://yourwebsite.com" /></label>
+                <div class="email-preview__pair">
+                  <label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="Your number" required /></label>
+                  <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@site.com" required /></label>
+                </div>
+                <label>Website (optional)<input name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourwebsite.com" /></label>
                 <label>Your message<textarea name="message" rows="2" placeholder="What would you like to improve?" required></textarea></label>
               </form>
               <div class="email-preview__footer">
@@ -545,11 +548,11 @@
           </div>
           <p class="phone-feedback" role="status" aria-live="polite"></p>
         </div>
-        <p class="concept-note"><b>Bottom sheet:</b> name, phone, email, optional website, and a short message.</p>
+        <p class="concept-note"><b>Bottom sheet:</b> name, business, phone, email, optional website, and a short message.</p>
       </article>
 
       <article class="concept" id="option-30">
-        <div class="concept-heading"><p class="option-number">Option 30 · Centered email form</p><h2>The essentials, centered on the page.</h2><p>Name and phone share a row; email, website, and a short message follow beneath. Everything fits in one glance.</p></div>
+        <div class="concept-heading"><p class="option-number">Option 30 · Centered email form</p><h2>The essentials, centered on the page.</h2><p>Name and business share a row; phone and email sit together beneath. Website and message stay full width.</p></div>
         <div class="phone" aria-label="Phone preview of a condensed email inquiry dialog">
           <div class="phone-content variant-sample" tabindex="0" aria-label="Scrollable sample page for option thirty"></div>
           <div class="slide-contact" data-contact-reveal-root>
@@ -568,10 +571,13 @@
               <form id="option-30-form" data-preview-form>
                 <div class="email-preview__pair">
                   <label>Full name<input name="name" type="text" autocomplete="name" placeholder="Your name" required /></label>
-                  <label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="Your number" required /></label>
+                  <label>Business name<input name="company" type="text" autocomplete="organization" placeholder="Your business" required /></label>
                 </div>
-                <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@company.com" required /></label>
-                <label>Website (optional)<input name="website" type="url" autocomplete="url" placeholder="https://yourwebsite.com" /></label>
+                <div class="email-preview__pair">
+                  <label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="Your number" required /></label>
+                  <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@site.com" required /></label>
+                </div>
+                <label>Website (optional)<input name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourwebsite.com" /></label>
                 <label>Your message<textarea name="message" rows="2" placeholder="What would you like to improve?" required></textarea></label>
               </form>
               <div class="email-preview__footer">
@@ -582,7 +588,7 @@
           </div>
           <p class="phone-feedback" role="status" aria-live="polite"></p>
         </div>
-        <p class="concept-note"><b>Centered dialog:</b> the same five fields in a tighter layout.</p>
+        <p class="concept-note"><b>Centered dialog:</b> the same six fields in a tighter layout.</p>
       </article>
     </section>
 

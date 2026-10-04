@@ -77,10 +77,13 @@
         <form id="vnw-mobile-email-form">
           <div class="vnw-mobile-email-sheet__pair">
             <label>Full name<input name="name" type="text" autocomplete="name" placeholder="Your name" required></label>
-            <label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="Your number" required></label>
+            <label>Business name<input name="company" type="text" autocomplete="organization" placeholder="Your business" required></label>
           </div>
-          <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@company.com" required></label>
-          <label>Website (optional)<input name="website" type="url" autocomplete="url" placeholder="https://yourwebsite.com"></label>
+          <div class="vnw-mobile-email-sheet__pair">
+            <label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="Your number" required></label>
+            <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@site.com" required></label>
+          </div>
+          <label>Website (optional)<input name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourwebsite.com"></label>
           <label>Your message<textarea name="message" rows="2" placeholder="What would you like to improve?" required></textarea></label>
         </form>
         <div class="vnw-mobile-email-sheet__footer">
@@ -130,12 +133,13 @@
       if (!form.reportValidity()) return;
       const data = new FormData(form);
       const name = String(data.get('name') || '').trim();
+      const company = String(data.get('company') || '').trim();
       const phone = String(data.get('phone') || '').trim();
       const email = String(data.get('email') || '').trim();
       const website = String(data.get('website') || '').trim();
       const message = String(data.get('message') || '').trim();
-      const subject = encodeURIComponent(`VNW Media inquiry — ${name}`);
-      const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nWebsite: ${website}\n\nMessage:\n${message}`);
+      const subject = encodeURIComponent(`VNW Media inquiry — ${company}`);
+      const body = encodeURIComponent(`Name: ${name}\nBusiness: ${company}\nPhone: ${phone}\nEmail: ${email}\nWebsite: ${website}\n\nMessage:\n${message}`);
       status.textContent = 'Your email app should open with a draft. Please press Send there.';
       location.href = `mailto:contactus@vnwmedia.com?subject=${subject}&body=${body}`;
     });
