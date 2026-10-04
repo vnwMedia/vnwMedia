@@ -242,12 +242,12 @@ html body #option-16 .two-square-dock button{border-radius:3px!important}
 .morph-choices button+button{border:1px solid #748489;background:#1a282d}
 .slide-contact{width:min(300px,calc(100% - 30px));pointer-events:none}
 .slide-trigger{position:absolute;right:0;bottom:0;display:grid;place-items:center;width:135px;height:54px;border:1px solid #10b9f2;border-radius:999px;color:#fff;background:#008fbe;box-shadow:0 8px 23px rgba(0,0,0,.26);font-size:12px;font-weight:700;white-space:nowrap;pointer-events:auto;transition:width .34s cubic-bezier(.2,.8,.2,1),background-color .34s}
-.slide-contact.is-open .slide-trigger{width:47px;background:#111719}
+.slide-contact.is-open .slide-trigger{width:54px;height:54px;border-radius:50%;background:#111719}
 .slide-trigger-label{transition:opacity .16s,transform .3s}
 .slide-contact.is-open .slide-trigger-label{opacity:0;transform:scale(.6)}
 .slide-trigger-close{position:absolute;opacity:0;transform:rotate(-90deg) scale(.6);font-size:25px;font-weight:400;line-height:1;transition:opacity .2s,transform .34s}
 .slide-contact.is-open .slide-trigger-close{opacity:1;transform:rotate(0) scale(1)}
-.slide-choices{position:absolute;right:55px;bottom:2px;left:0;display:grid;grid-template-columns:1fr 1fr;gap:5px;height:50px;visibility:hidden;opacity:0;transform:translateX(40px) scale(.88);transform-origin:right center;transition:opacity .22s,transform .38s cubic-bezier(.2,.8,.2,1),visibility 0s linear .38s;pointer-events:auto}
+.slide-choices{position:absolute;right:62px;bottom:2px;left:0;display:grid;grid-template-columns:1fr 1fr;gap:5px;height:50px;visibility:hidden;opacity:0;transform:translateX(40px) scale(.88);transform-origin:right center;transition:opacity .22s,transform .38s cubic-bezier(.2,.8,.2,1),visibility 0s linear .38s;pointer-events:auto}
 .slide-contact.is-open .slide-choices{visibility:visible;opacity:1;transform:translateX(0) scale(1);transition-delay:.06s,0s,0s}
 .slide-choices button{display:flex;align-items:center;justify-content:center;gap:5px;min-width:0;padding:5px 7px;border:1px solid #4c6670;border-radius:999px;color:#fff;background:#111719;box-shadow:0 7px 17px rgba(0,0,0,.22);font-size:10px;font-weight:700}
 .slide-choices button:first-child{border-color:var(--blue);background:var(--blue)}
