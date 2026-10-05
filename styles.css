@@ -1405,6 +1405,10 @@ body .site-header.site-header .mega-wide .mega-columns{
 .scm-ms-ca-copy p:last-child{
   margin-bottom:0;
 }
+.scm-ms-challenge-cta{
+  display:inline-flex;
+  margin-top:30px;
+}
 .scm-ms-approach-list{
   display:grid;
   gap:30px;
