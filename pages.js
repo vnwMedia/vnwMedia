@@ -848,20 +848,20 @@ const CLIENT_STORY_COPY={
 };
 
 const CASE_STUDY_DEVICE_VISUALS={
-  "La Rosa Chicken and Grill":["la-rosa-chicken-grill","laptop and phone"],
-  "NYCADSCO":["nycadsco","laptop and phone"],
-  "SFADSCO":["sfadsco","tablet and phone"],
-  "Vision Centers":["vision-centers","tablet and phone"],
+  "La Rosa Chicken and Grill":["la-rosa-chicken-grill-transparent","laptop and phone"],
+  "NYCADSCO":["nycadsco-transparent","laptop and phone"],
+  "SFADSCO":["sfadsco-transparent","tablet and phone"],
+  "Vision Centers":["vision-centers-transparent","tablet and phone"],
   "KYPCL":["kypcl","handheld tablet"],
   "Brooklyn Motors":["brooklyn-motors","desktop monitor and phone"],
-  "SkyRex Inc.":["skyrex-inc","tablet and phone"],
-  "CTI Logistics":["cti-logistics","laptop and phone"],
+  "SkyRex Inc.":["skyrex-inc-transparent","tablet and phone"],
+  "CTI Logistics":["cti-logistics-transparent","laptop and phone"],
   "ForDoz Pharma":["fordoz-pharma","handheld tablet"],
   "Platinum Valet Parking":["platinum-valet-parking","handheld phone"],
   "Raidex Construction LLC":["raidex-construction","desktop monitor and phone"],
   "Catanzaro’s Power Washing":["catanzaros-power-washing","handheld phone"],
   "Coin & Jewelry Gallery of Boca Raton":["coin-jewelry-gallery-boca-raton","handheld tablet"],
-  "NJ Steps to Success":["nj-steps-to-success","laptop and phone"],
+  "NJ Steps to Success":["nj-steps-to-success-transparent","laptop and phone"],
   "H2Bros Plumbing & Heating":["h2bros-plumbing","handheld phone"],
   "Art of Construction":["art-of-construction","desktop monitor and phone"]
 };
