@@ -1317,38 +1317,22 @@ body .site-header.site-header .mega-wide .mega-columns{
   padding:90px 0;
 }
 .scm-ms-story-visual{
-  display:grid;
-  grid-template-rows:auto 1fr auto;
+  display:flex;
+  align-items:center;
   min-width:0;
   margin:0;
-}
-.scm-ms-story-visual .section-tag{
-  display:block;
-  color:#626262;
 }
 .scm-ms-story-stage{
   position:relative;
   isolation:isolate;
   display:grid;
   align-items:center;
+  width:100%;
   min-height:380px;
 }
 .scm-ms-story-stage img{
   width:100%;
   height:auto;
-}
-.scm-ms-story-visual figcaption{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:space-between;
-  gap:10px 20px;
-  padding-top:18px;
-  border-top:1px solid #dedbd6;
-  color:#626262;
-  font-size:var(--vnw-type-small);
-}
-.scm-ms-story-visual figcaption span:first-child{
-  color:var(--black);
 }
 .scm-ms-story-copy{
   min-width:0;

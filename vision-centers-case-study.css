@@ -7,9 +7,5 @@
 .vision-browser:nth-child(2){z-index:2}
 .vision-browser:nth-child(3){z-index:3}
 .vision-browser:nth-child(4){z-index:4}
-.vision-browser-bar{display:flex;align-items:center;gap:9px;height:32px;padding:0 12px;background:#f3f4f4;border-bottom:1px solid #ddd;color:#5b6469;font:400 10px/1.2 Inter,sans-serif}
-.vision-browser-dots{display:flex;gap:4px;flex-shrink:0}
-.vision-browser-dots i{width:5px;height:5px;border-radius:50%;background:#bdc3c6}
-.vision-browser-address{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .vision-browser-stack .vision-browser img{display:block;width:100%;height:auto;aspect-ratio:16/8;max-height:none;border-radius:0;box-shadow:none;object-fit:cover;object-position:top}
-@media(max-width:500px){.vision-browser-bar{height:27px;padding:0 8px;font-size:8px;gap:7px}.vision-browser{border-radius:6px}.vision-browser+.vision-browser{margin-top:-12%}}
+@media(max-width:500px){.vision-browser{border-radius:6px}.vision-browser+.vision-browser{margin-top:-12%}}

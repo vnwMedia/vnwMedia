@@ -250,19 +250,60 @@ function renderAdditionalProjectCard(project){
 }
 
 function renderAdditionalClientCaseStudy(project){
+  const storyDetails={
+    'skyrex-inc':[
+      'SEO content connects commercial cleaning products with the kitchen, fleet, and industrial applications professional buyers research.',
+      'Google Business Profile management, profile search ads, and GEO support discovery of the South River business and its toll-blending services.'
+    ],
+    'cti-logistics':[
+      'SEO gives residential moving, commercial relocation, storage, installation, and liquidation their own relevant search context across New York and New Jersey.',
+      'Google Business Profile work, profile search ads, and GEO connect those services with CTI’s local presence and its quote-request path.'
+    ],
+    'fordoz-pharma':[
+      'SEO organizes information about sterile injectable manufacturing, facility capabilities, and formulation technologies for professional audiences.',
+      'Google Business Profile management, profile search ads, and GEO reinforce the East Windsor business identity and routes to company information and contact.'
+    ],
+    'platinum-valet-parking':[
+      'SEO gives restaurants, private events, hospitals, shopping centers, and dealerships distinct ways to find the valet services relevant to them.',
+      'Google Business Profile management, profile search ads, and GEO connect the tri-state service area with venue-specific information and consultation access.'
+    ],
+    'raidex-construction':[
+      'SEO connects roofing, siding, gutter, and exterior-improvement pages with the needs of New Jersey homeowners.',
+      'Google Business Profile management, profile search ads, and GEO support local discovery and direct visitors toward the appropriate service and estimate request.'
+    ],
+    'catanzaros-power-washing':[
+      'SEO distinguishes power washing, soft washing, paver restoration, and other exterior-cleaning work for local property owners.',
+      'Google Business Profile management, profile search ads, and GEO connect the Monroe Township service area with project imagery and quote requests.'
+    ],
+    'coin-jewelry-gallery-boca-raton':[
+      'SEO gives coins, bullion, jewelry, watches, sterling silver, and paper money distinct search and browsing paths.',
+      'Google Business Profile management, profile search ads, and GEO support Boca Raton discovery for customers looking to buy, sell, trade, or visit the gallery.'
+    ],
+    'nj-steps-to-success':[
+      'SEO makes community inclusion, behavior management, and life coaching easier for New Jersey families and support coordinators to find and understand.',
+      'Google Business Profile management, profile search ads, and GEO connect program information with the provider’s individual and agency contact routes.'
+    ],
+    'h2bros-plumbing':[
+      'SEO separates water heater, boiler, fixture, sump pump, and other plumbing needs so customers can find the right service information.',
+      'Google Business Profile management, profile search ads, and GEO strengthen New Jersey local discovery and connect repair or installation research with calls and quote requests.'
+    ],
+    'art-of-construction':[
+      'SEO focuses on laundromat buildouts, remodels, retail-space conversions, and commercial interior work across New York and New Jersey.',
+      'Google Business Profile management, profile search ads, and GEO connect that construction specialty with relevant project examples and owner inquiries.'
+    ]
+  };
+  const [storyTwo,storyThree]=storyDetails[project.slug];
   return renderClientCaseStudy({
     name:project.name, kicker:project.industry, intro:project.summary,
     hero:project.hero, heroAlt:project.heroAlt, heroWidth:1920, heroHeight:1080,
     website:project.website,
     mockup:project.desktop, mockupAlt:`${project.name} website on desktop`, mockupWidth:1440, mockupHeight:1000,
-    mockupMobile:project.mobile, visualCaption:'The live client website.', visualDetail:'Desktop · Mobile',
+    mockupMobile:project.mobile,
     signals:project.focus, businessIntro:project.summary, challengeTitle:project.headline, challengeOne:project.challenge,
     challengeTwo:`Our engagement connects Web Design, SEO, Google Business Profile, GBP Search Ads, and GEO / AI Marketing around the needs of ${project.audience}.`,
     approachTitle:'One business. A connected digital direction.',
     approach:[['Website clarity.',project.design],['Relevant search content.',project.search],['Local business context.',project.local],['AI-ready explanations.',project.geo]],
-    storyTitle:project.storyTitle, storyOne:project.story,
-    storyTwo:`The experience is shaped for ${project.audience}, with ${project.location} providing the relevant location context.`,
-    storyThree:'Web design, organic search, Google Business Profile, paid profile discovery, and GEO / AI Marketing connect around a shared goal: helping the right audience understand the business and find a clear next step.',
+    storyTitle:project.storyTitle, storyOne:project.story, storyTwo, storyThree,
     services:ADDITIONAL_PROJECT_SERVICES.map(service=>[service[0],service[1],project[service[2]],service[3],`Discuss ${service[1]}`])
   });
 }
@@ -715,9 +756,7 @@ function brooklynMotorsCaseStudy(){
   "storyTitle": "From local search to a repair conversation.",
   "storyOne": "Our Brooklyn Motors engagement combines web design, SEO, Google Business Profile Management, Google Business Profile Search Ads, PPC, and GEO.",
   "storyTwo": "The website gives drivers a place to understand the shop and contact the business. Search and profile work support discovery, while paid campaigns provide a separate route to relevant inquiries.",
-  "storyThree": "This case study describes the confirmed service scope. It does not claim unverified traffic, ranking, lead, or revenue increases.",
-  "visualCaption": "Brooklyn Motors website",
-  "visualDetail": "Collision repair information",
+  "storyThree": "Google Business Profile Search Ads, PPC, and GEO add paid and AI-assisted discovery paths for drivers comparing repair options.",
   "services": [
     [
       "web-design",
@@ -765,6 +804,39 @@ function brooklynMotorsCaseStudy(){
 });
 }
 
+const CLIENT_STORY_COPY={
+  'Brooklyn Motors':[
+    'For Brooklyn Motors, the website brings collision and auto body repair information into a clear path to contact the shop.',
+    'SEO and Google Business Profile management connect that repair information with Brooklyn-area search and local business details.',
+    'Google Business Profile Search Ads, PPC, and GEO add paid and AI-assisted discovery paths for drivers comparing repair options.'
+  ],
+  'La Rosa Chicken and Grill':[
+    'SEO work spans 11 La Rosa Chicken and Grill locations, with each restaurant’s local context reflected in search-focused information.',
+    'Google Business Profile Management supports location details that help guests identify where to visit or order.',
+    'Google Business Profile Search Ads and Reputation Management extend the local-search work through paid discovery and attention to guest feedback.'
+  ],
+  'KYPCL':[
+    'The KYPCL website organizes practice-area information, firm details, and consultation paths for people researching legal support in New York City.',
+    'SEO and Google Business Profile work connect those practice areas with relevant searches and consistent local business information.',
+    'Google Business Search Ads, Reputation Management, and Lead Generation support paid discovery, trust, and a clear route to contact the firm.'
+  ],
+  'Vision Centers':[
+    'Organic SEO supports four separate vision center websites while preserving each practice’s local identity and service information.',
+    'Google Business Profile management aligns each location’s business details with its website and the patients it serves.',
+    'Reputation Management keeps customer feedback part of the local presence, alongside search information and appointment paths.'
+  ],
+  'NYCADSCO':[
+    'SEO and PPC focus on NYCADSCO’s New York City media-planning services, including transit, shelters, billboards, and street posters.',
+    'Organic Google Business Profile management connects the agency’s business details with local search as advertisers compare media partners.',
+    'Reputation Management supports trust around that digital presence, and the combined work directs relevant interest toward campaign inquiries.'
+  ],
+  'SFADSCO':[
+    'SEO and PPC focus on SFADSCO’s San Francisco media-planning services, including Muni, BART, cable cars, billboards, and street-level placements.',
+    'Organic Google Business Profile management connects the agency’s business details with local search as advertisers compare media partners.',
+    'Reputation Management supports trust around that digital presence, and the combined work directs relevant interest toward campaign inquiries.'
+  ]
+};
+
 function renderClientCaseStudy(config){
   const primaryLogos={"NYCADSCO":"assets/nycadsco-logo.webp","SFADSCO":"assets/sfadsco-logo.webp","Brooklyn Motors":"assets/brooklyn-motors-logo-supplied.png","La Rosa Chicken and Grill":"assets/la-rosa-logo-white-text.svg","KYPCL":"assets/kypcl-logo-supplied.png"};
   const logoProject=typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined"?ADDITIONAL_CLIENT_PROJECTS.find(project=>project.name===config.name):null;
@@ -782,6 +854,7 @@ function renderClientCaseStudy(config){
     "SFADSCO":"SFADSCO is an outdoor advertising and media planning agency serving San Francisco. Its services include Muni, BART, cable car, billboard, and street-level advertising."
   };
   const businessIntro=config.businessIntro||businessIntroductions[config.name];
+  const [storyOne,storyTwo,storyThree]=CLIENT_STORY_COPY[config.name]||[config.storyOne,config.storyTwo,config.storyThree];
   const {signals, approach, services}=config;
   const workProject=DATA.cases.find(project=>project[0]===config.name);
   const workServiceLabels=workProject
@@ -821,16 +894,13 @@ function renderClientCaseStudy(config){
       <section class="scm-ms-story" id="digital-experience" data-nav-theme="light" aria-labelledby="scm-story-title">
         <div class="shell scm-ms-story-grid reveal">
           <figure class="scm-ms-story-visual">
-            <span class="section-tag">${esc(config.name)} / Digital Experience</span>
             <div class="scm-ms-story-stage${config.mockupMobile?" client-project-screens":""}"><img src="${img(config.mockup)}" alt="${esc(config.mockupAlt)}" width="${config.mockupWidth}" height="${config.mockupHeight}" loading="lazy" decoding="async">${config.mockupMobile?`<img class="client-project-mobile" src="${img(config.mockupMobile)}" alt="${esc(config.name)} website on mobile" width="390" height="844" loading="lazy" decoding="async">`:""}</div>
-            <figcaption><span>${esc(config.visualCaption||"One experience. Every screen.")}</span><span>${esc(config.visualDetail||"Desktop · Mobile")}</span></figcaption>
           </figure>
           <div class="scm-ms-story-copy">
-            ${["NYCADSCO","SFADSCO"].includes(config.name)?`<p class="case-scope-clarification">Outdoor advertising shown is the client’s work. VNW Media’s scope covers digital marketing, not website design or outdoor campaign production.</p>`:""}
             <h2 id="scm-story-title">${esc(config.storyTitle)}</h2>
-            <p>${esc(config.storyOne)}</p>
-            <p>${esc(config.storyTwo)}</p>
-            <p>${esc(config.storyThree)}</p>${config.website?`<a class="pill pill-blue" href="${esc(config.website)}" target="_blank" rel="noopener noreferrer">Visit client website <span aria-hidden="true">↗</span></a>`:""}
+            <p>${esc(storyOne)}</p>
+            <p>${esc(storyTwo)}</p>
+            <p>${esc(storyThree)}</p>${config.website?`<a class="pill pill-blue" href="${esc(config.website)}" target="_blank" rel="noopener noreferrer">Visit client website <span aria-hidden="true">↗</span></a>`:""}
           </div>
         </div>
       </section>
@@ -900,10 +970,8 @@ const CLIENT_CASE_STUDIES={
     ],
     "storyTitle": "One restaurant brand. Eleven local search priorities.",
     "storyOne": "Our scope for La Rosa Chicken and Grill covers SEO for 11 locations, Google Business Profile Management, Google Business Profile Search Ads, and Reputation Management.",
-    "storyTwo": "The goal is to help guests move from a local restaurant search to useful information about where to visit or order. This engagement is focused on search visibility and Google Business Profiles; website design is not part of the scope described here.",
-    "storyThree": "This case study documents the confirmed services. It does not claim unverified ranking, traffic, order, or revenue gains.",
-    "visualCaption": "La Rosa Chicken and Grill",
-    "visualDetail": "La Rosa menu imagery",
+    "storyTwo": "Google Business Profile Management supports location details that help guests identify where to visit or order.",
+    "storyThree": "Google Business Profile Search Ads and Reputation Management extend the local-search work through paid discovery and attention to guest feedback.",
     "services": [
         [
             "seo",
