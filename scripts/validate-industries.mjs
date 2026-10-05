@@ -13,6 +13,12 @@ for(const industry of industries){
 }
 const problems=[];
 const titles=new Set();
+const labelCss=await readFile(path.join(root,'industry-directory.css'),'utf8');
+for(const [,selector,rule] of labelCss.matchAll(/([^{}]+)\{([^{}]*)\}/g)){
+  if(/\.section-tag\b/.test(selector)&&/display\s*:\s*(?:block|inline-block|grid|inline-grid)\s*!important/i.test(rule)){
+    problems.push(`Section label display override can put its leading dash above the text: ${selector.trim()}`);
+  }
+}
 for(const file of expected){
   let html;
   try{html=await readFile(file,'utf8')}catch{problems.push(`Missing page: ${file}`);continue}

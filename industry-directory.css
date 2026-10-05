@@ -108,7 +108,8 @@
 .industry-hub-card .location-state-copy>p:not(.section-tag){min-height:0}
 .industry-hub-card .location-state-links{margin-top:auto}
 .industry-service-main .location-overview .indl-head{display:block;width:100%;max-width:none}
-.industry-service-main .location-overview .indl-head>.section-tag{display:block!important}
+/* Keep the shared label's leading rule beside its text, not on a separate line. */
+.industry-service-main .location-overview .indl-head>.section-tag{display:flex!important;align-items:center!important;flex-direction:row!important}
 .industry-service-main .location-overview .indl-head h2,.industry-service-main .location-overview .indl-head>p{width:100%;max-width:none}
 .industry-service-main .location-overview .indl-head h2{margin:0 0 20px;font-size:clamp(42px,5vw,66px);line-height:.98}
 .industry-service-main .location-overview .indl-head>p:not(.section-tag){margin:0 0 14px;color:#666;font-size:16px;line-height:1.6}
