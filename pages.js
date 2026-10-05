@@ -252,47 +252,57 @@ function renderAdditionalProjectCard(project){
 function renderAdditionalClientCaseStudy(project){
   const storyDetails={
     'skyrex-inc':[
-      'SEO content connects commercial cleaning products with the kitchen, fleet, and industrial applications professional buyers research.',
-      'Google Business Profile management, profile search ads, and GEO support discovery of the South River business and its toll-blending services.'
+      'The SkyRex website organizes commercial cleaning products by application, helping professional buyers distinguish solutions for kitchens, fleets, and industrial facilities. A separate toll-blending path gives manufacturing partners a direct route to that service and a way to make contact.',
+      'SEO content builds on those product applications and service categories. Distinct descriptions give each type of buyer relevant information about the cleaning products or manufacturing support they are researching, including where to find specifications and begin a supply inquiry.',
+      'Google Business Profile management supports SkyRex’s South River business details in local search. Profile search ads add a paid discovery path, while GEO-focused content explains the product range and toll-blending capability for people researching options through AI-assisted search.'
     ],
     'cti-logistics':[
-      'SEO gives residential moving, commercial relocation, storage, installation, and liquidation their own relevant search context across New York and New Jersey.',
-      'Google Business Profile work, profile search ads, and GEO connect those services with CTI’s local presence and its quote-request path.'
+      'The CTI Logistics website separates residential moving, commercial relocation, storage, installation, and liquidation so visitors can identify the service that fits their move. Each path leads toward the details needed to request a quote.',
+      'SEO content gives those distinct services relevant search context across New York and New Jersey. People researching an office move do not have to sort through the same information as someone arranging a residential move or storage.',
+      'Google Business Profile management keeps CTI’s local business information connected to those service pages. Profile search ads and GEO-focused descriptions provide additional discovery paths while keeping the quote request clear for prospective customers.'
     ],
     'fordoz-pharma':[
-      'SEO organizes information about sterile injectable manufacturing, facility capabilities, and formulation technologies for professional audiences.',
-      'Google Business Profile management, profile search ads, and GEO reinforce the East Windsor business identity and routes to company information and contact.'
+      'The ForDoz Pharma website presents sterile injectable manufacturing, facility capabilities, formulation technologies, company news, and careers in a structure that professional audiences can navigate. The content provides a direct path to the relevant capability and company contact information.',
+      'SEO work organizes technical manufacturing information around the subjects prospective partners are researching. Clear page context helps distinguish facility information from formulation capabilities without turning complex pharmaceutical services into generic marketing claims.',
+      'Google Business Profile management supports ForDoz’s East Windsor business identity in search. Profile search ads and GEO-focused descriptions extend discovery while directing interested professionals back to the appropriate company information and contact route.'
     ],
     'platinum-valet-parking':[
-      'SEO gives restaurants, private events, hospitals, shopping centers, and dealerships distinct ways to find the valet services relevant to them.',
-      'Google Business Profile management, profile search ads, and GEO connect the tri-state service area with venue-specific information and consultation access.'
+      'The Platinum Valet Parking website presents valet services in the context of restaurants, private events, hospitals, shopping centers, and dealerships. Venue-specific pages help planners see which offering is relevant before they request a consultation.',
+      'SEO content gives those different settings their own search context across the tri-state area. A restaurant operator and an event organizer can each find information that speaks to their venue rather than relying on one broad valet description.',
+      'Google Business Profile management connects the company’s local details with its service information. Profile search ads and GEO-focused content add discovery paths for people comparing valet providers and lead them toward a relevant consultation inquiry.'
     ],
     'raidex-construction':[
-      'SEO connects roofing, siding, gutter, and exterior-improvement pages with the needs of New Jersey homeowners.',
-      'Google Business Profile management, profile search ads, and GEO support local discovery and direct visitors toward the appropriate service and estimate request.'
+      'The Raidex Construction website gives roofing, siding, gutters, and other exterior improvements separate service paths. Project examples support the service information so New Jersey homeowners can review the type of work before asking for an estimate.',
+      'SEO content connects each exterior service to the questions a homeowner might bring to a local search. Distinct pages make it easier to move from a specific repair or improvement need to the matching Raidex service.',
+      'Google Business Profile management reinforces local business details alongside the website. Profile search ads and GEO-focused explanations provide other ways to discover the company, with estimate requests remaining the clear next step.'
     ],
     'catanzaros-power-washing':[
-      'SEO distinguishes power washing, soft washing, paver restoration, and other exterior-cleaning work for local property owners.',
-      'Google Business Profile management, profile search ads, and GEO connect the Monroe Township service area with project imagery and quote requests.'
+      'The Catanzaro’s Power Washing website pairs project imagery with clear paths for power washing, soft washing, paver restoration, and other exterior-cleaning work. Property owners can see relevant examples before reaching the quote request.',
+      'SEO content distinguishes the services by surface and type of work, giving local customers more useful information than a single broad cleaning page. That structure supports searches for specific exterior-cleaning and restoration needs.',
+      'Google Business Profile management connects the Monroe Township business details with those services. Profile search ads and GEO-focused descriptions create additional discovery paths and lead interested property owners toward a quote.'
     ],
     'coin-jewelry-gallery-boca-raton':[
-      'SEO gives coins, bullion, jewelry, watches, sterling silver, and paper money distinct search and browsing paths.',
-      'Google Business Profile management, profile search ads, and GEO support Boca Raton discovery for customers looking to buy, sell, trade, or visit the gallery.'
+      'The Coin & Jewelry Gallery website gives coins, bullion, jewelry, watches, sterling silver, and paper money distinct browsing paths. Inventory and articles add context for visitors deciding whether to buy, sell, trade, or visit the Boca Raton gallery.',
+      'SEO work organizes those categories so a search for a particular item leads to relevant information instead of a general gallery overview. The content also makes store contact details and the next step easy to find.',
+      'Google Business Profile management supports accurate Boca Raton location information. Profile search ads and GEO-focused descriptions connect local discovery with the gallery’s categories and give customers a direct route to an inquiry or visit.'
     ],
     'nj-steps-to-success':[
-      'SEO makes community inclusion, behavior management, and life coaching easier for New Jersey families and support coordinators to find and understand.',
-      'Google Business Profile management, profile search ads, and GEO connect program information with the provider’s individual and agency contact routes.'
+      'The NJ Steps to Success website organizes community inclusion, behavior management, life coaching, programs, and events for New Jersey families and support coordinators. Separate contact routes help individuals and agencies reach the right part of the organization.',
+      'SEO content explains the available support in terms people can understand when researching a particular program. The pages connect each service with practical program information rather than relying on one broad description of the provider.',
+      'Google Business Profile management supports consistent local business details. Profile search ads and GEO-focused descriptions help people discover relevant program information and move to the appropriate individual or agency contact path.'
     ],
     'h2bros-plumbing':[
-      'SEO separates water heater, boiler, fixture, sump pump, and other plumbing needs so customers can find the right service information.',
-      'Google Business Profile management, profile search ads, and GEO strengthen New Jersey local discovery and connect repair or installation research with calls and quote requests.'
+      'The H2Bros Plumbing & Heating website separates water heaters, boilers, fixtures, sump pumps, and other plumbing services. Service details and frequently asked questions help New Jersey customers find the right information before calling or requesting a quote.',
+      'SEO content gives repair and installation needs their own search context, so a customer researching a boiler does not have to navigate a generic plumbing page. The content keeps the corresponding call and quote options visible.',
+      'Google Business Profile management supports local company information alongside those service pages. Profile search ads and GEO-focused explanations provide additional ways to find H2Bros when comparing plumbing and heating options.'
     ],
     'art-of-construction':[
-      'SEO focuses on laundromat buildouts, remodels, retail-space conversions, and commercial interior work across New York and New Jersey.',
-      'Google Business Profile management, profile search ads, and GEO connect that construction specialty with relevant project examples and owner inquiries.'
+      'The Art of Construction website presents laundromat buildouts, remodels, retail-space conversions, and commercial interior work through distinct service information and named projects. Business owners can review relevant examples before starting an inquiry.',
+      'SEO content connects those construction specialties with searches across New York and New Jersey. The pages explain the type of space and project involved, giving a prospective owner more useful context than a general contractor overview.',
+      'Google Business Profile management supports the company’s local presence. Profile search ads and GEO-focused descriptions provide additional discovery paths and bring interested owners back to the relevant project examples and contact route.'
     ]
   };
-  const [storyTwo,storyThree]=storyDetails[project.slug];
+  const [storyOne,storyTwo,storyThree]=storyDetails[project.slug];
   return renderClientCaseStudy({
     name:project.name, kicker:project.industry, intro:project.summary,
     hero:project.hero, heroAlt:project.heroAlt, heroWidth:1920, heroHeight:1080,
@@ -303,7 +313,7 @@ function renderAdditionalClientCaseStudy(project){
     challengeTwo:`Our engagement connects Web Design, SEO, Google Business Profile, GBP Search Ads, and GEO / AI Marketing around the needs of ${project.audience}.`,
     approachTitle:'One business. A connected digital direction.',
     approach:[['Website clarity.',project.design],['Relevant search content.',project.search],['Local business context.',project.local],['AI-ready explanations.',project.geo]],
-    storyTitle:project.storyTitle, storyOne:project.story, storyTwo, storyThree,
+    storyTitle:project.storyTitle, storyOne, storyTwo, storyThree,
     services:ADDITIONAL_PROJECT_SERVICES.map(service=>[service[0],service[1],project[service[2]],service[3],`Discuss ${service[1]}`])
   });
 }
@@ -806,34 +816,34 @@ function brooklynMotorsCaseStudy(){
 
 const CLIENT_STORY_COPY={
   'Brooklyn Motors':[
-    'For Brooklyn Motors, the website brings collision and auto body repair information into a clear path to contact the shop.',
-    'SEO and Google Business Profile management connect that repair information with Brooklyn-area search and local business details.',
-    'Google Business Profile Search Ads, PPC, and GEO add paid and AI-assisted discovery paths for drivers comparing repair options.'
+    'The Brooklyn Motors website organizes collision repair and auto body services around the information drivers need after vehicle damage. Service descriptions, shop details, and contact options give a Brooklyn customer a clear route from researching repairs to reaching the team.',
+    'SEO work gives those repair services relevant search context, while Google Business Profile management connects the website with the shop’s local business information. Together, the pages and profile help drivers identify the location and understand the types of work available.',
+    'Google Business Profile Search Ads and PPC add paid paths for drivers actively comparing repair options. GEO-focused descriptions make the shop’s services easier to interpret in AI-assisted searches, with each path pointing back to a practical repair inquiry.'
   ],
   'La Rosa Chicken and Grill':[
-    'SEO work spans 11 La Rosa Chicken and Grill locations, with each restaurant’s local context reflected in search-focused information.',
-    'Google Business Profile Management supports location details that help guests identify where to visit or order.',
-    'Google Business Profile Search Ads and Reputation Management extend the local-search work through paid discovery and attention to guest feedback.'
+    'La Rosa Chicken and Grill serves guests across 11 locations, making each restaurant’s address, local context, and visit-or-order information important to the search experience. Location-specific SEO gives each restaurant its own search context and helps guests select the one that fits their plans.',
+    'Google Business Profile Management keeps the individual restaurant profiles connected to useful location details. That gives a guest researching La Rosa a clearer way to choose the right restaurant and move from a local search to its menu, directions, or ordering information.',
+    'Google Business Profile Search Ads add a paid local-discovery path for people searching for a place to eat. Reputation Management keeps guest feedback in view as part of the brand’s presence across its restaurant locations.'
   ],
   'KYPCL':[
-    'The KYPCL website organizes practice-area information, firm details, and consultation paths for people researching legal support in New York City.',
-    'SEO and Google Business Profile work connect those practice areas with relevant searches and consistent local business information.',
-    'Google Business Search Ads, Reputation Management, and Lead Generation support paid discovery, trust, and a clear route to contact the firm.'
+    'The KYPCL website organizes legal practice areas, attorney and firm details, and consultation paths for people researching counsel in New York City. Visitors can move from a specific legal concern to the relevant practice information before deciding whether to contact the firm.',
+    'SEO content gives those practice areas distinct search context, while Google Business Profile work connects the firm’s website to consistent local business information. The two channels help prospective clients understand both the legal services and where the firm can be reached.',
+    'Google Business Search Ads provide a paid discovery route for relevant legal searches. Reputation Management and Lead Generation support the decision to inquire by keeping trust signals and consultation options close to the practice information.'
   ],
   'Vision Centers':[
-    'Organic SEO supports four separate vision center websites while preserving each practice’s local identity and service information.',
-    'Google Business Profile management aligns each location’s business details with its website and the patients it serves.',
-    'Reputation Management keeps customer feedback part of the local presence, alongside search information and appointment paths.'
+    'Organic SEO supports four separate vision center websites, including Nassau Fulton Vision Center, Broadway Vision at 170th, Absolute Vision Center, and American Vision Center. The work preserves each practice’s identity while making its eye-care services and location information easier to find in relevant searches.',
+    'Google Business Profile management aligns each practice’s address and business details with its existing website. Patients looking for eye exams or vision care can identify the appropriate location and move toward the appointment information provided by that practice.',
+    'Reputation Management keeps patient feedback connected to each center’s local presence. Together with service pages and profile information, those reviews provide useful context for people comparing vision care options before requesting an appointment.'
   ],
   'NYCADSCO':[
-    'SEO and PPC focus on NYCADSCO’s New York City media-planning services, including transit, shelters, billboards, and street posters.',
-    'Organic Google Business Profile management connects the agency’s business details with local search as advertisers compare media partners.',
-    'Reputation Management supports trust around that digital presence, and the combined work directs relevant interest toward campaign inquiries.'
+    'NYCADSCO’s digital marketing work focuses on its New York City out-of-home media services, including transit placements, bus shelters, billboards, and street posters. SEO gives advertisers searching for those formats relevant information about the agency’s planning options.',
+    'PPC extends discovery to paid searches for NYC advertising and media placements. The search work is organized around the services advertisers actually compare, with a path from a specific placement interest to a campaign inquiry.',
+    'Organic Google Business Profile management keeps the agency’s local business details connected to that search presence. Reputation Management adds trust context for prospective advertisers evaluating NYCADSCO as a media-planning partner.'
   ],
   'SFADSCO':[
-    'SEO and PPC focus on SFADSCO’s San Francisco media-planning services, including Muni, BART, cable cars, billboards, and street-level placements.',
-    'Organic Google Business Profile management connects the agency’s business details with local search as advertisers compare media partners.',
-    'Reputation Management supports trust around that digital presence, and the combined work directs relevant interest toward campaign inquiries.'
+    'SFADSCO’s digital marketing work centers on San Francisco out-of-home advertising, including Muni, BART, cable cars, billboards, and street-level placements. SEO connects searches for those local media formats with useful information about the agency’s planning services.',
+    'PPC adds a paid discovery route for advertisers comparing San Francisco campaign options. The search work keeps different placement types distinct so an interested brand can move from a particular media need toward a campaign inquiry.',
+    'Organic Google Business Profile management aligns the agency’s local details with its search presence. Reputation Management supports the trust context advertisers need when selecting a partner for a San Francisco media campaign.'
   ]
 };
 
