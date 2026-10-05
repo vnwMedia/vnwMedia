@@ -393,6 +393,13 @@ document.querySelectorAll("[data-testimonial-ticker]").forEach(testimonialTicker
   const testimonialTickerTrack = testimonialTicker.querySelector(".testimonial-ticker-track");
   if (!testimonialTickerTrack) return;
   const originalCards = Array.from(testimonialTickerTrack.children);
+  if (!originalCards.length) return;
+  // The homepage's 22-card loop takes 82 seconds. Scale shorter review sets
+  // by card count so every page moves at the same pixels-per-second pace.
+  const homepageReviewCount = 22;
+  const homepageLoopSeconds = 82;
+  testimonialTickerTrack.style.animationDuration =
+    `${(homepageLoopSeconds * originalCards.length / homepageReviewCount).toFixed(3)}s`;
   const appendReviewSet = () => originalCards.forEach((card) => {
     const clone = card.cloneNode(true);
     clone.setAttribute("aria-hidden", "true");
