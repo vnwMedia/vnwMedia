@@ -21,6 +21,6 @@
   const locations=[['nassau','Nassau Fulton Vision Center'],['broadway','Broadway Vision at 170th'],['absolute','Absolute Vision Center'],['american','American Vision Center']];
   if(stage){
     stage.classList.add('vision-browser-stack');
-    stage.innerHTML=locations.map(([slug,name])=>`<figure class="vision-browser"><img src="../assets/vision-centers-${slug}.jpg" alt="${name} website" width="1440" height="960" loading="lazy"></figure>`).join('');
+    stage.innerHTML=locations.map(([slug,name])=>`<figure class="vision-browser"><div class="vision-browser-bar"><span class="vision-browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="vision-browser-address">${name}</span></div><img src="../assets/vision-centers-${slug}.jpg" alt="${name} website in a browser window" width="1440" height="960" loading="lazy"></figure>`).join('');
   }
 })();

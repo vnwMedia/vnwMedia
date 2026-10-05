@@ -894,6 +894,7 @@ function renderClientCaseStudy(config){
       <section class="scm-ms-story" id="digital-experience" data-nav-theme="light" aria-labelledby="scm-story-title">
         <div class="shell scm-ms-story-grid reveal">
           <figure class="scm-ms-story-visual">
+            <span class="section-tag">${esc(config.name)} / Digital Experience</span>
             <div class="scm-ms-story-stage${config.mockupMobile?" client-project-screens":""}"><img src="${img(config.mockup)}" alt="${esc(config.mockupAlt)}" width="${config.mockupWidth}" height="${config.mockupHeight}" loading="lazy" decoding="async">${config.mockupMobile?`<img class="client-project-mobile" src="${img(config.mockupMobile)}" alt="${esc(config.name)} website on mobile" width="390" height="844" loading="lazy" decoding="async">`:""}</div>
           </figure>
           <div class="scm-ms-story-copy">

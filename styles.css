@@ -1317,10 +1317,14 @@ body .site-header.site-header .mega-wide .mega-columns{
   padding:90px 0;
 }
 .scm-ms-story-visual{
-  display:flex;
-  align-items:center;
+  display:grid;
+  grid-template-rows:auto 1fr;
   min-width:0;
   margin:0;
+}
+.scm-ms-story-visual .section-tag{
+  display:block;
+  color:#626262;
 }
 .scm-ms-story-stage{
   position:relative;
