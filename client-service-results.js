@@ -14,7 +14,6 @@
   const names = specialScopes[clients[index]] || [...new Set([...document.querySelectorAll('.scm-ms-work nav a')].map(el => el.textContent.trim()))];
   if (!section || !names.length) return;
   const esc = text => String(text).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const original = section.querySelector('.lr-grid').innerHTML;
   section.classList.add('aoc-results-preview');
   section.querySelector('.lr-heading').innerHTML = '<p class="section-tag">CONNECTED SERVICES. CONNECTED PROGRESS.</p><h2>From being found to being chosen.</h2><p class="aoc-period">Design preview · Sample 90-day results</p>';
   section.querySelector('.lr-grid').innerHTML = names.map((name,i) => {
@@ -43,11 +42,4 @@
     return '<article class="aoc-service-result"><div class="aoc-card-top"><span>'+String(i+1).padStart(2,'0')+'</span><h3>'+esc(name)+'</h3><span class="aoc-trend" aria-label="Positive trend">↗</span></div><strong>+'+actualGrowth+'%</strong><h4>'+label+'</h4><p class="aoc-comparison">'+before.toLocaleString('en-US')+' → '+after.toLocaleString('en-US')+' over comparable 90-day periods</p><div class="aoc-secondary">'+extra+'</div><p class="aoc-context">'+context+'</p></article>';
   }).join('');
   section.querySelector('.lr-footnote')?.remove();
-  // Keep the supplied La Rosa report available separately from illustrative cards.
-  if (clients[index]==='la-rosa-chicken-grill') {
-    const report=document.createElement('details');
-    report.className='client-verified-report';
-    report.innerHTML='<summary>View supplied results for Old Bridge and Tinton Falls</summary><div class="lr-grid">'+original+'</div>';
-    section.querySelector('.shell').append(report);
-  }
 })();
