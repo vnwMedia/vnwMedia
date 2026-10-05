@@ -847,7 +847,27 @@ const CLIENT_STORY_COPY={
   ]
 };
 
+const CASE_STUDY_DEVICE_VISUALS={
+  "La Rosa Chicken and Grill":["la-rosa-chicken-grill","laptop and phone"],
+  "NYCADSCO":["nycadsco","laptop and phone"],
+  "SFADSCO":["sfadsco","tablet and phone"],
+  "Vision Centers":["vision-centers","tablet and phone"],
+  "KYPCL":["kypcl","handheld tablet"],
+  "Brooklyn Motors":["brooklyn-motors","desktop monitor and phone"],
+  "SkyRex Inc.":["skyrex-inc","tablet and phone"],
+  "CTI Logistics":["cti-logistics","laptop and phone"],
+  "ForDoz Pharma":["fordoz-pharma","handheld tablet"],
+  "Platinum Valet Parking":["platinum-valet-parking","handheld phone"],
+  "Raidex Construction LLC":["raidex-construction","desktop monitor and phone"],
+  "Catanzaro’s Power Washing":["catanzaros-power-washing","handheld phone"],
+  "Coin & Jewelry Gallery of Boca Raton":["coin-jewelry-gallery-boca-raton","handheld tablet"],
+  "NJ Steps to Success":["nj-steps-to-success","laptop and phone"],
+  "H2Bros Plumbing & Heating":["h2bros-plumbing","handheld phone"],
+  "Art of Construction":["art-of-construction","desktop monitor and phone"]
+};
+
 function renderClientCaseStudy(config){
+  const deviceVisual=CASE_STUDY_DEVICE_VISUALS[config.name];
   const primaryLogos={"NYCADSCO":"assets/nycadsco-logo.webp","SFADSCO":"assets/sfadsco-logo.webp","Brooklyn Motors":"assets/brooklyn-motors-logo-supplied.png","La Rosa Chicken and Grill":"assets/la-rosa-logo-white-text.svg","KYPCL":"assets/kypcl-logo-supplied.png"};
   const logoProject=typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined"?ADDITIONAL_CLIENT_PROJECTS.find(project=>project.name===config.name):null;
   const heroLogo=primaryLogos[config.name]||logoProject?.logo;
@@ -905,7 +925,7 @@ function renderClientCaseStudy(config){
         <div class="shell scm-ms-story-grid reveal">
           <figure class="scm-ms-story-visual">
             <span class="section-tag">${esc(config.name)} / Digital Experience</span>
-            <div class="scm-ms-story-stage${config.mockupMobile?" client-project-screens":""}"><img src="${img(config.mockup)}" alt="${esc(config.mockupAlt)}" width="${config.mockupWidth}" height="${config.mockupHeight}" loading="lazy" decoding="async">${config.mockupMobile?`<img class="client-project-mobile" src="${img(config.mockupMobile)}" alt="${esc(config.name)} website on mobile" width="390" height="844" loading="lazy" decoding="async">`:""}</div>
+            ${deviceVisual?`<div class="scm-ms-story-stage scm-ms-story-stage-device"><img src="${img(`assets/digital-experience-clients/${deviceVisual[0]}.png`)}" alt="${esc(config.name)} website displayed on a ${deviceVisual[1]}" width="1145" height="1374" loading="lazy" decoding="async"></div>`:`<div class="scm-ms-story-stage${config.mockupMobile?" client-project-screens":""}"><img src="${img(config.mockup)}" alt="${esc(config.mockupAlt)}" width="${config.mockupWidth}" height="${config.mockupHeight}" loading="lazy" decoding="async">${config.mockupMobile?`<img class="client-project-mobile" src="${img(config.mockupMobile)}" alt="${esc(config.name)} website on mobile" width="390" height="844" loading="lazy" decoding="async">`:""}</div>`}
           </figure>
           <div class="scm-ms-story-copy">
             <h2 id="scm-story-title">${esc(config.storyTitle)}</h2>
