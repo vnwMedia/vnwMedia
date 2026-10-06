@@ -393,9 +393,33 @@
       </div>
     </section>`;
   }
+  function commercialFaqs(data, market) {
+    switch (data.service) {
+      case "SEO":
+        return [
+          [`How much does SEO cost in ${market}?`, `SEO scope depends on your website's condition, competition, service areas, content needs, and how much implementation support you need. We aim to keep the starting scope affordable by prioritizing the highest-impact technical or content work, then explain the recommended next phase before you commit.`],
+          [`How much does local SEO cost in ${market}?`, `Local SEO work depends on your real service footprint, business profile accuracy, location and service pages, reviews, and ongoing content needs. A focused plan for one location can be more affordable than a broad multi-location effort. We review what is already working before recommending the work that matters most.`],
+          [`How much does GEO cost for a business in ${market}?`, `Generative Engine Optimization, or GEO, builds on useful SEO foundations. The scope depends on how clearly your site explains its services, expertise, locations, and supporting evidence, plus any technical or content gaps. We can begin with a focused review and recommend an affordable next step; no agency can guarantee placement in AI-generated answers.`],
+          [`How is GEO different from SEO?`, `SEO helps search engines discover and understand useful pages. GEO focuses on making accurate, well-supported business information easier for generative search experiences to interpret and cite. They overlap: clear service explanations, credible evidence, accessible pages, and consistent business details support both.`]
+        ];
+      case "Web Design":
+        return [[`How much does a website cost in ${market}?`, `Website scope depends on page count, original design and content, functionality, integrations, migration, and launch support. Improving an existing site may be an affordable starting point compared with a complete rebuild. We review your goals and current site, then outline the work and investment before you decide.`]];
+      case "Google PPC":
+      case "PPC":
+        return [
+          [`How much does PPC management cost in ${market}?`, `Management scope depends on the number of campaigns and service areas, account condition, landing pages, conversion tracking, and the level of ongoing optimization needed. We can start with a focused campaign and aim for an affordable management scope after reviewing your goals and existing account.`],
+          [`How much does Google Ads management cost in ${market}?`, `Google Ads management and the advertising budget are separate decisions. We explain the work involved in setup, search-term review, location targeting, ad testing, tracking, and reporting, then recommend a scope that fits your goals. Your ad budget depends on the market and competition; we do not publish a universal fee or promise a fixed cost per lead.`]
+        ];
+      case "Digital Marketing":
+        return [[`Can digital marketing start with an affordable scope in ${market}?`, `Yes. We can begin with one priority—such as improving a key website page, local search information, or a focused campaign—rather than launching every channel at once. We review your goals, existing assets, and available budget, then explain a practical first phase and what could follow.`]];
+      default:
+        return [];
+    }
+  }
   function pageMarkup(data, facts) {
     const market = facts.market || facts.state;
-    const faq = data.faq.map(([question, answer], i) => `<details${i === 0 ? " open" : ""}><summary>${escapeHtml(question)}<span aria-hidden="true">+</span></summary><p>${escapeHtml(answer)}</p></details>`).join("");
+    const existingFaqs = data.faq.filter(([question]) => data.service !== "Web Design" || !/^How much does (a business website|web design) cost/i.test(question));
+    const faq = [...existingFaqs, ...commercialFaqs(data, market)].map(([question, answer], i) => `<details${i === 0 ? " open" : ""}><summary>${escapeHtml(question)}<span aria-hidden="true">+</span></summary><p>${escapeHtml(answer)}</p></details>`).join("");
     const tags = data.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join("");
     return `<main id="top" class="location-main">
       <section class="indl-hero location-hero" data-nav-theme="dark"><div class="indl-hero-media"><img src="${asset(`assets/location-heroes/${data.image}`)}" alt="${escapeHtml(data.alt)}" fetchpriority="high"></div><div class="indl-hero-shade"></div><div class="shell indl-hero-inner"><div class="indl-hero-copy"><p class="section-tag">${escapeHtml(data.service)} · ${escapeHtml(market)}</p><h1>${escapeHtml(data.hero)}</h1><p>${escapeHtml(data.lead)}</p><div class="indl-actions"><a class="pill pill-blue pill-large" href="${contact}">Discuss ${escapeHtml(data.service)} in ${escapeHtml(market)} <span>↗</span></a><a class="pill pill-outline pill-large" href="#local-approach">Explore the approach</a></div></div>${heroFormMarkup(data, facts)}</div></section>
@@ -429,6 +453,7 @@
       ["What services can I explore for each location?", "Explore statewide service pages or go directly to digital marketing, SEO, web design, and PPC / Google Ads pages grouped by selected New Jersey and New York communities."],
       ["Do I need to be based in New Jersey or New York to work with VNW Media?", "These pages focus on those two markets. If your business operates elsewhere, tell us where you work and what you need; we can discuss whether the project is a fit."],
       ["How do I choose between digital marketing, SEO, web design, and Google Ads?", "Start with the business goal and the point where customers are getting stuck. You can begin with one priority; a broader mix only makes sense when the pieces support that goal."],
+      ["Can I start with an affordable project instead of every service?", "Yes. We can review your website and goals, identify the highest-priority opportunity, and propose a focused first phase. The scope and investment are explained before work begins; there is no need to commit to every channel at once."],
       ["Are the recommendations tailored to my actual service area?", "Yes. Market coverage is discussed in relation to your real service footprint, audience, capacity, and goals—not a copied list of nearby place names."]
     ];
     const faqMarkup = faqs.map(([question, answer], i) => `<details${i === 0 ? " open" : ""}><summary>${escapeHtml(question)}<span aria-hidden="true">+</span></summary><p>${escapeHtml(answer)}</p></details>`).join("");
@@ -456,6 +481,7 @@
       [`Do you work with businesses serving ${area.name}?`, `Yes. VNW Media can work with businesses that serve ${area.name}. Projects are planned collaboratively, and market coverage is confirmed against the business's actual service area and goals.`],
       [`Do these pages mean VNW Media has an office in ${area.name}?`, `No. VNW Media is based in Morganville, New Jersey and works with New York businesses through a collaborative, remote-first process. These pages describe markets we can discuss, not a claim of a local office in every area.`],
       [`Which service should I explore first?`, `Start with the business priority: digital marketing for a coordinated channel plan, SEO for organic discovery, web design for a clearer website experience, or PPC / Google Ads for paid search. You can begin with one.`],
+      [`Can a business serving ${area.name} start with an affordable first phase?`, `Yes. We can focus on one useful priority, such as a website improvement, local SEO work, or a targeted Google Ads campaign. We review your goals and current assets before outlining a practical scope and investment, without assuming you need every service at once.`],
       [`Can you cover nearby towns or neighborhoods too?`, `Potential coverage is discussed based on where the business genuinely operates, customer needs, and team capacity. We avoid implying coverage or creating repetitive area pages where there is no distinct useful information.`]
     ];
     const faqMarkup = faqs.map(([question, answer], index) => `<details${index === 0 ? " open" : ""}><summary>${escapeHtml(question)}<span aria-hidden="true">+</span></summary><p>${escapeHtml(answer)}</p></details>`).join("");
