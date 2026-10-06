@@ -393,23 +393,21 @@
       </div>
     </section>`;
   }
-  function commercialFaqs(data, market) {
+  function commercialFaqs(data, market, isAreaPage) {
+    // Keep additions specific to the service and avoid repeating an existing cost FAQ.
     switch (data.service) {
       case "SEO":
-        return [
-          [`How much does SEO cost in ${market}?`, `SEO scope depends on your website's condition, competition, service areas, content needs, and how much implementation support you need. We aim to keep the starting scope affordable by prioritizing the highest-impact technical or content work, then explain the recommended next phase before you commit.`],
-          [`How much does local SEO cost in ${market}?`, `Local SEO work depends on your real service footprint, business profile accuracy, location and service pages, reviews, and ongoing content needs. A focused plan for one location can be more affordable than a broad multi-location effort. We review what is already working before recommending the work that matters most.`],
-          [`How much does GEO cost for a business in ${market}?`, `Generative Engine Optimization, or GEO, builds on useful SEO foundations. The scope depends on how clearly your site explains its services, expertise, locations, and supporting evidence, plus any technical or content gaps. We can begin with a focused review and recommend an affordable next step; no agency can guarantee placement in AI-generated answers.`],
-          [`How is GEO different from SEO?`, `SEO helps search engines discover and understand useful pages. GEO focuses on making accurate, well-supported business information easier for generative search experiences to interpret and cite. They overlap: clear service explanations, credible evidence, accessible pages, and consistent business details support both.`]
-        ];
+        return isAreaPage
+          ? [[`How much does local SEO cost in ${market}?`, `Local SEO work depends on your real service footprint, business profile accuracy, location and service pages, reviews, and ongoing content needs. A focused plan for one location can be more affordable than a broad multi-location effort. We review what is already working before recommending the work that matters most.`]]
+          : [[`How much does SEO cost in ${market}?`, `SEO scope depends on your website's condition, competition, service areas, content needs, and how much implementation support you need. We aim to keep the starting scope affordable by prioritizing the highest-impact technical or content work, then explain the recommended next phase before you commit.`]];
       case "Web Design":
+        if (data.faq.some(([question]) => /^How much does (a business website|web design) cost/i.test(question))) return [];
         return [[`How much does a website cost in ${market}?`, `Website scope depends on page count, original design and content, functionality, integrations, migration, and launch support. Improving an existing site may be an affordable starting point compared with a complete rebuild. We review your goals and current site, then outline the work and investment before you decide.`]];
       case "Google PPC":
       case "PPC":
-        return [
-          [`How much does PPC management cost in ${market}?`, `Management scope depends on the number of campaigns and service areas, account condition, landing pages, conversion tracking, and the level of ongoing optimization needed. We can start with a focused campaign and aim for an affordable management scope after reviewing your goals and existing account.`],
-          [`How much does Google Ads management cost in ${market}?`, `Google Ads management and the advertising budget are separate decisions. We explain the work involved in setup, search-term review, location targeting, ad testing, tracking, and reporting, then recommend a scope that fits your goals. Your ad budget depends on the market and competition; we do not publish a universal fee or promise a fixed cost per lead.`]
-        ];
+        return isAreaPage
+          ? [[`How much does PPC management cost in ${market}?`, `Management scope depends on the number of campaigns and service areas, account condition, landing pages, conversion tracking, and the level of ongoing optimization needed. We can start with a focused campaign and aim for an affordable management scope after reviewing your goals and existing account. Ad spend is separate from management.`]]
+          : [[`How much does Google Ads management cost in ${market}?`, `Google Ads management and the advertising budget are separate decisions. We explain the work involved in setup, search-term review, location targeting, ad testing, tracking, and reporting, then recommend a scope that fits your goals. Your ad budget depends on the market and competition; we do not publish a universal fee or promise a fixed cost per lead.`]];
       case "Digital Marketing":
         return [[`Can digital marketing start with an affordable scope in ${market}?`, `Yes. We can begin with one priority—such as improving a key website page, local search information, or a focused campaign—rather than launching every channel at once. We review your goals, existing assets, and available budget, then explain a practical first phase and what could follow.`]];
       default:
@@ -418,8 +416,7 @@
   }
   function pageMarkup(data, facts) {
     const market = facts.market || facts.state;
-    const existingFaqs = data.faq.filter(([question]) => data.service !== "Web Design" || !/^How much does (a business website|web design) cost/i.test(question));
-    const faq = [...existingFaqs, ...commercialFaqs(data, market)].map(([question, answer], i) => `<details${i === 0 ? " open" : ""}><summary>${escapeHtml(question)}<span aria-hidden="true">+</span></summary><p>${escapeHtml(answer)}</p></details>`).join("");
+    const faq = [...data.faq, ...commercialFaqs(data, market, Boolean(facts.market))].map(([question, answer], i) => `<details${i === 0 ? " open" : ""}><summary>${escapeHtml(question)}<span aria-hidden="true">+</span></summary><p>${escapeHtml(answer)}</p></details>`).join("");
     const tags = data.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join("");
     return `<main id="top" class="location-main">
       <section class="indl-hero location-hero" data-nav-theme="dark"><div class="indl-hero-media"><img src="${asset(`assets/location-heroes/${data.image}`)}" alt="${escapeHtml(data.alt)}" fetchpriority="high"></div><div class="indl-hero-shade"></div><div class="shell indl-hero-inner"><div class="indl-hero-copy"><p class="section-tag">${escapeHtml(data.service)} · ${escapeHtml(market)}</p><h1>${escapeHtml(data.hero)}</h1><p>${escapeHtml(data.lead)}</p><div class="indl-actions"><a class="pill pill-blue pill-large" href="${contact}">Discuss ${escapeHtml(data.service)} in ${escapeHtml(market)} <span>↗</span></a><a class="pill pill-outline pill-large" href="#local-approach">Explore the approach</a></div></div>${heroFormMarkup(data, facts)}</div></section>
