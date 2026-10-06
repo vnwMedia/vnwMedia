@@ -15,7 +15,7 @@
   if (!section || !names.length) return;
   const esc = text => String(text).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   section.classList.add('aoc-results-preview');
-  section.querySelector('.lr-heading').innerHTML = '<p class="section-tag">CONNECTED SERVICES. CONNECTED PROGRESS.</p><h2>From being found to being chosen.</h2><p class="aoc-period">Design preview · Sample 90-day results</p>';
+  section.querySelector('.lr-heading').innerHTML = '<p class="section-tag">CONNECTED SERVICES. CONNECTED PROGRESS.</p><h2>From being found to being chosen.</h2><p class="aoc-period">Sample 90-day results</p>';
   section.querySelector('.lr-grid').innerHTML = names.map((name,i) => {
     const seed = index * 7 + i;
     const growth = 21 + seed;
@@ -41,5 +41,8 @@
     const actualGrowth = Math.round((after/before-1)*100);
     return '<article class="aoc-service-result"><div class="aoc-card-top"><span>'+String(i+1).padStart(2,'0')+'</span><h3>'+esc(name)+'</h3><span class="aoc-trend" aria-label="Positive trend">↗</span></div><strong>+'+actualGrowth+'%</strong><h4>'+label+'</h4><p class="aoc-comparison">'+before.toLocaleString('en-US')+' → '+after.toLocaleString('en-US')+' over comparable 90-day periods</p><div class="aoc-secondary">'+extra+'</div><p class="aoc-context">'+context+'</p></article>';
   }).join('');
-  section.querySelector('.lr-footnote')?.remove();
+  const footnote = section.querySelector('.lr-footnote') || document.createElement('p');
+  footnote.className = 'lr-footnote';
+  footnote.textContent = 'Illustrative sample only; not verified client performance.';
+  if (!footnote.isConnected) section.querySelector('.shell')?.append(footnote);
 })();
