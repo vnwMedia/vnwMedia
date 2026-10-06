@@ -5,6 +5,7 @@ import {industries} from './industry-content.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const expected=[path.join(root,'industries','index.html')];
+const legacy=['auto-repair.html','day-care.html','healthcare.html','home-services-contractors.html','legal-professional-services.html','real-estate.html','restaurant.html','retail-ecommerce.html'].map(file=>path.join(root,'industries',file));
 for(const industry of industries){
   const dir=path.join(root,'industries',industry.slug);
   expected.push(path.join(dir,'index.html'));
@@ -42,7 +43,24 @@ for(const industry of industries){
   try{await stat(path.join(root,'assets','industry-heroes',industry.image))}
   catch{problems.push(`Missing industry photo: ${industry.image}`)}
 }
+const decode=value=>value.replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&quot;/g,'"').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+for(const file of [...expected,...legacy]){
+  const html=await readFile(file,'utf8');
+  const start=html.indexOf('id="faq"');
+  const end=html.indexOf('</section>',start);
+  if(start<0||end<0){problems.push(`Missing FAQ section: ${file}`);continue}
+  const visible=[...html.slice(start,end).matchAll(/<summary>(.*?)<span[^>]*>\+<\/span><\/summary><p>(.*?)<\/p>/gs)].map(([,question,answer])=>[decode(question),decode(answer)]);
+  const schema=[...html.matchAll(/<script type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].map(([,json])=>JSON.parse(json)).find(item=>item['@type']==='FAQPage');
+  if(!visible.length||!schema||schema.mainEntity.length!==visible.length){problems.push(`FAQ or schema count mismatch: ${file}`);continue}
+  const questions=new Set();
+  visible.forEach(([question,answer],index)=>{
+    if(questions.has(question)) problems.push(`Duplicate FAQ question: ${file}: ${question}`);
+    questions.add(question);
+    const entry=schema.mainEntity[index];
+    if(entry.name!==question||entry.acceptedAnswer?.text!==answer) problems.push(`FAQ schema differs from visible answer: ${file}: ${question}`);
+  });
+}
 try{await stat(path.join(root,'assets','industry-heroes','industry-directory.png'))}
 catch{problems.push('Missing industry directory photo')}
 if(problems.length){console.error(problems.join('\n'));process.exitCode=1}
-else console.log(`Validated ${expected.length} industry pages, unique titles, local links, shared sections, and all ${industries.length+1} new photos.`);
+else console.log(`Validated ${expected.length+legacy.length} industry FAQs and schemas, plus generated-page titles, links, shared sections, and photos.`);
