@@ -13,11 +13,5 @@
   ];
   section.querySelector('.lr-heading').innerHTML = `<p class="section-tag">FIVE SERVICES. CONNECTED PROGRESS.</p><h2>From being found to being chosen.</h2><p class="aoc-period">${isDesignPreview ? 'Design preview · ' : ''}Sample 90-day results</p>`;
   section.querySelector('.lr-grid').innerHTML = services.map((s,i) => `<article class="aoc-service-result"><div class="aoc-card-top"><span>0${i+1}</span><h3>${s[0]}</h3><span class="aoc-trend" aria-label="Positive trend">↗</span></div><strong>${s[1]}</strong><h4>${s[2]}</h4><p class="aoc-comparison">${s[3]}</p><div class="aoc-secondary">${s[4]}</div><p class="aoc-context">${s[5]}</p></article>`).join('');
-  if (isDesignPreview) section.querySelector('.lr-footnote')?.remove();
-  else {
-    const footnote = section.querySelector('.lr-footnote') || document.createElement('p');
-    footnote.className = 'lr-footnote';
-    footnote.textContent = 'Illustrative sample only; not verified client performance.';
-    if (!footnote.isConnected) section.querySelector('.shell')?.append(footnote);
-  }
+  section.querySelector('.lr-footnote')?.remove();
 })();
