@@ -677,6 +677,9 @@ body form :is(button,[type="submit"]):hover{color:#fff;background:#008ac0;border
 @media(max-width:1000px){.industry-landing .indl-showcase .shell.indl-showcase-grid{min-height:0}.industry-landing .indl-showcase-media{min-height:430px}.industry-landing .indl-showcase-copy{min-height:0;padding:55px 0 78px}}
 @media(max-width:640px){.industry-landing .indl-showcase-media{min-height:380px}.industry-landing .indl-showcase-copy{padding:42px 0 70px}}
 
+/* Keep all three care specialties visible in the healthcare collage on narrow screens. */
+@media(max-width:1000px){.industry-landing .healthcare-collage-section .indl-showcase-media{min-height:0;aspect-ratio:1}.industry-landing .healthcare-collage-section .indl-showcase-media img{display:block;height:100%}}
+
 /* Industry "What We Did" redesign options preview. */
 .wwd-options-page{background:#f4f0e9;color:#111}.wwd-options-page .site-header{background:rgba(18,18,18,.2)}
 .wwd-options-hero{min-height:680px;display:flex;align-items:end;padding:165px 0 80px;color:#fff;background:radial-gradient(circle at 78% 16%,rgba(0,174,239,.24),transparent 31%),linear-gradient(90deg,rgba(8,8,8,.95),rgba(8,8,8,.82)),url("assets/case-system-stack.svg") center/cover}
