@@ -41,7 +41,7 @@
     "new-york": {
       state: "New York",
       context: "VNW Media partners with New York businesses through a collaborative, remote-first process. We shape each plan around the places a business genuinely serves, its customer journey, and the competitive context of its market.",
-      places: "New York City, Brooklyn, Queens, Staten Island, Long Island, and surrounding New York communities where your business operates",
+      places: "Manhattan, Brooklyn, Queens, the Bronx, Staten Island, Long Island, and surrounding New York communities where your business operates",
       localNote: "A connected digital partner for New York businesses, with project conversations and collaboration tailored to your team.",
       region: "New York"
     }
@@ -155,12 +155,75 @@
       summary: "A practical digital growth starting point for Morganville businesses, grounded in accurate local information and the next action customers should take.",
       image: "nj-digital-marketing.jpg"
     },
+    "manhattan": {
+      slug: "manhattan", region: "new-york", stateName: "New York", name: "Manhattan, NY", county: "New York County", separateGoogleAds: true,
+      places: "Midtown, Lower Manhattan, the Upper East Side, Harlem, and other Manhattan neighborhoods where your business genuinely operates",
+      context: "Manhattan is New York County, but its customers do not all search or decide the same way. We plan around your actual neighborhood coverage, whether you serve residents, commuters, visitors, or business buyers, and the inquiry your team can handle.",
+      summary: "Digital marketing for Manhattan businesses, shaped around distinct neighborhoods, clear service information, and a useful path from discovery to inquiry.",
+      image: "ny-digital-marketing.jpg",
+      serviceNotes: {
+        "digital-marketing": "A Midtown professional service and a neighborhood practice may need different messages, channels, and calls to action even within Manhattan.",
+        seo: "Search pages should distinguish the services and neighborhoods you truly cover instead of treating all Manhattan searches as one audience.",
+        "web-design": "A clear mobile path to services, proof, and booking or consultation helps busy visitors compare options quickly.",
+        ppc: "Dense competition makes budget boundaries, search-term review, and lead quality especially important to paid-search planning.",
+        "google-ads": "Campaign settings can separate resident, commuter, and office-focused demand where that distinction matches your offer and coverage."
+      }
+    },
     "brooklyn": {
-      slug: "brooklyn", region: "new-york", stateName: "New York", name: "Brooklyn, NY",
+      slug: "brooklyn", region: "new-york", stateName: "New York", name: "Brooklyn, NY", county: "Kings County", separateGoogleAds: true,
       places: "Brooklyn neighborhoods such as Downtown Brooklyn, Williamsburg, Bay Ridge, and nearby New York communities where your business operates",
-      context: "VNW Media works with New York businesses through a collaborative, remote-first process. For Brooklyn, we plan around neighborhood-level customer expectations and the areas a business can genuinely serve—not broad borough claims.",
+      context: "Brooklyn is Kings County. VNW Media works with New York businesses through a collaborative, remote-first process. For Brooklyn, we plan around neighborhood-level customer expectations and the areas a business can genuinely serve—not broad borough claims.",
       summary: "Digital marketing, SEO, web design, and paid search for Brooklyn businesses, planned around neighborhood relevance and real operational coverage.",
-      image: "ny-digital-marketing.jpg"
+      image: "ny-digital-marketing.jpg",
+      serviceNotes: {
+        "digital-marketing": "A business drawing customers from Bay Ridge may need a different mix of channels and local proof than one focused on Downtown Brooklyn.",
+        seo: "Service and location content should explain real neighborhood coverage and help customers understand when a Brooklyn business is the right fit.",
+        "web-design": "Useful neighborhood context, accessible mobile navigation, and obvious calls to action can make a Brooklyn site easier to choose from.",
+        ppc: "Paid-search plans can compare demand across the neighborhoods you serve without assuming the whole borough is equally valuable.",
+        "google-ads": "Google Ads location settings and search-term reviews should support the specific Brooklyn neighborhoods your team can reach."
+      }
+    },
+    "queens": {
+      slug: "queens", region: "new-york", stateName: "New York", name: "Queens, NY", county: "Queens County", separateGoogleAds: true,
+      places: "Astoria, Long Island City, Flushing, Jamaica, Forest Hills, and other Queens neighborhoods where your business operates",
+      context: "Queens is Queens County and includes very different commercial and residential neighborhoods. We define the audience, service footprint, and most useful next step before recommending borough-wide messaging or targeting.",
+      summary: "Digital marketing for Queens businesses that need useful neighborhood context, responsive web experiences, and search or ad coverage tied to real operations.",
+      image: "ny-digital-marketing.jpg",
+      serviceNotes: {
+        "digital-marketing": "A Queens plan can prioritize nearby customers, destination visitors, or business buyers according to the offer rather than treating the borough as one market.",
+        seo: "Location information for Astoria, Flushing, Jamaica, or another service area should appear only when your business has useful, distinct information for that audience.",
+        "web-design": "Service pages should make the business's actual Queens coverage, contact options, and any relevant language support easy to understand.",
+        ppc: "Campaign budgets can be concentrated around the Queens communities that match service capacity instead of spreading evenly across the borough.",
+        "google-ads": "Google Ads can test relevant service searches and location settings for the Queens neighborhoods your team can genuinely support."
+      }
+    },
+    "bronx": {
+      slug: "bronx", region: "new-york", stateName: "New York", name: "the Bronx, NY", displayName: "The Bronx, NY", county: "Bronx County", separateGoogleAds: true,
+      places: "Fordham, Riverdale, Pelham Bay, the South Bronx, and other Bronx neighborhoods where your business operates",
+      context: "The Bronx is Bronx County. A useful local plan reflects the services you offer, the neighborhoods you can reach, and the questions customers ask before contacting you; it does not assume one borough-wide customer journey.",
+      summary: "Digital marketing for Bronx businesses, with clear service pages, local search context, and campaigns planned around genuine neighborhood coverage.",
+      image: "ny-digital-marketing.jpg",
+      serviceNotes: {
+        "digital-marketing": "We map the first useful customer action—call, booking, visit, or estimate—before deciding which channels belong in a Bronx plan.",
+        seo: "Relevant pages can explain service availability across Fordham, Riverdale, Pelham Bay, or other areas without publishing duplicate neighborhood copy.",
+        "web-design": "A Bronx website should make service fit, practical coverage, trust details, and the next contact step obvious on a phone.",
+        ppc: "PPC geography should reflect the Bronx neighborhoods and nearby routes your business can actually serve, along with the value of each inquiry.",
+        "google-ads": "Google Ads search terms, location controls, and landing pages can be reviewed against the Bronx services and areas you really support."
+      }
+    },
+    "staten-island": {
+      slug: "staten-island", region: "new-york", stateName: "New York", name: "Staten Island, NY", county: "Richmond County", separateGoogleAds: true,
+      places: "St. George, New Dorp, Great Kills, Tottenville, and other Staten Island neighborhoods where your business operates",
+      context: "Staten Island is Richmond County. We plan around where a business can provide service, how customers compare local options, and whether the next step is a call, appointment, visit, or estimate.",
+      summary: "Digital marketing for Staten Island businesses, connecting useful local information, search visibility, website clarity, and measurable inquiries.",
+      image: "ny-digital-marketing.jpg",
+      serviceNotes: {
+        "digital-marketing": "The channel plan should reflect whether you serve one neighborhood, the full island, or customers beyond it—and what your team can fulfill.",
+        seo: "Service-area pages and business details should distinguish real Staten Island coverage from broad claims that do not help a customer choose.",
+        "web-design": "A practical site can put service coverage, hours, trust signals, and phone or appointment actions within easy reach for island customers.",
+        ppc: "Paid-search targeting should follow actual travel and service boundaries, not assume every Staten Island inquiry has the same value.",
+        "google-ads": "Google Ads campaign settings can focus on the island's relevant service demand while tracking calls and forms your team can follow up."
+      }
     },
     "sheepshead-bay": {
       slug: "sheepshead-bay", region: "new-york", stateName: "New York", name: "Sheepshead Bay, Brooklyn",
@@ -177,66 +240,85 @@
     ["web-design", "Web Design", "Make services, neighborhood coverage, trust signals, and next steps clearer on every screen."],
     ["ppc", "PPC / Google Ads", "Plan paid search around the right intent, actual coverage, landing pages, and lead quality."]
   ];
+  const googleAdsLink = ["google-ads", "Google Ads", "Manage Google Search campaigns with relevant terms, location controls, landing pages, and measurable inquiries."];
+  const servicesForArea = area => area.separateGoogleAds
+    ? [...areaServiceLinks.slice(0, -1), ["ppc", "PPC", "Plan pay-per-click strategy around intent, budgets, landing pages, and lead quality."], googleAdsLink]
+    : areaServiceLinks;
 
   function localizedAreaPage(area, serviceKey) {
-    const base = pages[`${serviceKey}-${area.region}`];
+    const base = pages[`${serviceKey === "google-ads" ? "ppc" : serviceKey}-${area.region}`];
     if (!base) return null;
-    const service = serviceKey === "ppc" ? "PPC" : base.service;
+    const service = serviceKey === "ppc" ? "PPC" : serviceKey === "google-ads" ? "Google Ads" : base.service;
     const market = area.name;
     const data = {...base, region: `${area.region}-${area.slug}`, service};
     const localFocus = {
       "digital-marketing": {
-        hero: `Digital marketing for ${market} businesses, built around the next customer conversation.`,
-        lead: `Bring your website, search visibility, paid campaigns, and lead follow-up together around the customers and communities your ${market} business can serve.`,
+        hero: `Digital marketing for businesses serving ${market}, built around the next customer conversation.`,
+        lead: `Bring your website, search visibility, paid campaigns, and lead follow-up together around the customers and communities your business can serve in ${market}.`,
         introTitle: `A connected digital plan for ${market}.`,
         intro: `Businesses in ${market} do not need a disconnected list of tactics. We start with the offer, customer journey, service footprint, and strongest next action, then coordinate the website, SEO, paid media, social, and follow-up that fit.`,
-        showcaseTitle: `Make each channel useful to the ${market} customer journey.`,
+        showcaseTitle: `Make each channel useful to customers in ${market}.`,
         showcaseText: `A business serving ${market} may rely on calls, appointments, store visits, or estimate requests. We shape the digital plan around those actions and the nearby communities your team can genuinely support, then measure what happens after discovery.`
       },
       seo: {
         hero: `Local SEO for businesses serving ${market}.`,
         lead: `Connect technical site health, useful service content, and accurate location signals to the searches that matter to your business.`,
-        introTitle: `Build search visibility around real ${market} service coverage.`,
+        introTitle: `Build search visibility around real service coverage in ${market}.`,
         intro: `Effective local SEO helps customers and search engines understand what you offer, where you operate, and why a page is useful. We assess technical foundations, local business information, service pages, internal links, and customer questions before recommending work.`,
-        showcaseTitle: `Local search should mirror how your ${market} business operates.`,
+        showcaseTitle: `Local search should reflect how your business serves ${market}.`,
         showcaseText: `A storefront, appointment-based practice, and mobile service company each need different location signals. We align pages and business information with your actual ${market} coverage, avoid thin duplicate location copy, and track meaningful actions alongside search visibility.`
       },
       "web-design": {
-        hero: `Web design for ${market} businesses ready for a clearer customer experience.`,
+        hero: `Web design for businesses serving ${market}, ready for a clearer customer experience.`,
         lead: `Give visitors a responsive website that explains your services, supports local discovery, and makes the right next step easy.`,
-        introTitle: `A better website starts with the ${market} customer.`,
+        introTitle: `A better website starts with customers in ${market}.`,
         intro: `People may arrive from a local search, recommendation, or campaign. The site should help them quickly understand your offer, service area, proof, and next action. We plan structure, content, mobile experience, SEO foundations, and conversion paths around those decisions.`,
-        showcaseTitle: `Design around the way ${market} customers choose.`,
-        showcaseText: `A strong local website is not a city-name swap. We organize the customer journey, service details, trust signals, and calls to action around your business model and the ${market} communities you actually serve, with responsive layouts and launch checks built into the project.`
+        showcaseTitle: `Design around how customers in ${market} choose.`,
+        showcaseText: `A strong local website is not a city-name swap. We organize the customer journey, service details, trust signals, and calls to action around your business model and the communities you actually serve in and around ${market}, with responsive layouts and launch checks built into the project.`
       },
       ppc: {
-        hero: `PPC and Google Ads for businesses serving ${market}.`,
+        hero: `${area.separateGoogleAds ? "PPC management" : "PPC and Google Ads"} for businesses serving ${market}.`,
         lead: `Connect search intent, campaign geography, landing pages, budgets, and measurement around the inquiries your team is ready to handle.`,
-        introTitle: `Paid search for the ${market} demand you can serve.`,
+        introTitle: `Paid search for demand your business can serve in ${market}.`,
         intro: `Useful PPC management is more than launching ads. We align keyword intent, geographic settings, ad messaging, landing pages, tracking, and lead follow-up with your offer, budget, and operational capacity.`,
-        showcaseTitle: `Keep ${market} campaign targeting tied to real coverage.`,
+        showcaseTitle: `Keep campaign targeting in ${market} tied to real coverage.`,
         showcaseText: `We plan campaign boundaries around where your business can deliver, not an arbitrary list of nearby place names. Search terms, landing-page relevance, budget, scheduling, and the quality of inquiries all inform ongoing optimization.`
+      },
+      "google-ads": {
+        hero: `Google Ads management for businesses serving ${market}.`,
+        lead: `Reach relevant searchers with campaigns aligned to your services, operating area, landing pages, and lead capacity.`,
+        introTitle: `Build Google Ads campaigns around useful demand in ${market}.`,
+        intro: `Google Ads work starts with account and conversion review, service intent, geographic settings, budget boundaries, and the page a searcher will reach. We then monitor search terms, ad relevance, and qualified inquiries to guide improvements.`,
+        showcaseTitle: `Keep Google Ads focused on the service area you can support in ${market}.`,
+        showcaseText: `Campaigns can be organized by service and intent rather than sending every click to a generic page. We review the actual locations you serve, the ad-to-page message, and tracked calls or forms before expanding coverage or spend.`
       }
     }[serviceKey];
     const localizedFaqQuestion = {
       "digital-marketing": `What can digital marketing include for a business in ${market}?`,
       seo: `How can SEO support a business serving ${market}?`,
       "web-design": `What affects the scope of a website project in ${market}?`,
-      ppc: `How do you target Google Ads for a business serving ${market}?`
+      ppc: area.separateGoogleAds ? `How do you plan PPC for a business serving ${market}?` : `How do you target Google Ads for a business serving ${market}?`,
+      "google-ads": `What goes into a Google Ads campaign for a business serving ${market}?`
     }[serviceKey];
     const localizedFaqAnswer = {
       "digital-marketing": `Depending on the goal, a plan can connect website strategy, SEO, paid media, social, landing pages, analytics, and lead follow-up. We recommend only the channels that fit the business and the customers it can serve in ${market}.`,
       seo: `SEO can connect technical site health, useful service content, accurate business information, and relevant local pages. We first understand the services and communities the business genuinely serves in ${market}, then prioritize work around customer needs and measurable progress.`,
       "web-design": `Scope depends on the site's size, content, design needs, functionality, integrations, and launch support. We clarify the customer journey and the places the business serves in ${market} before recommending a practical project scope.`,
-      ppc: `Campaign planning can include search intent, geographic settings, ad messaging, landing pages, conversion tracking, and optimization. We align targeting with the areas the business can genuinely serve in ${market}; ad spend and management scope are discussed before launch.`
+      ppc: `Campaign planning can include search intent, geographic settings, ad messaging, landing pages, conversion tracking, and optimization. We align targeting with the areas the business can genuinely serve in ${market}; ad spend and management scope are discussed before launch.`,
+      "google-ads": `We review account structure, search terms, geographic settings, ad messaging, landing pages, and conversion measurement. The initial campaign scope depends on the services and parts of ${market} your business can actually serve.`
     }[serviceKey];
     data.hero = localFocus.hero;
     data.lead = localFocus.lead;
     data.introTitle = localFocus.introTitle;
-    data.intro = localFocus.intro;
+    data.intro = `${localFocus.intro}${area.serviceNotes?.[serviceKey] ? ` ${area.serviceNotes[serviceKey]}` : ""}`;
     data.showcaseTitle = localFocus.showcaseTitle;
     data.showcaseText = localFocus.showcaseText;
-    data.alt = `${base.service} planning for a business serving ${market}`;
+    data.alt = `${service} planning for a business serving ${market}`;
+    if (serviceKey === "google-ads") {
+      data.cards = [["Review search intent", "Separate high-fit service searches from broad terms and check where ads should appear."], ["Set campaign boundaries", "Align location options, budget, schedule, and campaign structure with your operating area."], ["Connect ads to useful pages", "Match ad messaging to clear services, proof, and a practical call or form action."], ["Measure and improve", "Use search terms, conversions, and lead feedback to refine the campaign without promising a fixed result."]];
+      data.offerings = [["Account and conversion review", "Assess existing campaigns, measurement, and the quality of available lead signals."], ["Google Search campaign plan", "Organize service themes, location settings, budget guardrails, and ad messaging."], ["Landing-page alignment", "Connect each ad group to a page that answers the search and makes the next step clear."], ["Ongoing optimization", "Review queries, spend, ad relevance, and qualified inquiries against agreed priorities."]];
+      data.tags = ["Google Search", "Location settings", "Landing pages", "Conversion review"];
+    }
     data.faq = [
       [localizedFaqQuestion, localizedFaqAnswer],
       [`Do you work with businesses in ${market}?`, `Yes. VNW Media can work with businesses serving ${market}. The project is planned collaboratively, and location coverage is confirmed against the business's actual operations and goals.`],
@@ -272,7 +354,8 @@
       SEO: ["Research", "Technical", "Content", "Measurement"],
       "Web Design": ["Structure", "Design", "Content", "Launch"],
       "Google PPC": ["Targeting", "Campaign", "Landing page", "Tracking"],
-      PPC: ["Targeting", "Campaign", "Landing page", "Tracking"]
+      PPC: ["Targeting", "Campaign", "Landing page", "Tracking"],
+      "Google Ads": ["Intent", "Campaign", "Landing page", "Measurement"]
     }[data.service] || ["Structure", "Design", "Content", "Launch"];
     const id = `blueprint-${data.region}-${data.service.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
     const labels = stages.map((stage, index) => `<text class="location-blueprint-callout-label" x="${index % 2 === 0 ? 9 : 580}" y="${index < 2 ? 101 : 366}">0${index + 1} · ${escapeHtml(stage.toUpperCase())}</text>`).join("");
@@ -328,7 +411,7 @@
         description: "Search intent, local targeting, ad messaging, and lead tracking connect through a relevant landing page to a qualified inquiry and ongoing optimization."
       }
     };
-    const plan = plans[data.service] || (data.service === "PPC" ? plans["Google PPC"] : plans["Digital Marketing"]);
+    const plan = plans[data.service] || (["PPC", "Google Ads"].includes(data.service) ? plans["Google PPC"] : plans["Digital Marketing"]);
     const id = `junction-${data.region}-${data.service.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
     const sourceMarkup = plan.sources.map((source, index) => {
       const y = 83 + index * 66;
@@ -408,6 +491,8 @@
         return isAreaPage
           ? [[`How much does PPC management cost in ${market}?`, `Management scope depends on the number of campaigns and service areas, account condition, landing pages, conversion tracking, and the level of ongoing optimization needed. We can start with a focused campaign and aim for an affordable management scope after reviewing your goals and existing account. Ad spend is separate from management.`]]
           : [[`How much does Google Ads management cost in ${market}?`, `Google Ads management and the advertising budget are separate decisions. We explain the work involved in setup, search-term review, location targeting, ad testing, tracking, and reporting, then recommend a scope that fits your goals. Your ad budget depends on the market and competition; we do not publish a universal fee or promise a fixed cost per lead.`]];
+      case "Google Ads":
+        return [[`How much does Google Ads management cost in ${market}?`, `Management scope depends on account condition, service themes, campaign structure, location targeting, landing pages, conversion tracking, and ongoing review. Ad spend is separate. We can recommend an affordable first phase after reviewing your goals and explain the work before launch.`]];
       case "Digital Marketing":
         return [[`Can digital marketing start with an affordable scope in ${market}?`, `Yes. We can begin with one priority—such as improving a key website page, local search information, or a focused campaign—rather than launching every channel at once. We review your goals, existing assets, and available budget, then explain a practical first phase and what could follow.`]];
       default:
@@ -433,12 +518,12 @@
     const stateCards = states.map(([slug, facts]) => {
       const childLinks = Object.entries(pages).filter(([, page]) => page.region === slug).map(([pageSlug, page]) => `<a class="location-service-link" aria-label="${escapeHtml(`${page.service} in ${facts.state}`)}" href="${asset(`locations/${slug}/${pageSlug}/`)}">${escapeHtml(page.service)}<span aria-hidden="true">↗</span></a>`).join("");
       const areaServiceGroups = Object.values(locationAreas).filter(area => area.region === slug).map(area => {
-        const links = areaServiceLinks.map(([key, label]) => {
-          const title = key === "ppc" ? `PPC / Google Ads in ${area.name}` : `${label} in ${area.name}`;
+        const links = servicesForArea(area).map(([key, label]) => {
+          const title = `${label} in ${area.name}`;
           const href = asset(`locations/${slug}/${area.slug}/${key}-${area.slug}/`);
           return `<a class="location-service-link" aria-label="${escapeHtml(title)}" href="${href}">${escapeHtml(label)}<span aria-hidden="true">↗</span></a>`;
         }).join("");
-        return `<section class="location-area-page-group" aria-labelledby="${slug}-${area.slug}-heading"><h4 id="${slug}-${area.slug}-heading">${escapeHtml(area.name)}</h4><div class="location-service-grid">${links}</div></section>`;
+        return `<section class="location-area-page-group" aria-labelledby="${slug}-${area.slug}-heading"><h4 id="${slug}-${area.slug}-heading"><a href="${asset(`locations/${slug}/${area.slug}/`)}">${escapeHtml(area.displayName || area.name)}</a>${area.county ? ` <small>· ${escapeHtml(area.county)}</small>` : ""}</h4><div class="location-service-grid">${links}</div></section>`;
       }).join("");
       const stateCode = slug === "new-jersey" ? "NJ" : "NY";
       const imageName = slug === "new-jersey" ? "nj-digital-marketing.jpg" : "ny-digital-marketing.jpg";
@@ -447,7 +532,7 @@
     }).join("");
     const faqs = [
       ["Which locations are covered by these pages?", "This directory includes service pages for New Jersey and New York. We confirm the relevant communities and coverage against where your business actually operates."],
-      ["What services can I explore for each location?", "Explore statewide service pages or go directly to digital marketing, SEO, web design, and PPC / Google Ads pages grouped by selected New Jersey and New York communities."],
+      ["What services can I explore for each location?", "Explore statewide service pages or go directly to digital marketing, SEO, web design, and PPC pages grouped by selected New Jersey and New York communities. Dedicated Google Ads pages are also available for all five New York City boroughs."],
       ["Do I need to be based in New Jersey or New York to work with VNW Media?", "These pages focus on those two markets. If your business operates elsewhere, tell us where you work and what you need; we can discuss whether the project is a fit."],
       ["How do I choose between digital marketing, SEO, web design, and Google Ads?", "Start with the business goal and the point where customers are getting stuck. You can begin with one priority; a broader mix only makes sense when the pieces support that goal."],
       ["Can I start with an affordable project instead of every service?", "Yes. We can review your website and goals, identify the highest-priority opportunity, and propose a focused first phase. The scope and investment are explained before work begins; there is no need to commit to every channel at once."],
@@ -455,7 +540,7 @@
     ];
     const faqMarkup = faqs.map(([question, answer], i) => `<details${i === 0 ? " open" : ""}><summary>${escapeHtml(question)}<span aria-hidden="true">+</span></summary><p>${escapeHtml(answer)}</p></details>`).join("");
     return `<main id="top" class="location-directory">
-      <section class="inner-hero location-directory-hero" data-nav-theme="dark"><div class="inner-hero-bg" style="background-image:linear-gradient(90deg,rgba(8,8,8,.94),rgba(8,8,8,.68),rgba(8,8,8,.36)),url('${asset("assets/location-heroes/nj-digital-marketing.jpg")}')"></div><div class="shell inner-hero-copy reveal"><p class="eyebrow">Service areas · New Jersey &amp; New York</p><h1>Digital growth, grounded in the places you serve.</h1><p class="hero-lede">Explore focused digital marketing, SEO, web design, and Google Ads pages for businesses in New Jersey and New York—built around real markets, not one-size-fits-all location templates.</p><div class="hero-actions"><a class="pill pill-blue pill-large" href="#locations">Explore locations <span>↗</span></a><a class="pill pill-outline pill-large" href="${contact}">Talk with our team</a></div></div></section>
+      <section class="inner-hero location-directory-hero" data-nav-theme="dark"><div class="inner-hero-bg" style="background-image:linear-gradient(90deg,rgba(8,8,8,.94),rgba(8,8,8,.68),rgba(8,8,8,.36)),url('${asset("assets/location-heroes/nj-digital-marketing.jpg")}')"></div><div class="shell inner-hero-copy reveal"><p class="eyebrow">Service areas · New Jersey &amp; New York</p><h1>Digital growth, grounded in the places you serve.</h1><p class="hero-lede">Explore focused digital marketing, web design, SEO, PPC, and Google Ads pages for New York City's five boroughs, alongside the New Jersey and New York service areas already here.</p><div class="hero-actions"><a class="pill pill-blue pill-large" href="#locations">Explore locations <span>↗</span></a><a class="pill pill-outline pill-large" href="${contact}">Talk with our team</a></div></div></section>
       <section class="trust-strip location-directory-ticker" data-nav-theme="dark" aria-label="VNW Media capabilities"><div class="trust-track"><small>Built to move businesses forward</small><i aria-hidden="true"></i><span>Web Design</span><span>SEO</span><span>Google Ads</span><span>Social Media</span><span>Brand Strategy</span><span>Content</span></div></section>
       <section class="location-directory-markets" id="locations"><div class="shell"><header class="location-directory-heading"><p class="section-tag">Choose your market</p><h2>Start with the area your business serves.</h2><p>Explore statewide services or go directly to the service page for a selected community. Local pages are grouped by area so you can find the right starting point without an extra step.</p></header><div class="location-state-grid">${stateCards}</div></div></section>
       ${reviewMarkup()}
@@ -464,10 +549,10 @@
   }
 
   function areaDirectoryMarkup(area) {
-    const services = areaServiceLinks.map(([key, label, description], index) => {
+    const services = servicesForArea(area).map(([key, label, description], index) => {
       const href = asset(`locations/${area.region}/${area.slug}/${key}-${area.slug}/`);
-      const title = key === "ppc" ? `PPC / Google Ads in ${area.name}` : `${label} in ${area.name}`;
-      const sourceKey = key === "ppc" ? "ppc" : key;
+      const title = `${label} in ${area.name}`;
+      const sourceKey = key === "google-ads" ? "ppc" : key;
       const source = pages[`${sourceKey}-${area.region}`];
       const image = source?.showcaseImage || `assets/location-heroes/${source?.image || area.image}`;
       const imageAlt = source?.showcaseAlt || source?.alt || `${label} planning for ${area.name} businesses`;
@@ -485,8 +570,8 @@
     const stateName = area.stateName;
     const imageUrl = asset(`assets/location-heroes/${area.image}`);
     return `<main id="top" class="location-directory location-area-directory">
-      <section class="inner-hero location-directory-hero" data-nav-theme="dark"><div class="inner-hero-bg" style="background-image:linear-gradient(90deg,rgba(8,8,8,.94),rgba(8,8,8,.68),rgba(8,8,8,.36)),url('${imageUrl}')"></div><div class="shell inner-hero-copy reveal"><p class="eyebrow">${escapeHtml(stateName)} · ${escapeHtml(area.name)} service area</p><h1>Digital growth shaped around ${escapeHtml(area.name)}.</h1><p class="hero-lede">${escapeHtml(area.summary)}</p><div class="hero-actions"><a class="pill pill-blue pill-large" href="#area-services">Explore services <span>↗</span></a><a class="pill pill-outline pill-large" href="${contact}">Talk with our team</a></div></div></section>
-      <section class="trust-strip location-directory-ticker" data-nav-theme="dark" aria-label="VNW Media capabilities"><div class="trust-track"><small>Built around your market</small><i aria-hidden="true"></i><span>Digital Marketing</span><span>SEO</span><span>Web Design</span><span>PPC / Google Ads</span><span>Local relevance</span><span>Clear measurement</span></div></section>
+      <section class="inner-hero location-directory-hero" data-nav-theme="dark"><div class="inner-hero-bg" style="background-image:linear-gradient(90deg,rgba(8,8,8,.94),rgba(8,8,8,.68),rgba(8,8,8,.36)),url('${imageUrl}')"></div><div class="shell inner-hero-copy reveal"><p class="eyebrow">${escapeHtml(stateName)} · ${escapeHtml(area.displayName || area.name)}${area.county ? ` · ${escapeHtml(area.county)}` : ""} service area</p><h1>Digital growth shaped around ${escapeHtml(area.name)}.</h1><p class="hero-lede">${escapeHtml(area.summary)}</p><div class="hero-actions"><a class="pill pill-blue pill-large" href="#area-services">Explore services <span>↗</span></a><a class="pill pill-outline pill-large" href="${contact}">Talk with our team</a></div></div></section>
+      <section class="trust-strip location-directory-ticker" data-nav-theme="dark" aria-label="VNW Media capabilities"><div class="trust-track"><small>Built around your market</small><i aria-hidden="true"></i><span>Digital Marketing</span><span>SEO</span><span>Web Design</span><span>PPC</span>${area.separateGoogleAds ? "<span>Google Ads</span>" : ""}<span>Local relevance</span><span>Clear measurement</span></div></section>
       <section class="location-directory-markets location-area-services" id="area-services"><div class="shell"><header class="location-directory-heading"><p class="section-tag">Services for ${escapeHtml(area.name)}</p><h2>Choose the right starting point.</h2><p>Each service has its own page, information, and questions. Recommendations are grounded in your offer and actual coverage across ${escapeHtml(area.name)}.</p></header><div class="location-state-grid location-area-service-grid">${services}</div><div class="location-area-context"><p class="section-tag">Local market context</p><p>${escapeHtml(area.context)}</p><p><strong>Markets we can discuss</strong><br>${escapeHtml(area.places)}. Coverage is confirmed against your actual service area.</p></div></div></section>
       ${reviewMarkup()}
       <section class="faq section location-directory-faq" id="faq" data-nav-theme="light"><div class="shell faq-grid"><div class="faq-intro reveal"><p class="section-tag">${escapeHtml(area.name)} · FAQs</p><h2>Useful answers about local coverage.</h2><p>Understand how area pages fit into a service plan before deciding where to begin.</p><a class="pill pill-blue" href="${contact}">Ask about your market <span>↗</span></a></div><div class="faq-list reveal">${faqMarkup}</div></div></section>
