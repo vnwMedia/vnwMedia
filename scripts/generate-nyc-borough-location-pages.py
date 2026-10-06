@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "locations" / "new-york"
-VERSION = "20261006-nyc-boroughs-v1"
+VERSION = "20261006-unique-location-copy-v1"
 BOROUGHS = {
     "manhattan": ("Manhattan, NY", "New York County"),
     "brooklyn": ("Brooklyn, NY", "Kings County"),
