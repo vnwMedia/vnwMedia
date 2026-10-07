@@ -32,7 +32,7 @@ def shell(slug, market, county, service_key=None):
     depth = 4 if is_service else 3
     rel = "../" * depth
     subpath = f"{slug}/{service_key}-{slug}/" if is_service else f"{slug}/"
-    canonical = f"https://www.vnwmedia.com/locations/new-york/{subpath}"
+    canonical = f"https://vnwmedia.github.io/vnwMedia/locations/new-york/{subpath}"
     if is_service:
         service, image, description = SERVICES[service_key]
         title = f"{service} in {market} | VNW Media"

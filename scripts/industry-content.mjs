@@ -50,7 +50,7 @@ export const industries = [
     reputationFocus: 'Make it easy for customers to understand service quality and communication through genuine reviews and thoughtful, non-defensive responses.',
     designFocus: 'Show repair categories, shop proof, hours, location, and estimate or booking actions before a driver has to hunt for them.',
     process: [['Identify the repair', 'Separate maintenance, collision, and specialty searches so each page answers the right need.'], ['Establish confidence', 'Show capabilities, real shop work, customer feedback, and clear service expectations.'], ['Create a next step', 'Connect calls, booking, and estimate requests to the team’s actual workflow.']],
-    cases: [['Brooklyn Motors', 'brooklyn-motors.html'], ['Rice’s Collision', 'rices-collision.html'], ['South Carolina Motors', 'south-carolina-motors.html']]
+    cases: [['Brooklyn Motors', 'brooklyn-motors.html']]
   },
   {
     slug: 'restaurants-hospitality', name: 'Restaurants & Hospitality', label: 'Restaurants & Hospitality', image: 'restaurants-hospitality.png',

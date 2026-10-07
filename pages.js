@@ -1189,12 +1189,12 @@ function storyPage(){
   ];
   const proof=["Website design and redesign","SEO and local search visibility","Google Ads and paid search","GEO and AI search readiness","Review and reputation systems","Social media and content","eCommerce and landing pages","Analytics, tracking, and reporting"];
   const faqs=[
-    ["Is this page replacing the old About page?","Yes. This direction combines About, Team, Process, Why VNW Media, and Our Approach into one stronger Our Story page."],
-    ["Why keep Our Story as one page?","Company information is easier to digest when it reads like one clear narrative instead of forcing visitors through several small pages."],
-    ["What should visitors understand after reading it?","They should know what VNW Media does, how the team thinks, why the process is structured, who the agency helps, and how to take the next step."],
-    ["Does this help SEO and AI visibility?","Yes. A complete Our Story page can naturally include brand/entity context, services, industries, process language, trust signals, FAQs, and internal links."],
-    ["What CTA should this page push?","The strongest CTA is a free audit or strategy request because the page is aimed at visitors deciding whether VNW is the right partner."],
-    ["Can this design become the final Our Story page?","Yes. This version is now the direct Our Story destination in the main navigation."]
+    ["What does VNW Media help businesses with?","We plan and build websites, SEO and local search, paid advertising, social media, content, reputation, and lead paths. The mix depends on the business goals and its current setup."],
+    ["Where is VNW Media based?","We are based in Morganville, New Jersey. We work with businesses across New Jersey, New York, and other markets through direct communication and a remote-first process."],
+    ["How does a project begin?","We discuss your goals, current website, audience, service areas, and constraints. Then we recommend a focused scope and explain the deliverables before work begins."],
+    ["Who will I work with?","The team brings together strategy, design, development, search, and campaigns. We identify the people and responsibilities for each engagement in the proposal."],
+    ["Can we start with one service?","Yes. A project can begin with a website, SEO, Google Ads, or another priority and expand only when useful. We scope each service to the problem it is meant to solve."],
+    ["What happens after launch?","Depending on the engagement, ongoing support can include website maintenance, content, SEO, ads, measurement, and improvements. The exact support and timing are agreed in the scope."]
   ];
   return `
     <section class="trust-strip" data-nav-theme="dark" aria-label="VNW Media capabilities"><div class="trust-track"><small>Built to move businesses forward</small><i></i>${["Web Design","SEO","Google Ads","Social Media","Brand Strategy","Content","Web Design","SEO","Google Ads","Social Media"].map(x=>`<span>${x}</span>`).join("")}</div></section>
@@ -1461,7 +1461,7 @@ function createServiceDetail(service,data){
   schema.textContent=JSON.stringify({
     '@context':'https://schema.org',
     '@graph':[
-      {'@type':'Service','name':service.name,'description':service.description,'provider':{'@type':'ProfessionalService','name':'VNW Media LLC','url':'https://www.vnwmedia.com/','telephone':'+1-732-820-0609'},'areaServed':{'@type':'State','name':'New Jersey'},'url':`https://www.vnwmedia.com/services/${service.slug}.html`},
+      {'@type':'Service','name':service.name,'description':service.description,'provider':{'@type':'ProfessionalService','name':'VNW Media LLC','url':'https://vnwmedia.github.io/vnwMedia/','telephone':'+1-732-820-0609'},'areaServed':{'@type':'State','name':'New Jersey'},'url':`https://vnwmedia.github.io/vnwMedia/services/${service.slug}.html`},
       {'@type':'FAQPage','mainEntity':data.faqs.map(item=>({'@type':'Question','name':item[0],'acceptedAnswer':{'@type':'Answer','text':item[1]}}))}
     ]
   });
@@ -1480,11 +1480,47 @@ function createServiceDetail(service,data){
   </div>`;
 }
 
+const resourceGuides = {
+  "website-redesign-checklist": {
+    heading: "Decide what to keep, improve, and rebuild.",
+    intro: "A redesign should solve a customer or business problem, not simply replace a visual style. Use this checklist to separate focused improvements from changes that need a larger plan.",
+    sections: [
+      ["Start with evidence", "List the pages that attract qualified visitors, the actions people take, and the questions your team answers repeatedly. Review mobile usability, page speed, form completion, and any search queries that already bring the right audience. Keep effective content and URLs in the plan instead of discarding them because they look old."],
+      ["Map the new experience", "Identify who each priority page serves, what it needs to explain, and the next step a visitor should take. Confirm which services, locations, proof points, and contact routes are current. A clear information architecture matters as much as the visual design."],
+      ["Protect search equity at launch", "Inventory existing URLs and decide which will remain, change, or disappear. Where a URL changes, plan a relevant redirect. Check titles, descriptions, headings, image alternatives, canonical URLs, internal links, and the sitemap on the new site before publishing."],
+      ["Test the work after launch", "Check forms, phone links, navigation, accessibility, mobile layouts, analytics, and important search pages in the live environment. Compare useful inquiries and engagement against a prelaunch baseline, then prioritize fixes based on actual visitor behavior."]
+    ]
+  },
+  "local-seo-growth-guide": {
+    heading: "Make local information accurate and useful.",
+    intro: "Local SEO begins with the real business: where it operates, what it offers, and how a nearby customer can contact it. This guide helps you set priorities without creating pages for places you do not genuinely serve.",
+    sections: [
+      ["Confirm your real coverage", "Record each staffed location, service area, core service, and contact route. A storefront, office, and service-area business have different customer needs and may have different Google Business Profile eligibility. Do not publish a location page that implies a physical office where none exists."],
+      ["Align the website and business profile", "Keep your business name, hours, phone number, services, appointment links, and location details consistent. Give major services useful pages that explain the work, who it fits, and what happens next. Add local context only when it helps a customer make a decision."],
+      ["Use genuine proof", "Show real project examples, provider details, photos, and customer feedback where appropriate. Invite reviews without filtering for positive responses, and respond without sharing private customer information. Accurate proof gives both people and search systems more context about the business."],
+      ["Measure customer actions", "Track relevant calls, forms, bookings, and direction requests alongside search visibility. Review which pages and queries bring the right inquiries, then improve unclear content or weak contact paths. Local rankings and AI-generated answers can change, so no placement should be promised."]
+    ]
+  },
+  "landing-page-blueprint": {
+    heading: "Give each campaign a focused destination.",
+    intro: "A landing page works best when its promise matches the ad, email, or search result that brought someone there. The page should answer the visitor's main question and make the next action easy.",
+    sections: [
+      ["Lead with the offer", "Name the service or outcome in plain language and say who it is for. The headline should confirm that the visitor reached the right place. Avoid making claims the business cannot support or hiding important limitations in small print."],
+      ["Answer the decision questions", "Explain the relevant service, service area, process, and what happens after an inquiry. Put the most useful proof near the point of decision: real work, appropriate credentials, reviews, or a concise example. Match the amount of detail to the complexity of the purchase."],
+      ["Make contact low-friction", "Use one primary action, such as a call, booking, or short form. Ask only for information needed to respond, label fields clearly, and provide a useful confirmation. Test the page on a phone as well as a desktop."],
+      ["Connect measurement to quality", "Check that conversion tracking records the intended action, then review whether inquiries fit the service. Search terms, ad wording, page content, and follow-up should be refined together. More clicks alone do not prove the page is working."]
+    ]
+  }
+};
+
 function detail(kind,item){
   const isCase=kind==="case", isResource=kind==="resource";
   const name=item[0], description=isCase?item[3]:item[2], image=isCase?item[4]:item[3];
   if(isCase) return hero(`${item[2]} Case Study`,name,description,image)+`<section class="detail section" id="page-content"><div class="shell detail-grid"><div class="reveal"><p class="section-tag">Project Story</p><h2>Designed around confidence, clarity, and faster next steps.</h2><p>${description}</p><a class="text-arrow" href="${item[5]}" target="_blank" rel="noreferrer">Visit live website <span>↗</span></a></div><img class="detail-image reveal" src="${img(image)}" alt="${name} website"></div></section>${caseOptionFAQ()}`;
-  if(isResource) return hero("Resource",name,description,image)+`<section class="article section" id="page-content"><div class="shell article-grid"><aside class="reveal"><p class="section-tag">Practical Guide</p><h2>Use this before your next marketing investment.</h2><a class="text-arrow" href="${path("contact.html")}">Get help applying it <span>↗</span></a></aside><article class="reveal"><h2>Start with the customer’s decision.</h2><p>Can a first-time visitor understand what you do, who it is for, and why your business is credible within a few seconds? If not, more traffic alone will not solve the problem.</p><h3>Check these five areas</h3><ol><li>Headline clarity and offer positioning.</li><li>Service pages that match real search intent.</li><li>Trust signals, reviews, projects, and credentials.</li><li>Mobile calls-to-action and short forms.</li><li>Tracking, follow-up, and campaign alignment.</li></ol><p>Fix the largest source of friction first, measure the response, and improve from there.</p></article></div></section>`;
+  if(isResource) {
+    const guide = resourceGuides[item[1]];
+    return hero("Resource",name,description,image)+`<section class="article section" id="page-content"><div class="shell article-grid"><aside class="reveal"><p class="section-tag">Practical Guide</p><h2>Put the advice to work.</h2><a class="text-arrow" href="${path("contact.html")}">Discuss your project <span>↗</span></a></aside><article class="reveal"><h2>${esc(guide.heading)}</h2><p>${esc(guide.intro)}</p>${guide.sections.map(([heading,text])=>`<h3>${esc(heading)}</h3><p>${esc(text)}</p>`).join("")}</article></div></section>`;
+  }
   if(kind==="service") {
     const service=SERVICE_CATALOG.find(entry=>entry.slug===item[1]);
     const servicePageData=typeof CREATE_SERVICE_PAGES!=="undefined" ? (service.slug==="seo"?CREATE_SERVICE_PAGES.searchOptimization:CREATE_SERVICE_PAGES[service.slug]) : null;
@@ -1520,7 +1556,7 @@ function bootPages(){
   const preserveAuthoredTitle=typeof CREATE_SERVICE_PAGES!=="undefined" && !!(customServiceSlug==="seo"?CREATE_SERVICE_PAGES.searchOptimization:CREATE_SERVICE_PAGES[customServiceSlug]);
   const logoTitle=pageTitle.match(/<img[^>]+alt="([^"]+)"/);
   if(logoTitle) titleDecoder.innerHTML=logoTitle[1];
-  if(!preserveAuthoredTitle) document.title=`${titleDecoder.value} | VNW Media`;
+  if(!document.title.trim() && !preserveAuthoredTitle) document.title=`${titleDecoder.value} | VNW Media`;
   if(id?.startsWith("case-")) content+=googleTestimonials("case-reviews").replace('data-nav-theme="dark"','data-nav-theme="light"');
   app.innerHTML=header()+`<main>${content}</main>`+footer();
 }

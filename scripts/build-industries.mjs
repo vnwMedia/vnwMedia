@@ -4,7 +4,7 @@ import path from 'node:path';
 import {industries} from './industry-content.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const base = 'https://www.vnwmedia.com/industries/';
+const base = 'https://vnwmedia.github.io/vnwMedia/industries/';
 const e = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const link = (industry, service) => `/industries/${industry.slug}/${service ? `${service.slug}/` : ''}`;
 const image = industry => `/assets/industry-heroes/${industry.image}`;
