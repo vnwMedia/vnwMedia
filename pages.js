@@ -1181,6 +1181,15 @@ function storyPage(){
     ["03","Marketing after launch","A website is the foundation. Search, content, ads, reputation, and reporting turn that foundation into a working growth system."],
     ["04","Human support matters","Businesses need a partner who explains choices clearly, responds quickly, and keeps the work moving without making everything feel complicated."]
   ];
+  const approachIcon=(content)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${content}</svg>`;
+  const approachCheck=approachIcon('<path d="m5 12 4 4L19 6"/>');
+  const approachArt=[
+    `<div class="story-approach-art story-approach-grid-paper" aria-hidden="true"><div class="story-approach-paper story-approach-brief"><div class="story-approach-brief-heading"><span>The business brief</span>${approachIcon('<circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5Z"/>')}</div>${["Who we serve","What they need","The next step"].map(label=>`<div class="story-approach-brief-row"><span>${label}</span>${approachCheck}</div>`).join("")}</div></div>`,
+    `<div class="story-approach-art" aria-hidden="true"><div class="story-approach-paper story-approach-mini-browser"><div class="story-approach-window-bar"><i></i><i></i><i></i></div><div class="story-approach-window-main"><div><p class="story-approach-mini-heading">A clear<br>next step.</p><div class="story-approach-line"></div><div class="story-approach-line story-approach-line-short"></div><span class="story-approach-mini-action"></span></div><div class="story-approach-mini-visual">${approachIcon('<path d="m4 3 7.07 17.77a.5.5 0 0 0 .93 0l2.48-6.29 6.29-2.48a.5.5 0 0 0 0-.93L3 4a.77.77 0 0 0 1-1Z"/>')}</div></div></div></div>`,
+    `<div class="story-approach-art" aria-hidden="true"><div class="story-approach-channels"><span>Search</span><span>Content</span><span class="story-approach-channel-site">${approachIcon('<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/>')}Your website</span><span>Campaigns</span><span>Reputation</span></div></div>`,
+    `<div class="story-approach-art story-approach-grid-paper" aria-hidden="true"><div class="story-approach-chat"><p>Can we talk through<br>the next step?</p><p>Absolutely. Let’s make<br>the plan clear.</p></div></div>`
+  ];
+  const approachThemes=["Clarity","Purpose","Momentum","Partnership"];
   const chapters=[
     ["Discover","Find the opportunity","Review your audience, website, search demand, and the friction holding growth back."],
     ["Shape","Create the plan","Define the page structure, messaging, design direction, SEO priorities, and lead paths."],
@@ -1200,7 +1209,17 @@ function storyPage(){
   return `
     <section class="trust-strip" data-nav-theme="dark" aria-label="VNW Media capabilities"><div class="trust-track"><small>Built to move businesses forward</small><i></i>${["Web Design","SEO","Google Ads","Social Media","Brand Strategy","Content","Web Design","SEO","Google Ads","Social Media"].map(x=>`<span>${x}</span>`).join("")}</div></section>
     <section class="story2-team story2-team-live-option4 section" data-nav-theme="dark" id="team"><div class="shell"><div class="story2-live-cinema reveal"><div class="team-cinema"><div><p class="team-cinema-eyebrow">Our Team</p><h2><span>People behind the</span><span>strategy, screen, search</span><span>and support.</span></h2><p>Meet the people who bring your brand, website, and marketing together—from the first conversation to launch and ongoing support.</p><a class="pill pill-blue" href="${path("contact.html")}">Talk through the project <span>↗</span></a></div><div class="team-cinema-strip" aria-label="VNW Media team">${teamMembers.map(x=>`<figure><img src="${img(x[1])}" alt="${x[0]} VNW Media team headshot"><figcaption>${x[0]}</figcaption></figure>`).join("")}</div></div></div></div></section>
-    <section class="story2-approach-light section" data-nav-theme="light"><div class="shell story2-approach-light-grid"><aside class="story2-approach-intro reveal"><p class="section-tag">Our Approach</p><h2>The way we think shapes the way the website performs.</h2><p>One connected philosophy, from the first strategic question through long-term support.</p><a class="pill pill-blue story2-approach-cta" href="${path("contact.html")}">Talk through the project <span>↗</span></a></aside><div class="story2-approach-list">${beliefs.map(x=>`<article class="story2-approach-card reveal"><span>${x[0]}</span><div><h3>${x[1]}</h3><p>${x[2]}</p></div></article>`).join("")}</div></div></section>
+    <section class="story-approach-workbench section" data-nav-theme="light" id="approach" aria-labelledby="story-approach-title">
+      <div class="shell">
+        <div class="story-approach-heading">
+          <p class="section-tag">Our Approach</p>
+          <h2 id="story-approach-title">The way we think shapes the way the website performs.</h2>
+          <p class="story-approach-intro">One connected philosophy, from the first strategic question through long-term support.</p>
+        </div>
+        <div class="story-approach-grid">${beliefs.map((belief,index)=>`<article class="story-approach-card">${approachArt[index]}<p class="story-approach-number">${belief[0]} / ${approachThemes[index]}</p><h3>${belief[1]}</h3><p class="story-approach-copy">${belief[2]}</p></article>`).join("")}</div>
+        <div class="story-approach-actions"><a class="pill pill-blue" href="${path("contact.html")}">Talk through the project <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
     <section class="story2-cta-split" id="why-vnw-media" data-nav-theme="dark"><div class="shell story2-cta-grid reveal"><div><p class="section-tag">Why VNW Media</p><h2>We connect the creative work to the customer journey.</h2></div><p>A beautiful website matters. But it matters more when the structure supports SEO, the copy answers real buying questions, the calls to action are clear, and the brand feels trustworthy at every step.</p><div class="story2-cta-actions"><a class="pill pill-blue pill-large" href="${path("contact.html#audit")}">Request a free audit <span>↗</span></a><a class="pill pill-outline pill-large" href="${path("work.html")}">View our work</a></div></div></section>
     <section class="story-process-blueprint section" data-nav-theme="light" id="process" aria-labelledby="story-process-title">
       <div class="shell">
