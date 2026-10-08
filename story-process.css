@@ -4,8 +4,6 @@
   --process-muted: #637074;
   --process-blue: #00aeef;
   --process-label: #007fa9;
-  --vnw-type-section: clamp(40px, 5.2vw, 72px);
-  --vnw-type-section-mobile: 40px;
   background: #fff;
   color: var(--process-ink);
   scroll-margin-top: 90px;
@@ -14,11 +12,7 @@
 .story-process-heading h2 {
   max-width: 1080px;
   margin: 28px 0 30px;
-  font-family: Georgia, serif;
-  font-size: clamp(40px, 5.2vw, 72px);
-  font-weight: 400;
-  line-height: 1.06 !important;
-  letter-spacing: -.045em !important;
+  /* Inherit the shared section-heading typography from styles.css. */
 }
 .story-process-intro {
   max-width: 970px;
@@ -177,8 +171,7 @@
 .story-process-actions { margin-top: 40px; }
 
 @media (max-width: 800px) {
-  .story-process-blueprint { --vnw-type-section: 48px; padding-block: 75px; }
-  .story-process-heading h2 { font-size: 48px; }
+  .story-process-blueprint { padding-block: 75px; }
   .story-process-phase-pair { gap: 30px; }
   .story-process-phase { padding-left: 20px; }
   .story-process-phase h3 { font-size: 36px; }
@@ -192,7 +185,7 @@
 }
 @media (max-width: 600px) {
   .story-process-blueprint { padding-block: 60px; }
-  .story-process-heading h2 { margin: 22px 0; font-size: 40px; }
+  .story-process-heading h2 { margin: 22px 0; }
   .story-process-intro { font-size: 17px; }
   .story-process-plan { margin-top: 38px; }
   .story-process-phase-pair { grid-template-columns: 1fr; gap: 30px; }

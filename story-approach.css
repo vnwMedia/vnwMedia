@@ -7,8 +7,6 @@
   --approach-line: #d8e4e8;
   --approach-soft: #f5f9fa;
   --approach-wash: #e8f6fb;
-  --vnw-type-section: clamp(40px, 5.2vw, 72px);
-  --vnw-type-section-mobile: 40px;
   background: #fff;
   color: var(--approach-ink);
   scroll-margin-top: 100px;
@@ -17,10 +15,7 @@
 .story-approach-heading h2 {
   max-width: 1100px;
   margin: 28px 0 34px;
-  font-family: Georgia, serif;
-  font-weight: 400;
-  line-height: 1.06 !important;
-  letter-spacing: -.045em !important;
+  /* Inherit the shared section-heading typography from styles.css. */
 }
 .story-approach-intro {
   max-width: 1050px;
@@ -100,7 +95,7 @@
 .story-approach-actions { margin-top: 42px; }
 
 @media (max-width: 800px) {
-  .story-approach-workbench { --vnw-type-section: 48px; padding-block: 75px; }
+  .story-approach-workbench { padding-block: 75px; }
   .story-approach-grid { gap: 38px 24px; margin-top: 42px; }
   .story-approach-art { padding: 24px; margin-bottom: 24px; }
   .story-approach-card h3 { font-size: 34px; }
