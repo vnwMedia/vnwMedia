@@ -1182,11 +1182,12 @@ function storyPage(){
     ["04","Human support matters","Businesses need a partner who explains choices clearly, responds quickly, and keeps the work moving without making everything feel complicated."]
   ];
   const chapters=[
-    ["Discover","We look at the offer, audience, current website, competitors, search demand, reviews, conversion points, and the real friction holding growth back."],
-    ["Shape","We turn that information into a practical plan: page structure, messaging, design direction, SEO priorities, campaign opportunities, and lead paths."],
-    ["Build","Design, copy, development, content, tracking, and launch details come together around one goal: make it easier for the right customer to choose you."],
-    ["Improve","After launch, we keep thinking. Performance data, search behavior, customer questions, and new opportunities guide what should be improved next."]
+    ["Discover","Find the opportunity","Review your audience, website, search demand, and the friction holding growth back."],
+    ["Shape","Create the plan","Define the page structure, messaging, design direction, SEO priorities, and lead paths."],
+    ["Build","Bring it together","Connect design, content, development, and tracking around a clear customer journey."],
+    ["Improve","Learn and refine","Review performance, learn from customer behavior, and refine what comes next."]
   ];
+  const processPhase=(chapter,index)=>`<article class="story-process-phase"><p class="story-process-step">${String(index+1).padStart(2,"0")} / ${chapter[1]}</p><h3>${chapter[0]}</h3><p class="story-process-description">${chapter[2]}</p></article>`;
   const proof=["Website design and redesign","SEO and local search visibility","Google Ads and paid search","GEO and AI search readiness","Review and reputation systems","Social media and content","eCommerce and landing pages","Analytics, tracking, and reporting"];
   const faqs=[
     ["What does VNW Media help businesses with?","We plan and build websites, SEO and local search, paid advertising, social media, content, reputation, and lead paths. The mix depends on the business goals and its current setup."],
@@ -1201,7 +1202,32 @@ function storyPage(){
     <section class="story2-team story2-team-live-option4 section" data-nav-theme="dark" id="team"><div class="shell"><div class="story2-live-cinema reveal"><div class="team-cinema"><div><p class="team-cinema-eyebrow">Our Team</p><h2><span>People behind the</span><span>strategy, screen, search</span><span>and support.</span></h2><p>Meet the people who bring your brand, website, and marketing together—from the first conversation to launch and ongoing support.</p><a class="pill pill-blue" href="${path("contact.html")}">Talk through the project <span>↗</span></a></div><div class="team-cinema-strip" aria-label="VNW Media team">${teamMembers.map(x=>`<figure><img src="${img(x[1])}" alt="${x[0]} VNW Media team headshot"><figcaption>${x[0]}</figcaption></figure>`).join("")}</div></div></div></div></section>
     <section class="story2-approach-light section" data-nav-theme="light"><div class="shell story2-approach-light-grid"><aside class="story2-approach-intro reveal"><p class="section-tag">Our Approach</p><h2>The way we think shapes the way the website performs.</h2><p>One connected philosophy, from the first strategic question through long-term support.</p><a class="pill pill-blue story2-approach-cta" href="${path("contact.html")}">Talk through the project <span>↗</span></a></aside><div class="story2-approach-list">${beliefs.map(x=>`<article class="story2-approach-card reveal"><span>${x[0]}</span><div><h3>${x[1]}</h3><p>${x[2]}</p></div></article>`).join("")}</div></div></section>
     <section class="story2-cta-split" id="why-vnw-media" data-nav-theme="dark"><div class="shell story2-cta-grid reveal"><div><p class="section-tag">Why VNW Media</p><h2>We connect the creative work to the customer journey.</h2></div><p>A beautiful website matters. But it matters more when the structure supports SEO, the copy answers real buying questions, the calls to action are clear, and the brand feels trustworthy at every step.</p><div class="story2-cta-actions"><a class="pill pill-blue pill-large" href="${path("contact.html#audit")}">Request a free audit <span>↗</span></a><a class="pill pill-outline pill-large" href="${path("work.html")}">View our work</a></div></div></section>
-    <section class="story2-chapters section" data-nav-theme="light" id="process"><div class="shell story2-chapter-grid"><aside class="reveal"><p class="section-tag">Our Process</p><h2>A clear path from idea to launch to improvement.</h2><p>Each phase reduces uncertainty and turns scattered goals into a more useful digital presence.</p><div class="hero-actions"><a class="pill pill-blue" href="${path("contact.html")}">Discuss your project <span aria-hidden="true">↗</span></a></div></aside><div>${chapters.map((x,i)=>`<article class="reveal"><span>${String(i+1).padStart(2,"0")}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join("")}</div></div></section>
+    <section class="story-process-blueprint section" data-nav-theme="light" id="process" aria-labelledby="story-process-title">
+      <div class="shell">
+        <header class="story-process-heading">
+          <p class="section-tag">Our Process</p>
+          <h2 id="story-process-title">A clear path from idea to launch to improvement.</h2>
+          <p class="story-process-intro">Each phase reduces uncertainty and turns scattered goals into a more useful digital presence.</p>
+        </header>
+        <div class="story-process-plan">
+          <div class="story-process-phase-pair">${chapters.slice(0,2).map(processPhase).join("")}</div>
+          <div class="story-process-browser-stage" role="img" aria-label="Website blueprint connecting the four phases: a clear offer, useful content, relevant proof, and an easy next step.">
+            <div class="story-process-window" aria-hidden="true">
+              <div class="story-process-window-bar"><i></i><i></i><i></i><span>Your digital experience</span></div>
+              <div class="story-process-site-nav"><strong>Your business</strong><span><i></i><i></i><i></i></span></div>
+              <div class="story-process-site-main">
+                <div class="story-process-site-copy"><p class="story-process-site-title">A clear offer.<br>A useful next step.</p><div class="story-process-line"></div><div class="story-process-line story-process-line-short"></div><span class="story-process-site-action">Start a conversation <span>↗</span></span></div>
+                <div class="story-process-site-art"><div class="story-process-cursor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m4 3 7.07 17.77a.5.5 0 0 0 .93 0l2.48-6.29 6.29-2.48a.5.5 0 0 0 0-.93L3 4a.77.77 0 0 0 1-1Z"/></svg></div></div>
+              </div>
+              <div class="story-process-site-bottom"><span>Useful content</span><span>Relevant proof</span><span>Easy contact</span></div>
+            </div>
+            <i class="story-process-bottom-connector" aria-hidden="true"></i><i class="story-process-bottom-connector" aria-hidden="true"></i>
+          </div>
+          <div class="story-process-phase-pair">${chapters.slice(2).map((chapter,index)=>processPhase(chapter,index+2)).join("")}</div>
+        </div>
+        <div class="story-process-actions"><a class="pill pill-blue" href="${path("contact.html")}">Discuss your project <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
     <section class="story2-proof section" data-nav-theme="dark" id="why-vnw"><div class="shell story2-proof-grid"><div class="story2-proof-copy reveal"><p class="section-tag">What We Bring Together</p><h2>One team thinking across the full digital decision path.</h2><p>That means the story, pages, campaigns, visibility, proof, and follow-up can support each other instead of competing for attention.</p><a class="text-arrow" href="${path("services.html")}">Explore services <span>↗</span></a></div><div class="story2-proof-cloud reveal">${proof.map(x=>`<span>${x}</span>`).join("")}</div></div></section>
     <section class="story2-faq faq section" data-nav-theme="light" id="faq"><div class="shell faq-grid"><div class="faq-intro reveal"><p class="section-tag">Our Story FAQ</p><h2>Helpful answers for buyers comparing digital partners.</h2><p>Choosing a digital partner is an important decision. Get to know our team, how we work, and what you can expect when we work together.</p><a class="pill pill-blue site-button site-button-primary" href="${path("contact.html")}" style="margin-top:24px">Discuss your project <span class="site-button-arrow" aria-hidden="true">↗</span></a></div><div class="faq-list reveal">${faqs.map((x,i)=>`<details ${i===0?"open":""}><summary>${x[0]}<span>+</span></summary><p>${x[1]}</p></details>`).join("")}</div></div></section>
     `;
