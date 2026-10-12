@@ -1462,7 +1462,9 @@ function serviceHero(service, options){
   </section>`;
 }
 
-const SERVICE_PROCESS_LAYOUTS=["blueprint","studio","journey","feed"];
+// Keep the approved service process layouts in rotation. The wireframe-heavy
+// Editorial Journey treatment is intentionally excluded from service pages.
+const SERVICE_PROCESS_LAYOUTS=["blueprint","studio","feed","feed"];
 const LEGACY_SERVICE_PROCESS={
   "content-writing":[
     ["Brief","Set the audience, subject, channel, goals, voice, and source material."],
@@ -1497,8 +1499,6 @@ function serviceProcessSection(service,process){
     </div>`;
   }else if(layout==="studio"){
     arrangement=`<div class="csp-process-studio">${process.map((item,index)=>`<div class="csp-process-studio-card"><div class="csp-process-studio-art csp-process-art-${index%4}" aria-hidden="true"><div class="csp-process-art-sheet"><i></i><i></i><i></i><b></b><span>${String(index+1).padStart(2,"0")}</span></div></div>${stage(item,index)}</div>`).join("")}</div>`;
-  }else if(layout==="journey"){
-    arrangement=`<div class="csp-process-journey">${process.map((item,index)=>`<div class="csp-process-journey-row"><div class="csp-process-journey-art csp-process-art-${index%4}" aria-hidden="true"><div class="csp-process-journey-sheet"><i></i><i></i><i></i><b></b><span>${String(index+1).padStart(2,"0")}</span></div></div>${stage(item,index)}</div>`).join("")}</div>`;
   }else{
     arrangement=`<div class="csp-process-feed"><div class="csp-process-feed-device" aria-hidden="true"><div class="csp-process-feed-camera"></div><div class="csp-process-feed-screen"><div class="csp-process-feed-top"><span class="csp-process-feed-mark"></span><b>Project overview</b><i>•••</i></div><div class="csp-process-feed-hero"><small>One connected plan</small><strong>From first brief<br>to next iteration.</strong><span></span><span></span></div><div class="csp-process-feed-rows"><i></i><i></i><i></i><i></i></div><div class="csp-process-feed-footer"><span></span><span></span><span></span></div></div></div><div class="csp-process-feed-list">${cards}</div></div>`;
   }
