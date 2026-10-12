@@ -12,3 +12,4 @@
 /* Match the dropdown's subgroups as well as its service labels and order. */
 .sd-site :is(#sd-app,.sd-content) .sd-service-group-label{grid-column:1/-1;margin:28px 0 6px;color:var(--sd-blue);font:600 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
 .sd-site :is(#sd-app,.sd-content) .sd-service-group-label:first-child{margin-top:0}
+@media(min-width:1000px){.sd-site #all-services .sd-section-heading h2{max-width:none!important;white-space:nowrap;font-size:clamp(40px,3.7vw,56px)!important}}
