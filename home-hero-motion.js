@@ -7,7 +7,7 @@
   let paused = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fadeDuration = 1.7;
   let elapsed = fadeDuration, previous;
-  function updateButton() { button.textContent = paused ? 'Play motion' : 'Pause motion'; button.setAttribute('aria-pressed', String(paused)); }
+  function updateButton() { if (!button) return; button.textContent = paused ? 'Play motion' : 'Pause motion'; button.setAttribute('aria-pressed', String(paused)); }
   function render(time) {
     if (previous !== undefined && !paused && !document.hidden) elapsed += Math.min((time - previous) / 1000, .1);
     previous = time;
@@ -23,7 +23,7 @@
     if (label) label.textContent = names[Math.floor(clock / 6) % names.length];
     requestAnimationFrame(render);
   }
-  button.addEventListener('click', () => { paused = !paused; if(video) { if(paused) video.pause(); else video.play().catch(() => {paused = true; updateButton();}); } updateButton(); });
+  button?.addEventListener('click', () => { paused = !paused; if(video) { if(paused) video.pause(); else video.play().catch(() => {paused = true; updateButton();}); } updateButton(); });
   if(video && paused) { video.autoplay = false; video.pause(); }
   updateButton();
   // Decode all eight photos before animating so a newly revealed image never flashes blank.

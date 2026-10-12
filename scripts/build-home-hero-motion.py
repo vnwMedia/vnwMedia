@@ -24,7 +24,7 @@ def previews(slideshow_only=False):
     source = re.sub(r'<link rel="stylesheet" href="home-hero-motion\.css[^\"]*">', '', source)
     source = re.sub(r'<script[^>]*src="home-hero-motion\.js[^\"]*"[^>]*></script>', '', source)
     source = source.replace(' data-motion-mode="slideshow"', '')
-    source = re.sub(r'<div class="hero-bg motion-media".*?</div><div class="motion-shade".*?</div><button class="hero-motion-pause".*?</button>', '<div class="hero-bg" aria-hidden="true"></div>', source)
+    source = re.sub(r'<div class="hero-bg motion-media".*?</div><div class="motion-shade".*?</div>(?:<button class="hero-motion-pause".*?</button>)?', '<div class="hero-bg" aria-hidden="true"></div>', source)
     source = re.sub(r'<link rel="stylesheet" href="site-buttons\.css[^\"]*">', '', source)
     source = re.sub(r'<script[^>]*src="site-buttons\.js[^\"]*"[^>]*></script>', '', source)
     asset_directory = ROOT / "assets/home-hero-options/industry-motion"
