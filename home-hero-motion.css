@@ -2,5 +2,5 @@
 .motion-picker~main{overflow-x:clip}
 /* Keep all photo layers below the fixed shade, including while their stacking order changes. */
 .hero .motion-media{z-index:0;isolation:isolate}
-[data-motion-mode="slideshow"] .motion-shade{background:linear-gradient(90deg,rgba(3,12,18,.91) 0%,rgba(3,12,18,.85) 28%,rgba(3,12,18,.66) 52%,rgba(3,12,18,.31) 78%,rgba(3,12,18,.20) 100%)}
-@media(max-width:700px){[data-motion-mode="slideshow"] .motion-shade{background:linear-gradient(90deg,rgba(3,12,18,.85),rgba(3,12,18,.64))}}
+[data-motion-mode="slideshow"] .motion-shade{background:linear-gradient(90deg,rgba(3,12,18,.455) 0%,rgba(3,12,18,.425) 28%,rgba(3,12,18,.33) 52%,rgba(3,12,18,.31) 78%,rgba(3,12,18,.20) 100%)}
+@media(max-width:700px){[data-motion-mode="slideshow"] .motion-shade{background:linear-gradient(90deg,rgba(3,12,18,.425),rgba(3,12,18,.32))}}

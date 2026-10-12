@@ -2,7 +2,7 @@
 
 Two separate homepage previews retain the current homepage composition:
 
-- `home-hero-slideshow-preview.html`: the original eight industry photos, animated in the browser with slow zooms and eased two-second crossfades. Photo layers are isolated below a fixed, darker left-side gradient; all photos decode before motion begins.
+- `home-hero-slideshow-preview.html`: the original eight industry photos, animated in the browser with slow zooms and eased 1.7-second crossfades. Photo layers are isolated below a fixed gradient with the left-side shading reduced by 50%; all photos decode before motion begins.
 - `home-hero-video-preview.html`: a real silent H.264 MP4 with the same eight industries, slow zooms, and transitions.
 
 Each loop lasts 48 seconds, advancing industries every six seconds. The video is 1280×720 at 24 fps and uses fast-start metadata for browser playback. It is a photo montage, not newly generated live-action footage. Both previews have pause controls and honor reduced-motion preferences. These pages are marked noindex; the main homepage is unchanged.

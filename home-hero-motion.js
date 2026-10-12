@@ -5,7 +5,8 @@
   const label = document.getElementById('motionIndustry');
   const names = ['Home Services & Contractors','Medical, Dental & Eye Care','Automotive & Auto Body','Restaurants & Hospitality','Daycare & Education','Legal & Professional Services','Real Estate & Property','Retail & eCommerce'];
   let paused = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let elapsed = 2, previous;
+  const fadeDuration = 1.7;
+  let elapsed = fadeDuration, previous;
   function updateButton() { button.textContent = paused ? 'Play motion' : 'Pause motion'; button.setAttribute('aria-pressed', String(paused)); }
   function render(time) {
     if (previous !== undefined && !paused && !document.hidden) elapsed += Math.min((time - previous) / 1000, .1);
@@ -13,8 +14,8 @@
     const clock = video ? video.currentTime : elapsed;
     images.forEach((image, index) => {
       const phase = ((clock - index * 6) % 48 + 48) % 48;
-      const fade = Math.min(phase / 2, 1);
-      const opacity = phase < 2 ? fade * fade * (3 - 2 * fade) : phase < 8 ? 1 : 0;
+      const fade = Math.min(phase / fadeDuration, 1);
+      const opacity = phase < fadeDuration ? fade * fade * (3 - 2 * fade) : phase < 6 + fadeDuration ? 1 : 0;
       image.style.zIndex = phase < 6 ? '2' : '1';
       image.style.opacity = opacity;
       image.style.transform = `scale(${1 + .085 * Math.min(phase / 8, 1)})`;

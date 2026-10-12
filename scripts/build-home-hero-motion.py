@@ -39,12 +39,12 @@ def previews(slideshow_only=False):
         markup += '</div><div class="motion-shade" aria-hidden="true"></div>'
         page = source.replace('<div class="hero-bg" aria-hidden="true"></div>', markup, 1)
         page = page.replace('<title>VNW Media | Web Design & Digital Marketing in New Jersey</title>', f'<title>{label} · Homepage Preview | VNW Media</title>')
-        page = page.replace('</head>', '<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="home-hero-motion.css?v=20261012-smooth-industry-v2"><link rel="stylesheet" href="site-buttons.css?v=20261004-mobile-email-send-label-v1"></head>')
+        page = page.replace('</head>', '<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="home-hero-motion.css?v=20261012-lighter-fade-v4"><link rel="stylesheet" href="site-buttons.css?v=20261004-mobile-email-send-label-v1"></head>')
         page = page.replace('<body', f'<body data-motion-mode="{mode}"', 1)
         toolbar = f'<aside class="motion-picker" aria-label="Hero design preview"><span>HOMEPAGE HERO · PREVIEW</span><a href="home-hero-slideshow-preview.html" aria-current="{"page" if mode == "slideshow" else "false"}">01 / Slideshow</a><a href="home-hero-video-preview.html" aria-current="{"page" if mode == "video" else "false"}">02 / Video</a><button id="motionPause" type="button" aria-pressed="false">Pause motion</button></aside>'
         page = page.replace('<main id="top">', toolbar + '<main id="top">', 1)
         page = page.replace('<div class="shell hero-grid">', '<div class="motion-caption"><span>' + label + '</span><strong id="motionIndustry">Home Services &amp; Contractors</strong></div><div class="shell hero-grid">', 1)
-        page = page.replace('</body>', '<script src="home-hero-motion.js?v=20261012-faster-zoom-v3"></script><script src="site-buttons.js?v=20261004-mobile-business-field-v1"></script></body>')
+        page = page.replace('</body>', '<script src="home-hero-motion.js?v=20261012-lighter-fade-v4"></script><script src="site-buttons.js?v=20261004-mobile-business-field-v1"></script></body>')
         page = '\n'.join(line.rstrip() for line in page.splitlines()) + '\n'
         (ROOT / f"home-hero-{mode}-preview.html").write_text(page)
 
