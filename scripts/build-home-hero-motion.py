@@ -18,8 +18,18 @@ SCENES = [
     ("Real Estate & Property", "real-estate"),
     ("Retail & eCommerce", "retail-ecommerce"),
 ]
+SLIDESHOW_SOURCES = {
+    "home-services": "contractor-homeowner-v1.jpg",
+    "healthcare": "healthcare-diagonal-v1.jpg",
+    "automotive": "automotive-generic-v1.jpg",
+    "restaurants-hospitality": "restaurant.jpg",
+    "daycare-education": "education-reading-v1.jpg",
+    "legal-professional-services": "legal-advice-v2.jpg",
+    "real-estate": "property.jpg",
+    "retail-ecommerce": "ecommerce-shopping-v1.jpg",
+}
 
-def previews():
+def previews(slideshow_only=False):
     source = (ROOT / "index.html").read_text()
     source = re.sub(r'<link rel="stylesheet" href="site-buttons\.css[^\"]*">', '', source)
     source = re.sub(r'<script[^>]*src="site-buttons\.js[^\"]*"[^>]*></script>', '', source)
@@ -29,22 +39,25 @@ def previews():
         image = Image.open(ROOT / f"assets/industry-heroes/{slug}.png").convert("RGB")
         image.thumbnail((1600, 1000), Image.Resampling.LANCZOS)
         image.save(asset_directory / f"{slug}.webp", quality=82)
-    for mode in ("slideshow", "video"):
+        image = Image.open(ROOT / "assets/industry-concepts" / SLIDESHOW_SOURCES[slug]).convert("RGB")
+        image.thumbnail((1600, 1000), Image.Resampling.LANCZOS)
+        image.save(asset_directory / f"{slug}-v2.webp", quality=85)
+    for mode in (("slideshow",) if slideshow_only else ("slideshow", "video")):
         label = "Cinematic slideshow" if mode == "slideshow" else "Industry film loop"
         markup = '<div class="hero-bg motion-media" aria-hidden="true">'
         if mode == "slideshow":
-            markup += ''.join(f'<img src="assets/home-hero-options/industry-motion/{slug}.webp" alt="" data-industry="{name}">' for name, slug in SCENES)
+            markup += ''.join(f'<img src="assets/home-hero-options/industry-motion/{slug}-v2.webp" alt="" data-industry="{name}">' for name, slug in SCENES)
         else:
             markup += '<video autoplay muted loop playsinline preload="metadata" poster="assets/home-hero-options/industry-motion/home-services.webp"><source src="assets/home-hero-options/industry-motion/industry-film.mp4" type="video/mp4"></video>'
         markup += '</div><div class="motion-shade" aria-hidden="true"></div>'
         page = source.replace('<div class="hero-bg" aria-hidden="true"></div>', markup, 1)
         page = page.replace('<title>VNW Media | Web Design & Digital Marketing in New Jersey</title>', f'<title>{label} · Homepage Preview | VNW Media</title>')
-        page = page.replace('</head>', '<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="home-hero-motion.css"><link rel="stylesheet" href="site-buttons.css?v=20261004-mobile-email-send-label-v1"></head>')
+        page = page.replace('</head>', '<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="home-hero-motion.css?v=20261012-smooth-industry-v2"><link rel="stylesheet" href="site-buttons.css?v=20261004-mobile-email-send-label-v1"></head>')
         page = page.replace('<body', f'<body data-motion-mode="{mode}"', 1)
         toolbar = f'<aside class="motion-picker" aria-label="Hero design preview"><span>HOMEPAGE HERO · PREVIEW</span><a href="home-hero-slideshow-preview.html" aria-current="{"page" if mode == "slideshow" else "false"}">01 / Slideshow</a><a href="home-hero-video-preview.html" aria-current="{"page" if mode == "video" else "false"}">02 / Video</a><button id="motionPause" type="button" aria-pressed="false">Pause motion</button></aside>'
         page = page.replace('<main id="top">', toolbar + '<main id="top">', 1)
         page = page.replace('<div class="shell hero-grid">', '<div class="motion-caption"><span>' + label + '</span><strong id="motionIndustry">Home Services &amp; Contractors</strong></div><div class="shell hero-grid">', 1)
-        page = page.replace('</body>', '<script src="home-hero-motion.js"></script><script src="site-buttons.js?v=20261004-mobile-business-field-v1"></script></body>')
+        page = page.replace('</body>', '<script src="home-hero-motion.js?v=20261012-smooth-industry-v2"></script><script src="site-buttons.js?v=20261004-mobile-business-field-v1"></script></body>')
         page = '\n'.join(line.rstrip() for line in page.splitlines()) + '\n'
         (ROOT / f"home-hero-{mode}-preview.html").write_text(page)
 
@@ -83,7 +96,8 @@ def render(ffmpeg):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--ffmpeg")
+    parser.add_argument("--slideshow-only", action="store_true")
     args = parser.parse_args()
-    previews()
+    previews(args.slideshow_only)
     if args.ffmpeg:
         render(args.ffmpeg)
