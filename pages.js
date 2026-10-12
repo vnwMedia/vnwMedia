@@ -1465,6 +1465,7 @@ function serviceHero(service, options){
 // Keep the approved service process layouts in rotation. The phone-based
 // treatment has been replaced with Creative Studio across the service pages.
 const SERVICE_PROCESS_LAYOUTS=["blueprint","studio","studio","studio"];
+const SERVICE_PROCESS_LAYOUT_OVERRIDES={"graphic-design":"workbench"};
 const LEGACY_SERVICE_PROCESS={
   "content-writing":[
     ["Brief","Set the audience, subject, channel, goals, voice, and source material."],
@@ -1481,6 +1482,7 @@ const LEGACY_SERVICE_PROCESS={
 };
 
 function serviceProcessLayout(slug){
+  if(SERVICE_PROCESS_LAYOUT_OVERRIDES[slug]) return SERVICE_PROCESS_LAYOUT_OVERRIDES[slug];
   const index=SERVICE_CATALOG.findIndex(item=>item.slug===slug);
   return SERVICE_PROCESS_LAYOUTS[(index<0?0:index)%SERVICE_PROCESS_LAYOUTS.length];
 }
@@ -1515,6 +1517,24 @@ function serviceProcessSection(service,process){
     </div>`;
   }else if(layout==="studio"){
     arrangement=`<div class="csp-process-studio">${process.map((item,index)=>`<div class="csp-process-studio-card">${serviceProcessArtwork(index)}${stage(item,index)}</div>`).join("")}</div>`;
+  }else if(layout==="workbench"){
+    arrangement=`<div class="csp-process-workbench">
+      <div class="csp-process-workbench-brief" aria-label="Illustration of a graphic design project brief">
+        <div class="csp-process-workbench-board-label"><span>Creative brief</span><span>VNW / DESIGN</span></div>
+        <div class="csp-process-workbench-window">
+          <div class="csp-process-workbench-window-head"><span></span><span></span><span></span><b>Project overview</b></div>
+          <div class="csp-process-workbench-window-content">
+            <small>ONE CONNECTED CREATIVE PLAN</small>
+            <strong>Distinctive creative, ready for every channel.</strong>
+            <ul><li><i>01</i><span>Audience &amp; message</span><b>✓</b></li><li><i>02</i><span>Concepts &amp; adaptations</span><b>✓</b></li><li><i>03</i><span>Final files &amp; formats</span><b>✓</b></li></ul>
+          </div>
+          <div class="csp-process-workbench-window-foot"><span>Brand consistency</span><span>Channel-ready</span><span>Clear handoff</span></div>
+        </div>
+        <span class="csp-process-workbench-orbit" aria-hidden="true"></span>
+      </div>
+      <div class="csp-process-workbench-steps">${process.map((item,index)=>`<article class="csp-process-workbench-step"><span class="csp-process-step-index">${String(index+1).padStart(2,"0")}</span><div><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></div></article>`).join("")}</div>
+    </div>
+    <div class="csp-process-workbench-footer"><span><i aria-hidden="true">↗</i> A practical process with clear decisions.</span><a class="pill pill-blue" href="${path("contact.html")}">Discuss your design needs <span aria-hidden="true">↗</span></a></div>`;
   }
   return `<section class="csp-process section csp-process--${layout}" id="how-the-project-moves" data-nav-theme="light" data-process-layout="${layout}" aria-labelledby="service-process-title"><div class="shell"><div class="csp-section-head"><p class="section-tag">How the project moves</p><div><h2 id="service-process-title">A practical process with clear decisions.</h2><p>Enough structure to keep work moving, with room to respond to what discovery and testing reveal.</p></div></div>${arrangement}</div></section>`;
 }
