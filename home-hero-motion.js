@@ -26,6 +26,18 @@
   button?.addEventListener('click', () => { paused = !paused; if(video) { if(paused) video.pause(); else video.play().catch(() => {paused = true; updateButton();}); } updateButton(); });
   if(video && paused) { video.autoplay = false; video.pause(); }
   updateButton();
-  // Decode all eight photos before animating so a newly revealed image never flashes blank.
-  Promise.allSettled(images.map(image => image.decode())).then(() => requestAnimationFrame(render));
+  // Paint the opening image first; later slides must not compete with the initial render.
+  async function start() {
+    if (!images.length) return;
+    await images[0].decode().catch(() => {});
+    if (paused && !button) return;
+    await new Promise(resolve => setTimeout(resolve, 1200));
+    for (const image of images.slice(1)) {
+      if (image.dataset.srcset) image.srcset = image.dataset.srcset;
+      if (image.dataset.src) image.src = image.dataset.src;
+      await image.decode().catch(() => {});
+    }
+    requestAnimationFrame(render);
+  }
+  start();
 })();
