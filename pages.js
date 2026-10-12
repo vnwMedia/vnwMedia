@@ -112,7 +112,7 @@ function footer(){
 
 function hero(title,headline,text,image){
   const formattedHeadline=document.body.dataset.page==='contact'?'<span class="contact-headline-line">Let’s talk about <span class="contact-headline-highlight">What’s Next</span> for</span><br>your business.':esc(headline);
-  return `<section class="inner-hero" id="top" data-nav-theme="dark"><div class="inner-hero-bg" style="background-image:linear-gradient(90deg,rgba(8,8,8,.94),rgba(8,8,8,.65),rgba(8,8,8,.38)),url('${img(image)}')"></div><div class="shell inner-hero-copy reveal"><p class="eyebrow">${esc(title)}</p><h1>${formattedHeadline}</h1><p class="hero-lede">${esc(text)}</p><div class="hero-actions"><a class="pill pill-orange pill-large" href="${path("contact.html")}">Get Your Strategy <span>↗</span></a><a class="pill pill-outline pill-large" href="${path("services.html#all-services")}">Explore Services</a></div></div></section>`;
+  return `<section class="inner-hero" id="top" data-nav-theme="dark"><div class="inner-hero-bg" style="background-image:linear-gradient(90deg,rgba(8,8,8,.94),rgba(8,8,8,.65),rgba(8,8,8,.38)),url('${img(image)}')"></div><div class="shell inner-hero-copy reveal"><p class="eyebrow">${esc(title)}</p><h1>${formattedHeadline}</h1><p class="hero-lede">${esc(text)}</p><div class="hero-actions"><a class="pill pill-orange pill-large" href="${path("contact.html")}">Free Marketing Strategy &amp; Score <span>↗</span></a><a class="pill pill-outline pill-large" href="${path("services.html#all-services")}">Explore Services</a></div></div></section>`;
 }
 
 function cards(items,type){
@@ -1198,7 +1198,7 @@ function caseStudiesOptionTen(){
 }
 
 function nextChapterCTA(contactHref=path("contact.html")){
-  return `<section class="next-chapter-cta" id="next-chapter" data-nav-theme="light"><div class="next-chapter-banner reveal"><img src="${img("assets/story-hero-digital-option-1-monitor-collaboration.png")}" alt="Digital agency team collaborating around website designs and performance dashboards"><div class="next-chapter-copy"><p class="section-tag">Launch your next chapter</p><h2>Ready for your next stage of <em>growth?</em></h2><div class="next-chapter-actions"><a class="pill pill-blue pill-large" href="${contactHref}">Get Your Strategy <span>↗</span></a><a class="pill pill-outline pill-large" href="tel:17328200609">Call Us Now</a></div></div></div></section>`;
+  return `<section class="next-chapter-cta" id="next-chapter" data-nav-theme="light"><div class="next-chapter-banner reveal"><img src="${img("assets/story-hero-digital-option-1-monitor-collaboration.png")}" alt="Digital agency team collaborating around website designs and performance dashboards"><div class="next-chapter-copy"><p class="section-tag">Launch your next chapter</p><h2>Ready for your next stage of <em>growth?</em></h2><div class="next-chapter-actions"><a class="pill pill-blue pill-large" href="${contactHref}">Free Marketing Strategy &amp; Score <span>↗</span></a><a class="pill pill-outline pill-large" href="tel:17328200609">Call Us Now</a></div></div></div></section>`;
 }
 
 function storyPage(){
@@ -1489,7 +1489,7 @@ function serviceHero(service, options){
   return `<section class="csp-hero" id="top" data-nav-theme="dark">
     <figure class="csp-hero-media"><img src="${img(options.image)}" alt="${esc(options.imageAlt || service.name)}" fetchpriority="high"></figure>
     <div class="shell csp-hero-inner">
-      <div class="csp-hero-copy"><div class="csp-hero-copy-inner"><p class="eyebrow">${esc(options.eyebrow)}</p><h1>${esc(options.headline)}</h1><p class="hero-lede">${esc(options.lede)}</p><div class="csp-hero-actions"><a class="pill pill-blue pill-large" href="${path("contact.html")}">${esc(options.cta || "Get Your Strategy")} <span>↗</span></a><a class="pill pill-outline pill-large" href="${esc(options.nextHref || "#page-content")}">${esc(options.nextLabel || "See how we help")}</a></div>${proof}</div></div>
+      <div class="csp-hero-copy"><div class="csp-hero-copy-inner"><p class="eyebrow">${esc(options.eyebrow)}</p><h1>${esc(options.headline)}</h1><p class="hero-lede">${esc(options.lede)}</p><div class="csp-hero-actions"><a class="pill pill-blue pill-large" href="${path("contact.html")}">${esc(options.cta || "Free Marketing Strategy & Score")} <span>↗</span></a><a class="pill pill-outline pill-large" href="${esc(options.nextHref || "#page-content")}">${esc(options.nextLabel || "See how we help")}</a></div>${proof}</div></div>
       ${serviceHeroForm(service)}
     </div>
   </section>`;
