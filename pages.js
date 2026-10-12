@@ -318,6 +318,39 @@ function renderAdditionalClientCaseStudy(project){
   });
 }
 
+function processBlueprintSection(options){
+  const phase=(item,index)=>`<article class="story-process-phase"><p class="story-process-step">${String(index+1).padStart(2,"0")} / ${esc(item.label)}</p><h3>${esc(item.title)}</h3><p class="story-process-description">${esc(item.description)}</p></article>`;
+  const intro=options.intro?`<p class="story-process-intro">${esc(options.intro)}</p>`:"";
+  const siteTitle=(options.siteTitle||[]).map(esc).join("<br>");
+  const bottomLabels=options.bottomLabels||["Useful content","Relevant proof","Easy contact"];
+  return `<section class="story-process-blueprint section" data-nav-theme="light" id="${esc(options.id)}" aria-labelledby="${esc(options.headingId)}">
+    <div class="shell">
+      <header class="story-process-heading">
+        <p class="section-tag">${esc(options.sectionLabel)}</p>
+        <h2 id="${esc(options.headingId)}">${esc(options.title)}</h2>
+        ${intro}
+      </header>
+      <div class="story-process-plan">
+        <div class="story-process-phase-pair">${options.steps.slice(0,2).map(phase).join("")}</div>
+        <div class="story-process-browser-stage" role="img" aria-label="${esc(options.illustrationAlt)}">
+          <div class="story-process-window" aria-hidden="true">
+            <div class="story-process-window-bar"><i></i><i></i><i></i><span>${esc(options.browserLabel||"Your digital experience")}</span></div>
+            <div class="story-process-site-nav"><strong>${esc(options.siteLabel||"Your business")}</strong><span><i></i><i></i><i></i></span></div>
+            <div class="story-process-site-main">
+              <div class="story-process-site-copy"><p class="story-process-site-title">${siteTitle}</p><div class="story-process-line"></div><div class="story-process-line story-process-line-short"></div><span class="story-process-site-action">${esc(options.siteAction||"Start a conversation")} <span>↗</span></span></div>
+              <div class="story-process-site-art"><div class="story-process-cursor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m4 3 7.07 17.77a.5.5 0 0 0 .93 0l2.48-6.29 6.29-2.48a.5.5 0 0 0 0-.93L3 4a.77.77 0 0 0 1-1Z"/></svg></div></div>
+            </div>
+            <div class="story-process-site-bottom">${bottomLabels.map(label=>`<span>${esc(label)}</span>`).join("")}</div>
+          </div>
+          <i class="story-process-bottom-connector" aria-hidden="true"></i><i class="story-process-bottom-connector" aria-hidden="true"></i>
+        </div>
+        <div class="story-process-phase-pair">${options.steps.slice(2).map((item,index)=>phase(item,index+2)).join("")}</div>
+      </div>
+      <div class="story-process-actions"><a class="pill pill-blue" href="${options.ctaHref}">${esc(options.ctaText)} <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>`;
+}
+
 function workPageOne(){
   const featuredOrder=["la-rosa-chicken-grill","nycadsco","vision-centers","sfadsco","brooklyn-motors","kypcl"];
   const featuredProjects=DATA.cases.map((project,index)=>({project,index})).sort((a,b)=>featuredOrder.indexOf(a.project[1])-featuredOrder.indexOf(b.project[1]));
@@ -338,7 +371,7 @@ function workPageOne(){
   const additionalProjects=typeof ADDITIONAL_CLIENT_PROJECTS==="undefined"?[]:ADDITIONAL_CLIENT_PROJECTS;
   return `<section class="work work-agency-featured section" id="page-content"><div class="shell"><div class="work-agency-head reveal"><div><p class="section-tag">Selected Work</p><h2>Different industries. The same focus on clarity, trust, and action.</h2></div><p>Each project begins with a different business problem. The work below shows how strategy, design, content, search context, and lead paths come together around the customer’s next decision.</p></div><div class="work-grid">${featuredProjects.map(({project:x,index:i})=>`<article class="work-card work-agency-card reveal">${["vision-centers","nycadsco","sfadsco"].includes(x[1])?`<figure class="work-client-media vision-work-media"><img src="${img(x[4])}" alt="${esc(x[0])} client imagery">${x[1]==="vision-centers"?`<span class="vision-work-wordmark">${esc(x[0])}</span>`:`<img class="work-client-logo ads-client-logo" src="${img(`assets/${x[1]}-logo.webp`)}" alt="${esc(x[0])} logo">`}</figure>`:["la-rosa-chicken-grill","brooklyn-motors","kypcl"].includes(x[1])?`<figure class="work-client-media"><img src="${img(x[4])}" alt="${esc(x[0])}"><img class="work-client-logo" src="${img(x[1]==="brooklyn-motors"?"assets/brooklyn-motors-logo-supplied.png":x[1]==="kypcl"?"assets/kypcl-logo-supplied.png":"assets/la-rosa-logo-white-text.svg")}" alt="${esc(x[0])} logo"></figure>`:`<img src="${img(x[4])}" alt="${esc(x[0])}">`}<div><span>${esc(x[2])}</span><h3>${esc(x[0])}</h3><p>${esc(x[3])}</p><ul aria-label="Services provided for ${esc(x[0])}">${projectScopes[i].map(scope=>`<li><a class="work-service-pill" href="${path(`services/${scopePages[scope]}.html`)}">${scope}</a></li>`).join("")}</ul><a class="work-case-link" href="${path(`case-studies/${x[1]}.html`)}" aria-label="Read ${esc(x[0])} case study"><b>Read case study ↗</b></a></div></article>`).join("")}${additionalProjects.map(renderAdditionalProjectCard).join("")}</div></div></section>
   <section class="work-agency-method section" data-nav-theme="dark"><div class="shell work-agency-method-grid"><div class="work-agency-method-copy reveal"><p class="section-tag">What Connects The Work</p><h2>More than a gallery. A working digital system.</h2><p>Strong agency work should explain what changed, why it matters, and how the pieces support the business—not just display polished screens.</p><a class="pill pill-blue" href="${path("contact.html")}">Discuss your opportunity <span>↗</span></a></div><div class="work-agency-principles">${principles.map((x,i)=>`<article class="reveal"><span>${String(i+1).padStart(2,"0")}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div></div></section>
-  <section class="work-agency-process work-agency-process-workbench section" id="work-process" data-nav-theme="light" aria-labelledby="work-process-title"><div class="shell"><div class="work-agency-process-head reveal"><div><p class="section-tag">How Projects Move</p><h2 id="work-process-title">From first question to the next improvement.</h2></div><a class="pill pill-blue" href="${path("contact.html")}">Plan your project <span>↗</span></a></div><div class="csp-process-workbench"><div class="csp-process-workbench-brief" role="img" aria-label="Illustration of a project workspace connecting business goals, customer journey, and launch learning"><div class="csp-process-workbench-board-label"><span>Project workspace</span><span>VNW / WORK</span></div><div class="csp-process-workbench-window"><div class="csp-process-workbench-window-head"><span></span><span></span><span></span><b>Project overview</b></div><div class="csp-process-workbench-window-content"><small>ONE CONNECTED DIGITAL PLAN</small><strong>Clear direction. Useful next steps.</strong><ul><li><i>01</i><span>Business goals</span><b>✓</b></li><li><i>02</i><span>Customer journey</span><b>✓</b></li><li><i>03</i><span>Launch &amp; learn</span><b>✓</b></li></ul></div><div class="csp-process-workbench-window-foot"><span>Strategy</span><span>Creative</span><span>Performance</span></div></div><span class="csp-process-workbench-orbit" aria-hidden="true"></span></div><div class="csp-process-workbench-steps">${processSteps.map((x,i)=>`<article class="csp-process-workbench-step"><span class="csp-process-step-index">${String(i+1).padStart(2,"0")}</span><div><h3>${esc(x[0])}</h3><p>${esc(x[1])}</p></div></article>`).join("")}</div></div></div></section>
+  ${processBlueprintSection({id:"work-process",sectionLabel:"How Projects Move",headingId:"work-process-title",title:"From first question to the next improvement.",steps:processSteps.map((item,index)=>({label:["Review the opportunity","Define the direction","Connect the work","Learn and refine"][index],title:item[0],description:item[1]})),siteTitle:["A clear offer.","A useful next step."],bottomLabels:["Useful content","Relevant proof","Easy contact"],illustrationAlt:"Website blueprint connecting the work phases to a clear offer, useful content, relevant proof, and an easy next step.",ctaText:"Plan your project",ctaHref:path("contact.html")})}
   ${googleTestimonials()}
   ${workFAQ()}`;
 }
@@ -1465,7 +1498,7 @@ function serviceHero(service, options){
 // Keep the approved service process layouts in rotation. The phone-based
 // treatment has been replaced with Creative Studio across the service pages.
 const SERVICE_PROCESS_LAYOUTS=["blueprint","studio","studio","studio"];
-const SERVICE_PROCESS_LAYOUT_OVERRIDES={"graphic-design":"workbench"};
+const SERVICE_PROCESS_LAYOUT_OVERRIDES={"graphic-design":"story-blueprint"};
 const LEGACY_SERVICE_PROCESS={
   "content-writing":[
     ["Brief","Set the audience, subject, channel, goals, voice, and source material."],
@@ -1507,6 +1540,20 @@ function serviceProcessArtwork(index){
 function serviceProcessSection(service,process){
   const layout=serviceProcessLayout(service.slug);
   const stage=(item,index)=>`<article class="csp-process-step"><span class="csp-process-step-index">${String(index+1).padStart(2,"0")}</span><div><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></div></article>`;
+  if(layout==="story-blueprint"){
+    const phaseLabels=["Clarify the creative brief","Explore visual directions","Strengthen the final creative","Prepare files for delivery"];
+    return processBlueprintSection({
+      id:"how-the-project-moves",sectionLabel:"How the project moves",headingId:"service-process-title",
+      title:"A practical process with clear decisions.",
+      intro:"Enough structure to keep work moving, with room to respond to what discovery and testing reveal.",
+      steps:process.map((item,index)=>({label:phaseLabels[index]||"Move the work forward",title:item[0],description:item[1]})),
+      browserLabel:"Your creative direction",siteLabel:"Your brand",
+      siteTitle:["Distinctive creative.","Ready for every channel."],siteAction:"Review the creative",
+      bottomLabels:["Brand consistency","Channel-ready","Clear handoff"],
+      illustrationAlt:"Creative website blueprint connecting a distinctive visual direction with channel-ready creative and a clear handoff.",
+      ctaText:"Discuss your design needs",ctaHref:path("contact.html")
+    });
+  }
   let arrangement="";
   if(layout==="blueprint"){
     const split=Math.ceil(process.length/2);
