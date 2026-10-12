@@ -44,7 +44,7 @@ def previews(slideshow_only=False):
         toolbar = f'<aside class="motion-picker" aria-label="Hero design preview"><span>HOMEPAGE HERO · PREVIEW</span><a href="home-hero-slideshow-preview.html" aria-current="{"page" if mode == "slideshow" else "false"}">01 / Slideshow</a><a href="home-hero-video-preview.html" aria-current="{"page" if mode == "video" else "false"}">02 / Video</a><button id="motionPause" type="button" aria-pressed="false">Pause motion</button></aside>'
         page = page.replace('<main id="top">', toolbar + '<main id="top">', 1)
         page = page.replace('<div class="shell hero-grid">', '<div class="motion-caption"><span>' + label + '</span><strong id="motionIndustry">Home Services &amp; Contractors</strong></div><div class="shell hero-grid">', 1)
-        page = page.replace('</body>', '<script src="home-hero-motion.js?v=20261012-smooth-industry-v2"></script><script src="site-buttons.js?v=20261004-mobile-business-field-v1"></script></body>')
+        page = page.replace('</body>', '<script src="home-hero-motion.js?v=20261012-faster-zoom-v3"></script><script src="site-buttons.js?v=20261004-mobile-business-field-v1"></script></body>')
         page = '\n'.join(line.rstrip() for line in page.splitlines()) + '\n'
         (ROOT / f"home-hero-{mode}-preview.html").write_text(page)
 

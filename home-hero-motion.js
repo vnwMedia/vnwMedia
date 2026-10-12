@@ -17,7 +17,7 @@
       const opacity = phase < 2 ? fade * fade * (3 - 2 * fade) : phase < 8 ? 1 : 0;
       image.style.zIndex = phase < 6 ? '2' : '1';
       image.style.opacity = opacity;
-      image.style.transform = `scale(${1 + .06 * Math.min(phase / 8, 1)})`;
+      image.style.transform = `scale(${1 + .085 * Math.min(phase / 8, 1)})`;
     });
     label.textContent = names[Math.floor(clock / 6) % names.length];
     requestAnimationFrame(render);
