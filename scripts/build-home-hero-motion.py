@@ -18,16 +18,6 @@ SCENES = [
     ("Real Estate & Property", "real-estate"),
     ("Retail & eCommerce", "retail-ecommerce"),
 ]
-SLIDESHOW_SOURCES = {
-    "home-services": "contractor-homeowner-v1.jpg",
-    "healthcare": "healthcare-diagonal-v1.jpg",
-    "automotive": "automotive-generic-v1.jpg",
-    "restaurants-hospitality": "restaurant.jpg",
-    "daycare-education": "education-reading-v1.jpg",
-    "legal-professional-services": "legal-advice-v2.jpg",
-    "real-estate": "property.jpg",
-    "retail-ecommerce": "ecommerce-shopping-v1.jpg",
-}
 
 def previews(slideshow_only=False):
     source = (ROOT / "index.html").read_text()
@@ -39,14 +29,11 @@ def previews(slideshow_only=False):
         image = Image.open(ROOT / f"assets/industry-heroes/{slug}.png").convert("RGB")
         image.thumbnail((1600, 1000), Image.Resampling.LANCZOS)
         image.save(asset_directory / f"{slug}.webp", quality=82)
-        image = Image.open(ROOT / "assets/industry-concepts" / SLIDESHOW_SOURCES[slug]).convert("RGB")
-        image.thumbnail((1600, 1000), Image.Resampling.LANCZOS)
-        image.save(asset_directory / f"{slug}-v2.webp", quality=85)
     for mode in (("slideshow",) if slideshow_only else ("slideshow", "video")):
         label = "Cinematic slideshow" if mode == "slideshow" else "Industry film loop"
         markup = '<div class="hero-bg motion-media" aria-hidden="true">'
         if mode == "slideshow":
-            markup += ''.join(f'<img src="assets/home-hero-options/industry-motion/{slug}-v2.webp" alt="" data-industry="{name}">' for name, slug in SCENES)
+            markup += ''.join(f'<img src="assets/home-hero-options/industry-motion/{slug}.webp" alt="" data-industry="{name}">' for name, slug in SCENES)
         else:
             markup += '<video autoplay muted loop playsinline preload="metadata" poster="assets/home-hero-options/industry-motion/home-services.webp"><source src="assets/home-hero-options/industry-motion/industry-film.mp4" type="video/mp4"></video>'
         markup += '</div><div class="motion-shade" aria-hidden="true"></div>'
