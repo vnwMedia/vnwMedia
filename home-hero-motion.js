@@ -20,7 +20,7 @@
       image.style.opacity = opacity;
       image.style.transform = `scale(${1 + .085 * Math.min(phase / 8, 1)})`;
     });
-    label.textContent = names[Math.floor(clock / 6) % names.length];
+    if (label) label.textContent = names[Math.floor(clock / 6) % names.length];
     requestAnimationFrame(render);
   }
   button.addEventListener('click', () => { paused = !paused; if(video) { if(paused) video.pause(); else video.play().catch(() => {paused = true; updateButton();}); } updateButton(); });
