@@ -1462,9 +1462,9 @@ function serviceHero(service, options){
   </section>`;
 }
 
-// Keep the approved service process layouts in rotation. The wireframe-heavy
-// Editorial Journey treatment is intentionally excluded from service pages.
-const SERVICE_PROCESS_LAYOUTS=["blueprint","studio","feed","feed"];
+// Keep the approved service process layouts in rotation. The phone-based
+// treatment has been replaced with Creative Studio across the service pages.
+const SERVICE_PROCESS_LAYOUTS=["blueprint","studio","studio","studio"];
 const LEGACY_SERVICE_PROCESS={
   "content-writing":[
     ["Brief","Set the audience, subject, channel, goals, voice, and source material."],
@@ -1485,10 +1485,26 @@ function serviceProcessLayout(slug){
   return SERVICE_PROCESS_LAYOUTS[(index<0?0:index)%SERVICE_PROCESS_LAYOUTS.length];
 }
 
+function serviceProcessArtwork(index){
+  const calendarIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M7.5 3.5v3M16.5 3.5v3M3.5 9h17"/><path d="M8 12.5h.01M12 12.5h.01M16 12.5h.01M8 16h.01M12 16h.01"/></svg>';
+  const sparkIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 3 1.9 5.9L20 11l-6.1 2.1L12 19l-1.9-5.9L4 11l6.1-2.1L12 3Z"/><path d="m19 15 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z"/></svg>';
+  const playIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m9 6 9 6-9 6V6Z"/></svg>';
+  const questionIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H11l-4.5 4v-4A2.5 2.5 0 0 1 4 13.5v-8Z"/><path d="M9.5 8a2.5 2.5 0 1 1 4.3 1.7c-.9.9-1.8 1.2-1.8 2.3M12 14.5h.01"/></svg>';
+  if(index%4===0){
+    return `<div class="csp-process-art csp-process-art--calendar"><div class="csp-process-art-paper csp-process-art-calendar"><div class="csp-process-art-top"><span>Project rhythm</span>${calendarIcon}</div><div class="csp-process-art-calendar-grid"><span>MON</span><span>WED</span><span>FRI</span><div>${sparkIcon}Plan</div><div>${questionIcon}Review</div><div>${playIcon}Share</div></div></div></div>`;
+  }
+  if(index%4===1){
+    return `<div class="csp-process-art csp-process-art--formats"><div class="csp-process-format csp-process-format--wide"><small>WEB PAGE</small><strong>A useful<br>idea.</strong><i></i><i></i></div><div class="csp-process-format csp-process-format--tall"><small>CAMPAIGN</small><span>${playIcon}</span><i></i></div></div>`;
+  }
+  if(index%4===2){
+    return `<div class="csp-process-art csp-process-art--brand"><div class="csp-process-art-paper csp-process-art-brand"><strong>Distinctly<br>your brand.</strong><div class="csp-process-swatches"><i></i><i></i><i></i></div><div class="csp-process-brand-notes"><span>Clear voice</span><span>Useful proof</span></div></div></div>`;
+  }
+  return `<div class="csp-process-art csp-process-art--questions"><div class="csp-process-art-paper csp-process-art-questions"><div>${questionIcon}<span>What is the goal?</span></div><div>${sparkIcon}<span>Who needs this?</span></div><div>${playIcon}<span>What comes next?</span></div></div></div>`;
+}
+
 function serviceProcessSection(service,process){
   const layout=serviceProcessLayout(service.slug);
   const stage=(item,index)=>`<article class="csp-process-step"><span class="csp-process-step-index">${String(index+1).padStart(2,"0")}</span><div><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></div></article>`;
-  const cards=process.map((item,index)=>stage(item,index)).join("");
   let arrangement="";
   if(layout==="blueprint"){
     const split=Math.ceil(process.length/2);
@@ -1498,9 +1514,7 @@ function serviceProcessSection(service,process){
       <div class="csp-process-blueprint-pair">${process.slice(split).map((item,index)=>stage(item,index+split)).join("")}</div>
     </div>`;
   }else if(layout==="studio"){
-    arrangement=`<div class="csp-process-studio">${process.map((item,index)=>`<div class="csp-process-studio-card"><div class="csp-process-studio-art csp-process-art-${index%4}" aria-hidden="true"><div class="csp-process-art-sheet"><i></i><i></i><i></i><b></b><span>${String(index+1).padStart(2,"0")}</span></div></div>${stage(item,index)}</div>`).join("")}</div>`;
-  }else{
-    arrangement=`<div class="csp-process-feed"><div class="csp-process-feed-device" aria-hidden="true"><div class="csp-process-feed-camera"></div><div class="csp-process-feed-screen"><div class="csp-process-feed-top"><span class="csp-process-feed-mark"></span><b>Project overview</b><i>•••</i></div><div class="csp-process-feed-hero"><small>One connected plan</small><strong>From first brief<br>to next iteration.</strong><span></span><span></span></div><div class="csp-process-feed-rows"><i></i><i></i><i></i><i></i></div><div class="csp-process-feed-footer"><span></span><span></span><span></span></div></div></div><div class="csp-process-feed-list">${cards}</div></div>`;
+    arrangement=`<div class="csp-process-studio">${process.map((item,index)=>`<div class="csp-process-studio-card">${serviceProcessArtwork(index)}${stage(item,index)}</div>`).join("")}</div>`;
   }
   return `<section class="csp-process section csp-process--${layout}" id="how-the-project-moves" data-nav-theme="light" data-process-layout="${layout}" aria-labelledby="service-process-title"><div class="shell"><div class="csp-section-head"><p class="section-tag">How the project moves</p><div><h2 id="service-process-title">A practical process with clear decisions.</h2><p>Enough structure to keep work moving, with room to respond to what discovery and testing reveal.</p></div></div>${arrangement}</div></section>`;
 }
