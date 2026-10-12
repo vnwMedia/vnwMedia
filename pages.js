@@ -1462,6 +1462,49 @@ function serviceHero(service, options){
   </section>`;
 }
 
+const SERVICE_PROCESS_LAYOUTS=["blueprint","studio","journey","feed"];
+const LEGACY_SERVICE_PROCESS={
+  "content-writing":[
+    ["Brief","Set the audience, subject, channel, goals, voice, and source material."],
+    ["Outline","Structure the key points around reader intent and the next useful action."],
+    ["Draft & refine","Develop clear copy, then review accuracy, tone, headings, and links."],
+    ["Prepare to publish","Format the approved content for its destination and hand it off ready to use."]
+  ],
+  "video-editing":[
+    ["Align","Confirm the footage, audience, story, format, length, and delivery specifications."],
+    ["Assemble","Build a purposeful sequence with pacing, transitions, and visual continuity."],
+    ["Polish","Refine audio, color, captions, titles, graphics, and agreed review notes."],
+    ["Deliver","Export and organize final versions for the approved platforms and uses."]
+  ]
+};
+
+function serviceProcessLayout(slug){
+  const index=SERVICE_CATALOG.findIndex(item=>item.slug===slug);
+  return SERVICE_PROCESS_LAYOUTS[(index<0?0:index)%SERVICE_PROCESS_LAYOUTS.length];
+}
+
+function serviceProcessSection(service,process){
+  const layout=serviceProcessLayout(service.slug);
+  const stage=(item,index)=>`<article class="csp-process-step"><span class="csp-process-step-index">${String(index+1).padStart(2,"0")}</span><div><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></div></article>`;
+  const cards=process.map((item,index)=>stage(item,index)).join("");
+  let arrangement="";
+  if(layout==="blueprint"){
+    const split=Math.ceil(process.length/2);
+    arrangement=`<div class="csp-process-blueprint">
+      <div class="csp-process-blueprint-pair">${process.slice(0,split).map((item,index)=>stage(item,index)).join("")}</div>
+      <div class="csp-process-canvas" aria-hidden="true"><div class="csp-process-browser"><div class="csp-process-browser-bar"><i></i><i></i><i></i><span>Your digital experience</span></div><div class="csp-process-browser-nav"><b>Your business</b><span><i></i><i></i><i></i></span></div><div class="csp-process-browser-main"><div><small>A connected project plan</small><strong>Clear direction.<br>Useful next steps.</strong><i></i><i></i></div><div class="csp-process-target"><i></i></div></div><div class="csp-process-browser-foot"><span>Useful work</span><span>Relevant proof</span><span>Clear handoff</span></div></div></div>
+      <div class="csp-process-blueprint-pair">${process.slice(split).map((item,index)=>stage(item,index+split)).join("")}</div>
+    </div>`;
+  }else if(layout==="studio"){
+    arrangement=`<div class="csp-process-studio">${process.map((item,index)=>`<div class="csp-process-studio-card"><div class="csp-process-studio-art csp-process-art-${index%4}" aria-hidden="true"><div class="csp-process-art-sheet"><i></i><i></i><i></i><b></b><span>${String(index+1).padStart(2,"0")}</span></div></div>${stage(item,index)}</div>`).join("")}</div>`;
+  }else if(layout==="journey"){
+    arrangement=`<div class="csp-process-journey">${process.map((item,index)=>`<div class="csp-process-journey-row"><div class="csp-process-journey-art csp-process-art-${index%4}" aria-hidden="true"><div class="csp-process-journey-sheet"><i></i><i></i><i></i><b></b><span>${String(index+1).padStart(2,"0")}</span></div></div>${stage(item,index)}</div>`).join("")}</div>`;
+  }else{
+    arrangement=`<div class="csp-process-feed"><div class="csp-process-feed-device" aria-hidden="true"><div class="csp-process-feed-camera"></div><div class="csp-process-feed-screen"><div class="csp-process-feed-top"><span class="csp-process-feed-mark"></span><b>Project overview</b><i>•••</i></div><div class="csp-process-feed-hero"><small>One connected plan</small><strong>From first brief<br>to next iteration.</strong><span></span><span></span></div><div class="csp-process-feed-rows"><i></i><i></i><i></i><i></i></div><div class="csp-process-feed-footer"><span></span><span></span><span></span></div></div></div><div class="csp-process-feed-list">${cards}</div></div>`;
+  }
+  return `<section class="csp-process section csp-process--${layout}" id="how-the-project-moves" data-nav-theme="light" data-process-layout="${layout}" aria-labelledby="service-process-title"><div class="shell"><div class="csp-section-head"><p class="section-tag">How the project moves</p><div><h2 id="service-process-title">A practical process with clear decisions.</h2><p>Enough structure to keep work moving, with room to respond to what discovery and testing reveal.</p></div></div>${arrangement}</div></section>`;
+}
+
 function createServiceDetail(service,data){
   const faqCTA={
     'brand-strategy':'Discuss your brand strategy',
@@ -1516,7 +1559,7 @@ function createServiceDetail(service,data){
     ${serviceHero(service,{eyebrow:data.eyebrow,headline:data.headline,lede:data.lede,image:data.hero,imageAlt:data.heroAlt,cta:heroCTA,nextHref:"#what-we-help",proof:["Strategy-led","Responsive design","Search & campaign ready"]})}
     <section class="csp-help section" id="what-we-help" data-nav-theme="light"><div class="shell"><div class="csp-section-head"><p class="section-tag">What we can help you do</p><div><h2>${esc(data.introHeading)}</h2><p>${esc(data.introBody)}</p></div></div><div class="csp-outcomes">${data.outcomes.map((item,index)=>`<article><span>0${index+1}</span><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></article>`).join("")}</div></div></section>
     <section class="csp-scope section" data-nav-theme="dark"><div class="shell csp-scope-grid"><figure><img src="${img(data.feature)}" alt="${esc(data.featureAlt)}"><figcaption>Built around the customer and the business goal.</figcaption></figure><div class="csp-scope-copy"><p class="section-tag">A complete engagement</p><h2>What the work can include.</h2><p>We shape the scope around the current situation, internal resources, and the result the business needs next.</p><ul>${data.included.map(item=>`<li>${esc(item)}</li>`).join("")}</ul><p class="csp-scope-note">Deliverables, review rounds, platforms, integrations, and timing are confirmed in your proposal.</p><a class="pill pill-blue csp-scope-cta" href="${path("contact.html")}">${esc(faqCTA)} <span aria-hidden="true">↗</span></a></div></div></section>
-    <section class="csp-process section" data-nav-theme="light"><div class="shell"><div class="csp-section-head"><p class="section-tag">How the project moves</p><div><h2>A practical process with clear decisions.</h2><p>Enough structure to keep work moving, with room to respond to what discovery and testing reveal.</p></div></div><div class="csp-process-grid">${data.process.map((item,index)=>`<article><span>0${index+1}</span><div><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></div></article>`).join("")}</div></div></section>
+    ${serviceProcessSection(service,data.process)}
     ${serviceDiagnosticCTA(service)}
     <section class="csp-visibility section" data-nav-theme="light"><div class="shell"><div class="csp-section-head"><p class="section-tag">SEO, PPC &amp; AI visibility</p><div><h2>Built to support discovery and conversion.</h2><p>The page or product experience should work with organic search, paid campaigns, measurement, and the way AI-assisted discovery interprets useful business information.</p></div></div><div class="csp-visibility-grid">${data.visibility.map((item,index)=>`<article><span>0${index+1}</span><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></article>`).join("")}</div></div></section>
     <section class="csp-related section" data-nav-theme="dark"><div class="shell csp-related-grid"><div><p class="section-tag">Connected services</p><h2>Build the right combination around the goal.</h2><p>${esc(service.name)} can work on its own or connect with strategy, visibility, advertising, automation, and ongoing support.</p><a class="pill pill-blue" href="${path("services.html#all-services")}">View all services <span>↗</span></a></div><div class="csp-related-list">${related.map((item,index)=>`<a href="${path(`services/${item.slug}.html`)}"><span>0${index+1}</span><div><h3>${esc(item.name)}</h3><p>${esc(item.description)}</p></div><b>↗</b></a>`).join("")}</div></div></section>
@@ -1570,7 +1613,7 @@ function detail(kind,item){
     const service=SERVICE_CATALOG.find(entry=>entry.slug===item[1]);
     const servicePageData=typeof CREATE_SERVICE_PAGES!=="undefined" ? (service.slug==="seo"?CREATE_SERVICE_PAGES.searchOptimization:CREATE_SERVICE_PAGES[service.slug]) : null;
     if(servicePageData) return createServiceDetail(service,servicePageData);
-    return serviceHero(service,{eyebrow:service.addon?"Creative & Technical Support":"VNW Media Services",headline:service.name,lede:service.description,image:service.image,nextHref:"#page-content",nextLabel:"Explore this service"})+`<section class="service-detail section" id="page-content"><div class="shell service-detail-grid"><div><p class="section-tag">${esc(service.name)}</p><h2>What we help you do.</h2><p>${esc(service.overview)}</p><a class="pill pill-blue" href="${path("contact.html")}">Discuss this service <span>↗</span></a></div><div><p class="section-tag">Service Scope</p><ul class="service-deliverables">${service.includes.map(text=>`<li>${esc(text)}</li>`).join("")}</ul><p class="service-scope-note">${esc(service.scope)}</p></div></div></section><section class="faq section"><div class="shell faq-grid"><div class="faq-intro"><p class="section-tag">Service FAQ</p><h2>Before we get started.</h2></div><div class="faq-list"><details open><summary>What does this service include?<span>+</span></summary><p>${esc(service.includes.join("; "))}. ${esc(service.scope)}</p></details><details><summary>Can this be combined with other services?<span>+</span></summary><p>Yes. We can combine services around your website, visibility, advertising, and follow-up needs. We confirm the deliverables and responsibilities in your proposal.</p></details><details><summary>How do we get started?<span>+</span></summary><p>Contact VNW Media with your website, goals, and priorities. We will discuss the current setup and recommend an appropriate scope.</p></details></div></div></section>${serviceDirectoryMarkup(path(""),true)}${nextChapterCTA()}`;
+    return serviceHero(service,{eyebrow:service.addon?"Creative & Technical Support":"VNW Media Services",headline:service.name,lede:service.description,image:service.image,nextHref:"#page-content",nextLabel:"Explore this service"})+`<section class="service-detail section" id="page-content"><div class="shell service-detail-grid"><div><p class="section-tag">${esc(service.name)}</p><h2>What we help you do.</h2><p>${esc(service.overview)}</p><a class="pill pill-blue" href="${path("contact.html")}">Discuss this service <span>↗</span></a></div><div><p class="section-tag">Service Scope</p><ul class="service-deliverables">${service.includes.map(text=>`<li>${esc(text)}</li>`).join("")}</ul><p class="service-scope-note">${esc(service.scope)}</p></div></div></section>${serviceProcessSection(service,LEGACY_SERVICE_PROCESS[service.slug]||[])}<section class="faq section"><div class="shell faq-grid"><div class="faq-intro"><p class="section-tag">Service FAQ</p><h2>Before we get started.</h2></div><div class="faq-list"><details open><summary>What does this service include?<span>+</span></summary><p>${esc(service.includes.join("; "))}. ${esc(service.scope)}</p></details><details><summary>Can this be combined with other services?<span>+</span></summary><p>Yes. We can combine services around your website, visibility, advertising, and follow-up needs. We confirm the deliverables and responsibilities in your proposal.</p></details><details><summary>How do we get started?<span>+</span></summary><p>Contact VNW Media with your website, goals, and priorities. We will discuss the current setup and recommend an appropriate scope.</p></details></div></div></section>${serviceDirectoryMarkup(path(""),true)}${nextChapterCTA()}`;
   }
   const industry=kind==="industry";
   return hero(industry?"Industry Playbook":"Service",name,description,image)+`<section class="detail section" id="page-content"><div class="shell detail-grid"><div class="reveal"><p class="section-tag">${industry?"Market Strategy":"Service Blueprint"}</p><h2>${industry?"Built around how customers choose.":"Built to connect attention to action."}</h2><p>${description}</p><a class="text-arrow" href="${path("contact.html")}">Plan this with VNW <span>↗</span></a></div><div class="blueprint reveal">${["Strategy and positioning","Trust-first page experience","Search and campaign alignment","Measurement and improvement"].map((x,i)=>`<article><span>0${i+1}</span><h3>${x}</h3><p>A focused layer that helps prospects feel informed, confident, and ready to act.</p></article>`).join("")}</div></div></section>${process()}`;
