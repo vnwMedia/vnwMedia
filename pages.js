@@ -1586,6 +1586,15 @@ function serviceProcessSection(service,process){
   return `<section class="csp-process section csp-process--${layout}" id="how-the-project-moves" data-nav-theme="light" data-process-layout="${layout}" aria-labelledby="service-process-title"><div class="shell"><div class="csp-section-head"><p class="section-tag">How the project moves</p><div><h2 id="service-process-title">A practical process with clear decisions.</h2><p>Enough structure to keep work moving, with room to respond to what discovery and testing reveal.</p></div></div>${arrangement}</div></section>`;
 }
 
+function serviceHelpIcon(index){
+  const icons={
+    1:'<svg viewBox="0 0 48 48" focusable="false"><path d="M10 15h10v10H10zM28 24h10v10H28zM19 20l10 5M18 25l11 4"/><circle cx="24" cy="24" r="2.5"/></svg>',
+    2:'<svg viewBox="0 0 48 48" focusable="false"><rect x="8" y="10" width="26" height="21" rx="2"/><path d="M8 16h26M13 13h.1M17 13h.1M21 13h.1"/><rect x="25" y="21" width="15" height="19" rx="2"/><path d="M29 25h7M29 29h7"/></svg>',
+    3:'<svg viewBox="0 0 48 48" focusable="false"><path d="M9 39V27h7v12M21 39V18h7v21M33 39V9h7v30M9 39h31"/><path d="m12 22 10-8 7 3 10-9M34 8h5v5"/></svg>'
+  };
+  return icons[index]||icons[1];
+}
+
 function createServiceDetail(service,data){
   const faqCTA={
     'brand-strategy':'Discuss your brand strategy',
@@ -1638,7 +1647,7 @@ function createServiceDetail(service,data){
   const related=(data.related||[]).map(slug=>SERVICE_CATALOG.find(item=>item.slug===slug)).filter(Boolean);
   return `<div class="create-service-page">
     ${serviceHero(service,{eyebrow:data.eyebrow,headline:data.headline,lede:data.lede,image:data.hero,imageAlt:data.heroAlt,cta:heroCTA,nextHref:"#what-we-help",proof:["Strategy-led","Responsive design","Search & campaign ready"]})}
-    <section class="csp-help section" id="what-we-help" data-nav-theme="light"><div class="shell"><div class="csp-section-head"><p class="section-tag">What we can help you do</p><div><h2>${esc(data.introHeading)}</h2><p>${esc(data.introBody)}</p></div></div><div class="csp-outcomes">${data.outcomes.map((item,index)=>`<article><span>0${index+1}</span><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></article>`).join("")}</div></div></section>
+    <section class="csp-help section" id="what-we-help" data-nav-theme="light" aria-labelledby="service-help-title"><div class="shell"><div class="csp-help-heading"><p class="section-tag">What we can help you do</p><h2 id="service-help-title">${esc(data.introHeading)}</h2><p>${esc(data.introBody)}</p></div><div class="csp-help-layout"><article class="csp-help-feature"><div class="csp-help-feature-copy"><p class="csp-help-kicker"><span>01</span> Foundation</p><h3>${esc(data.outcomes[0][0])}</h3><p>${esc(data.outcomes[0][1])}</p></div><div class="csp-help-feature-art" aria-hidden="true"><svg viewBox="0 0 520 280" preserveAspectRatio="xMidYMid meet"><ellipse cx="260" cy="140" rx="198" ry="69" transform="rotate(-18 260 140)"/><circle class="csp-help-orbit-node" cx="68" cy="150" r="11"/><circle class="csp-help-orbit-node-core" cx="68" cy="150" r="6"/><circle class="csp-help-orbit-node" cx="450" cy="128" r="11"/><circle class="csp-help-orbit-node-core" cx="450" cy="128" r="6"/></svg><div class="csp-help-orbit-center">Useful<br>customer<br>experience</div></div></article><div class="csp-help-list">${data.outcomes.slice(1).map((item,index)=>{const number=index+2;const labels={2:"Flow",3:"Experience",4:"Growth"};return `<article class="csp-help-row"><div class="csp-help-icon" aria-hidden="true">${serviceHelpIcon(number-1)}</div><div class="csp-help-row-copy"><p class="csp-help-kicker"><span>0${number}</span> ${labels[number]}</p><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></div></article>`}).join("")}</div></div></div></section>
     <section class="csp-scope section" data-nav-theme="dark"><div class="shell csp-scope-grid"><figure><img src="${img(data.feature)}" alt="${esc(data.featureAlt)}"><figcaption>Built around the customer and the business goal.</figcaption></figure><div class="csp-scope-copy"><p class="section-tag">A complete engagement</p><h2>What the work can include.</h2><p>We shape the scope around the current situation, internal resources, and the result the business needs next.</p><ul>${data.included.map(item=>`<li>${esc(item)}</li>`).join("")}</ul><p class="csp-scope-note">Deliverables, review rounds, platforms, integrations, and timing are confirmed in your proposal.</p><a class="pill pill-blue csp-scope-cta" href="${path("contact.html")}">${esc(faqCTA)} <span aria-hidden="true">↗</span></a></div></div></section>
     ${serviceProcessSection(service,data.process)}
     ${serviceDiagnosticCTA(service)}
