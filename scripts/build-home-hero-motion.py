@@ -45,6 +45,7 @@ def previews():
         page = page.replace('<main id="top">', toolbar + '<main id="top">', 1)
         page = page.replace('<div class="shell hero-grid">', '<div class="motion-caption"><span>' + label + '</span><strong id="motionIndustry">Home Services &amp; Contractors</strong></div><div class="shell hero-grid">', 1)
         page = page.replace('</body>', '<script src="home-hero-motion.js"></script><script src="site-buttons.js?v=20261004-mobile-business-field-v1"></script></body>')
+        page = '\n'.join(line.rstrip() for line in page.splitlines()) + '\n'
         (ROOT / f"home-hero-{mode}-preview.html").write_text(page)
 
 def render(ffmpeg):
