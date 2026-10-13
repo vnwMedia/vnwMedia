@@ -1709,7 +1709,7 @@ function serviceCompactArtwork(slug,index){
   else if(type==='mail')inside='<div class="cq-envelope">✉</div>'+bars;
   else if(type==='chat')inside='<div class="cq-bubble">Hello</div><div class="cq-bubble reply">Let’s talk</div>';
   else inside=bars+'<span class="cq-art-button">'+(type==='search'?'Explore ↗':type==='files'?'Approved ✓':'Next step ↗')+'</span>';
-  return '<div class="cq-art cq-art-'+type+'" aria-hidden="true"><div class="cq-art-sheet"><span class="cq-art-title">'+l[0]+'</span><span class="cq-art-caption">'+l[1]+'</span>'+inside+'</div></div>';
+  return '<div class="cq-art cq-art-'+type+'" aria-hidden="true"><div class="cq-art-sheet"><span class="cq-art-title">'+l[0]+'</span><span class="cq-art-caption">'+l[1]+'</span><div class="cq-unique-scene">'+inside+'</div>'+'</div></div>';
 }
 function serviceCustomerQuestions(service,data){
   const questions=SERVICE_CUSTOMER_QUESTIONS[service.slug]||[];
