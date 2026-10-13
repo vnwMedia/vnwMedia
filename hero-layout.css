@@ -72,6 +72,18 @@ html body[data-page="home"] .hero .reveal{
 /* Case-study client marks and copy belong near the bottom of the image hero. */
 html body[data-page^="case-"] .scm-ms-hero{align-items:flex-end!important}
 html body[data-page^="case-"] .scm-ms-hero>.shell{align-self:flex-end!important}
+/* Mobile-only crop and extra image contrast; copy and forms are never filtered. */
+@media(max-width:760px){
+  html body main :is(.hero-bg,.inner-hero-bg,.csp-hero-media,.indl-hero-media,.scm-ms-hero-bg){
+    background-position:center top!important;
+    filter:brightness(.88);
+  }
+  html body main :is(.hero-bg,.inner-hero-bg,.csp-hero-media,.indl-hero-media,.scm-ms-hero-bg) :is(img,video),
+  html body main :is(.sd-hero,.cinema-hero,.cover-five)>img{
+    object-position:center top!important;
+  }
+  html body main :is(.sd-hero,.cinema-hero,.cover-five)>img{filter:brightness(.88)}
+}
 /* Mobile hero typography must not inherit desktop-scale headline overrides. */
 @media(max-width:760px){
   html body main :is(.hero,.inner-hero,.csp-hero,.scm-ms-hero,.cinema-hero,.cover-five,.indl-hero) h1,
