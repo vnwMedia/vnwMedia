@@ -31,6 +31,7 @@
   .industries-live .story-band.reverse>img{grid-column:3/5}
   .industries-live .story-band.reverse>div{grid-column:2;padding-inline:0 40px}
 }
+@media(max-width:760px){.industries-live .cinema-hero>img{filter:brightness(.308)}}
 @media(max-width:760px){
   .industries-live .story-band>div{width:var(--shell);margin-inline:auto;padding-inline:0}
 }
