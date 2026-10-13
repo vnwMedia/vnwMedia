@@ -74,7 +74,7 @@ html body[data-page^="case-"] .scm-ms-hero{align-items:flex-end!important}
 html body[data-page^="case-"] .scm-ms-hero>.shell{align-self:flex-end!important}
 /* Mobile hero typography must not inherit desktop-scale headline overrides. */
 @media(max-width:760px){
-  html body main :is(.hero,.inner-hero,.csp-hero,.scm-ms-hero,.cinema-hero,.cover-five) h1,
+  html body main :is(.hero,.inner-hero,.csp-hero,.scm-ms-hero,.cinema-hero,.cover-five,.indl-hero) h1,
   html body.sd-site.services-landing :is(#sd-app,.sd-content) .sd-hero h1,
   html body.sd-site :is(#sd-app,.sd-content) .sd-hero h1{
     font-size:clamp(36px,10vw,44px)!important;
