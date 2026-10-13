@@ -65,3 +65,12 @@
 @media(max-width:1000px){.cq-card-body{grid-template-columns:minmax(0,1fr) 130px;gap:18px}.cq-art{width:130px;height:160px}.cq-art-title{font-size:18px}.cq-art-caption{font-size:12px}.cq-art-sheet{padding:14px 10px}.cq-art-button{font-size:12px}.cq-node{width:42px;height:42px}.cq-node.contact{left:44px}.cq-node-label{font-size:12px}.cq-search-input{font-size:12px}.cq-art-mobile .cq-art-sheet{inset:0 24px 0 7px;padding:12px 7px}.cq-art-mobile .cq-art-title{font-size:14px}}
 @media(max-width:700px){.csp-question-card{padding:24px}.csp-question-prompt{margin-bottom:28px;min-height:0}.create-service-page .csp-question-card h3{font-size:27px}.cq-card-body{align-items:center}}
 @media(max-width:380px){.csp-question-card{padding:20px}.cq-card-body{grid-template-columns:minmax(0,1fr) 115px;gap:12px}.cq-art{width:115px}.create-service-page .csp-question-card h3{font-size:24px}.cq-node.contact{left:36px}.cq-art-title{font-size:17px}}
+/* Shared spacing and illustration tokens for every service card. */
+.csp-question-prompt{min-height:0;margin-bottom:18px}
+.cq-art{--cq-outline:#bad9e6;--cq-outline-width:1px}
+.cq-art .cq-art-sheet,.cq-art .cq-art-badge,.cq-art .cq-tap,.cq-art .cq-node,.cq-art .cq-products i,.cq-art .cq-connect span,.cq-art .cq-bubble{border-color:var(--cq-outline);border-width:var(--cq-outline-width)}
+.cq-art-mobile .cq-art-title{font:400 22px/1.2 Georgia,serif;color:#274c5c;margin-top:12px;margin-bottom:10px}
+.cq-phone-notch{background:var(--cq-outline);height:3px}
+.cq-art svg{stroke-width:1.5}
+@media(max-width:1000px){.cq-art-mobile .cq-art-title{font-size:18px}}
+@media(max-width:380px){.cq-art-mobile .cq-art-title{font-size:17px}}
