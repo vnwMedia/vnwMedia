@@ -97,3 +97,7 @@
 .cq-timeline.big{gap:4px}.cq-timeline.big i{height:22px}.cq-edit-mark{text-align:center;color:#0087b4;font:400 22px/1 Arial}
 .cq-audio{display:flex;height:32px;gap:5px;align-items:center;justify-content:center}.cq-audio i{width:5px;background:#00ace5;height:10px}.cq-audio i:nth-child(2n){height:23px}.cq-audio i:nth-child(3n){height:32px}
 @media(max-width:1000px){.cq-art-sheet{padding:10px 8px}.cq-art-title,.cq-art-mobile .cq-art-title{font-size:16px}.cq-art-caption{font-size:11px;margin-bottom:5px}.cq-art-button{font-size:11px;padding:4px}.cq-art-mobile .cq-art-title{margin:8px 0 6px}.cq-art-mobile .cq-art-sheet{padding:10px 7px}.cq-chart{height:42px;flex-shrink:1}.cq-chart i:nth-child(4){height:38px}}
+/* Phone illustration headings stay on one line at every service breakpoint. */
+.cq-art-mobile .cq-art-title{white-space:nowrap;font-size:15px;line-height:1.2}
+@media(max-width:1000px){.cq-art-mobile .cq-art-title{font-size:12px}}
+@media(max-width:380px){.cq-art-mobile .cq-art-title{font-size:11px}}
