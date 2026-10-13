@@ -1,0 +1,99 @@
+VNW MEDIA — PHYSICAL BUSINESS CARD CONCEPTS
+Created October 13, 2026 using built-in image generation.
+Reference logo: assets/vnwMedia-LogoBlk.png (matching supplied preview logo).
+Reference typography and colors: styles.css; homepage headlines: index.html.
+Sample contact details are illustrative. vnwmedia.com is the company website.
+Visual mockups only. No claim of exact font embedding, trim dimensions, bleed, CMYK, or print readiness. Final chosen artwork should use actual Fraunces and Inter, original logo, and printer specifications.
+
+CONCEPT 1 — Results
+
+Use case: product-mockup.
+Asset type: premium graphic-design presentation of a physical, two-sided business card for VNW MEDIA, a web design and digital marketing agency. This is a print identity concept, NOT a phone screenshot or digital contact app. Show BOTH front and back completely and legibly.
+Input image 1: original VNW MEDIA wordmark with its existing small tagline 'A Web & Digital Marketing Company'. Preserve the actual logo's unique white/cyan geometric thin line letterforms and proportions faithfully. Do not replace it with a generic wordmark. Always place the supplied white/cyan logo on charcoal/black for contrast. Use the logo with tagline only once per side, do not duplicate its description.
+Brand system taken directly from the company's new website: charcoal #121212, warm ivory #f9f8f6, cyan #00aeef. Display typography in Fraunces regular, a confident contemporary editorial serif with expressive italic accents; supporting text in Inter regular/medium/semibold, clean neutral sans-serif; small uppercase tracked section labels. Reproduce these type styles carefully. The pairing of strong editorial serif headlines with precise clean small type is important.
+Use intelligent generous negative space, a rigorous grid, unusually good typography, strong hierarchy, 3mm-equivalent safe margins; legible contact information sized for real business cards. No tiny overstuffed copy. Premium agency design with crisp straight edges, clean sharp printing, restrained tactile matte paper. Tasteful directional arrow ↗ may echo the website. Avoid generic template swooshes, gradient blobs, glass panels, fake charts, clipart, social icon clutter, shiny chrome, gold foil, and rounded app-style containers. No fake metrics, awards, QR patterns, unrelated logos or invented monograms.
+All personal data are illustrative. Exact sample contact copy on the contact side:
+'Jordan Taylor'
+'Brand Strategist'
+'hello@example.com'
+'(201) 555-0148'
+'vnwmedia.com'
+You may use the short services line 'Web Design · SEO · Paid Media' only once, unobtrusively if specified by direction.
+Presentation: impeccably straight-on flat-lay / orthographic artwork so both cards can be evaluated as layouts. No perspective distortion, no overlapping cards, no hands, no plants, no stationery props. Fine soft edge shadows distinguish cards from neutral light gray presentation board. Both sides must be large in the image with crisp sharp text. Board labels outside card boundaries should be small and unobtrusive: concept number and title at top, 'FRONT' / 'BACK' at relevant card, 'Sample details · Design concept' at bottom. No other board text. No printing crop marks. Output is a design concept, not press-ready artwork.
+Portrait 1024x1536 presentation board. Two HORIZONTAL 3.5 x 2 inch ratio business cards stacked vertically, each approximately 900px wide, separated by a neat generous gap. Top/front black, bottom/back ivory. FRONT: clean original logo placed modestly at top left on black; below it a powerful oversized Fraunces editorial headline broken into three intentional lines 'Digital marketing' / 'that gets your' / 'business results.' The final words 'business results.' in cyan italic. Keep headline optically composed with breathing room, not touching logo. Small cyan ↗ in lower right. BACK: warm ivory with 'Jordan Taylor' large in black Fraunces upper left, role in small spaced Inter underneath. Contact details lower left with impeccable baseline spacing. Website bottom right, cyan small arrow. A slim cyan vertical accent near left safe edge and fine charcoal rule organize the layout. No repeating front headline on back. Strong premium direct translation of website homepage.
+
+====================================
+
+CONCEPT 2 — Editorial
+
+Use case: product-mockup.
+Asset type: premium graphic-design presentation of a physical, two-sided business card for VNW MEDIA, a web design and digital marketing agency. This is a print identity concept, NOT a phone screenshot or digital contact app. Show BOTH front and back completely and legibly.
+Input image 1: original VNW MEDIA wordmark with its existing small tagline 'A Web & Digital Marketing Company'. Preserve the actual logo's unique white/cyan geometric thin line letterforms and proportions faithfully. Do not replace it with a generic wordmark. Always place the supplied white/cyan logo on charcoal/black for contrast. Use the logo with tagline only once per side, do not duplicate its description.
+Brand system taken directly from the company's new website: charcoal #121212, warm ivory #f9f8f6, cyan #00aeef. Display typography in Fraunces regular, a confident contemporary editorial serif with expressive italic accents; supporting text in Inter regular/medium/semibold, clean neutral sans-serif; small uppercase tracked section labels. Reproduce these type styles carefully. The pairing of strong editorial serif headlines with precise clean small type is important.
+Use intelligent generous negative space, a rigorous grid, unusually good typography, strong hierarchy, 3mm-equivalent safe margins; legible contact information sized for real business cards. No tiny overstuffed copy. Premium agency design with crisp straight edges, clean sharp printing, restrained tactile matte paper. Tasteful directional arrow ↗ may echo the website. Avoid generic template swooshes, gradient blobs, glass panels, fake charts, clipart, social icon clutter, shiny chrome, gold foil, and rounded app-style containers. No fake metrics, awards, QR patterns, unrelated logos or invented monograms.
+All personal data are illustrative. Exact sample contact copy on the contact side:
+'Jordan Taylor'
+'Brand Strategist'
+'hello@example.com'
+'(201) 555-0148'
+'vnwmedia.com'
+You may use the short services line 'Web Design · SEO · Paid Media' only once, unobtrusively if specified by direction.
+Presentation: impeccably straight-on flat-lay / orthographic artwork so both cards can be evaluated as layouts. No perspective distortion, no overlapping cards, no hands, no plants, no stationery props. Fine soft edge shadows distinguish cards from neutral light gray presentation board. Both sides must be large in the image with crisp sharp text. Board labels outside card boundaries should be small and unobtrusive: concept number and title at top, 'FRONT' / 'BACK' at relevant card, 'Sample details · Design concept' at bottom. No other board text. No printing crop marks. Output is a design concept, not press-ready artwork.
+Portrait 1024x1536 board with two HORIZONTAL 3.5 x 2 inch ratio cards stacked, approx 900px wide each, no overlap. FRONT: warm ivory main card with large black Fraunces headline 'We help businesses' / 'stand out online.' with 'stand out' in cyan italic. Small upper-left tracked Inter label 'A NEW JERSEY DIGITAL AGENCY'. Bottom 25% clean charcoal footer band with original white/cyan logo at left, smaller, full tagline still legible; tiny cyan directional arrow far right. BACK: solid charcoal, generous negative space, name 'Jordan Taylor' in warm white Fraunces toward upper left and cyan 'Brand Strategist' beneath. A delicate cyan horizontal rule at midheight; contact details low left and website low right in white Inter. Understated elegant studio stationery. Clear serif dominance with calm symmetry and deliberate graphic balance.
+
+====================================
+
+CONCEPT 3 — Blue Block
+
+Use case: product-mockup.
+Asset type: premium graphic-design presentation of a physical, two-sided business card for VNW MEDIA, a web design and digital marketing agency. This is a print identity concept, NOT a phone screenshot or digital contact app. Show BOTH front and back completely and legibly.
+Input image 1: original VNW MEDIA wordmark with its existing small tagline 'A Web & Digital Marketing Company'. Preserve the actual logo's unique white/cyan geometric thin line letterforms and proportions faithfully. Do not replace it with a generic wordmark. Always place the supplied white/cyan logo on charcoal/black for contrast. Use the logo with tagline only once per side, do not duplicate its description.
+Brand system taken directly from the company's new website: charcoal #121212, warm ivory #f9f8f6, cyan #00aeef. Display typography in Fraunces regular, a confident contemporary editorial serif with expressive italic accents; supporting text in Inter regular/medium/semibold, clean neutral sans-serif; small uppercase tracked section labels. Reproduce these type styles carefully. The pairing of strong editorial serif headlines with precise clean small type is important.
+Use intelligent generous negative space, a rigorous grid, unusually good typography, strong hierarchy, 3mm-equivalent safe margins; legible contact information sized for real business cards. No tiny overstuffed copy. Premium agency design with crisp straight edges, clean sharp printing, restrained tactile matte paper. Tasteful directional arrow ↗ may echo the website. Avoid generic template swooshes, gradient blobs, glass panels, fake charts, clipart, social icon clutter, shiny chrome, gold foil, and rounded app-style containers. No fake metrics, awards, QR patterns, unrelated logos or invented monograms.
+All personal data are illustrative. Exact sample contact copy on the contact side:
+'Jordan Taylor'
+'Brand Strategist'
+'hello@example.com'
+'(201) 555-0148'
+'vnwmedia.com'
+You may use the short services line 'Web Design · SEO · Paid Media' only once, unobtrusively if specified by direction.
+Presentation: impeccably straight-on flat-lay / orthographic artwork so both cards can be evaluated as layouts. No perspective distortion, no overlapping cards, no hands, no plants, no stationery props. Fine soft edge shadows distinguish cards from neutral light gray presentation board. Both sides must be large in the image with crisp sharp text. Board labels outside card boundaries should be small and unobtrusive: concept number and title at top, 'FRONT' / 'BACK' at relevant card, 'Sample details · Design concept' at bottom. No other board text. No printing crop marks. Output is a design concept, not press-ready artwork.
+Portrait 1024x1536 board with two HORIZONTAL 3.5 x 2 inch cards stacked, approx900px wide. FRONT: architectural color-block composition, 70% charcoal on left, 30% flat cyan on right with a hard straight vertical boundary. Original full white/cyan logo centered within the charcoal area at meaningful scale, ample breathing room. The cyan right-hand field holds one oversized elegant black upward-right arrow, no other graphic. At charcoal bottom-left, small Inter text 'Strategy. Creative. Growth.' with clear spacing. BACK: full cyan background, black lettering. Confident large name 'Jordan Taylor' in Fraunces near upper left, role in small Inter. Precise black contact details aligned lower left, website isolated lower right, very fine black horizontal divider above contact area. Distinctive bold cyan reverse that makes this pair feel collectible. No additional logo on back.
+
+====================================
+
+CONCEPT 4 — Vertical
+
+Use case: product-mockup.
+Asset type: premium graphic-design presentation of a physical, two-sided business card for VNW MEDIA, a web design and digital marketing agency. This is a print identity concept, NOT a phone screenshot or digital contact app. Show BOTH front and back completely and legibly.
+Input image 1: original VNW MEDIA wordmark with its existing small tagline 'A Web & Digital Marketing Company'. Preserve the actual logo's unique white/cyan geometric thin line letterforms and proportions faithfully. Do not replace it with a generic wordmark. Always place the supplied white/cyan logo on charcoal/black for contrast. Use the logo with tagline only once per side, do not duplicate its description.
+Brand system taken directly from the company's new website: charcoal #121212, warm ivory #f9f8f6, cyan #00aeef. Display typography in Fraunces regular, a confident contemporary editorial serif with expressive italic accents; supporting text in Inter regular/medium/semibold, clean neutral sans-serif; small uppercase tracked section labels. Reproduce these type styles carefully. The pairing of strong editorial serif headlines with precise clean small type is important.
+Use intelligent generous negative space, a rigorous grid, unusually good typography, strong hierarchy, 3mm-equivalent safe margins; legible contact information sized for real business cards. No tiny overstuffed copy. Premium agency design with crisp straight edges, clean sharp printing, restrained tactile matte paper. Tasteful directional arrow ↗ may echo the website. Avoid generic template swooshes, gradient blobs, glass panels, fake charts, clipart, social icon clutter, shiny chrome, gold foil, and rounded app-style containers. No fake metrics, awards, QR patterns, unrelated logos or invented monograms.
+All personal data are illustrative. Exact sample contact copy on the contact side:
+'Jordan Taylor'
+'Brand Strategist'
+'hello@example.com'
+'(201) 555-0148'
+'vnwmedia.com'
+You may use the short services line 'Web Design · SEO · Paid Media' only once, unobtrusively if specified by direction.
+Presentation: impeccably straight-on flat-lay / orthographic artwork so both cards can be evaluated as layouts. No perspective distortion, no overlapping cards, no hands, no plants, no stationery props. Fine soft edge shadows distinguish cards from neutral light gray presentation board. Both sides must be large in the image with crisp sharp text. Board labels outside card boundaries should be small and unobtrusive: concept number and title at top, 'FRONT' / 'BACK' at relevant card, 'Sample details · Design concept' at bottom. No other board text. No printing crop marks. Output is a design concept, not press-ready artwork.
+Landscape1536x1024 presentation board. Exactly two VERTICAL standard business cards (2 inches wide x 3.5 inches tall ratio), placed side by side with generous neutral board margins, each about470px wide and820px high. Left FRONT solid charcoal. Top original white/cyan logo with its single tagline centered width80%. A beautiful large Fraunces headline below in five short readable lines: 'From' / 'first click' / 'to closed' / 'deal.' (four lines is fine); words 'closed deal.' cyan italic. Bottom small uppercase Inter 'WEB · SEARCH · CAMPAIGNS' and a restrained cyan ↗. Right BACK warm ivory, name 'Jordan Taylor' in large black Fraunces near top, role in tracked Inter. A cyan vertical hairline along the left safe margin. Very spacious center. Contact details form an exact neat stack toward lower third, website at bottom with cyan arrow. Elegant unusually strong vertical architecture. Maintain real portrait card ratios, no phone or rounded screen frame.
+
+====================================
+
+CONCEPT 5 — Signature
+
+Use case: product-mockup.
+Asset type: premium graphic-design presentation of a physical, two-sided business card for VNW MEDIA, a web design and digital marketing agency. This is a print identity concept, NOT a phone screenshot or digital contact app. Show BOTH front and back completely and legibly.
+Input image 1: original VNW MEDIA wordmark with its existing small tagline 'A Web & Digital Marketing Company'. Preserve the actual logo's unique white/cyan geometric thin line letterforms and proportions faithfully. Do not replace it with a generic wordmark. Always place the supplied white/cyan logo on charcoal/black for contrast. Use the logo with tagline only once per side, do not duplicate its description.
+Brand system taken directly from the company's new website: charcoal #121212, warm ivory #f9f8f6, cyan #00aeef. Display typography in Fraunces regular, a confident contemporary editorial serif with expressive italic accents; supporting text in Inter regular/medium/semibold, clean neutral sans-serif; small uppercase tracked section labels. Reproduce these type styles carefully. The pairing of strong editorial serif headlines with precise clean small type is important.
+Use intelligent generous negative space, a rigorous grid, unusually good typography, strong hierarchy, 3mm-equivalent safe margins; legible contact information sized for real business cards. No tiny overstuffed copy. Premium agency design with crisp straight edges, clean sharp printing, restrained tactile matte paper. Tasteful directional arrow ↗ may echo the website. Avoid generic template swooshes, gradient blobs, glass panels, fake charts, clipart, social icon clutter, shiny chrome, gold foil, and rounded app-style containers. No fake metrics, awards, QR patterns, unrelated logos or invented monograms.
+All personal data are illustrative. Exact sample contact copy on the contact side:
+'Jordan Taylor'
+'Brand Strategist'
+'hello@example.com'
+'(201) 555-0148'
+'vnwmedia.com'
+You may use the short services line 'Web Design · SEO · Paid Media' only once, unobtrusively if specified by direction.
+Presentation: impeccably straight-on flat-lay / orthographic artwork so both cards can be evaluated as layouts. No perspective distortion, no overlapping cards, no hands, no plants, no stationery props. Fine soft edge shadows distinguish cards from neutral light gray presentation board. Both sides must be large in the image with crisp sharp text. Board labels outside card boundaries should be small and unobtrusive: concept number and title at top, 'FRONT' / 'BACK' at relevant card, 'Sample details · Design concept' at bottom. No other board text. No printing crop marks. Output is a design concept, not press-ready artwork.
+Portrait1024x1536 board with two HORIZONTAL3.5x2 inch ratio cards stacked, each about900px wide. FRONT: pure charcoal with the original white/cyan logo and its one tagline centered large horizontally and vertically, around75% card width, absolute confidence, no other front text. A single ultra-thin cyan rule near the bottom edge may be used; faint deboss texture okay, no extra illustration. BACK: charcoal as well, with asymmetric graphic hierarchy. Upper left contact name 'Jordan Taylor' in generously sized warm-white Fraunces, small muted light-gray Inter role beneath. Upper right small cyan word 'Connect.' in Fraunces italic. Contact block lower left clean white Inter. Website at lower right in cyan medium Inter; thin cyan rule above the bottom line 'Web Design · SEO · Paid Media' in subtle light-gray small text. Exactly one services line. Premium understated dark-on-dark agency business card, poised and memorable; spacing does the work, not decoration.
