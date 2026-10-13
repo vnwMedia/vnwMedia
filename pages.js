@@ -1646,7 +1646,38 @@ const SERVICE_COMPACT_ART={
   'content-writing':['copy','copy','offer','files'], 'video-editing':['video','video','video','files']
 };
 function serviceCompactArtwork(slug,index){
-  const type=SERVICE_COMPACT_ART[slug][index];
+  const distinct={
+    'ecommerce':['shop','product-detail','mobile','chart'],
+    'website-maintenance':['check','repair','chart','connect'],
+    'social-media':['plan','design','brand-kit','chart'],
+    'social-media-consultation':['channels','plan','connect','chart'],
+    'community-management':['chat','check','discussion','chart'],
+    'content-seo':['search','copy','article','check'],
+    'reputation-management':['review','chat','feedback','chart'],
+    'google-ppc':['search','ad','chart','budget'],
+    'email-marketing':['welcome-mail','nurture-mail','retention-mail','chart'],
+    'text-marketing':['chat','mobile','reminder','connect'],
+    'content-writing':['copy','article','offer','files'],
+    'video-editing':['video','timeline','audio','files']
+  };
+  const type=(distinct[slug]||SERVICE_COMPACT_ART[slug])[index];
+  const unique={
+    'product-detail':['Product detail','Reasons to choose','<div class="cq-detail-product"></div><div class="cq-stars">★★★★★</div>'],
+    repair:['Resolve issues','Fix · test · confirm','<div class="cq-repair">'+serviceHelpIcon(1)+'</div><div class="cq-checklist"><span>✓</span><i></i></div>'],
+    'brand-kit':['Brand voice','Recognizable style','<div class="cq-brand-letter">Aa</div><div class="cq-swatches"><i></i><i></i><i></i></div>'],
+    channels:['Channel fit','Audience & purpose','<div class="cq-channel-grid"><span>Social</span><span>Search</span><span>Email</span><span>Web</span></div>'],
+    discussion:['Participation','Invite a response','<div class="cq-discussion"><i></i><i></i><i></i></div><div class="cq-bubble">Join the conversation</div>'],
+    article:['Helpful content','Clear, credible answers','<div class="cq-article"><i></i><span></span><span></span><span></span></div>'],
+    feedback:['Ask for feedback','An honest response','<div class="cq-feedback"><span>How did we do?</span><i>☆ ☆ ☆ ☆ ☆</i></div>'],
+    budget:['Budget focus','Allocate responsibly','<div class="cq-budget-ring"></div><div class="cq-budget-key"><i></i><span>Priorities</span></div>'],
+    'welcome-mail':['Welcome','Start the connection','<div class="cq-envelope">✉</div><span class="cq-mail-tag">New contact ✓</span>'],
+    'nurture-mail':['Next decision','Useful information','<div class="cq-mail-sequence"><span>1</span><b>→</b><span>2</span><b>→</b><span>3</span></div><div class="cq-bubble">A helpful next step</div>'],
+    'retention-mail':['Stay connected','Keep it relevant','<div class="cq-retention">↻</div><span class="cq-mail-tag">Customer update</span>'],
+    reminder:['Reconnect','Opted-in customers','<div class="cq-reminder"><span>Reminder</span><i>✓</i><small>Ready to return?</small></div>'],
+    timeline:['Pacing','Build the sequence','<div class="cq-timeline big"><i></i><i></i><i></i></div><div class="cq-edit-mark">│</div>'],
+    audio:['Sound & color','Polish the details','<div class="cq-audio"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="cq-swatches"><i></i><i></i><i></i></div>']
+  };
+  if(unique[type]){const a=unique[type];return '<div class="cq-art cq-art-'+type+'" aria-hidden="true"><div class="cq-art-sheet"><span class="cq-art-title">'+a[0]+'</span><span class="cq-art-caption">'+a[1]+'</span><div class="cq-unique-scene">'+a[2]+'</div></div></div>';}
   const labels={offer:['Your offer.','Clear. Credible.'],copy:['Useful words.','A clear message'],design:['Brand palette','One visual voice'],plan:['Priorities','Plan · review · act'],check:['Site health','Review complete'],search:['Find a service','Your business'],local:['Local presence','Nearby customers'],review:['Customer trust','Honest feedback'],mobile:['Take action','Clear next step'],shop:['Your products','Easy discovery'],chart:['Useful signals','Learn & improve'],connect:['Connected tools','Lead → follow-up'],mail:['Customer email','Helpful follow-up'],chat:['Conversation','A timely response'],ad:['Your campaign','Message match'],files:['Final assets','Ready to use'],video:['Your story','Cut · sound · color']};
   const l=labels[type];
   const check='<svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>';
