@@ -1629,10 +1629,46 @@ function serviceFallbackHelp(service){
   const outcomes=service.slug==='video-editing' ? [["Shape the story","Organize footage around a clear audience, message, and intended action."],["Refine the pacing","Build a purposeful sequence with well-timed cuts and transitions."],["Polish the details","Refine sound, color, captions, titles, and agreed review notes."],["Prepare the delivery","Export agreed formats and organize final versions for their platforms."]] : [["Clarify the message","Define the audience, subject, goal, and key points before drafting."],["Make it readable","Structure clear copy around reader questions and a useful next step."],["Keep the voice consistent","Align language, tone, and terminology with your brand and source material."],["Prepare to publish","Review and format approved copy for the agreed website or campaign channel."]];
   return {introHeading:service.slug==='video-editing'?'Turn your footage into a clear, engaging story.':'Give your business a clear voice and useful content.',introBody:service.overview,outcomes};
 }
+const SERVICE_COMPACT_ART={
+  'brand-strategy':['offer','copy','design','plan'], 'graphic-design':['design','copy','ad','files'],
+  'web-design':['offer','mobile','search','connect'], 'ecommerce':['shop','shop','mobile','chart'],
+  'website-maintenance':['check','check','chart','connect'], 'app-design-development':['plan','connect','mobile','chart'],
+  'landing-pages':['ad','copy','mobile','chart'], 'social-media':['plan','design','design','chart'],
+  'social-media-consultation':['connect','plan','connect','chart'], 'community-management':['chat','check','chat','chart'],
+  'seo':['check','search','local','chart'], 'local-seo':['local','search','review','chart'],
+  'technical-seo':['connect','search','mobile','check'], 'content-seo':['search','copy','copy','check'],
+  'yelp-seo':['local','shop','review','chart'], 'google-business-profile':['local','search','review','chart'],
+  'aeo':['search','chat','copy','chart'], 'geo':['connect','copy','check','search'],
+  'aio':['connect','copy','check','plan'], 'reputation-management':['review','chat','review','chart'],
+  'lead-generation':['search','mobile','check','connect'], 'google-ppc':['search','ad','chart','chart'],
+  'paid-social':['connect','ad','mobile','chart'], 'email-marketing':['mail','mail','mail','chart'],
+  'text-marketing':['chat','mobile','chat','connect'], 'crm-automation':['check','connect','mail','chart'],
+  'content-writing':['copy','copy','offer','files'], 'video-editing':['video','video','video','files']
+};
+function serviceCompactArtwork(slug,index){
+  const type=SERVICE_COMPACT_ART[slug][index];
+  const labels={offer:['Your offer.','Clear. Credible.'],copy:['Useful words.','A clear message'],design:['Brand palette','One visual voice'],plan:['Priorities','Plan · review · act'],check:['Site health','Review complete'],search:['Find a service','Your business'],local:['Local presence','Nearby customers'],review:['Customer trust','Honest feedback'],mobile:['Take action','Clear next step'],shop:['Your products','Easy discovery'],chart:['Useful signals','Learn & improve'],connect:['Connected tools','Lead → follow-up'],mail:['Customer email','Helpful follow-up'],chat:['Conversation','A timely response'],ad:['Your campaign','Message match'],files:['Final assets','Ready to use'],video:['Your story','Cut · sound · color']};
+  const l=labels[type];
+  const bars='<span class="cq-art-rule"></span><span class="cq-art-rule short"></span>';
+  let inside='';
+  if(type==='design')inside='<div class="cq-swatches"><i></i><i></i><i></i></div>'+bars;
+  else if(type==='chart')inside='<div class="cq-chart"><i></i><i></i><i></i><i></i></div>';
+  else if(type==='connect')inside='<div class="cq-connect"><span>Form</span><b>→</b><span>CRM</span></div><div class="cq-connect"><span>CRM</span><b>→</b><span>Email</span></div>';
+  else if(type==='shop')inside='<div class="cq-products"><i></i><i></i><i></i></div>'+bars;
+  else if(type==='video')inside='<div class="cq-video">▷</div><div class="cq-timeline"><i></i><i></i><i></i></div>';
+  else if(type==='review')inside='<div class="cq-stars">★★★★★</div>'+bars;
+  else if(type==='check'||type==='plan')inside='<div class="cq-checklist"><span>✓</span><i></i></div><div class="cq-checklist"><span>✓</span><i></i></div>';
+  else if(type==='local')inside='<div class="cq-local"><span>●</span><i>Nearby</i></div>';
+  else if(type==='mobile')inside='<div class="cq-calendar"><i></i><i></i><i>✓</i><i></i><i></i><i></i></div><span class="cq-art-button">Confirm</span>';
+  else if(type==='mail')inside='<div class="cq-envelope">✉</div>'+bars;
+  else if(type==='chat')inside='<div class="cq-bubble">Hello</div><div class="cq-bubble reply">Let’s talk</div>';
+  else inside=bars+'<span class="cq-art-button">'+(type==='search'?'Explore ↗':type==='files'?'Approved ✓':'Next step ↗')+'</span>';
+  return '<div class="cq-art cq-art-'+type+'" aria-hidden="true"><div class="cq-art-sheet"><span class="cq-art-title">'+l[0]+'</span><span class="cq-art-caption">'+l[1]+'</span>'+inside+'</div></div>';
+}
 function serviceCustomerQuestions(service,data){
   const questions=SERVICE_CUSTOMER_QUESTIONS[service.slug]||[];
   const speech='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/></svg>';
-  return '<section class="csp-help section" id="what-we-help" data-nav-theme="light" aria-labelledby="service-help-title"><div class="shell"><div class="csp-help-heading"><p class="section-tag">What we can help you do</p><h2 id="service-help-title">'+esc(data.introHeading)+'</h2><p>'+esc(data.introBody)+'</p></div><div class="csp-question-grid">'+data.outcomes.map((item,index)=>'<article class="csp-question-card"><div class="csp-question-prompt">'+speech+'<span>'+esc(questions[index]||'How can we '+item[0].toLowerCase()+'?')+'</span></div><h3>'+esc(item[0])+'</h3><p>'+esc(item[1])+'</p><div class="csp-question-art" aria-hidden="true"><div class="csp-question-window"><div class="csp-question-dots"><i></i><i></i><i></i></div><div class="csp-question-art-label">'+serviceHelpIcon(index%3+1)+'<span>'+esc(item[0])+'</span></div><div class="csp-question-line"></div><div class="csp-question-line short"></div><div class="csp-question-art-pill"></div></div></div></article>').join('')+'</div></div></section>';
+  return '<section class="csp-help section" id="what-we-help" data-nav-theme="light" aria-labelledby="service-help-title"><div class="shell"><div class="csp-help-heading"><p class="section-tag">What we can help you do</p><h2 id="service-help-title">'+esc(data.introHeading)+'</h2><p>'+esc(data.introBody)+'</p></div><div class="csp-question-grid">'+data.outcomes.map((item,index)=>'<article class="csp-question-card"><div class="csp-question-prompt">'+speech+'<span>'+esc(questions[index]||'How can we '+item[0].toLowerCase()+'?')+'</span></div><h3>'+esc(item[0])+'</h3><div class="cq-card-body"><p>'+esc(item[1])+'</p>'+serviceCompactArtwork(service.slug,index)+'</div></article>').join('')+'</div></div></section>';
 }
 
 function createServiceDetail(service,data){
