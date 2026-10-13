@@ -1649,7 +1649,7 @@ function serviceCompactArtwork(slug,index){
   const distinct={
     'ecommerce':['shop','product-detail','mobile','chart'],
     'website-maintenance':['check','repair','chart','connect'],
-    'social-media':['plan','design','brand-kit','chart'],
+    'social-media':['plan','social-posts','brand-kit','chart'],
     'social-media-consultation':['channels','plan','connect','chart'],
     'community-management':['chat','check','discussion','chart'],
     'content-seo':['search','copy','article','check'],
@@ -1664,7 +1664,8 @@ function serviceCompactArtwork(slug,index){
   const unique={
     'product-detail':['Product detail','Reasons to choose','<div class="cq-detail-product"></div><div class="cq-stars">★★★★★</div>'],
     repair:['Resolve issues','Fix · test · confirm','<div class="cq-repair">'+serviceHelpIcon(1)+'</div><div class="cq-checklist"><span>✓</span><i></i></div>'],
-    'brand-kit':['Brand voice','Recognizable style','<div class="cq-brand-letter">Aa</div><div class="cq-swatches"><i></i><i></i><i></i></div>'],
+    'brand-kit':['Brand voice','Recognizable style','<div class="cq-brand-seal"><span>V</span></div><div class="cq-voice-tags"><span>Clear</span><span>Consistent</span></div>'],
+    'social-posts':['Content formats','Posts · reels · stories','<div class="cq-post-stack"><div class="cq-post-card"><i></i><span></span><span></span></div><div class="cq-reel-card">▷</div></div>'],
     channels:['Channel fit','Audience & purpose','<div class="cq-channel-grid"><span>Social</span><span>Search</span><span>Email</span><span>Web</span></div>'],
     discussion:['Participation','Invite a response','<div class="cq-discussion"><i></i><i></i><i></i></div><div class="cq-bubble">Join the conversation</div>'],
     article:['Helpful content','Clear, credible answers','<div class="cq-article"><i></i><span></span><span></span><span></span></div>'],
@@ -1698,7 +1699,11 @@ function serviceCompactArtwork(slug,index){
   else if(type==='shop')inside='<div class="cq-products"><i></i><i></i><i></i></div>'+bars;
   else if(type==='video')inside='<div class="cq-video">▷</div><div class="cq-timeline"><i></i><i></i><i></i></div>';
   else if(type==='review')inside='<div class="cq-stars">★★★★★</div>'+bars;
-  else if(type==='check'||type==='plan')inside='<div class="cq-checklist"><span>✓</span><i></i></div><div class="cq-checklist"><span>✓</span><i></i></div>';
+  else if(type==='check')inside='<div class="cq-checklist"><span>✓</span><i></i></div><div class="cq-checklist"><span>✓</span><i></i></div>';
+  else if(type==='plan')inside='<div class="cq-plan-calendar"><span>Mon</span><span>Wed</span><span>Fri</span><i>Plan</i><i>Review</i><i>Share</i></div>';
+  else if(type==='copy')inside='<div class="cq-writing-sheet"><b>H1</b><span></span><span></span><span></span><i>✎</i></div>';
+  else if(type==='ad')inside='<div class="cq-ad-match"><div><small>Ad</small><i></i><i></i></div><b>→</b><div><small>Page</small><i></i><i></i></div></div><span class="cq-match-label">One message ✓</span>';
+  else if(type==='files')inside='<div class="cq-file-stack"><span>WEB</span><span>PRINT</span><span>FINAL ✓</span></div>';
   else if(type==='local')inside='<div class="cq-local"><span>●</span><i>Nearby</i></div>';
   else if(type==='mobile')inside='<div class="cq-calendar"><i></i><i></i><i>✓</i><i></i><i></i><i></i></div><span class="cq-art-button">Confirm</span>';
   else if(type==='mail')inside='<div class="cq-envelope">✉</div>'+bars;
