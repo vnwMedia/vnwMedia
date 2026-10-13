@@ -1,0 +1,17 @@
+.create-service-page .csp-help{background:#fff;color:#17252a}
+.csp-question-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:48px}
+.csp-question-card{display:flex;flex-direction:column;padding:34px;border:1px solid #d5e5eb;border-radius:20px;background:#fff;min-width:0}
+.csp-question-prompt{display:flex;align-items:flex-start;gap:14px;color:#0087b4;font:500 18px/1.5 Inter,Arial,sans-serif;min-height:54px;margin:0 0 28px}
+.csp-question-prompt svg{width:25px;height:25px;flex-shrink:0;margin-top:2px;fill:none;stroke:currentColor;stroke-width:1.6}
+.create-service-page .csp-question-card h3{font-size:clamp(28px,2.5vw,38px);line-height:1.15;margin:0 0 18px;letter-spacing:-.035em;color:#17252a}
+.create-service-page .csp-question-card>p{color:#62737c;margin:0 0 28px;font-size:17px;line-height:1.6}
+.csp-question-art{background:#f3f8fa;padding:26px 30px;margin-top:auto;overflow:hidden}
+.csp-question-window{background:#fff;border:1px solid #bad9e6;border-radius:12px;padding:20px;transform:rotate(-3deg);box-shadow:0 8px 20px #193b4710}
+.csp-question-dots{display:flex;gap:7px;padding-bottom:14px;border-bottom:1px solid #d5e5eb}
+.csp-question-dots i{width:5px;height:5px;border-radius:50%;background:#8cbdce}
+.csp-question-art-label{display:flex;gap:14px;align-items:center;margin:20px 0;color:#62737c;font:400 14px/1.4 Inter,Arial,sans-serif}
+.csp-question-art-label svg{width:30px;height:30px;flex-shrink:0;fill:none;stroke:#0087b4;stroke-width:1.5}
+.csp-question-line{height:6px;border-radius:5px;background:#d5e5eb;margin:8px 0;width:85%}
+.csp-question-line.short{width:62%}
+.csp-question-art-pill{width:80px;height:19px;border-radius:30px;background:#00ace5;margin-top:16px}
+@media(max-width:700px){.csp-question-grid{grid-template-columns:1fr;gap:22px;margin-top:32px}.csp-question-card{padding:25px}.csp-question-prompt{font-size:16px;min-height:0;margin-bottom:24px}.create-service-page .csp-question-card>p{font-size:16px}.csp-question-art{padding:23px}.csp-question-window{padding:17px}}
