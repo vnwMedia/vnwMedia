@@ -124,3 +124,5 @@
 .cq-unique-scene .cq-brand-seal,.cq-unique-scene .cq-detail-product,.cq-unique-scene .cq-budget-ring{margin:0 auto;flex-shrink:0}
 .cq-unique-scene .cq-swatches{margin:4px 0}.cq-unique-scene .cq-file-stack{gap:4px}.cq-unique-scene .cq-bubble{margin-top:2px;margin-bottom:2px}
 @media(max-width:1000px){.cq-unique-scene{padding-top:7px;padding-bottom:4px;gap:3px}.cq-unique-scene>.cq-chart{height:40px}.cq-unique-scene>.cq-chart i:nth-child(4){height:38px}.cq-plan-calendar span{padding:5px 0;font-size:9px}.cq-plan-calendar i{font-size:8px;line-height:28px}}
+.csp-help-contact{grid-column:1/-1;margin-top:10px}
+.cq-card-body{align-items:center}

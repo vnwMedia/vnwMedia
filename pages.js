@@ -1711,10 +1711,180 @@ function serviceCompactArtwork(slug,index){
   else inside=bars+'<span class="cq-art-button">'+(type==='search'?'Explore ↗':type==='files'?'Approved ✓':'Next step ↗')+'</span>';
   return '<div class="cq-art cq-art-'+type+'" aria-hidden="true"><div class="cq-art-sheet"><span class="cq-art-title">'+l[0]+'</span><span class="cq-art-caption">'+l[1]+'</span><div class="cq-unique-scene">'+inside+'</div>'+'</div></div>';
 }
+const SERVICE_HELP_DETAIL={
+  'brand-strategy':[
+    'Connect those differences to customer needs and credible reasons to choose you.',
+    'Help customers understand what you offer and why it matters to them.',
+    'Keep typography, imagery, and tone aligned across the customer journey.',
+    'Prioritize practical improvements around your goals, resources, and stage of growth.'
+  ],
+  'graphic-design':[
+    'Use consistent typography, color, and imagery across digital and print touchpoints.',
+    'Make complex services, offers, and information easier for your audience to understand.',
+    'Align visual hierarchy and calls to action with the campaign message.',
+    'Provide organized, channel-ready files that make everyday marketing easier to produce.'
+  ],
+  'web-design':[
+    'Help visitors quickly understand your offer, credibility, and next step.',
+    'Keep important actions easy to find and complete on smaller screens.',
+    'Make key services understandable to customers and accessible to search engines.',
+    'Give your team a clearer path from customer inquiry to timely follow-up.'
+  ],
+  'ecommerce':[
+    'Organize categories, navigation, and filters around how customers browse and compare.',
+    'Use useful specifications, photography, policies, and answers to common purchase questions.',
+    'Clarify shipping, payment options, and checkout steps on desktop and mobile.',
+    'Identify where shoppers hesitate so improvements address real purchase barriers.'
+  ],
+  'website-maintenance':[
+    'Keep agreed software, plugins, and content updates coordinated with site checks.',
+    'Investigate broken layouts, forms, and links before they disrupt more customer journeys.',
+    'Review loading, mobile usability, and key functions after important website changes.',
+    'Plan content additions and small enhancements without losing the existing site structure.'
+  ],
+  'app-design-development':[
+    'Turn business requirements into a focused scope rather than an unnecessary feature list.',
+    'Reduce confusing steps and make important actions easy to understand.',
+    'Establish reusable patterns for navigation, forms, feedback, and everyday product tasks.',
+    'Connect technical decisions to expected usage and the next useful release.'
+  ],
+  'landing-pages':[
+    'Keep the headline, offer, and page content consistent with the traffic source.',
+    'Add relevant proof, practical details, and answers that support a confident decision.',
+    'Reduce distractions and keep forms or booking steps clear on mobile.',
+    'Use tracking and testing to understand which messages support qualified inquiries.'
+  ],
+  'social-media':[
+    'Turn customer questions, service benefits, and timely offers into useful publishing topics.',
+    'Match each format to the message, platform, and action you want audiences to take.',
+    'Make your services and expertise recognizable without repeating the same post.',
+    'Use those insights to refine topics, formats, and the next publishing calendar.'
+  ],
+  'social-media-consultation':[
+    'Focus effort where your customers spend time and your team can show up effectively.',
+    'Connect recurring topics to customer questions, service value, and business priorities.',
+    'Clarify planning, approvals, publishing responsibilities, and a realistic production schedule.',
+    'Separate useful audience response and business actions from vanity metrics.'
+  ],
+  'community-management':[
+    'Use clear response guidelines for common questions, inquiries, and escalation needs.',
+    'Handle sensitive feedback carefully and move private matters to appropriate channels.',
+    'Create helpful prompts and conversations that invite meaningful audience participation.',
+    'Bring recurring concerns and customer language back into content and service decisions.'
+  ],
+  'seo':[
+    'Prioritize obstacles that keep useful service pages from being discovered and understood.',
+    'Answer customer questions clearly rather than adding keywords without purpose.',
+    'Reinforce accurate business information and useful local context across key touchpoints.',
+    'Connect visibility changes to qualified calls, forms, and other useful customer actions.'
+  ],
+  'local-seo':[
+    'Make locations, availability, and the areas you genuinely serve easy to understand.',
+    'Build useful local context without duplicating thin pages for every place name.',
+    'Present accurate details, credible reviews, and clear paths to contact your business.',
+    'Review local website visits, profile interactions, calls, and inquiries together.'
+  ],
+  'technical-seo':[
+    'Review navigation, internal links, crawl paths, and access to important site content.',
+    'Check canonical signals, redirects, sitemaps, and pages excluded from search results.',
+    'Connect performance and mobile improvements to the journeys your customers use.',
+    'Separate urgent problems from lower-priority changes in a practical implementation plan.'
+  ],
+  'content-seo':[
+    'Connect topics to the services, problems, and comparisons people actually research.',
+    'Give headings, internal links, and calls to action a focused role.',
+    'Support claims with real expertise, helpful examples, and appropriate source material.',
+    'Refresh unclear or outdated pages before expanding the content library unnecessarily.'
+  ],
+  'yelp-seo':[
+    'Keep categories, hours, contact details, and service information accurate and useful.',
+    'Show relevant photography and clear details that help customers assess service fit.',
+    'Respond professionally while respecting platform policies and customer privacy.',
+    'Review profile visits and available customer actions alongside other local channels.'
+  ],
+  'google-business-profile':[
+    'Keep hours, locations, contact details, and website links consistent with your business.',
+    'Use appropriate categories, service descriptions, and relevant photos to provide context.',
+    'Manage review responses and business updates with a professional, consistent voice.',
+    'Interpret available calls, clicks, and direction requests in the context of business goals.'
+  ],
+  'aeo':[
+    'Prioritize service questions that matter during research, comparison, and decision-making.',
+    'Place helpful answers near the question and support them with relevant detail.',
+    'Use clear headings and appropriate structure so answers retain their context.',
+    'Review representative queries without assuming inclusion in any particular answer system.'
+  ],
+  'geo':[
+    'Keep services, people, locations, and business facts consistent across supporting content.',
+    'Explain your expertise with specific, useful information rather than generic claims.',
+    'Connect relevant credentials, examples, and trusted sources to the claims they support.',
+    'Monitor descriptions and citations to identify gaps, inaccuracies, and useful improvements.'
+  ],
+  'aio':[
+    'Review technical access and important content before investing in speculative tactics.',
+    'Present services, locations, expertise, and business facts in clear, consistent language.',
+    'Improve usefulness and evidence for people researching your services and capabilities.',
+    'Prioritize durable website improvements and evaluate results with representative queries.'
+  ],
+  'reputation-management':[
+    'Identify the review platforms and conversations most relevant to your customers.',
+    'Keep tone, responsibilities, and escalation rules clear when addressing customer feedback.',
+    'Build appropriate requests into the customer journey without pressuring or filtering reviewers.',
+    'Use recurring feedback to improve service communication and the customer experience.'
+  ],
+  'lead-generation':[
+    'Connect campaigns and service pages to clear offers and genuine customer needs.',
+    'Remove unnecessary friction from mobile forms, calls, and consultation requests.',
+    'Align targeting and intake questions with the customers your business can serve.',
+    'Give your team practical routing and response steps after each new inquiry.'
+  ],
+  'google-ppc':[
+    'Focus keyword intent and targeting on the opportunities your business can serve.',
+    'Keep the offer and next step consistent from search ad to page.',
+    'Use conversion tracking to distinguish valuable inquiries from low-intent interactions.',
+    'Adjust priorities using campaign evidence rather than spending more without a clear reason.'
+  ],
+  'paid-social':[
+    'Connect targeting to customer needs, the offer, and the stage of consideration.',
+    'Test clear hooks, relevant formats, and useful proof rather than cosmetic variations alone.',
+    'Carry the message through to a focused mobile page and clear next action.',
+    'Review audience, creative, and conversion evidence before deciding what to scale.'
+  ],
+  'email-marketing':[
+    'Introduce the business, set expectations, and provide a useful first next step.',
+    'Answer common questions with timely messages that support the customer journey.',
+    'Keep updates relevant to customer interests, preferences, and permission to receive email.',
+    'Review clicks, inquiries, and unsubscribes to refine content and sending decisions.'
+  ],
+  'text-marketing':[
+    'Use concise, relevant messages with clear actions for opted-in contacts.',
+    'Clarify timing and next steps with useful reminders and easy response paths.',
+    'Focus on appropriate offers and messages while honoring opt-outs and customer preferences.',
+    'Keep SMS, email, and CRM follow-up coordinated rather than sending conflicting messages.'
+  ],
+  'crm-automation':[
+    'Keep contact fields, source details, and consent information useful to your team.',
+    'Define ownership, notifications, and next steps so new inquiries are not overlooked.',
+    'Build relevant messages and reminders around the customer stage and response.',
+    'Review stages, handoffs, and outstanding tasks to identify gaps in the sales workflow.'
+  ],
+  'content-writing':[
+    'Connect the copy to the services, benefits, and questions your customers care about.',
+    'Use helpful headings and plain language without losing important service details.',
+    'Help website pages, campaign messages, and everyday content sound like one business.',
+    'Keep links, calls to action, and formatting aligned with the publishing destination.'
+  ],
+  'video-editing':[
+    'Choose the strongest material to explain the subject and support the intended message.',
+    'Keep transitions and scene length suited to the platform and viewing context.',
+    'Make the finished sequence easier to follow through balanced audio and readable captions.',
+    'Check aspect ratios, file formats, and delivery requirements before final handoff.'
+  ]
+};
 function serviceCustomerQuestions(service,data){
   const questions=SERVICE_CUSTOMER_QUESTIONS[service.slug]||[];
   const speech='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/></svg>';
-  return '<section class="csp-help section" id="what-we-help" data-nav-theme="light" aria-labelledby="service-help-title"><div class="shell"><div class="csp-help-heading"><p class="section-tag">What we can help you do</p><h2 id="service-help-title">'+esc(data.introHeading)+'</h2><p>'+esc(data.introBody)+'</p></div><div class="csp-question-grid">'+data.outcomes.map((item,index)=>'<article class="csp-question-card"><div class="csp-question-prompt">'+speech+'<span>'+esc(questions[index]||'How can we '+item[0].toLowerCase()+'?')+'</span></div><h3>'+esc(item[0])+'</h3><div class="cq-card-body"><p>'+esc(item[1])+'</p>'+serviceCompactArtwork(service.slug,index)+'</div></article>').join('')+'</div></div></section>';
+  return '<section class="csp-help section" id="what-we-help" data-nav-theme="light" aria-labelledby="service-help-title"><div class="shell"><div class="csp-help-heading"><p class="section-tag">What we can help you do</p><h2 id="service-help-title">'+esc(data.introHeading)+'</h2><p>'+esc(data.introBody)+'</p></div><div class="csp-question-grid">'+data.outcomes.map((item,index)=>'<article class="csp-question-card"><div class="csp-question-prompt">'+speech+'<span>'+esc(questions[index]||'How can we '+item[0].toLowerCase()+'?')+'</span></div><h3>'+esc(item[0])+'</h3><div class="cq-card-body"><p>'+esc(item[1]+" "+SERVICE_HELP_DETAIL[service.slug][index])+'</p>'+serviceCompactArtwork(service.slug,index)+'</div></article>').join('')+'<div class="csp-help-contact"><a class="pill pill-blue" href="'+path("contact.html")+'">Discuss Your Goals <span aria-hidden="true">↗</span></a></div></div></div></section>';
 }
 
 function createServiceDetail(service,data){
