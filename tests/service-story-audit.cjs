@@ -3,7 +3,7 @@ const root=path.resolve(__dirname,'..');
 const schemas=[];
 const context={document:{body:{dataset:{depth:'1'}},querySelector:()=>null,createElement:()=>({dataset:{}}),head:{appendChild:x=>schemas.push(JSON.parse(x.textContent))}}};
 vm.createContext(context);
-for(const file of ['service-catalog.js','create-service-content.js','service-story-content.js','pages.js']){
+for(const file of ['service-catalog.js','create-service-content.js','service-story-content.js','service-process-visuals.js','pages.js']){
   let source=fs.readFileSync(path.join(root,file),'utf8');
   if(file==='pages.js')source=source.replace(/bootPages\(\);\s*$/,'');
   vm.runInContext(source,context,{filename:file});
@@ -18,7 +18,9 @@ for(const service of context.services){
   assert(source.includes('service-story-content.js?v=20261014-preparation-cards'));
   assert(!source.includes('service-preparation.css'));
   assert(!source.includes('service-preparation.js'));
-  assert(source.includes('pages.js?v=20261014-remove-preparation'));
+  assert(source.includes('pages.js?v=20261014-process-visuals'));
+  assert(source.includes('service-process-visuals.js?v=1'));
+  assert(source.includes('service-process-visuals.css?v=1'));
   assert(source.includes('service-help-compact.css?v=20261014-section-spacing'));
   assert(source.includes('service-help-compact.js?v=1'));
   const title=source.match(/<title>(.*?)<\/title>/s)?.[1];
@@ -30,6 +32,7 @@ for(const service of context.services){
   const html=context.render(service);
   assert(!html.includes('undefined'),service.slug+' undefined content');
   assert.equal((html.match(/<h1[ >]/g)||[]).length,1);
+  assert.equal((html.match(/data-process-visual=/g)||[]).length,4,service.slug+' needs four task-matched illustrations');
   assert(!html.includes('id="service-diagnostic"'));
   assert(!html.includes('SEO, PPC &amp; AI visibility'));
   assert(!html.includes('id="prepare-for-engagement"'),service.slug+' preparation section still present');

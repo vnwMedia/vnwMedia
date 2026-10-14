@@ -1541,29 +1541,18 @@ function serviceProcessSection(service,process){
   const layout=serviceProcessLayout(service.slug);
   const stage=(item,index)=>`<article class="csp-process-step"><span class="csp-process-step-index">${String(index+1).padStart(2,"0")}</span><div><h3>${esc(item[0])}</h3><p>${esc(item[1])}</p></div></article>`;
   if(layout==="story-blueprint"){
-    const phaseLabels=["Clarify the creative brief","Explore visual directions","Strengthen the final creative","Prepare files for delivery"];
-    return processBlueprintSection({
-      id:"how-the-project-moves",sectionLabel:"How the project moves",headingId:"service-process-title",
-      title:`${service.name}: review checkpoints.`,
-      intro:"Each phase ends with an approval or validation step, so responsibilities are clear before the next stage begins.",
-      steps:process.map((item,index)=>({label:phaseLabels[index]||"Move the work forward",title:item[0],description:item[1]})),
-      browserLabel:"Your creative direction",siteLabel:"Your brand",
-      siteTitle:["Distinctive creative.","Ready for every channel."],siteAction:"Review the creative",
-      bottomLabels:["Brand consistency","Channel-ready","Clear handoff"],
-      illustrationAlt:"Creative website blueprint connecting a distinctive visual direction with channel-ready creative and a clear handoff.",
-      ctaText:"Discuss your design needs",ctaHref:path("contact.html")
-    });
+    return `<section class="csp-process section" id="how-the-project-moves" data-nav-theme="light" data-process-layout="studio" aria-labelledby="service-process-title"><div class="shell"><div class="csp-section-head"><p class="section-tag">How the project moves</p><div><h2 id="service-process-title">${esc(service.name)}: review checkpoints.</h2><p>Each phase ends with an approval or validation step, so responsibilities are clear before the next stage begins.</p></div></div><div class="csp-process-studio">${process.map((item,index)=>`<div class="csp-process-studio-card">${serviceCheckpointArtwork(service.slug,index)}${stage(item,index)}</div>`).join('')}</div></div></section>`;
   }
   let arrangement="";
   if(layout==="blueprint"){
     const split=Math.ceil(process.length/2);
     arrangement=`<div class="csp-process-blueprint">
       <div class="csp-process-blueprint-pair">${process.slice(0,split).map((item,index)=>stage(item,index)).join("")}</div>
-      <div class="csp-process-canvas" aria-hidden="true"><div class="csp-process-browser"><div class="csp-process-browser-bar"><i></i><i></i><i></i><span>Your digital experience</span></div><div class="csp-process-browser-nav"><b>Your business</b><span><i></i><i></i><i></i></span></div><div class="csp-process-browser-main"><div><small>A connected project plan</small><strong>Clear direction.<br>Useful next steps.</strong><i></i><i></i></div><div class="csp-process-target"><i></i></div></div><div class="csp-process-browser-foot"><span>Useful work</span><span>Relevant proof</span><span>Clear handoff</span></div></div></div>
+      <div class="csp-process-canvas"><div class="scp-blueprint-scenes">${process.map((item,index)=>serviceCheckpointArtwork(service.slug,index)).join('')}</div></div>
       <div class="csp-process-blueprint-pair">${process.slice(split).map((item,index)=>stage(item,index+split)).join("")}</div>
     </div>`;
   }else if(layout==="studio"){
-    arrangement=`<div class="csp-process-studio">${process.map((item,index)=>`<div class="csp-process-studio-card">${serviceProcessArtwork(index)}${stage(item,index)}</div>`).join("")}</div>`;
+    arrangement=`<div class="csp-process-studio">${process.map((item,index)=>`<div class="csp-process-studio-card">${serviceCheckpointArtwork(service.slug,index)}${stage(item,index)}</div>`).join("")}</div>`;
   }else if(layout==="workbench"){
     arrangement=`<div class="csp-process-workbench">
       <div class="csp-process-workbench-brief" aria-label="Illustration of a graphic design project brief">
