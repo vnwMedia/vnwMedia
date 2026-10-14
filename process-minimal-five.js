@@ -1,0 +1,1 @@
+(() => {const section=document.querySelector('#how-the-project-moves');if(!section)return;section.classList.add('pm-preview','pm-option-'+document.body.dataset.processOption);section.querySelectorAll('.scp-art').forEach(art=>{const frame=document.createElement('div');frame.className='pm-art-frame';art.before(frame);frame.append(art);});})();
