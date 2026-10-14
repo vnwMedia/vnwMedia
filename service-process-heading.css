@@ -1,0 +1,6 @@
+/* Preserve the full review-checkpoint title on desktop without constraining its width. */
+body[data-page="service-social-media"] .csp-process .csp-section-head>div,
+body[data-page="service-social-media"] .csp-process .csp-section-head h2{max-width:none;width:100%}
+@media(min-width:1001px){
+  body[data-page="service-social-media"] .csp-process .csp-section-head h2{white-space:nowrap;font-size:clamp(32px,3.6vw,58px)}
+}
