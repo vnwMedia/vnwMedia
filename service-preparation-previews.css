@@ -17,6 +17,7 @@
 .prep-review-1 .prep-cards article:before{content:"";position:absolute;left:20px;top:-9px;width:85px;height:9px;border:1px solid #d8e3e5;border-bottom:0;background:#fff;border-radius:7px 7px 0 0}
 .prep-review-2 .prep-layout{display:grid;grid-template-columns:310px 1fr;gap:40px}
 .prep-review-2 .prep-cards{grid-template-columns:1fr;gap:14px}
+.prep-review-2 .prep-footer{display:none}
 .prep-review-2 .prep-cards article{display:grid;grid-template-columns:1.1fr 1fr;gap:0 26px;border-radius:0;border:0;border-bottom:1px solid #d4e2e6;padding:22px 26px}
 .prep-review-2 .prep-card-top{position:absolute;right:22px;top:18px}.prep-review-2 .prep-card-top .prep-art{width:34px;height:34px;background:none}.prep-review-2 .prep-card-top svg{width:28px;height:28px}.prep-review-2 .prep-card-top .prep-index{display:none}
 .prep-review-2 .prep-cards .prep-small,.prep-review-2 .prep-cards h3,.prep-review-2 .prep-cards article>p:not(.prep-small){grid-column:1}

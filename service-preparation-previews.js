@@ -50,6 +50,7 @@
     let size=parseFloat(getComputedStyle(heading).fontSize);
     while(heading.scrollWidth>heading.clientWidth&&size>24){size-=.5;heading.style.fontSize=size+'px';}
   };
+  fitHeading();
   document.fonts.ready.then(fitHeading);
   window.addEventListener('resize',fitHeading);
   section.querySelector('select').addEventListener('change',e=>{const url=new URL(location.href);url.searchParams.set('service',e.target.value);url.hash='prepare-for-engagement';location.href=url.href;});
