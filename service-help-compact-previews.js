@@ -3,6 +3,7 @@
   if(!section)return;
   const option=document.body.dataset.helpOption;
   const service=SERVICE_CATALOG.find(s=>'service-'+s.slug===document.body.dataset.page);
+  document.title=service.name+' — Compact Outcomes Option '+option+' | VNW Media';
   const shell=section.querySelector('.shell');
   const cards=[...section.querySelectorAll('.csp-question-card')].map(card=>({
     question:card.querySelector('.csp-question-prompt span').textContent,
