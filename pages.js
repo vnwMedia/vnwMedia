@@ -1545,12 +1545,7 @@ function serviceProcessSection(service,process){
   }
   let arrangement="";
   if(layout==="blueprint"){
-    const split=Math.ceil(process.length/2);
-    arrangement=`<div class="csp-process-blueprint">
-      <div class="csp-process-blueprint-pair">${process.slice(0,split).map((item,index)=>stage(item,index)).join("")}</div>
-      <div class="csp-process-canvas"><div class="scp-blueprint-scenes">${process.map((item,index)=>serviceCheckpointArtwork(service.slug,index)).join('')}</div></div>
-      <div class="csp-process-blueprint-pair">${process.slice(split).map((item,index)=>stage(item,index+split)).join("")}</div>
-    </div>`;
+    arrangement=`<div class="csp-process-studio">${process.map((item,index)=>`<div class="csp-process-studio-card">${serviceCheckpointArtwork(service.slug,index)}${stage(item,index)}</div>`).join("")}</div>`;
   }else if(layout==="studio"){
     arrangement=`<div class="csp-process-studio">${process.map((item,index)=>`<div class="csp-process-studio-card">${serviceCheckpointArtwork(service.slug,index)}${stage(item,index)}</div>`).join("")}</div>`;
   }else if(layout==="workbench"){
