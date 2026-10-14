@@ -48,7 +48,7 @@
     heading.style.fontSize='';
     if(window.innerWidth<1001)return;
     let size=parseFloat(getComputedStyle(heading).fontSize);
-    while(heading.scrollWidth>heading.clientWidth&&size>24){size-=.5;heading.style.fontSize=size+'px';}
+    while(heading.scrollWidth>heading.clientWidth&&size>24){size-=.5;heading.style.setProperty('font-size',size+'px','important');}
   };
   fitHeading();
   document.fonts.ready.then(fitHeading);
