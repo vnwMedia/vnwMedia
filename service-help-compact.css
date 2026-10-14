@@ -1,4 +1,4 @@
-.create-service-page .service-help-compact{padding:25px 0;background:#f7f3ed;scroll-margin-top:88px}
+.create-service-page .service-help-compact{padding:105px 0;background:#f7f3ed;scroll-margin-top:88px}
 .service-help-compact .csp-help-heading{margin:0}
 .service-help-compact .csp-help-heading .section-tag{font-size:10px;margin:0 0 14px}
 .create-service-page .service-help-compact .csp-help-heading h2{font-size:38px!important;line-height:1.12;max-width:1050px;margin:0 0 14px}
@@ -22,4 +22,7 @@
   .service-help-compact .shc-art-frame{width:105px;height:115px}
   .service-help-compact .shc-art-frame>.cq-art{transform:scale(.61)}
   .service-help-compact .csp-question-card{padding:18px}
+}
+@media(max-width:600px){
+  .create-service-page .service-help-compact{padding:78px 0}
 }
