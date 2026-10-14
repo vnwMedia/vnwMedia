@@ -4,6 +4,12 @@
 .service-help-compact .cq-art{background:transparent;border-radius:10px}
 .service-help-compact .cq-art-sheet{background:#fff;box-shadow:none}
 .service-help-compact .cq-art-entity-map>svg{display:block;width:170px;height:185px;stroke:none;stroke-width:0;overflow:visible}
+.cq-system-rows{display:grid;gap:10px;margin-top:auto;margin-bottom:auto}
+.cq-system-rows>div{position:relative;display:flex;align-items:center;gap:7px;padding:7px 5px;background:#f1f9fc;border:1px solid #bed9e4;border-radius:5px;color:#274c5c}
+.cq-system-rows span{display:grid;place-items:center;flex:none;width:18px;height:18px;border-radius:4px;background:#00ace5;color:white;font:500 9px/1 Inter,sans-serif}
+.cq-system-rows b{font:400 11px/1.15 Inter,sans-serif}
+.cq-system-rows i{position:absolute;left:50%;bottom:-12px;color:#0087b4;font:400 12px/1 Inter,sans-serif;font-style:normal;z-index:1}
+.service-help-compact .cq-art-system .cq-art-sheet{border-color:#9bc8da;transform:rotate(-3deg)}
 .service-help-compact .csp-help-heading{margin:0}
 .service-help-compact .csp-help-heading .section-tag{font-size:10px;margin:0 0 14px}
 .create-service-page .service-help-compact .csp-help-heading h2{font-size:38px!important;line-height:1.12;max-width:1050px;margin:0 0 14px}

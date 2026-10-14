@@ -18,11 +18,11 @@ for(const service of context.services){
   assert(source.includes('service-story-content.js?v=20261014-preparation-cards'));
   assert(!source.includes('service-preparation.css'));
   assert(!source.includes('service-preparation.js'));
-  assert(source.includes('pages.js?v=20261014-entity-map'));
+  assert(source.includes('pages.js?v=20261014-clear-connections'));
   assert(source.includes('service-process-visuals.js?v=2'));
   assert(source.includes('service-process-specific-scenes.js?v=1'));
   assert(source.includes('service-process-visuals.css?v=6'));
-  assert(source.includes('service-help-compact.css?v=20261014-entity-map'));
+  assert(source.includes('service-help-compact.css?v=20261014-clear-connections'));
   assert(source.includes('service-help-compact.js?v=1'));
   const title=source.match(/<title>(.*?)<\/title>/s)?.[1];
   const description=source.match(/name="description" content="([^"]+)"/)?.[1];

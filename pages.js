@@ -1630,7 +1630,6 @@ const SERVICE_COMPACT_ART={
   'content-writing':['copy','copy','offer','files'], 'video-editing':['video','video','video','files']
 };
 function serviceCompactArtwork(slug,index){
-  if(slug==='geo'&&index===0)return '<div class="cq-art cq-art-entity-map" role="img" aria-label="Business identity connected to services, locations, people, and credentials"><svg viewBox="0 0 170 185" fill="none"><path d="M85 74V42M85 42H38V29M85 42h47V29M85 111v30M85 141H38v13M85 141h47v13" stroke="#a5cbd9" stroke-width="1.2"/><rect x="7" y="8" width="62" height="30" rx="7" fill="white" stroke="#bed9e4"/><rect x="101" y="8" width="62" height="30" rx="7" fill="white" stroke="#bed9e4"/><rect x="7" y="147" width="62" height="30" rx="7" fill="white" stroke="#bed9e4"/><rect x="101" y="147" width="62" height="30" rx="7" fill="white" stroke="#bed9e4"/><rect x="35" y="62" width="100" height="58" rx="10" fill="white" stroke="#73bad2"/><circle cx="85" cy="76" r="3" fill="#00aeef"/><g fill="#527381" font-family="Inter,Arial,sans-serif" font-size="9" text-anchor="middle"><text x="38" y="27">Services</text><text x="132" y="27">Locations</text><text x="38" y="166">People</text><text x="132" y="166">Credentials</text></g><text x="85" y="99" fill="#274c5c" font-family="Georgia,serif" font-size="14" text-anchor="middle">Your business</text></svg></div>';
   const distinct={
     'ecommerce':['shop','product-detail','mobile','chart'],
     'website-maintenance':['check','repair','chart','connect'],
@@ -1675,7 +1674,23 @@ function serviceCompactArtwork(slug,index){
   if(type==='offer')return '<div class="cq-art cq-art-offer" aria-hidden="true"><div class="cq-art-sheet"><span class="cq-art-title">Your offer.</span><span class="cq-art-caption">Clear. Credible.</span><span class="cq-art-rule"></span><span class="cq-art-rule short"></span><span class="cq-art-button">Next step ↗</span></div><span class="cq-art-badge">'+check+'</span></div>';
   if(type==='mobile')return '<div class="cq-art cq-art-mobile" aria-hidden="true"><div class="cq-art-sheet"><span class="cq-phone-notch"></span><span class="cq-art-title">'+(slug==='web-design'?'Book a visit':'Take action')+'</span><div class="cq-calendar"><i></i><i></i><i></i><i></i><i>✓</i><i></i></div><span class="cq-art-button">Confirm</span></div><span class="cq-tap">'+pointer+'</span></div>';
   if(type==='search')return '<div class="cq-art cq-art-search" aria-hidden="true"><div class="cq-art-sheet"><span class="cq-search-input">'+search+'<span>Find a service</span></span><span class="cq-art-caption">Your business</span><span class="cq-art-rule"></span><span class="cq-art-rule short"></span><span class="cq-art-rule faded"></span><span class="cq-art-rule short faded"></span></div><span class="cq-art-badge">'+check+'</span></div>';
-  if(type==='connect')return '<div class="cq-art cq-art-connect" aria-hidden="true"><span class="cq-node-wire one"></span><span class="cq-node-wire two"></span><span class="cq-node form">'+form+'</span><span class="cq-node contact">'+contact+'</span><span class="cq-node mail">'+mail+'</span><span class="cq-node-label">Lead → follow-up</span></div>';
+  if(type==='connect'){
+    const systems={
+      'web-design':['Connected site','Useful next steps',['Website form','CRM record','Team follow-up']],
+      'website-maintenance':['Connected tools','Keep systems working',['Website','Integrations','Reliable handoff']],
+      'app-design-development':['App connections','Data that flows',['Your app','Business data','Connected tools']],
+      'social-media-consultation':['Team workflow','Plan to publishing',['Content plan','Team ownership','Publishing tools']],
+      'technical-seo':['Site structure','A clearer crawl path',['Internal links','Page hierarchy','Search access']],
+      'geo':['Business facts','One clear identity',['Services','Locations','People & proof']],
+      'aio':['Entity clarity','Connected evidence',['Business facts','Expert sources','Clear relationships']],
+      'lead-generation':['Lead handoff','Inquiry to action',['New inquiry','Qualified lead','Sales follow-up']],
+      'paid-social':['Audience match','Reach relevant people',['Audience','Relevant offer','Campaign action']],
+      'text-marketing':['Channel flow','Coordinated follow-up',['Opted-in contact','CRM update','Relevant message']],
+      'crm-automation':['Connected CRM','A reliable workflow',['Customer data','Routing rules','Team action']]
+    };
+    const a=systems[slug]||['Connected tools','A clear workflow',['Source','Connection','Next action']];
+    return '<div class="cq-art cq-art-system" aria-hidden="true"><div class="cq-art-sheet"><span class="cq-art-title">'+a[0]+'</span><span class="cq-art-caption">'+a[1]+'</span><div class="cq-system-rows">'+a[2].map((label,i)=>'<div><span>0'+(i+1)+'</span><b>'+label+'</b>'+(i<2?'<i>↓</i>':'')).join('')+'</div></div></div>';
+  }
   const bars='<span class="cq-art-rule"></span><span class="cq-art-rule short"></span>';
   let inside='';
   if(type==='design')inside='<div class="cq-swatches"><i></i><i></i><i></i></div>'+bars;
