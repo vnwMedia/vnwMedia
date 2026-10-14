@@ -369,12 +369,11 @@
 }
 
 /* Stack each mobile footer column independently so the shorter lists do not leave blank rows. */
-/* Use the full desktop footer width rather than the narrower article shell. */
+/* Keep footer content aligned to the header's logo and navigation boundaries. */
 @media(min-width:1101px){
-  #vnw-site-footer .shell{width:calc(100% - 80px);max-width:none}
-  #vnw-site-footer .footer-grid:has(.footer-services){grid-template-columns:minmax(220px,1.15fr) repeat(3,minmax(0,1fr)) minmax(200px,1fr);gap:clamp(24px,3vw,56px)}
+  #vnw-site-footer .shell{width:var(--shell)}
+  #vnw-site-footer .footer-grid:has(.footer-services){grid-template-columns:minmax(0,1.15fr) repeat(4,minmax(0,1fr));gap:28px}
   #vnw-site-footer .footer-about p{max-width:250px}
-  #vnw-site-footer .footer-grid{width:calc(100% - 80px)}
 }
 #vnw-site-footer .footer-nav-columns,
 #vnw-site-footer .footer-nav-column{display:contents;}
