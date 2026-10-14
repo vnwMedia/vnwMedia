@@ -12,8 +12,8 @@
 .sp-index{width:32px;height:32px;display:grid;place-items:center;border:1px solid #b8dce8;border-radius:50%;color:#008ab7;font:400 10px/1 Inter,sans-serif}
 .service-preparation .csp-visibility-grid h3{font:400 29px/1.12 Fraunces,Georgia,serif;letter-spacing:-.025em;margin:0 0 14px}
 .service-preparation .csp-visibility-grid p{font-size:14px;line-height:1.65;color:#61727a;margin:0}
-.service-preparation .csp-visibility-grid .sp-support{margin-top:10px}
-.sp-divider{height:1px;background:#e2eaed;flex:none;margin-top:22px;width:100%}
+.service-preparation .csp-visibility-grid .sp-support{margin-top:10px;padding-bottom:22px}
+.sp-divider{height:1px;background:#e2eaed;flex:none;margin-top:auto;width:100%}
 .sp-contact{display:flex;justify-content:flex-end;margin-top:26px}.sp-contact .pill{font-size:12px}
 @media(min-width:1001px){.service-preparation .csp-section-head h2{white-space:nowrap}}
 @media(max-width:1000px){.service-preparation .csp-visibility-grid{grid-template-columns:1fr}.service-preparation .csp-visibility-grid article{border-right:0;border-bottom:1px solid #e2eaed}.service-preparation .csp-visibility-grid article:last-child{border-bottom:0}}
