@@ -1630,6 +1630,7 @@ const SERVICE_COMPACT_ART={
   'content-writing':['copy','copy','offer','files'], 'video-editing':['video','video','video','files']
 };
 function serviceCompactArtwork(slug,index){
+  if(slug==='geo'&&index===0)return '<div class="cq-art cq-art-entity-map" role="img" aria-label="Business identity connected to services, locations, people, and credentials"><svg viewBox="0 0 170 185" fill="none"><path d="M85 74V42M85 42H38V29M85 42h47V29M85 111v30M85 141H38v13M85 141h47v13" stroke="#a5cbd9" stroke-width="1.2"/><rect x="7" y="8" width="62" height="30" rx="7" fill="white" stroke="#bed9e4"/><rect x="101" y="8" width="62" height="30" rx="7" fill="white" stroke="#bed9e4"/><rect x="7" y="147" width="62" height="30" rx="7" fill="white" stroke="#bed9e4"/><rect x="101" y="147" width="62" height="30" rx="7" fill="white" stroke="#bed9e4"/><rect x="35" y="62" width="100" height="58" rx="10" fill="white" stroke="#73bad2"/><circle cx="85" cy="76" r="3" fill="#00aeef"/><g fill="#527381" font-family="Inter,Arial,sans-serif" font-size="9" text-anchor="middle"><text x="38" y="27">Services</text><text x="132" y="27">Locations</text><text x="38" y="166">People</text><text x="132" y="166">Credentials</text></g><text x="85" y="99" fill="#274c5c" font-family="Georgia,serif" font-size="14" text-anchor="middle">Your business</text></svg></div>';
   const distinct={
     'ecommerce':['shop','product-detail','mobile','chart'],
     'website-maintenance':['check','repair','chart','connect'],

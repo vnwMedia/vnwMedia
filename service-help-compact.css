@@ -3,6 +3,7 @@
 .service-help-compact .shc-art-frame{background:transparent;border-radius:10px}
 .service-help-compact .cq-art{background:transparent;border-radius:10px}
 .service-help-compact .cq-art-sheet{background:#fff;box-shadow:none}
+.service-help-compact .cq-art-entity-map>svg{display:block;width:170px;height:185px;stroke:none;stroke-width:0;overflow:visible}
 .service-help-compact .csp-help-heading{margin:0}
 .service-help-compact .csp-help-heading .section-tag{font-size:10px;margin:0 0 14px}
 .create-service-page .service-help-compact .csp-help-heading h2{font-size:38px!important;line-height:1.12;max-width:1050px;margin:0 0 14px}
