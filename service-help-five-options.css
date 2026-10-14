@@ -15,6 +15,10 @@
 .fh-art-frame{width:130px;height:142px;position:relative;flex:none}
 .five-help .fh-art-frame>.cq-art{width:170px;height:185px;transform:scale(.76);transform-origin:top left}
 .five-help .csp-help-contact{grid-column:1/-1;margin:4px 0 0;padding:0}.five-help .csp-help-contact .pill{font-size:12px;padding:11px 20px}
+.create-service-page .five-help-1{padding:25px 0}.five-help-1 .csp-question-grid{gap:14px}
+.five-help-1 .csp-question-card{padding:16px 22px}.five-help-1 .cq-card-body{grid-template-columns:minmax(0,1fr) 112px;gap:18px}
+.five-help-1 .fh-art-frame{width:112px;height:123px}.five-help-1 .fh-art-frame>.cq-art{transform:scale(.65)}
+.create-service-page .five-help-1 .csp-question-card h3{font-size:25px;margin-bottom:8px}
 /* 02: The intro becomes a sidebar, giving the outcomes their own editorial board. */
 .fh-split{display:grid;grid-template-columns:260px minmax(0,1fr);gap:38px}
 .create-service-page .five-help-2 .csp-help-heading h2{font-size:34px!important}
@@ -34,7 +38,8 @@
 .five-help-3 .fh-index{display:none}
 /* 04: A single white collection, four fully visible illustrated columns. */
 .five-help-4 .csp-question-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:0;background:#fff;border:1px solid #d5e5eb;border-radius:16px;overflow:hidden}
-.five-help-4 .csp-question-card{min-height:390px;border:0;border-right:1px solid #e0e9ec;border-radius:0;padding:24px 22px;justify-content:flex-start}
+.create-service-page .five-help-4{padding:30px 0}
+.five-help-4 .csp-question-card{min-height:360px;border:0;border-right:1px solid #e0e9ec;border-radius:0;padding:24px 22px;justify-content:flex-start}
 .five-help-4 .csp-question-card:nth-child(4){border-right:0}
 .five-help-4 .csp-question-prompt{margin-top:28px;min-height:36px}
 .create-service-page .five-help-4 .csp-question-card h3{font-size:25px;min-height:56px}
@@ -43,9 +48,9 @@
 .five-help-4 .csp-help-contact{padding:18px 24px;background:#f2f7f8;margin:0;border-top:1px solid #e0e9ec}
 /* 05: An illustrated ledger, with every description visible in the same scan line. */
 .five-help-5 .csp-question-grid{grid-template-columns:1fr;gap:0}
-.five-help-5 .csp-question-card{display:grid;grid-template-columns:80px 270px minmax(0,1fr);gap:0 24px;align-items:center;min-height:113px;background:transparent;border:0;border-top:1px solid #c5d7dd;border-radius:0;padding:16px 0}
-.five-help-5 .fh-art-frame{grid-column:1;grid-row:1/3;width:80px;height:87px}
-.five-help-5 .fh-art-frame>.cq-art{transform:scale(.47)}
+.five-help-5 .csp-question-card{display:grid;grid-template-columns:80px 270px minmax(0,1fr);gap:0 24px;align-items:center;min-height:103px;background:transparent;border:0;border-top:1px solid #c5d7dd;border-radius:0;padding:12px 0}
+.five-help-5 .fh-art-frame{grid-column:1;grid-row:1/3;width:70px;height:77px}
+.five-help-5 .fh-art-frame>.cq-art{transform:scale(.41)}
 .five-help-5 .csp-question-prompt{grid-column:2;grid-row:1;margin:0 0 5px;font-size:11px;align-self:end}
 .five-help-5 .csp-question-prompt svg{display:none}
 .create-service-page .five-help-5 .csp-question-card h3{grid-column:2;grid-row:2;align-self:start;font-size:26px;margin:0}
