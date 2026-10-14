@@ -21,7 +21,9 @@
   }
   p.replaceChildren(...best.map((line,i)=>{const span=document.createElement('span');span.className='spt-line';span.textContent=line+(i<2?' ':'');return span;}));
  });
- const fit=()=>{const desktop=innerWidth>1100;section.style.removeProperty('--spt-copy-size');if(!desktop)return;
+ const fit=()=>{const desktop=innerWidth>1100;section.style.removeProperty('--spt-copy-size');
+  section.querySelectorAll('.spt-art-frame').forEach(frame=>frame.style.setProperty('--spt-art-scale',String(frame.clientWidth/360)));
+  if(!desktop)return;
   let ratio=1;section.querySelectorAll('.spt-line').forEach(line=>{ratio=Math.min(ratio,line.clientWidth/line.scrollWidth);});
   section.style.setProperty('--spt-copy-size',(13*ratio).toFixed(2)+'px');
  };
