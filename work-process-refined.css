@@ -1,0 +1,34 @@
+.work-refined #work-process{padding:42px 0;scroll-margin-top:90px}
+.work-refined .work-chapters header{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px 24px;margin-bottom:28px}
+.work-refined .work-chapters header .section-tag{grid-column:1/-1;margin:0}
+.work-refined .work-chapters h2{font-size:38px;max-width:660px;margin:0}
+.work-refined .work-chapters h3{font-size:29px;margin:7px 0 10px}
+.work-refined .work-chapters .chapter-grid{grid-template-columns:1fr 1fr;gap:22px 36px}
+.work-refined .work-chapters article{position:relative;padding:20px 0;display:grid;grid-template-columns:90px 1fr;column-gap:22px;align-content:start}
+.work-refined .work-chapters .wp-art{grid-column:1;grid-row:1/4;width:90px;height:100px;background:#f1f7f9;border-radius:14px;margin:0;color:#008bb9}
+.work-refined .refined-art svg{width:76px;height:76px;align-self:center}
+.work-refined .work-chapters article>.wp-kicker,.work-refined .work-chapters article>h3,.work-refined .work-chapters article>p:last-child{grid-column:2}
+.work-refined .work-chapters article>p:last-child{font-size:14px;line-height:1.65;max-width:400px}
+.work-refined .wp-kicker{font-size:10px}
+.refined-b .chapter-grid article{border:1px solid #d5e5eb;border-radius:14px;padding:24px;grid-template-columns:1fr 76px}
+.refined-b .work-chapters article>.wp-kicker,.refined-b .work-chapters article>h3,.refined-b .work-chapters article>p:last-child{grid-column:1}
+.refined-b .work-chapters .wp-art{grid-column:2;grid-row:1/4;width:76px;height:84px;background:none;align-self:center}
+.refined-c .work-chapters .chapter-grid{gap:0 44px}
+.refined-c .work-chapters article{grid-template-columns:1fr;padding:22px 100px 22px 0}
+.refined-c .work-chapters article>.wp-kicker,.refined-c .work-chapters article>h3,.refined-c .work-chapters article>p:last-child{grid-column:1}
+.refined-c .work-chapters .wp-art{position:absolute;right:0;top:22px;width:72px;height:72px;background:none}
+.refined-c .refined-art svg{width:66px;height:66px}
+.refined-d #work-process{background:#f7f3ed}
+.refined-d .work-chapters .wp-mock{background:none}
+.refined-d .work-chapters header{grid-template-columns:1fr}
+.refined-d .work-chapters header .wp-cta{justify-self:start}
+.refined-d #work-process>.shell{display:grid;grid-template-columns:280px 1fr;gap:42px}
+.refined-d .work-chapters h2{font-size:36px}
+.refined-d .work-chapters .chapter-grid{gap:14px 28px}
+.refined-d .work-chapters article{grid-template-columns:1fr;padding:18px 0}
+.refined-d .work-chapters article>.wp-kicker,.refined-d .work-chapters article>h3,.refined-d .work-chapters article>p:last-child{grid-column:1}
+.refined-d .work-chapters .wp-art{position:absolute;right:0;top:10px;width:48px;height:48px;background:none}
+.refined-d .refined-art svg{width:44px;height:44px}
+.refined-d .work-chapters h3{font-size:27px;padding-right:40px}
+@media(max-width:900px){.refined-d #work-process>.shell{display:block}.refined-d .work-chapters header{grid-template-columns:1fr auto}.refined-d .work-chapters header .wp-cta{justify-self:end}}
+@media(max-width:650px){.work-refined .work-chapters header{display:block}.work-refined .work-chapters h2{font-size:32px;margin:16px 0}.work-refined .work-chapters .chapter-grid{grid-template-columns:1fr}.work-refined .work-chapters article{column-gap:16px}.work-refined #work-process{padding:32px 0}}
