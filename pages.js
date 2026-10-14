@@ -1689,7 +1689,7 @@ function serviceCompactArtwork(slug,index){
       'crm-automation':['Connected CRM','A reliable workflow',['Customer data','Routing rules','Team action']]
     };
     const a=systems[slug]||['Connected tools','A clear workflow',['Source','Connection','Next action']];
-    return '<div class="cq-art cq-art-system" aria-hidden="true"><div class="cq-art-sheet"><span class="cq-art-title">'+a[0]+'</span><span class="cq-art-caption">'+a[1]+'</span><div class="cq-system-rows">'+a[2].map((label,i)=>'<div><span>0'+(i+1)+'</span><b>'+label+'</b>'+(i<2?'<i>↓</i>':'')).join('')+'</div></div></div>';
+    return '<div class="cq-art cq-art-system" aria-hidden="true"><div class="cq-art-sheet"><span class="cq-art-title">'+a[0]+'</span><span class="cq-art-caption">'+a[1]+'</span><div class="cq-system-rows">'+a[2].map((label,i)=>'<div><span>0'+(i+1)+'</span><b>'+label+'</b>'+(i<2?'<i>↓</i>':'')+'</div>').join('')+'</div></div></div>';
   }
   const bars='<span class="cq-art-rule"></span><span class="cq-art-rule short"></span>';
   let inside='';
