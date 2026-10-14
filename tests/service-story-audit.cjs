@@ -21,7 +21,7 @@ for(const service of context.services){
   assert(source.includes('pages.js?v=20261014-process-paired'));
   assert(source.includes('service-process-visuals.js?v=1'));
   assert(source.includes('service-process-visuals.css?v=4'));
-  assert(source.includes('service-help-compact.css?v=20261014-section-spacing'));
+  assert(source.includes('service-help-compact.css?v=20261014-white-beige'));
   assert(source.includes('service-help-compact.js?v=1'));
   const title=source.match(/<title>(.*?)<\/title>/s)?.[1];
   const description=source.match(/name="description" content="([^"]+)"/)?.[1];
