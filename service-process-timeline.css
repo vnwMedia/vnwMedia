@@ -10,15 +10,14 @@
 .service-process-timeline .csp-process-step{position:static;display:block!important;width:100%;flex:1}
 .service-process-timeline .csp-process-step-index{position:absolute;top:0;left:0;display:grid;place-items:center;width:29px;height:29px;border:1px solid #9bcddd;border-radius:50%;background:white;z-index:1;font-size:11px;color:#0087b4}
 .service-process-timeline .csp-process-step h3{font-size:27px;line-height:1.12;margin:8px 0 10px!important}
-.service-process-timeline .csp-process-step p{font-size:var(--spt-copy-size,13px);line-height:1.65;margin:0}
-.service-process-timeline .spt-line{display:block;white-space:nowrap}
+.service-process-timeline .csp-process-step>div{width:100%;min-width:0}
+.service-process-timeline .csp-process-step p{width:100%;max-width:none;font-size:13px;line-height:1.65;margin:0;white-space:normal;text-wrap:wrap}
 .spt-art-frame{width:100%;height:calc(250px * var(--spt-art-scale,.6));max-width:100%;position:relative;flex:none;border-radius:10px;background:#f2f8fa}
 .service-process-timeline .scp-art{width:360px;height:250px;min-height:250px;padding:16px;margin:0;transform:scale(var(--spt-art-scale,.6));transform-origin:top left;overflow:visible}
 @media(max-width:1100px){
 .service-process-timeline .csp-process-studio{grid-template-columns:repeat(2,minmax(0,216px));gap:30px 23.1px;width:min(100%,455.1px)}
 .service-process-timeline .csp-process-studio:before{display:none}
 .service-process-timeline .csp-process-studio-card{border-top:1px solid #bcdbe6}
-.service-process-timeline .spt-line{display:inline;white-space:normal}
 .service-process-timeline .csp-process-step p{min-height:64px;font-size:13px}
 }
 @media(max-width:700px){

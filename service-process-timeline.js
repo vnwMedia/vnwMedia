@@ -12,20 +12,9 @@
  section.querySelectorAll('.csp-process-studio-card').forEach(card=>{
   const art=card.querySelector('.scp-art'), frame=document.createElement('div');
   frame.className='spt-art-frame';art.before(frame);frame.append(art);
-  const p=card.querySelector('.csp-process-step p'),words=p.textContent.trim().split(/\s+/);
-  let best,score=Infinity;
-  for(let i=1;i<words.length-1;i++)for(let j=i+1;j<words.length;j++){
-   const lines=[words.slice(0,i).join(' '),words.slice(i,j).join(' '),words.slice(j).join(' ')];
-   const lens=lines.map(l=>l.length),delta=Math.max(...lens)-Math.min(...lens);
-   if(delta<score){score=delta;best=lines;}
-  }
-  p.replaceChildren(...best.map((line,i)=>{const span=document.createElement('span');span.className='spt-line';span.textContent=line+(i<2?' ':'');return span;}));
  });
- const fit=()=>{const desktop=innerWidth>1100;section.style.removeProperty('--spt-copy-size');
+ const fit=()=>{
   section.querySelectorAll('.spt-art-frame').forEach(frame=>frame.style.setProperty('--spt-art-scale',String(frame.clientWidth/360)));
-  if(!desktop)return;
-  let ratio=1;section.querySelectorAll('.spt-line').forEach(line=>{ratio=Math.min(ratio,line.clientWidth/line.scrollWidth);});
-  section.style.setProperty('--spt-copy-size',(13*ratio).toFixed(2)+'px');
  };
  requestAnimationFrame(fit);document.fonts.ready.then(fit);window.addEventListener('resize',fit);
 })();
