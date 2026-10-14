@@ -25,5 +25,10 @@
 .create-service-page .service-process-timeline{padding:78px 0}
 .service-process-timeline .csp-section-head h2{font-size:30px!important}
 .service-process-timeline .csp-process-studio{grid-template-columns:1fr;gap:30px;width:100%}
+.service-process-timeline .csp-process-studio-card{padding-top:62px}
+.service-process-timeline .csp-process-step-index{top:16px}
+.service-process-timeline .spt-art-frame{width:100%;height:auto;max-width:none}
+.service-process-timeline .scp-art{width:100%;height:auto;min-height:250px;transform:none;padding:20px 18px;box-sizing:border-box}
+.service-process-timeline .scp-sheet{width:100%;max-width:440px;box-sizing:border-box}
 .service-process-timeline .csp-process-step p{min-height:0;font-size:14px}
 }
