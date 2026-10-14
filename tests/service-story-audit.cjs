@@ -16,9 +16,9 @@ for(const service of context.services){
   assert(story,service.slug+' missing story');
   assert.equal(story[1].length,3);assert.equal(story[2].length,4);
   assert(source.includes('service-story-content.js?v=20261014-preparation-cards'));
-  assert(source.includes('service-preparation.css?v=1'));
-  assert(source.includes('service-preparation.js?v=1'));
-  assert(source.includes('pages.js?v=20261014-service-story'));
+  assert(!source.includes('service-preparation.css'));
+  assert(!source.includes('service-preparation.js'));
+  assert(source.includes('pages.js?v=20261014-remove-preparation'));
   const title=source.match(/<title>(.*?)<\/title>/s)?.[1];
   const description=source.match(/name="description" content="([^"]+)"/)?.[1];
   assert(title&&description,service.slug+' missing metadata');
@@ -30,12 +30,8 @@ for(const service of context.services){
   assert.equal((html.match(/<h1[ >]/g)||[]).length,1);
   assert(!html.includes('id="service-diagnostic"'));
   assert(!html.includes('SEO, PPC &amp; AI visibility'));
-  assert(html.includes('id="prepare-for-engagement"'));
-  const preparation=html.match(/<section[^>]*id="prepare-for-engagement"[\s\S]*?<\/section>/)[0];
-  assert(!/<input|<select|prep-progress/.test(preparation),service.slug+' unexpected preparation control');
-  assert.equal((preparation.match(/class="sp-divider"/g)||[]).length,3);
-  assert.equal((preparation.match(/data-preparation-icon=/g)||[]).length,3);
-  assert.equal(new Set([...preparation.matchAll(/data-preparation-icon="([^"]+)"/g)].map(x=>x[1])).size,3,service.slug+' repeated preparation icons');
+  assert(!html.includes('id="prepare-for-engagement"'),service.slug+' preparation section still present');
+  assert(!html.includes('Before we begin'),service.slug+' preparation label still present');
   const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);assert.equal(ids.length,new Set(ids).size,service.slug+' duplicate IDs');
   const blocks=[...html.matchAll(/<p(?:\s[^>]*)?>(.*?)<\/p>/gs)].map(x=>x[1].replace(/<[^>]*>/g,'').trim()).filter(x=>x.length>80);
   assert.equal(blocks.length,new Set(blocks).size,service.slug+' duplicate paragraphs');
@@ -46,7 +42,7 @@ for(const service of context.services){
   for(const [,src]of html.matchAll(/<img[^>]*src="([^"]+)"/g))if(!/^https?:/.test(src))assert(fs.existsSync(path.resolve(root,'services',src)),service.slug+' missing image '+src);
   const faq=schemas.at(-1)['@graph'].find(x=>x['@type']==='FAQPage');
   assert.equal(faq.mainEntity.length,(html.match(/<details[ >]/g)||[]).length);
-  results.push(service.slug+': PASS — unique metadata, 1 H1, 4 gates, 3 preparation topics, '+faq.mainEntity.length+' matching FAQs; links/assets valid');
+results.push(service.slug+': PASS — unique metadata, 1 H1, 4 gates, preparation section removed, '+faq.mainEntity.length+' matching FAQs; links/assets valid');
 }
 assert.equal(results.length,28);
 console.log(results.join('\n'));
