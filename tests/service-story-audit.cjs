@@ -19,6 +19,8 @@ for(const service of context.services){
   assert(!source.includes('service-preparation.css'));
   assert(!source.includes('service-preparation.js'));
   assert(source.includes('pages.js?v=20261014-remove-preparation'));
+  assert(source.includes('service-help-compact.css?v=1'));
+  assert(source.includes('service-help-compact.js?v=1'));
   const title=source.match(/<title>(.*?)<\/title>/s)?.[1];
   const description=source.match(/name="description" content="([^"]+)"/)?.[1];
   assert(title&&description,service.slug+' missing metadata');

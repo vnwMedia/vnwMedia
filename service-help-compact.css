@@ -1,0 +1,25 @@
+.create-service-page .service-help-compact{padding:25px 0;background:#f7f3ed;scroll-margin-top:88px}
+.service-help-compact .csp-help-heading{margin:0}
+.service-help-compact .csp-help-heading .section-tag{font-size:10px;margin:0 0 14px}
+.create-service-page .service-help-compact .csp-help-heading h2{font-size:38px!important;line-height:1.12;max-width:1050px;margin:0 0 14px}
+.create-service-page .service-help-compact .csp-help-heading>p:last-child{font-size:14px;line-height:1.6;max-width:1000px;margin:0}
+.service-help-compact .csp-question-grid{margin-top:24px;gap:14px}
+.service-help-compact .csp-question-card{position:relative;border-radius:14px;padding:16px 22px;min-height:210px}
+.service-help-compact .shc-index{color:#0087b4;font-size:10px;letter-spacing:.1em;position:absolute;top:21px;right:22px}
+.service-help-compact .csp-question-prompt{margin:0 28px 10px 0;font-size:12px;line-height:1.45;min-height:0;gap:8px}
+.service-help-compact .csp-question-prompt svg{width:18px;height:18px;flex:none;margin:0}
+.create-service-page .service-help-compact .csp-question-card h3{font-size:25px;line-height:1.12;margin:0 0 8px}
+.service-help-compact .cq-card-body{grid-template-columns:minmax(0,1fr) 112px;gap:18px;align-items:center}
+.create-service-page .service-help-compact .cq-card-body>p{font-size:13px;line-height:1.6;color:#62737c;margin:0}
+.shc-art-frame{width:112px;height:123px;position:relative;flex:none}
+.service-help-compact .shc-art-frame>.cq-art{width:170px;height:185px;transform:scale(.65);transform-origin:top left}
+.service-help-compact .csp-help-contact{grid-column:1/-1;margin:4px 0 0;padding:0}
+.service-help-compact .csp-help-contact .pill{font-size:12px;padding:11px 20px}
+@media(max-width:700px){
+  .create-service-page .service-help-compact .csp-help-heading h2{font-size:31px!important}
+  .service-help-compact .csp-question-grid{grid-template-columns:1fr}
+  .service-help-compact .cq-card-body{grid-template-columns:minmax(0,1fr) 105px;gap:14px}
+  .service-help-compact .shc-art-frame{width:105px;height:115px}
+  .service-help-compact .shc-art-frame>.cq-art{transform:scale(.61)}
+  .service-help-compact .csp-question-card{padding:18px}
+}
