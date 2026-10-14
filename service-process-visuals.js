@@ -45,5 +45,6 @@ function serviceCheckpointArtwork(slug,index){
  else if(type==='people')scene='<div class="scp-people">'+items.map(x=>'<div><span aria-hidden="true">○</span><i aria-hidden="true"></i><b>'+esc(x)+'</b></div>').join('')+'</div>';
  else if(type==='document')scene='<div class="scp-document">'+items.map((x,i)=>'<div><b>'+esc(x)+'</b><i></i>'+(i===1?'<i class="short"></i>':'')+'</div>').join('')+'</div>'+(slug==='content-writing'&&index===2?'<span class="scp-review-stamp">REVIEWED ✓</span>':'');
  else scene='<div class="scp-rows">'+items.map(row).join('')+'</div>';
- return '<div class="csp-process-art scp-art scp-art-'+type+'" role="img" aria-label="'+esc(title+': '+items.join(', '))+ '" data-process-visual="'+slug+'-'+index+'"><div class="scp-sheet"><div class="scp-heading"><strong>'+esc(title)+'</strong><span>0'+(index+1)+'</span></div>'+scene+'</div></div>';
+ const specific=typeof serviceSpecificScene==='function'?serviceSpecificScene(slug,index,items):'';
+ return '<div class="csp-process-art scp-art scp-art-'+type+'" role="img" aria-label="'+esc(title+': '+items.join(', '))+ '" data-process-visual="'+slug+'-'+index+'" data-process-scene="'+(specific?SERVICE_SPECIFIC_SCENES[slug+'-'+index].name:(type==='video'?'video-'+index:type))+'"><div class="scp-sheet"><div class="scp-heading"><strong>'+esc(title)+'</strong><span>0'+(index+1)+'</span></div>'+(specific||scene)+'</div></div>';
 }

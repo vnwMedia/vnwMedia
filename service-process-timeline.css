@@ -3,6 +3,7 @@
 .service-process-timeline .csp-section-head h2{font-size:36px!important;line-height:1.12;max-width:100%!important}
 .service-process-timeline .csp-section-head>div{max-width:100%}
 .service-process-timeline .csp-section-head>div>p{max-width:930px;font-size:14px;line-height:1.65;margin:12px 0 0}
+.service-process-timeline .spt-contact{margin-top:20px;font-size:12px;padding:11px 20px;align-self:flex-start}
 .service-process-timeline .csp-process-studio{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:23.1px;align-items:stretch}
 .service-process-timeline .csp-process-studio:before{content:"";position:absolute;left:14px;right:14px;top:14px;height:1px;background:#bcdbe6}
 .service-process-timeline .csp-process-studio-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:18px;min-width:0;padding:38px 0 0;border:0}

@@ -7,6 +7,8 @@
  const name=section.querySelector('h2').textContent.split(':')[0];
  const intro=section.querySelector('.csp-section-head>div>p');
  intro.textContent='Our '+name+' process connects '+focus[slug]+'. Each checkpoint confirms the work, records feedback, and establishes who approves the next phase, so the team can move forward with clear responsibilities and an agreed scope.';
+ const cta=document.createElement('a');cta.className='pill pill-blue spt-contact';cta.href='../contact.html';cta.textContent='Plan Your Project';cta.setAttribute('aria-label','Plan your '+name+' project');
+ const arrow=document.createElement('span');arrow.setAttribute('aria-hidden','true');arrow.textContent='↗';cta.append(arrow);intro.after(cta);
  section.querySelectorAll('.csp-process-studio-card').forEach(card=>{
   const art=card.querySelector('.scp-art'), frame=document.createElement('div');
   frame.className='spt-art-frame';art.before(frame);frame.append(art);

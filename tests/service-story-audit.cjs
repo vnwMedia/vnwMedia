@@ -3,7 +3,7 @@ const root=path.resolve(__dirname,'..');
 const schemas=[];
 const context={document:{body:{dataset:{depth:'1'}},querySelector:()=>null,createElement:()=>({dataset:{}}),head:{appendChild:x=>schemas.push(JSON.parse(x.textContent))}}};
 vm.createContext(context);
-for(const file of ['service-catalog.js','create-service-content.js','service-story-content.js','service-process-visuals.js','pages.js']){
+for(const file of ['service-catalog.js','create-service-content.js','service-story-content.js','service-process-specific-scenes.js','service-process-visuals.js','pages.js']){
   let source=fs.readFileSync(path.join(root,file),'utf8');
   if(file==='pages.js')source=source.replace(/bootPages\(\);\s*$/,'');
   vm.runInContext(source,context,{filename:file});
@@ -19,8 +19,9 @@ for(const service of context.services){
   assert(!source.includes('service-preparation.css'));
   assert(!source.includes('service-preparation.js'));
   assert(source.includes('pages.js?v=20261014-process-paired'));
-  assert(source.includes('service-process-visuals.js?v=1'));
-  assert(source.includes('service-process-visuals.css?v=5'));
+  assert(source.includes('service-process-visuals.js?v=2'));
+  assert(source.includes('service-process-specific-scenes.js?v=1'));
+  assert(source.includes('service-process-visuals.css?v=6'));
   assert(source.includes('service-help-compact.css?v=20261014-white-beige'));
   assert(source.includes('service-help-compact.js?v=1'));
   const title=source.match(/<title>(.*?)<\/title>/s)?.[1];
@@ -33,6 +34,8 @@ for(const service of context.services){
   assert(!html.includes('undefined'),service.slug+' undefined content');
   assert.equal((html.match(/<h1[ >]/g)||[]).length,1);
   assert.equal((html.match(/data-process-visual=/g)||[]).length,4,service.slug+' needs four task-matched illustrations');
+  const scenes=[...html.matchAll(/data-process-scene="([^"]+)"/g)].map(x=>x[1]);
+  assert.equal(new Set(scenes).size,4,service.slug+' repeats an illustration scene');
   assert(!html.includes('id="service-diagnostic"'));
   assert(!html.includes('SEO, PPC &amp; AI visibility'));
   assert(!html.includes('id="prepare-for-engagement"'),service.slug+' preparation section still present');
