@@ -15,7 +15,9 @@ for(const service of context.services){
   const story=context.story[service.slug];
   assert(story,service.slug+' missing story');
   assert.equal(story[1].length,3);assert.equal(story[2].length,4);
-  assert(source.includes('service-story-content.js?v=20261014-service-story'));
+  assert(source.includes('service-story-content.js?v=20261014-preparation-cards'));
+  assert(source.includes('service-preparation.css?v=1'));
+  assert(source.includes('service-preparation.js?v=1'));
   assert(source.includes('pages.js?v=20261014-service-story'));
   const title=source.match(/<title>(.*?)<\/title>/s)?.[1];
   const description=source.match(/name="description" content="([^"]+)"/)?.[1];
@@ -29,6 +31,11 @@ for(const service of context.services){
   assert(!html.includes('id="service-diagnostic"'));
   assert(!html.includes('SEO, PPC &amp; AI visibility'));
   assert(html.includes('id="prepare-for-engagement"'));
+  const preparation=html.match(/<section[^>]*id="prepare-for-engagement"[\s\S]*?<\/section>/)[0];
+  assert(!/<input|<select|prep-progress/.test(preparation),service.slug+' unexpected preparation control');
+  assert.equal((preparation.match(/class="sp-divider"/g)||[]).length,3);
+  assert.equal((preparation.match(/data-preparation-icon=/g)||[]).length,3);
+  assert.equal(new Set([...preparation.matchAll(/data-preparation-icon="([^"]+)"/g)].map(x=>x[1])).size,3,service.slug+' repeated preparation icons');
   const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);assert.equal(ids.length,new Set(ids).size,service.slug+' duplicate IDs');
   const blocks=[...html.matchAll(/<p(?:\s[^>]*)?>(.*?)<\/p>/gs)].map(x=>x[1].replace(/<[^>]*>/g,'').trim()).filter(x=>x.length>80);
   assert.equal(blocks.length,new Set(blocks).size,service.slug+' duplicate paragraphs');

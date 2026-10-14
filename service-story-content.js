@@ -256,5 +256,59 @@ function serviceSupportingRole(slug){
 }
 function serviceReadinessSection(service){
   const story=SERVICE_STORY_CONTENT[service.slug];
-  return '<section class="csp-visibility section" data-nav-theme="light" id="prepare-for-engagement"><div class="shell"><div class="csp-section-head"><p class="section-tag">Before we begin</p><div><h2>What to prepare for '+esc(service.name)+'.</h2><p>These inputs and decisions help us agree on a realistic scope before work starts.</p></div></div><div class="csp-visibility-grid">'+story[1].map((entry,i)=>{const [title,body]=entry.split('|');return '<article><span>0'+(i+1)+'</span><h3>'+esc(title)+'</h3><p>'+esc(body)+'</p></article>';}).join('')+'</div></div></section>';
+  return '<section class="csp-visibility section service-preparation" data-nav-theme="light" id="prepare-for-engagement"><div class="shell"><div class="csp-section-head"><p class="section-tag">Before we begin</p><div><h2>What to prepare for '+esc(service.name)+'.</h2><p>Bring the right information, name the right people, and settle key responsibilities before kickoff. These preparation notes are tailored to your '+esc(service.name)+' engagement.</p></div></div><div class="csp-visibility-grid">'+story[1].map((entry,i)=>{
+    const [title,body]=entry.split('|');
+    const split=body.indexOf('. ');
+    const definition=split<0?body:body.slice(0,split+1);
+    const support=split<0?'':body.slice(split+2);
+    return '<article><div class="sp-card-top">'+servicePreparationIcon(service.slug,i)+'<span class="sp-index">0'+(i+1)+'</span></div><h3>'+esc(title)+'</h3><p class="sp-definition">'+esc(definition)+'</p>'+(support?'<p class="sp-support">'+esc(support)+'</p>':'')+'<div class="sp-divider" aria-hidden="true"></div></article>';
+  }).join('')+'</div><div class="sp-contact"><a class="pill pill-blue" href="'+path('contact.html')+'">Plan the next step <span aria-hidden="true">↗</span></a></div></div></section>';
+}
+function servicePreparationIcon(slug,index){
+  const icons={
+    folder:'<path d="M8 19h17l5 6h26v27H8z"/><path d="M8 25V14h17l5 5h23v6"/><path d="m22 39 7 7 14-15"/>',
+    calendar:'<rect x="10" y="13" width="44" height="41" rx="5"/><path d="M10 25h44M21 8v10m22-10v10M20 35h7m10 0h7M20 44h7m10 0h7"/>',
+    access:'<rect x="13" y="27" width="38" height="28" rx="5"/><path d="M23 27V18a9 9 0 0 1 18 0v9"/><circle cx="32" cy="39" r="3"/><path d="M32 42v5"/>',
+    people:'<circle cx="25" cy="22" r="8"/><path d="M11 51v-7a14 14 0 0 1 28 0v7M44 16a8 8 0 0 1 0 16m4 6a13 13 0 0 1 8 13"/>',
+    proof:'<path d="M19 9h25l8 9v37H14V9h5zM43 9v11h9"/><path d="M23 29h18M23 36h13m-12 9 5 5 10-11"/>',
+    data:'<ellipse cx="32" cy="15" rx="20" ry="7"/><path d="M12 15v32c0 4 9 8 20 8s20-4 20-8V15M12 31c0 4 9 8 20 8s20-4 20-8M12 20c0 4 9 8 20 8s20-4 20-8"/>',
+    route:'<rect x="8" y="9" width="18" height="16" rx="3"/><rect x="38" y="39" width="18" height="16" rx="3"/><path d="M17 25v22h21m-7-7 7 7-7 7M26 17h21v22"/>',
+    budget:'<rect x="9" y="15" width="46" height="37" rx="5"/><path d="M9 25h46"/><circle cx="32" cy="38" r="8"/><path d="M32 33v10m-3-8h5m-5 6h5"/>',
+    photo:'<rect x="8" y="12" width="48" height="41" rx="5"/><circle cx="23" cy="26" r="5"/><path d="m9 46 15-13 10 10 9-10 12 14"/>',
+    map:'<path d="m8 19 16-7 16 7 16-7v37l-16 7-16-7-16 7zM24 12v37m16-30v37"/><circle cx="40" cy="29" r="5"/>',
+    message:'<path d="M10 12h44v32H27L12 54V44h-2z"/><path d="M20 23h24M20 32h16"/>',
+    tools:'<path d="m39 10-9 9 4 10 10 4 9-9a16 16 0 0 1-20 20L17 57 7 47l16-16A16 16 0 0 1 39 10z"/>'
+  };
+  const keys={
+    'brand-strategy':['folder','proof','people'],
+    'graphic-design':['folder','tools','access'],
+    'web-design':['proof','access','route'],
+    'ecommerce':['data','route','tools'],
+    'website-maintenance':['tools','message','access'],
+    'app-design-development':['people','data','route'],
+    'landing-pages':['proof','route','people'],
+    'social-media':['folder','calendar','access'],
+    'social-media-consultation':['people','data','message'],
+    'community-management':['calendar','message','access'],
+    'seo':['budget','data','people'],
+    'local-seo':['map','data','proof'],
+    'technical-seo':['access','data','tools'],
+    'content-seo':['proof','folder','calendar'],
+    'google-business-profile':['access','map','photo'],
+    'yelp-seo':['access','message','photo'],
+    'aeo':['message','proof','folder'],
+    'geo':['proof','folder','tools'],
+    'aio':['access','people','proof'],
+    'reputation-management':['access','people','proof'],
+    'lead-generation':['proof','people','budget'],
+    'google-ppc':['access','proof','budget'],
+    'paid-social':['access','photo','tools'],
+    'email-marketing':['data','access','calendar'],
+    'text-marketing':['proof','access','people'],
+    'crm-automation':['data','people','tools'],
+    'content-writing':['folder','message','people'],
+    'video-editing':['photo','access','calendar']
+  };
+  const key=keys[slug][index];
+  return '<div class="sp-icon" data-preparation-icon="'+key+'" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">'+icons[key]+'</svg></div>';
 }
