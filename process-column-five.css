@@ -2,6 +2,7 @@ body[data-column-option] .pm-option-5 .csp-process-studio{align-items:stretch;ga
 body[data-column-option] .pm-option-5 .csp-process-studio-card{position:relative}
 body[data-column-option] .pm-option-5 .csp-section-head{margin-bottom:34px}
 body[data-column-option] .pm-option-5 .csp-process-step{flex:initial;width:100%}
+body[data-column-option="3"] .pm-option-5 .csp-process-step,body[data-column-option="4"] .pm-option-5 .csp-process-step{position:static}
 body[data-column-option="1"] .pm-option-5 .csp-process-studio-card{background:#f7f3ed;border:1px solid #e7e0d4;border-radius:14px;padding:22px 18px;gap:20px}
 body[data-column-option="1"] .pm-art-frame{align-self:center}
 body[data-column-option="1"] .csp-process-step-index{display:grid;place-items:center;width:28px;height:28px;border:1px solid #c8dce5;border-radius:50%;background:#fff}
