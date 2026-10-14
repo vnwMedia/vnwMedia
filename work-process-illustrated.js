@@ -1,4 +1,11 @@
 (() => {
+  if(document.body.classList.contains('work-process-live')){
+    const header=document.querySelector('#work-process header');
+    const intro=document.createElement('p');
+    intro.className='work-process-intro';
+    intro.textContent='Our website design and digital marketing process connects business goals, customer needs, and clear next steps. From discovery and planning to development, SEO foundations, and ongoing refinement, each phase helps build a more useful experience for your customers.';
+    header.querySelector('.wp-cta').before(intro);
+  }
   const scenes=[
     '<ellipse cx="79" cy="113" rx="67" ry="9" fill="#e5eef0"/><path d="m21 30 74-9 9 82-73 8z" fill="#fff" stroke="#8fbac8"/><path d="m34 43 43-5m-42 15 35-4m-34 15 20-2" stroke="#b7d5df" stroke-width="3"/><rect x="24" y="13" width="39" height="25" rx="3" fill="#dff3fa" stroke="#8fbac8" transform="rotate(-7 24 13)"/><path d="m35 26 6 4 10-11" stroke="#00aeef" stroke-width="2"/><path d="m55 91 12-9 12 5 15-14" fill="none" stroke="#00aeef" stroke-width="3"/><circle cx="108" cy="69" r="23" fill="#dff3fa" fill-opacity=".8" stroke="#244955" stroke-width="3"/><path d="m124 88 17 19" stroke="#244955" stroke-width="7"/><path d="m112 17 8-1 8 55-8 1z" fill="#00aeef"/><path d="m120 72 5 10 3-11" fill="#244955"/>',
     '<ellipse cx="80" cy="113" rx="67" ry="9" fill="#e5eef0"/><path d="m15 26 119-9 8 85-119 9z" fill="#fff" stroke="#8fbac8"/><path d="m27 43 98-7m-94 41 99-7" stroke="#edf4f6" stroke-width="12"/><path d="m43 51 29-2v26l31-2" fill="none" stroke="#00aeef" stroke-width="2.5"/><rect x="29" y="39" width="30" height="21" rx="3" fill="#244955" transform="rotate(-4 29 39)"/><path d="m35 48 16-1" stroke="#fff" stroke-width="2"/><rect x="88" y="59" width="32" height="25" rx="3" fill="#dff3fa" stroke="#8fbac8" transform="rotate(-4 88 59)"/><path d="m97 72 5 4 10-11" stroke="#00aeef" stroke-width="2"/><rect x="95" y="17" width="30" height="25" rx="2" fill="#00aeef" transform="rotate(8 95 17)"/><path d="m102 27 15 2m-15 4 10 2" stroke="#fff" stroke-width="2"/><path d="m31 91 40-3" stroke="#b7d5df" stroke-width="3"/>',
