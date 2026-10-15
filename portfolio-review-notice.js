@@ -2,6 +2,9 @@
 (()=>{
   const grid=document.querySelector('.work-grid');
   grid.innerHTML=PORTFOLIO_CLIENT_ADDITIONS.map(renderPortfolioAdditionCard).join('');
+  // These cards are inserted after the shared reveal observer is initialized.
+  // Keep review content visible immediately instead of waiting for that observer.
+  grid.querySelectorAll('.reveal').forEach(card=>card.classList.remove('reveal'));
   document.querySelector('#reviews')?.remove();
   document.querySelector('.work-agency-head h2').textContent='13 new clients. Ready for your review.';
   document.querySelector('.work-agency-head>p').textContent='Only the proposed additions are shown here. Open each case study to review the client’s services, imagery, and temporary Positive Growth status.';
