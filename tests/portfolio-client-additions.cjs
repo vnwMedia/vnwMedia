@@ -32,8 +32,7 @@ for(const p of c.clients){
  }
  const card=c.card(p);assert(card.includes(p.slug+'-review.html'));assert(!/GBP Search Ads|GEO \/ AI/.test(card));
  assert(!/Positive Growth/.test(html+card),p.slug+' must replace the old status');
- assert(card.includes('Sample data')&&card.includes('Not client-reported results'));
- assert.equal((card.match(/class="portfolio-card-stat"/g)||[]).length,p.scope.length);
+ assert(!/portfolio-card-stat|portfolio-trend-chart|Sample data|Not client-reported results/.test(card),'review cards must retain the original chart-free layout');
  for(const key of p.scope){
   const metrics=c.metrics(p,key);assert.equal(metrics.length,3);
   for(const m of metrics){
