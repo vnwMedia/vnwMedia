@@ -1242,15 +1242,19 @@ function storyPage(){
   return `
     <section class="trust-strip" data-nav-theme="dark" aria-label="VNW Media capabilities"><div class="trust-track"><small>Built to move businesses forward</small><i></i>${["Web Design","SEO","Google Ads","Social Media","Brand Strategy","Content","Web Design","SEO","Google Ads","Social Media"].map(x=>`<span>${x}</span>`).join("")}</div></section>
     <section class="story2-team story2-team-live-option4 section" data-nav-theme="dark" id="team"><div class="shell"><div class="story2-live-cinema reveal"><div class="team-cinema"><div><p class="team-cinema-eyebrow">Our Team</p><h2><span>People behind the</span><span>strategy, screen, search</span><span>and support.</span></h2><p>Meet the people who bring your brand, website, and marketing together—from the first conversation to launch and ongoing support.</p><a class="pill pill-blue" href="${path("contact.html")}">Talk through the project <span>↗</span></a></div><div class="team-cinema-strip" aria-label="VNW Media team">${teamMembers.map(x=>`<figure><img src="${img(x[1])}" alt="${x[0]} VNW Media team headshot"><figcaption>${x[0]}</figcaption></figure>`).join("")}</div></div></div></div></section>
-    <section class="story-approach-workbench section" data-nav-theme="light" id="approach" aria-labelledby="story-approach-title">
-      <div class="shell">
-        <div class="story-approach-heading">
-          <p class="section-tag">Our Approach</p>
-          <h2 id="story-approach-title">The way we think shapes the way the website performs.</h2>
-          <p class="story-approach-intro">One connected philosophy, from the first strategic question through long-term support.</p>
+    <section class="section story-purpose" data-nav-theme="light" id="approach" aria-labelledby="story-purpose-title">
+      <div class="shell sdp-story-grid">
+        <figure class="sdp-story-photo"><img src="${img("assets/story-hero-digital-option-1-monitor-collaboration.png")}" alt="Website and digital marketing collaboration" loading="lazy"><figcaption>Strategy. Creative. Technology. Connected.</figcaption></figure>
+        <div class="sdp-story-copy">
+          <header class="sdp-heading"><p class="section-tag">Why We Built VNW Media</p><h2 id="story-purpose-title">Good businesses deserve<br>a more connected<br><em>digital partner.</em></h2><p>A website should not feel separate from the marketing that brings people to it—or the experience they have after getting in touch.</p></header>
+          <p>VNW Media brings brand, website, search, campaigns, content, reputation, and follow-up into one conversation. The aim is not to add more services. It is to help the right pieces work together around what your business actually needs.</p>
+          <div class="sdp-story-principles">
+            <article><h3>See the business, not just the brief.</h3><p>The customer, offer, and business priorities give the work its context.</p></article>
+            <article><h3>Connect the pieces that matter.</h3><p>Choose the services that support the need, rather than treating every project as the same package.</p></article>
+            <article><h3>Keep the relationship human.</h3><p>Make decisions easier to understand through direct conversation and clear expectations.</p></article>
+          </div>
+          <a class="pill pill-blue" href="${path("contact.html")}">Talk through your project <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="story-approach-grid">${beliefs.map((belief,index)=>`<article class="story-approach-card">${approachArt[index]}<p class="story-approach-number">${belief[0]} / ${approachThemes[index]}</p><h3>${belief[1]}</h3><p class="story-approach-copy">${belief[2]}</p></article>`).join("")}</div>
-        <div class="story-approach-actions"><a class="pill pill-blue" href="${path("contact.html")}">Talk through the project <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
     <section class="story2-cta-split" id="why-vnw-media" data-nav-theme="dark"><div class="shell story2-cta-grid reveal"><div><p class="section-tag">Why VNW Media</p><h2>We connect the creative work to the customer journey.</h2></div><p>A beautiful website matters. But it matters more when the structure supports SEO, the copy answers real buying questions, the calls to action are clear, and the brand feels trustworthy at every step.</p><div class="story2-cta-actions"><a class="pill pill-blue pill-large" href="${path("contact.html#audit")}">Request a free audit <span>↗</span></a><a class="pill pill-outline pill-large" href="${path("work.html")}">View our work</a></div></div></section>
