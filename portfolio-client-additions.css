@@ -8,6 +8,9 @@
 .portfolio-review-case-note a{color:#007fa5}
 .portfolio-addition-media .portfolio-addition-logo{background:transparent;padding:0;object-fit:contain;border-radius:0;width:58%;max-width:280px;max-height:160px;filter:drop-shadow(0 3px 5px #0009)}
 body[data-portfolio-addition] .scm-ms-hero h1 .case-hero-client-logo{background:transparent;padding:0;border-radius:0;max-height:180px;object-fit:contain;filter:drop-shadow(0 3px 5px #0009)}
+/* Restore only Argana's original red-and-gold mark, cropped above the extra artwork. */
+.portfolio-addition-media[data-project="argana-day-spa"] .portfolio-addition-logo{width:52%;height:160px;object-fit:cover;object-position:top;padding:0;border-radius:3px;filter:none}
+body[data-page="case-argana-day-spa"] .scm-ms-hero h1 .case-hero-client-logo{height:160px;object-fit:cover;object-position:top;padding:0;border-radius:3px;filter:none}
 .portfolio-addition-media[data-project="aesthetic-island-nyc"] .portfolio-addition-logo,
 body[data-page="case-aesthetic-island-nyc"] .scm-ms-hero h1 .case-hero-client-logo{filter:brightness(0) invert(1) drop-shadow(0 3px 5px #0009)}
 body[data-portfolio-addition] .scm-ms-story-stage img{object-fit:contain;object-position:top;width:100%;height:auto}
