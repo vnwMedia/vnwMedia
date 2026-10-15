@@ -11,6 +11,9 @@ assert.equal(c.clients.length,13);
 assert.equal(new Set(c.clients.map(p=>p.slug)).size,13);
 assert.equal(c.clients.find(p=>p.slug==='argana-day-spa').logo,'assets/client-projects/argana-day-spa-logo.png','restore Argana original background');
 for(const slug of ['calvin-schwartz','genius-kids'])assert(c.clients.find(p=>p.slug===slug).logo.endsWith('-logo-transparent.svg'),'preserve other transparent logos');
+assert.deepEqual(Array.from(c.clients.find(p=>p.slug==='aesthetic-island-nyc').scope),['ppc','gbp','reputation']);
+assert.deepEqual(Array.from(c.clients.find(p=>p.slug==='argana-day-spa').scope),['gbp','reputation']);
+for(const p of c.clients.filter(p=>!['aesthetic-island-nyc','argana-day-spa'].includes(p.slug)))assert(!p.scope.includes('reputation'),'do not broaden other client scopes');
 const serviceDeltas={};
 for(const p of c.clients){
  const file=fs.readFileSync(path.join(root,'case-studies',p.slug+'-review.html'),'utf8');

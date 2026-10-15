@@ -3,20 +3,20 @@
 // sample data and are not client-reported performance.
 const PORTFOLIO_CLIENT_ADDITIONS = [
   {
-    slug:'aesthetic-island-nyc',name:'Aesthetic Island NYC',industry:'Medical Aesthetics & Wellness',website:'https://www.aestheticislandnyc.com/',logoExtension:'png',scope:['ppc','gbp'],
+    slug:'aesthetic-island-nyc',name:'Aesthetic Island NYC',industry:'Medical Aesthetics & Wellness',website:'https://www.aestheticislandnyc.com/',logoExtension:'png',scope:['ppc','gbp','reputation'],
     summary:'A Brooklyn medical spa offering aesthetic treatments and personalized consultations.',
     headline:'Connect local treatment interest with a clear next step.',
     challenge:'People researching aesthetic treatments need to identify the practice, understand its services, and find accurate contact and appointment information.',
-    focus:'Treatment discovery and consultation interest',
-    story:'The practice presents its treatment options, practitioner information, and appointment pathways. Our scope focuses on PPC and Google Business Profile—not a website build or a claim about patient outcomes.'
+    focus:'Treatment discovery, consultation interest, and customer trust',
+    story:'The practice presents its treatment options, practitioner information, and appointment pathways. Our scope includes PPC, Google Business Profile Management, and Reputation Management, connecting local discovery with customer feedback and trust. It does not include a website build or claims about patient outcomes.'
   },
   {
-    slug:'argana-day-spa',name:'Argana Day Spa',industry:'Spa & Wellness',website:'https://www.arganadayspa.com/',logoExtension:'png',scope:['gbp'],
+    slug:'argana-day-spa',name:'Argana Day Spa',industry:'Spa & Wellness',website:'https://www.arganadayspa.com/',logoExtension:'png',scope:['gbp','reputation'],
     summary:'A Brooklyn day spa offering wellness treatments, facials, massage, and traditional Moroccan hammam experiences.',
     headline:'Help nearby guests find the right spa experience.',
     challenge:'Guests looking for a spa need reliable location, hours, and contact details before choosing a treatment or making an appointment.',
-    focus:'Local spa discovery and business information',
-    story:'Argana introduces its treatments and Brooklyn location through its existing website. Our engagement is Google Business Profile management, keeping the local discovery experience connected with the business.'
+    focus:'Local spa discovery, business information, and customer feedback',
+    story:'Argana introduces its treatments and Brooklyn location through its existing website. Our engagement combines Google Business Profile Management and Reputation Management, keeping local discovery, business information, and customer feedback connected with the spa.'
   },
   {
     slug:'calvin-schwartz',name:'Calvin Schwartz',industry:'Author, Broadcaster & Personal Brand',website:'https://calvinschwartz.com/',logoExtension:'png',scope:['web','youtube-seo','tiktok-seo'],
@@ -114,6 +114,7 @@ const PORTFOLIO_ADDITION_SERVICES={
   gbp:{id:'google-business-profile',label:'Google Business Profile Management',page:'google-business-profile',focus:'Local discovery',copy:'Maintain useful business details, service context, and contact pathways within the client’s Google Business Profile presence.'},
   ppc:{id:'google-ppc',label:'PPC',page:'google-ppc',focus:'Paid search',copy:'Align paid-search campaigns with relevant service interest and clear inquiry pathways. Evaluate progress with client-specific reporting when available.'},
   smm:{id:'social-media',label:'Social Media Management',page:'social-media',focus:'Social communication',copy:'Plan and manage business-relevant social content that communicates services, presents work, and gives the audience useful next steps.'},
+  reputation:{id:'reputation-management',label:'Reputation Management',page:'reputation-management',focus:'Customer feedback and trust',copy:'Support an active review presence through review monitoring, privacy-conscious response guidance, and invitations for honest customer feedback.'},
   'youtube-seo':{id:'youtube-seo',label:'YouTube SEO',page:'seo',focus:'YouTube discovery',copy:'Shape video titles, descriptions, topic organization, and discoverability around Calvin’s interviews, conversations, and published content.'},
   'tiktok-seo':{id:'tiktok-seo',label:'TikTok SEO',page:'seo',focus:'TikTok discovery',copy:'Connect short-form content with relevant topics, searchable wording, captions, and consistent creator context.'}
 };
@@ -125,14 +126,15 @@ const PORTFOLIO_SAMPLE_METRICS={
   seo:[['Organic website visits',''],['Search impressions',''],['Organic inquiries','']],
   web:[['Inquiry conversion rate','%'],['Website inquiries',''],['Engaged sessions','%']],
   smm:[['People reached',''],['Engagement rate','%'],['Profile visits','']],
+  reputation:[['New reviews',''],['Review response rate','%'],['Reviews responded to','']],
   'youtube-seo':[['YouTube search views',''],['Watch time','hours'],['New subscribers','']],
   'tiktok-seo':[['TikTok search views',''],['Profile visits',''],['Content engagements','']]
 };
 // Fixed illustrative scenarios keep reviews stable rather than changing on reload.
 // Each pair is [earlier, later]; these are not measured client outcomes.
 const PORTFOLIO_SAMPLE_SCENARIOS={
-  'aesthetic-island-nyc':{ppc:[[28,57],[64,41],[2.8,5.6]],gbp:[[1640,2952],[34,61],[142,228]]},
-  'argana-day-spa':{gbp:[[2180,2551],[48,57],[186,212]]},
+  'aesthetic-island-nyc':{ppc:[[28,57],[64,41],[2.8,5.6]],gbp:[[1640,2952],[34,61],[142,228]],reputation:[[18,31],[78,97],[14,30]]},
+  'argana-day-spa':{gbp:[[2180,2551],[48,57],[186,212]],reputation:[[22,29],[82,93],[18,27]]},
   'calvin-schwartz':{web:[[1.6,2.3],[18,29],[42,54]],'youtube-seo':[[1260,2444],[96,177],[28,53]],'tiktok-seo':[[1850,4163],[124,272],[196,428]]},
   'classical-caterers':{web:[[2.4,3.1],[31,42],[51,60]],seo:[[960,1459],[14800,21312],[22,34]]},
   'genius-kids':{web:[[1.8,3.3],[26,45],[44,63]],seo:[[740,1399],[11200,19824],[17,32]]},
