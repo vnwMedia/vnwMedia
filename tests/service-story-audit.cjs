@@ -24,7 +24,8 @@ for(const service of context.services){
   assert(source.includes('service-process-visuals.css?v=6'));
   assert(source.includes('service-help-compact.css?v=20261014-clear-connections-2'));
   assert(source.includes('service-help-compact.js?v=1'));
-  assert(source.includes('service-help-studio.js?v=1'),service.slug+' missing approved studio layout');
+  assert(source.includes('service-help-studio.js?v=2'),service.slug+' missing approved studio layout');
+  assert(source.includes('service-help-studio-art.js?v=1'),service.slug+' missing original outcome artwork');
   assert(source.includes('service-help-studio.css?v=2'),service.slug+' missing studio artwork fit styles');
   assert(source.includes('agency-help-eight.css?v=1'));
   const title=source.match(/<title>(.*?)<\/title>/s)?.[1];
