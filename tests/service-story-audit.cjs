@@ -3,12 +3,12 @@ const root=path.resolve(__dirname,'..');
 const schemas=[];
 const context={document:{body:{dataset:{depth:'1'}},querySelector:()=>null,createElement:()=>({dataset:{}}),head:{appendChild:x=>schemas.push(JSON.parse(x.textContent))}}};
 vm.createContext(context);
-for(const file of ['service-catalog.js','create-service-content.js','service-story-content.js','service-process-specific-scenes.js','service-process-visuals.js','pages.js']){
+for(const file of ['service-catalog.js','create-service-content.js','service-story-content.js','service-process-specific-scenes.js','service-process-visuals.js','service-help-outcome-copy.js','pages.js']){
   let source=fs.readFileSync(path.join(root,file),'utf8');
   if(file==='pages.js')source=source.replace(/bootPages\(\);\s*$/,'');
   vm.runInContext(source,context,{filename:file});
 }
-vm.runInContext('globalThis.services=SERVICE_CATALOG;globalThis.story=SERVICE_STORY_CONTENT;globalThis.config=CREATE_SERVICE_PAGES;globalThis.render=(s)=>createServiceDetail(s,CREATE_SERVICE_PAGES[s.slug]||serviceStoryFallback(s));',context);
+vm.runInContext('globalThis.services=SERVICE_CATALOG;globalThis.story=SERVICE_STORY_CONTENT;globalThis.outcomeCopy=SERVICE_HELP_OUTCOME_COPY;globalThis.config=CREATE_SERVICE_PAGES;globalThis.render=(s)=>createServiceDetail(s,CREATE_SERVICE_PAGES[s.slug]||serviceStoryFallback(s));',context);
 const titles=new Set(),descriptions=new Set(),results=[];
 for(const service of context.services){
   const file=path.join(root,'services',service.slug+'.html'),source=fs.readFileSync(file,'utf8');
@@ -24,9 +24,13 @@ for(const service of context.services){
   assert(source.includes('service-process-visuals.css?v=6'));
   assert(source.includes('service-help-compact.css?v=20261014-clear-connections-2'));
   assert(source.includes('service-help-compact.js?v=1'));
-  assert(source.includes('service-help-studio.js?v=3'),service.slug+' missing approved studio layout');
+  assert(source.includes('service-help-studio.js?v=4'),service.slug+' missing approved studio layout');
+  assert(source.includes('service-help-outcome-copy.js?v=1'),service.slug+' missing expanded outcome descriptions');
+  assert.equal(context.outcomeCopy[service.slug].length,4);
+  assert.equal(new Set(context.outcomeCopy[service.slug]).size,4);
+  context.outcomeCopy[service.slug].forEach(copy=>assert(copy.length>220,service.slug+' outcome needs substantive detail'));
   assert(source.includes('service-help-studio-art.js?v=1'),service.slug+' missing original outcome artwork');
-  assert(source.includes('service-help-studio.css?v=4'),service.slug+' missing studio artwork fit styles');
+  assert(source.includes('service-help-studio.css?v=5'),service.slug+' missing studio artwork fit styles');
   assert(source.includes('agency-help-eight.css?v=2'));
   const title=source.match(/<title>(.*?)<\/title>/s)?.[1];
   const description=source.match(/name="description" content="([^"]+)"/)?.[1];

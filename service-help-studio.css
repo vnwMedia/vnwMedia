@@ -7,3 +7,5 @@
 .service-help-studio .ahp-studio-label{position:relative;top:auto;flex-shrink:0;text-align:center;line-height:1.5;margin-bottom:20px;max-width:100%}
 .service-help-studio .ahp-studio-visual .ahp-art-frame{flex-shrink:0;margin:32px 0 36px}
 .service-help-studio .studio-contact{position:relative;z-index:2;margin-top:30px;text-align:center}
+.service-help-studio .ahp-studio-grid .ahp-number{display:inline;margin:0;letter-spacing:0;font:inherit}
+.service-help-studio .studio-question-divider{white-space:pre}
