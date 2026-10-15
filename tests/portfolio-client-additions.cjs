@@ -50,7 +50,9 @@ for(const p of c.clients){
  c.document.querySelector=s=>s==='.scm-ms-signals'?resultTarget:{after(){}};
  vm.runInContext(fs.readFileSync(path.join(root,'portfolio-client-results.js'),'utf8'),c);
  assert.equal((resultTarget.innerHTML.match(/class="aoc-service-result portfolio-metric-card"/g)||[]).length,p.scope.length);
- assert(resultTarget.innerHTML.includes('not actual client results'));
+ assert(resultTarget.innerHTML.includes('<p class="portfolio-data-disclosure">Sample 90-day results</p>'));
+ assert.equal((resultTarget.innerHTML.match(/sample/gi)||[]).length,1,'one section-level sample label, no repeated pills');
+ assert(!/Sample data|illustrative figures|client-reported figures/i.test(html),'no repeated sample notices elsewhere on the case study');
  assert(!/<svg|portfolio-trend-chart|Earlier period|Later period/.test(resultTarget.innerHTML),'case-study results must remain graph-free');
  assert(!/Positive Growth|undefined|NaN/.test(resultTarget.innerHTML));
  console.log(p.slug+': PASS — actual logo, preview page, confirmed service scope, valid links');

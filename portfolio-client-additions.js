@@ -167,14 +167,14 @@ function renderPortfolioAdditionCase(p){
     hero:p.desktop,heroAlt:p.name+' client website',heroWidth:1440,heroHeight:1000,
     heroLogo:p.logo,serviceLabels:services.map(s=>s.label),website:p.website,
     mockup:'assets/digital-experience-clients/'+p.slug+'-devices.svg',mockupAlt:p.name+' actual desktop and mobile websites displayed on a laptop and phone',mockupWidth:1145,mockupHeight:1200,
-    signals:services.map(s=>['Sample data',s.label]),
+    signals:services.map(s=>['—',s.label]),
     challengeTitle:p.headline,challengeOne:p.challenge,
     challengeTwo:'Our confirmed scope for '+p.name+' is '+services.map(s=>s.label).join(', ')+'. The engagement focuses on '+p.focus.toLowerCase()+'.',
     approachTitle:'A specific scope. A connected direction.',
     approach:services.map(s=>[s.label+'.',s.copy]),
     storyTitle:p.headline,storyOne:p.story,
     storyTwo:'The client website shown here provides real business context. The service list identifies the work provided by VNW Media; it does not attribute unrelated services to this engagement.',
-    storyThree:'The service dashboard shows how progress can be presented across the work we provide. Its statistics are sample data for this review; client-reported figures can replace them when available.',
+    storyThree:'The service dashboard shows how progress can be presented across the work we provide.',
     services:services.map(s=>[s.id,s.label,s.copy+' For '+p.name+', the focus is '+p.focus.toLowerCase()+'.',s.focus,'Discuss '+s.label])
   });
 }
