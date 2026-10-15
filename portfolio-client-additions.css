@@ -15,24 +15,18 @@ body[data-page="case-argana-day-spa"] .scm-ms-hero h1 .case-hero-client-logo{hei
 body[data-page="case-aesthetic-island-nyc"] .scm-ms-hero h1 .case-hero-client-logo{filter:brightness(0) invert(1) drop-shadow(0 3px 5px #0009)}
 body[data-portfolio-addition] .scm-ms-story-stage img{object-fit:contain;object-position:top;width:100%;height:auto}
 body[data-portfolio-addition] .scm-ms-story-stage{min-height:0;padding:0;align-items:center}
-.portfolio-positive-results .aoc-service-result>strong{font-size:clamp(22px,2.5vw,36px);line-height:1.1}
 .portfolio-positive-results .aoc-period{max-width:65ch}
 @media(max-width:600px){.portfolio-addition-media .portfolio-addition-logo{max-height:120px}}
 
 /* Disclosed sample dashboards; never styled as verified client reporting. */
 .portfolio-data-disclosure{color:#b9c4ca;font-size:12px;line-height:1.6;margin:16px 0 24px}
-.portfolio-metric-primary{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:28px}
-.portfolio-metric-primary>strong{color:#08b7ed;font:500 clamp(34px,3.5vw,48px)/1 Inter,sans-serif;letter-spacing:-.055em}
-.portfolio-metric-card h4{margin:10px 0 8px}
-.portfolio-metric-comparison{margin:0;color:#a9b6bd;font-size:14px}
-.portfolio-metric-comparison b{color:#fff;font-weight:500}
-.portfolio-metric-comparison span{padding:0 7px}
-.portfolio-secondary-metrics{margin:20px 0 0;border-top:1px solid #35444d}
-.portfolio-secondary-metrics>div{padding:12px 0 0}
-.portfolio-secondary-metrics dt{color:#b4c0c6;font-size:12px;margin-bottom:5px}
-.portfolio-secondary-metrics dd{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:13px;margin:0;color:#a9b6bd}
-.portfolio-secondary-metrics dd b{color:#fff;font-weight:500}
-.portfolio-secondary-metrics dd small{margin-left:auto;color:#8ed6bc;font-size:11px}
+/* Share the live case-study card, heading, cyan value, and green comparison styles. */
+.portfolio-secondary-metrics{margin:0;padding-top:16px;border-top:1px solid #314048}
+.portfolio-secondary-metrics>div+div{margin-top:14px}
+.portfolio-secondary-metrics dt{color:#e5edf2;font:500 13px/1.6 Inter,sans-serif;margin-bottom:5px}
+.portfolio-secondary-metrics dd{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font:400 12px/1.7 Inter,sans-serif;margin:0;color:#a4b1b8}
+.portfolio-secondary-metrics dd b{color:inherit;font-weight:400}
+.portfolio-secondary-metrics dd small{margin-left:auto;color:inherit;font:inherit}
 .portfolio-card-stats{width:100%;border-top:1px solid #d7e1e5;padding-top:13px;margin:12px 0 18px}
 .work-card .portfolio-sample-label{min-height:0;font:500 10px/1.4 Inter,sans-serif;color:#627983;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
 .portfolio-card-stat{display:grid;grid-template-columns:minmax(0,1fr) auto 64px;align-items:center;gap:8px;padding:8px 0}
@@ -42,4 +36,3 @@ body[data-portfolio-addition] .scm-ms-story-stage{min-height:0;padding:0;align-i
 .portfolio-card-stat .portfolio-trend-chart{margin:0}
 .portfolio-card-stats .portfolio-chart-grid{stroke:#87a2ad;stroke-opacity:.3}
 .portfolio-card-data-note{display:block;color:#637882;font:400 10px/1.5 Inter,sans-serif;margin-top:6px}
-@media(max-width:1100px){.portfolio-metric-primary{align-items:flex-start;flex-direction:column;gap:8px}}

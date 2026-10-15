@@ -6,7 +6,7 @@ for(const file of ['service-catalog.js','client-projects.js','portfolio-client-a
  if(file==='pages.js')text=text.replace(/bootPages\(\);\s*$/,'');
  vm.runInContext(text,c,{filename:file});
 }
-vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortfolioAdditionCase;this.card=renderPortfolioAdditionCard;this.scope=PORTFOLIO_ADDITION_SERVICES;this.metrics=portfolioSampleMetrics;',c);
+vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortfolioAdditionCase;this.card=renderPortfolioAdditionCard;this.scope=PORTFOLIO_ADDITION_SERVICES;this.metrics=portfolioSampleMetrics;this.formatMetric=portfolioMetricValue;',c);
 assert.equal(c.clients.length,13);
 assert.equal(new Set(c.clients.map(p=>p.slug)).size,13);
 assert.equal(c.clients.find(p=>p.slug==='argana-day-spa').logo,'assets/client-projects/argana-day-spa-logo.png','restore Argana original background');
@@ -55,6 +55,17 @@ for(const p of c.clients){
  c.document.querySelector=s=>s==='.scm-ms-signals'?resultTarget:{after(){}};
  vm.runInContext(fs.readFileSync(path.join(root,'portfolio-client-results.js'),'utf8'),c);
  assert.equal((resultTarget.innerHTML.match(/class="aoc-service-result portfolio-metric-card"/g)||[]).length,p.scope.length);
+ assert.equal((resultTarget.innerHTML.match(/class="aoc-comparison portfolio-metric-comparison"/g)||[]).length,p.scope.length,'use the live case-study green comparison pattern');
+ assert.equal((resultTarget.innerHTML.match(/over comparable 90-day periods/g)||[]).length,p.scope.length);
+ for(const key of p.scope){
+  const metrics=c.metrics(p,key);
+  assert(resultTarget.innerHTML.includes('<strong>+'+metrics[0].delta+'%</strong>'),'keep the original client growth figure');
+  for(const m of metrics){
+   assert(resultTarget.innerHTML.includes(m.label),'keep every existing KPI label');
+   assert(resultTarget.innerHTML.includes(c.formatMetric(m.before,m.unit))&&resultTarget.innerHTML.includes(c.formatMetric(m.after,m.unit)),'keep every existing before/after figure');
+  }
+ }
+ assert(!resultTarget.innerHTML.includes('portfolio-metric-primary'),'use the shared direct-value card hierarchy');
  assert(resultTarget.innerHTML.includes('<p class="portfolio-data-disclosure">Sample 90-day results</p>'));
  assert.equal((resultTarget.innerHTML.match(/sample/gi)||[]).length,1,'one section-level sample label, no repeated pills');
  assert(!/Sample data|illustrative figures|client-reported figures/i.test(html),'no repeated sample notices elsewhere on the case study');
