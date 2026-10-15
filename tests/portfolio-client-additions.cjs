@@ -22,6 +22,8 @@ for(const p of c.clients){
  assert(!html.includes('undefined'),p.slug+' undefined content');
  assert.equal((html.match(/<h1[ >]/g)||[]).length,1);
  assert(html.includes(p.logo));
+ assert(html.includes('digital-experience-clients/'+p.slug+'-devices.svg'),p.slug+' needs the portfolio device presentation');
+ assert(fs.existsSync(path.join(root,'assets/digital-experience-clients',p.slug+'-devices.svg')));
  for(const k of p.scope)assert(html.includes(c.scope[k].label));
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);
  for(const [,href] of html.matchAll(/href="([^"]+)"/g)){

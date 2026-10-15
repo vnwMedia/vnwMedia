@@ -128,7 +128,7 @@ function renderPortfolioAdditionCase(p){
     name:p.name,kicker:p.industry,intro:p.summary,businessIntro:p.summary,
     hero:p.desktop,heroAlt:p.name+' client website',heroWidth:1440,heroHeight:1000,
     heroLogo:p.logo,serviceLabels:services.map(s=>s.label),website:p.website,
-    mockup:p.desktop,mockupAlt:p.name+' actual website',mockupWidth:1440,mockupHeight:1000,
+    mockup:'assets/digital-experience-clients/'+p.slug+'-devices.svg',mockupAlt:p.name+' actual desktop and mobile websites displayed on a laptop and phone',mockupWidth:1145,mockupHeight:1200,
     signals:services.map(s=>['Positive Growth',s.label]),
     challengeTitle:p.headline,challengeOne:p.challenge,
     challengeTwo:'Our confirmed scope for '+p.name+' is '+services.map(s=>s.label).join(', ')+'. The engagement focuses on '+p.focus.toLowerCase()+'.',

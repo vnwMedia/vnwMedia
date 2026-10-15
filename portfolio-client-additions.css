@@ -11,6 +11,7 @@ body[data-portfolio-addition] .scm-ms-hero h1 .case-hero-client-logo{background:
 .portfolio-addition-media[data-project="aesthetic-island-nyc"] .portfolio-addition-logo,
 body[data-page="case-aesthetic-island-nyc"] .scm-ms-hero h1 .case-hero-client-logo{filter:brightness(0) invert(1) drop-shadow(0 3px 5px #0009)}
 body[data-portfolio-addition] .scm-ms-story-stage img{object-fit:contain;object-position:top;width:100%;height:auto}
+body[data-portfolio-addition] .scm-ms-story-stage{min-height:0;padding:0;align-items:center}
 .portfolio-positive-results .aoc-service-result>strong{font-size:clamp(22px,2.5vw,36px);line-height:1.1}
 .portfolio-positive-results .aoc-period{max-width:65ch}
 @media(max-width:600px){.portfolio-addition-media .portfolio-addition-logo{max-height:120px}}
