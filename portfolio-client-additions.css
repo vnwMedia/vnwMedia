@@ -1,0 +1,16 @@
+/* Actual client marks retain their original colors on a light presentation tile. */
+.portfolio-review-notice{background:#f0f8fb;color:#17252a;padding:130px 0 44px;border-bottom:1px solid #c7e3ec}
+.portfolio-review-notice strong{font:400 32px/1.2 Fraunces,serif}
+.portfolio-review-notice p{max-width:850px;line-height:1.65}
+.portfolio-review-notice nav{display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0}
+.portfolio-review-notice nav a{color:#007fa5;text-decoration:underline;font-size:14px}
+.portfolio-review-case-note{display:flex;justify-content:space-between;gap:18px;padding:18px max(20px,calc((100vw - 1152px)/2));background:#f0f8fb;color:#17252a;font-size:13px}
+.portfolio-review-case-note a{color:#007fa5}
+.portfolio-addition-media .portfolio-addition-logo{background:#fff;padding:16px 22px;object-fit:contain;border-radius:3px;width:52%;max-width:280px;max-height:160px;filter:none}
+body[data-portfolio-addition] .case-hero-client-logo{background:#fff;padding:18px 24px;border-radius:3px;max-height:180px;object-fit:contain;filter:none}
+body[data-portfolio-addition] .scm-ms-story-stage img{object-fit:contain;object-position:top;width:100%;height:auto}
+.portfolio-positive-results .aoc-service-result>strong{font-size:clamp(22px,2.5vw,36px);line-height:1.1}
+.portfolio-positive-results .aoc-period{max-width:65ch}
+.portfolio-addition-media[data-project="argana-day-spa"] .portfolio-addition-logo{height:160px;object-fit:cover;object-position:top;padding:0}
+body[data-page="case-argana-day-spa"] .scm-ms-hero .case-hero-client-logo{height:160px;object-fit:cover;object-position:top;padding:0}
+@media(max-width:600px){.portfolio-addition-media .portfolio-addition-logo{padding:10px 14px;max-height:120px}}

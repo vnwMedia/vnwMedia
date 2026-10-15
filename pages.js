@@ -246,6 +246,7 @@ function homeProcessOptions(){
 }
 
 function renderAdditionalProjectCard(project){
+  if(project.scope)return renderPortfolioAdditionCard(project);
   return `<article class="work-card work-agency-card reveal"><figure class="work-client-media work-project-media" data-project="${esc(project.slug)}"><img src="${img(project.hero)}" alt="${esc(project.heroAlt)}" width="1920" height="1080" loading="lazy"><img class="work-client-logo" src="${img(project.logo)}" alt="${esc(project.name)} logo" loading="lazy"></figure><div><span>${esc(project.industry)}</span><h3>${esc(project.name)}</h3><p>${esc(project.summary)} Our work connects web design, SEO, Google Business Profile, GBP Search Ads, and GEO / AI Marketing.</p><ul aria-label="Services provided for ${esc(project.name)}">${ADDITIONAL_PROJECT_SERVICES.map(service=>`<li><a class="work-service-pill" href="${path(`services/${service[4]}.html`)}">${esc(service[1])}</a></li>`).join("")}</ul><a class="work-case-link" href="${path(`case-studies/${project.slug}.html`)}" aria-label="Read ${esc(project.name)} case study"><b>Read case study ↗</b></a></div></article>`;
 }
 
@@ -362,7 +363,7 @@ function workPageOne(){
     ["Build","Bring design, copy, development, SEO foundations, tracking, and launch details together.","assets/work-process-build.jpg"],
     ["Improve","Use real customer questions and performance signals to guide the next useful refinement.","assets/work-process-improve.jpg"]
   ];
-  const additionalProjects=typeof ADDITIONAL_CLIENT_PROJECTS==="undefined"?[]:ADDITIONAL_CLIENT_PROJECTS;
+  const additionalProjects=[...(typeof PORTFOLIO_CLIENT_ADDITIONS==="undefined"?[]:PORTFOLIO_CLIENT_ADDITIONS),...(typeof ADDITIONAL_CLIENT_PROJECTS==="undefined"?[]:ADDITIONAL_CLIENT_PROJECTS)];
   return `<section class="work-chapters section" id="work-process" data-nav-theme="light" aria-labelledby="work-process-title"><div class="shell wp-mock chapters"><header><p class="section-tag">How Projects Move</p><h2 id="work-process-title">From first question to the next improvement.</h2><a class="wp-cta" href="${path("contact.html")}">Plan your project <span>↗</span></a></header>
    <div class="chapter-grid">
     <article><div class="wp-art brief"><div class="paper"><div class="paper-head">THE PROJECT BRIEF <span class="chapter-mark" aria-hidden="true">↗</span></div><div>Business & audience <span>✓</span></div><div>Customer journey <span>✓</span></div><div>Growth priorities <span>✓</span></div></div></div><p class="wp-kicker">01 / UNDERSTAND</p><h3>Discover</h3><p>Review the business, customer journey, current site, competition, proof, and growth priorities.</p></article>
@@ -903,7 +904,7 @@ function renderClientCaseStudy(config){
   const deviceVisual=CASE_STUDY_DEVICE_VISUALS[config.name];
   const primaryLogos={"NYCADSCO":"assets/nycadsco-logo.webp","SFADSCO":"assets/sfadsco-logo.webp","Brooklyn Motors":"assets/brooklyn-motors-logo-supplied.png","La Rosa Chicken and Grill":"assets/la-rosa-logo-white-text.svg","KYPCL":"assets/kypcl-logo-supplied.png"};
   const logoProject=typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined"?ADDITIONAL_CLIENT_PROJECTS.find(project=>project.name===config.name):null;
-  const heroLogo=primaryLogos[config.name]||logoProject?.logo;
+  const heroLogo=config.heroLogo||primaryLogos[config.name]||logoProject?.logo;
   // Do not enlarge small source assets; an SVG wrapper may still contain a raster.
   const logoWidths={'NYCADSCO':500,'SFADSCO':1536,'Brooklyn Motors':259,'La Rosa Chicken and Grill':219,'KYPCL':400,'SkyRex Inc.':133,'CTI Logistics':265,'ForDoz Pharma':252,'Platinum Valet Parking':301,'Raidex Construction LLC':258,'Catanzaro’s Power Washing':892,'Coin & Jewelry Gallery of Boca Raton':175,'NJ Steps to Success':206,'H2Bros Plumbing & Heating':356,'Art of Construction':230};
   const whiteLogo=logoProject&&['skyrex-inc','cti-logistics','fordoz-pharma','platinum-valet-parking'].includes(logoProject.slug);
@@ -920,7 +921,7 @@ function renderClientCaseStudy(config){
   const [storyOne,storyTwo,storyThree]=CLIENT_STORY_COPY[config.name]||[config.storyOne,config.storyTwo,config.storyThree];
   const {signals, approach, services}=config;
   const workProject=DATA.cases.find(project=>project[0]===config.name);
-  const workServiceLabels=workProject
+  const workServiceLabels=config.serviceLabels?config.serviceLabels:workProject
     ? (WORK_CASE_SERVICE_LABELS[workProject[1]]||[])
     : (typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined" && typeof ADDITIONAL_PROJECT_SERVICES!=="undefined" && ADDITIONAL_CLIENT_PROJECTS.some(project=>project.name===config.name)
       ? ADDITIONAL_PROJECT_SERVICES.map(service=>service[1])
@@ -2019,6 +2020,10 @@ function bootPages(){
   if(id?.startsWith("case-") && typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined"){
     const project=ADDITIONAL_CLIENT_PROJECTS.find(item=>item.slug===id.slice(5));
     if(project) content=renderAdditionalClientCaseStudy(project);
+  }
+  if(id?.startsWith("case-") && typeof PORTFOLIO_CLIENT_ADDITIONS!=="undefined"){
+    const project=PORTFOLIO_CLIENT_ADDITIONS.find(item=>item.slug===id.slice(5));
+    if(project)content=renderPortfolioAdditionCase(project);
   }
   if(!content && id?.startsWith("case-")) content=detail("case",DATA.cases.find(x=>x[1]===id.slice(5))||DATA.cases[0]);
   if(!content && id?.startsWith("resource-")) content=detail("resource",DATA.resources.find(x=>x[1]===id.slice(9))||DATA.resources[0]);
