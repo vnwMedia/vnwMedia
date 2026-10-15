@@ -1,7 +1,7 @@
 .story-purpose{background:#fff;color:#17252a;padding:86px 0;scroll-margin-top:88px}
 .story-purpose .sdp-story-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:stretch}
-.story-purpose .sdp-story-photo{position:relative;margin:0;overflow:hidden;min-height:660px;background:#0e191f}
-.story-purpose .sdp-story-photo img{position:absolute;width:100%;height:100%;object-fit:contain;object-position:center}
+.story-purpose .sdp-story-photo{position:relative;align-self:start;min-width:0;margin:0;overflow:hidden;background:transparent}
+.story-purpose .sdp-story-photo img{display:block;position:static;width:100%;height:auto}
 .story-purpose .sdp-story-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 55%,#07171fcc)}
 .story-purpose .sdp-story-photo figcaption{position:absolute;z-index:1;bottom:28px;left:25px;right:25px;color:#fff;font:400 25px/1.2 Fraunces,serif}
 .story-purpose .sdp-heading .section-tag{color:#76838a;font-size:10px;margin:0 0 20px}
@@ -13,5 +13,5 @@
 .story-purpose .sdp-story-principles h3{font:400 22px/1.12 Fraunces,Georgia,serif;letter-spacing:-.025em;margin:0 0 8px}
 .story-purpose .sdp-story-principles p{font-size:13px;line-height:1.65;color:#62737c;margin:0}
 .story-purpose .sdp-story-copy>.pill{margin-top:18px}
-@media(max-width:1000px){.story-purpose .sdp-story-grid{gap:32px}.story-purpose .sdp-story-photo{min-height:760px}.story-purpose .sdp-heading h2{font-size:36px}}
-@media(max-width:700px){.story-purpose{padding:65px 0;scroll-margin-top:72px}.story-purpose .sdp-story-grid{grid-template-columns:1fr;gap:32px}.story-purpose .sdp-story-photo{min-height:0;aspect-ratio:2/3}.story-purpose .sdp-heading>p:last-child{font-size:14px}}
+@media(max-width:1000px){.story-purpose .sdp-story-grid{gap:32px}.story-purpose .sdp-heading h2{font-size:36px}}
+@media(max-width:700px){.story-purpose{padding:65px 0;scroll-margin-top:72px}.story-purpose .sdp-story-grid{grid-template-columns:1fr;gap:32px}.story-purpose .sdp-heading>p:last-child{font-size:14px}}
