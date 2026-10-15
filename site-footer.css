@@ -372,7 +372,12 @@
 /* Keep footer content aligned to the header's logo and navigation boundaries. */
 @media(min-width:1101px){
   #vnw-site-footer .shell{width:var(--shell)}
-  #vnw-site-footer .footer-grid:has(.footer-services){grid-template-columns:minmax(0,1.15fr) repeat(4,minmax(0,1fr));gap:28px}
+  #vnw-site-footer .footer-grid:has(.footer-services){grid-template-columns:230px 28px repeat(4,minmax(0,1fr));gap:28px}
+  #vnw-site-footer .footer-about{grid-column:1;grid-row:1}
+  #vnw-site-footer .footer-nav-column-left .footer-service-pillar:first-child{grid-column:3;grid-row:1}
+  #vnw-site-footer .footer-nav-column-right .footer-service-pillar{grid-column:4;grid-row:1}
+  #vnw-site-footer .footer-nav-column-left .footer-service-pillar:last-child{grid-column:5;grid-row:1}
+  #vnw-site-footer .footer-company{grid-column:6;grid-row:1}
   #vnw-site-footer .footer-about p{max-width:250px}
 }
 #vnw-site-footer .footer-nav-columns,
