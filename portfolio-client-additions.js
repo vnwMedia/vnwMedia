@@ -106,7 +106,7 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     focus:'Website clarity and local aesthetics discovery',
     story:'Website development, SEO, and Google Business Profile work together around the practice’s online identity and local discovery. The case study describes marketing scope, not a claim about cosmetic treatment results.'
   }
-].map(p=>({...p,logo:`assets/client-projects/${p.slug}-logo.${p.logoExtension}`,desktop:`assets/client-projects/${p.slug}-desktop.png`}));
+].map(p=>({...p,logo:['argana-day-spa','calvin-schwartz','genius-kids'].includes(p.slug)?`assets/client-projects/${p.slug}-logo-transparent.svg`:`assets/client-projects/${p.slug}-logo.${p.logoExtension}`,desktop:`assets/client-projects/${p.slug}-desktop.png`}));
 
 const PORTFOLIO_ADDITION_SERVICES={
   web:{id:'website-ux',label:'Web Design',page:'web-design',focus:'Website experience',copy:'Build clear service and content pathways, responsive layouts, and accessible routes to the next useful action.'},
