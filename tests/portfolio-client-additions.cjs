@@ -6,9 +6,10 @@ for(const file of ['service-catalog.js','client-projects.js','portfolio-client-a
  if(file==='pages.js')text=text.replace(/bootPages\(\);\s*$/,'');
  vm.runInContext(text,c,{filename:file});
 }
-vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortfolioAdditionCase;this.card=renderPortfolioAdditionCard;this.scope=PORTFOLIO_ADDITION_SERVICES;this.metrics=portfolioSampleMetrics;',c);
+vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortfolioAdditionCase;this.card=renderPortfolioAdditionCard;this.scope=PORTFOLIO_ADDITION_SERVICES;this.metrics=portfolioSampleMetrics;this.chart=portfolioTrendChart;',c);
 assert.equal(c.clients.length,13);
 assert.equal(new Set(c.clients.map(p=>p.slug)).size,13);
+const serviceDeltas={},chartPaths=new Set();
 for(const p of c.clients){
  const file=fs.readFileSync(path.join(root,'case-studies',p.slug+'-review.html'),'utf8');
  assert(file.includes('noindex,nofollow'));
@@ -35,6 +36,10 @@ for(const p of c.clients){
  assert(!/portfolio-card-stat|portfolio-trend-chart|Sample data|Not client-reported results/.test(card),'review cards must retain the original chart-free layout');
  for(const key of p.scope){
   const metrics=c.metrics(p,key);assert.equal(metrics.length,3);
+  (serviceDeltas[key]??=[]).push(metrics[0].delta);
+  assert.equal(JSON.stringify(metrics),JSON.stringify(c.metrics(p,key)),'sample figures stay stable on reload');
+  const chart=c.chart(p,key),line=[...chart.matchAll(/<path d="([^"]+)"/g)][1][1];
+  assert(!chartPaths.has(line),'each service dashboard needs its own trend');chartPaths.add(line);
   for(const m of metrics){
    assert(Number.isFinite(m.before)&&Number.isFinite(m.after)&&m.before>0);
    assert.equal(m.delta,Math.round((m.after/m.before-1)*100));
@@ -51,6 +56,9 @@ for(const p of c.clients){
  assert(!/Positive Growth|undefined|NaN/.test(resultTarget.innerHTML));
  console.log(p.slug+': PASS — actual logo, preview page, confirmed service scope, valid links');
 }
+for(const [key,deltas] of Object.entries(serviceDeltas))assert.equal(new Set(deltas).size,deltas.length,'distinct sample improvements for '+key);
+const allDeltas=Object.values(serviceDeltas).flat();
+assert(Math.min(...allDeltas)<20&&Math.max(...allDeltas)>100,'include both patient and stronger sample improvements');
 const work=fs.readFileSync(path.join(root,'work.html'),'utf8');
 assert(!work.includes('portfolio-client-additions'),'live Work page must remain unchanged');
 const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');

@@ -120,21 +120,34 @@ const PORTFOLIO_ADDITION_SERVICES={
 
 // Illustrative design-review data only. Never substitute for a client report.
 const PORTFOLIO_SAMPLE_METRICS={
-  gbp:[['Profile views',1420,2180,''],['Profile-driven calls',42,68,''],['Website clicks',118,176,'']],
-  ppc:[['Advertising inquiries',24,39,''],['Cost per inquiry',56,43,'$'],['Conversion rate',3.4,5.1,'%']],
-  seo:[['Organic website visits',820,1295,''],['Search impressions',12600,19200,''],['Organic inquiries',18,29,'']],
-  web:[['Inquiry conversion rate',2.1,3.4,'%'],['Website inquiries',24,39,''],['Engaged sessions',47,59,'%']],
-  smm:[['People reached',4800,7350,''],['Engagement rate',2.8,4.2,'%'],['Profile visits',160,246,'']],
-  'youtube-seo':[['YouTube search views',1450,2270,''],['Watch time',110,178,'hours'],['New subscribers',35,54,'']],
-  'tiktok-seo':[['TikTok search views',2400,3680,''],['Profile visits',145,226,''],['Content engagements',210,326,'']]
+  gbp:[['Profile views',''],['Profile-driven calls',''],['Website clicks','']],
+  ppc:[['Advertising inquiries',''],['Cost per inquiry','$'],['Conversion rate','%']],
+  seo:[['Organic website visits',''],['Search impressions',''],['Organic inquiries','']],
+  web:[['Inquiry conversion rate','%'],['Website inquiries',''],['Engaged sessions','%']],
+  smm:[['People reached',''],['Engagement rate','%'],['Profile visits','']],
+  'youtube-seo':[['YouTube search views',''],['Watch time','hours'],['New subscribers','']],
+  'tiktok-seo':[['TikTok search views',''],['Profile visits',''],['Content engagements','']]
+};
+// Fixed illustrative scenarios keep reviews stable rather than changing on reload.
+// Each pair is [earlier, later]; these are not measured client outcomes.
+const PORTFOLIO_SAMPLE_SCENARIOS={
+  'aesthetic-island-nyc':{ppc:[[28,57],[64,41],[2.8,5.6]],gbp:[[1640,2952],[34,61],[142,228]]},
+  'argana-day-spa':{gbp:[[2180,2551],[48,57],[186,212]]},
+  'calvin-schwartz':{web:[[1.6,2.3],[18,29],[42,54]],'youtube-seo':[[1260,2444],[96,177],[28,53]],'tiktok-seo':[[1850,4163],[124,272],[196,428]]},
+  'classical-caterers':{web:[[2.4,3.1],[31,42],[51,60]],seo:[[960,1459],[14800,21312],[22,34]]},
+  'genius-kids':{web:[[1.8,3.3],[26,45],[44,63]],seo:[[740,1399],[11200,19824],[17,32]]},
+  'new-generation-learning-center':{web:[[2.6,3.1],[34,41],[53,59]],seo:[[1280,1715],[17600,22528],[28,37]]},
+  'glass-company-nyc':{web:[[2.2,3.7],[24,43],[46,64]],smm:[[4200,8232],[2.3,4.1],[175,346]]},
+  'harlem-east-life-plan':{web:[[3.1,3.8],[42,53],[57,64]],seo:[[1740,2461],[22400,30240],[36,49]],ppc:[[46,79],[72,54],[3.1,4.8]]},
+  'jb-body-works':{seo:[[890,1148],[13700,16851],[24,31]]},
+  'mb-law':{web:[[1.7,2.6],[23,36],[45,58]],seo:[[1160,1949],[16800,26544],[26,44]],gbp:[[1940,3007],[46,73],[158,241]]},
+  'liquid-soldier':{web:[[2.8,3.9],[29,43],[49,62]]},
+  'lm-attorney':{web:[[2.5,2.8],[32,37],[55,60]]},
+  'prestige-beauty-project':{web:[[1.9,3.9],[21,47],[43,66]],seo:[[680,1448],[10600,21942],[16,35]],gbp:[[1520,2934],[39,78],[131,258]]}
 };
 function portfolioSampleMetrics(p,key){
-  const index=PORTFOLIO_CLIENT_ADDITIONS.findIndex(x=>x.slug===p.slug);
-  const factor=1+(index%5)*.06;
-  return PORTFOLIO_SAMPLE_METRICS[key].map(([label,before,after,unit])=>{
-    const scale=unit==='%'?1:factor;
-    const round=n=>unit==='%'?Math.round(n*10)/10:Math.round(n);
-    before=round(before*scale);after=round(after*scale);
+  return PORTFOLIO_SAMPLE_METRICS[key].map(([label,unit],i)=>{
+    const [before,after]=PORTFOLIO_SAMPLE_SCENARIOS[p.slug][key][i];
     return {label,before,after,unit,delta:Math.round((after/before-1)*100)};
   });
 }
@@ -144,7 +157,13 @@ function portfolioMetricValue(n,unit){
 }
 function portfolioTrendChart(p,key,compact=false){
   const metric=portfolioSampleMetrics(p,key)[0];
-  const levels=[.08,.22,.19,.45,.62,.9];
+  const seed=Array.from(p.slug+'-'+key).reduce((n,c)=>(n*31+c.charCodeAt(0))>>>0,0);
+  const pace=[1.55,.75,1.15,2,.95][seed%5];
+  const rise=.34+Math.min(metric.delta,125)/240;
+  const levels=Array.from({length:6},(_,i)=>{
+    const wobble=i===0||i===5?0:(((seed>>>(i*4))%13)-6)/110;
+    return .08+rise*Math.max(0,Math.min(1,Math.pow(i/5,pace)+wobble));
+  });
   const points=levels.map((v,i)=>[10+i*56,86-v*68]);
   const line=points.map(([x,y],i)=>(i?'L':'M')+x+' '+y.toFixed(1)).join(' ');
   const gradient='sample-'+p.slug+'-'+key+(compact?'-mini':'');
