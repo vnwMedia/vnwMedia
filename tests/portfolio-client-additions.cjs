@@ -6,7 +6,7 @@ for(const file of ['service-catalog.js','client-projects.js','portfolio-client-a
  if(file==='pages.js')text=text.replace(/bootPages\(\);\s*$/,'');
  vm.runInContext(text,c,{filename:file});
 }
-vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortfolioAdditionCase;this.card=renderPortfolioAdditionCard;this.scope=PORTFOLIO_ADDITION_SERVICES;',c);
+vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortfolioAdditionCase;this.card=renderPortfolioAdditionCard;this.scope=PORTFOLIO_ADDITION_SERVICES;this.metrics=portfolioSampleMetrics;',c);
 assert.equal(c.clients.length,13);
 assert.equal(new Set(c.clients.map(p=>p.slug)).size,13);
 for(const p of c.clients){
@@ -14,7 +14,7 @@ for(const p of c.clients){
  assert(file.includes('noindex,nofollow'));
  assert(file.includes('data-page="case-'+p.slug+'"'));
  assert(file.indexOf('site-buttons.css')>file.indexOf('portfolio-client-additions.css'));
- assert(!file.includes('client-service-results.js'),'no sample numeric results');
+ assert(!file.includes('client-service-results.js'),'no legacy undisclosed numeric results');
  assert(!file.includes('client-case-study-enhancements.js'),'no unrelated service metrics');
  assert(file.includes('portfolio-client-results.js'));
  for(const asset of [p.logo,p.desktop])assert(fs.statSync(path.join(root,asset)).size>1000,'missing asset '+asset);
@@ -31,6 +31,25 @@ for(const p of c.clients){
   else if(!/^(https?:|mailto:|tel:)/.test(href))assert(fs.existsSync(path.resolve(root,'case-studies',href.split('#')[0])),p.slug+' broken link '+href);
  }
  const card=c.card(p);assert(card.includes(p.slug+'-review.html'));assert(!/GBP Search Ads|GEO \/ AI/.test(card));
+ assert(!/Positive Growth/.test(html+card),p.slug+' must replace the old status');
+ assert(card.includes('Sample data')&&card.includes('Not client-reported results'));
+ assert.equal((card.match(/class="portfolio-card-stat"/g)||[]).length,p.scope.length);
+ for(const key of p.scope){
+  const metrics=c.metrics(p,key);assert.equal(metrics.length,3);
+  for(const m of metrics){
+   assert(Number.isFinite(m.before)&&Number.isFinite(m.after)&&m.before>0);
+   assert.equal(m.delta,Math.round((m.after/m.before-1)*100));
+   assert(m.unit==='$'?m.after<m.before:m.after>m.before,'sample improvement '+key);
+  }
+ }
+ const resultTarget={classList:{add(){}},dataset:{},innerHTML:''};
+ c.document.body.dataset.page='case-'+p.slug;c.document.body.setAttribute=()=>{};
+ c.document.createElement=()=>({setAttribute(){}});
+ c.document.querySelector=s=>s==='.scm-ms-signals'?resultTarget:{after(){}};
+ vm.runInContext(fs.readFileSync(path.join(root,'portfolio-client-results.js'),'utf8'),c);
+ assert.equal((resultTarget.innerHTML.match(/class="aoc-service-result portfolio-metric-card"/g)||[]).length,p.scope.length);
+ assert(resultTarget.innerHTML.includes('not actual client results'));
+ assert(!/Positive Growth|undefined|NaN/.test(resultTarget.innerHTML));
  console.log(p.slug+': PASS — actual logo, preview page, confirmed service scope, valid links');
 }
 const work=fs.readFileSync(path.join(root,'work.html'),'utf8');

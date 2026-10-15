@@ -1,6 +1,6 @@
 // Client service scope supplied by VNW Media. Business identity and logos checked
-// against the linked official websites. "Positive Growth" is a temporary status,
-// not a quantified or independently verified performance claim.
+// against the linked official websites. Review statistics are explicitly marked
+// sample data and are not client-reported performance.
 const PORTFOLIO_CLIENT_ADDITIONS = [
   {
     slug:'aesthetic-island-nyc',name:'Aesthetic Island NYC',industry:'Medical Aesthetics & Wellness',website:'https://www.aestheticislandnyc.com/',logoExtension:'png',scope:['ppc','gbp'],
@@ -118,8 +118,47 @@ const PORTFOLIO_ADDITION_SERVICES={
   'tiktok-seo':{id:'tiktok-seo',label:'TikTok SEO',page:'seo',focus:'TikTok discovery',copy:'Connect short-form content with relevant topics, searchable wording, captions, and consistent creator context.'}
 };
 
+// Illustrative design-review data only. Never substitute for a client report.
+const PORTFOLIO_SAMPLE_METRICS={
+  gbp:[['Profile views',1420,2180,''],['Profile-driven calls',42,68,''],['Website clicks',118,176,'']],
+  ppc:[['Advertising inquiries',24,39,''],['Cost per inquiry',56,43,'$'],['Conversion rate',3.4,5.1,'%']],
+  seo:[['Organic website visits',820,1295,''],['Search impressions',12600,19200,''],['Organic inquiries',18,29,'']],
+  web:[['Inquiry conversion rate',2.1,3.4,'%'],['Website inquiries',24,39,''],['Engaged sessions',47,59,'%']],
+  smm:[['People reached',4800,7350,''],['Engagement rate',2.8,4.2,'%'],['Profile visits',160,246,'']],
+  'youtube-seo':[['YouTube search views',1450,2270,''],['Watch time',110,178,'hours'],['New subscribers',35,54,'']],
+  'tiktok-seo':[['TikTok search views',2400,3680,''],['Profile visits',145,226,''],['Content engagements',210,326,'']]
+};
+function portfolioSampleMetrics(p,key){
+  const index=PORTFOLIO_CLIENT_ADDITIONS.findIndex(x=>x.slug===p.slug);
+  const factor=1+(index%5)*.06;
+  return PORTFOLIO_SAMPLE_METRICS[key].map(([label,before,after,unit])=>{
+    const scale=unit==='%'?1:factor;
+    const round=n=>unit==='%'?Math.round(n*10)/10:Math.round(n);
+    before=round(before*scale);after=round(after*scale);
+    return {label,before,after,unit,delta:Math.round((after/before-1)*100)};
+  });
+}
+function portfolioMetricValue(n,unit){
+  const value=n.toLocaleString('en-US',{maximumFractionDigits:1});
+  return unit==='$'?'$'+value:unit==='%'?value+'%':unit==='hours'?value+' hrs':value;
+}
+function portfolioTrendChart(p,key,compact=false){
+  const metric=portfolioSampleMetrics(p,key)[0];
+  const levels=[.08,.22,.19,.45,.62,.9];
+  const points=levels.map((v,i)=>[10+i*56,86-v*68]);
+  const line=points.map(([x,y],i)=>(i?'L':'M')+x+' '+y.toFixed(1)).join(' ');
+  const gradient='sample-'+p.slug+'-'+key+(compact?'-mini':'');
+  return `<svg class="portfolio-trend-chart" viewBox="0 0 300 100" role="img" aria-label="Sample data: illustrative upward trend in ${esc(metric.label.toLowerCase())}"><defs><linearGradient id="${gradient}" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#08b7ed" stop-opacity=".3"/><stop offset="1" stop-color="#08b7ed" stop-opacity="0"/></linearGradient></defs><path class="portfolio-chart-grid" d="M10 20H290M10 50H290M10 86H290"/><path d="${line}L290 96H10Z" fill="url(#${gradient})"/><path d="${line}" fill="none" stroke="#08b7ed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="290" cy="${points[5][1].toFixed(1)}" r="4" fill="#71d6b3"/></svg>`;
+}
+function portfolioCardSampleStats(p){
+  return `<div class="portfolio-card-stats"><p class="portfolio-sample-label">Sample data</p>${p.scope.map(key=>{
+    const m=portfolioSampleMetrics(p,key)[0];
+    return `<div class="portfolio-card-stat"><span>${esc(PORTFOLIO_ADDITION_SERVICES[key].label)}<small>${esc(m.label)}</small></span><strong>+${m.delta}%</strong>${portfolioTrendChart(p,key,true)}</div>`;
+  }).join('')}<small class="portfolio-card-data-note">Illustrative figures · Not client-reported results</small></div>`;
+}
+
 function renderPortfolioAdditionCard(p){
-  return `<article class="work-card work-agency-card reveal"><figure class="work-client-media work-project-media portfolio-addition-media" data-project="${esc(p.slug)}"><img src="${img(p.desktop)}" alt="${esc(p.name)} website" width="1440" height="1000" loading="lazy"><img class="work-client-logo portfolio-addition-logo" src="${img(p.logo)}" alt="${esc(p.name)} logo" loading="lazy"></figure><div><span>${esc(p.industry)}</span><h3>${esc(p.name)}</h3><p>${esc(p.summary)} Our scope: ${p.scope.map(k=>PORTFOLIO_ADDITION_SERVICES[k].label).map(esc).join(', ')}.</p><ul aria-label="Services provided for ${esc(p.name)}">${p.scope.map(k=>{const s=PORTFOLIO_ADDITION_SERVICES[k];return `<li><a class="work-service-pill" href="${path('services/'+s.page+'.html')}">${esc(s.label)}</a></li>`;}).join('')}</ul><a class="work-case-link" href="${path('case-studies/'+p.slug+'-review.html')}" aria-label="Read ${esc(p.name)} case study"><b>Read case study ↗</b></a></div></article>`;
+  return `<article class="work-card work-agency-card reveal"><figure class="work-client-media work-project-media portfolio-addition-media" data-project="${esc(p.slug)}"><img src="${img(p.desktop)}" alt="${esc(p.name)} website" width="1440" height="1000" loading="lazy"><img class="work-client-logo portfolio-addition-logo" src="${img(p.logo)}" alt="${esc(p.name)} logo" loading="lazy"></figure><div><span>${esc(p.industry)}</span><h3>${esc(p.name)}</h3><p>${esc(p.summary)} Our scope: ${p.scope.map(k=>PORTFOLIO_ADDITION_SERVICES[k].label).map(esc).join(', ')}.</p><ul aria-label="Services provided for ${esc(p.name)}">${p.scope.map(k=>{const s=PORTFOLIO_ADDITION_SERVICES[k];return `<li><a class="work-service-pill" href="${path('services/'+s.page+'.html')}">${esc(s.label)}</a></li>`;}).join('')}</ul>${portfolioCardSampleStats(p)}<a class="work-case-link" href="${path('case-studies/'+p.slug+'-review.html')}" aria-label="Read ${esc(p.name)} case study"><b>Read case study ↗</b></a></div></article>`;
 }
 
 function renderPortfolioAdditionCase(p){
@@ -129,14 +168,14 @@ function renderPortfolioAdditionCase(p){
     hero:p.desktop,heroAlt:p.name+' client website',heroWidth:1440,heroHeight:1000,
     heroLogo:p.logo,serviceLabels:services.map(s=>s.label),website:p.website,
     mockup:'assets/digital-experience-clients/'+p.slug+'-devices.svg',mockupAlt:p.name+' actual desktop and mobile websites displayed on a laptop and phone',mockupWidth:1145,mockupHeight:1200,
-    signals:services.map(s=>['Positive Growth',s.label]),
+    signals:services.map(s=>['Sample data',s.label]),
     challengeTitle:p.headline,challengeOne:p.challenge,
     challengeTwo:'Our confirmed scope for '+p.name+' is '+services.map(s=>s.label).join(', ')+'. The engagement focuses on '+p.focus.toLowerCase()+'.',
     approachTitle:'A specific scope. A connected direction.',
     approach:services.map(s=>[s.label+'.',s.copy]),
     storyTitle:p.headline,storyOne:p.story,
     storyTwo:'The client website shown here provides real business context. The service list identifies the work provided by VNW Media; it does not attribute unrelated services to this engagement.',
-    storyThree:'Positive Growth is the temporary service-results status. No percentage increases, ranking positions, lead totals, or reporting periods are presented as verified results.',
+    storyThree:'The service dashboard shows how progress can be presented across the work we provide. Its statistics are sample data for this review; client-reported figures can replace them when available.',
     services:services.map(s=>[s.id,s.label,s.copy+' For '+p.name+', the focus is '+p.focus.toLowerCase()+'.',s.focus,'Discuss '+s.label])
   });
 }
