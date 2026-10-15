@@ -26,7 +26,7 @@ for(const service of context.services){
   assert(source.includes('service-help-compact.js?v=1'));
   assert(source.includes('service-help-studio.js?v=2'),service.slug+' missing approved studio layout');
   assert(source.includes('service-help-studio-art.js?v=1'),service.slug+' missing original outcome artwork');
-  assert(source.includes('service-help-studio.css?v=2'),service.slug+' missing studio artwork fit styles');
+  assert(source.includes('service-help-studio.css?v=3'),service.slug+' missing studio artwork fit styles');
   assert(source.includes('agency-help-eight.css?v=1'));
   const title=source.match(/<title>(.*?)<\/title>/s)?.[1];
   const description=source.match(/name="description" content="([^"]+)"/)?.[1];
