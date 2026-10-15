@@ -155,20 +155,6 @@ function portfolioMetricValue(n,unit){
   const value=n.toLocaleString('en-US',{maximumFractionDigits:1});
   return unit==='$'?'$'+value:unit==='%'?value+'%':unit==='hours'?value+' hrs':value;
 }
-function portfolioTrendChart(p,key,compact=false){
-  const metric=portfolioSampleMetrics(p,key)[0];
-  const seed=Array.from(p.slug+'-'+key).reduce((n,c)=>(n*31+c.charCodeAt(0))>>>0,0);
-  const pace=[1.55,.75,1.15,2,.95][seed%5];
-  const rise=.34+Math.min(metric.delta,125)/240;
-  const levels=Array.from({length:6},(_,i)=>{
-    const wobble=i===0||i===5?0:(((seed>>>(i*4))%13)-6)/110;
-    return .08+rise*Math.max(0,Math.min(1,Math.pow(i/5,pace)+wobble));
-  });
-  const points=levels.map((v,i)=>[10+i*56,86-v*68]);
-  const line=points.map(([x,y],i)=>(i?'L':'M')+x+' '+y.toFixed(1)).join(' ');
-  const gradient='sample-'+p.slug+'-'+key+(compact?'-mini':'');
-  return `<svg class="portfolio-trend-chart" viewBox="0 0 300 100" role="img" aria-label="Sample data: illustrative upward trend in ${esc(metric.label.toLowerCase())}"><defs><linearGradient id="${gradient}" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#08b7ed" stop-opacity=".3"/><stop offset="1" stop-color="#08b7ed" stop-opacity="0"/></linearGradient></defs><path class="portfolio-chart-grid" d="M10 20H290M10 50H290M10 86H290"/><path d="${line}L290 96H10Z" fill="url(#${gradient})"/><path d="${line}" fill="none" stroke="#08b7ed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="290" cy="${points[5][1].toFixed(1)}" r="4" fill="#71d6b3"/></svg>`;
-}
 
 function renderPortfolioAdditionCard(p){
   return `<article class="work-card work-agency-card reveal"><figure class="work-client-media work-project-media portfolio-addition-media" data-project="${esc(p.slug)}"><img src="${img(p.desktop)}" alt="${esc(p.name)} website" width="1440" height="1000" loading="lazy"><img class="work-client-logo portfolio-addition-logo" src="${img(p.logo)}" alt="${esc(p.name)} logo" loading="lazy"></figure><div><span>${esc(p.industry)}</span><h3>${esc(p.name)}</h3><p>${esc(p.summary)} Our scope: ${p.scope.map(k=>PORTFOLIO_ADDITION_SERVICES[k].label).map(esc).join(', ')}.</p><ul aria-label="Services provided for ${esc(p.name)}">${p.scope.map(k=>{const s=PORTFOLIO_ADDITION_SERVICES[k];return `<li><a class="work-service-pill" href="${path('services/'+s.page+'.html')}">${esc(s.label)}</a></li>`;}).join('')}</ul><a class="work-case-link" href="${path('case-studies/'+p.slug+'-review.html')}" aria-label="Read ${esc(p.name)} case study"><b>Read case study ↗</b></a></div></article>`;

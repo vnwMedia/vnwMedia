@@ -6,10 +6,10 @@ for(const file of ['service-catalog.js','client-projects.js','portfolio-client-a
  if(file==='pages.js')text=text.replace(/bootPages\(\);\s*$/,'');
  vm.runInContext(text,c,{filename:file});
 }
-vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortfolioAdditionCase;this.card=renderPortfolioAdditionCard;this.scope=PORTFOLIO_ADDITION_SERVICES;this.metrics=portfolioSampleMetrics;this.chart=portfolioTrendChart;',c);
+vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortfolioAdditionCase;this.card=renderPortfolioAdditionCard;this.scope=PORTFOLIO_ADDITION_SERVICES;this.metrics=portfolioSampleMetrics;',c);
 assert.equal(c.clients.length,13);
 assert.equal(new Set(c.clients.map(p=>p.slug)).size,13);
-const serviceDeltas={},chartPaths=new Set();
+const serviceDeltas={};
 for(const p of c.clients){
  const file=fs.readFileSync(path.join(root,'case-studies',p.slug+'-review.html'),'utf8');
  assert(file.includes('noindex,nofollow'));
@@ -38,8 +38,6 @@ for(const p of c.clients){
   const metrics=c.metrics(p,key);assert.equal(metrics.length,3);
   (serviceDeltas[key]??=[]).push(metrics[0].delta);
   assert.equal(JSON.stringify(metrics),JSON.stringify(c.metrics(p,key)),'sample figures stay stable on reload');
-  const chart=c.chart(p,key),line=[...chart.matchAll(/<path d="([^"]+)"/g)][1][1];
-  assert(!chartPaths.has(line),'each service dashboard needs its own trend');chartPaths.add(line);
   for(const m of metrics){
    assert(Number.isFinite(m.before)&&Number.isFinite(m.after)&&m.before>0);
    assert.equal(m.delta,Math.round((m.after/m.before-1)*100));
@@ -53,6 +51,7 @@ for(const p of c.clients){
  vm.runInContext(fs.readFileSync(path.join(root,'portfolio-client-results.js'),'utf8'),c);
  assert.equal((resultTarget.innerHTML.match(/class="aoc-service-result portfolio-metric-card"/g)||[]).length,p.scope.length);
  assert(resultTarget.innerHTML.includes('not actual client results'));
+ assert(!/<svg|portfolio-trend-chart|Earlier period|Later period/.test(resultTarget.innerHTML),'case-study results must remain graph-free');
  assert(!/Positive Growth|undefined|NaN/.test(resultTarget.innerHTML));
  console.log(p.slug+': PASS — actual logo, preview page, confirmed service scope, valid links');
 }

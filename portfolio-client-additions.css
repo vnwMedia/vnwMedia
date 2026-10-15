@@ -25,10 +25,7 @@ body[data-portfolio-addition] .scm-ms-story-stage{min-height:0;padding:0;align-i
 .portfolio-metric-comparison{margin:0;color:#a9b6bd;font-size:14px}
 .portfolio-metric-comparison b{color:#fff;font-weight:500}
 .portfolio-metric-comparison span{padding:0 7px}
-.portfolio-trend-chart{display:block;width:100%;height:auto;margin:14px 0 0;overflow:visible}
-.portfolio-chart-grid{fill:none;stroke:#7b9ba7;stroke-opacity:.18;stroke-width:1}
-.portfolio-chart-labels{display:flex;justify-content:space-between;color:#91a6b0;font:400 10px/1.4 Inter,sans-serif;margin:0 0 15px}
-.portfolio-secondary-metrics{margin:0;border-top:1px solid #35444d}
+.portfolio-secondary-metrics{margin:20px 0 0;border-top:1px solid #35444d}
 .portfolio-secondary-metrics>div{padding:12px 0 0}
 .portfolio-secondary-metrics dt{color:#b4c0c6;font-size:12px;margin-bottom:5px}
 .portfolio-secondary-metrics dd{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:13px;margin:0;color:#a9b6bd}
