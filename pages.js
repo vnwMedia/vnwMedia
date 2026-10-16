@@ -955,6 +955,7 @@ function renderClientCaseStudy(config){
   const [storyOne,storyTwo,storyThree]=CLIENT_STORY_COPY[config.name]||[config.storyOne,config.storyTwo,config.storyThree];
   const {signals, approach, services}=config;
   const workProject=DATA.cases.find(project=>project[0]===config.name);
+  const clientWebsite=config.website||(workProject&&workProject[5]);
   const workServiceLabels=config.serviceLabels?config.serviceLabels:workProject
     ? (WORK_CASE_SERVICE_LABELS[workProject[1]]||[])
     : (typeof ADDITIONAL_CLIENT_PROJECTS!=="undefined" && typeof ADDITIONAL_PROJECT_SERVICES!=="undefined" && ADDITIONAL_CLIENT_PROJECTS.some(project=>project.name===config.name)
@@ -999,7 +1000,7 @@ function renderClientCaseStudy(config){
             <h2 id="scm-story-title">${esc(config.storyTitle)}</h2>
             <p>${esc(storyOne)}</p>
             <p>${esc(storyTwo)}</p>
-            <p>${esc(storyThree)}</p>${config.website?`<a class="pill pill-blue" href="${esc(config.website)}" target="_blank" rel="noopener noreferrer">Visit client website <span aria-hidden="true">↗</span></a>`:""}
+            <p>${esc(storyThree)}</p>${clientWebsite?`<a class="pill pill-blue" href="${esc(clientWebsite)}" target="_blank" rel="noopener noreferrer">Visit Client Website <span aria-hidden="true">↗</span></a>`:""}
           </div>
         </div>
       </section>
