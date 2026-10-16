@@ -15,9 +15,10 @@ for(const slug of ['glass-company-nyc','liquid-soldier','lm-attorney','ofshtein-
   assert(!c.reviewClients.some(p=>p.slug===slug),'removed client is absent from the review list');
   assert(c.clients.some(p=>p.slug===slug),'preserve case-study data and files');
 }
-const reviewNotice=fs.readFileSync(path.join(root,'portfolio-review-notice.js'),'utf8');
-assert(reviewNotice.includes("document.querySelectorAll('.work-grid > .work-card').length"),'review count matches the entire rendered portfolio');
-assert(!reviewNotice.includes('grid.innerHTML'),'review must preserve the shared portfolio order');
+const retiredReview=fs.readFileSync(path.join(root,'portfolio-review.html'),'utf8');
+assert(retiredReview.includes('http-equiv="refresh" content="0;url=work.html#page-content"'),'old review bookmarks redirect to Our Work');
+assert(!retiredReview.includes('pages.js'),'retired review URL must not render a second portfolio');
+assert(!fs.existsSync(path.join(root,'portfolio-review-notice.js')),'remove the obsolete review-only renderer');
 const catering=c.clients.find(p=>p.slug==='classical-caterers');
 const calvin=c.clients.find(p=>p.slug==='calvin-schwartz');
 assert.equal(calvin.logo,'assets/client-projects/calvin-schwartz-logo-vector.svg');
@@ -167,7 +168,7 @@ for(const p of c.clients){
 for(const [key,deltas] of Object.entries(serviceDeltas))assert.equal(new Set(deltas).size,deltas.length,'distinct sample improvements for '+key);
 const allDeltas=Object.values(serviceDeltas).flat();
 assert(Math.min(...allDeltas)<20&&Math.max(...allDeltas)>100,'include both patient and stronger sample improvements');
-for(const file of ['work.html','portfolio-review.html']){
+for(const file of ['work.html']){
  const page=fs.readFileSync(path.join(root,file),'utf8');
  assert(page.includes('portfolio-client-additions.js'));
  assert(page.indexOf('portfolio-client-additions.js')<page.indexOf('pages.js'),'load new clients before the shared renderer');
@@ -213,4 +214,4 @@ for(const p of c.reviewClients){
 const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
 for(const p of c.clients)assert(!sitemap.includes(p.slug+'-review'));
 for(const p of c.reviewClients)assert(sitemap.includes('/case-studies/'+p.slug+'.html'),'published case study is discoverable');
-console.log('PASS: 26 unique public portfolio clients, required positions, stable lower order, 10 published case studies, and preserved review pages.');
+console.log('PASS: 26 unique public portfolio clients, required positions, stable lower order, 10 published case studies, and a retired portfolio-review redirect.');

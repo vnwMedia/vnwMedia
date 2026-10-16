@@ -1,9 +1,4 @@
 /* Actual client marks sit directly on the image with transparent backgrounds. */
-.portfolio-review-notice{background:#f0f8fb;color:#17252a;padding:130px 0 44px;border-bottom:1px solid #c7e3ec}
-.portfolio-review-notice strong{font:400 32px/1.2 Fraunces,serif}
-.portfolio-review-notice p{max-width:850px;line-height:1.65}
-.portfolio-review-notice nav{display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0}
-.portfolio-review-notice nav a{color:#007fa5;text-decoration:underline;font-size:14px}
 .portfolio-review-case-note{display:flex;justify-content:space-between;gap:18px;padding:18px max(20px,calc((100vw - 1152px)/2));background:#f0f8fb;color:#17252a;font-size:13px}
 .portfolio-review-case-note a{color:#007fa5}
 .portfolio-addition-media .portfolio-addition-logo{background:transparent;padding:0;object-fit:contain;border-radius:0;width:58%;max-width:280px;max-height:160px;filter:drop-shadow(0 3px 5px #0009)}

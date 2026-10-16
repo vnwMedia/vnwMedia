@@ -7,7 +7,7 @@
   if(document.body.dataset.portfolioPublished!=="true"){
     const review=document.createElement('aside');
     review.className='portfolio-review-case-note';
-    review.innerHTML='<a href="../portfolio-review.html#page-content">← Back to client review</a><span>Review only · Awaiting approval</span>';
+    review.innerHTML='<a href="../work.html#page-content">← Back to Our Work</a><span>Review only · Awaiting approval</span>';
     document.querySelector('.scm-ms-hero').after(review);
   }
   const services=p.scope.map(k=>PORTFOLIO_ADDITION_SERVICES[k]);

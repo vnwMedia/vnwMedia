@@ -352,7 +352,7 @@ function processBlueprintSection(options){
   </section>`;
 }
 
-// One stable order keeps the public portfolio and its review page synchronized.
+// Keep the public portfolio order stable across visits.
 const WORK_PORTFOLIO_ORDER = [
   "nycadsco",
   "vision-centers",
