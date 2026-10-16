@@ -48,6 +48,7 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
   },
   {
     slug:'new-generation-learning-center',name:'New Generation Learning Center',industry:'Childcare & Early Education',website:'https://www.newgenerationlearningcenter.com/',logoExtension:'png',scope:['web','seo'],
+    mockupVersion:'20261016-east-hanover',
     summary:'A learning-center business presenting locations in East Hanover and Staten Island.',
     headline:'Make the right learning center easier for families to find.',
     challenge:'Families need to distinguish locations, understand the learning environment, and reach the appropriate team with their questions.',

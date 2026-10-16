@@ -1,0 +1,22 @@
+{
+  "source": "https://www.newgenerationlearningcenter.com/east-hanover/",
+  "captured": "2026-10-16",
+  "desktop": {
+    "file": "new-generation-learning-center-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 2,
+    "pixelWidth": 2880,
+    "pixelHeight": 2000
+  },
+  "mobile": {
+    "file": "new-generation-learning-center-mobile.png",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 2,
+    "pixelWidth": 780,
+    "pixelHeight": 1800
+  },
+  "verification": "Captured the actual East Hanover location page after normal scrolling and waiting for fonts, images, and layout to finish loading. Visually confirmed both views before embedding them in the existing device artwork. Website content and device geometry are unchanged.",
+  "preview": "assets/digital-experience-clients/new-generation-learning-center-devices.svg"
+}
