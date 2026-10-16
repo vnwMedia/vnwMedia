@@ -11,7 +11,8 @@
     document.querySelector('.scm-ms-hero').after(review);
   }
   const services=p.scope.map(k=>PORTFOLIO_ADDITION_SERVICES[k]);
-  const scopeParagraphs=p.scopeParagraphs||[`${p.summary} Our work focuses on ${p.focus.toLowerCase()}.`];
+  const scopeCopy=typeof CLIENT_SERVICE_SCOPE_COPY!=='undefined'?CLIENT_SERVICE_SCOPE_COPY[p.slug]:null;
+  const scopeParagraphs=scopeCopy?[scopeCopy]:(p.scopeParagraphs||[`${p.summary} Our work focuses on ${p.focus.toLowerCase()}.`]);
   const ticker=document.createElement('section');
   ticker.className='trust-strip';
   ticker.setAttribute('aria-label',p.name+' services provided by VNW Media');
