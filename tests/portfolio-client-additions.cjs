@@ -17,6 +17,15 @@ for(const slug of ['glass-company-nyc','liquid-soldier','lm-attorney','ofshtein-
 }
 assert(fs.readFileSync(path.join(root,'portfolio-review-notice.js'),'utf8').includes('const total=PORTFOLIO_REVIEW_CLIENTS.length'),'review count stays synchronized with the client list');
 const catering=c.clients.find(p=>p.slug==='classical-caterers');
+const calvin=c.clients.find(p=>p.slug==='calvin-schwartz');
+assert.equal(calvin.logo,'assets/client-projects/calvin-schwartz-logo-vector.svg');
+const calvinMark=fs.readFileSync(path.join(root,calvin.logo),'utf8');
+assert(calvinMark.includes('<text ')&&!calvinMark.includes('<image'),'use sharp vector lettering, not a raster screenshot');
+for(const word of ['Novelist','Journalist','Broadcaster','College Lecturer','Podcaster'])assert(calvinMark.includes(word));
+assert.equal(calvin.coverImage,'assets/client-projects/calvin-schwartz-portrait-cover.svg');
+assert(c.card(calvin).includes(calvin.coverImage)&&c.render(calvin).includes(calvin.coverImage));
+assert(c.render(calvin).includes('calvin-schwartz-devices.svg?v=20261016-fully-loaded'));
+assert(fs.readFileSync(path.join(root,calvin.coverImage),'utf8').includes('data:image/webp;base64,'),'embed Calvin’s real portrait');
 const aesthetic=c.clients.find(p=>p.slug==='aesthetic-island-nyc');
 assert.equal(aesthetic.coverImage,'assets/client-projects/aesthetic-island-nyc-beauty.jpg');
 assert(fs.statSync(path.join(root,aesthetic.coverImage)).size>1000);
@@ -78,7 +87,7 @@ assert(olf.story.includes('PPC only'));
 assert(fs.statSync(path.join(root,olf.coverImage)).size>1000);
 assert(c.render(olf).includes(olf.coverImage));
 assert(!c.render(olf).includes('id="website-ux"')&&!c.render(olf).includes('id="seo"'),'do not claim website development or SEO');
-for(const p of c.clients.filter(p=>![aesthetic.slug,catering.slug,harlem.slug,jb.slug,mb.slug,olf.slug].includes(p.slug)))assert(!p.coverImage,'other clients retain their images');
+for(const p of c.clients.filter(p=>![calvin.slug,aesthetic.slug,catering.slug,harlem.slug,jb.slug,mb.slug,olf.slug].includes(p.slug)))assert(!p.coverImage,'other clients retain their images');
 const prestige=c.clients.find(p=>p.slug==='prestige-beauty-project');
 assert.deepEqual(Array.from(prestige.scope),['web','seo','gbp','reputation']);
 assert.equal(prestige.heroImage,'assets/client-projects/prestige-beauty-project-aesthetics-studio.jpg');
@@ -88,7 +97,7 @@ assert(c.card(prestige).includes(prestige.desktop)&&!c.card(prestige).includes(p
 assert(c.render(prestige).includes('id="reputation-management"'),'include reputation service details');
 for(const p of c.clients.filter(p=>p.slug!==prestige.slug))assert(!p.heroImage,'preserve other client hero choices');
 assert.equal(c.clients.find(p=>p.slug==='argana-day-spa').logo,'assets/client-projects/argana-day-spa-logo.png','restore Argana original background');
-for(const slug of ['calvin-schwartz','genius-kids'])assert(c.clients.find(p=>p.slug===slug).logo.endsWith('-logo-transparent.svg'),'preserve other transparent logos');
+assert(c.clients.find(p=>p.slug==='genius-kids').logo.endsWith('-logo-transparent.svg'),'preserve other transparent logos');
 assert.deepEqual(Array.from(c.clients.find(p=>p.slug==='aesthetic-island-nyc').scope),['ppc','gbp','reputation']);
 assert.deepEqual(Array.from(c.clients.find(p=>p.slug==='argana-day-spa').scope),['gbp','reputation']);
 for(const p of c.clients.filter(p=>!['aesthetic-island-nyc','argana-day-spa','jb-body-works','prestige-beauty-project','harlem-east-life-plan'].includes(p.slug)))assert(!p.scope.includes('reputation'),'do not broaden other client scopes');
@@ -101,7 +110,7 @@ for(const p of c.clients){
  assert(!file.includes('client-service-results.js'),'no legacy undisclosed numeric results');
  assert(!file.includes('client-case-study-enhancements.js'),'no unrelated service metrics');
  assert(file.includes('portfolio-client-results.js'));
- for(const asset of [p.logo,p.desktop])assert(fs.statSync(path.join(root,asset)).size>1000,'missing asset '+asset);
+ for(const asset of [p.logo,p.desktop])assert(fs.statSync(path.join(root,asset)).size>(asset.endsWith('.svg')?200:1000),'missing asset '+asset);
  const html=c.render(p);
  assert(!html.includes('undefined'),p.slug+' undefined content');
  assert.equal((html.match(/<h1[ >]/g)||[]).length,1);

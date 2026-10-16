@@ -1,0 +1,11 @@
+{
+  "source": "https://calvinschwartz.com/",
+  "captured": "2026-10-16",
+  "portraitSource": "https://calvinschwartz.com/wp-content/uploads/2023/09/calvin-head-Copy-444-Copy_030615.webp",
+  "portraitDimensions": [1500, 1922],
+  "portraitTreatment": "Original portrait embedded in a landscape SVG with a dark background and a soft edge mask; no generated or altered face.",
+  "logoTreatment": "Website name and exact five professional descriptors re-typeset in white SVG text, with no embedded raster lettering. Display width increased by 15% on the card and hero.",
+  "desktop": {"file": "calvin-schwartz-desktop.png", "width": 1440, "height": 1000},
+  "mobile": {"file": "calvin-schwartz-mobile.png", "width": 390, "height": 900},
+  "verification": "Initialized delayed scripts through normal page scrolling, waited eight seconds for desktop and a further four seconds after mobile reflow, and visually confirmed the book artwork and fully revealed text before saving both captures."
+}

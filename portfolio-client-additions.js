@@ -21,6 +21,8 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
   },
   {
     slug:'calvin-schwartz',name:'Calvin Schwartz',industry:'Author, Broadcaster & Personal Brand',website:'https://calvinschwartz.com/',logoExtension:'png',scope:['web','youtube-seo','tiktok-seo'],
+    logo:'assets/client-projects/calvin-schwartz-logo-vector.svg',mockupVersion:'20261016-fully-loaded',
+    coverImage:'assets/client-projects/calvin-schwartz-portrait-cover.svg',coverAlt:'Calvin Schwartz wearing glasses and a Rutgers cap, photographed in the portrait published on his website',coverWidth:1672,coverHeight:941,
     summary:'A novelist, journalist, broadcaster, lecturer, and podcaster sharing books, interviews, and original perspectives.',
     headline:'Bring the author, the conversations, and the audience together.',
     challenge:'Books, biographical information, and video conversations need a clear home, while YouTube and TikTok content need discoverable titles, descriptions, and topic context.',

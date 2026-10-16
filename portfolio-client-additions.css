@@ -16,6 +16,10 @@ body[data-page="case-aesthetic-island-nyc"] .scm-ms-hero h1 .case-hero-client-lo
 /* Recolor the original artwork without re-encoding it; enlarge the card mark by 15%. */
 .portfolio-addition-media[data-project="classical-caterers"] .portfolio-addition-logo{width:66.7%;max-width:322px;filter:brightness(0) invert(1) drop-shadow(0 3px 5px #0009)}
 body[data-page="case-classical-caterers"] .scm-ms-hero h1 .case-hero-client-logo{width:276px!important;filter:brightness(0) invert(1) drop-shadow(0 3px 5px #0009)}
+/* Sharp typeset lettering and readable two-line professional subtitle, 15% larger. */
+.portfolio-addition-media[data-project="calvin-schwartz"]>img:first-child{filter:brightness(.85)}
+.portfolio-addition-media[data-project="calvin-schwartz"] .portfolio-addition-logo{width:66.7%;max-width:322px;top:77%}
+body[data-page="case-calvin-schwartz"] .scm-ms-hero h1 .case-hero-client-logo{width:276px!important}
 /* White backing keeps the two colorful education logos readable over their websites. */
 .portfolio-addition-media:is([data-project="genius-kids"],[data-project="new-generation-learning-center"]) .portfolio-addition-logo,
 body:is([data-page="case-genius-kids"],[data-page="case-new-generation-learning-center"]) .scm-ms-hero h1 .case-hero-client-logo{background:#fff;padding:12px 16px;border-radius:6px;box-sizing:border-box;filter:none;box-shadow:0 4px 18px #0002}
@@ -25,6 +29,7 @@ body[data-portfolio-addition] .scm-ms-story-stage img{object-fit:contain;object-
 body[data-portfolio-addition] .scm-ms-story-stage{min-height:0;padding:0;align-items:center}
 .portfolio-positive-results .aoc-period{max-width:65ch}
 @media(max-width:760px){html body[data-page="case-aesthetic-island-nyc"] main .scm-ms-hero-bg img{object-position:68% center!important}}
+@media(max-width:760px){html body[data-page="case-calvin-schwartz"] main .scm-ms-hero-bg img{object-position:71% center!important}}
 @media(max-width:760px){html body[data-page="case-harlem-east-life-plan"] main .scm-ms-hero-bg img{object-position:80% center!important}}
 @media(max-width:760px){html body[data-page="case-jb-body-works"] main .scm-ms-hero-bg img{object-position:70% center!important}}
 @media(max-width:760px){html body[data-page="case-mb-law"] main .scm-ms-hero-bg img{object-position:85% center!important}}
