@@ -18,6 +18,13 @@ assert(c.render(catering).includes(catering.coverImage),'catering hero uses the 
 assert(c.card(catering).includes(catering.coverAlt),'use accurate illustrative-image alt text');
 assert(catering.desktop.endsWith('classical-caterers-desktop.png'),'preserve the actual website capture');
 const harlem=c.clients.find(p=>p.slug==='harlem-east-life-plan');
+assert.deepEqual(Array.from(harlem.scope),['web','seo','ppc','gbp','reputation']);
+for(const key of ['gbp','reputation']){
+  assert(c.card(harlem).includes(c.scope[key].label),'Harlem card includes the added service');
+  assert(c.render(harlem).includes('id="'+c.scope[key].id+'"'),'Harlem case study includes the added service section');
+  assert.equal(c.metrics(harlem,key).length,3,'added services have disclosed sample metrics');
+}
+assert(harlem.story.includes('without disclosing patient information'));
 assert.equal(harlem.logo,'assets/client-projects/harlem-east-life-plan-logo-white-text.svg');
 const whiteLogo=fs.readFileSync(path.join(root,harlem.logo),'utf8');
 assert(whiteLogo.includes('data:image/webp;base64,'),'white logo reuses original artwork');
@@ -68,7 +75,7 @@ assert.equal(c.clients.find(p=>p.slug==='argana-day-spa').logo,'assets/client-pr
 for(const slug of ['calvin-schwartz','genius-kids'])assert(c.clients.find(p=>p.slug===slug).logo.endsWith('-logo-transparent.svg'),'preserve other transparent logos');
 assert.deepEqual(Array.from(c.clients.find(p=>p.slug==='aesthetic-island-nyc').scope),['ppc','gbp','reputation']);
 assert.deepEqual(Array.from(c.clients.find(p=>p.slug==='argana-day-spa').scope),['gbp','reputation']);
-for(const p of c.clients.filter(p=>!['aesthetic-island-nyc','argana-day-spa','jb-body-works','prestige-beauty-project'].includes(p.slug)))assert(!p.scope.includes('reputation'),'do not broaden other client scopes');
+for(const p of c.clients.filter(p=>!['aesthetic-island-nyc','argana-day-spa','jb-body-works','prestige-beauty-project','harlem-east-life-plan'].includes(p.slug)))assert(!p.scope.includes('reputation'),'do not broaden other client scopes');
 const serviceDeltas={};
 for(const p of c.clients){
  const file=fs.readFileSync(path.join(root,'case-studies',p.slug+'-review.html'),'utf8');

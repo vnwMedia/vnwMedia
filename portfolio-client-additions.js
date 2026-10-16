@@ -60,14 +60,14 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     story:'Website development provides a place to explore glass installation services and project context. Social media management supports an ongoing presentation of the business; SEO and PPC are not included in this case-study scope.'
   },
   {
-    slug:'harlem-east-life-plan',name:'Harlem East Life Plan',industry:'Healthcare & Behavioral Health',website:'https://www.harlemeastlifeplan.com/',logoExtension:'webp',scope:['web','seo','ppc'],
+    slug:'harlem-east-life-plan',name:'Harlem East Life Plan',industry:'Healthcare & Behavioral Health',website:'https://www.harlemeastlifeplan.com/',logoExtension:'webp',scope:['web','seo','ppc','gbp','reputation'],
     logo:'assets/client-projects/harlem-east-life-plan-logo-white-text.svg',
     coverImage:'assets/client-projects/harlem-east-life-plan-care.jpg',coverAlt:'Illustrative supportive counseling conversation in a welcoming care setting',coverWidth:1672,coverHeight:941,
     summary:'A New York City care provider presenting counseling, behavioral-health, and treatment services.',
     headline:'Make care information easier to find and understand.',
     challenge:'People seeking support need clear service explanations, an identifiable provider, and accessible contact information without unsupported promises about treatment outcomes.',
-    focus:'Care-service information and relevant search discovery',
-    story:'The website introduces available care and contact pathways. Website, SEO, and PPC work support access to that information; marketing progress should not be confused with medical efficacy or patient outcomes.'
+    focus:'Care-service information, relevant search discovery, local visibility, and trust',
+    story:'The website introduces available care and contact pathways. Web Design, SEO, PPC, and Google Business Profile Management support access to accurate service and location information. Reputation Management supports review monitoring, privacy-conscious response guidance, and invitations for honest feedback without disclosing patient information. Marketing progress should not be confused with medical efficacy or patient outcomes.'
   },
   {
     slug:'jb-body-works',name:'J B Body Works',industry:'Automotive & Collision Repair',website:'https://jbbodyworks.com/',logoExtension:'png',scope:['seo','reputation'],
@@ -156,7 +156,7 @@ const PORTFOLIO_SAMPLE_SCENARIOS={
   'genius-kids':{web:[[1.8,3.3],[26,45],[44,63]],seo:[[740,1399],[11200,19824],[17,32]]},
   'new-generation-learning-center':{web:[[2.6,3.1],[34,41],[53,59]],seo:[[1280,1715],[17600,22528],[28,37]]},
   'glass-company-nyc':{web:[[2.2,3.7],[24,43],[46,64]],smm:[[4200,8232],[2.3,4.1],[175,346]]},
-  'harlem-east-life-plan':{web:[[3.1,3.8],[42,53],[57,64]],seo:[[1740,2461],[22400,30240],[36,49]],ppc:[[46,79],[72,54],[3.1,4.8]]},
+  'harlem-east-life-plan':{web:[[3.1,3.8],[42,53],[57,64]],seo:[[1740,2461],[22400,30240],[36,49]],ppc:[[46,79],[72,54],[3.1,4.8]],gbp:[[2860,4204],[58,84],[214,306]],reputation:[[17,26],[74,96],[13,25]]},
   'jb-body-works':{seo:[[890,1148],[13700,16851],[24,31]],reputation:[[24,36],[81,95],[19,34]]},
   'mb-law':{web:[[1.7,2.6],[23,36],[45,58]],seo:[[1160,1949],[16800,26544],[26,44]],gbp:[[1940,3007],[46,73],[158,241]]},
   'liquid-soldier':{web:[[2.8,3.9],[29,43],[49,62]]},
