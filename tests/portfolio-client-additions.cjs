@@ -101,6 +101,8 @@ for(const p of c.clients){
  vm.runInContext(fs.readFileSync(path.join(root,'portfolio-client-results.js'),'utf8'),c);
  assert.equal((resultTarget.innerHTML.match(/class="aoc-service-result portfolio-metric-card"/g)||[]).length,p.scope.length);
  assert.equal((resultTarget.innerHTML.match(/class="aoc-comparison portfolio-metric-comparison"/g)||[]).length,p.scope.length,'use the live case-study green comparison pattern');
+ assert.equal((resultTarget.innerHTML.match(/class="portfolio-metric-change"/g)||[]).length,p.scope.length*2,'each supporting KPI has a two-row improvement callout');
+ assert.equal((resultTarget.innerHTML.match(/class="portfolio-metric-values"/g)||[]).length,p.scope.length*2,'keep before-and-after values separate from the larger delta');
  assert.equal((resultTarget.innerHTML.match(/over comparable 90-day periods/g)||[]).length,p.scope.length);
  for(const key of p.scope){
   const metrics=c.metrics(p,key);
