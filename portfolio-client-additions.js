@@ -68,6 +68,11 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     logo:'assets/client-projects/harlem-east-life-plan-logo-white-text.svg',
     coverImage:'assets/client-projects/harlem-east-life-plan-care.jpg',coverAlt:'Illustrative supportive counseling conversation in a welcoming care setting',coverWidth:1672,coverHeight:941,
     summary:'A New York City care provider presenting counseling, behavioral-health, and treatment services.',
+    // Care programs verified against https://www.harlemeastlifeplan.com/.
+    scopeParagraphs:[
+      'Harlem East Life Plan (HELP) provides medical and behavioral health services for adults in New York City, including mental health counseling, substance use disorder treatment, medication-assisted treatment, outpatient detoxification, and primary care. Its multidisciplinary team brings medical, psychiatric, and counseling support together around each person’s needs and path to wellness.',
+      'VNW Media supports HELP through five connected services: Web Design, SEO, PPC, Google Business Profile Management, and Reputation Management. We organize care information and contact options into a clear website experience, strengthen the visibility of relevant service pages in organic search, and use paid search to connect with people looking for care. Local profile management keeps location and contact details easy to find, while review monitoring and thoughtful response guidance support HELP’s online reputation. Together, this work gives the organization a consistent presence across its website, search results, local listings, and reviews.'
+    ],
     headline:'Make care information easier to find and understand.',
     challenge:'People seeking support need clear service explanations, an identifiable provider, and accessible contact information without unsupported promises about treatment outcomes.',
     focus:'Care-service information, relevant search discovery, local visibility, and trust',
