@@ -105,12 +105,13 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     story:'The website build connects the firm’s practice areas, attorney information, and consultation pathways. This engagement is website development only; SEO, profile management, and paid advertising are not included.'
   },
   {
-    slug:'prestige-beauty-project',name:'Prestige Beauty Project',industry:'Medical Aesthetics & Wellness',website:'https://prestigebeautyproject.com/',logoExtension:'webp',scope:['web','seo','gbp'],
+    slug:'prestige-beauty-project',name:'Prestige Beauty Project',industry:'Medical Aesthetics & Wellness',website:'https://prestigebeautyproject.com/',logoExtension:'webp',scope:['web','seo','gbp','reputation'],
+    heroImage:'assets/client-projects/prestige-beauty-project-aesthetics-studio.jpg',heroAlt:'Illustrative medical-aesthetics treatment room with a reclining treatment chair and consultation area',heroWidth:1672,heroHeight:941,
     summary:'A Manalapan, New Jersey aesthetics business presenting cosmetic injectables and related beauty services.',
     headline:'Connect the practice’s identity with local discovery.',
     challenge:'Prospective clients need to explore the business, understand the services presented, and locate reliable appointment and contact information.',
-    focus:'Website clarity and local aesthetics discovery',
-    story:'Website development, SEO, and Google Business Profile work together around the practice’s online identity and local discovery. The case study describes marketing scope, not a claim about cosmetic treatment results.'
+    focus:'Website clarity, local aesthetics discovery, and customer trust',
+    story:'Website development, SEO, Google Business Profile, and Reputation Management work together around the practice’s online identity, local discovery, and customer feedback. Reputation work supports review monitoring, response guidance, and invitations for honest feedback. The case study describes marketing scope, not a claim about cosmetic treatment results.'
   }
 ].map(p=>({...p,logo:p.logo||(['calvin-schwartz','genius-kids'].includes(p.slug)?`assets/client-projects/${p.slug}-logo-transparent.svg`:`assets/client-projects/${p.slug}-logo.${p.logoExtension}`),desktop:`assets/client-projects/${p.slug}-desktop.png`}));
 
@@ -151,7 +152,7 @@ const PORTFOLIO_SAMPLE_SCENARIOS={
   'mb-law':{web:[[1.7,2.6],[23,36],[45,58]],seo:[[1160,1949],[16800,26544],[26,44]],gbp:[[1940,3007],[46,73],[158,241]]},
   'liquid-soldier':{web:[[2.8,3.9],[29,43],[49,62]]},
   'lm-attorney':{web:[[2.5,2.8],[32,37],[55,60]]},
-  'prestige-beauty-project':{web:[[1.9,3.9],[21,47],[43,66]],seo:[[680,1448],[10600,21942],[16,35]],gbp:[[1520,2934],[39,78],[131,258]]}
+  'prestige-beauty-project':{web:[[1.9,3.9],[21,47],[43,66]],seo:[[680,1448],[10600,21942],[16,35]],gbp:[[1520,2934],[39,78],[131,258]],reputation:[[12,22],[76,94],[9,21]]}
 };
 function portfolioSampleMetrics(p,key){
   return PORTFOLIO_SAMPLE_METRICS[key].map(([label,unit],i)=>{
@@ -172,7 +173,7 @@ function renderPortfolioAdditionCase(p){
   const services=p.scope.map(k=>PORTFOLIO_ADDITION_SERVICES[k]);
   return renderClientCaseStudy({
     name:p.name,kicker:p.industry,intro:p.summary,businessIntro:p.summary,
-    hero:p.coverImage||p.desktop,heroAlt:p.coverAlt||p.name+' client website',heroWidth:p.coverWidth||1440,heroHeight:p.coverHeight||1000,
+    hero:p.heroImage||p.coverImage||p.desktop,heroAlt:p.heroAlt||p.coverAlt||p.name+' client website',heroWidth:p.heroWidth||p.coverWidth||1440,heroHeight:p.heroHeight||p.coverHeight||1000,
     heroLogo:p.logo,serviceLabels:services.map(s=>s.label),website:p.website,
     mockup:'assets/digital-experience-clients/'+p.slug+'-devices.svg',mockupAlt:p.name+' actual desktop and mobile websites displayed on a laptop and phone',mockupWidth:1145,mockupHeight:1200,
     signals:services.map(s=>['—',s.label]),

@@ -24,6 +24,7 @@ body[data-portfolio-addition] .scm-ms-story-stage{min-height:0;padding:0;align-i
 @media(max-width:760px){html body[data-page="case-harlem-east-life-plan"] main .scm-ms-hero-bg img{object-position:80% center!important}}
 @media(max-width:760px){html body[data-page="case-jb-body-works"] main .scm-ms-hero-bg img{object-position:70% center!important}}
 @media(max-width:760px){html body[data-page="case-mb-law"] main .scm-ms-hero-bg img{object-position:85% center!important}}
+@media(max-width:760px){html body[data-page="case-prestige-beauty-project"] main .scm-ms-hero-bg img{object-position:65% center!important}}
 @media(max-width:600px){.portfolio-addition-media .portfolio-addition-logo{max-height:120px}}
 
 /* Disclosed sample dashboards; never styled as verified client reporting. */
