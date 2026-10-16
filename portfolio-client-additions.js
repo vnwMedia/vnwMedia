@@ -49,6 +49,8 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
   {
     slug:'new-generation-learning-center',name:'New Generation Learning Center',industry:'Childcare & Early Education',website:'https://www.newgenerationlearningcenter.com/',logoExtension:'png',scope:['web','seo'],
     mockupVersion:'20261016-east-hanover',
+    captureVersion:'20261016-east-hanover-location',
+    coverAlt:'New Generation Learning Center East Hanover location website with program information and contact options',
     summary:'A learning-center business presenting locations in East Hanover and Staten Island.',
     headline:'Make the right learning center easier for families to find.',
     challenge:'Families need to distinguish locations, understand the learning environment, and reach the appropriate team with their questions.',
@@ -189,14 +191,14 @@ function portfolioMetricValue(n,unit){
 }
 
 function renderPortfolioAdditionCard(p){
-  return `<article class="work-card work-agency-card reveal"><figure class="work-client-media work-project-media portfolio-addition-media" data-project="${esc(p.slug)}"><img src="${img(p.coverImage||p.desktop)}" alt="${esc(p.coverAlt||p.name+' website')}" width="${p.coverWidth||1440}" height="${p.coverHeight||1000}" loading="lazy"><img class="work-client-logo portfolio-addition-logo" src="${img(p.logo)}" alt="${esc(p.name)} logo" loading="lazy"></figure><div><span>${esc(p.industry)}</span><h3>${esc(p.name)}</h3><p>${esc(p.summary)} Our scope: ${p.scope.map(k=>PORTFOLIO_ADDITION_SERVICES[k].label).map(esc).join(', ')}.</p><ul aria-label="Services provided for ${esc(p.name)}">${p.scope.map(k=>{const s=PORTFOLIO_ADDITION_SERVICES[k];return `<li><a class="work-service-pill" href="${path('services/'+s.page+'.html')}">${esc(s.label)}</a></li>`;}).join('')}</ul><a class="work-case-link" href="${path('case-studies/'+p.slug+'-review.html')}" aria-label="Read ${esc(p.name)} case study"><b>Read case study ↗</b></a></div></article>`;
+  return `<article class="work-card work-agency-card reveal"><figure class="work-client-media work-project-media portfolio-addition-media" data-project="${esc(p.slug)}"><img src="${img((p.coverImage||p.desktop)+(p.captureVersion?'?v='+p.captureVersion:''))}" alt="${esc(p.coverAlt||p.name+' website')}" width="${p.coverWidth||1440}" height="${p.coverHeight||1000}" loading="lazy"><img class="work-client-logo portfolio-addition-logo" src="${img(p.logo)}" alt="${esc(p.name)} logo" loading="lazy"></figure><div><span>${esc(p.industry)}</span><h3>${esc(p.name)}</h3><p>${esc(p.summary)} Our scope: ${p.scope.map(k=>PORTFOLIO_ADDITION_SERVICES[k].label).map(esc).join(', ')}.</p><ul aria-label="Services provided for ${esc(p.name)}">${p.scope.map(k=>{const s=PORTFOLIO_ADDITION_SERVICES[k];return `<li><a class="work-service-pill" href="${path('services/'+s.page+'.html')}">${esc(s.label)}</a></li>`;}).join('')}</ul><a class="work-case-link" href="${path('case-studies/'+p.slug+'-review.html')}" aria-label="Read ${esc(p.name)} case study"><b>Read case study ↗</b></a></div></article>`;
 }
 
 function renderPortfolioAdditionCase(p){
   const services=p.scope.map(k=>PORTFOLIO_ADDITION_SERVICES[k]);
   return renderClientCaseStudy({
     name:p.name,kicker:p.industry,intro:p.summary,businessIntro:p.summary,
-    hero:p.heroImage||p.coverImage||p.desktop,heroAlt:p.heroAlt||p.coverAlt||p.name+' client website',heroWidth:p.heroWidth||p.coverWidth||1440,heroHeight:p.heroHeight||p.coverHeight||1000,
+    hero:(p.heroImage||p.coverImage||p.desktop)+(p.captureVersion?'?v='+p.captureVersion:''),heroAlt:p.heroAlt||p.coverAlt||p.name+' client website',heroWidth:p.heroWidth||p.coverWidth||1440,heroHeight:p.heroHeight||p.coverHeight||1000,
     heroLogo:p.logo,serviceLabels:services.map(s=>s.label),website:p.website,
     mockup:'assets/digital-experience-clients/'+p.slug+'-devices.svg'+(p.mockupVersion?'?v='+p.mockupVersion:''),mockupAlt:p.name+' actual desktop and mobile websites displayed on a laptop and phone',mockupWidth:1145,mockupHeight:1200,
     signals:services.map(s=>['—',s.label]),
