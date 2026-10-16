@@ -9,6 +9,14 @@ for(const file of ['service-catalog.js','client-projects.js','portfolio-client-a
 vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortfolioAdditionCase;this.card=renderPortfolioAdditionCard;this.scope=PORTFOLIO_ADDITION_SERVICES;this.metrics=portfolioSampleMetrics;this.formatMetric=portfolioMetricValue;',c);
 assert.equal(c.clients.length,13);
 assert.equal(new Set(c.clients.map(p=>p.slug)).size,13);
+const catering=c.clients.find(p=>p.slug==='classical-caterers');
+assert.equal(catering.coverImage,'assets/client-projects/classical-caterers-hall.jpg');
+assert(fs.statSync(path.join(root,catering.coverImage)).size>1000);
+assert(c.card(catering).includes(catering.coverImage),'catering card uses the hall image');
+assert(c.render(catering).includes(catering.coverImage),'catering hero uses the same hall image');
+assert(c.card(catering).includes(catering.coverAlt),'use accurate illustrative-image alt text');
+assert(catering.desktop.endsWith('classical-caterers-desktop.png'),'preserve the actual website capture');
+for(const p of c.clients.filter(p=>p.slug!==catering.slug))assert(!p.coverImage,'other clients retain their images');
 assert.equal(c.clients.find(p=>p.slug==='argana-day-spa').logo,'assets/client-projects/argana-day-spa-logo.png','restore Argana original background');
 for(const slug of ['calvin-schwartz','genius-kids'])assert(c.clients.find(p=>p.slug===slug).logo.endsWith('-logo-transparent.svg'),'preserve other transparent logos');
 assert.deepEqual(Array.from(c.clients.find(p=>p.slug==='aesthetic-island-nyc').scope),['ppc','gbp','reputation']);
