@@ -13,6 +13,11 @@ body[data-portfolio-addition] .scm-ms-hero h1 .case-hero-client-logo{background:
 body[data-page="case-argana-day-spa"] .scm-ms-hero h1 .case-hero-client-logo{height:160px;object-fit:cover;object-position:top;padding:0;border-radius:3px;filter:none}
 .portfolio-addition-media[data-project="aesthetic-island-nyc"] .portfolio-addition-logo,
 body[data-page="case-aesthetic-island-nyc"] .scm-ms-hero h1 .case-hero-client-logo{filter:brightness(0) invert(1) drop-shadow(0 3px 5px #0009)}
+/* White backing keeps the two colorful education logos readable over their websites. */
+.portfolio-addition-media:is([data-project="genius-kids"],[data-project="new-generation-learning-center"]) .portfolio-addition-logo,
+body:is([data-page="case-genius-kids"],[data-page="case-new-generation-learning-center"]) .scm-ms-hero h1 .case-hero-client-logo{background:#fff;padding:12px 16px;border-radius:6px;box-sizing:border-box;filter:none;box-shadow:0 4px 18px #0002}
+.portfolio-addition-media[data-project="genius-kids"] .portfolio-addition-logo,
+body[data-page="case-genius-kids"] .scm-ms-hero h1 .case-hero-client-logo{height:110px;max-width:280px;object-fit:cover;object-position:center}
 body[data-portfolio-addition] .scm-ms-story-stage img{object-fit:contain;object-position:top;width:100%;height:auto}
 body[data-portfolio-addition] .scm-ms-story-stage{min-height:0;padding:0;align-items:center}
 .portfolio-positive-results .aoc-period{max-width:65ch}
