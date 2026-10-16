@@ -47,6 +47,10 @@ assert(c.card(harlem).includes(harlem.coverImage)&&c.render(harlem).includes(har
 assert(c.card(harlem).includes(harlem.coverAlt));
 assert(harlem.desktop.endsWith('harlem-east-life-plan-desktop.png'),'preserve actual website capture');
 const jb=c.clients.find(p=>p.slug==='jb-body-works');
+assert(c.render(jb).includes('jb-body-works-devices.svg?v=20261016-video-loaded'),'load the refreshed video-ready device preview rather than a cached black screen');
+const jbCapture=JSON.parse(fs.readFileSync(path.join(root,'assets/client-projects/jb-body-works-capture.json'),'utf8'));
+assert(jbCapture.verification.includes('visually confirmed'));
+assert.equal(jbCapture.desktop.width,1440);assert.equal(jbCapture.mobile.width,390);
 assert.equal(jb.coverImage,'assets/client-projects/jb-body-works-collision-repair.jpg');
 assert(fs.statSync(path.join(root,jb.coverImage)).size>1000);
 assert(c.card(jb).includes(jb.coverImage)&&c.render(jb).includes(jb.coverImage),'use collision-repair imagery on card and hero');

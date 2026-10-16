@@ -72,6 +72,7 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
   },
   {
     slug:'jb-body-works',name:'J B Body Works',industry:'Automotive & Collision Repair',website:'https://jbbodyworks.com/',logoExtension:'png',scope:['seo','reputation'],
+    mockupVersion:'20261016-video-loaded',
     coverImage:'assets/client-projects/jb-body-works-collision-repair.jpg',coverAlt:'Illustrative automotive technician inspecting a vehicle body panel in a professional collision-repair workshop',coverWidth:1672,coverHeight:941,
     summary:'A collision-repair business presenting vehicle repair services, facility capabilities, and automotive work.',
     headline:'Connect repair searches with relevant service information.',
@@ -189,7 +190,7 @@ function renderPortfolioAdditionCase(p){
     name:p.name,kicker:p.industry,intro:p.summary,businessIntro:p.summary,
     hero:p.heroImage||p.coverImage||p.desktop,heroAlt:p.heroAlt||p.coverAlt||p.name+' client website',heroWidth:p.heroWidth||p.coverWidth||1440,heroHeight:p.heroHeight||p.coverHeight||1000,
     heroLogo:p.logo,serviceLabels:services.map(s=>s.label),website:p.website,
-    mockup:'assets/digital-experience-clients/'+p.slug+'-devices.svg',mockupAlt:p.name+' actual desktop and mobile websites displayed on a laptop and phone',mockupWidth:1145,mockupHeight:1200,
+    mockup:'assets/digital-experience-clients/'+p.slug+'-devices.svg'+(p.mockupVersion?'?v='+p.mockupVersion:''),mockupAlt:p.name+' actual desktop and mobile websites displayed on a laptop and phone',mockupWidth:1145,mockupHeight:1200,
     signals:services.map(s=>['—',s.label]),
     challengeTitle:p.headline,challengeOne:p.challenge,
     challengeTwo:'Our confirmed scope for '+p.name+' is '+services.map(s=>s.label).join(', ')+'. The engagement focuses on '+p.focus.toLowerCase()+'.',
