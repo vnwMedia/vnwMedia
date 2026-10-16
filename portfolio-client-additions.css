@@ -24,6 +24,7 @@ body[data-page="case-genius-kids"] .scm-ms-hero h1 .case-hero-client-logo{height
 body[data-portfolio-addition] .scm-ms-story-stage img{object-fit:contain;object-position:top;width:100%;height:auto}
 body[data-portfolio-addition] .scm-ms-story-stage{min-height:0;padding:0;align-items:center}
 .portfolio-positive-results .aoc-period{max-width:65ch}
+@media(max-width:760px){html body[data-page="case-aesthetic-island-nyc"] main .scm-ms-hero-bg img{object-position:68% center!important}}
 @media(max-width:760px){html body[data-page="case-harlem-east-life-plan"] main .scm-ms-hero-bg img{object-position:80% center!important}}
 @media(max-width:760px){html body[data-page="case-jb-body-works"] main .scm-ms-hero-bg img{object-position:70% center!important}}
 @media(max-width:760px){html body[data-page="case-mb-law"] main .scm-ms-hero-bg img{object-position:85% center!important}}

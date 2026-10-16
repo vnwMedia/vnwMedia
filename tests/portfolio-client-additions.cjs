@@ -17,6 +17,12 @@ for(const slug of ['glass-company-nyc','liquid-soldier']){
 }
 assert(fs.readFileSync(path.join(root,'portfolio-review-notice.js'),'utf8').includes('const total=PORTFOLIO_REVIEW_CLIENTS.length'),'review count stays synchronized with the client list');
 const catering=c.clients.find(p=>p.slug==='classical-caterers');
+const aesthetic=c.clients.find(p=>p.slug==='aesthetic-island-nyc');
+assert.equal(aesthetic.coverImage,'assets/client-projects/aesthetic-island-nyc-beauty.jpg');
+assert(fs.statSync(path.join(root,aesthetic.coverImage)).size>1000);
+assert(c.card(aesthetic).includes(aesthetic.coverImage)&&c.render(aesthetic).includes(aesthetic.coverImage),'use the same beauty image on card and case-study hero');
+assert(c.card(aesthetic).includes(aesthetic.coverAlt)&&c.render(aesthetic).includes(aesthetic.coverAlt));
+assert(aesthetic.desktop.endsWith('aesthetic-island-nyc-desktop.png'),'preserve actual website device preview');
 assert.equal(catering.coverImage,'assets/client-projects/classical-caterers-hall.jpg');
 assert(fs.statSync(path.join(root,catering.coverImage)).size>1000);
 assert(c.card(catering).includes(catering.coverImage),'catering card uses the hall image');
@@ -68,7 +74,7 @@ assert(olf.story.includes('PPC only'));
 assert(fs.statSync(path.join(root,olf.coverImage)).size>1000);
 assert(c.render(olf).includes(olf.coverImage));
 assert(!c.render(olf).includes('id="website-ux"')&&!c.render(olf).includes('id="seo"'),'do not claim website development or SEO');
-for(const p of c.clients.filter(p=>![catering.slug,harlem.slug,jb.slug,mb.slug,olf.slug].includes(p.slug)))assert(!p.coverImage,'other clients retain their images');
+for(const p of c.clients.filter(p=>![aesthetic.slug,catering.slug,harlem.slug,jb.slug,mb.slug,olf.slug].includes(p.slug)))assert(!p.coverImage,'other clients retain their images');
 const prestige=c.clients.find(p=>p.slug==='prestige-beauty-project');
 assert.deepEqual(Array.from(prestige.scope),['web','seo','gbp','reputation']);
 assert.equal(prestige.heroImage,'assets/client-projects/prestige-beauty-project-aesthetics-studio.jpg');

@@ -4,6 +4,7 @@
 const PORTFOLIO_CLIENT_ADDITIONS = [
   {
     slug:'aesthetic-island-nyc',name:'Aesthetic Island NYC',industry:'Medical Aesthetics & Wellness',website:'https://www.aestheticislandnyc.com/',logoExtension:'png',scope:['ppc','gbp','reputation'],
+    coverImage:'assets/client-projects/aesthetic-island-nyc-beauty.jpg',coverAlt:'Illustrative beauty portrait of an adult woman in soft natural light against a warm ivory background',coverWidth:1672,coverHeight:941,
     summary:'A Brooklyn medical spa offering aesthetic treatments and personalized consultations.',
     headline:'Connect local treatment interest with a clear next step.',
     challenge:'People researching aesthetic treatments need to identify the practice, understand its services, and find accurate contact and appointment information.',
