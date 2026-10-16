@@ -1,0 +1,17 @@
+{
+  "asset": "assets/vision-centers-optical-boutique-hero.webp",
+  "source": "assets/vision-centers-optical-boutique-hero-source.png",
+  "reference": "assets/vision-centers-boutique.webp",
+  "creationMethod": "Built-in image_gen",
+  "description": "AI-generated illustrative optical-boutique scene inspired by the existing hero. Fictional people and setting; not documentary photography of a Vision Centers location.",
+  "dimensions": {
+    "width": 1672,
+    "height": 941
+  },
+  "encoding": {
+    "format": "webp",
+    "quality": 93,
+    "resized": false
+  },
+  "prompt": "Use case: photorealistic-natural.\nAsset type: high-resolution website hero background for the Vision Centers case study.\nInput image 1 is a composition and architectural reference, not a request to reproduce the actual people or claim a photograph of this exact business.\nPrimary request: create a new, substantially sharper optical-boutique photograph with many recognizable similarities to the reference. It should feel like a specific, busy neighborhood eyewear boutique, never a generic medical office or empty luxury showroom.\nPreserve these distinctive visual features: a narrow, deep urban shop seen from the entrance; densely stocked, brightly illuminated prescription-eyeglass displays covering the right and rear walls; dark metal frames around the white display panels; eyewear fashion-photo panels above the racks; long gray-and-glass display counters running from the foreground right toward the rear center; a dark upholstered waiting bench along the left wall; gray wood-look floor tiles; white ceiling with recessed lighting, an elegant ring-shaped LED pendant, and small white hanging pendants.\nPeople: natural, candid activity similar to the reference. Two adult women interacting near the front-right counter, one in burgundy and one in magenta; an adult customer in a peach/tan top with a dark backpack at the middle counter; a staff member behind the counter; a seated adult toward the left. Create different fictional people with realistic anatomy, hands, skin and clothing texture, relaxed expressions, and believable interactions.\nComposition: wide landscape 16:9, ideally 3840 by 2160 pixels. Eye-level architectural photography with a natural wide lens, straight verticals, strong depth. Keep the eyewear racks, people, and glass counters legible within the central horizontal band so it crops well into a wide web hero. Leave the left/lower-left composition comparatively calm for the website's existing text overlay.\nLighting and quality: bright neutral indoor light, realistic reflections in the glass, crisp individual eyeglass frames, clear facial detail, natural material textures, deep focus across the shop. Polished professional commercial photography while retaining the lived-in neighborhood feel.\nDo not add website text, navigation, UI, watermarks, logos, recognizable brand names, or invented signage. Poster panels may contain eyewear lifestyle imagery without lettering. No blur, bokeh, hazy softness, fake sharpening halos, exaggerated HDR, glossy CGI, or sterile clinical design. Deliver only the clean photograph with no dark overlay."
+}
