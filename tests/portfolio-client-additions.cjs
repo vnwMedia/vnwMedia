@@ -35,7 +35,17 @@ assert(jb.desktop.endsWith('jb-body-works-desktop.png'),'preserve actual website
 assert.deepEqual(Array.from(jb.scope),['seo','reputation']);
 assert(c.render(jb).includes('id="reputation-management"'),'include reputation-management service section');
 assert(jb.story.includes('SEO and Reputation Management'));
-for(const p of c.clients.filter(p=>![catering.slug,harlem.slug,jb.slug].includes(p.slug)))assert(!p.coverImage,'other clients retain their images');
+const mb=c.clients.find(p=>p.slug==='mb-law');
+assert.equal(mb.logo,'assets/client-projects/mb-law-logo-white-text.svg');
+const mbWhiteLogo=fs.readFileSync(path.join(root,mb.logo),'utf8');
+assert(mbWhiteLogo.includes('data:image/png;base64,')&&mbWhiteLogo.includes('clip-path="url(#emblem)"')&&mbWhiteLogo.includes('filter="url(#white-lettering)"'),'preserve emblem and original lettering shapes; recolor name and tagline white');
+assert.equal(mb.coverImage,'assets/client-projects/mb-law-legal-office.jpg');
+assert(fs.statSync(path.join(root,mb.coverImage)).size>1000);
+assert(c.card(mb).includes(mb.coverImage)&&c.render(mb).includes(mb.coverImage));
+assert(c.card(mb).includes(mb.coverAlt));
+assert(mb.desktop.endsWith('mb-law-desktop.png'),'preserve actual website capture and device presentation');
+assert.deepEqual(Array.from(mb.scope),['web','seo','gbp'],'do not change the law-firm service scope');
+for(const p of c.clients.filter(p=>![catering.slug,harlem.slug,jb.slug,mb.slug].includes(p.slug)))assert(!p.coverImage,'other clients retain their images');
 assert.equal(c.clients.find(p=>p.slug==='argana-day-spa').logo,'assets/client-projects/argana-day-spa-logo.png','restore Argana original background');
 for(const slug of ['calvin-schwartz','genius-kids'])assert(c.clients.find(p=>p.slug===slug).logo.endsWith('-logo-transparent.svg'),'preserve other transparent logos');
 assert.deepEqual(Array.from(c.clients.find(p=>p.slug==='aesthetic-island-nyc').scope),['ppc','gbp','reputation']);
