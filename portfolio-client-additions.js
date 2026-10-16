@@ -99,7 +99,7 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     story:'Our scope is the website build, connecting product information, brand presentation, and useful navigation. Search campaigns, social media management, and product-health claims are not part of this case study.'
   },
   {
-    slug:'lm-attorney',name:'Law Offices of Leo Mikityanskiy',industry:'Legal & Professional Services',website:'https://www.lmattorney.com/',logoExtension:'webp',scope:['web'],
+    slug:'lm-attorney',name:'Law Offices of Leo Mikityanskiy',industry:'Legal & Professional Services',website:'https://www.lmattorney.com/',logoExtension:'webp',scope:['web'],reviewHidden:true,
     summary:'A law practice presenting estate planning and other legal services, attorney information, and contact pathways.',
     headline:'Make a considered legal decision easier to navigate.',
     challenge:'Visitors evaluating legal help need understandable service information, attorney context, and a direct route to contact the practice.',
@@ -116,7 +116,7 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     story:'Website development, SEO, Google Business Profile, and Reputation Management work together around the practice’s online identity, local discovery, and customer feedback. Reputation work supports review monitoring, response guidance, and invitations for honest feedback. The case study describes marketing scope, not a claim about cosmetic treatment results.'
   },
   {
-    slug:'ofshtein-law-firm',name:'Ofshtein Law Firm',industry:'Legal & Professional Services',website:'https://olf.law/',logoExtension:'png',scope:['ppc'],
+    slug:'ofshtein-law-firm',name:'Ofshtein Law Firm',industry:'Legal & Professional Services',website:'https://olf.law/',logoExtension:'png',scope:['ppc'],reviewHidden:true,
     coverImage:'assets/client-projects/ofshtein-law-firm-cover.jpg',coverAlt:'Ofshtein Law Firm advertisement on a New York City bus, as featured on the firm’s website',coverWidth:2528,coverHeight:1696,
     summary:'A personal-injury law firm presenting its practice areas, attorneys, office locations, and consultation pathways.',
     headline:'Connect legal-service searches with a clear consultation path.',

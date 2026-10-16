@@ -20,9 +20,7 @@ const PORTFOLIO_FILTER_CLIENT_INDUSTRY={
   'harlem-east-life-plan':'healthcare',
   'jb-body-works':'automotive',
   'mb-law':'legal',
-  'lm-attorney':'legal',
-  'prestige-beauty-project':'healthcare',
-  'ofshtein-law-firm':'legal'
+  'prestige-beauty-project':'healthcare'
 };
 const PORTFOLIO_FILTER_LAYOUTS=[
   {id:'pills',name:'Pill Bar',number:'01',summary:'A familiar, compact filter above the portfolio. The clearest fit for your current page.',recommended:true},

@@ -8,16 +8,16 @@ for(const file of ['service-catalog.js','client-projects.js','portfolio-client-a
  vm.runInContext(source,c,{filename:file});
 }
 vm.runInContext('this.clients=PORTFOLIO_REVIEW_CLIENTS;this.groups=PORTFOLIO_FILTER_INDUSTRIES;this.mapping=PORTFOLIO_FILTER_CLIENT_INDUSTRY;this.layouts=PORTFOLIO_FILTER_LAYOUTS;this.filter=portfolioIndustryClients;this.renderFilters=renderPortfolioIndustryFilters;this.renderCards=renderPortfolioIndustryCards;',c);
-assert.equal(c.clients.length,12);assert.equal(c.layouts.length,3);
-assert.equal(Object.keys(c.mapping).length,12);
+assert.equal(c.clients.length,10);assert.equal(c.layouts.length,3);
+assert.equal(Object.keys(c.mapping).length,10);
 assert.equal(new Set(c.groups.map(x=>x.id)).size,c.groups.length);
 for(const p of c.clients)assert(c.groups.some(x=>x.id===c.mapping[p.slug]),p.slug+' needs a valid industry');
-assert.equal(c.groups.reduce((sum,x)=>sum+c.filter(x.id).length,0),12,'each client belongs to exactly one industry');
-assert.equal(c.filter('all').length,12);
+assert.equal(c.groups.reduce((sum,x)=>sum+c.filter(x.id).length,0),10,'each client belongs to exactly one industry');
+assert.equal(c.filter('all').length,10);
 assert.deepEqual(Array.from(c.filter('healthcare'),x=>x.slug),['aesthetic-island-nyc','harlem-east-life-plan','prestige-beauty-project']);
 assert.deepEqual(Array.from(c.filter('wellness'),x=>x.slug),['argana-day-spa']);
-assert.equal(c.filter('education').length,2);assert.equal(c.filter('legal').length,3);
-assert(c.filter('legal').some(p=>p.slug==='ofshtein-law-firm'));
+assert.equal(c.filter('education').length,2);assert.equal(c.filter('legal').length,1);
+assert.deepEqual(Array.from(c.filter('legal'),p=>p.slug),['mb-law']);
 for(const layout of c.layouts){
  for(const industry of ['all',...c.groups.map(x=>x.id)]){
   const filters=c.renderFilters(layout.id,industry),cards=c.renderCards(industry);

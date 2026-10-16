@@ -10,8 +10,8 @@ vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortf
 assert.equal(c.clients.length,14);
 assert.equal(new Set(c.clients.map(p=>p.slug)).size,14);
 vm.runInContext('this.reviewClients=PORTFOLIO_REVIEW_CLIENTS;',c);
-assert.equal(c.reviewClients.length,12);
-for(const slug of ['glass-company-nyc','liquid-soldier']){
+assert.equal(c.reviewClients.length,10);
+for(const slug of ['glass-company-nyc','liquid-soldier','lm-attorney','ofshtein-law-firm']){
   assert(!c.reviewClients.some(p=>p.slug===slug),'removed client is absent from the review list');
   assert(c.clients.some(p=>p.slug===slug),'preserve case-study data and files');
 }
