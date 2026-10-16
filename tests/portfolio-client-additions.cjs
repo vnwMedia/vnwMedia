@@ -16,7 +16,17 @@ assert(c.card(catering).includes(catering.coverImage),'catering card uses the ha
 assert(c.render(catering).includes(catering.coverImage),'catering hero uses the same hall image');
 assert(c.card(catering).includes(catering.coverAlt),'use accurate illustrative-image alt text');
 assert(catering.desktop.endsWith('classical-caterers-desktop.png'),'preserve the actual website capture');
-for(const p of c.clients.filter(p=>p.slug!==catering.slug))assert(!p.coverImage,'other clients retain their images');
+const harlem=c.clients.find(p=>p.slug==='harlem-east-life-plan');
+assert.equal(harlem.logo,'assets/client-projects/harlem-east-life-plan-logo-white-text.svg');
+const whiteLogo=fs.readFileSync(path.join(root,harlem.logo),'utf8');
+assert(whiteLogo.includes('data:image/webp;base64,'),'white logo reuses original artwork');
+assert(whiteLogo.includes('clip-path="url(#symbol)"')&&whiteLogo.includes('filter="url(#white-lettering)"'),'preserve colored symbol; recolor lettering only');
+assert.equal(harlem.coverImage,'assets/client-projects/harlem-east-life-plan-care.jpg');
+assert(fs.statSync(path.join(root,harlem.coverImage)).size>1000);
+assert(c.card(harlem).includes(harlem.coverImage)&&c.render(harlem).includes(harlem.coverImage));
+assert(c.card(harlem).includes(harlem.coverAlt));
+assert(harlem.desktop.endsWith('harlem-east-life-plan-desktop.png'),'preserve actual website capture');
+for(const p of c.clients.filter(p=>![catering.slug,harlem.slug].includes(p.slug)))assert(!p.coverImage,'other clients retain their images');
 assert.equal(c.clients.find(p=>p.slug==='argana-day-spa').logo,'assets/client-projects/argana-day-spa-logo.png','restore Argana original background');
 for(const slug of ['calvin-schwartz','genius-kids'])assert(c.clients.find(p=>p.slug===slug).logo.endsWith('-logo-transparent.svg'),'preserve other transparent logos');
 assert.deepEqual(Array.from(c.clients.find(p=>p.slug==='aesthetic-island-nyc').scope),['ppc','gbp','reputation']);

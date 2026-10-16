@@ -21,6 +21,7 @@ body[data-page="case-genius-kids"] .scm-ms-hero h1 .case-hero-client-logo{height
 body[data-portfolio-addition] .scm-ms-story-stage img{object-fit:contain;object-position:top;width:100%;height:auto}
 body[data-portfolio-addition] .scm-ms-story-stage{min-height:0;padding:0;align-items:center}
 .portfolio-positive-results .aoc-period{max-width:65ch}
+@media(max-width:760px){html body[data-page="case-harlem-east-life-plan"] main .scm-ms-hero-bg img{object-position:80% center!important}}
 @media(max-width:600px){.portfolio-addition-media .portfolio-addition-logo{max-height:120px}}
 
 /* Disclosed sample dashboards; never styled as verified client reporting. */

@@ -61,6 +61,8 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
   },
   {
     slug:'harlem-east-life-plan',name:'Harlem East Life Plan',industry:'Healthcare & Behavioral Health',website:'https://www.harlemeastlifeplan.com/',logoExtension:'webp',scope:['web','seo','ppc'],
+    logo:'assets/client-projects/harlem-east-life-plan-logo-white-text.svg',
+    coverImage:'assets/client-projects/harlem-east-life-plan-care.jpg',coverAlt:'Illustrative supportive counseling conversation in a welcoming care setting',coverWidth:1672,coverHeight:941,
     summary:'A New York City care provider presenting counseling, behavioral-health, and treatment services.',
     headline:'Make care information easier to find and understand.',
     challenge:'People seeking support need clear service explanations, an identifiable provider, and accessible contact information without unsupported promises about treatment outcomes.',
@@ -107,7 +109,7 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     focus:'Website clarity and local aesthetics discovery',
     story:'Website development, SEO, and Google Business Profile work together around the practice’s online identity and local discovery. The case study describes marketing scope, not a claim about cosmetic treatment results.'
   }
-].map(p=>({...p,logo:['calvin-schwartz','genius-kids'].includes(p.slug)?`assets/client-projects/${p.slug}-logo-transparent.svg`:`assets/client-projects/${p.slug}-logo.${p.logoExtension}`,desktop:`assets/client-projects/${p.slug}-desktop.png`}));
+].map(p=>({...p,logo:p.logo||(['calvin-schwartz','genius-kids'].includes(p.slug)?`assets/client-projects/${p.slug}-logo-transparent.svg`:`assets/client-projects/${p.slug}-logo.${p.logoExtension}`),desktop:`assets/client-projects/${p.slug}-desktop.png`}));
 
 const PORTFOLIO_ADDITION_SERVICES={
   web:{id:'website-ux',label:'Web Design',page:'web-design',focus:'Website experience',copy:'Build clear service and content pathways, responsive layouts, and accessible routes to the next useful action.'},
