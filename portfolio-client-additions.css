@@ -19,8 +19,9 @@ body[data-page="case-aesthetic-island-nyc"] .scm-ms-hero h1 .case-hero-client-lo
 .portfolio-addition-media[data-project="classical-caterers"] .portfolio-addition-logo{width:66.7%;max-width:322px;filter:brightness(0) invert(1) drop-shadow(0 3px 5px #0009)}
 body[data-page="case-classical-caterers"] .scm-ms-hero h1 .case-hero-client-logo{width:276px!important;filter:brightness(0) invert(1) drop-shadow(0 3px 5px #0009)}
 /* Sharp typeset lettering and readable two-line professional subtitle, 15% larger. */
-.portfolio-addition-media[data-project="calvin-schwartz"]>img:first-child{filter:brightness(.85)}
-.portfolio-addition-media[data-project="calvin-schwartz"] .portfolio-addition-logo{width:66.7%;max-width:322px;top:77%}
+/* Match the shared centered logo placement; darken the previous portrait by 30%. */
+.portfolio-addition-media[data-project="calvin-schwartz"]>img:first-child{filter:brightness(.595)}
+.portfolio-addition-media[data-project="calvin-schwartz"] .portfolio-addition-logo{width:66.7%;max-width:322px}
 body[data-page="case-calvin-schwartz"] .scm-ms-hero h1 .case-hero-client-logo{width:276px!important}
 /* White backing keeps the two colorful education logos readable over their websites. */
 .portfolio-addition-media:is([data-project="genius-kids"],[data-project="new-generation-learning-center"]) .portfolio-addition-logo,
