@@ -70,12 +70,13 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     story:'The website introduces available care and contact pathways. Website, SEO, and PPC work support access to that information; marketing progress should not be confused with medical efficacy or patient outcomes.'
   },
   {
-    slug:'jb-body-works',name:'J B Body Works',industry:'Automotive & Collision Repair',website:'https://jbbodyworks.com/',logoExtension:'png',scope:['seo'],
+    slug:'jb-body-works',name:'J B Body Works',industry:'Automotive & Collision Repair',website:'https://jbbodyworks.com/',logoExtension:'png',scope:['seo','reputation'],
+    coverImage:'assets/client-projects/jb-body-works-collision-repair.jpg',coverAlt:'Illustrative automotive technician inspecting a vehicle body panel in a professional collision-repair workshop',coverWidth:1672,coverHeight:941,
     summary:'A collision-repair business presenting vehicle repair services, facility capabilities, and automotive work.',
     headline:'Connect repair searches with relevant service information.',
-    challenge:'Drivers researching collision repair need useful service information and a clear understanding of the shop before making contact.',
-    focus:'Organic collision-repair discovery',
-    story:'The existing website presents the repair business and its capabilities. Our engagement is SEO, focused on relevant organic discovery—not website development, paid advertising, or social media management.'
+    challenge:'Drivers researching collision repair need useful service information, customer feedback, and a clear understanding of the shop before making contact.',
+    focus:'Organic collision-repair discovery and customer trust',
+    story:'The existing website presents the repair business and its capabilities. Our engagement combines SEO and Reputation Management, connecting relevant organic discovery with review monitoring, response guidance, and honest customer feedback. Website development, paid advertising, and social media management are not included in this scope.'
   },
   {
     slug:'mb-law',name:'Law Office of Mark Bratkovsky, PC',industry:'Legal & Professional Services',website:'https://www.mblawny.com/',logoExtension:'png',scope:['web','seo','gbp'],
@@ -144,7 +145,7 @@ const PORTFOLIO_SAMPLE_SCENARIOS={
   'new-generation-learning-center':{web:[[2.6,3.1],[34,41],[53,59]],seo:[[1280,1715],[17600,22528],[28,37]]},
   'glass-company-nyc':{web:[[2.2,3.7],[24,43],[46,64]],smm:[[4200,8232],[2.3,4.1],[175,346]]},
   'harlem-east-life-plan':{web:[[3.1,3.8],[42,53],[57,64]],seo:[[1740,2461],[22400,30240],[36,49]],ppc:[[46,79],[72,54],[3.1,4.8]]},
-  'jb-body-works':{seo:[[890,1148],[13700,16851],[24,31]]},
+  'jb-body-works':{seo:[[890,1148],[13700,16851],[24,31]],reputation:[[24,36],[81,95],[19,34]]},
   'mb-law':{web:[[1.7,2.6],[23,36],[45,58]],seo:[[1160,1949],[16800,26544],[26,44]],gbp:[[1940,3007],[46,73],[158,241]]},
   'liquid-soldier':{web:[[2.8,3.9],[29,43],[49,62]]},
   'lm-attorney':{web:[[2.5,2.8],[32,37],[55,60]]},
