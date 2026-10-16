@@ -7,6 +7,8 @@
 .portfolio-review-case-note{display:flex;justify-content:space-between;gap:18px;padding:18px max(20px,calc((100vw - 1152px)/2));background:#f0f8fb;color:#17252a;font-size:13px}
 .portfolio-review-case-note a{color:#007fa5}
 .portfolio-addition-media .portfolio-addition-logo{background:transparent;padding:0;object-fit:contain;border-radius:0;width:58%;max-width:280px;max-height:160px;filter:drop-shadow(0 3px 5px #0009)}
+/* 25% larger than the shared card mark; vector paths stay sharp at every scale. */
+.portfolio-addition-media[data-project="mb-law"] .portfolio-addition-logo{width:72.5%;max-width:350px;max-height:200px}
 body[data-portfolio-addition] .scm-ms-hero h1 .case-hero-client-logo{background:transparent;padding:0;border-radius:0;max-height:180px;object-fit:contain;filter:drop-shadow(0 3px 5px #0009)}
 /* Restore only Argana's original red-and-gold mark, cropped above the extra artwork. */
 .portfolio-addition-media[data-project="argana-day-spa"] .portfolio-addition-logo{width:52%;height:160px;object-fit:cover;object-position:top;padding:0;border-radius:3px;filter:none}

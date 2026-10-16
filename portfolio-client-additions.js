@@ -84,7 +84,7 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
   },
   {
     slug:'mb-law',name:'Law Office of Mark Bratkovsky, PC',industry:'Legal & Professional Services',website:'https://www.mblawny.com/',logoExtension:'png',scope:['web','seo','gbp'],
-    logo:'assets/client-projects/mb-law-logo-white-text.svg',
+    logo:'assets/client-projects/mb-law-logo-vector.svg',
     coverImage:'assets/client-projects/mb-law-legal-office.jpg',coverAlt:'Illustrative professional law-office consultation room with balance scales and document folders',coverWidth:1672,coverHeight:941,
     summary:'A Brooklyn law office presenting its attorneys, practice areas, and consultation contact information.',
     headline:'Build a clearer path from legal research to contact.',
