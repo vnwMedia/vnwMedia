@@ -352,18 +352,52 @@ function processBlueprintSection(options){
   </section>`;
 }
 
-function workPageOne(){
-  const featuredOrder=["la-rosa-chicken-grill","nycadsco","vision-centers","sfadsco","brooklyn-motors","kypcl"];
-  const featuredProjects=DATA.cases.map((project,index)=>({project,index})).sort((a,b)=>featuredOrder.indexOf(a.project[1])-featuredOrder.indexOf(b.project[1]));
+// One stable order keeps the public portfolio and its review page synchronized.
+const WORK_PORTFOLIO_ORDER = [
+  "nycadsco",
+  "vision-centers",
+  "sfadsco",
+  "harlem-east-life-plan",
+  "aesthetic-island-nyc",
+  "prestige-beauty-project",
+  "la-rosa-chicken-grill",
+  "brooklyn-motors",
+  "kypcl",
+  "skyrex-inc",
+  "cti-logistics",
+  "fordoz-pharma",
+  "platinum-valet-parking",
+  "raidex-construction",
+  "jb-body-works",
+  "catanzaros-power-washing",
+  "argana-day-spa",
+  "coin-jewelry-gallery-boca-raton",
+  "classical-caterers",
+  "nj-steps-to-success",
+  "genius-kids",
+  "h2bros-plumbing",
+  "mb-law",
+  "art-of-construction",
+  "new-generation-learning-center",
+  "calvin-schwartz",
+];
+
+function renderWorkPortfolioCards(){
   const scopePages={"Web Design":"web-design","SEO":"seo","PPC":"google-ppc","GBP":"google-business-profile","GEO":"geo","SMM":"social-media","Reputation Management":"reputation-management","SEO · 11 locations":"seo","Google Business Profile Management":"google-business-profile","Google Business Profile Search Ads":"google-ppc","Google Business Profile":"google-business-profile","Google Business Search Ads":"google-ppc","Lead Generation":"lead-generation"};
   const projectScopes=DATA.cases.map(project=>WORK_CASE_SERVICE_LABELS[project[1]]||[]);
-  const processSteps=[
-    ["Discover","Review the business, customer journey, current site, competition, proof, and growth priorities.","assets/work-process-discover.jpg"],
-    ["Shape","Define the message, page structure, design direction, content needs, and conversion paths.","assets/work-process-shape.jpg"],
-    ["Build","Bring design, copy, development, SEO foundations, tracking, and launch details together.","assets/work-process-build.jpg"],
-    ["Improve","Use real customer questions and performance signals to guide the next useful refinement.","assets/work-process-improve.jpg"]
-  ];
-  const additionalProjects=[...(typeof PORTFOLIO_CLIENT_ADDITIONS==="undefined"?[]:PORTFOLIO_CLIENT_ADDITIONS),...(typeof ADDITIONAL_CLIENT_PROJECTS==="undefined"?[]:ADDITIONAL_CLIENT_PROJECTS)];
+  const cards=new Map(DATA.cases.map((x,i)=>[x[1],`<article class="work-card work-agency-card reveal">${["vision-centers","nycadsco","sfadsco"].includes(x[1])?`<figure class="work-client-media vision-work-media"><img src="${img(x[4])}" alt="${esc(x[0])} client imagery">${x[1]==="vision-centers"?`<span class="vision-work-wordmark">${esc(x[0])}</span>`:`<img class="work-client-logo ads-client-logo" src="${img(`assets/${x[1]}-logo.webp`)}" alt="${esc(x[0])} logo">`}</figure>`:["la-rosa-chicken-grill","brooklyn-motors","kypcl"].includes(x[1])?`<figure class="work-client-media"><img src="${img(x[4])}" alt="${esc(x[0])}"><img class="work-client-logo" src="${img(x[1]==="brooklyn-motors"?"assets/brooklyn-motors-logo-supplied.png":x[1]==="kypcl"?"assets/kypcl-logo-supplied.png":"assets/la-rosa-logo-white-text.svg")}" alt="${esc(x[0])} logo"></figure>`:`<img src="${img(x[4])}" alt="${esc(x[0])}">`}<div><span>${esc(x[2])}</span><h3>${esc(x[0])}</h3><p>${esc(x[3])}</p><ul aria-label="Services provided for ${esc(x[0])}">${projectScopes[i].map(scope=>`<li><a class="work-service-pill" href="${path(`services/${scopePages[scope]}.html`)}">${scope}</a></li>`).join("")}</ul><a class="work-case-link" href="${path(`case-studies/${x[1]}.html`)}" aria-label="Read ${esc(x[0])} case study"><b>Read case study ↗</b></a></div></article>`]));
+  for(const project of typeof ADDITIONAL_CLIENT_PROJECTS==="undefined"?[]:ADDITIONAL_CLIENT_PROJECTS){
+    cards.set(project.slug,renderAdditionalProjectCard(project));
+  }
+  for(const project of typeof PORTFOLIO_REVIEW_CLIENTS==="undefined"?[]:PORTFOLIO_REVIEW_CLIENTS){
+    cards.set(project.slug,renderPortfolioAdditionCard(project,{published:true}));
+  }
+  // Append future clients even before an explicit portfolio position is assigned.
+  const orderedSlugs=[...new Set([...WORK_PORTFOLIO_ORDER,...cards.keys()])];
+  return orderedSlugs.map(slug=>cards.get(slug)||"").join("");
+}
+
+function workPageOne(){
   return `<section class="work-chapters section" id="work-process" data-nav-theme="light" aria-labelledby="work-process-title"><div class="shell wp-mock chapters"><header><p class="section-tag">How Projects Move</p><h2 id="work-process-title">From first question to the next improvement.</h2><a class="wp-cta" href="${path("contact.html")}">Plan your project <span>↗</span></a></header>
    <div class="chapter-grid">
     <article><div class="wp-art brief"><div class="paper"><div class="paper-head">THE PROJECT BRIEF <span class="chapter-mark" aria-hidden="true">↗</span></div><div>Business & audience <span>✓</span></div><div>Customer journey <span>✓</span></div><div>Growth priorities <span>✓</span></div></div></div><p class="wp-kicker">01 / UNDERSTAND</p><h3>Discover</h3><p>Review the business, customer journey, current site, competition, proof, and growth priorities.</p></article>
@@ -372,7 +406,7 @@ function workPageOne(){
     <article><div class="wp-art improve"><div class="paper review"><div class="paper-head">THE NEXT USEFUL MOVE <span class="chapter-mark" aria-hidden="true">↗</span></div><div><span class="chapter-mark" aria-hidden="true">↗</span> Listen to customers</div><div><span class="chapter-mark" aria-hidden="true">↗</span> Review performance</div><div><span class="chapter-mark" aria-hidden="true">↗</span> Refine the experience</div></div></div><p class="wp-kicker">04 / REFINE</p><h3>Improve</h3><p>Use real customer questions and performance signals to guide the next useful refinement.</p></article>
    </div>
   </div></section>
-  <section class="work work-agency-featured section" id="page-content"><div class="shell"><div class="work-agency-head reveal"><div><p class="section-tag">Selected Work</p><h2>Different industries. The same focus on clarity, trust, and action.</h2></div><p>Each project begins with a different business problem. The work below shows how strategy, design, content, search context, and lead paths come together around the customer’s next decision.</p></div><div class="work-grid">${featuredProjects.map(({project:x,index:i})=>`<article class="work-card work-agency-card reveal">${["vision-centers","nycadsco","sfadsco"].includes(x[1])?`<figure class="work-client-media vision-work-media"><img src="${img(x[4])}" alt="${esc(x[0])} client imagery">${x[1]==="vision-centers"?`<span class="vision-work-wordmark">${esc(x[0])}</span>`:`<img class="work-client-logo ads-client-logo" src="${img(`assets/${x[1]}-logo.webp`)}" alt="${esc(x[0])} logo">`}</figure>`:["la-rosa-chicken-grill","brooklyn-motors","kypcl"].includes(x[1])?`<figure class="work-client-media"><img src="${img(x[4])}" alt="${esc(x[0])}"><img class="work-client-logo" src="${img(x[1]==="brooklyn-motors"?"assets/brooklyn-motors-logo-supplied.png":x[1]==="kypcl"?"assets/kypcl-logo-supplied.png":"assets/la-rosa-logo-white-text.svg")}" alt="${esc(x[0])} logo"></figure>`:`<img src="${img(x[4])}" alt="${esc(x[0])}">`}<div><span>${esc(x[2])}</span><h3>${esc(x[0])}</h3><p>${esc(x[3])}</p><ul aria-label="Services provided for ${esc(x[0])}">${projectScopes[i].map(scope=>`<li><a class="work-service-pill" href="${path(`services/${scopePages[scope]}.html`)}">${scope}</a></li>`).join("")}</ul><a class="work-case-link" href="${path(`case-studies/${x[1]}.html`)}" aria-label="Read ${esc(x[0])} case study"><b>Read case study ↗</b></a></div></article>`).join("")}${additionalProjects.map(renderAdditionalProjectCard).join("")}</div></div></section>
+  <section class="work work-agency-featured section" id="page-content"><div class="shell"><div class="work-agency-head reveal"><div><p class="section-tag">Selected Work</p><h2>Different industries. The same focus on clarity, trust, and action.</h2></div><p>Each project begins with a different business problem. The work below shows how strategy, design, content, search context, and lead paths come together around the customer’s next decision.</p></div><div class="work-grid">${renderWorkPortfolioCards()}</div></div></section>
   ${googleTestimonials()}
   ${workFAQ()}`;
 }

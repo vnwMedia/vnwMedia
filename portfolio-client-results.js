@@ -4,10 +4,12 @@
   const target=document.querySelector('.scm-ms-signals');
   if(!p||!target)return;
   document.body.setAttribute('data-portfolio-addition','');
-  const review=document.createElement('aside');
-  review.className='portfolio-review-case-note';
-  review.innerHTML='<a href="../portfolio-review.html#page-content">← Back to client review</a><span>Review only · Awaiting approval</span>';
-  document.querySelector('.scm-ms-hero').after(review);
+  if(document.body.dataset.portfolioPublished!=="true"){
+    const review=document.createElement('aside');
+    review.className='portfolio-review-case-note';
+    review.innerHTML='<a href="../portfolio-review.html#page-content">← Back to client review</a><span>Review only · Awaiting approval</span>';
+    document.querySelector('.scm-ms-hero').after(review);
+  }
   const services=p.scope.map(k=>PORTFOLIO_ADDITION_SERVICES[k]);
   const scopeParagraphs=p.scopeParagraphs||[`${p.summary} Our work focuses on ${p.focus.toLowerCase()}.`];
   const ticker=document.createElement('section');

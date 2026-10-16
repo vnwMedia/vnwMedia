@@ -15,7 +15,9 @@ for(const slug of ['glass-company-nyc','liquid-soldier','lm-attorney','ofshtein-
   assert(!c.reviewClients.some(p=>p.slug===slug),'removed client is absent from the review list');
   assert(c.clients.some(p=>p.slug===slug),'preserve case-study data and files');
 }
-assert(fs.readFileSync(path.join(root,'portfolio-review-notice.js'),'utf8').includes('const total=PORTFOLIO_REVIEW_CLIENTS.length'),'review count stays synchronized with the client list');
+const reviewNotice=fs.readFileSync(path.join(root,'portfolio-review-notice.js'),'utf8');
+assert(reviewNotice.includes("document.querySelectorAll('.work-grid > .work-card').length"),'review count matches the entire rendered portfolio');
+assert(!reviewNotice.includes('grid.innerHTML'),'review must preserve the shared portfolio order');
 const catering=c.clients.find(p=>p.slug==='classical-caterers');
 const calvin=c.clients.find(p=>p.slug==='calvin-schwartz');
 assert.equal(calvin.logo,'assets/client-projects/calvin-schwartz-logo-vector.svg');
@@ -165,8 +167,50 @@ for(const p of c.clients){
 for(const [key,deltas] of Object.entries(serviceDeltas))assert.equal(new Set(deltas).size,deltas.length,'distinct sample improvements for '+key);
 const allDeltas=Object.values(serviceDeltas).flat();
 assert(Math.min(...allDeltas)<20&&Math.max(...allDeltas)>100,'include both patient and stronger sample improvements');
-const work=fs.readFileSync(path.join(root,'work.html'),'utf8');
-assert(!work.includes('portfolio-client-additions'),'live Work page must remain unchanged');
+for(const file of ['work.html','portfolio-review.html']){
+ const page=fs.readFileSync(path.join(root,file),'utf8');
+ assert(page.includes('portfolio-client-additions.js'));
+ assert(page.indexOf('portfolio-client-additions.js')<page.indexOf('pages.js'),'load new clients before the shared renderer');
+ assert(page.indexOf('site-buttons.css')>page.indexOf('portfolio-client-additions.css'));
+ assert(page.indexOf('site-buttons.js')>page.indexOf('pages.js'));
+}
+const w={document:{body:{dataset:{depth:'0'}}}};
+vm.createContext(w);
+for(const file of ['service-catalog.js','client-projects.js','portfolio-client-additions.js','pages.js']){
+ let source=fs.readFileSync(path.join(root,file),'utf8');
+ if(file==='pages.js')source=source.replace(/bootPages\(\);\s*$/,'');
+ vm.runInContext(source,w,{filename:file});
+}
+vm.runInContext('this.workCards=renderWorkPortfolioCards;this.existing=[...DATA.cases.map(p=>p[1]),...ADDITIONAL_CLIENT_PROJECTS.map(p=>p.slug)];',w);
+const portfolio=w.workCards();
+const links=[...portfolio.matchAll(/class="work-case-link" href="([^"]+)"/g)].map(m=>m[1]);
+const slugs=links.map(link=>path.basename(link,'.html'));
+assert.equal(slugs.length,26);assert.equal(new Set(slugs).size,26);
+assert.deepEqual(slugs.slice(0,7),['nycadsco','vision-centers','sfadsco','harlem-east-life-plan','aesthetic-island-nyc','prestige-beauty-project','la-rosa-chicken-grill']);
+assert.deepEqual([...slugs].sort(),[...w.existing,...c.reviewClients.map(p=>p.slug)].sort(),'include every existing and visible review client exactly once');
+assert.equal(portfolio,w.workCards(),'mixed lower portfolio order stays stable on reload');
+for(const p of c.reviewClients.filter(p=>!['harlem-east-life-plan','aesthetic-island-nyc','prestige-beauty-project'].includes(p.slug)))assert(slugs.indexOf(p.slug)>=13,'remaining new clients belong in the bottom half');
+for(const href of links)assert(fs.existsSync(path.join(root,href)),'public case-study link exists: '+href);
+assert(!portfolio.includes('-review.html')&&!portfolio.includes('undefined'));
+for(const p of c.reviewClients){
+ const source=fs.readFileSync(path.join(root,'case-studies',p.slug+'.html'),'utf8');
+ assert(!source.includes('noindex')&&!source.includes('<title>Review'));
+ assert(source.includes('data-portfolio-published="true"'));
+ assert(source.includes('rel="canonical" href="https://vnwmedia.github.io/vnwMedia/case-studies/'+p.slug+'.html"'));
+ assert(source.includes('data-page="case-'+p.slug+'"'));
+ assert(source.indexOf('site-buttons.css')>source.indexOf('portfolio-client-additions.css'));
+ assert(source.indexOf('site-buttons.js')>source.indexOf('portfolio-client-results.js'));
+ const inserted=[],result={classList:{add(){}},dataset:{},innerHTML:''};
+ c.document.body.dataset.page='case-'+p.slug;
+ c.document.body.dataset.portfolioPublished='true';
+ c.document.querySelector=selector=>selector==='.scm-ms-signals'?result:{after:element=>inserted.push(element)};
+ vm.runInContext(fs.readFileSync(path.join(root,'portfolio-client-results.js'),'utf8'),c);
+ assert(!inserted.some(element=>element.className==='portfolio-review-case-note'),'published pages omit the awaiting-approval notice');
+ assert(result.innerHTML.includes('Sample 90-day results'),'retain clear disclosure of illustrative performance');
+ if(p.scopeParagraphs)for(const paragraph of p.scopeParagraphs)assert(result.innerHTML.includes(paragraph),'retain expanded service copy');
+}
+
 const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
 for(const p of c.clients)assert(!sitemap.includes(p.slug+'-review'));
-console.log('All 14 review-only case studies passed. Live Work page is not connected to the additions.');
+for(const p of c.reviewClients)assert(sitemap.includes('/case-studies/'+p.slug+'.html'),'published case study is discoverable');
+console.log('PASS: 26 unique public portfolio clients, required positions, stable lower order, 10 published case studies, and preserved review pages.');
