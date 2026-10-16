@@ -52,7 +52,7 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     story:'The site provides a shared starting point for the learning centers while keeping location choices visible. Our website and SEO scope supports clear information and relevant discovery for prospective families.'
   },
   {
-    slug:'glass-company-nyc',name:'Glass Company NYC',industry:'Glass Installation & Home Services',website:'https://www.glasscompanynyc.com/',logoExtension:'png',scope:['web','smm'],
+    slug:'glass-company-nyc',name:'Glass Company NYC',industry:'Glass Installation & Home Services',website:'https://www.glasscompanynyc.com/',logoExtension:'png',scope:['web','smm'],reviewHidden:true,
     summary:'A New York glass company presenting glass doors, walls, railings, and installation services.',
     headline:'Let the finished work introduce the next project.',
     challenge:'Customers need to see the kinds of glass installations available, understand the service fit, and find a straightforward route to a project inquiry.',
@@ -89,7 +89,7 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     story:'The website organizes legal services and firm information, while SEO and Google Business Profile connect relevant discovery with the practice. This scope does not include PPC or promises about legal outcomes.'
   },
   {
-    slug:'liquid-soldier',name:'Liquid Soldier',industry:'Consumer Products & eCommerce',website:'https://liquidsoldier.com/',logoExtension:'webp',scope:['web'],
+    slug:'liquid-soldier',name:'Liquid Soldier',industry:'Consumer Products & eCommerce',website:'https://liquidsoldier.com/',logoExtension:'webp',scope:['web'],reviewHidden:true,
     summary:'A consumer product brand with a dedicated website for exploring its products and brand identity.',
     headline:'Give a distinctive product brand a clear digital home.',
     challenge:'Visitors need to recognize the brand, understand the product presentation, and navigate the website without unnecessary friction.',
@@ -123,6 +123,9 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     story:'The firm’s existing website introduces its legal services and contact pathways. Our engagement is PPC only, aligning paid-search campaigns with relevant service interest and a clear inquiry path. Website development, SEO, Google Business Profile management, and reputation management are not part of this scope. Marketing inquiries are not a claim about case outcomes or settlements.'
   }
 ].map(p=>({...p,logo:p.logo||(['calvin-schwartz','genius-kids'].includes(p.slug)?`assets/client-projects/${p.slug}-logo-transparent.svg`:`assets/client-projects/${p.slug}-logo.${p.logoExtension}`),desktop:`assets/client-projects/${p.slug}-desktop.png`}));
+
+// Keep removed clients' existing case-study files usable without listing them for review.
+const PORTFOLIO_REVIEW_CLIENTS=PORTFOLIO_CLIENT_ADDITIONS.filter(p=>!p.reviewHidden);
 
 const PORTFOLIO_ADDITION_SERVICES={
   web:{id:'website-ux',label:'Web Design',page:'web-design',focus:'Website experience',copy:'Build clear service and content pathways, responsive layouts, and accessible routes to the next useful action.'},

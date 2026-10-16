@@ -9,7 +9,13 @@ for(const file of ['service-catalog.js','client-projects.js','portfolio-client-a
 vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortfolioAdditionCase;this.card=renderPortfolioAdditionCard;this.scope=PORTFOLIO_ADDITION_SERVICES;this.metrics=portfolioSampleMetrics;this.formatMetric=portfolioMetricValue;',c);
 assert.equal(c.clients.length,14);
 assert.equal(new Set(c.clients.map(p=>p.slug)).size,14);
-assert(fs.readFileSync(path.join(root,'portfolio-review-notice.js'),'utf8').includes('const total=PORTFOLIO_CLIENT_ADDITIONS.length'),'review count stays synchronized with the client list');
+vm.runInContext('this.reviewClients=PORTFOLIO_REVIEW_CLIENTS;',c);
+assert.equal(c.reviewClients.length,12);
+for(const slug of ['glass-company-nyc','liquid-soldier']){
+  assert(!c.reviewClients.some(p=>p.slug===slug),'removed client is absent from the review list');
+  assert(c.clients.some(p=>p.slug===slug),'preserve case-study data and files');
+}
+assert(fs.readFileSync(path.join(root,'portfolio-review-notice.js'),'utf8').includes('const total=PORTFOLIO_REVIEW_CLIENTS.length'),'review count stays synchronized with the client list');
 const catering=c.clients.find(p=>p.slug==='classical-caterers');
 assert.equal(catering.coverImage,'assets/client-projects/classical-caterers-hall.jpg');
 assert(fs.statSync(path.join(root,catering.coverImage)).size>1000);
