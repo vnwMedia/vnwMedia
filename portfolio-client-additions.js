@@ -112,6 +112,15 @@ const PORTFOLIO_CLIENT_ADDITIONS = [
     challenge:'Prospective clients need to explore the business, understand the services presented, and locate reliable appointment and contact information.',
     focus:'Website clarity, local aesthetics discovery, and customer trust',
     story:'Website development, SEO, Google Business Profile, and Reputation Management work together around the practice’s online identity, local discovery, and customer feedback. Reputation work supports review monitoring, response guidance, and invitations for honest feedback. The case study describes marketing scope, not a claim about cosmetic treatment results.'
+  },
+  {
+    slug:'ofshtein-law-firm',name:'Ofshtein Law Firm',industry:'Legal & Professional Services',website:'https://olf.law/',logoExtension:'png',scope:['ppc'],
+    coverImage:'assets/client-projects/ofshtein-law-firm-cover.jpg',coverAlt:'Ofshtein Law Firm advertisement on a New York City bus, as featured on the firm’s website',coverWidth:2528,coverHeight:1696,
+    summary:'A personal-injury law firm presenting its practice areas, attorneys, office locations, and consultation pathways.',
+    headline:'Connect legal-service searches with a clear consultation path.',
+    challenge:'People searching for injury-related legal help need to find a relevant firm, understand its services, and reach a clear route to a consultation.',
+    focus:'Paid-search relevance and consultation inquiries',
+    story:'The firm’s existing website introduces its legal services and contact pathways. Our engagement is PPC only, aligning paid-search campaigns with relevant service interest and a clear inquiry path. Website development, SEO, Google Business Profile management, and reputation management are not part of this scope. Marketing inquiries are not a claim about case outcomes or settlements.'
   }
 ].map(p=>({...p,logo:p.logo||(['calvin-schwartz','genius-kids'].includes(p.slug)?`assets/client-projects/${p.slug}-logo-transparent.svg`:`assets/client-projects/${p.slug}-logo.${p.logoExtension}`),desktop:`assets/client-projects/${p.slug}-desktop.png`}));
 
@@ -152,7 +161,8 @@ const PORTFOLIO_SAMPLE_SCENARIOS={
   'mb-law':{web:[[1.7,2.6],[23,36],[45,58]],seo:[[1160,1949],[16800,26544],[26,44]],gbp:[[1940,3007],[46,73],[158,241]]},
   'liquid-soldier':{web:[[2.8,3.9],[29,43],[49,62]]},
   'lm-attorney':{web:[[2.5,2.8],[32,37],[55,60]]},
-  'prestige-beauty-project':{web:[[1.9,3.9],[21,47],[43,66]],seo:[[680,1448],[10600,21942],[16,35]],gbp:[[1520,2934],[39,78],[131,258]],reputation:[[12,22],[76,94],[9,21]]}
+  'prestige-beauty-project':{web:[[1.9,3.9],[21,47],[43,66]],seo:[[680,1448],[10600,21942],[16,35]],gbp:[[1520,2934],[39,78],[131,258]],reputation:[[12,22],[76,94],[9,21]]},
+  'ofshtein-law-firm':{ppc:[[37,63],[118,87],[3.2,4.9]]}
 };
 function portfolioSampleMetrics(p,key){
   return PORTFOLIO_SAMPLE_METRICS[key].map(([label,unit],i)=>{

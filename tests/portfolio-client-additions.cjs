@@ -7,8 +7,9 @@ for(const file of ['service-catalog.js','client-projects.js','portfolio-client-a
  vm.runInContext(text,c,{filename:file});
 }
 vm.runInContext('this.clients=PORTFOLIO_CLIENT_ADDITIONS;this.render=renderPortfolioAdditionCase;this.card=renderPortfolioAdditionCard;this.scope=PORTFOLIO_ADDITION_SERVICES;this.metrics=portfolioSampleMetrics;this.formatMetric=portfolioMetricValue;',c);
-assert.equal(c.clients.length,13);
-assert.equal(new Set(c.clients.map(p=>p.slug)).size,13);
+assert.equal(c.clients.length,14);
+assert.equal(new Set(c.clients.map(p=>p.slug)).size,14);
+assert(fs.readFileSync(path.join(root,'portfolio-review-notice.js'),'utf8').includes('const total=PORTFOLIO_CLIENT_ADDITIONS.length'),'review count stays synchronized with the client list');
 const catering=c.clients.find(p=>p.slug==='classical-caterers');
 assert.equal(catering.coverImage,'assets/client-projects/classical-caterers-hall.jpg');
 assert(fs.statSync(path.join(root,catering.coverImage)).size>1000);
@@ -45,7 +46,16 @@ assert(c.card(mb).includes(mb.coverImage)&&c.render(mb).includes(mb.coverImage))
 assert(c.card(mb).includes(mb.coverAlt));
 assert(mb.desktop.endsWith('mb-law-desktop.png'),'preserve actual website capture and device presentation');
 assert.deepEqual(Array.from(mb.scope),['web','seo','gbp'],'do not change the law-firm service scope');
-for(const p of c.clients.filter(p=>![catering.slug,harlem.slug,jb.slug,mb.slug].includes(p.slug)))assert(!p.coverImage,'other clients retain their images');
+const olf=c.clients.find(p=>p.slug==='ofshtein-law-firm');
+assert.deepEqual(Array.from(olf.scope),['ppc'],'OLF provides PPC only');
+assert.equal(olf.website,'https://olf.law/');
+assert.equal(olf.logo,'assets/client-projects/ofshtein-law-firm-logo.png');
+assert(c.card(olf).includes('Our scope: PPC.')&&!c.card(olf).includes('Web Design'));
+assert(olf.story.includes('PPC only'));
+assert(fs.statSync(path.join(root,olf.coverImage)).size>1000);
+assert(c.render(olf).includes(olf.coverImage));
+assert(!c.render(olf).includes('id="website-ux"')&&!c.render(olf).includes('id="seo"'),'do not claim website development or SEO');
+for(const p of c.clients.filter(p=>![catering.slug,harlem.slug,jb.slug,mb.slug,olf.slug].includes(p.slug)))assert(!p.coverImage,'other clients retain their images');
 const prestige=c.clients.find(p=>p.slug==='prestige-beauty-project');
 assert.deepEqual(Array.from(prestige.scope),['web','seo','gbp','reputation']);
 assert.equal(prestige.heroImage,'assets/client-projects/prestige-beauty-project-aesthetics-studio.jpg');
@@ -127,4 +137,4 @@ const work=fs.readFileSync(path.join(root,'work.html'),'utf8');
 assert(!work.includes('portfolio-client-additions'),'live Work page must remain unchanged');
 const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
 for(const p of c.clients)assert(!sitemap.includes(p.slug+'-review'));
-console.log('All 13 review-only case studies passed. Live Work page is not connected to the additions.');
+console.log('All 14 review-only case studies passed. Live Work page is not connected to the additions.');
