@@ -35,6 +35,8 @@ async function scenario({reduced=false,slow=false}={}){
  for(const font of ['inter-latin','fraunces-latin'])assert.equal(fs.readFileSync(path.join(root,'assets/fonts',font+'.woff2')).subarray(0,4).toString(),'wOF2');
  assert(html.includes('srcset="assets/home-team-circle-option-3-480.webp'));
  assert(html.includes('width="646" height="128"'),'logo reserves its dimensions');
+ const navigation=fs.readFileSync(path.join(root,'script.js'),'utf8');
+ assert(!navigation.includes('assets/vnwMedia-LogoBlk.png'),'shared navigation reuses the optimized logo rather than requesting the PNG again');
  assert(html.indexOf('site-buttons.css')>html.indexOf('home-hero-motion.css'),'shared button styles remain last');
  for(const width of [480,960])assert(fs.statSync(path.join(root,`assets/home-team-circle-option-3-${width}.webp`)).size<fs.statSync(path.join(root,'assets/home-team-circle-option-3.webp')).size);
  console.log('PASS: progressive image loading, slow-network fallback, hidden-tab/off-screen pause, reduced motion, local fonts, responsive images, shared buttons.');

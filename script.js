@@ -46,7 +46,7 @@ const servicesMegaNav = serviceMenuMarkup(navRoot);
 
 if (siteHeaderElement) {
   siteHeaderElement.innerHTML = `<nav class="nav shell" aria-label="Main navigation">
-    <a class="logo" href="${navRoot}index.html" aria-label="VNW Media home"><img src="${navRoot}assets/vnwMedia-LogoBlk.png" alt="VNW Media"></a>
+    <a class="logo" href="${navRoot}index.html" aria-label="VNW Media home"><img src="${navRoot}assets/vnw-media-logo-646.webp" alt="VNW Media" width="646" height="128" decoding="async"></a>
     <a class="nav-phone" href="tel:17328200609" aria-label="Call VNW Media at (732) 820-0609"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.09 9.89a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.83.56 2.79.69A2 2 0 0 1 22 16.92z"/></svg></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-mobile-menu" aria-haspopup="dialog"><span class="sr-only">Open mobile menu</span><i></i><i></i></button>
     <div class="nav-menu" id="nav-menu"><a href="${navRoot}our-story.html">Our Story</a>${servicesMegaNav}<a href="${navRoot}work.html?v=31">Our Work</a><a href="${navRoot}industries.html">Industries</a><a href="${navRoot}resources.html">Resources</a></div>
@@ -151,7 +151,7 @@ function initializeMobileNavigation() {
   dialog.setAttribute('autofocus', '');
   dialog.innerHTML = `<div class="sm-panel">
     <header class="sm-top">
-      <a class="sm-logo" href="${navRoot}index.html" aria-label="VNW Media home"><img src="${navRoot}assets/vnwMedia-LogoBlk.png" alt="VNW Media" width="646" height="128"></a>
+      <a class="sm-logo" href="${navRoot}index.html" aria-label="VNW Media home"><img src="${navRoot}assets/vnw-media-logo-646.webp" alt="VNW Media" width="646" height="128" decoding="async"></a>
       <div class="sm-actions"><a class="sm-icon" href="tel:17328200609" aria-label="Call VNW Media at (732) 820-0609"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.09 9.89a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.83.56 2.79.69A2 2 0 0 1 22 16.92z"/></svg></a><button class="sm-icon" type="button" data-sm-close aria-label="Close mobile menu">×</button></div>
     </header>
     <div class="sm-scroll">
