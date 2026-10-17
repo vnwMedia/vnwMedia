@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-16",
+  "url": "https://vnwmedia.github.io/vnwMedia/",
+  "testedCodeCommit": "4ff6d784f52927c9b3053eefc1191fe0376411bd",
+  "baselineReport": "https://pagespeed.web.dev/analysis/https-vnwmedia-github-io-vnwMedia/jqtzv8ont6?form_factor=mobile",
+  "finalReport": "https://pagespeed.web.dev/analysis/https-vnwmedia-github-io-vnwMedia/0okf8vfr3l?form_factor=mobile",
+  "measurement": "Lighthouse 13.5.0 lab tests; homepage only. No CrUX real-user data was available. Scores and timings vary between runs.",
+  "baseline": {
+    "mobile": {"performance": 90, "fcpSeconds": 2.7, "lcpSeconds": 3.1, "tbtMilliseconds": 0, "cls": 0.018, "speedIndexSeconds": 2.7},
+    "desktop": {"performance": 100, "fcpSeconds": 0.7, "lcpSeconds": 0.7, "tbtMilliseconds": 0, "cls": 0.005, "speedIndexSeconds": 0.7}
+  },
+  "final": {
+    "capturedAtLocal": "2026-10-16 20:10 EDT",
+    "mobile": {"performance": 99, "accessibility": 91, "bestPractices": 100, "seo": 100, "fcpSeconds": 1.4, "lcpSeconds": 2.1, "tbtMilliseconds": 0, "cls": 0, "speedIndexSeconds": 1.4},
+    "desktop": {"performance": 100, "accessibility": 91, "bestPractices": 100, "seo": 100, "fcpSeconds": 0.4, "lcpSeconds": 0.6, "tbtMilliseconds": 10, "cls": 0, "speedIndexSeconds": 0.7}
+  },
+  "intermediateReport": {
+    "url": "https://pagespeed.web.dev/analysis/https-vnwmedia-github-io-vnwMedia/rblk7ummu7?form_factor=mobile",
+    "codeCommit": "1a87130f23540e258ea54810f124c548b773d779",
+    "mobilePerformance": 95,
+    "desktopPerformance": 100
+  },
+  "changes": [
+    "Self-hosted the same Inter and Fraunces fonts with original licenses; removed the shared Google font import and redundant matching font links. Custom font configurations were preserved.",
+    "Preloaded homepage fonts; deferred the below-fold homepage process stylesheet with a no-JavaScript fallback.",
+    "Created responsive team-photo sizes while retaining the original image.",
+    "Reused a lossless WebP logo with reserved dimensions in the homepage and shared desktop/mobile navigation; lazy-loaded the footer logo.",
+    "Loaded slideshow images progressively rather than downloading all hidden slides at startup; held the current image until the next image decoded.",
+    "Paused slideshow animation off-screen, in background tabs, and for reduced-motion preferences.",
+    "Fixed homepage trust-label horizontal overflow at 320-pixel viewport width."
+  ],
+  "verification": {
+    "responsivePages": ["index.html", "our-story.html", "work.html", "services/seo.html", "case-studies/jb-body-works-review.html"],
+    "viewportWidths": [320, 390, 1280],
+    "notes": "320px tested on homepage; 390px and 1280px tested on representative pages. No horizontal overflow or broken loaded images were observed. Homepage mobile menu and empty required-field validation passed without submitting a lead. Critical desktop homepage element dimensions matched baseline exactly; mobile heading dimensions matched baseline.",
+    "automatedTests": ["tests/home-performance.cjs", "tests/portfolio-client-additions.cjs", "tests/portfolio-industry-options.cjs", "tests/service-story-audit.cjs", "tests/client-service-results.cjs", "tests/story-direction-previews.cjs"],
+    "staticReview": "Non-homepage HTML diffs were mechanically restricted to shared font links and cache-version references. Separate client projects and unrelated untracked assets were not staged.",
+    "deployment": "Both code commits were pushed to origin/main; matching GitHub Pages deployments completed successfully. The published homepage was refreshed and verified to reference the new shared script and WebP logo."
+  },
+  "remainingOpportunities": [
+    "GitHub Pages controls cache lifetimes and response headers; these cannot be changed by adding server configuration files to this static repository.",
+    "Shared CSS still includes unused rules. Splitting it by route is a larger follow-up requiring wider visual regression testing.",
+    "Lighthouse still flags approximately 100 KiB of mobile image-delivery savings and render-blocking styles. Current photo quality and approved design were preserved.",
+    "Accessibility remains 91: contrast, touch-target spacing, and heading-order findings require a dedicated follow-up. A performance score is not an accessibility certification.",
+    "No whole-site PageSpeed score or real-user Core Web Vitals pass is implied. Internal pages received functional/responsive spot checks and automated content/link tests, not individual Lighthouse runs."
+  ],
+  "evidence": ["pagespeed-mobile-2026-10-16.jpg", "pagespeed-desktop-2026-10-16.jpg"]
+}
