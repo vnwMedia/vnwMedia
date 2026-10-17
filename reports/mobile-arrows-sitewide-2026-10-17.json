@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-17",
+  "scope": "All 338 VNW Media HTML pages loading the shared website design, including design previews and the portfolio redirect page",
+  "excluded": "Separate client projects, bare redirect stubs, and reusable HTML fragments",
+  "change": "Added the shared mobile arrow fix to the older locations design-options preview; all other site pages already loaded it",
+  "coverage_guard": "Detects VNW pages independently of whether they already include site-buttons.js",
+  "mobile_preview": {
+    "viewport_width": 390,
+    "plain_vector_arrows": 16,
+    "remaining_arrow_text_links": 0,
+    "horizontal_overflow": false,
+    "unexpected_floating_controls": 0
+  },
+  "desktop_preview": {
+    "viewport_width": 1280,
+    "links_compared": 17,
+    "text_destinations_dimensions_colors_fonts_and_corner_styles_unchanged": true,
+    "mobile_vector_arrows": 0
+  },
+  "verification": "All 9 regression test files passed; mobile-only styles and desktop character restoration verified",
+  "screenshot": "mobile-arrows-sitewide.jpg"
+}

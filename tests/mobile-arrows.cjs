@@ -48,6 +48,14 @@ assert(css.includes('fill:none!important'),'arrows have no emoji tile or filled 
 assert(js.includes("mobileArrowMedia.addEventListener('change', () => normalize())"),'breakpoint changes restore desktop');
 assert(js.includes('if (scanArrows) normalizeMobileArrows()'),'animation-only style updates do not scan the whole text tree');
 let pages=0;
-function walk(dir){for(const item of fs.readdirSync(dir,{withFileTypes:true})){if(['.git','assets','Liquid Soldier','ai-intake-system-wordpress-upload'].includes(item.name))continue;const file=path.join(dir,item.name);if(item.isDirectory())walk(file);else if(item.name.endsWith('.html')){const html=fs.readFileSync(file,'utf8');if(!/src=["'](?:\.\.\/)*site-buttons\.js/.test(html))continue;pages++;for(const extension of ['css','js']){const version=extension==='css'?'20261017-mobile-arrows':'20261017-menu-contact-sheet';assert(html.includes(`site-buttons.${extension}?v=${version}`),file+' has the new shared '+extension);}}}}
-walk(root);assert(pages>=337);
+function needsMobileArrows(html){
+ // Discover full VNW pages independently of whether they already load the fix.
+ // Bare redirect stubs and reusable fragments are not standalone site pages.
+ return /<html\b/i.test(html) && (!/<meta\b[^>]*http-equiv=["']refresh["']/i.test(html) || /site-buttons\.js/.test(html)) &&
+  /(?:src|href)=["'](?:\.\.\/)*(?:styles\.css|script\.js|pages\.js|location-pages\.js|site-buttons\.js)(?:[?"'])/.test(html);
+}
+assert(needsMobileArrows('<html><link href="../styles.css?v=test"><a>SEO ↗</a></html>'),'coverage detects pages missing the shared fix');
+assert(!needsMobileArrows('<html><meta http-equiv="refresh" content="0;url=../work.html"><link href="../styles.css"></html>'),'redirects are excluded');
+function walk(dir){for(const item of fs.readdirSync(dir,{withFileTypes:true})){if(['.git','assets','Liquid Soldier','ai-intake-system-wordpress-upload'].includes(item.name))continue;const file=path.join(dir,item.name);if(item.isDirectory())walk(file);else if(item.name.endsWith('.html')){const html=fs.readFileSync(file,'utf8');if(!needsMobileArrows(html))continue;pages++;for(const extension of ['css','js']){const version=extension==='css'?'20261017-mobile-arrows':'20261017-menu-contact-sheet';const matches=html.match(new RegExp(`(?:src|href)=["'](?:\\.\\./)*site-buttons\\.${extension}\\?v=${version}["']`,'g'))||[];assert.equal(matches.length,1,file+' loads the current shared '+extension+' exactly once');}}}}
+walk(root);assert(pages>=338);
 console.log(`PASS: ${pages} pages; plain/emoji/text variants, inline and nested arrows, dynamic content, protected text, inherited colors, unchanged links, idempotence, desktop restoration and mobile-only styles.`);
