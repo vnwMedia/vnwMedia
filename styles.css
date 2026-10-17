@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap");
+/* Same approved fonts, served locally to avoid a third-party render-blocking chain. */
+@font-face{font-family:Inter;font-style:normal;font-weight:400 600;font-display:swap;src:url("assets/fonts/inter-latin.woff2") format("woff2")}
+@font-face{font-family:Fraunces;font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/fraunces-latin.woff2") format("woff2")}
 :root{--black:#121212;--cream:#f9f8f6;--orange:#00aeef;--gray:#a7a7a7;--line:rgba(255,255,255,.22);--shell:min(1152px,calc(100% - 40px))}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--black);background:var(--cream);font-family:Inter,system-ui,sans-serif;line-height:1.55}body.nav-open{overflow:hidden}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,input,textarea,select{font:inherit}.shell{width:var(--shell);margin-inline:auto}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .site-header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(18,18,18,.2);border-bottom:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}.nav{height:80px;display:flex;align-items:center;gap:28px}.logo img{width:230px;height:61px;object-fit:contain;object-position:left}.nav-menu{display:flex;gap:30px;margin-left:auto;color:#f4f4f4;font-size:14px}.nav-menu a{display:flex;gap:7px;align-items:center}.nav-menu a:hover{color:var(--orange)}.nav-actions{display:flex;gap:12px;margin-left:28px}.pill{min-height:40px;display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:9px 17px;border:1px solid transparent;border-radius:9999px;font-size:14px;font-weight:500;transition:.2s}.pill-orange,.pill-blue{color:#fff;background:var(--orange)}.pill-orange:hover,.pill-blue:hover{background:#008ac0}.pill-outline{color:#fff;border-color:rgba(255,255,255,.5);background:transparent}.pill-outline:hover{border-color:var(--orange);color:var(--orange)}.pill-large{min-height:46px;padding:11px 24px}.nav-toggle{display:none}
@@ -2636,4 +2638,10 @@ body[data-page^="service-"] .service-hero-form{width:100%;max-width:332px;justif
   .csp-process-browser-foot span{font-size:8px}
   .csp-process-art{height:230px;min-height:230px;padding:17px}
   .csp-process-studio-card>.csp-process-step{gap:12px}
+}
+
+/* Keep the homepage trust labels inside very narrow mobile viewports. */
+@media(max-width:360px){
+  body[data-page="home"] .trust-factors{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body[data-page="home"] .trust-factors span{white-space:normal;overflow-wrap:anywhere}
 }

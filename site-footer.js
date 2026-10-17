@@ -7,6 +7,13 @@
   const holder = document.createElement('div');
   holder.innerHTML = template;
   const footer = holder.firstElementChild;
+  footer.querySelectorAll('img').forEach(image => {
+   image.loading = 'lazy';
+   image.decoding = 'async';
+   image.width = 646;
+   image.height = 128;
+   image.src = 'assets/vnw-media-logo-646.webp';
+  });
   footer.id = 'vnw-site-footer';
   footer.setAttribute('aria-label', 'VNW Media footer');
   const locationsLink = footer.querySelector('.footer-company a[href$="locations/"]');

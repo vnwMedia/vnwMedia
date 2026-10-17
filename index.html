@@ -9,11 +9,11 @@
     <meta property="og:description" content="VNW Media builds websites, SEO, advertising, and digital growth systems for businesses across New Jersey and beyond.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vnwmedia.github.io/vnwMedia/">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260930-footer-company-contact-v4" />
-    <link rel="stylesheet" href="homepage-process-approved.css?v=4" />
+    <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css?v=20261016-performance" />
+    <link rel="stylesheet" href="homepage-process-approved.css?v=4" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="homepage-process-approved.css?v=4" /></noscript>
     <script defer src="service-catalog.js?v=20260930-seo-subservices"></script><script defer src="script.js?v=20261005-review-speed-v1"></script>
     <script type="application/ld+json">
       {
@@ -38,12 +38,12 @@
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
-<link rel="stylesheet" href="site-footer.css?v=20261014-brand-gap"><script defer src="site-footer.js?v=20261002-mobile-compact-v3"></script><link rel="stylesheet" href="section-labels.css?v=20260928-hero-blue"><link rel="stylesheet" href="hero-layout.css?v=20261013-mobile-image-crop"><link rel="stylesheet" href="home-hero-motion.css?v=20261013-mobile-proof-gap40"><link rel="stylesheet" href="site-buttons.css?v=20261004-mobile-email-send-label-v1"><script defer src="site-buttons.js?v=20261004-mobile-business-field-v1"></script><link rel="canonical" href="https://vnwmedia.github.io/vnwMedia/"></head>
+<link rel="stylesheet" href="site-footer.css?v=20261014-brand-gap"><script defer src="site-footer.js?v=20261016-performance"></script><link rel="stylesheet" href="section-labels.css?v=20260928-hero-blue"><link rel="stylesheet" href="hero-layout.css?v=20261013-mobile-image-crop"><link rel="stylesheet" href="home-hero-motion.css?v=20261013-mobile-proof-gap40"><link rel="stylesheet" href="site-buttons.css?v=20261004-mobile-email-send-label-v1"><script defer src="site-buttons.js?v=20261004-mobile-business-field-v1"></script><link rel="canonical" href="https://vnwmedia.github.io/vnwMedia/"></head>
   <body data-page="home" data-motion-mode="slideshow">
     <header class="site-header">
       <nav class="nav shell" aria-label="Main navigation">
         <a class="logo" href="index.html" aria-label="VNW Media home">
-          <img src="assets/vnwMedia-LogoBlk.png" alt="VNW Media" />
+          <img src="assets/vnw-media-logo-646.webp" width="646" height="128" decoding="async" alt="VNW Media" />
         </a>
         <a class="nav-phone" href="tel:17328200609" aria-label="Call VNW Media at (732) 820-0609"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.09 9.89a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.83.56 2.79.69A2 2 0 0 1 22 16.92z"/></svg></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
@@ -139,7 +139,7 @@
         <div class="shell agency-grid">
           <div class="team-circle-frame team-frame-signals reveal">
             <div class="agency-label agency-label-photo">
-              <img loading="lazy" decoding="async" src="assets/home-team-circle-option-3.webp" alt="VNW Media team reviewing a website together" />
+              <img loading="lazy" decoding="async" src="assets/home-team-circle-option-3-960.webp" srcset="assets/home-team-circle-option-3-480.webp 480w, assets/home-team-circle-option-3-960.webp 960w, assets/home-team-circle-option-3.webp 1254w" sizes="(max-width:560px) 280px, (max-width:800px) 360px, 490px" width="1254" height="1254" alt="VNW Media team reviewing a website together" />
             </div>
             <span class="signal-pill signal-pill-one">Strategy</span>
             <span class="signal-pill signal-pill-two">Creative</span>
@@ -319,6 +319,6 @@
 
   
 <script type="application/ld+json" data-faq-schema>{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What types of businesses do you work with?","acceptedAnswer":{"@type":"Answer","text":"We work with local service businesses, medical and professional practices, automotive companies, restaurants, education providers, real estate businesses, retailers, and other organizations that need a stronger digital presence and more qualified opportunities."}},{"@type":"Question","name":"Do you only design websites?","acceptedAnswer":{"@type":"Answer","text":"No. Website design is one part of a connected service mix that also includes SEO, Google PPC, social media marketing, content, branding, reputation management, and conversion strategy."}},{"@type":"Question","name":"How much does a website or marketing project cost?","acceptedAnswer":{"@type":"Answer","text":"Scope depends on your goals, content, functionality, competition, and how much ongoing support is needed. After a discovery conversation, we provide a clear recommendation and project scope instead of forcing every business into the same package."}},{"@type":"Question","name":"How long does a website redesign take?","acceptedAnswer":{"@type":"Answer","text":"Most timelines are shaped by page count, features, content readiness, and feedback speed. We establish milestones at the start so you know what is happening, what we need from you, and what comes next."}},{"@type":"Question","name":"Can you improve our existing website instead of replacing it?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can assess whether focused improvements to messaging, structure, calls to action, speed, SEO, or landing pages can produce the needed result—or whether a redesign is the smarter investment."}},{"@type":"Question","name":"Do you provide support after launch?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can support ongoing website updates, content, SEO, paid campaigns, reporting, and conversion improvements based on the level of help your business needs."}},{"@type":"Question","name":"How do we get started?","acceptedAnswer":{"@type":"Answer","text":"Submit the strategy form or call us. We’ll discuss your goals and current challenges, review the relevant digital assets, and recommend a practical next step."}}]}</script>
-<script src="home-hero-motion.js?v=20261012-smooth-start"></script>
+<script src="home-hero-motion.js?v=20261016-progressive"></script>
 </body>
 </html>
