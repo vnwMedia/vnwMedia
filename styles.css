@@ -678,6 +678,13 @@ body form :is(button,[type="submit"]):hover{color:#fff;background:#008ac0;border
 @media(max-width:1000px){.industry-landing .indl-showcase .shell.indl-showcase-grid{min-height:0}.industry-landing .indl-showcase-media{min-height:430px}.industry-landing .indl-showcase-copy{min-height:0;padding:55px 0 78px}}
 @media(max-width:640px){.industry-landing .indl-showcase-media{min-height:380px}.industry-landing .indl-showcase-copy{padding:42px 0 70px}}
 
+/* Mobile feature photos reach both screen edges; copy keeps the shared gutters. */
+@media(max-width:800px){
+  .industry-landing .indl-showcase .shell.indl-showcase-grid{width:100%;max-width:none;margin-inline:0;padding-inline:0}
+  .industry-landing .indl-showcase-media{width:100%;margin-inline:0;padding-inline:0}
+  .industry-landing .indl-showcase-copy{width:var(--shell);margin-inline:auto}
+}
+
 /* Keep all three care specialties visible in the healthcare collage on narrow screens. */
 @media(max-width:1000px){.industry-landing .healthcare-collage-section .indl-showcase-media{min-height:0;aspect-ratio:1}.industry-landing .healthcare-collage-section .indl-showcase-media img{display:block;height:100%}}
 

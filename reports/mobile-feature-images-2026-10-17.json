@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-17",
+  "change": "Mobile feature photos in the shared industry/location landing-page showcase now fill the screen width, while the copy retains its existing shell width and margins. Service detail feature photos already use full width and remain unchanged.",
+  "mobile_breakpoint_max_px": 800,
+  "stylesheet_cache_refreshed_pages": 319,
+  "coverage": {"location_pages": 62, "industry_pages": 73, "service_pages": 58},
+  "browser_checks": [
+    {"page": "locations/new-york/digital-marketing-new-york/", "viewport_width": 390, "image_left": 0, "image_right": 390, "image_height_unchanged": true, "copy_position_dimensions_unchanged": true, "horizontal_overflow": false},
+    {"page": "locations/new-york/digital-marketing-new-york/", "viewport_width": 800, "image_left": 0, "image_right": 800, "copy_left": 60, "copy_width": 680, "horizontal_overflow": false},
+    {"page": "services/seo.html", "viewport_width": 390, "image_left": 0, "image_right": 390, "horizontal_overflow": false},
+    {"page": "industries/healthcare/seo/", "viewport_width": 390, "image_left": 0, "image_right": 390, "horizontal_overflow": false}
+  ],
+  "desktop": {"viewport_width": 1280, "before_after_showcase_grid_image_and_copy_geometry_identical": true},
+  "screenshot": "mobile-feature-image-edge-to-edge.jpg"
+}
