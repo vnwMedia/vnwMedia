@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-17",
+  "change": "The mobile navigation project CTA now closes the native menu and opens the existing email sheet synchronously in the same click, rather than waiting for the 480ms menu exit animation.",
+  "added_handoff_delay_ms": 0,
+  "unchanged_sheet_slide_up_duration_ms": 280,
+  "cache_refreshed_menu_pages": 308,
+  "browser_checks": {
+    "viewport": "390 x 844",
+    "pages": ["index.html", "services/seo.html"],
+    "menu_closed_before_sheet_opens": true,
+    "same_page_preserved": true,
+    "menu_scroll_lock_removed": true,
+    "sheet_receives_focus": true,
+    "existing_floating_email_action_works": true,
+    "no_forms_submitted": true
+  },
+  "regressions": "Mobile menu/contact, mobile arrows, lead attribution, and home performance tests passed. Ordinary menu closing, reduced motion, mobile-only behavior, and the Contact link fallback remain unchanged.",
+  "screenshot": "instant-menu-contact.jpg"
+}

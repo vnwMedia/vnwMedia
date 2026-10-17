@@ -12,12 +12,12 @@ function menu({mobile=true,reduced=false,sheet=true}={}){
  const click=(kind='project')=>{const target={closest:s=>s==='[data-open-mobile-email]'&&kind==='project'?{}:s==='a'&&['project','link'].includes(kind)?{}:s==='[data-sm-close]'&&kind==='close'?{}:null};const event={target,defaultPrevented:false,preventDefault(){this.defaultPrevented=true;}};listeners.click(event);return event;};
  return {c,dialog,log,timers,click,finish:()=>{const work=[...timers.values()];timers.clear();work.forEach(fn=>fn());}};
 }
-const m=menu();assert(m.click().defaultPrevented,'menu CTA must not navigate');assert(m.dialog.open,'closing animation runs before the sheet');assert(!m.log.includes('vnw:open-mobile-email'));m.finish();assert(!m.dialog.open);assert.deepEqual(m.log,['start-close','closed','unlocked','vnw:open-mobile-email'],'the menu and scroll lock are removed before the sheet opens');
+const m=menu();assert(m.click().defaultPrevented,'menu CTA must not navigate');assert(!m.dialog.open,'menu closes during the same click');assert.equal(m.timers.size,0,'project handoff adds no delayed timer');assert.deepEqual(m.log,['start-close','closed','unlocked','vnw:open-mobile-email'],'the menu and scroll lock are removed before the sheet opens immediately');
 const reduced=menu({reduced:true});assert(reduced.click().defaultPrevented);assert.equal(reduced.timers.size,0);assert.equal(reduced.log.at(-1),'vnw:open-mobile-email');
 for(const settings of [{mobile:false},{sheet:false}]){const b=menu(settings);assert(!b.click().defaultPrevented,'unavailable/mobile-only sheet retains the Contact link fallback');assert(!b.dialog.open);assert(!b.log.includes('vnw:open-mobile-email'));}
 const ordinary=menu();assert(!ordinary.click('link').defaultPrevented,'normal Contact and service links still navigate');assert(!ordinary.dialog.open);assert(!ordinary.log.includes('vnw:open-mobile-email'));
-const cancelled=menu();cancelled.click();cancelled.click('close');cancelled.finish();assert(!cancelled.log.includes('vnw:open-mobile-email'),'closing or cancelling the menu cancels its pending form request');
-const resized=menu();resized.click();resized.c.closeMenu(true);resized.finish();assert(!resized.log.includes('vnw:open-mobile-email'),'desktop resize cancels the pending sheet');
+const cancelled=menu();cancelled.click('close');assert(cancelled.dialog.open,'ordinary menu closing retains its existing animation');assert.equal(cancelled.timers.size,1);cancelled.finish();assert(!cancelled.dialog.open);assert(!cancelled.log.includes('vnw:open-mobile-email'),'ordinary closing does not open a form');
+const resized=menu();resized.click('close');resized.c.closeMenu(true);resized.finish();assert.equal(resized.timers.size,0);assert(!resized.log.includes('vnw:open-mobile-email'),'desktop resize cancels the ordinary closing timer without opening a sheet');
 
 const sheetStart=buttons.indexOf('    function closeSheet('),sheetEnd=buttons.indexOf("    sheet.addEventListener('click'",sheetStart),sheetSource=buttons.slice(sheetStart,sheetEnd);
 function sheet(){
@@ -31,4 +31,7 @@ let prevented=false;shared.events['email-click']({preventDefault(){prevented=tru
 shared.c.mobileArrowMedia.matches=false;shared.events['vnw:open-mobile-email']();assert(shared.c.sheet.hidden,'the mobile form does not open on desktop');
 assert(nav.includes('href="${navRoot}contact.html" data-open-mobile-email aria-haspopup="dialog" aria-controls="vnw-mobile-email-sheet"'));
 assert(fs.readFileSync(path.join(root,'site-buttons.css'),'utf8').includes('@keyframes vnw-mobile-email-in{from{transform:translateY(100%)}to{transform:translateY(0)}}'),'same bottom-up animation is reused');
-console.log('PASS: menu closes and unlocks before sheet, reduced motion, cancellation, resize, Contact fallback, normal links, shared opener, focus return, and existing floating Email interaction.');
+let menuPages=0;
+function verifyVersions(dir){for(const item of fs.readdirSync(dir,{withFileTypes:true})){if(['.git','assets','Liquid Soldier','ai-intake-system-wordpress-upload'].includes(item.name))continue;const file=path.join(dir,item.name);if(item.isDirectory())verifyVersions(file);else if(item.name.endsWith('.html')){const html=fs.readFileSync(file,'utf8');if(!/src=["'](?:\.\.\/)*script\.js/.test(html))continue;menuPages++;assert(/src=["'](?:\.\.\/)*script\.js\?v=20261017-instant-menu-contact["']/.test(html),file+' refreshes the instant menu handoff');}}}
+verifyVersions(root);assert(menuPages>=300);
+console.log(`PASS: ${menuPages} menu pages; zero-delay handoff, menu unlock before sheet, ordinary close animation, reduced motion, resize, Contact fallback, normal links, focus return, and existing floating Email interaction.`);

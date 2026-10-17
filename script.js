@@ -284,8 +284,9 @@ function initializeMobileNavigation() {
   dialog.addEventListener('click', event => {
     if (event.target.closest('[data-open-mobile-email]') && mobileViewport.matches && document.getElementById('vnw-mobile-email-sheet')) {
       event.preventDefault();
-      // Remove the native modal and its scroll lock before opening the shared sheet.
-      closeMenu(false, () => document.dispatchEvent(new CustomEvent('vnw:open-mobile-email')));
+      // Hand off in the same click: remove the native modal/scroll lock, then
+      // start the sheet's existing slide-up without waiting for the menu exit.
+      closeMenu(true, () => document.dispatchEvent(new CustomEvent('vnw:open-mobile-email')));
       return;
     }
     if (event.target === dialog || event.target.closest('[data-sm-close]')) closeMenu();
