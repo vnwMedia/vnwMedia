@@ -398,14 +398,29 @@ document.querySelectorAll(".reveal").forEach((element) => observer.observe(eleme
 
 function initializeMobileReviewPause(ticker, track) {
   const mobileReviews = matchMedia('(max-width: 800px)');
-  document.addEventListener('click', event => {
-    if (!mobileReviews.matches) return;
+  const heldPointers = new Set();
+  const resume = () => {
+    heldPointers.clear();
+    track.classList.remove('is-paused');
+  };
+  ticker.addEventListener('pointerdown', event => {
+    if (!mobileReviews.matches || event.button !== 0) return;
     const card = event.target.closest?.('.testimonial-ticker-card');
-    // Only a tap inside an actual review pauses it, never the surrounding
-    // heading, rating, whitespace or Google link. An outside tap resumes it.
-    track.classList.toggle('is-paused', !!card && ticker.contains(card));
-  });
-  mobileReviews.addEventListener('change', () => track.classList.remove('is-paused'));
+    if (!card || !ticker.contains(card)) return;
+    heldPointers.add(event.pointerId);
+    track.classList.add('is-paused');
+  }, {passive:true});
+  const release = event => {
+    heldPointers.delete(event.pointerId);
+    if (!heldPointers.size) track.classList.remove('is-paused');
+  };
+  // Lifting outside the card or cancelling a touch also resumes immediately.
+  // Do not capture the pointer or block normal page scrolling and card buttons.
+  document.addEventListener('pointerup', release, {capture:true, passive:true});
+  document.addEventListener('pointercancel', release, {capture:true, passive:true});
+  window.addEventListener('blur', resume);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) resume(); });
+  mobileReviews.addEventListener('change', resume);
 }
 
 document.querySelectorAll("[data-testimonial-ticker]").forEach(testimonialTicker => {
@@ -484,7 +499,7 @@ document.querySelectorAll("[data-testimonial-ticker]").forEach(testimonialTicker
   addEventListener("resize", updateReviewOverflow, { passive: true });
 
   // Keep one continuous timeline as the page scrolls in and out of view.
-  // Desktop hover pauses through CSS; mobile pauses only after a review tap.
+  // Desktop hover pauses through CSS; mobile pauses only while a card is held.
   // Resuming changes play state only, never restarts the animation timeline.
   // The stylesheet still honors the device's reduced-motion preference.
   initializeMobileReviewPause(testimonialTicker, testimonialTickerTrack);

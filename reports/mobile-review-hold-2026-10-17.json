@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-17",
+  "replaces": "Tap-to-pause / outside-tap-to-resume behavior",
+  "behavior": "Only at widths up to 800px: pressing a review card pauses the track. Releasing the pointer anywhere resumes immediately. Pointer cancellation also resumes; multiple held pointers are tracked independently.",
+  "scope": "All pages initializing the shared Google review ticker; 308 shared script references refreshed",
+  "safety": ["Clear pause on breakpoint change, app/tab hiding and window blur", "Do not prevent normal scrolling or capture the pointer", "Keep Read more and Google links working", "No animation reset or new delay"],
+  "verification": {
+    "automated": "Actual initializer exercised through pointerdown, pointerup, pointercancel, multi-touch, blur, visibility changes and desktop exclusion",
+    "browser": "390px homepage: tapping and releasing a review no longer leaves it paused, and subsequent transform observation confirms motion. At 1280px no mobile pause state remains.",
+    "desktop_css": "Unchanged",
+    "reduced_motion": "Unchanged"
+  },
+  "screenshot": "mobile-review-hold-release.jpg"
+}
