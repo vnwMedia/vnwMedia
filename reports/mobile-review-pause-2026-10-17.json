@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-17",
+  "behavior": "At widths up to 800px, tapping an actual Google review card pauses that review ticker. Tapping outside its cards resumes the existing leftward timeline. Headings, rating, whitespace and footer links do not pause it.",
+  "desktop": "Existing hover pause is preserved above 800px; mobile pause is cleared when switching breakpoint.",
+  "scope": "Shared Google review ticker initialization, including originals and cloned cards on all pages that include it.",
+  "cache_refreshed_pages": 319,
+  "browser_checks": {
+    "viewport": "390 x 844",
+    "pages": ["index.html", "locations/new-york/digital-marketing-new-york/"],
+    "initial_play_state": "running",
+    "card_tap_play_state": "paused",
+    "paused_transform_stable_across_observations": true,
+    "rating_tap_resumes": true,
+    "resumed_transform_continues_left": true,
+    "desktop_width": 1280,
+    "desktop_mobile_pause_class_cleared": true,
+    "desktop_hover_rule_preserved": true
+  },
+  "preserved": ["Read more actions", "Google review links", "Animation duration and progress", "Reduced-motion setting", "Other non-review tickers"],
+  "screenshot": "mobile-review-card-pause.jpg"
+}

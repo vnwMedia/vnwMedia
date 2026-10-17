@@ -396,6 +396,18 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
+function initializeMobileReviewPause(ticker, track) {
+  const mobileReviews = matchMedia('(max-width: 800px)');
+  document.addEventListener('click', event => {
+    if (!mobileReviews.matches) return;
+    const card = event.target.closest?.('.testimonial-ticker-card');
+    // Only a tap inside an actual review pauses it, never the surrounding
+    // heading, rating, whitespace or Google link. An outside tap resumes it.
+    track.classList.toggle('is-paused', !!card && ticker.contains(card));
+  });
+  mobileReviews.addEventListener('change', () => track.classList.remove('is-paused'));
+}
+
 document.querySelectorAll("[data-testimonial-ticker]").forEach(testimonialTicker => {
   const testimonialTickerTrack = testimonialTicker.querySelector(".testimonial-ticker-track");
   if (!testimonialTickerTrack) return;
@@ -472,9 +484,10 @@ document.querySelectorAll("[data-testimonial-ticker]").forEach(testimonialTicker
   addEventListener("resize", updateReviewOverflow, { passive: true });
 
   // Keep one continuous timeline as the page scrolls in and out of view.
-  // Desktop hover pauses through CSS; touch and focus keep the reviews moving.
-  // Leaving the ticker resumes the same timeline without restarting it.
+  // Desktop hover pauses through CSS; mobile pauses only after a review tap.
+  // Resuming changes play state only, never restarts the animation timeline.
   // The stylesheet still honors the device's reduced-motion preference.
+  initializeMobileReviewPause(testimonialTicker, testimonialTickerTrack);
 
   updateTestimonialTickerDistance();
   document.fonts.ready.then(updateTestimonialTickerDistance);
