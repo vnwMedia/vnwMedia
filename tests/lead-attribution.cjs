@@ -1,0 +1,64 @@
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'lead-attribution.js'),'utf8');
+const origin='https://vnwmedia.github.io/vnwMedia/';
+class Form {
+ constructor(kind='hero',fields={},extra={}){this.kind=kind;this.fields={name:'Alex Morgan',company:'Example Dental',phone:'(202) 555-0147',email:'alex@example.com',website:'https://example.com',interest:kind==='hero'?'Search Engine Optimization':'',message:'',...fields};this.id=kind==='mobile'?'vnw-mobile-email-form':'';this.valid=true;Object.assign(this,extra);}
+ matches(selectors){return selectors.split(',').some(s=>s==='.hero-form'?this.kind==='hero':s==='.plan-form'?this.kind==='plan':s==='#vnw-mobile-email-form'?this.kind==='mobile':s==='[data-vnw-lead-form]'?this.explicit:false);}
+ getAttribute(name){return name==='aria-label'?(this.label||'Plan your Search Engine Optimization strategy'):null;}
+ hasAttribute(name){return name==='data-preview-form'&&!!this.preview;}
+ querySelector(s){return s==='h2'?{textContent:'Plan your digital growth strategy'}:s==='.form-status'?this.status:null;}
+ closest(){return {id:this.kind==='hero'?'top':'contact'};}
+ reportValidity(){return this.valid;}
+}
+function browser({url=origin+'services/seo.html',title='SEO Strategy & Services | VNW Media',heading='Build search visibility around the services and locations that matter.',storage=new Map(),referrer='',width=1280,blocked=false,forms=[new Form()],time=Date.parse('2026-10-16T20:00:00Z')}={}){
+ const events={},timers=[],navigations=[],status={textContent:''};const parsed=new URL(url);
+ const location={href:url,pathname:parsed.pathname,assign:value=>navigations.push(value)};
+ const document={currentScript:{src:origin+'lead-attribution.js?v=test'},title,referrer,readyState:'complete',forms,
+  querySelector:s=>s.includes('h1')?{textContent:heading}:s==='.vnw-mobile-email-sheet__status'?status:null,
+  addEventListener:(event,fn)=>{events[event]=fn;}};
+ const sessionStorage={getItem:key=>{if(blocked)throw Error('blocked');return storage.get(key)||null;},setItem:(key,value)=>{if(blocked)throw Error('blocked');storage.set(key,value);}};
+ class FixedDate extends Date{constructor(...args){super(...(args.length?args:[time]));}static now(){return time;}}
+ const c={URL,document,location,sessionStorage,Date:FixedDate,innerWidth:width,innerHeight:844,matchMedia:()=>({matches:width<=800}),HTMLFormElement:Form,FormData:class{constructor(form){this.form=form;}get(name){return this.form.fields[name]||null;}},setTimeout:fn=>timers.push(fn),addEventListener:(event,fn)=>{events[event]=fn;}};
+ c.window=c;vm.createContext(c);vm.runInContext(source,c);
+ return {c,events,timers,navigations,storage,status,draft:form=>c.VNWLeadEmail.buildDraft(form||forms[0])};
+}
+const first=browser({url:origin+'?utm_source=google&utm_medium=cpc&utm_campaign=fall-search&email=private@example.com&token=private#contact',title:'VNW Media | Web Design & Digital Marketing',referrer:'https://www.google.com/search?q=private+search'});
+const service=browser({url:origin+'services/seo.html',storage:first.storage});
+const draft=service.draft();
+assert.equal(draft.subject,'[VNW Lead] SEO Strategy & Services | Hero strategy form | Example Dental');
+for(const line of ['Page type: Service page','Page URL: '+origin+'services/seo.html','Form: Hero strategy form','Form ID: hero-strategy','Service / interest: Search Engine Optimization','utm_source: google','utm_medium: cpc','utm_campaign: fall-search','Entry referrer: https://www.google.com/search','Layout: Desktop (1280 x 844)'])assert(draft.body.includes(line),line);
+assert(!draft.body.includes('private@example.com'));assert(!draft.body.includes('token='));assert(!draft.body.includes('private+search'));
+const contact=browser({url:origin+'contact.html',title:'Contact VNW Media | Plan Your Digital Strategy',storage:first.storage,forms:[new Form('plan')]});
+assert(contact.draft().body.includes('First landing URL: '+origin+'?utm_source=google'));
+assert(contact.draft().body.includes('Previous page URL: '+origin+'services/seo.html'));
+assert(contact.draft().body.includes('Form: Page contact form'));
+assert(contact.draft().body.includes('utm_campaign: fall-search'));
+const refreshed=browser({url:origin+'contact.html',storage:first.storage,forms:[new Form('plan')]});
+assert(refreshed.draft().body.includes('Previous page URL: '+origin+'services/seo.html'),'reload retains previous page');
+service.events.pageshow({persisted:true});assert(service.draft().body.includes('Previous page URL: '+origin+'contact.html'),'back-forward cache restores current visit context');
+const mobileForm=new Form('mobile');
+const mobile=browser({url:origin+'case-studies/jb-body-works-review.html',width:390,forms:[mobileForm],title:'Review — J B Body Works Case Study | VNW Media'});
+assert(mobile.draft().body.includes('Page type: Case study'));assert(mobile.draft().body.includes('Form ID: vnw-mobile-email-form'));assert(mobile.draft().body.includes('Layout: Mobile (390 x 844)'));
+assert(mobile.draft().body.includes('Entry referrer: Not available (direct, private, or not supplied by browser)'));
+function submit(b,form,prevented=false){let event={target:form,defaultPrevented:prevented,preventDefault(){this.defaultPrevented=true;}};b.events.submit(event);return event;}
+assert.equal(submit(mobile,mobileForm).defaultPrevented,true);assert(mobile.c.location.href.startsWith('mailto:contactus@vnwmedia.com?subject='));assert(mobile.status.textContent.includes('Please press Send'));assert.equal(mobile.timers.length,0);
+const normal=browser();submit(normal,normal.c.document.forms[0]);assert.equal(normal.timers.length,1);normal.timers[0]();assert.deepEqual(normal.navigations,[origin+'thank-you.html?delivery=email']);
+const invalid=browser();invalid.c.document.forms[0].valid=false;submit(invalid,invalid.c.document.forms[0]);assert.equal(invalid.c.location.href,origin+'services/seo.html');assert.equal(invalid.timers.length,0);
+const preview=new Form('hero',{}, {preview:true});const previewBrowser=browser({forms:[preview]});assert.equal(submit(previewBrowser,preview).defaultPrevented,false);
+const prior=browser();submit(prior,prior.c.document.forms[0],true);assert(!prior.c.location.href.startsWith('mailto:'));
+const late=browser({forms:[]});const lateForm=new Form('hero',{interest:'SEO in Morganville, NJ'});late.c.document.forms.push(lateForm);submit(late,lateForm);assert(decodeURIComponent(late.c.location.href).includes('Service / interest: SEO in Morganville, NJ'),'late-rendered forms are handled');
+for(const [route,type] of [['industries/healthcare.html','Industry landing page'],['locations/new-jersey/morganville/seo.html','Location landing page'],['resources/article.html','Resource page']])assert(browser({url:origin+route}).draft().body.includes('Page type: '+type));
+assert(browser({blocked:true}).draft().body.includes('Page type: Service page'),'blocked storage does not break leads');
+const expired=browser({storage:first.storage,time:Date.parse('2026-10-16T21:00:00Z')});assert(expired.draft().body.includes('utm_source: Not provided'),'expired tab context is cleared');
+const corrupt=new Map([['vnw-lead-attribution-v1','{broken']]);assert(browser({storage:corrupt}).draft().body.includes('First landing page: SEO Strategy'));
+const direct=browser();const directBody=direct.draft().body;assert(directBody.includes('No tagged visit recorded'));assert(directBody.includes('No prior page recorded'));
+const injection=browser({forms:[new Form('hero',{company:'Acme\r\nBcc: attacker@example.com',message:'Hello & thanks?\nUnicode: café ✓'})]});const injected=injection.draft();assert(!/[\r\n]/.test(injected.subject));assert.equal(new URL(injected.mailto).searchParams.get('body'),injected.body);
+for(const value of direct.storage.values()){assert(!value.includes('alex@example.com'));assert(!value.includes('Example Dental'));assert(!value.includes('Please help us'));}
+let pages=0;
+function walk(dir){for(const item of fs.readdirSync(dir,{withFileTypes:true})){if(['.git','assets','Liquid Soldier','ai-intake-system-wordpress-upload'].includes(item.name))continue;const file=path.join(dir,item.name);if(item.isDirectory())walk(file);else if(item.name.endsWith('.html')){const html=fs.readFileSync(file,'utf8');if(!html.includes('site-buttons.js'))continue;pages++;const scripts=[...html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/g)].map(m=>m[1]);const lead=scripts.filter(src=>src.split('?')[0].endsWith('lead-attribution.js'));assert.equal(lead.length,1,file+' loads exactly one handler');assert(fs.existsSync(path.resolve(path.dirname(file),lead[0].split('?')[0])),file+' has correct relative attribution path');assert(scripts.indexOf(lead[0])<scripts.findIndex(s=>s.includes('site-buttons.js')),file+' initializes attribution before shared contact UI');for(const form of html.matchAll(/<form\b([^>]*)>/g)){const attrs=form[1];assert(/data-preview-form|hero-form|plan-form|vnw-mobile-email-form|data-vnw-lead-form/.test(attrs),file+' has a supported lead form');}}}}
+walk(root);assert(pages>=336);assert(!fs.readFileSync(path.join(root,'script.js'),'utf8').includes('form.addEventListener("submit"'));assert(!fs.readFileSync(path.join(root,'site-buttons.js'),'utf8').includes("form.addEventListener('submit'"));
+console.log(`PASS: ${pages} pages wired; hero, lower-page, mobile and late-rendered forms; landing/previous-page continuity; UTM retention; privacy filtering; expiry/blocked storage; validation; mailto encoding; no duplicate handlers or outbound sends.`);
+const example=fs.readFileSync(path.join(root,'reports/lead-email-example.html'),'utf8');
+const exampleBody=example.match(/<pre>([\s\S]*?)<\/pre>/)[1].replaceAll('&amp;','&');
+assert.equal(exampleBody,draft.body,'the published fictional email example matches the actual formatter output');
+console.log('\nEXAMPLE SUBJECT: '+draft.subject+'\n\n'+draft.body);

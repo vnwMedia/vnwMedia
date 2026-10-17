@@ -33,7 +33,6 @@ for page in ROOT.rglob('*.html'):
     updated = re.sub(r'<link\b[^>]*rel=[\"\']preconnect[\"\'][^>]*href=[\"\']https://fonts\.(?:googleapis|gstatic)\.com[\"\'][^>]*>\s*', '', updated)
     updated = re.sub(r'(href=[\"\'](?:\.\./)*styles\.css)(?:\?[^\"\']*)?([\"\'])', r'\1?v=' + VERSION + r'\2', updated)
     updated = re.sub(r'(src=[\"\'](?:\.\./)*site-footer\.js)(?:\?[^\"\']*)?([\"\'])', r'\1?v=' + VERSION + r'\2', updated)
-    updated = re.sub(r'(src=[\"\'](?:\.\./)*script\.js)(?:\?[^\"\']*)?([\"\'])', r'\1?v=' + VERSION + r'\2', updated)
     if updated != original:
         page.write_text(updated)
         changed += 1

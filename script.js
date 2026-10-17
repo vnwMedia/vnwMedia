@@ -93,7 +93,6 @@ const servicesDropdown = document.querySelector(".nav-services");
 const servicesTrigger = document.querySelector(".nav-services-trigger");
 let servicesMenuCloseTimer = 0;
 let servicesMenuPinned = false;
-const forms = document.querySelectorAll("form");
 const heroForm = document.querySelector(".hero-form");
 
 function setServicesMenuOpen(open, pinned = servicesMenuPinned) {
@@ -483,22 +482,5 @@ if (heroForm) {
   mobileCtaObserver.observe(heroForm);
 }
 
-forms.forEach((form) => {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (!form.reportValidity()) return;
-    const data = new FormData(form);
-    const name = String(data.get("name") || "").trim();
-    const phone = String(data.get("phone") || "").trim();
-    const email = String(data.get("email") || "").trim();
-    const company = String(data.get("company") || "").trim();
-    const website = String(data.get("website") || "").trim();
-    const interest = String(data.get("interest") || "Digital marketing strategy").trim();
-    const message = String(data.get("message") || "").trim();
-    const subject = encodeURIComponent(`VNW Media strategy request${company ? ` — ${company}` : ""}`);
-    const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nCompany: ${company}\nWebsite: ${website}\nInterest: ${interest}\n\nGoals:\n${message}`);
-    location.href = `mailto:contactus@vnwmedia.com?subject=${subject}&body=${body}`;
-    // Mailto cannot confirm delivery. Explain the remaining step on the new page.
-    setTimeout(() => location.assign(`${navRoot}thank-you.html?delivery=email`), 300);
-  });
-});
+// All page and dynamically inserted lead forms use the shared delegated handler
+// in lead-attribution.js, including the mobile quick-contact email sheet.

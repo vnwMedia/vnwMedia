@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-16",
+  "scope": "Shared VNW Media lead forms on mobile and desktop; separate client applications and explicitly nonfunctional design-preview forms are excluded.",
+  "delivery": "Existing mailto behavior preserved. The visitor must send the draft in their email application. No backend email service was added, no real test lead was sent, and inbox delivery was not verified.",
+  "recipient": "contactus@vnwmedia.com",
+  "subjectPattern": "[VNW Lead] Page title | Form location | Business name",
+  "capturedContext": ["Submitting page title, type, heading, URL and site-relative path", "Form location, stable form ID, accessible name and section", "Responsive layout and viewport size", "UTC draft-creation time", "First landing page, previous page and available entry referrer", "Most recent tagged landing page and utm_source, utm_medium, utm_campaign, utm_term, utm_content"],
+  "privacyAndLimitations": [
+    "Only page/campaign metadata is kept in sessionStorage. Contact-form names, email addresses, phone numbers and messages are not persisted.",
+    "Context is limited to this browser-tab session, with a 30-minute inactivity timeout checked on navigation. Blocked storage falls back to current-page attribution.",
+    "Arbitrary URL query parameters, URL credentials and fragments are omitted. Referrer search queries are not included.",
+    "Missing sources are labeled unavailable rather than inferred as organic or paid. Layout reflects viewport width, not a verified physical device.",
+    "Browser-provided attribution is not independently verified campaign reporting or server-side conversion tracking."
+  ],
+  "validation": {
+    "sharedPagesWired": 337,
+    "automated": ["tests/lead-attribution.cjs", "tests/home-performance.cjs", "tests/service-story-audit.cjs", "tests/client-service-results.cjs", "tests/portfolio-client-additions.cjs", "tests/portfolio-industry-options.cjs", "tests/story-direction-previews.cjs"],
+    "leadTests": "Hero, lower-page, mobile and late-rendered forms; same-tab service-to-Contact continuity; back/forward restoration; UTM retention; stripped private query strings; direct/unknown sources; expired/corrupt/blocked storage; validation; safe mailto encoding; unchanged confirmation behavior; nonfunctional preview exclusion; one handler and correct relative paths across every shared page. The fictional HTML email example is checked byte-for-byte against formatter output.",
+    "browser": "Desktop SEO form and mobile quick-contact required-field validation passed without submitting valid contact data. Mobile email sheet opened and closed correctly; no horizontal overflow observed. No browser console errors observed during the service-page check.",
+    "staticDiff": "Existing HTML edits are limited to loading the shared handler and updating script versions. Page content, visual styles, destinations and form fields are unchanged."
+  },
+  "example": "lead-email-example.html",
+  "screenshot": "lead-email-example.jpg"
+}

@@ -97,7 +97,6 @@
     const choices = contact.querySelector('.vnw-mobile-contact__choices');
     const emailLink = choices.querySelector('a[href^="mailto:"]');
     const dialog = sheet.querySelector('[role="dialog"]');
-    const form = sheet.querySelector('form');
     const status = sheet.querySelector('[role="status"]');
     function setOpen(open, moveFocus = false) {
       contact.classList.toggle('is-open', open);
@@ -127,22 +126,8 @@
     sheet.addEventListener('click', event => {
       if (event.target.closest('[data-email-close]')) closeSheet();
     });
-    form.addEventListener('submit', event => {
-      event.preventDefault();
-      event.stopPropagation();
-      if (!form.reportValidity()) return;
-      const data = new FormData(form);
-      const name = String(data.get('name') || '').trim();
-      const company = String(data.get('company') || '').trim();
-      const phone = String(data.get('phone') || '').trim();
-      const email = String(data.get('email') || '').trim();
-      const website = String(data.get('website') || '').trim();
-      const message = String(data.get('message') || '').trim();
-      const subject = encodeURIComponent(`VNW Media inquiry — ${company}`);
-      const body = encodeURIComponent(`Name: ${name}\nBusiness: ${company}\nPhone: ${phone}\nEmail: ${email}\nWebsite: ${website}\n\nMessage:\n${message}`);
-      status.textContent = 'Your email app should open with a draft. Please press Send there.';
-      location.href = `mailto:contactus@vnwmedia.com?subject=${subject}&body=${body}`;
-    });
+    // Submission is delegated to lead-attribution.js so the mobile email sheet
+    // includes exactly the same page, form, visit, and campaign context.
     document.addEventListener('click', event => {
       if (contact.classList.contains('is-open') && !contact.contains(event.target)) setOpen(false);
     });
