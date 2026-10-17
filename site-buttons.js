@@ -2,11 +2,52 @@
 (() => {
   const ctas = 'a.pill,a.cta,a.button,a.fc-button,a.nc-button,a.mp-button,a.sd-button,a.promo-button,a.tab-cta,a.option-button,a.sm-cta,a.mobile-plan';
   const controls = 'button,input[type="submit"],input[type="button"],[role="button"]';
+  const mobileArrowMedia = matchMedia('(max-width: 800px)');
+  const mobileArrowOriginals = new Map();
+  function normalizeMobileArrows() {
+    // Desktop retains the exact original characters and styling, even after a resize.
+    for (const [icon, original] of mobileArrowOriginals) {
+      if (!icon.isConnected) mobileArrowOriginals.delete(icon);
+      else if (!mobileArrowMedia.matches) {
+        icon.replaceWith(document.createTextNode(original));
+        mobileArrowOriginals.delete(icon);
+      }
+    }
+    if (!mobileArrowMedia.matches) return;
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    const candidates = [];
+    while (walker.nextNode()) {
+      const text = walker.currentNode, parent = text.parentElement;
+      if (!parent || !/↗/.test(text.data) || parent.closest('script,style,textarea,pre,code,svg,[contenteditable]')) continue;
+      if (!parent.closest('a,button,[role="button"]') && !/^\s*↗[\uFE0E\uFE0F]?\s*$/.test(text.data)) continue;
+      candidates.push(text);
+    }
+    candidates.forEach(text => {
+      const fragment = document.createDocumentFragment();
+      // Consume both text/emoji variation selectors; no font glyph remains on mobile.
+      text.data.split(/(↗[\uFE0E\uFE0F]?)/).forEach(part => {
+        if (!part) return;
+        if (!/^↗[\uFE0E\uFE0F]?$/.test(part)) { fragment.append(document.createTextNode(part)); return; }
+        const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        icon.setAttribute('class', 'site-mobile-arrow');
+        icon.setAttribute('viewBox', '0 0 24 24');
+        icon.setAttribute('width', '16'); icon.setAttribute('height', '16');
+        icon.setAttribute('fill', 'none'); icon.setAttribute('stroke', 'currentColor');
+        icon.setAttribute('stroke-width', '2');
+        icon.setAttribute('stroke-linecap', 'round'); icon.setAttribute('stroke-linejoin', 'round');
+        icon.setAttribute('aria-hidden', 'true'); icon.setAttribute('focusable', 'false');
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', 'M6 18 18 6M6 6h12v12');
+        icon.append(path); fragment.append(icon); mobileArrowOriginals.set(icon, part);
+      });
+      text.replaceWith(fragment);
+    });
+  }
   function isBlue(color) {
     const rgb = color.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/);
     return !!rgb && +rgb[1] < 70 && +rgb[2] >= 100 && +rgb[3] >= 150 && (rgb[4] === undefined || +rgb[4] >= .9);
   }
-  function normalize() {
+  function normalize(scanArrows = true) {
     document.querySelectorAll('a').forEach(link => {
       if (/^explore services\s*[↗→]?$/i.test(link.textContent.trim())) link.classList.add('site-explore-services');
     });
@@ -31,6 +72,7 @@
       // Only correct blue controls' text; selected-state and toggle logic stay intact.
       control.classList.toggle('site-control-blue', isBlue(getComputedStyle(control).backgroundColor));
     });
+    if (scanArrows) normalizeMobileArrows();
   }
   function mountMobileContact() {
     // Keep design studies as studies, while retaining the contact action on the thank-you page.
@@ -162,12 +204,14 @@
   function start() {
     mountMobileContact();
     normalize();
-    let queued = false;
+    mobileArrowMedia.addEventListener('change', () => normalize());
+    let queued = false, arrowsDirty = false;
     const observer = new MutationObserver(records => {
       if (!records.some(record => record.type === 'childList' || (record.type === 'attributes' && !['class'].includes(record.attributeName)))) return;
+      if (records.some(record => record.type === 'childList')) arrowsDirty = true;
       if (queued) return;
       queued = true;
-      requestAnimationFrame(() => { queued = false; normalize(); });
+      requestAnimationFrame(() => { queued = false; const scanArrows = arrowsDirty; arrowsDirty = false; normalize(scanArrows); });
     });
     observer.observe(document.body, {subtree:true,childList:true,attributes:true,attributeFilter:['aria-pressed','aria-selected','style','hidden']});
   }

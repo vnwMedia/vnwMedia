@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-17",
+  "change": "Replace northeast-arrow font glyphs with plain currentColor SVG icons on mobile at widths up to 800px. Original text, including variation selectors, is restored at desktop widths.",
+  "coverage": "337 shared VNW Media pages load the updated button script and stylesheet. Separate client applications are excluded. Existing SVG icons, other arrow directions, editable text and code examples are not changed.",
+  "implementation": "The shared normalizer handles inline and nested arrow characters, emoji/text variation selectors, standalone decorative icons and dynamically rendered links. Icons are decorative, non-focusable and do not intercept clicks. Text-tree scans are skipped for animation-only style changes.",
+  "browserChecks": {
+    "mobileViewport": "390 x 844",
+    "pages": ["industries.html", "locations/", "locations/new-jersey/seo-new-jersey/", "services/seo.html", "services/web-design.html", "case-studies/nycadsco.html"],
+    "result": "No unconverted northeast-arrow glyphs remained in links or buttons, no horizontal page overflow was observed, and no console errors were observed. The SEO in New Jersey link navigated to its existing destination.",
+    "desktopViewport": "1280 x 720",
+    "desktopResult": "No mobile SVG icons were present. Industry-page link text, destinations, widths and heights matched the desktop baseline. Breakpoint restoration was also tested automatically.",
+    "limitation": "Responsive browser verification, not a physical iPhone test. The mobile icons contain SVG paths rather than emoji-capable font characters."
+  },
+  "tests": ["tests/mobile-arrows.cjs", "tests/lead-attribution.cjs", "tests/home-performance.cjs", "tests/portfolio-client-additions.cjs", "tests/portfolio-industry-options.cjs", "tests/service-story-audit.cjs", "tests/client-service-results.cjs", "tests/story-direction-previews.cjs"],
+  "evidence": ["mobile-arrows-healthcare.jpg", "mobile-arrows-locations.jpg"]
+}

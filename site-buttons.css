@@ -14,6 +14,13 @@ html body .site-button:focus-visible{outline:3px solid var(--site-button-blue);o
 html body .site-button:disabled{cursor:not-allowed;opacity:.6}
 @media(prefers-reduced-motion:reduce){html body .site-button{transition:none}}
 
+/* A font-independent arrow prevents iOS from displaying the blue emoji tile.
+   The shared script inserts these icons only at the mobile breakpoint. */
+@media(max-width:800px){
+  html body svg.site-mobile-arrow{display:inline-block!important;width:1em!important;height:1em!important;flex:none!important;overflow:visible;vertical-align:-.125em;fill:none!important;stroke:currentColor!important;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+  html body svg.site-mobile-arrow path{fill:none!important;stroke:inherit!important;stroke-width:inherit}
+}
+
 /* Option 27: site-wide mobile contact reveal. Hidden on desktop and in design studies. */
 html body .vnw-mobile-contact{display:none}
 html body .vnw-mobile-email-sheet[hidden]{display:none!important}
