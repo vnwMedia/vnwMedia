@@ -75,10 +75,11 @@
     if (scanArrows) normalizeMobileArrows();
   }
   function mountMobileContact() {
-    // Keep design studies as studies, while retaining the contact action on the thank-you page.
+    // Keep floating controls out of design studies, but let their shared menu
+    // open the same email sheet when that project action is present.
     const isPreview = document.querySelector('meta[name="robots"][content*="noindex"]') &&
       !/\/thank-you\.html$/.test(location.pathname);
-    if (isPreview || document.querySelector('.vnw-mobile-contact')) return;
+    if ((isPreview && !document.querySelector('[data-open-mobile-email]')) || document.querySelector('.vnw-mobile-contact') || document.querySelector('#vnw-mobile-email-sheet')) return;
 
     const contact = document.createElement('nav');
     contact.className = 'vnw-mobile-contact';
@@ -98,8 +99,10 @@
         <span class="vnw-mobile-contact__label">Let’s talk</span>
         <span class="vnw-mobile-contact__close" aria-hidden="true">×</span>
       </button>`;
-    document.body.append(contact);
-    document.body.classList.add('has-vnw-mobile-contact');
+    if (!isPreview) {
+      document.body.append(contact);
+      document.body.classList.add('has-vnw-mobile-contact');
+    }
 
     // The mobile Email action uses the approved Option 29 bottom sheet.
     const sheet = document.createElement('div');
@@ -140,6 +143,7 @@
     const emailLink = choices.querySelector('a[href^="mailto:"]');
     const dialog = sheet.querySelector('[role="dialog"]');
     const status = sheet.querySelector('[role="status"]');
+    let sheetReturnFocus = trigger;
     function setOpen(open, moveFocus = false) {
       contact.classList.toggle('is-open', open);
       trigger.setAttribute('aria-expanded', String(open));
@@ -154,17 +158,23 @@
       sheet.hidden = true;
       document.body.classList.remove('vnw-mobile-email-open');
       contact.inert = false;
-      if (restoreFocus) trigger.focus({preventScroll:true});
+      if (restoreFocus) (sheetReturnFocus?.isConnected ? sheetReturnFocus : trigger).focus({preventScroll:true});
     }
-    emailLink.addEventListener('click', event => {
-      event.preventDefault();
+    function openSheet(returnFocus = trigger) {
+      if (!mobileArrowMedia.matches) return;
+      sheetReturnFocus = returnFocus;
       setOpen(false);
       status.textContent = '';
       sheet.hidden = false;
       document.body.classList.add('vnw-mobile-email-open');
       contact.inert = true;
       dialog.focus({preventScroll:true});
+    }
+    emailLink.addEventListener('click', event => {
+      event.preventDefault();
+      openSheet();
     });
+    document.addEventListener('vnw:open-mobile-email', () => openSheet(document.querySelector('.site-header .nav-toggle') || trigger));
     sheet.addEventListener('click', event => {
       if (event.target.closest('[data-email-close]')) closeSheet();
     });

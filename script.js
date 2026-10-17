@@ -160,7 +160,7 @@ function initializeMobileNavigation() {
       <div class="sm-browse"><div class="sm-tabs" role="tablist" aria-label="Service categories">${SERVICE_MENU_PILLARS.map((pillar, index) => `<button type="button" role="tab" id="sm-tab-${index}" data-sm-tab="${index}" aria-controls="sm-services" aria-selected="${index === 0}" tabindex="${index === 0 ? 0 : -1}">${safe(pillar.name)}</button>`).join('')}</div><section id="sm-services" role="tabpanel" aria-labelledby="sm-tab-0"></section>${allServicesLink()}</div>
       <div id="sm-results" hidden><p class="sm-result-count" role="status" aria-live="polite" aria-atomic="true"></p><div class="sm-result-content"></div></div>
     </div>
-    <footer class="sm-footer"><a class="sm-cta" href="${navRoot}contact.html">Let’s talk about your project</a><p>One team. Your next stage of growth.</p></footer>
+    <footer class="sm-footer"><a class="sm-cta" href="${navRoot}contact.html" data-open-mobile-email aria-haspopup="dialog" aria-controls="vnw-mobile-email-sheet">Let’s talk about your project</a><p>One team. Your next stage of growth.</p></footer>
   </div>`;
   document.body.append(dialog);
   const panel = dialog.querySelector('.sm-panel');
@@ -212,7 +212,7 @@ function initializeMobileNavigation() {
     window.scrollTo({ top: savedScrollY, behavior: 'instant' });
   }
 
-  function closeMenu(immediate = false) {
+  function closeMenu(immediate = false, afterClose) {
     clearTimeout(closeTimer);
     cancelAnimationFrame(openFrame);
     clearTimeout(openFocusTimer);
@@ -222,6 +222,7 @@ function initializeMobileNavigation() {
     const finish = () => {
       if (dialog.open) dialog.close();
       unlockPage();
+      afterClose?.();
     };
     if (immediate || reducedMotion.matches) finish();
     else closeTimer = setTimeout(finish, 480);
@@ -281,6 +282,12 @@ function initializeMobileNavigation() {
     unlockPage();
   });
   dialog.addEventListener('click', event => {
+    if (event.target.closest('[data-open-mobile-email]') && mobileViewport.matches && document.getElementById('vnw-mobile-email-sheet')) {
+      event.preventDefault();
+      // Remove the native modal and its scroll lock before opening the shared sheet.
+      closeMenu(false, () => document.dispatchEvent(new CustomEvent('vnw:open-mobile-email')));
+      return;
+    }
     if (event.target === dialog || event.target.closest('[data-sm-close]')) closeMenu();
     else if (event.target.closest('a')) closeMenu(true);
     else if (event.target.closest('[data-sm-clear]')) { search.value = ''; updateSearch(); search.focus(); }

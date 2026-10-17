@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-17",
+  "change": "The mobile navigation footer action, Let’s talk about your project, now finishes closing the navigation before opening the existing mobile email bottom sheet. It does not navigate to Contact.",
+  "preserved": ["The floating Let’s Talk > Email action uses the same shared sheet opener", "Normal Contact and service links still navigate normally", "Existing bottom-up animation, form fields, validation, concise email formatting and page attribution", "Desktop navigation behavior", "Design/review pages do not gain floating contact controls, but their shared menu can open the sheet"],
+  "interaction": "After the navigation close animation, the native dialog is closed and its fixed-body scroll lock is released. The shared sheet then opens and receives focus. Closing a menu-opened sheet returns focus to the header menu button; closing a floating-email sheet returns focus to the floating trigger.",
+  "verification": {
+    "browserViewport": "390 x 844; desktop resize to 1280 x 720",
+    "pages": ["work.html", "services/seo.html", "case-studies/jb-body-works-review.html"],
+    "checks": ["Page URL remains unchanged after the project action", "Menu closed before sheet visible", "Same vnw-mobile-email-in animation as floating Email", "Scroll position 844 retained through menu and sheet transition", "Required-field validation focuses Full name without sending a lead", "Close and Escape restore the appropriate focus target", "Existing floating Email action still opens the same form", "Normal menu Contact link still navigates to contact.html", "No horizontal overflow or console errors observed", "Sheet remains hidden and desktop Contact destination remains unchanged at desktop width"],
+    "automated": "tests/mobile-menu-contact.cjs covers ordering, reduced motion, cancellation, resize, missing-sheet/desktop fallbacks, ordinary links, shared opener and focus return. All existing site tests also pass.",
+    "coverage": "337 shared pages reference the updated scripts. Existing page HTML changes are restricted to cache-version references; separate client applications are excluded.",
+    "emailDelivery": "No real lead was sent. The existing mailto delivery behavior is unchanged."
+  },
+  "evidence": "mobile-menu-contact-sheet.jpg"
+}
