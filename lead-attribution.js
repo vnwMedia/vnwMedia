@@ -49,40 +49,33 @@
   function formDetails(form) {
     const mobile = form.id === 'vnw-mobile-email-form';
     const hero = form.matches('.hero-form');
-    const label = mobile ? 'Mobile quick-contact form' : hero ? 'Hero strategy form' : 'Page contact form';
-    const kind = mobile ? 'mobile-quick-contact' : hero ? 'hero-strategy' : 'page-contact';
-    const sameKind = [...document.forms].filter(other => other !== form && (mobile ? other.id === form.id : hero ? other.matches('.hero-form') : other.matches('.plan-form')));
-    const index = [...document.forms].filter(other => other === form || sameKind.includes(other)).indexOf(form) + 1;
-    return {label, id: form.id || `${kind}${sameKind.length ? '-' + index : ''}`, name: singleLine(form.getAttribute('aria-label') || form.querySelector('h2')?.textContent || label), section: singleLine(form.closest('section[id]')?.id, 100)};
+    return {label: mobile ? 'Mobile quick-contact form' : hero ? 'Hero strategy form' : 'Page contact form'};
+  }
+  function displayUrl(value) {
+    try { const url = new URL(value); url.search = ''; return url.href; }
+    catch { return value; }
   }
   function buildDraft(form) {
     const visit = captureVisit(), page = currentPage(), details = formDetails(form);
     const data = new FormData(form);
     const field = name => String(data.get(name) || '').trim();
     const company = singleLine(field('company'));
-    const subject = singleLine(`[VNW Lead] ${page.title} | ${details.label}${company ? ' | ' + company : ''}`, 240);
-    const tagged = visit.lastTagged;
+    const subject = singleLine(`[VNW Lead] ${page.title}${company ? ' | ' + company : ''}`, 200);
+    const tags = visit.lastTagged?.tags;
+    const compactCampaign = ['utm_source', 'utm_medium', 'utm_campaign'].map(key => tags?.[key]).filter(Boolean).join(' / ');
     const lines = [
       'NEW WEBSITE INQUIRY', '',
-      `Name: ${singleLine(field('name'))}`, `Business: ${company}`, `Phone: ${singleLine(field('phone'))}`,
-      `Email: ${singleLine(field('email'))}`, `Website: ${singleLine(field('website'))}`,
-      `Service / interest: ${singleLine(field('interest')) || page.title}`, '',
-      'Message / goals:', field('message') || 'Not provided', '',
-      'LEAD SOURCE', `Submitted from: ${page.title}`, `Page type: ${page.type}`,
-      `Page URL: ${page.url}`, `Page path: ${page.path}`, `Page heading: ${page.heading || 'Not provided'}`,
-      `Form: ${details.label}`, `Form ID: ${details.id}`, `Form name: ${details.name}`,
-      `Section: ${details.section || 'Not specified'}`,
-      `Layout: ${matchMedia('(max-width: 800px)').matches ? 'Mobile' : 'Desktop'} (${innerWidth} x ${innerHeight})`,
-      `Draft created (UTC): ${new Date().toISOString()}`, '',
-      'VISIT CONTEXT (this browser tab)', `First landing page: ${visit.entry.title}`,
-      `First landing URL: ${visit.entry.url}`,
-      `Previous page: ${visit.previousPage?.title || 'No prior page recorded'}`,
-      `Previous page URL: ${visit.previousPage?.url || 'Not available'}`,
-      `Entry referrer: ${visit.entryReferrer || 'Not available (direct, private, or not supplied by browser)'}`, '',
-      'CAMPAIGN DETAILS',
-      `Campaign landing URL: ${tagged?.page?.url || 'No tagged visit recorded'}`,
-      ...campaignKeys.map(key => `${key}: ${tagged?.tags?.[key] || 'Not provided'}`), '',
-      'Source details reflect browser-provided information, not independently verified ad-platform attribution.'
+      `Name: ${singleLine(field('name'))}`,
+      ...(company ? [`Business: ${company}`] : []),
+      ...(field('phone') ? [`Phone: ${singleLine(field('phone'))}`] : []),
+      `Email: ${singleLine(field('email'))}`,
+      ...(field('website') ? [`Website: ${singleLine(field('website'))}`] : []),
+      ...(field('interest') ? [`Service: ${singleLine(field('interest'))}`] : []),
+      ...(field('message') ? ['', 'Message:', field('message')] : []), '',
+      `From: ${page.title}`, `Page: ${displayUrl(page.url)}`,
+      `Form: ${details.label} (${matchMedia('(max-width: 800px)').matches ? 'Mobile' : 'Desktop'})`,
+      ...(page.type === 'Contact page' && visit.previousPage ? [`Came from: ${visit.previousPage.title} — ${displayUrl(visit.previousPage.url)}`] : []),
+      ...(compactCampaign ? [`Campaign: ${compactCampaign}`] : [])
     ];
     const body = lines.join('\n');
     return {subject, body, mailto: `mailto:contactus@vnwmedia.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`};

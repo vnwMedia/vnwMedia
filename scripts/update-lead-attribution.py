@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '20261016-lead-source'
+VERSION = '20261017-concise-leads'
 updated_count = 0
 for page in ROOT.rglob('*.html'):
     if any(part in page.parts for part in ['.git', 'assets', 'Liquid Soldier', 'ai-intake-system-wordpress-upload']):
