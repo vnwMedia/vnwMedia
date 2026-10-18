@@ -1,0 +1,15 @@
+# VNW Media clean WordPress installation — 0.4.1
+
+This release contains the same 211 pages/articles, two redirects, design assets and latest form changes as 0.4.0. It enables authorized setup on vnwmedia.net, www.vnwmedia.net and the staging address. No hosted website was changed during packaging.
+
+1. In Hostinger, open Websites → vnwmedia.net → Dashboard → Website → Auto Installer. Delete the existing vnwmedia.net WordPress application, including its application files and associated database. This removes its old pages, media, plugins, settings and users. Create no backup. Use the application deletion control; keep the domain registration, hosting service and mail service. The site will be unavailable until installation is completed. A staging directory may be inside public_html, so do not manually select the entire directory for deletion.
+2. In Auto Installer, install a fresh WordPress instance on https://vnwmedia.net, at the root (leave the subdirectory blank). Set a new administrator login. Choose PHP 8.2 or a tested compatible version. Skip starter templates, demo content and optional marketing plugins. Do not share your password in chat.
+3. In the new WordPress dashboard, delete the default sample page and Hello World post, including their trash entries if you want no sample content.
+4. Open Plugins → Add New Plugin. Install and activate Elementor Website Builder by Elementor.com. The custom VNW section widgets do not require Elementor Pro.
+5. Open Appearance → Themes → Add New Theme → Upload Theme. Upload vnw-media-wordpress-elementor-0.4.1.zip while zipped, install, then activate VNW Media. Do not upload the GitHub source archive.
+6. Open Appearance → VNW Latest HTML Update. Click Install all pages and enable Elementor editing. Keep the tab open through Finished. The importer creates the pages, articles, homepage assignment and routes, then enables section editing. Every row should convert successfully on a fresh install. Report any FAILED or Skipped row before continuing. Uploading a theme alone does not install page content.
+7. Open Settings → Permalinks, select Post name and Save Changes. Clear Hostinger cache. In Settings → Reading, leave Discourage search engines unchecked for the public site. The importer does not change your search visibility setting.
+8. Review desktop and mobile pages, navigation, Our Story images, Resources and new pages. Edit a page through Pages → Edit with Elementor and verify text/image controls. Header and footer remain managed by the theme.
+9. Submit a clearly labelled form test. Verify the thank-you page and actual receipt at contactus@vnwmedia.com. Configure authenticated outgoing email if required by your mail provider; never paste mailbox passwords into chat. The package sets the destination, but a successful local mail test does not establish inbox delivery on Hostinger.
+
+No backup of the existing hosted site is created by this workflow. The fresh importer does not retain old website content. Hostinger's independently retained automated backups, if any, are managed separately by the hosting service.

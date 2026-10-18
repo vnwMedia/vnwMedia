@@ -63,7 +63,7 @@ add_action('admin_menu', function() {
   if (isset($_POST['vnw_convert'])) {
    check_admin_referer('vnw_convert');
    try {
-    if (!in_array(wp_parse_url(home_url(),PHP_URL_HOST),['redesign.vnwmedia.net','localhost','127.0.0.1'],true)) throw new RuntimeException('Conversion is restricted to staging.');
+    if (!vnw_setup_host_allowed()) throw new RuntimeException('Conversion is restricted to approved VNW Media addresses.');
     $id=absint($_POST['vnw_page'] ?? 0);
     if (!current_user_can('edit_post',$id)) throw new RuntimeException('You cannot edit this page.');
     echo '<div class="notice notice-success"><p>'.esc_html(vnw_elementor_convert($id)).'</p></div>';
@@ -77,15 +77,15 @@ add_action('admin_menu', function() {
 });
 add_action('wp_enqueue_scripts', function() {
  if (!vnw_elementor_enabled(get_queried_object_id())) return;
- wp_enqueue_style('vnw-elementor', get_template_directory_uri().'/elementor/editor.css',[], '0.4.0');
- if (\Elementor\Plugin::$instance->editor->is_edit_mode()) wp_enqueue_script('vnw-elementor-preview',get_template_directory_uri().'/elementor/preview.js',[], '0.4.0',true);
+ wp_enqueue_style('vnw-elementor', get_template_directory_uri().'/elementor/editor.css',[], '0.4.1');
+ if (\Elementor\Plugin::$instance->editor->is_edit_mode()) wp_enqueue_script('vnw-elementor-preview',get_template_directory_uri().'/elementor/preview.js',[], '0.4.1',true);
 }, 100);
 
 add_action('wp_ajax_vnw_visual_convert',function() {
  if(!current_user_can('manage_options'))wp_send_json_error('Not authorized',403);
  check_ajax_referer('vnw_visual_convert');
  try {
-  if(!in_array(wp_parse_url(home_url(),PHP_URL_HOST),['redesign.vnwmedia.net','localhost','127.0.0.1'],true))throw new RuntimeException('Conversion is restricted to staging.');
+  if(!vnw_setup_host_allowed())throw new RuntimeException('Conversion is restricted to approved VNW Media addresses.');
   $id=absint($_POST['page_id']??0);
   if(!current_user_can('edit_post',$id))throw new RuntimeException('You cannot edit this page.');
   wp_send_json_success(vnw_elementor_convert($id));

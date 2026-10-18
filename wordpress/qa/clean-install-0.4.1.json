@@ -1,0 +1,11 @@
+{
+  "count": 211,
+  "editable": 211,
+  "snapshots": 0,
+  "version": "0.4.1",
+  "homepage": "index.html",
+  "homeStatus": 200,
+  "thankYouStatus": 200,
+  "latestFormTitle": true,
+  "setupHostChecks": "production, www, staging, localhost accepted; unrelated hosts rejected"
+}

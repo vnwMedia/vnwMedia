@@ -1,5 +1,9 @@
 <?php
 if (!defined('ABSPATH')) exit;
+/** Setup is available on the site's production, staging and local addresses. */
+function vnw_setup_host_allowed() {
+ return in_array(strtolower(wp_parse_url(home_url(), PHP_URL_HOST) ?? ''), ['vnwmedia.net','www.vnwmedia.net','redesign.vnwmedia.net','localhost','127.0.0.1'], true);
+}
 function vnw_records() {
  static $records;
  if ($records === null) $records = json_decode(file_get_contents(__DIR__.'/content/pages.json'), true);
@@ -53,7 +57,7 @@ add_action('wp_enqueue_scripts',function(){
  $deps=array_values(array_filter(wp_styles()->queue,fn($handle)=>str_starts_with($handle,'elementor-')));
  foreach($r['styles'] as $i=>$url){
   $expanded=vnw_expand($url);
-  if(str_contains($expanded,get_template_directory_uri().'/'))$expanded=add_query_arg('vnw_build','0.4.0',$expanded);
+  if(str_contains($expanded,get_template_directory_uri().'/'))$expanded=add_query_arg('vnw_build','0.4.1',$expanded);
   wp_enqueue_style('vnw-'.$i,$expanded,$deps,null);
   $deps=['vnw-'.$i];
  }
@@ -61,11 +65,11 @@ add_action('wp_enqueue_scripts',function(){
  wp_enqueue_script('vnw-catalog',get_template_directory_uri().'/service-catalog.js',[],null,true);
  wp_enqueue_script('vnw-interactions',get_template_directory_uri().'/interactions.js',['vnw-catalog'],null,true);
  wp_add_inline_script('vnw-interactions','window.vnwSite='.wp_json_encode(['home'=>trailingslashit(home_url()),'theme'=>trailingslashit(get_template_directory_uri()),'formAction'=>admin_url('admin-post.php'),'nonce'=>wp_create_nonce('vnw_contact')]).';','before');
- wp_enqueue_script('vnw-home-motion',get_template_directory_uri().'/home-hero-motion.js',['vnw-interactions'],'0.4.0',true);
+ wp_enqueue_script('vnw-home-motion',get_template_directory_uri().'/home-hero-motion.js',['vnw-interactions'],'0.4.1',true);
  wp_enqueue_script('vnw-tickers',get_template_directory_uri().'/tickers.js',['vnw-interactions'],null,true);
- wp_enqueue_script('vnw-buttons',get_template_directory_uri().'/site-buttons.js',['vnw-interactions'],'0.4.0',true);
- wp_enqueue_script('vnw-lead-context',get_template_directory_uri().'/lead-attribution.js',['vnw-buttons'],'0.4.0',true);
- wp_enqueue_script('vnw-form-bridge',get_template_directory_uri().'/form-bridge.js',['vnw-lead-context'],'0.4.0',true);
+ wp_enqueue_script('vnw-buttons',get_template_directory_uri().'/site-buttons.js',['vnw-interactions'],'0.4.1',true);
+ wp_enqueue_script('vnw-lead-context',get_template_directory_uri().'/lead-attribution.js',['vnw-buttons'],'0.4.1',true);
+ wp_enqueue_script('vnw-form-bridge',get_template_directory_uri().'/form-bridge.js',['vnw-lead-context'],'0.4.1',true);
  wp_enqueue_script('vnw-resources',get_template_directory_uri().'/resources-live.js',['vnw-interactions'],null,true);
 },100);
 // Preserve the source's native emoji rather than WordPress image substitutions.
@@ -95,8 +99,8 @@ function vnw_import() {
 }
 add_action('admin_menu',function(){add_theme_page('VNW Media Setup','VNW Media Setup','manage_options','vnw-setup',function(){
  if(!current_user_can('manage_options'))return;
- echo '<div class="wrap"><h1>VNW Media staging setup</h1><p>Import the approved pages and articles. Existing content is not deleted. Imported pages already present are not overwritten.</p><p>Only use on redesign.vnwmedia.net until the conversion has passed review.</p>';
- if(isset($_POST['vnw_import'])){check_admin_referer('vnw_import');$host=wp_parse_url(home_url(),PHP_URL_HOST);if(!in_array($host,['redesign.vnwmedia.net','localhost','127.0.0.1'],true)){echo '<p>Import blocked: this is not the approved staging host.</p>';}else{echo '<p>Imported '.esc_html(vnw_import()).' items.</p>';}}
+ echo '<div class="wrap"><h1>VNW Media setup</h1><p>Import the approved pages and articles. Existing content is not deleted. Imported pages already present are not overwritten.</p><p>For a fresh installation, activate Elementor and open Appearance → VNW Latest HTML Update to import the complete website and enable visual editing.</p>';
+ if(isset($_POST['vnw_import'])){check_admin_referer('vnw_import');if(!vnw_setup_host_allowed()){echo '<p>Import blocked: this is not an approved VNW Media address.</p>';}else{echo '<p>Imported '.esc_html(vnw_import()).' items.</p>';}}
  echo '<form method="post">';wp_nonce_field('vnw_import');submit_button('Import approved website','primary','vnw_import');echo '</form></div>';
 });});
 function vnw_grid(){
