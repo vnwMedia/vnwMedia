@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-17",
+  "approved_title": "Let’s Grow Your Business",
+  "approved_button": "Let’s Get Started",
+  "scope": "Every five-field hero inquiry form, including static pages, shared service renderer, location renderer and industry page generator",
+  "coverage": {"static_page_forms": 68, "rendered_location_forms": 49, "service_forms": 28, "total_form_instances": 145},
+  "changes": ["Visible title", "Submit button text", "Accessible form name", "Cache versions for the two changed renderers"],
+  "unchanged": ["Field names and types", "Required fields and optional website", "Hidden service interest", "Form submission and page/source attribution", "Styling and responsive rules", "Lower-page message forms", "Mobile email sheet"],
+  "verification": {
+    "automated": "All form instances rendered and checked; complete regression suite passed",
+    "desktop_homepage": "1280px screenshot inspected",
+    "mobile_width": 390,
+    "mobile_pages": ["index.html", "services/seo.html", "locations/new-york/brooklyn/digital-marketing-brooklyn/", "industries/healthcare/seo/"],
+    "mobile_form_overflow": false,
+    "forms_submitted": 0
+  },
+  "screenshots": ["growth-form-copy-desktop.jpg", "growth-form-copy-mobile.jpg"]
+}
