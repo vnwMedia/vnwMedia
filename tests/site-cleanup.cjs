@@ -1,7 +1,9 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const manifest=JSON.parse(read('reports/site-cleanup-2026-10-18.json'));
+const followup=JSON.parse(read('reports/site-cleanup-followup-2026-10-18.json'));
 for(const file of [...manifest.removed_preview_pages,...manifest.removed_support_files])assert(!fs.existsSync(path.join(root,file)),'retired study stays removed: '+file);
+for(const file of followup.removed_pages)assert(!fs.existsSync(path.join(root,file)),'temporary approval preview stays removed: '+file);
 for(const file of [...manifest.retained_pages,...manifest.kept_shared_runtime])assert(fs.existsSync(path.join(root,file)),'retained production dependency exists: '+file);
 let checked=0;
 function checkReference(value,source){
@@ -36,4 +38,4 @@ for(const file of manifest.retired_review_pages){
 }
 assert.equal(manifest.counts.regular_pages,210);
 assert.equal(manifest.removed_preview_pages.length,124);
-console.log(`PASS: ${manifest.removed_preview_pages.length} retired study pages absent; all 210 regular pages preserved; 14 compatible review redirects; ${checked} retained links/assets and sitemap destinations resolve.`);
+console.log(`PASS: ${manifest.removed_preview_pages.length+followup.removed_pages.length} retired study/approval pages absent; all 210 regular pages preserved; 14 compatible review redirects; ${checked} retained links/assets and sitemap destinations resolve.`);

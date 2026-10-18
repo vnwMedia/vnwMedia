@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-18",
+  "recovery_commit": "d38a3d168750e814b6cffdea11082d180869cb7f",
+  "scope": "Remove the temporary service-label approval preview created after the earlier cleanup",
+  "removed_pages": ["hero-services-preview.html"],
+  "retained_regular_pages": 210,
+  "retained_compatibility_redirects": 19,
+  "retained_utility_pages": 1,
+  "remaining_design_study_pages": 0,
+  "approved_homepage_and_other_production_pages": "Unchanged",
+  "automated_test_files": 13,
+  "earlier_cleanup": "site-cleanup-2026-10-18.json",
+  "preserved": "Approved design assets, forms, archived evidence, unrelated/untracked files, separate client projects, and full version history"
+}
