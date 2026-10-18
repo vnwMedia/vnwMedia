@@ -27,7 +27,7 @@ function markCurrentPrimaryNavigation() {
   else if (/\/work(?:-[^/]+)?\.html$/.test(currentPath)) section = "work";
   else if (/\/services(?:\.html|\/)/.test(currentPath)) section = "services";
   else if (/\/industries(?:\.html|\/)/.test(currentPath)) section = "industries";
-  else if (/\/case-studies(?:\.html|\/)/.test(currentPath)) section = "case-studies";
+  else if (/\/case-studies(?:\.html|\/)/.test(currentPath)) section = "work";
   else if (/\/resources(?:\.html|\/)/.test(currentPath)) section = "resources";
 
   const primaryLinks = {
@@ -58,7 +58,6 @@ const servicesDropdown = document.querySelector(".nav-services");
 const servicesTrigger = document.querySelector(".nav-services-trigger");
 let servicesMenuCloseTimer = 0;
 let servicesMenuPinned = false;
-const forms = document.querySelectorAll("form");
 const heroForm = document.querySelector(".hero-form");
 
 function setServicesMenuOpen(open, pinned = servicesMenuPinned) {
@@ -106,7 +105,7 @@ function initializeMobileNavigation() {
   const safe = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
   const arrow = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';
   const link = ([label, href], className = "") => `<a class="${className}" href="${navRoot}${safe(href)}"><span>${safe(label)}</span><span class="sm-arrow" aria-hidden="true">${arrow}</span></a>`;
-  const mainLinks = [['Our Story','our-story.html'],['Work','work.html'],['Services','services.html'],['Industries','industries.html'],['Case Studies','case-studies.html'],['Resources','resources.html'],['Contact','contact.html']];
+  const mainLinks = [['Our Story','our-story.html'],['Services','services.html'],['Our Work','work.html'],['Industries','industries.html'],['Resources','resources.html'],['Contact','contact.html']];
   const services = SERVICE_MENU_PILLARS.flatMap(pillar => pillar.groups.flatMap(group => group.links));
   const allServicesLink = () => link(['View all services','services.html#all-services'], 'sm-all-services');
   const dialog = document.createElement('dialog');
@@ -116,7 +115,7 @@ function initializeMobileNavigation() {
   dialog.setAttribute('autofocus', '');
   dialog.innerHTML = `<div class="sm-panel">
     <header class="sm-top">
-      <a class="sm-logo" href="${navRoot}index.html" aria-label="VNW Media home"><img src="${window.vnwSite.theme}assets/vnwMedia-LogoBlk.png" alt="VNW Media" width="646" height="128"></a>
+      <a class="sm-logo" href="${navRoot}index.html" aria-label="VNW Media home"><img src="${window.vnwSite.theme}assets/vnw-media-logo-646.webp" alt="VNW Media" width="646" height="128" decoding="async"></a>
       <div class="sm-actions"><a class="sm-icon" href="tel:17328200609" aria-label="Call VNW Media at (732) 820-0609"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.09 9.89a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.83.56 2.79.69A2 2 0 0 1 22 16.92z"/></svg></a><button class="sm-icon" type="button" data-sm-close aria-label="Close mobile menu">×</button></div>
     </header>
     <div class="sm-scroll">
@@ -126,7 +125,7 @@ function initializeMobileNavigation() {
       <div class="sm-browse"><div class="sm-tabs" role="tablist" aria-label="Service categories">${SERVICE_MENU_PILLARS.map((pillar, index) => `<button type="button" role="tab" id="sm-tab-${index}" data-sm-tab="${index}" aria-controls="sm-services" aria-selected="${index === 0}" tabindex="${index === 0 ? 0 : -1}">${safe(pillar.name)}</button>`).join('')}</div><section id="sm-services" role="tabpanel" aria-labelledby="sm-tab-0"></section>${allServicesLink()}</div>
       <div id="sm-results" hidden><p class="sm-result-count" role="status" aria-live="polite" aria-atomic="true"></p><div class="sm-result-content"></div></div>
     </div>
-    <footer class="sm-footer"><a class="sm-cta" href="${navRoot}contact.html">Let’s talk about your project</a><p>One team. Your next stage of growth.</p></footer>
+    <footer class="sm-footer"><a class="sm-cta" href="${navRoot}contact.html" data-open-mobile-email aria-haspopup="dialog" aria-controls="vnw-mobile-email-sheet">Let’s talk about your project</a><p>One team. Your next stage of growth.</p></footer>
   </div>`;
   document.body.append(dialog);
   const panel = dialog.querySelector('.sm-panel');
@@ -178,7 +177,7 @@ function initializeMobileNavigation() {
     window.scrollTo({ top: savedScrollY, behavior: 'instant' });
   }
 
-  function closeMenu(immediate = false) {
+  function closeMenu(immediate = false, afterClose) {
     clearTimeout(closeTimer);
     cancelAnimationFrame(openFrame);
     clearTimeout(openFocusTimer);
@@ -188,6 +187,7 @@ function initializeMobileNavigation() {
     const finish = () => {
       if (dialog.open) dialog.close();
       unlockPage();
+      afterClose?.();
     };
     if (immediate || reducedMotion.matches) finish();
     else closeTimer = setTimeout(finish, 480);
@@ -247,6 +247,13 @@ function initializeMobileNavigation() {
     unlockPage();
   });
   dialog.addEventListener('click', event => {
+    if (event.target.closest('[data-open-mobile-email]') && mobileViewport.matches && document.getElementById('vnw-mobile-email-sheet')) {
+      event.preventDefault();
+      // Hand off in the same click: remove the native modal/scroll lock, then
+      // start the sheet's existing slide-up without waiting for the menu exit.
+      closeMenu(true, () => document.dispatchEvent(new CustomEvent('vnw:open-mobile-email')));
+      return;
+    }
     if (event.target === dialog || event.target.closest('[data-sm-close]')) closeMenu();
     else if (event.target.closest('a')) closeMenu(true);
     else if (event.target.closest('[data-sm-clear]')) { search.value = ''; updateSearch(); search.focus(); }
@@ -354,23 +361,76 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
-const testimonialTicker = document.querySelector("[data-testimonial-ticker]");
-const testimonialTickerTrack = testimonialTicker?.querySelector(".testimonial-ticker-track");
+function initializeMobileReviewPause(ticker, track) {
+  const mobileReviews = matchMedia('(max-width: 800px)');
+  const heldPointers = new Set();
+  const resume = () => {
+    heldPointers.clear();
+    track.classList.remove('is-paused');
+  };
+  ticker.addEventListener('pointerdown', event => {
+    if (!mobileReviews.matches || event.button !== 0) return;
+    const card = event.target.closest?.('.testimonial-ticker-card');
+    if (!card || !ticker.contains(card)) return;
+    heldPointers.add(event.pointerId);
+    track.classList.add('is-paused');
+  }, {passive:true});
+  const release = event => {
+    heldPointers.delete(event.pointerId);
+    if (!heldPointers.size) track.classList.remove('is-paused');
+  };
+  // Lifting outside the card or cancelling a touch also resumes immediately.
+  // Do not capture the pointer or block normal page scrolling and card buttons.
+  document.addEventListener('pointerup', release, {capture:true, passive:true});
+  document.addEventListener('pointercancel', release, {capture:true, passive:true});
+  window.addEventListener('blur', resume);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) resume(); });
+  mobileReviews.addEventListener('change', resume);
+}
 
-if (testimonialTicker && testimonialTickerTrack) {
+document.querySelectorAll("[data-testimonial-ticker]").forEach(testimonialTicker => {
+  const testimonialTickerTrack = testimonialTicker.querySelector(".testimonial-ticker-track");
+  if (!testimonialTickerTrack) return;
   const originalCards = Array.from(testimonialTickerTrack.children);
-  originalCards.forEach((card) => {
+  if (!originalCards.length) return;
+  // The homepage's 22-card loop takes 82 seconds. Scale shorter review sets
+  // by card count so every page moves at the same pixels-per-second pace.
+  const homepageReviewCount = 22;
+  const homepageLoopSeconds = 82;
+  testimonialTickerTrack.style.animationDuration =
+    `${(homepageLoopSeconds * originalCards.length / homepageReviewCount).toFixed(3)}s`;
+  const appendReviewSet = () => originalCards.forEach((card) => {
     const clone = card.cloneNode(true);
     clone.setAttribute("aria-hidden", "true");
     clone.classList.add("testimonial-ticker-clone");
     testimonialTickerTrack.append(clone);
   });
+  appendReviewSet();
+  const firstClone = testimonialTickerTrack.children[originalCards.length];
+  const firstCard = testimonialTickerTrack.children[0];
+  if (firstCard && firstClone) {
+    const groupWidth = firstClone.offsetLeft - firstCard.offsetLeft;
+    const minimumLoopWidth = testimonialTicker.clientWidth + groupWidth;
+    for (let copies = 0; copies < 16 && testimonialTickerTrack.scrollWidth < minimumLoopWidth; copies++) {
+      const previousWidth = testimonialTickerTrack.scrollWidth;
+      appendReviewSet();
+      if (testimonialTickerTrack.scrollWidth <= previousWidth) break;
+    }
+  }
 
   const updateTestimonialTickerDistance = () => {
+    // Offset the initial card, but keep overflow clipping at the browser edge.
+    const section = testimonialTicker.closest(".testimonial-ticker-section");
+    const anchor = section?.querySelector(".testimonial-ticker-shell") || document.querySelector("header .logo");
+    const inset = anchor ? Math.max(0, anchor.getBoundingClientRect().left - testimonialTicker.getBoundingClientRect().left) : 0;
+    testimonialTicker.style.boxSizing = "border-box";
+    testimonialTicker.style.paddingLeft = `${inset}px`;
+    testimonialTickerTrack.style.padding = "0";
     const firstCard = testimonialTickerTrack.children[0];
     const firstClone = testimonialTickerTrack.children[originalCards.length];
     if (!firstCard || !firstClone) return;
-    testimonialTickerTrack.style.setProperty("--testimonial-loop-distance", `${firstClone.offsetLeft - firstCard.offsetLeft}px`);
+    const distance = firstClone.offsetLeft - firstCard.offsetLeft;
+    testimonialTickerTrack.style.setProperty("--testimonial-loop-distance", `${distance}px`);
   };
 
   // Enhance originals and visual loop copies without changing the ticker motion.
@@ -408,14 +468,17 @@ if (testimonialTicker && testimonialTickerTrack) {
   addEventListener("resize", updateReviewOverflow, { passive: true });
 
   // Keep one continuous timeline as the page scrolls in and out of view.
-  // Hover, touch and keyboard focus do not pause or reset the reviews.
+  // Desktop hover pauses through CSS; mobile pauses only while a card is held.
+  // Resuming changes play state only, never restarts the animation timeline.
   // The stylesheet still honors the device's reduced-motion preference.
+  initializeMobileReviewPause(testimonialTicker, testimonialTickerTrack);
 
   updateTestimonialTickerDistance();
+  document.fonts.ready.then(updateTestimonialTickerDistance);
   addEventListener("load", updateTestimonialTickerDistance);
   addEventListener("resize", updateTestimonialTickerDistance, { passive: true });
 
-}
+});
 
 if (heroForm) {
   const mobileCtaObserver = new IntersectionObserver((entries) => {
@@ -424,4 +487,5 @@ if (heroForm) {
   mobileCtaObserver.observe(heroForm);
 }
 
-
+// All page and dynamically inserted lead forms use the shared delegated handler
+// in lead-attribution.js, including the mobile quick-contact email sheet.

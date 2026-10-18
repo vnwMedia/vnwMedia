@@ -1,0 +1,17 @@
+{
+  "fixture": "upgrade-040-test-blueprint.json",
+  "passed": true,
+  "baselines": [
+    "0.2.1",
+    "0.3.1"
+  ],
+  "checks": [
+    "fresh import: 211 pages/posts",
+    "repeat import creates no duplicates",
+    "both old baseline upgrades",
+    "manual raw HTML edits retained",
+    "manual Elementor edits retained",
+    "repeat update idempotent"
+  ],
+  "source_commit": "a7a4c4db7dd3f443b460a48e96d128e7e0040d9e"
+}

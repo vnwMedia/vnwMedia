@@ -1,0 +1,216 @@
+/* Generated from mobile-hero-focal-points.json. Focal positions only; no layout,
+   zoom, contrast, asset, form, or desktop changes. No runtime JavaScript needed. */
+@media(max-width:760px){
+  html body main :is(.hero-bg,.inner-hero-bg,.csp-hero-media,.indl-hero-media,.scm-ms-hero-bg){
+    background-position:var(--mobile-hero-x,50%) var(--mobile-hero-y,0%)!important;
+  }
+  html body main :is(.hero-bg,.inner-hero-bg,.csp-hero-media,.indl-hero-media,.scm-ms-hero-bg) :is(img,video):is([src],[data-src]),
+  html body main :is(.sd-hero,.cinema-hero,.cover-five,.cs-live-hero)>img[src],
+  html body main :is(.article-hero,.ind-hero) img[src]{
+    object-position:var(--mobile-hero-x,50%) var(--mobile-hero-y,0%)!important;
+  }
+  /* Blue car and collision center */
+  html body main :is([src*="assets/brooklyn-motors-banner"],[data-src*="assets/brooklyn-motors-banner"],[style*="assets/brooklyn-motors-banner"]){--mobile-hero-x:60%;--mobile-hero-y:50%}
+  /* Team and studio monitor */
+  html body main :is([src*="assets/case-studies-hero-larosa-logo"],[data-src*="assets/case-studies-hero-larosa-logo"],[style*="assets/case-studies-hero-larosa-logo"]){--mobile-hero-x:70%;--mobile-hero-y:0%}
+  /* Beauty portrait */
+  html body main :is([src*="assets/client-projects/aesthetic-island-nyc-beauty"],[data-src*="assets/client-projects/aesthetic-island-nyc-beauty"],[style*="assets/client-projects/aesthetic-island-nyc-beauty"]){--mobile-hero-x:68%;--mobile-hero-y:0%}
+  /* Spa website imagery */
+  html body main :is([src*="assets/client-projects/argana-day-spa-desktop"],[data-src*="assets/client-projects/argana-day-spa-desktop"],[style*="assets/client-projects/argana-day-spa-desktop"]){--mobile-hero-x:60%;--mobile-hero-y:20%}
+  /* Commercial laundry machines */
+  html body main :is([src*="assets/client-projects/art-of-construction-hero"],[data-src*="assets/client-projects/art-of-construction-hero"],[style*="assets/client-projects/art-of-construction-hero"]){--mobile-hero-x:45%;--mobile-hero-y:0%}
+  /* Calvin portrait */
+  html body main :is([src*="assets/client-projects/calvin-schwartz-portrait-cover"],[data-src*="assets/client-projects/calvin-schwartz-portrait-cover"],[style*="assets/client-projects/calvin-schwartz-portrait-cover"]){--mobile-hero-x:71%;--mobile-hero-y:0%}
+  /* House exterior */
+  html body main :is([src*="assets/client-projects/catanzaros-power-washing-hero"],[data-src*="assets/client-projects/catanzaros-power-washing-hero"],[style*="assets/client-projects/catanzaros-power-washing-hero"]){--mobile-hero-x:50%;--mobile-hero-y:35%}
+  /* Catering hall and reception area */
+  html body main :is([src*="assets/client-projects/classical-caterers-hall"],[data-src*="assets/client-projects/classical-caterers-hall"],[style*="assets/client-projects/classical-caterers-hall"]){--mobile-hero-x:55%;--mobile-hero-y:0%}
+  /* Jewelry display */
+  html body main :is([src*="assets/client-projects/coin-jewelry-gallery-boca-raton-hero"],[data-src*="assets/client-projects/coin-jewelry-gallery-boca-raton-hero"],[style*="assets/client-projects/coin-jewelry-gallery-boca-raton-hero"]){--mobile-hero-x:58%;--mobile-hero-y:50%}
+  /* Delivery truck */
+  html body main :is([src*="assets/client-projects/cti-logistics-hero"],[data-src*="assets/client-projects/cti-logistics-hero"],[style*="assets/client-projects/cti-logistics-hero"]){--mobile-hero-x:55%;--mobile-hero-y:50%}
+  /* Laboratory work */
+  html body main :is([src*="assets/client-projects/fordoz-pharma-hero"],[data-src*="assets/client-projects/fordoz-pharma-hero"],[style*="assets/client-projects/fordoz-pharma-hero"]){--mobile-hero-x:55%;--mobile-hero-y:50%}
+  /* Education illustration */
+  html body main :is([src*="assets/client-projects/genius-kids-desktop"],[data-src*="assets/client-projects/genius-kids-desktop"],[style*="assets/client-projects/genius-kids-desktop"]){--mobile-hero-x:50%;--mobile-hero-y:20%}
+  /* Counselor and client */
+  html body main :is([src*="assets/client-projects/harlem-east-life-plan-care"],[data-src*="assets/client-projects/harlem-east-life-plan-care"],[style*="assets/client-projects/harlem-east-life-plan-care"]){--mobile-hero-x:80%;--mobile-hero-y:0%}
+  /* Mechanic and vehicle */
+  html body main :is([src*="assets/client-projects/jb-body-works-collision-repair"],[data-src*="assets/client-projects/jb-body-works-collision-repair"],[style*="assets/client-projects/jb-body-works-collision-repair"]){--mobile-hero-x:70%;--mobile-hero-y:0%}
+  /* Consultation table and legal office */
+  html body main :is([src*="assets/client-projects/mb-law-legal-office"],[data-src*="assets/client-projects/mb-law-legal-office"],[style*="assets/client-projects/mb-law-legal-office"]){--mobile-hero-x:85%;--mobile-hero-y:0%}
+  /* Learning center website */
+  html body main :is([src*="assets/client-projects/new-generation-learning-center-desktop"],[data-src*="assets/client-projects/new-generation-learning-center-desktop"],[style*="assets/client-projects/new-generation-learning-center-desktop"]){--mobile-hero-x:50%;--mobile-hero-y:15%}
+  /* Students together */
+  html body main :is([src*="assets/client-projects/nj-steps-to-success-hero"],[data-src*="assets/client-projects/nj-steps-to-success-hero"],[style*="assets/client-projects/nj-steps-to-success-hero"]){--mobile-hero-x:36%;--mobile-hero-y:0%}
+  /* Car and hotel entrance */
+  html body main :is([src*="assets/client-projects/platinum-valet-parking-hero"],[data-src*="assets/client-projects/platinum-valet-parking-hero"],[style*="assets/client-projects/platinum-valet-parking-hero"]){--mobile-hero-x:55%;--mobile-hero-y:50%}
+  /* Treatment chair and aesthetics studio */
+  html body main :is([src*="assets/client-projects/prestige-beauty-project-aesthetics-studio"],[data-src*="assets/client-projects/prestige-beauty-project-aesthetics-studio"],[style*="assets/client-projects/prestige-beauty-project-aesthetics-studio"]){--mobile-hero-x:65%;--mobile-hero-y:0%}
+  /* Roof and home exterior */
+  html body main :is([src*="assets/client-projects/raidex-construction-hero"],[data-src*="assets/client-projects/raidex-construction-hero"],[style*="assets/client-projects/raidex-construction-hero"]){--mobile-hero-x:50%;--mobile-hero-y:35%}
+  /* Construction vehicles */
+  html body main :is([src*="assets/client-projects/skyrex-inc-hero"],[data-src*="assets/client-projects/skyrex-inc-hero"],[style*="assets/client-projects/skyrex-inc-hero"]){--mobile-hero-x:50%;--mobile-hero-y:50%}
+  /* Bathroom plumbing fixtures */
+  html body main :is([src*="assets/h2bros-plumbing-hero"],[data-src*="assets/h2bros-plumbing-hero"],[style*="assets/h2bros-plumbing-hero"]){--mobile-hero-x:60%;--mobile-hero-y:35%}
+  /* Mechanic explaining a repair */
+  html body main :is([src*="assets/home-hero-options/industry-motion/automotive"],[data-src*="assets/home-hero-options/industry-motion/automotive"],[style*="assets/home-hero-options/industry-motion/automotive"]){--mobile-hero-x:74%;--mobile-hero-y:0%}
+  /* Educator speaking with parent */
+  html body main :is([src*="assets/home-hero-options/industry-motion/daycare-education"],[data-src*="assets/home-hero-options/industry-motion/daycare-education"],[style*="assets/home-hero-options/industry-motion/daycare-education"]){--mobile-hero-x:62%;--mobile-hero-y:0%}
+  /* Healthcare reception and clinician */
+  html body main :is([src*="assets/home-hero-options/industry-motion/healthcare"],[data-src*="assets/home-hero-options/industry-motion/healthcare"],[style*="assets/home-hero-options/industry-motion/healthcare"]){--mobile-hero-x:78%;--mobile-hero-y:0%}
+  /* Contractor and homeowner */
+  html body main :is([src*="assets/home-hero-options/industry-motion/home-services"],[data-src*="assets/home-hero-options/industry-motion/home-services"],[style*="assets/home-hero-options/industry-motion/home-services"]){--mobile-hero-x:72%;--mobile-hero-y:0%}
+  /* Attorney consultation */
+  html body main :is([src*="assets/home-hero-options/industry-motion/legal-professional-services"],[data-src*="assets/home-hero-options/industry-motion/legal-professional-services"],[style*="assets/home-hero-options/industry-motion/legal-professional-services"]){--mobile-hero-x:58%;--mobile-hero-y:0%}
+  /* Property agent and visitors */
+  html body main :is([src*="assets/home-hero-options/industry-motion/real-estate"],[data-src*="assets/home-hero-options/industry-motion/real-estate"],[style*="assets/home-hero-options/industry-motion/real-estate"]){--mobile-hero-x:75%;--mobile-hero-y:0%}
+  /* Restaurant host welcoming guests */
+  html body main :is([src*="assets/home-hero-options/industry-motion/restaurants-hospitality"],[data-src*="assets/home-hero-options/industry-motion/restaurants-hospitality"],[style*="assets/home-hero-options/industry-motion/restaurants-hospitality"]){--mobile-hero-x:68%;--mobile-hero-y:0%}
+  /* Retail owner packing an order */
+  html body main :is([src*="assets/home-hero-options/industry-motion/retail-ecommerce"],[data-src*="assets/home-hero-options/industry-motion/retail-ecommerce"],[style*="assets/home-hero-options/industry-motion/retail-ecommerce"]){--mobile-hero-x:65%;--mobile-hero-y:0%}
+  /* Active neighborhood storefronts */
+  html body main :is([src*="assets/industry-concepts/business-neighborhood-hero-v1"],[data-src*="assets/industry-concepts/business-neighborhood-hero-v1"],[style*="assets/industry-concepts/business-neighborhood-hero-v1"]){--mobile-hero-x:62%;--mobile-hero-y:0%}
+  /* Mechanic and customer */
+  html body main :is([src*="assets/industry-heroes/automotive"],[data-src*="assets/industry-heroes/automotive"],[style*="assets/industry-heroes/automotive"]){--mobile-hero-x:74%;--mobile-hero-y:0%}
+  /* Educator and parent */
+  html body main :is([src*="assets/industry-heroes/daycare-education"],[data-src*="assets/industry-heroes/daycare-education"],[style*="assets/industry-heroes/daycare-education"]){--mobile-hero-x:62%;--mobile-hero-y:0%}
+  /* Healthcare reception */
+  html body main :is([src*="assets/industry-heroes/healthcare"],[data-src*="assets/industry-heroes/healthcare"],[style*="assets/industry-heroes/healthcare"]){--mobile-hero-x:78%;--mobile-hero-y:0%}
+  /* Contractor reviewing a project */
+  html body main :is([src*="assets/industry-heroes/home-services"],[data-src*="assets/industry-heroes/home-services"],[style*="assets/industry-heroes/home-services"]){--mobile-hero-x:72%;--mobile-hero-y:0%}
+  /* Business team reviewing a laptop */
+  html body main :is([src*="assets/industry-heroes/industry-directory"],[data-src*="assets/industry-heroes/industry-directory"],[style*="assets/industry-heroes/industry-directory"]){--mobile-hero-x:70%;--mobile-hero-y:0%}
+  /* Attorney and client */
+  html body main :is([src*="assets/industry-heroes/legal-professional-services"],[data-src*="assets/industry-heroes/legal-professional-services"],[style*="assets/industry-heroes/legal-professional-services"]){--mobile-hero-x:58%;--mobile-hero-y:0%}
+  /* Property consultation */
+  html body main :is([src*="assets/industry-heroes/real-estate"],[data-src*="assets/industry-heroes/real-estate"],[style*="assets/industry-heroes/real-estate"]){--mobile-hero-x:75%;--mobile-hero-y:0%}
+  /* Restaurant welcome */
+  html body main :is([src*="assets/industry-heroes/restaurants-hospitality"],[data-src*="assets/industry-heroes/restaurants-hospitality"],[style*="assets/industry-heroes/restaurants-hospitality"]){--mobile-hero-x:68%;--mobile-hero-y:0%}
+  /* Order packing */
+  html body main :is([src*="assets/industry-heroes/retail-ecommerce"],[data-src*="assets/industry-heroes/retail-ecommerce"],[style*="assets/industry-heroes/retail-ecommerce"]){--mobile-hero-x:65%;--mobile-hero-y:0%}
+  /* Legal documents and scales */
+  html body main :is([src*="assets/kypcl-hero"],[data-src*="assets/kypcl-hero"],[style*="assets/kypcl-hero"]){--mobile-hero-x:50%;--mobile-hero-y:40%}
+  /* Central restaurant logo and food */
+  html body main :is([src*="assets/la-rosa-portfolio-hero"],[data-src*="assets/la-rosa-portfolio-hero"],[style*="assets/la-rosa-portfolio-hero"]){--mobile-hero-x:50%;--mobile-hero-y:50%}
+  /* Center the business owner’s face during the website review */
+  html body main :is([src*="assets/location-heroes/nj-digital-marketing"],[data-src*="assets/location-heroes/nj-digital-marketing"],[style*="assets/location-heroes/nj-digital-marketing"]){--mobile-hero-x:50%;--mobile-hero-y:0%}
+  /* Owners discussing advertising charts */
+  html body main :is([src*="assets/location-heroes/nj-ppc"],[data-src*="assets/location-heroes/nj-ppc"],[style*="assets/location-heroes/nj-ppc"]){--mobile-hero-x:62%;--mobile-hero-y:0%}
+  /* Search charts and consultation */
+  html body main :is([src*="assets/location-heroes/nj-seo"],[data-src*="assets/location-heroes/nj-seo"],[style*="assets/location-heroes/nj-seo"]){--mobile-hero-x:55%;--mobile-hero-y:0%}
+  /* Website design consultation */
+  html body main :is([src*="assets/location-heroes/nj-web-design"],[data-src*="assets/location-heroes/nj-web-design"],[style*="assets/location-heroes/nj-web-design"]){--mobile-hero-x:65%;--mobile-hero-y:0%}
+  /* Business strategy conversation */
+  html body main :is([src*="assets/location-heroes/ny-digital-marketing"],[data-src*="assets/location-heroes/ny-digital-marketing"],[style*="assets/location-heroes/ny-digital-marketing"]){--mobile-hero-x:60%;--mobile-hero-y:0%}
+  /* Paid campaign review */
+  html body main :is([src*="assets/location-heroes/ny-ppc"],[data-src*="assets/location-heroes/ny-ppc"],[style*="assets/location-heroes/ny-ppc"]){--mobile-hero-x:55%;--mobile-hero-y:0%}
+  /* Search specialist and business owner */
+  html body main :is([src*="assets/location-heroes/ny-seo"],[data-src*="assets/location-heroes/ny-seo"],[style*="assets/location-heroes/ny-seo"]){--mobile-hero-x:50%;--mobile-hero-y:0%}
+  /* Website design presentation */
+  html body main :is([src*="assets/location-heroes/ny-web-design"],[data-src*="assets/location-heroes/ny-web-design"],[style*="assets/location-heroes/ny-web-design"]){--mobile-hero-x:53%;--mobile-hero-y:0%}
+  /* Subway advertising panels */
+  html body main :is([src*="assets/nycadsco-hero"],[data-src*="assets/nycadsco-hero"],[style*="assets/nycadsco-hero"]){--mobile-hero-x:50%;--mobile-hero-y:35%}
+  /* Team discussing social content */
+  html body main :is([src*="assets/resources/photo-0."],[data-src*="assets/resources/photo-0."],[style*="assets/resources/photo-0."]){--mobile-hero-x:65%;--mobile-hero-y:50%}
+  /* Workshop participants */
+  html body main :is([src*="assets/resources/photo-1."],[data-src*="assets/resources/photo-1."],[style*="assets/resources/photo-1."]){--mobile-hero-x:60%;--mobile-hero-y:50%}
+  /* Coworking team */
+  html body main :is([src*="assets/resources/photo-10."],[data-src*="assets/resources/photo-10."],[style*="assets/resources/photo-10."]){--mobile-hero-x:45%;--mobile-hero-y:50%}
+  /* Hands reviewing business plans */
+  html body main :is([src*="assets/resources/photo-2."],[data-src*="assets/resources/photo-2."],[style*="assets/resources/photo-2."]){--mobile-hero-x:60%;--mobile-hero-y:50%}
+  /* Desktop website workspace */
+  html body main :is([src*="assets/resources/photo-3."],[data-src*="assets/resources/photo-3."],[style*="assets/resources/photo-3."]){--mobile-hero-x:45%;--mobile-hero-y:50%}
+  /* Responsive website screens */
+  html body main :is([src*="assets/resources/photo-4."],[data-src*="assets/resources/photo-4."],[style*="assets/resources/photo-4."]){--mobile-hero-x:55%;--mobile-hero-y:50%}
+  /* Meeting and presenter */
+  html body main :is([src*="assets/resources/photo-5."],[data-src*="assets/resources/photo-5."],[style*="assets/resources/photo-5."]){--mobile-hero-x:40%;--mobile-hero-y:45%}
+  /* Laptop workspace */
+  html body main :is([src*="assets/resources/photo-7."],[data-src*="assets/resources/photo-7."],[style*="assets/resources/photo-7."]){--mobile-hero-x:50%;--mobile-hero-y:50%}
+  /* Person working at a laptop */
+  html body main :is([src*="assets/resources/photo-8."],[data-src*="assets/resources/photo-8."],[style*="assets/resources/photo-8."]){--mobile-hero-x:60%;--mobile-hero-y:50%}
+  /* Code on a screen */
+  html body main :is([src*="assets/resources/photo-9."],[data-src*="assets/resources/photo-9."],[style*="assets/resources/photo-9."]){--mobile-hero-x:50%;--mobile-hero-y:50%}
+  /* Team reviewing editorial work */
+  html body main :is([src*="assets/resources/resources-editorial-hero-v2"],[data-src*="assets/resources/resources-editorial-hero-v2"],[style*="assets/resources/resources-editorial-hero-v2"]){--mobile-hero-x:75%;--mobile-hero-y:0%}
+  /* App designers and interface */
+  html body main :is([src*="assets/service-heroes/app-design-development-v2"],[data-src*="assets/service-heroes/app-design-development-v2"],[style*="assets/service-heroes/app-design-development-v2"]){--mobile-hero-x:75%;--mobile-hero-y:0%}
+  /* Strategy team and brand presentation */
+  html body main :is([src*="assets/service-heroes/brand-strategy-v2"],[data-src*="assets/service-heroes/brand-strategy-v2"],[style*="assets/service-heroes/brand-strategy-v2"]){--mobile-hero-x:77%;--mobile-hero-y:0%}
+  /* Community management team */
+  html body main :is([src*="assets/service-heroes/community-management-v2"],[data-src*="assets/service-heroes/community-management-v2"],[style*="assets/service-heroes/community-management-v2"]){--mobile-hero-x:75%;--mobile-hero-y:0%}
+  /* Content planning consultation */
+  html body main :is([src*="assets/service-heroes/content-seo-v1"],[data-src*="assets/service-heroes/content-seo-v1"],[style*="assets/service-heroes/content-seo-v1"]){--mobile-hero-x:60%;--mobile-hero-y:0%}
+  /* Writing team and document */
+  html body main :is([src*="assets/service-heroes/content-writing-v2"],[data-src*="assets/service-heroes/content-writing-v2"],[style*="assets/service-heroes/content-writing-v2"]){--mobile-hero-x:76%;--mobile-hero-y:0%}
+  /* CRM workflow on monitor */
+  html body main :is([src*="assets/service-heroes/crm-automation-v2"],[data-src*="assets/service-heroes/crm-automation-v2"],[style*="assets/service-heroes/crm-automation-v2"]){--mobile-hero-x:76%;--mobile-hero-y:0%}
+  /* Online storefront review */
+  html body main :is([src*="assets/service-heroes/ecommerce-v2"],[data-src*="assets/service-heroes/ecommerce-v2"],[style*="assets/service-heroes/ecommerce-v2"]){--mobile-hero-x:67%;--mobile-hero-y:0%}
+  /* Email campaign on desktop */
+  html body main :is([src*="assets/service-heroes/email-marketing-v2"],[data-src*="assets/service-heroes/email-marketing-v2"],[style*="assets/service-heroes/email-marketing-v2"]){--mobile-hero-x:62%;--mobile-hero-y:0%}
+  /* AI visibility consultation */
+  html body main :is([src*="assets/service-heroes/geo-visibility-review-v3"],[data-src*="assets/service-heroes/geo-visibility-review-v3"],[style*="assets/service-heroes/geo-visibility-review-v3"]){--mobile-hero-x:55%;--mobile-hero-y:0%}
+  /* Business profile discussion */
+  html body main :is([src*="assets/service-heroes/google-business-profile-v2"],[data-src*="assets/service-heroes/google-business-profile-v2"],[style*="assets/service-heroes/google-business-profile-v2"]){--mobile-hero-x:70%;--mobile-hero-y:0%}
+  /* Paid-search planning */
+  html body main :is([src*="assets/service-heroes/google-ppc-v2"],[data-src*="assets/service-heroes/google-ppc-v2"],[style*="assets/service-heroes/google-ppc-v2"]){--mobile-hero-x:73%;--mobile-hero-y:0%}
+  /* Designers reviewing creative */
+  html body main :is([src*="assets/service-heroes/graphic-design-v2"],[data-src*="assets/service-heroes/graphic-design-v2"],[style*="assets/service-heroes/graphic-design-v2"]){--mobile-hero-x:80%;--mobile-hero-y:0%}
+  /* Landing page on monitor */
+  html body main :is([src*="assets/service-heroes/landing-pages-v2"],[data-src*="assets/service-heroes/landing-pages-v2"],[style*="assets/service-heroes/landing-pages-v2"]){--mobile-hero-x:70%;--mobile-hero-y:0%}
+  /* Lead generation review */
+  html body main :is([src*="assets/service-heroes/lead-generation-v2"],[data-src*="assets/service-heroes/lead-generation-v2"],[style*="assets/service-heroes/lead-generation-v2"]){--mobile-hero-x:72%;--mobile-hero-y:0%}
+  /* Local search performance */
+  html body main :is([src*="assets/service-heroes/local-seo-v1"],[data-src*="assets/service-heroes/local-seo-v1"],[style*="assets/service-heroes/local-seo-v1"]){--mobile-hero-x:60%;--mobile-hero-y:0%}
+  /* Social campaign planning */
+  html body main :is([src*="assets/service-heroes/paid-social-v2"],[data-src*="assets/service-heroes/paid-social-v2"],[style*="assets/service-heroes/paid-social-v2"]){--mobile-hero-x:76%;--mobile-hero-y:0%}
+  /* Review management screen */
+  html body main :is([src*="assets/service-heroes/reputation-management-v2"],[data-src*="assets/service-heroes/reputation-management-v2"],[style*="assets/service-heroes/reputation-management-v2"]){--mobile-hero-x:72%;--mobile-hero-y:0%}
+  /* Search analysis discussion */
+  html body main :is([src*="assets/service-heroes/seo-v2"],[data-src*="assets/service-heroes/seo-v2"],[style*="assets/service-heroes/seo-v2"]){--mobile-hero-x:64%;--mobile-hero-y:0%}
+  /* Social strategy meeting */
+  html body main :is([src*="assets/service-heroes/social-media-consultation-v2"],[data-src*="assets/service-heroes/social-media-consultation-v2"],[style*="assets/service-heroes/social-media-consultation-v2"]){--mobile-hero-x:75%;--mobile-hero-y:0%}
+  /* Social content planning */
+  html body main :is([src*="assets/service-heroes/social-media-v2"],[data-src*="assets/service-heroes/social-media-v2"],[style*="assets/service-heroes/social-media-v2"]){--mobile-hero-x:72%;--mobile-hero-y:0%}
+  /* Technical search review */
+  html body main :is([src*="assets/service-heroes/technical-seo-v1"],[data-src*="assets/service-heroes/technical-seo-v1"],[style*="assets/service-heroes/technical-seo-v1"]){--mobile-hero-x:62%;--mobile-hero-y:0%}
+  /* SMS campaign screen */
+  html body main :is([src*="assets/service-heroes/text-marketing-v2"],[data-src*="assets/service-heroes/text-marketing-v2"],[style*="assets/service-heroes/text-marketing-v2"]){--mobile-hero-x:76%;--mobile-hero-y:0%}
+  /* Video editor and timeline */
+  html body main :is([src*="assets/service-heroes/video-editing-v2"],[data-src*="assets/service-heroes/video-editing-v2"],[style*="assets/service-heroes/video-editing-v2"]){--mobile-hero-x:67%;--mobile-hero-y:0%}
+  /* Website designers at work */
+  html body main :is([src*="assets/service-heroes/web-design-v2"],[data-src*="assets/service-heroes/web-design-v2"],[style*="assets/service-heroes/web-design-v2"]){--mobile-hero-x:69%;--mobile-hero-y:0%}
+  /* Website maintenance screen */
+  html body main :is([src*="assets/service-heroes/website-maintenance-v2"],[data-src*="assets/service-heroes/website-maintenance-v2"],[style*="assets/service-heroes/website-maintenance-v2"]){--mobile-hero-x:70%;--mobile-hero-y:0%}
+  /* Yelp visibility review */
+  html body main :is([src*="assets/service-heroes/yelp-seo-v2"],[data-src*="assets/service-heroes/yelp-seo-v2"],[style*="assets/service-heroes/yelp-seo-v2"]){--mobile-hero-x:71%;--mobile-hero-y:0%}
+  /* San Francisco bus advertising */
+  html body main :is([src*="assets/sfadsco-hero"],[data-src*="assets/sfadsco-hero"],[style*="assets/sfadsco-hero"]){--mobile-hero-x:55%;--mobile-hero-y:50%}
+  /* Creative team at the wireframe wall */
+  html body main :is([src*="assets/story-hero-wireframe-wall-v2"],[data-src*="assets/story-hero-wireframe-wall-v2"],[style*="assets/story-hero-wireframe-wall-v2"]){--mobile-hero-x:80%;--mobile-hero-y:0%}
+  /* Optical staff and eyewear displays */
+  html body main :is([src*="assets/vision-centers-optical-boutique-hero"],[data-src*="assets/vision-centers-optical-boutique-hero"],[style*="assets/vision-centers-optical-boutique-hero"]){--mobile-hero-x:70%;--mobile-hero-y:0%}
+  /* Team around the digital project table */
+  html body main :is([src*="assets/work-hero-digital-table-v1"],[data-src*="assets/work-hero-digital-table-v1"],[style*="assets/work-hero-digital-table-v1"]){--mobile-hero-x:79%;--mobile-hero-y:0%}
+  /* Desktop workspace */
+  html body main :is([src*="photo-1483058712412-4245e9b90334"],[data-src*="photo-1483058712412-4245e9b90334"],[style*="photo-1483058712412-4245e9b90334"]){--mobile-hero-x:45%;--mobile-hero-y:45%}
+  /* Architect reviewing drawings */
+  html body main :is([src*="photo-1503387762-592deb58ef4e"],[data-src*="photo-1503387762-592deb58ef4e"],[style*="photo-1503387762-592deb58ef4e"]){--mobile-hero-x:50%;--mobile-hero-y:50%}
+  /* Teacher and classroom */
+  html body main :is([src*="photo-1509062522246-3755977927d7"],[data-src*="photo-1509062522246-3755977927d7"],[style*="photo-1509062522246-3755977927d7"]){--mobile-hero-x:55%;--mobile-hero-y:35%}
+  /* Person working at laptop */
+  html body main :is([src*="photo-1520607162513-77705c0f0d4a"],[data-src*="photo-1520607162513-77705c0f0d4a"],[style*="photo-1520607162513-77705c0f0d4a"]){--mobile-hero-x:55%;--mobile-hero-y:50%}
+  /* Workshop presenter and planning wall */
+  html body main :is([src*="photo-1552664730-d307ca884978"],[data-src*="photo-1552664730-d307ca884978"],[style*="photo-1552664730-d307ca884978"]){--mobile-hero-x:55%;--mobile-hero-y:30%}
+  /* Restaurant interior */
+  html body main :is([src*="photo-1555396273-367ea4eb4db5"],[data-src*="photo-1555396273-367ea4eb4db5"],[style*="photo-1555396273-367ea4eb4db5"]){--mobile-hero-x:55%;--mobile-hero-y:45%}
+  /* Retain centered business-team backdrop */
+  html body main :is([src*="photo-1556761175-b413da4baf72"],[data-src*="photo-1556761175-b413da4baf72"],[style*="photo-1556761175-b413da4baf72"]){--mobile-hero-x:50%;--mobile-hero-y:0%}
+  /* Business meeting */
+  html body main :is([src*="photo-1557804506-669a67965ba0"],[data-src*="photo-1557804506-669a67965ba0"],[style*="photo-1557804506-669a67965ba0"]){--mobile-hero-x:60%;--mobile-hero-y:35%}
+  /* Clinician explaining dental images */
+  html body main :is([src*="photo-1588776814546-1ffcf47267a5"],[data-src*="photo-1588776814546-1ffcf47267a5"],[style*="photo-1588776814546-1ffcf47267a5"]){--mobile-hero-x:50%;--mobile-hero-y:40%}
+  /* House exterior */
+  html body main :is([src*="photo-1600585154340-be6161a56a0c"],[data-src*="photo-1600585154340-be6161a56a0c"],[style*="photo-1600585154340-be6161a56a0c"]){--mobile-hero-x:60%;--mobile-hero-y:50%}
+}

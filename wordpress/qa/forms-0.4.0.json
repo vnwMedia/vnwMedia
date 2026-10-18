@@ -1,0 +1,10 @@
+{
+  "mobileSubmit": "passed",
+  "redirect": "http://127.0.0.1:9425/thank-you.html",
+  "heading": "Thanks for reaching out.",
+  "recipient": "contactus@vnwmedia.com",
+  "contextIncluded": true,
+  "campaignIncluded": true,
+  "invalidNonce": "rejected",
+  "delivery": "intercepted locally; inbox not tested"
+}

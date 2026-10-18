@@ -1,0 +1,43 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/elementor.latest-stable.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "vnw-media"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; vnw_import(); update_option('blog_public', 0);"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $before=wp_count_posts('page')->publish+wp_count_posts('post')->publish; if(vnw_import()!==0)throw new Exception('Import not idempotent'); $after=wp_count_posts('page')->publish+wp_count_posts('post')->publish; if($before!==$after)throw new Exception('Import duplicated content');"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $items=get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']); if(count($items)!==211)throw new Exception('Wrong content count'); foreach($items as $item)if(get_post_meta($item->ID,'_vnw_source',true)==='index.html' && substr_count($item->post_content,'<form')!==2)throw new Exception('Missing forms');"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; foreach(get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']) as $p) vnw_elementor_convert($p->ID);"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire '/wordpress/wp-load.php';\nforeach([['content/previous-pages.json','elementor/previous-sections.json'],['content/previous-031-pages.json','elementor/previous-031-sections.json']] as $files){\n $previous=json_decode(file_get_contents(get_template_directory().'/'.$files[0]),true);$catalog=json_decode(file_get_contents(get_template_directory().'/'.$files[1]),true);$ids=[];\n foreach($previous as $r){\n  if($r['type']==='redirect')continue;\n  $found=get_posts(['post_type'=>['page','post'],'meta_key'=>'_vnw_source','meta_value'=>$r['source'],'numberposts'=>1]);if(!$found)continue;$id=$found[0]->ID;\n  kses_remove_filters();wp_update_post(wp_slash(['ID'=>$id,'post_content'=>$r['post_content']??$r['html'],'post_title'=>$r['title'],'post_excerpt'=>$r['description']]));kses_init_filters();\n  $els=[];foreach($catalog['pages'][$r['source']]['sections'] as $key)$els[]=['id'=>substr((string)$key,0,7),'elType'=>'widget','widgetType'=>'vnw-section-'.$key,'settings'=>[],'elements'=>[]];\n  update_post_meta($id,'_elementor_data',wp_slash(wp_json_encode($els)));update_post_meta($id,'_vnw_elementor',1);update_post_meta($id,'_elementor_edit_mode','builder');$ids[]=$id;\n }\n $id=$ids[0];$raw=get_post_meta($id,'_elementor_data',true);$els=json_decode($raw,true);$els[0]['settings']['field_9']='Do not erase my manual edit';update_post_meta($id,'_elementor_data',wp_slash(wp_json_encode($els)));$saved=get_post_meta($id,'_elementor_data',true);\n if(!str_starts_with(vnw_refresh_latest($id),'Skipped:')||get_post_meta($id,'_elementor_data',true)!==$saved)throw new Exception('Manual Elementor edit not preserved');update_post_meta($id,'_elementor_data',wp_slash($raw));\n $content=get_post($id)->post_content;kses_remove_filters();wp_update_post(wp_slash(['ID'=>$id,'post_content'=>$content.'<p>Manual content edit</p>']));kses_init_filters();\n if(!str_starts_with(vnw_refresh_latest($id),'Skipped:'))throw new Exception('Manual page edit not preserved');kses_remove_filters();wp_update_post(wp_slash(['ID'=>$id,'post_content'=>$content]));kses_init_filters();\n foreach($ids as $id){$result=vnw_refresh_latest($id);if(!in_array($result,['Updated to latest design','Already current; edits retained'],true))throw new Exception($id.': '.$result);if(vnw_refresh_latest($id)!=='Already current; edits retained')throw new Exception('Not idempotent');}\n echo 'Upgraded '.count($ids).' baseline pages: '.$files[0].\"\\n\";\n}\nif(vnw_import()!==0)throw new Exception('Importer duplicates pages');\n"
+    }
+  ],
+  "login": true,
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "latest"
+  }
+}

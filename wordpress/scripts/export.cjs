@@ -1,7 +1,7 @@
 // Capture generated page content before interactive enhancements clone tickers.
 const fs=require('fs'), path=require('path');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE || '/Users/vnwmediallc/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
-const root=path.resolve(__dirname,'../..'), out=path.join(root,'wordpress/theme/vnw-media/content');
+const project=path.resolve(__dirname,'../..'), root=process.env.VNW_SOURCE_ROOT||project, out=path.join(project,'wordpress/theme/vnw-media/content');
 (async()=>{
 const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
 const page=await browser.newPage();
@@ -11,10 +11,10 @@ await page.route('**/*',async route=>{
  const u=route.request().url();
  if(/^https?:/.test(u))return route.abort();
  const name=new URL(u).pathname.split('/').pop();
- if(['script.js','tickers.js','resources-live.js'].includes(name))return route.fulfill({body:''});
+ if(['script.js','tickers.js','resources-live.js','site-buttons.js','lead-attribution.js','home-hero-motion.js'].includes(name))return route.fulfill({body:''});
  return route.continue();
 });
-const inventory=JSON.parse(fs.readFileSync(path.join(root,'wordpress/page-inventory.json')));
+const inventory=JSON.parse(fs.readFileSync(path.join(project,'wordpress/page-inventory.json')));
 const records=[];
 for(const record of inventory.records){
  if(record.type==='redirect'){records.push(record);continue;}
@@ -49,6 +49,6 @@ for(const record of inventory.records){
  console.log(record.source);
 }
 fs.writeFileSync(path.join(out,'export.json'),JSON.stringify({baseline:inventory.baseline_commit,records},null,2));
-fs.writeFileSync(path.join(root,'wordpress/theme/vnw-media/elementor/backgrounds.json'),JSON.stringify(Object.fromEntries(records.filter(r=>r.backgrounds).map(r=>[r.source,r.backgrounds.map(b=>({...b,image:b.image.replaceAll('file://'+root+'/','{{THEME}}')}))]))));
+fs.writeFileSync(path.join(project,'wordpress/theme/vnw-media/elementor/backgrounds.json'),JSON.stringify(Object.fromEntries(records.filter(r=>r.backgrounds).map(r=>[r.source,r.backgrounds.map(b=>({...b,image:b.image.replaceAll('file://'+root+'/','{{THEME}}')}))]))));
 await browser.close();
 })();

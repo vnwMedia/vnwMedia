@@ -1,0 +1,17 @@
+{
+  "completed_at": 1789842313,
+  "created_at": 1789841796,
+  "edited_from_video_id": null,
+  "error": null,
+  "expires_at": 1790015113,
+  "extended_from_video_id": null,
+  "id": "video_6aaed184993c8193ba27296e83ee69780d38066aa5fae160",
+  "model": "sora-2-pro",
+  "object": "video",
+  "progress": 100,
+  "prompt": "Use case: silent looping homepage hero background for a premium New Jersey web design and digital marketing agency\nPrimary request: a cinematic, photorealistic creative studio scene with three fictional adult professionals collaborating around a large dark table while reviewing a refined digital campaign on a wall display\nScene/background: sophisticated contemporary agency studio at blue hour, charcoal surfaces, warm wood, architectural glass, restrained reflections, subtle depth\nSubject: diverse fictional adult strategy and creative professionals, dressed in modern understated business-casual clothing\nAction: one professional calmly advances the campaign on the display while the others review materials and make a small natural gesture of agreement; movement stays subtle and continuous\nCamera: very slow stabilized lateral move from left to right, 35mm lens, wide 16:9 composition, no cuts, no zoom, no sudden movement\nLighting/mood: moody directional window light, soft warm practicals, quiet confidence, premium editorial-commercial photography\nColor palette: near black, graphite, warm neutral skin tones, cream, restrained cyan-blue practical accents\nStyle/format: photorealistic, cinematic natural grain, high-end agency campaign, background plate designed for a dark website overlay\nTiming/beats: eight seconds of continuous restrained movement with the final framing and motion cadence close to the opening so the clip loops smoothly\nAudio: none\nConstraints: keep the left quarter and right quarter visually quiet and relatively dark for a large headline and cream lead form; place people and visual activity primarily in the middle third; realistic faces, hands, screens, reflections, and body movement; suitable for desktop and center-cropped mobile use; no logos, no readable text, no interface labels, no illustrations, no icons, no watermark\nAvoid: stock-photo posing, handshakes, exaggerated smiles, floating UI, holograms, neon cyberpunk, bright white office, camera shake, flicker, morphing hands or faces, abrupt motion, scene cuts, text",
+  "remixed_from_video_id": null,
+  "seconds": "8",
+  "size": "1920x1080",
+  "status": "completed"
+}

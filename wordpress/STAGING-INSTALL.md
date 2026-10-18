@@ -1,3 +1,5 @@
+For the current update, follow **UPDATE-0.4.0.md**.
+
 For the new 0.2.1 visual-editing update, follow **ELEMENTOR-EDITING.md**. The instructions below describe the original 0.1.0 import; do not re-import existing pages to enable Elementor.
 
 # Staging installation — not a production launch

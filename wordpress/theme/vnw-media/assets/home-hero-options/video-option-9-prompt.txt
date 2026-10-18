@@ -1,0 +1,13 @@
+Use case: silent looping homepage hero background for a full-service digital agency
+Primary request: a dynamic but restrained cinematic walkthrough across a connected agency workspace showing fictional professionals collaborating on SEO research, paid search planning, and website conversion strategy
+Scene/background: premium open studio at dusk with three adjacent workstations, charcoal architecture, warm wood, and glass partitions
+Subject: four diverse fictional adult professionals working in pairs, naturally discussing the screens
+Action: the camera glides past the workstations as one person reviews an abstract search trend, another compares paid-campaign bars, and a third marks a conversion pathway on paper
+Camera: very slow stabilized lateral tracking shot, wide 16:9, 28mm lens, one continuous take with no cuts
+Lighting/mood: purposeful, energetic but calm, cinematic blue hour with warm practicals
+Color palette: near black, slate, warm amber, cream, restrained cyan-blue
+Style/format: photorealistic commercial documentary, natural grain, sophisticated agency montage achieved within one continuous shot
+Timing/beats: eight seconds of smooth lateral movement; no abrupt gestures; loop-friendly pace
+Audio: none
+Constraints: left and right quarters remain visually quiet and dark enough for copy and form; all monitor information is abstract and non-readable; realistic people, hands, screens, and movement; no logos, text, numbers, icons, illustrations, or watermark
+Avoid: multiple scene cuts, split screens, floating UI, sci-fi styling, generic office stock footage, excessive screen glow, fast camera, flicker, distorted anatomy

@@ -1,0 +1,9 @@
+{
+  "source": "https://jbbodyworks.com/",
+  "captured": "2026-10-16",
+  "desktop": {"file": "jb-body-works-desktop.png", "width": 1440, "height": 1000},
+  "mobile": {"file": "jb-body-works-mobile.png", "width": 390, "height": 900},
+  "heroVideo": "https://youtu.be/UjF8auwo39A",
+  "verification": "Triggered delayed scripts with normal page scrolling, waited eight seconds, and visually confirmed the actual YouTube hero footage before capturing both website views. No synthetic imagery or altered website content is used in the device screens.",
+  "preview": "assets/digital-experience-clients/jb-body-works-devices.svg"
+}

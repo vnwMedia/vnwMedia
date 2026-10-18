@@ -1,0 +1,11 @@
+Generated with the built-in image-generation tool, September 27, 2026.
+Use case: photorealistic-natural. Portrait website photographs for diagonal split sections.
+Shared constraints: natural believable people, lifelike skin texture, candid editorial photography, natural daylight, restrained warm neutral tones, sharp professional photo. Portrait 4:5 composition with people and action centered and crop room on both sides. No illustrations, icons, collage, text, logos, exaggerated smiles, or glossy artificial skin.
+
+legal-advice-v2.jpg: An attorney in a navy suit reviewing a document with an adult client at a wood desk in a contemporary law office, candid engaged conversation.
+professional-advice-v1.jpg: A professional female financial consultant discussing a printed business report with a small business owner in a bright contemporary office.
+automotive-service-v2.jpg: An experienced mechanic in navy work clothes using a diagnostic tablet beside an open car hood in a clean authentic automotive repair garage.
+auto-body-service-v1.jpg: An auto body technician wearing work clothes and safety glasses carefully inspecting a car's front fender with a handheld inspection light in an authentic collision repair workshop, no sparks.
+home-services-v1.jpg: A residential HVAC technician in navy work clothes checking a modern outdoor air conditioning condenser beside a well-kept suburban home, homeowner listening nearby.
+
+Existing contractor-homeowner-v1.jpg retained unchanged. Diagonal layout applied in CSS, preserving each source image.

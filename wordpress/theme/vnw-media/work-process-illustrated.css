@@ -1,0 +1,4 @@
+.work-illustrated .work-chapters article{grid-template-columns:140px 1fr;column-gap:20px}
+.work-illustrated .work-chapters .wp-art{width:140px;height:125px;background:none;border-radius:0}
+.work-illustrated .wp-art svg{width:140px;height:125px}
+@media(max-width:650px){.work-illustrated .work-chapters article{grid-template-columns:110px 1fr;gap:16px}.work-illustrated .work-chapters .wp-art,.work-illustrated .wp-art svg{width:110px;height:110px}}

@@ -1,0 +1,33 @@
+.create-service-page .service-process-timeline{padding:65px 0;background:#fff}
+.service-process-timeline .csp-section-head{gap:12px;margin-bottom:34px}
+.service-process-timeline .csp-section-head h2{font-size:36px!important;line-height:1.12;max-width:100%!important}
+.service-process-timeline .csp-section-head>div{max-width:100%}
+.service-process-timeline .csp-section-head>div>p{max-width:930px;font-size:14px;line-height:1.65;margin:12px 0 0}
+.service-process-timeline .spt-contact{margin-top:20px;font-size:12px;padding:11px 20px;align-self:flex-start}
+.service-process-timeline .csp-process-studio{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:23.1px;align-items:stretch;width:100%}
+.service-process-timeline .csp-process-studio:before{content:"";position:absolute;left:14px;right:14px;top:14px;height:1px;background:#bcdbe6}
+.service-process-timeline .csp-process-studio-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:18px;min-width:0;padding:38px 0 0;border:0}
+.service-process-timeline .csp-process-step{position:static;display:block!important;width:100%;flex:1}
+.service-process-timeline .csp-process-step-index{position:absolute;top:0;left:0;display:grid;place-items:center;width:29px;height:29px;border:1px solid #9bcddd;border-radius:50%;background:white;z-index:1;font-size:11px;color:#0087b4}
+.service-process-timeline .csp-process-step h3{font-size:27px;line-height:1.12;margin:8px 0 10px!important}
+.service-process-timeline .csp-process-step>div{width:100%;min-width:0}
+.service-process-timeline .csp-process-step p{width:100%;max-width:none;font-size:13px;line-height:1.65;margin:0;white-space:normal;text-wrap:wrap}
+.spt-art-frame{width:100%;height:calc(250px * var(--spt-art-scale,.6));max-width:100%;position:relative;flex:none;border-radius:10px;background:#f2f8fa}
+.service-process-timeline .scp-art{width:360px;height:250px;min-height:250px;padding:16px;margin:0;transform:scale(var(--spt-art-scale,.6));transform-origin:top left;overflow:visible}
+@media(max-width:1100px){
+.service-process-timeline .csp-process-studio{grid-template-columns:repeat(2,minmax(0,216px));gap:30px 23.1px;width:min(100%,455.1px)}
+.service-process-timeline .csp-process-studio:before{display:none}
+.service-process-timeline .csp-process-studio-card{border-top:1px solid #bcdbe6}
+.service-process-timeline .csp-process-step p{min-height:64px;font-size:13px}
+}
+@media(max-width:700px){
+.create-service-page .service-process-timeline{padding:78px 0}
+.service-process-timeline .csp-section-head h2{font-size:30px!important}
+.service-process-timeline .csp-process-studio{grid-template-columns:1fr;gap:30px;width:100%}
+.service-process-timeline .csp-process-studio-card{padding-top:62px}
+.service-process-timeline .csp-process-step-index{top:16px}
+.service-process-timeline .spt-art-frame{width:100%;height:auto;max-width:none}
+.service-process-timeline .scp-art{width:100%;height:auto;min-height:250px;transform:none;padding:20px 18px;box-sizing:border-box}
+.service-process-timeline .scp-sheet{width:100%;max-width:440px;box-sizing:border-box}
+.service-process-timeline .csp-process-step p{min-height:0;font-size:14px}
+}

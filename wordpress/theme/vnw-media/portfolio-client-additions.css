@@ -1,0 +1,58 @@
+/* Actual client marks sit directly on the image with transparent backgrounds. */
+.portfolio-review-case-note{display:flex;justify-content:space-between;gap:18px;padding:18px max(20px,calc((100vw - 1152px)/2));background:#f0f8fb;color:#17252a;font-size:13px}
+.portfolio-review-case-note a{color:#007fa5}
+.portfolio-addition-media .portfolio-addition-logo{background:transparent;padding:0;object-fit:contain;border-radius:0;width:58%;max-width:280px;max-height:160px;filter:drop-shadow(0 3px 5px #0009)}
+/* 25% larger than the shared card mark; vector paths stay sharp at every scale. */
+.portfolio-addition-media[data-project="mb-law"] .portfolio-addition-logo{width:72.5%;max-width:350px;max-height:200px}
+body[data-portfolio-addition] .scm-ms-hero h1 .case-hero-client-logo{background:transparent;padding:0;border-radius:0;max-height:180px;object-fit:contain;filter:drop-shadow(0 3px 5px #0009)}
+/* Restore only Argana's original red-and-gold mark, cropped above the extra artwork. */
+.portfolio-addition-media[data-project="argana-day-spa"] .portfolio-addition-logo{width:52%;height:160px;object-fit:cover;object-position:top;padding:0;border-radius:3px;filter:none}
+body[data-page="case-argana-day-spa"] .scm-ms-hero h1 .case-hero-client-logo{height:160px;object-fit:cover;object-position:top;padding:0;border-radius:3px;filter:none}
+.portfolio-addition-media[data-project="aesthetic-island-nyc"] .portfolio-addition-logo,
+body[data-page="case-aesthetic-island-nyc"] .scm-ms-hero h1 .case-hero-client-logo{filter:brightness(0) invert(1) drop-shadow(0 3px 5px #0009)}
+/* Recolor the original artwork without re-encoding it; enlarge the card mark by 15%. */
+.portfolio-addition-media[data-project="classical-caterers"] .portfolio-addition-logo{width:66.7%;max-width:322px;filter:brightness(0) invert(1) drop-shadow(0 3px 5px #0009)}
+body[data-page="case-classical-caterers"] .scm-ms-hero h1 .case-hero-client-logo{width:276px!important;filter:brightness(0) invert(1) drop-shadow(0 3px 5px #0009)}
+/* Sharp typeset lettering and readable two-line professional subtitle, 15% larger. */
+/* Match the shared centered logo placement; darken the previous portrait by 30%. */
+.portfolio-addition-media[data-project="calvin-schwartz"]>img:first-child{filter:brightness(.595)}
+.portfolio-addition-media[data-project="calvin-schwartz"] .portfolio-addition-logo{width:66.7%;max-width:322px}
+body[data-page="case-calvin-schwartz"] .scm-ms-hero h1 .case-hero-client-logo{width:276px!important}
+/* White backing keeps the two colorful education logos readable over their websites. */
+.portfolio-addition-media:is([data-project="genius-kids"],[data-project="new-generation-learning-center"]) .portfolio-addition-logo,
+body:is([data-page="case-genius-kids"],[data-page="case-new-generation-learning-center"]) .scm-ms-hero h1 .case-hero-client-logo{background:#fff;padding:12px 16px;border-radius:6px;box-sizing:border-box;filter:none;box-shadow:0 4px 18px #0002}
+.portfolio-addition-media[data-project="genius-kids"] .portfolio-addition-logo,
+body[data-page="case-genius-kids"] .scm-ms-hero h1 .case-hero-client-logo{height:110px;max-width:280px;object-fit:cover;object-position:center}
+body[data-portfolio-addition] .scm-ms-story-stage img{object-fit:contain;object-position:top;width:100%;height:auto}
+body[data-portfolio-addition] .scm-ms-story-stage{min-height:0;padding:0;align-items:center}
+.portfolio-positive-results .aoc-period{max-width:65ch}
+@media(max-width:760px){html body[data-page="case-aesthetic-island-nyc"] main .scm-ms-hero-bg img{object-position:68% center!important}}
+@media(max-width:760px){html body[data-page="case-calvin-schwartz"] main .scm-ms-hero-bg img{object-position:71% center!important}}
+@media(max-width:760px){html body[data-page="case-harlem-east-life-plan"] main .scm-ms-hero-bg img{object-position:80% center!important}}
+@media(max-width:760px){html body[data-page="case-jb-body-works"] main .scm-ms-hero-bg img{object-position:70% center!important}}
+@media(max-width:760px){html body[data-page="case-mb-law"] main .scm-ms-hero-bg img{object-position:85% center!important}}
+@media(max-width:760px){html body[data-page="case-prestige-beauty-project"] main .scm-ms-hero-bg img{object-position:65% center!important}}
+@media(max-width:600px){.portfolio-addition-media .portfolio-addition-logo{max-height:120px}}
+
+/* Disclosed sample dashboards; never styled as verified client reporting. */
+.portfolio-data-disclosure{color:#b9c4ca;font-size:12px;line-height:1.6;margin:16px 0 24px}
+/* Share the live case-study card, heading, cyan value, and green comparison styles. */
+.portfolio-secondary-metrics{margin:0;padding-top:16px;border-top:1px solid #314048}
+.portfolio-secondary-metrics>div{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px}
+.portfolio-secondary-metrics>div+div{margin-top:14px}
+.portfolio-secondary-metrics dt{grid-column:1;grid-row:1;color:#e5edf2;font:500 13px/1.6 Inter,sans-serif;margin-bottom:5px}
+.portfolio-secondary-metrics dd{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font:400 12px/1.7 Inter,sans-serif;margin:0;color:#a4b1b8}
+.portfolio-secondary-metrics .portfolio-metric-values{grid-column:1;grid-row:2}
+.portfolio-secondary-metrics dd b{color:inherit;font-weight:400}
+.portfolio-secondary-metrics .portfolio-metric-change{grid-column:2;grid-row:1 / span 2;align-self:center;display:block;text-align:right;color:#64cea0;font:700 24px/1 Inter,sans-serif;letter-spacing:-.04em;white-space:nowrap}
+.portfolio-metric-change strong{font:inherit;color:inherit}
+.portfolio-metric-change span{display:block;margin-top:3px;font:500 9px/1.15 Inter,sans-serif;letter-spacing:0}
+.portfolio-card-stats{width:100%;border-top:1px solid #d7e1e5;padding-top:13px;margin:12px 0 18px}
+.work-card .portfolio-sample-label{min-height:0;font:500 10px/1.4 Inter,sans-serif;color:#627983;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+.portfolio-card-stat{display:grid;grid-template-columns:minmax(0,1fr) auto 64px;align-items:center;gap:8px;padding:8px 0}
+.work-card .portfolio-card-stat>span{font:500 11px/1.4 Inter,sans-serif;color:#213d48;letter-spacing:0;text-transform:none}
+.portfolio-card-stat>span small{display:block;font-size:10px;font-weight:400;color:#637882}
+.portfolio-card-stat>strong{font:500 17px/1 Inter,sans-serif;color:#0084ad;letter-spacing:-.04em}
+.portfolio-card-stat .portfolio-trend-chart{margin:0}
+.portfolio-card-stats .portfolio-chart-grid{stroke:#87a2ad;stroke-opacity:.3}
+.portfolio-card-data-note{display:block;color:#637882;font:400 10px/1.5 Inter,sans-serif;margin-top:6px}

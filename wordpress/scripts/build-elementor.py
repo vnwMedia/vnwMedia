@@ -6,16 +6,27 @@ root=Path(__file__).resolve().parents[1]/'theme/vnw-media'
 backgrounds=json.loads((root/'elementor/backgrounds.json').read_text())
 records=json.loads((root/'content/pages.json').read_text()); sections={}; pages={}
 def widget(node,seed):
- key=hashlib.sha256((seed+':'+str(node)).encode()).hexdigest()[:12];fields={}
+ key=hashlib.sha256((seed+':schema040:'+str(node)).encode()).hexdigest()[:12];fields={}
  title=node.select_one('h1,h2,h3')
  label=(title.get_text(' ',strip=True) if title else node.get('id') or ' '.join(node.get('class',[])) or node.name)[:90]
  def field(typ,value,label):
   name='field_'+str(len(fields));fields[name]={'type':typ,'value':value,'label':label[:80]};return '{{'+name+'}}'
  for el in [node,*node.find_all(True)]:
-  if el.name=='img' and el.get('src'):
-   el['src']=field('media',el['src'],'Image: '+(el.get('alt') or 'Section image'))
+  if el.name=='img':
+   tokens={}
+   for attr in ('src','data-src'):
+    if el.get(attr):
+     value=el[attr]
+     if value not in tokens:tokens[value]=field('media',value,'Image: '+(el.get('alt') or 'Section image'))
+     el[attr]=tokens[value]
    el['alt']=field('text',el.get('alt',''),'Image description')
-   el.attrs.pop('srcset',None)
+  for attr in ('srcset','data-srcset'):
+   if el.get(attr):
+    parts=[]
+    for part in el[attr].split(','):
+     words=part.strip().split()
+     if words:parts.append(field('media',words[0],'Responsive image: '+' '.join(words[1:]))+' '+' '.join(words[1:]))
+    el[attr]=', '.join(parts)
   if el.get('style'):
    el['style']=re.sub(r'url\([\"\']?([^\)\"\']+)[\"\']?\)',lambda m:'url('+field('media',m[1],'Background image')+')',el['style'])
   if el.name=='a' and el.get('href') and not el.find_parent('form'):
@@ -46,6 +57,7 @@ for r in records:
  keys=[widget(n,r['source']+':'+str(i)) for i,n in enumerate(list(main.children)) if isinstance(n,Tag)]
  pages[r['source']]={'sections':keys,'main_attributes':main.attrs}
 previous=json.loads((root/'elementor/previous-sections.json').read_text())
-sections={**previous['sections'],**sections}
+recent=json.loads((root/'elementor/previous-031-sections.json').read_text())
+sections={**previous['sections'],**recent['sections'],**sections}
 (root/'elementor/sections.json').write_text(json.dumps({'sections':sections,'pages':pages},ensure_ascii=False))
 print(len(pages),'pages;',len(sections),'editable section widgets;',sum(len(s['fields']) for s in sections.values()),'controls')

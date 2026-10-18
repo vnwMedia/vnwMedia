@@ -1,0 +1,418 @@
+{
+  "source_commit": "a7a4c4db7dd3f443b460a48e96d128e7e0040d9e",
+  "notes": [
+    "13 page families at 1440 and 390 pixels",
+    "External HTTPS resources blocked equally in both versions; local fonts retained",
+    "Homepage animation disabled equally for geometry comparison; blank src entries are intentionally lazy frames",
+    "Queens Google Ads has horizontal overflow in the source and converted version at 390 pixels; no source redesign applied",
+    "Geometry checks are not exhaustive pixel-diff certification"
+  ],
+  "results": [
+    {
+      "width": 1440,
+      "file": "index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "width": 1440,
+      "file": "our-story.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "file": "case-studies/brooklyn-motors.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "file": "case-studies/vision-centers.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "file": "resources.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "file": "services/seo.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "file": "services/local-seo.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "file": "industries/automotive/index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "file": "industries/automotive/website-design/index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "file": "locations/index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "file": "locations/new-jersey/morganville/seo-morganville/index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "file": "locations/new-york/queens/google-ads-queens/index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "file": "thank-you.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "60px",
+        "60px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "39px",
+        "39px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "width": 390,
+      "file": "our-story.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "39px",
+        "39px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "case-studies/brooklyn-motors.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "39px",
+        "39px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "case-studies/vision-centers.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "39px",
+        "39px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "resources.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "39px",
+        "39px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "services/seo.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "39px",
+        "39px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "services/local-seo.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "39px",
+        "39px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "industries/automotive/index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "47px",
+        "47px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "industries/automotive/website-design/index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "47px",
+        "47px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "locations/index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "47px",
+        "47px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "locations/new-jersey/morganville/seo-morganville/index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "39px",
+        "39px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "locations/new-york/queens/google-ads-queens/index.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "39px",
+        "39px"
+      ],
+      "overflow": [
+        true,
+        true
+      ],
+      "broken": []
+    },
+    {
+      "width": 390,
+      "file": "thank-you.html",
+      "diffs": [],
+      "heightDifference": 0,
+      "font": [
+        "47px",
+        "47px"
+      ],
+      "overflow": [
+        false,
+        false
+      ],
+      "broken": []
+    }
+  ]
+}

@@ -3,9 +3,60 @@
 (() => {
   const selector = '.trust-track, .res-mag-marquee, .res-cmd-strip > .shell, .res-bento-scroll > div, .res-signal-marquee > div, .res-dispatch-strip > div, .ticker-track';
 
+  // Lead with digital marketing; website development and brand services follow.
+  // This presentation order and label apply only to the shared capabilities ticker.
+  const capabilityOrder = [
+    'seo', 'google-ppc', 'social-media', 'geo',
+    'social-media-consultation', 'community-management', 'yelp-seo',
+    'google-business-profile', 'reputation-management', 'lead-generation',
+    'paid-social', 'email-marketing', 'text-marketing', 'crm-automation',
+    'web-design', 'ecommerce', 'website-maintenance', 'app-design-development',
+    'landing-pages', 'brand-strategy', 'graphic-design'
+  ];
+
+  function capabilityNames() {
+    const links = SERVICE_MENU_PILLARS.flatMap(pillar => pillar.groups.flatMap(group => group.links));
+    const rank = href => {
+      const slug = href.match(/services\/([^/.]+)\.html$/)?.[1];
+      const index = capabilityOrder.indexOf(slug);
+      return index < 0 ? capabilityOrder.length : index;
+    };
+    return [...new Set(links.sort((a, b) => rank(a[1]) - rank(b[1])).map(([name, href]) => {
+      const slug = href.match(/services\/([^/.]+)\.html$/)?.[1];
+      if (slug === 'aeo' || slug === 'aio') return null;
+      if (slug === 'geo') return 'AI Visibility';
+      return href.endsWith('/community-management.html') ? 'Content Management' : name;
+    }).filter(Boolean))];
+  }
+
+  function tickerMeasurementsChanged(record) {
+    const width = record.viewport.clientWidth;
+    if (!width) return false;
+    // Compare the same box used by build(): ResizeObserver's contentRect
+    // excludes the logo-alignment padding, whereas clientWidth includes it.
+    return Math.abs(record.lastWidth - width) > .5 ||
+      Math.abs(record.lastCycleWidth - record.cycle.getBoundingClientRect().width) > .5;
+  }
+
   function initializeTickers() {
-    // Every service detail uses the same capabilities strip as the homepage.
-    if (document.body.dataset.page?.startsWith('service-')) {
+    // Portfolio heroes use the exact same catalog, labels, and pace as Home.
+    const page = document.body.dataset.page || '';
+    if (page === 'work' || page === 'cases-hub' || page.startsWith('case-')) {
+      const hero = document.querySelector('.scm-ms-hero, .cs-live-hero, main .inner-hero');
+      if (hero) {
+        let strip = hero.nextElementSibling;
+        if (!strip?.matches('.trust-strip')) {
+          strip = document.createElement('section');
+          hero.after(strip);
+        }
+        strip.className = 'trust-strip';
+        strip.dataset.navTheme = 'dark';
+        strip.setAttribute('aria-label', 'VNW Media capabilities');
+        strip.innerHTML = '<div class="trust-track"></div>';
+      }
+    }
+    // Service details and Contact share the homepage capabilities strip.
+    if (document.body.dataset.page?.startsWith('service-') || document.body.dataset.page === 'contact') {
       const hero = document.querySelector('main .csp-hero, main .inner-hero');
       if (hero && !hero.nextElementSibling?.matches('.trust-strip[aria-label="VNW Media capabilities"]')) {
         const strip = document.createElement('section');
@@ -27,7 +78,7 @@
       const gap = originalStyle.columnGap === 'normal' ? '48px' : originalStyle.columnGap;
       const isServices = track.closest('[aria-label="VNW Media capabilities"]') && typeof SERVICE_MENU_PILLARS !== 'undefined';
       if (isServices) {
-        const names = [...new Set(SERVICE_MENU_PILLARS.flatMap(pillar => pillar.groups.flatMap(group => group.links.map(([name]) => name))))];
+        const names = capabilityNames();
         const intro = document.createElement('small');
         intro.textContent = 'Built to move businesses forward';
         const divider = document.createElement('i');
@@ -68,11 +119,16 @@
       cycle.append(...templates.map(item => item.cloneNode(true)));
       track.replaceChildren(cycle);
       const speed = isServices ? 42 : Math.max(18, Math.min(42, originalWidth * .45 / oldDuration));
-      records.push({track, viewport, cycle, templates, speed, lastWidth:0});
+      records.push({track, viewport, cycle, templates, speed, lastWidth:0, lastCycleWidth:0});
     });
 
     function build(record) {
       const {track, viewport, cycle, templates, speed} = record;
+      // Align the initial position with the logo without clipping that inset.
+      // Only these service/client/topic windows are touched, never reviews.
+      const logo = document.querySelector('header .logo, .site-header .logo, .logo');
+      const inset = logo ? Math.max(0, logo.getBoundingClientRect().left - viewport.getBoundingClientRect().left) : 0;
+      viewport.style.setProperty('--ticker-logo-inset', `${inset}px`);
       track.classList.remove('ticker-ready');
       track.querySelectorAll('.ticker-cycle-copy').forEach(copy => copy.remove());
       cycle.replaceChildren(...templates.map(item => item.cloneNode(true)));
@@ -98,6 +154,7 @@
       const distance = cycle.getBoundingClientRect().width;
       track.style.setProperty('--ticker-duration', `${distance / speed}s`);
       record.lastWidth = viewport.clientWidth;
+      record.lastCycleWidth = distance;
       track.classList.add('ticker-ready');
     }
 
@@ -108,17 +165,22 @@
       let frame = 0;
       const refresh = () => {
         cancelAnimationFrame(frame);
-        frame = requestAnimationFrame(() => records.forEach(build));
+        frame = requestAnimationFrame(() => {
+          frame = 0;
+          records.filter(tickerMeasurementsChanged).forEach(build);
+        });
       };
       const observer = new ResizeObserver(entries => {
         if (entries.some(entry => {
           const record = records.find(item => item.viewport === entry.target);
-          return record && Math.abs(record.lastWidth - entry.contentRect.width) > .5;
+          return record && tickerMeasurementsChanged(record);
         })) refresh();
       });
       records.forEach(({viewport}) => observer.observe(viewport));
-      // Observe width changes only: mobile browser chrome can resize the
-      // viewport height while scrolling, which must not restart the loop.
+      window.addEventListener('resize', refresh, {passive:true});
+      // Mobile browser chrome changes viewport height during ordinary scrolling.
+      // The shared measurement guard ignores that, including unrelated font
+      // loads, and rebuilds only tracks whose width or text geometry changed.
       document.fonts?.addEventListener('loadingdone', refresh);
     });
   }

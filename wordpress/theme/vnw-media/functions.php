@@ -19,6 +19,7 @@ add_action('init', function(){
  foreach (vnw_records() as $record) {
   if ($record['type']==='redirect') continue;
   add_rewrite_rule('^'.preg_quote($record['source'],'#').'/?$', 'index.php?vnw_source='.$record['source'], 'top');
+  if(str_ends_with($record['source'],'/index.html'))add_rewrite_rule('^'.preg_quote(rtrim(substr($record['source'],0,-10),'/'),'#').'/?$', 'index.php?vnw_source='.$record['source'], 'top');
  }
 });
 add_filter('query_vars',function($vars){$vars[]='vnw_source';return $vars;});
@@ -27,7 +28,7 @@ add_action('pre_get_posts',function($query){
  $ids=get_posts(['post_type'=>['page','post'],'post_status'=>'publish','meta_key'=>'_vnw_source','meta_value'=>$query->get('vnw_source'),'fields'=>'ids','numberposts'=>1]);
  if ($ids) {$query->set('post_type','any');$query->set('p',$ids[0]);$query->is_home=false;$query->is_singular=true;}
 });
-function vnw_permalink($url,$post) { $source=get_post_meta($post->ID,'_vnw_source',true); return $source?home_url('/'.($source==='index.html'?'':$source)):$url; }
+function vnw_permalink($url,$post) { $source=get_post_meta($post->ID,'_vnw_source',true); return $source?home_url('/'.($source==='index.html'?'':(str_ends_with($source,'/index.html')?substr($source,0,-10):$source))):$url; }
 add_filter('post_link','vnw_permalink',10,2);add_filter('page_link',function($url,$id){return vnw_permalink($url,get_post($id));},10,2);
 add_filter('redirect_canonical',function($url){return get_query_var('vnw_source')?false:$url;});
 add_action('template_redirect',function(){
@@ -52,18 +53,26 @@ add_action('wp_enqueue_scripts',function(){
  $deps=array_values(array_filter(wp_styles()->queue,fn($handle)=>str_starts_with($handle,'elementor-')));
  foreach($r['styles'] as $i=>$url){
   $expanded=vnw_expand($url);
-  if(str_contains($expanded,get_template_directory_uri().'/'))$expanded=add_query_arg('vnw_build','0.3.1',$expanded);
+  if(str_contains($expanded,get_template_directory_uri().'/'))$expanded=add_query_arg('vnw_build','0.4.0',$expanded);
   wp_enqueue_style('vnw-'.$i,$expanded,$deps,null);
   $deps=['vnw-'.$i];
  }
  foreach($r['inline_styles'] as $css)wp_add_inline_style('vnw-'.(count($r['styles'])-1),vnw_expand($css));
  wp_enqueue_script('vnw-catalog',get_template_directory_uri().'/service-catalog.js',[],null,true);
  wp_enqueue_script('vnw-interactions',get_template_directory_uri().'/interactions.js',['vnw-catalog'],null,true);
- wp_add_inline_script('vnw-interactions','window.vnwSite='.wp_json_encode(['home'=>trailingslashit(home_url()),'theme'=>trailingslashit(get_template_directory_uri())]).';','before');
+ wp_add_inline_script('vnw-interactions','window.vnwSite='.wp_json_encode(['home'=>trailingslashit(home_url()),'theme'=>trailingslashit(get_template_directory_uri()),'formAction'=>admin_url('admin-post.php'),'nonce'=>wp_create_nonce('vnw_contact')]).';','before');
+ wp_enqueue_script('vnw-home-motion',get_template_directory_uri().'/home-hero-motion.js',['vnw-interactions'],'0.4.0',true);
  wp_enqueue_script('vnw-tickers',get_template_directory_uri().'/tickers.js',['vnw-interactions'],null,true);
- wp_enqueue_script('vnw-buttons',get_template_directory_uri().'/site-buttons.js',['vnw-interactions'],'0.3.1',true);
+ wp_enqueue_script('vnw-buttons',get_template_directory_uri().'/site-buttons.js',['vnw-interactions'],'0.4.0',true);
+ wp_enqueue_script('vnw-lead-context',get_template_directory_uri().'/lead-attribution.js',['vnw-buttons'],'0.4.0',true);
+ wp_enqueue_script('vnw-form-bridge',get_template_directory_uri().'/form-bridge.js',['vnw-lead-context'],'0.4.0',true);
  wp_enqueue_script('vnw-resources',get_template_directory_uri().'/resources-live.js',['vnw-interactions'],null,true);
 },100);
+// Preserve the source's native emoji rather than WordPress image substitutions.
+remove_action('wp_head','print_emoji_detection_script',7);
+remove_action('wp_print_styles','print_emoji_styles');
+remove_filter('the_content','wp_staticize_emoji');
+add_filter('emoji_svg_url','__return_false');
 function vnw_import() {
  $count=0;$home=0;
  foreach(vnw_records() as $i=>$r){
@@ -122,7 +131,7 @@ function vnw_contact(){
  if(!$name||!is_email($email))$finish('error');
  $key='vnw_rate_'.hash_hmac('sha256',$_SERVER['REMOTE_ADDR']??'',wp_salt());$count=(int)get_transient($key);
  if($count>=5)$finish('error');set_transient($key,$count+1,10*MINUTE_IN_SECONDS);
- $body='';foreach(['name','email','phone','company','website','interest','message'] as $field){$value=sanitize_textarea_field(wp_unslash($_POST[$field]??''));$body.=ucfirst($field).': '.substr($value,0,5000)."\n\n";}
+ $body='';foreach(['name','email','phone','company','website','interest','message','source_page','source_title','form_name','lead_context'] as $field){$value=sanitize_textarea_field(wp_unslash($_POST[$field]??''));$body.=ucfirst($field).': '.substr($value,0,5000)."\n\n";}
  $sent=wp_mail('contactus@vnwmedia.com','VNW Media website inquiry',$body,['Reply-To: '.$email]);$finish($sent?'sent':'error');
 }
 add_action('admin_post_nopriv_vnw_contact','vnw_contact');add_action('admin_post_vnw_contact','vnw_contact');

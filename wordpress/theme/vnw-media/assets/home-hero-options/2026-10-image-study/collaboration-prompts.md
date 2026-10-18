@@ -1,0 +1,15 @@
+# Collaboration-focused homepage hero options — prompt set
+
+Three additional directions requested after the original five-image study. These are intended to feel closer to the current homepage’s candid team-at-a-table photograph. Generated with the built-in image tool; the live homepage image is unchanged.
+
+## Option 06 — Shared table
+
+Use case: photorealistic-natural. Asset type: VNW Media homepage hero background, matching the candid collaborative mood of the current homepage photograph. Three creative and marketing professionals work together around a large shared wooden table with open laptops, a tablet, notes, and a small plant in a real contemporary agency workspace. View from a gently elevated over-the-shoulder angle, as though quietly observing an actual work session; show natural conversation and hands using screens, not a posed portrait. Panoramic wide composition for full-screen website hero, with people and devices across the center and soft lower-contrast space toward the left and right where headline and form will overlay. Warm neutral daylight, slightly moody editorial photography, real skin/fabric/wood detail. No legible text on screens or paper, no logos, no watermark, no in-image hero text or buttons.
+
+## Option 07 — Overhead collaboration
+
+Use case: photorealistic-natural. Asset type: VNW Media homepage hero background, visually close to the site's existing team-around-laptops photo. Four agency colleagues collaborate at one broad table in a bright but moody studio, seen from a high diagonal angle that includes their hands, two laptops, a phone, and a few paper layout sketches. They are discussing the work naturally, leaning in and sharing attention across the table; diverse adults, no camera-facing pose. Wide cinematic frame with the shared-table activity centered, and quiet darker margins on both sides to hold the website's white headline and light contact form. Soft window light, neutral charcoal and warm wood tones with only a subtle cool blue accent. Authentic editorial realism, not stock photography. No readable words, fake charts, brand marks, watermarks, or webpage UI baked into the image.
+
+## Option 08 — Working session
+
+Use case: photorealistic-natural. Asset type: VNW Media homepage hero background, similar in subject and tone to its current candid agency collaboration photo. A small three-person digital team sits shoulder-to-shoulder at a working table, one person walking the others through a website on a laptop while another marks a simple paper wireframe; show listening, pointing, and shared focus. Camera from slightly above and behind the group, with laptops, hands, table surface, and faces partially visible in a believable open studio. Extra-wide composition suitable for a full-screen homepage banner; center the collaboration and retain calm, darker low-detail zones at both outer edges for text and form overlays. Natural mixed daylight, restrained warm neutrals and deep charcoal, subtle cyan reflection, lifelike textures. No legible text, logos, watermarks, in-image headlines, or UI controls.

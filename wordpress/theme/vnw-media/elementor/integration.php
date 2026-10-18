@@ -7,7 +7,17 @@ function vnw_elementor_catalog() {
 }
 add_action('elementor/widgets/register', function($manager) {
  require_once __DIR__.'/section-widget.php';
- foreach (vnw_elementor_catalog()['sections'] as $key => $section) $manager->register(new VNW_Section_Widget((string)$key));
+ // Only load this document's section controls when its ID is available.
+ // Registering every section of a large site makes Elementor's editor payload huge.
+ $id=absint($_GET['elementor-preview']??$_GET['post']??$_POST['editor_post_id']??get_queried_object_id());
+ $catalog=vnw_elementor_catalog();$keys=null;
+ if($id && ($source=get_post_meta($id,'_vnw_source',true)) && isset($catalog['pages'][$source])){
+  $keys=$catalog['pages'][$source]['sections'];
+  $saved=json_decode(get_post_meta($id,'_elementor_data',true)?:'[]',true);
+  $collect=function($elements)use(&$collect,&$keys){foreach((array)$elements as $element){$type=$element['widgetType']??'';if(str_starts_with($type,'vnw-section-'))$keys[]=substr($type,12);if(!empty($element['elements']))$collect($element['elements']);}};
+  $collect($saved);$keys=array_unique($keys);
+ }
+ foreach($keys??array_keys($catalog['sections']) as $key)if(isset($catalog['sections'][$key]))$manager->register(new VNW_Section_Widget((string)$key));
 });
 function vnw_elementor_enabled($id) {
  return did_action('elementor/loaded') && get_post_meta($id, '_vnw_elementor', true) && get_post_meta($id, '_elementor_edit_mode', true) === 'builder';
@@ -67,8 +77,8 @@ add_action('admin_menu', function() {
 });
 add_action('wp_enqueue_scripts', function() {
  if (!vnw_elementor_enabled(get_queried_object_id())) return;
- wp_enqueue_style('vnw-elementor', get_template_directory_uri().'/elementor/editor.css',[], '0.3.1');
- if (\Elementor\Plugin::$instance->editor->is_edit_mode()) wp_enqueue_script('vnw-elementor-preview',get_template_directory_uri().'/elementor/preview.js',[], '0.3.1',true);
+ wp_enqueue_style('vnw-elementor', get_template_directory_uri().'/elementor/editor.css',[], '0.4.0');
+ if (\Elementor\Plugin::$instance->editor->is_edit_mode()) wp_enqueue_script('vnw-elementor-preview',get_template_directory_uri().'/elementor/preview.js',[], '0.4.0',true);
 }, 100);
 
 add_action('wp_ajax_vnw_visual_convert',function() {
