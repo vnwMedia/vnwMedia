@@ -2,7 +2,7 @@
 from pathlib import Path
 from collections import defaultdict
 from bs4 import BeautifulSoup
-import html, json, re, subprocess, shutil
+import json, re, subprocess, shutil
 
 ROOT=Path(__file__).resolve().parents[1]
 NODE=shutil.which('node') or str(Path.home()/'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node')
@@ -55,11 +55,7 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--write-audit',action='store_true');args=parser.parse_args()
     data=inventory()
     if args.write_audit:
-        local=data['assets']
-        for n in range(0,len(local),20):
-            cards=''.join(f'<figure><img src="{html.escape(("../"+x["asset"]) if x["asset"].startswith("assets/") else x["asset"]+"?auto=format&amp;fit=crop&amp;w=600&amp;q=80")}" alt="{html.escape(x["asset"])}"><figcaption>{n+i+1}. {html.escape(x["asset"])}<small>{html.escape(x["pages"][0])}</small></figcaption></figure>' for i,x in enumerate(local[n:n+20]))
-            out=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hero photo review {n//20+1}</title><style>body{{margin:20px;font:13px Arial;background:#f4f5f5;color:#17232b}}main{{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}}figure{{margin:0;min-width:0}}img{{width:100%;height:165px;object-fit:contain;background:#dde2e5}}figcaption{{min-height:65px;overflow-wrap:anywhere;padding-top:6px}}small{{display:block;color:#536974;margin-top:5px}}</style><link rel="stylesheet" href="../site-buttons.css?v=20261017-mobile-arrows"><script defer src="../site-buttons.js?v=20261017-menu-contact-sheet"></script></head><body><h1>Hero photos · sheet {n//20+1}</h1><main>{cards}</main></body></html>'''
-            out=out.replace('<script defer src="../site-buttons.js', '<script defer src="../lead-attribution.js?v=20261017-concise-leads"></script><script defer src="../site-buttons.js')
-            (ROOT/f'reports/mobile-hero-photo-review-{n//20+1}.html').write_text(out)
+        # Keep the machine-readable audit without recreating retired public
+        # photo-review/option pages during routine maintenance.
         (ROOT/'reports/mobile-hero-image-inventory.json').write_text(json.dumps(data,indent=2)+'\n')
     print(json.dumps(data,indent=2))

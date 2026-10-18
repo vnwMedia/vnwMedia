@@ -36,7 +36,8 @@ const context={document:{body:{dataset:{depth:'1'}}}};vm.createContext(context);
 for(const file of ['service-catalog.js','pages.js'])vm.runInContext(read(file).replace(/bootPages\(\);\s*$/,''),context);
 vm.runInContext('this.services=SERVICE_CATALOG;this.render=serviceHeroForm;',context);
 for(const service of context.services){const html=context.render(service);serviceForms+=verify(html,'service '+service.slug);assert(html.includes(`name="interest" value="${service.name.replaceAll('&','&amp;')}"`),service.slug+' retains service interest');}
-assert(staticForms>=68);assert(locationForms>=40);assert.equal(serviceForms,28);
+// The retired design studies are no longer counted as production inquiry forms.
+assert(staticForms>=65);assert(locationForms>=40);assert.equal(serviceForms,28);
 verify(read('scripts/build-industries.mjs'),'industry generator');
 assert(read('site-buttons.js').includes('Tell us what’s next.'),'mobile message sheet is a separate form and remains unchanged');
 assert(read('index.html').includes('Request My Plan'),'lower-page message form remains unchanged');

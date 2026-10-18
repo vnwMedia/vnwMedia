@@ -25,5 +25,5 @@ for(const page of inventory.pages){
 const homepage=Object.fromEntries(config.photos.filter(x=>x[0].includes('industry-motion/')).map(x=>[x[0].split('/').at(-1),x[1]]));
 assert.deepEqual(homepage,{'automotive':74,'daycare-education':62,'healthcare':78,'home-services':72,'legal-professional-services':58,'real-estate':75,'restaurants-hospitality':68,'retail-ecommerce':65});
 for(const file of ['scripts/build-industries.mjs','scripts/generate-nyc-borough-location-pages.py'])assert(read(file).includes('mobile-hero-focal-points.css'),'future generated pages retain focal-point stylesheet');
-for(const file of ['mobile-hero-focal-preview.html','mobile-hero-layout-preview.html','mobile-hero-options-preview.html'])assert(!read(file).includes('mobile-hero-focal-points.css'),'isolated design studies unchanged');
-console.log(`PASS: ${inventory.pages.length} published pages, ${config.photos.length} individually mapped hero assets, approved 8-photo homepage framing, mobile-only CSS, correct paths/order, unchanged desktop/layout/forms/content and preview studies.`);
+for(const file of ['mobile-hero-focal-preview.html','mobile-hero-layout-preview.html','mobile-hero-options-preview.html'])assert(!fs.existsSync(path.join(root,file)),'retired design studies stay removed');
+console.log(`PASS: ${inventory.pages.length} published pages, ${config.photos.length} individually mapped hero assets, approved 8-photo homepage framing, mobile-only CSS, correct paths/order, unchanged desktop/layout/forms/content and retired preview studies.`);

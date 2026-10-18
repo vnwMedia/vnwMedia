@@ -107,12 +107,14 @@ for(const p of c.clients.filter(p=>!['aesthetic-island-nyc','argana-day-spa','jb
 const serviceDeltas={};
 for(const p of c.clients){
  const file=fs.readFileSync(path.join(root,'case-studies',p.slug+'-review.html'),'utf8');
- assert(file.includes('noindex,nofollow'));
- assert(file.includes('data-page="case-'+p.slug+'"'));
- assert(file.indexOf('site-buttons.css')>file.indexOf('portfolio-client-additions.css'));
+ assert(file.includes('noindex,follow'));
+ const target=c.reviewClients.some(client=>client.slug===p.slug)?p.slug+'.html':'../work.html';
+ assert(file.includes('http-equiv="refresh" content="0;url='+target+'"'),'old review bookmarks resolve to approved content');
+ assert(file.includes('href="'+target+'"'),'accessible redirect fallback');
+ assert(file.indexOf('site-buttons.css')>file.indexOf('styles.css'));
  assert(!file.includes('client-service-results.js'),'no legacy undisclosed numeric results');
  assert(!file.includes('client-case-study-enhancements.js'),'no unrelated service metrics');
- assert(file.includes('portfolio-client-results.js'));
+ assert(!file.includes('portfolio-client-results.js')&&!file.includes('pages.js'),'review URL no longer renders a duplicate case study');
  for(const asset of [p.logo,p.desktop])assert(fs.statSync(path.join(root,asset)).size>(asset.endsWith('.svg')?200:1000),'missing asset '+asset);
  const html=c.render(p);
  assert(!html.includes('undefined'),p.slug+' undefined content');
@@ -163,7 +165,7 @@ for(const p of c.clients){
  assert(!/Sample data|illustrative figures|client-reported figures/i.test(html),'no repeated sample notices elsewhere on the case study');
  assert(!/<svg|portfolio-trend-chart|Earlier period|Later period/.test(resultTarget.innerHTML),'case-study results must remain graph-free');
  assert(!/Positive Growth|undefined|NaN/.test(resultTarget.innerHTML));
- console.log(p.slug+': PASS — actual logo, preview page, confirmed service scope, valid links');
+ console.log(p.slug+': PASS — actual logo, compatible review redirect, confirmed service scope, valid links');
 }
 for(const [key,deltas] of Object.entries(serviceDeltas))assert.equal(new Set(deltas).size,deltas.length,'distinct sample improvements for '+key);
 const allDeltas=Object.values(serviceDeltas).flat();
