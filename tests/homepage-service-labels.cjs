@@ -6,7 +6,7 @@ for(const text of ['Web Design','Websites built to convert','SEO &amp; Local Sea
 assert.equal((proof.match(/<span>/g)||[]).length,4);
 assert(!proof.includes('Content,')&&!proof.includes('Experienced team'),'keep approved service-focused copy');
 assert(!live.includes('hero-services-preview')&&!live.includes('data-preview-form')&&!live.includes('event.stopImmediatePropagation()'),'homepage never imports preview code or blocks live forms');
-assert(live.includes('<h2>Let’s Grow <br />Your Business Together</h2>')&&live.includes('>Let’s Get Started</button>'));
+assert(live.includes('<h2><span class="hero-form-title-line">Let’s Grow Your</span> <span class="hero-form-title-line">Business Together</span></h2>')&&live.includes('>Let’s Get Started</button>'));
 assert(live.includes('mobile-hero-focal-points.css')&&live.includes('home-hero-motion.js'));
 assert(css.includes('grid-template-columns:repeat(4,minmax(0,1fr))')&&css.includes('@media(max-width:1100px)')&&css.includes('grid-template-columns:repeat(2,minmax(0,1fr))'));
 assert(!fs.existsSync(path.join(root,'hero-services-preview.html')),'temporary approval preview has been removed');

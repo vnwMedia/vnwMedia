@@ -1,4 +1,6 @@
 /* Shared homepage button baseline. Keep this after page-specific styles. */
+/* The approved inquiry title uses the same two unbroken lines at every size. */
+html body .hero-form h2 .hero-form-title-line{display:block;white-space:nowrap}
 :root{--site-button-blue:#00aeef;--site-button-hover:#008ac0;--site-button-radius:9999px}
 html body :is(button,input[type="submit"],input[type="button"],[role="button"],a.pill,a.cta,a.button,a.fc-button,a.nc-button,a.mp-button,a.sd-button,a.promo-button,a.tab-cta,a.option-button,a.sm-cta,a.mobile-plan){border-radius:var(--site-button-radius)!important}
 html body :is(a,button,input).site-button{display:inline-flex!important;max-width:100%!important;box-sizing:border-box!important;white-space:normal!important;align-items:center!important;justify-content:center!important;gap:18px!important;min-height:46px!important;padding:11px 24px!important;border-width:1px;border-style:solid;font-family:Inter,system-ui,sans-serif!important;font-size:14px!important;font-weight:500!important;line-height:1.55!important;text-decoration:none!important;text-align:center!important;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,color .2s ease}

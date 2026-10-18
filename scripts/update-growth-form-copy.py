@@ -3,9 +3,9 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '20261018-growth-together'
+VERSION = '20261018-growth-title-lines'
 FORM = re.compile(r'<form\b(?=[^>]*\bclass=["\'][^"\']*\bhero-form\b)[^>]*>.*?</form>', re.S)
-heading = '<h2>Let’s Grow <br />Your Business Together</h2>'
+heading = '<h2><span class="hero-form-title-line">Let’s Grow Your</span> <span class="hero-form-title-line">Business Together</span></h2>'
 button = 'Let’s Get Started'
 
 def update_form(match):
@@ -14,12 +14,13 @@ def update_form(match):
     return re.sub(r'(<button\b[^>]*\btype=["\']submit["\'][^>]*>).*?(</button>)', lambda m: m[1] + button + m[2], form, count=1, flags=re.S)
 
 forms = pages = 0
-for file in [*ROOT.rglob('*.html'), ROOT / 'pages.js', ROOT / 'location-pages.js', ROOT / 'scripts/build-industries.mjs']:
+for file in [*ROOT.rglob('*.html'), ROOT / 'pages.js', ROOT / 'location-pages.js', ROOT / 'scripts/build-industries.mjs', ROOT / 'scripts/generate-nyc-borough-location-pages.py']:
     if any(part in file.parts for part in ['.git', 'assets', 'Liquid Soldier', 'ai-intake-system-wordpress-upload']):
         continue
     before = file.read_text()
     forms += len(FORM.findall(before))
     after = FORM.sub(update_form, before)
+    after = re.sub(r'(site-buttons\.css)(?:\?[^"\'\s<>]*)?', lambda m: m[1] + '?v=' + VERSION, after)
     if file.suffix == '.html':
         after = re.sub(r'(src=["\'](?:\.\./)*(?:pages|location-pages)\.js)(?:\?[^"\']*)?(["\'])', lambda m: m[1] + '?v=' + VERSION + m[2], after)
     if after != before:

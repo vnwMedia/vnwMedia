@@ -8,7 +8,9 @@ function verify(html,label){
  for(const form of matches){
   assert(form.match(/^<form\b[^>]*aria-label="Let’s Grow Your Business Together"/),label+' accessible form name matches');
   assert.equal(plain(form.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)[1]),'Let’s Grow Your Business Together',label+' title');
-  assert.equal(form.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)[1].replace(/<br\s*\/?\s*>/gi,''),'Let’s Grow Your Business Together',label+' word spacing when mobile CSS hides the break');
+  const title=form.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)[1];
+  assert.deepEqual([...title.matchAll(/<span class="hero-form-title-line">([^<]+)<\/span>/g)].map(match=>match[1]),['Let’s Grow Your','Business Together'],label+' exact two-line title');
+  assert(!title.includes('<br'),label+' legacy mobile break suppression cannot change title lines');
   assert.equal(plain(form.match(/<button\b[^>]*type=["']submit["'][^>]*>([\s\S]*?)<\/button>/)[1]),'Let’s Get Started',label+' button');
   const inputs=[...form.matchAll(/<input\b[^>]*>/g)].map(m=>m[0]);
   const visible=inputs.filter(tag=>!tag.includes('type="hidden"'));
@@ -22,7 +24,8 @@ function verify(html,label){
 const locationSource=read('location-pages.js');
 function walk(dir){for(const item of fs.readdirSync(dir,{withFileTypes:true})){if(['.git','assets','Liquid Soldier','ai-intake-system-wordpress-upload'].includes(item.name))continue;const file=path.join(dir,item.name);if(item.isDirectory())walk(file);else if(item.name.endsWith('.html')){
  const html=fs.readFileSync(file,'utf8');staticForms+=verify(html,path.relative(root,file));
- for(const script of html.matchAll(/src=["']((?:\.\.\/)*(?:pages|location-pages)\.js)([^"']*)["']/g))assert.equal(script[2],'?v=20261018-growth-together',file+' current template version');
+ for(const script of html.matchAll(/src=["']((?:\.\.\/)*(?:pages|location-pages)\.js)([^"']*)["']/g))assert.equal(script[2],'?v=20261018-growth-title-lines',file+' current template version');
+ if(html.includes('hero-form')||html.includes('pages.js'))assert(/site-buttons\.css\?v=20261018-growth-title-lines/.test(html),file+' current shared title styles');
  if(!html.includes('location-pages.js'))continue;
  const attrs=html.match(/<body\b([^>]*)>/)?.[1]||'',dataset={};
  for(const [,key,value]of attrs.matchAll(/data-([\w-]+)="([^"]*)"/g))dataset[key.replace(/-([a-z])/g,(_,x)=>x.toUpperCase())]=value;
@@ -39,6 +42,7 @@ for(const service of context.services){const html=context.render(service);servic
 // The retired design studies are no longer counted as production inquiry forms.
 assert(staticForms>=65);assert(locationForms>=40);assert.equal(serviceForms,28);
 verify(read('scripts/build-industries.mjs'),'industry generator');
+assert(read('site-buttons.css').includes('html body .hero-form h2 .hero-form-title-line{display:block;white-space:nowrap}'),'shared title lines remain intact on mobile and desktop');
 assert(read('site-buttons.js').includes('Tell us what’s next.'),'mobile message sheet is a separate form and remains unchanged');
 assert(read('index.html').includes('Request My Plan'),'lower-page message form remains unchanged');
 console.log(`PASS: approved title/button on ${staticForms} static forms, ${locationForms} rendered location forms, all ${serviceForms} service forms, and the industry generator. Fields, validation, service interest and other form types preserved.`);

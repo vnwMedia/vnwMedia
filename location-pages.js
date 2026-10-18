@@ -751,7 +751,7 @@
   function heroFormMarkup(data, facts) {
     const interest = `${data.service} in ${facts.market || facts.state}`;
     return `<form class="hero-form indl-hero-form location-hero-form" aria-label="Let’s Grow Your Business Together">
-      <h2>Let’s Grow <br />Your Business Together</h2>
+      <h2><span class="hero-form-title-line">Let’s Grow Your</span> <span class="hero-form-title-line">Business Together</span></h2>
       <label class="icon-field"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><input name="name" autocomplete="name" required placeholder="Full Name" aria-label="Full Name" /></label>
       <label class="icon-field"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 10h18"/><path d="M5 10V7l7-4 7 4v3"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg><input name="company" autocomplete="organization" required placeholder="Business Name" aria-label="Business Name" /></label>
       <label class="icon-field"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a16 16 0 0 0 6.3 6.3l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg><input name="phone" type="tel" autocomplete="tel" required placeholder="Phone Number" aria-label="Phone Number" /></label>
