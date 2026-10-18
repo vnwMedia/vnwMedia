@@ -18,7 +18,7 @@ for(const service of context.services){
   assert(source.includes('service-story-content.js?v=20261014-preparation-cards'));
   assert(!source.includes('service-preparation.css'));
   assert(!source.includes('service-preparation.js'));
-  assert(source.includes('pages.js?v=20261017-growth-form-copy'));
+  assert(source.includes('pages.js?v=20261018-growth-together'));
   assert(source.includes('service-process-visuals.js?v=2'));
   assert(source.includes('service-process-specific-scenes.js?v=1'));
   assert(source.includes('service-process-visuals.css?v=6'));

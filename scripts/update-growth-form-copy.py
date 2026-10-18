@@ -3,13 +3,13 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '20261017-growth-form-copy'
+VERSION = '20261018-growth-together'
 FORM = re.compile(r'<form\b(?=[^>]*\bclass=["\'][^"\']*\bhero-form\b)[^>]*>.*?</form>', re.S)
-heading = '<h2>Let’s Grow <br />Your Business</h2>'
+heading = '<h2>Let’s Grow <br />Your Business Together</h2>'
 button = 'Let’s Get Started'
 
 def update_form(match):
-    form = re.sub(r'^(<form\b[^>]*\baria-label=["\'])[^"\']*(["\'])', lambda m: m[1] + 'Let’s Grow Your Business' + m[2], match[0], count=1)
+    form = re.sub(r'^(<form\b[^>]*\baria-label=["\'])[^"\']*(["\'])', lambda m: m[1] + 'Let’s Grow Your Business Together' + m[2], match[0], count=1)
     form = re.sub(r'<h2\b[^>]*>.*?</h2>', lambda _: heading, form, count=1, flags=re.S)
     return re.sub(r'(<button\b[^>]*\btype=["\']submit["\'][^>]*>).*?(</button>)', lambda m: m[1] + button + m[2], form, count=1, flags=re.S)
 
