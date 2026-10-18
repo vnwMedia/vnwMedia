@@ -1,0 +1,26 @@
+{
+  "scope": "Three isolated mobile homepage hero previews; no production homepage or shared source changes",
+  "comparisonPage": "mobile-home-simplified-options.html",
+  "previewPage": "mobile-home-simplified-preview.html",
+  "options": {
+    "light": "Short introduction; hide eyebrow and benefits grid; retain both buttons and visible form",
+    "focused": "Short introduction; one primary button and text work link; five-field form in native disclosure",
+    "minimal": "Short introduction; single primary button; five-field form in native bottom-sheet dialog"
+  },
+  "photo": "Existing home-services scene paused for direct comparison; approved mobile focal points retained",
+  "responsiveChecks": {
+    "390px": "Visual comparison and compact-form interaction passed; no hero overflow",
+    "320px": "All three modes fit; no hero overflow; form parent is grid/disclosure/dialog respectively",
+    "1280px": "All modes restore original 750px/332px grid, original long introduction, eyebrow, benefits, both buttons and inline form"
+  },
+  "interactions": {
+    "focusedPrimary": "Expands disclosure, scrolls to form, focuses Full Name",
+    "minimalPrimary": "Opens native modal bottom sheet with five original fields",
+    "escape": "Closes modal and restores focus to the primary action",
+    "submission": "Fictional valid inquiry blocked; visible preview-only status; URL unchanged; no email sent",
+    "motion": "Short sheet entrance; disabled for reduced-motion preference"
+  },
+  "automatedChecks": "All 16 repository test files passed, including the new preview isolation test",
+  "screenshot": "mobile-home-simplified-options-2026-10-17.png",
+  "production": "index.html and every existing shared stylesheet/script are unchanged"
+}

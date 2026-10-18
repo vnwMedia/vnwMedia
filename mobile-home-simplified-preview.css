@@ -1,0 +1,49 @@
+/* Isolated design studies. Proposed design changes are mobile-only. */
+.simplify-mobile-lede,.simplify-short-action,.simplify-form-disclosure,.simplify-dialog{display:none}
+@media(max-width:760px){
+  html body[data-simplify-option] main .hero{min-height:0;padding-top:112px!important;padding-bottom:40px!important}
+  html body[data-simplify-option] main .hero-copy{padding-top:0}
+  html body[data-simplify-option] main .hero-copy :is(.eyebrow,.hero-proof,.hero-lede){display:none!important}
+  html body[data-simplify-option] main .simplify-mobile-lede{display:block;max-width:34em;margin:0 0 25px;color:#e1e1e1;font:400 16px/1.6 Inter,Arial,sans-serif}
+  html body[data-simplify-option] main .hero-grid{gap:32px}
+  html body[data-simplify-option] main .hero-actions{gap:12px}
+  html body[data-simplify-option] main .hero-form{border-radius:22px;scroll-margin-top:90px}
+  /* Option 1: preserve both buttons and the open form; remove repeat information. */
+  /* Option 2: keep the form available, but reveal its fields only on request. */
+  html body[data-simplify-option="focused"] main .simplify-original-action,
+  html body[data-simplify-option="minimal"] main .simplify-original-action{display:none}
+  html body[data-simplify-option="focused"] main .simplify-short-action,
+  html body[data-simplify-option="minimal"] main .simplify-short-action{display:inline}
+  html body[data-simplify-option="focused"] main .hero-actions .pill-outline{width:auto!important;min-height:44px!important;align-self:center;padding:8px 2px!important;border:0!important;border-radius:0!important;background:none!important;text-decoration:underline;text-underline-offset:6px;box-shadow:none!important}
+  html body[data-simplify-option="focused"] main .simplify-form-disclosure{display:block;margin-top:0;color:#121a1e;background:var(--cream);border-radius:22px;overflow:hidden;scroll-margin-top:88px}
+  .simplify-form-disclosure>summary{position:relative;padding:24px 48px 24px 22px;cursor:pointer;list-style:none}
+  .simplify-form-disclosure>summary::-webkit-details-marker{display:none}
+  .simplify-form-disclosure>summary:after{position:absolute;right:23px;top:24px;content:"+";font:400 26px/1 Inter,Arial,sans-serif;color:#008bb7}
+  .simplify-form-disclosure[open]>summary:after{content:"−"}
+  .simplify-form-disclosure>summary strong{display:block;font:400 23px/1.15 Fraunces,Georgia,serif;max-width:250px}
+  .simplify-form-disclosure>summary small{display:block;margin-top:10px;color:#607079;font:400 12px/1.5 Inter,Arial,sans-serif}
+  html body[data-simplify-option="focused"] main .simplify-form-disclosure .hero-form{box-shadow:none;padding-top:0}
+  html body[data-simplify-option="focused"] main .simplify-form-disclosure .hero-form h2{display:none}
+  /* Option 3: one action, with the unchanged five-field form in a bottom sheet. */
+  html body[data-simplify-option="minimal"] main .hero{min-height:600px;min-height:min(690px,100svh);display:flex;align-items:center;padding-top:108px!important;padding-bottom:55px!important}
+  html body[data-simplify-option="minimal"] main .hero-actions .pill-outline{display:none!important}
+  .simplify-dialog[open]{display:block;position:fixed;inset:auto 0 0;width:100%;max-width:620px;max-height:90svh;margin:0 auto;padding:40px 0 0;border:1px solid #a5c6d2;border-radius:28px 28px 0 0;background:var(--cream);color:#15232a;overflow:auto;animation:simplify-sheet-in .25s ease-out}
+  .simplify-dialog::backdrop{background:#020b10a8;backdrop-filter:blur(4px)}
+  .simplify-dialog:before{content:"";position:absolute;top:12px;left:calc(50% - 18px);width:36px;height:4px;border-radius:9px;background:#b5c1c5}
+  .simplify-dialog .hero-form{width:100%;margin:0;border-radius:0;box-shadow:none;opacity:1;transform:none;transition:none}
+  .simplify-dialog-close{position:absolute;right:15px;top:14px;min-width:44px;min-height:44px;border:1px solid #aabcc3;border-radius:50%;background:transparent;color:#23343b;font-size:25px;cursor:pointer}
+  .simplify-dialog .hero-form h2{padding:0 25px}
+  .simplify-form-disclosure>summary:focus-visible,.simplify-dialog-close:focus-visible{outline:3px solid #008bb7;outline-offset:-3px}
+  @keyframes simplify-sheet-in{from{transform:translateY(100%)}to{transform:translateY(0)}}
+  @media(prefers-reduced-motion:reduce){.simplify-dialog[open]{animation:none}}
+}
+/* Study controls are separate from the proposed homepage design. */
+.simplify-preview-controls{position:fixed;z-index:1500;bottom:12px;left:14px;right:14px;max-width:430px;margin:auto;padding:0 14px;background:#101b21;color:#fff;border:1px solid #41616e;border-radius:14px;font:400 13px/1.4 Inter,Arial,sans-serif;box-shadow:0 5px 24px #0005}
+.simplify-preview-controls summary{padding:12px 0;cursor:pointer;font-weight:600}
+.simplify-preview-controls label{display:block;margin:2px 0 6px}
+.simplify-preview-controls select{width:100%;min-height:44px;padding:8px;color:#fff;background:#1b2c35;border:1px solid #5b7480;border-radius:8px;font-size:16px}
+.simplify-preview-controls p{margin:10px 0;font-size:12px}
+.simplify-preview-controls a{display:inline-block;margin-bottom:14px;color:#64d6ff;text-decoration:underline}
+.simplify-preview-controls :is(summary,select,a):focus-visible{outline:3px solid #78d9ff;outline-offset:2px}
+body.simplify-embedded .simplify-preview-controls,body.simplify-embedded main>:not(.hero),body.simplify-embedded>footer{display:none!important}
+@media(min-width:761px){.simplify-preview-controls p:after{content:" Open at phone width to see the mobile proposal."}}
