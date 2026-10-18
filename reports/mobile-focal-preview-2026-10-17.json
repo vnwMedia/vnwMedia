@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-17",
+  "option": "Option 1: per-photo mobile focal-point adjustments",
+  "preview_page": "mobile-hero-focal-preview.html",
+  "production_homepage_changed": false,
+  "isolation": "Dedicated noindex page and dedicated preview CSS/JS; no live/shared code modified. Preview inquiry submissions are blocked.",
+  "comparison": "Identical opening stills, same image size and shading. Manual scene selection avoids changing the photo or zoom while comparing.",
+  "mobile_breakpoint_max": 760,
+  "mobile_check": {
+    "viewport": "390 x 844",
+    "healthcare_current_position": "50% 0%",
+    "healthcare_adjusted_position": "78% 0%",
+    "image_box_unchanged": "390 x 1209.578125",
+    "shade_unchanged": true,
+    "all_8_scenes_loaded": true,
+    "horizontal_overflow": false
+  },
+  "desktop_check": {"viewport_width": 1280, "current_and_adjusted_object_position": "50% 50%"},
+  "limitation": "Repositioning changes what is centered, not how much of the landscape photograph can fit in a tall mobile hero; substantial cropping remains.",
+  "screenshots": ["mobile-focal-current.jpg", "mobile-focal-option-one.jpg"]
+}
