@@ -29,6 +29,15 @@
     }).filter(Boolean))];
   }
 
+  function tickerMeasurementsChanged(record) {
+    const width = record.viewport.clientWidth;
+    if (!width) return false;
+    // Compare the same box used by build(): ResizeObserver's contentRect
+    // excludes the logo-alignment padding, whereas clientWidth includes it.
+    return Math.abs(record.lastWidth - width) > .5 ||
+      Math.abs(record.lastCycleWidth - record.cycle.getBoundingClientRect().width) > .5;
+  }
+
   function initializeTickers() {
     // Portfolio heroes use the exact same catalog, labels, and pace as Home.
     const page = document.body.dataset.page || '';
@@ -110,7 +119,7 @@
       cycle.append(...templates.map(item => item.cloneNode(true)));
       track.replaceChildren(cycle);
       const speed = isServices ? 42 : Math.max(18, Math.min(42, originalWidth * .45 / oldDuration));
-      records.push({track, viewport, cycle, templates, speed, lastWidth:0});
+      records.push({track, viewport, cycle, templates, speed, lastWidth:0, lastCycleWidth:0});
     });
 
     function build(record) {
@@ -145,6 +154,7 @@
       const distance = cycle.getBoundingClientRect().width;
       track.style.setProperty('--ticker-duration', `${distance / speed}s`);
       record.lastWidth = viewport.clientWidth;
+      record.lastCycleWidth = distance;
       track.classList.add('ticker-ready');
     }
 
@@ -155,18 +165,22 @@
       let frame = 0;
       const refresh = () => {
         cancelAnimationFrame(frame);
-        frame = requestAnimationFrame(() => records.forEach(build));
+        frame = requestAnimationFrame(() => {
+          frame = 0;
+          records.filter(tickerMeasurementsChanged).forEach(build);
+        });
       };
       const observer = new ResizeObserver(entries => {
         if (entries.some(entry => {
           const record = records.find(item => item.viewport === entry.target);
-          return record && Math.abs(record.lastWidth - entry.contentRect.width) > .5;
+          return record && tickerMeasurementsChanged(record);
         })) refresh();
       });
       records.forEach(({viewport}) => observer.observe(viewport));
       window.addEventListener('resize', refresh, {passive:true});
-      // Observe width changes only: mobile browser chrome can resize the
-      // viewport height while scrolling, which must not restart the loop.
+      // Mobile browser chrome changes viewport height during ordinary scrolling.
+      // The shared measurement guard ignores that, including unrelated font
+      // loads, and rebuilds only tracks whose width or text geometry changed.
       document.fonts?.addEventListener('loadingdone', refresh);
     });
   }

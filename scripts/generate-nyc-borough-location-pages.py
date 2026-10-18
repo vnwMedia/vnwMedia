@@ -48,7 +48,7 @@ def shell(slug, market, county, service_key=None):
     title, description = escape(title), escape(description)
     css = f'<link rel="stylesheet" href="{rel}styles.css?v=20260930-footer-company-contact-v4"><link rel="stylesheet" href="{rel}location-pages.css?v={VERSION}">'
     scripts = f'<script defer src="{rel}service-catalog.js?v=20260930-seo-subservices"></script><script defer src="{rel}location-pages.js?v={VERSION}"></script><script defer src="{rel}script.js?v=20261005-review-speed-v1"></script>'
-    ticker = f'<link rel="stylesheet" href="{rel}tickers.css?v=20260927-full-width-scroll"><script defer src="{rel}tickers.js?v=20260930-ai-visibility"></script>'
+    ticker = f'<link rel="stylesheet" href="{rel}tickers.css?v=20260927-full-width-scroll"><script defer src="{rel}tickers.js?v=20261018-mobile-scroll-continuity"></script>'
     extras = f'<meta name="theme-color" content="#000000"><link rel="icon" type="image/x-icon" href="{rel}favicon.ico?v=1"><link rel="apple-touch-icon" sizes="180x180" href="{rel}apple-touch-icon.png?v=1"><link rel="stylesheet" href="{rel}site-footer.css?v=20261002-mobile-compact-v3"><script defer src="{rel}site-footer.js?v=20261002-mobile-compact-v3"></script><link rel="stylesheet" href="{rel}section-labels.css?v=20260928-hero-blue"><link rel="stylesheet" href="{rel}hero-layout.css?v=20260928-aligned-entry"><link rel="stylesheet" href="{rel}mobile-hero-focal-points.css?v=20261017-reviewed-focal-points"><link rel="stylesheet" href="{rel}site-buttons.css?v=20261004-mobile-email-send-label-v1"><script defer src="{rel}site-buttons.js?v=20261004-mobile-business-field-v1"></script>'
     return f'''<!doctype html>
 <html lang="en">
