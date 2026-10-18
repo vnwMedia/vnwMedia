@@ -4,6 +4,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 html = (ROOT / 'index.html').read_text()
+html = re.sub(r'<link\b[^>]*href="[^\"]*mobile-hero-focal-points\.css[^\"]*"[^>]*>', '', html)
 html = re.sub(r'<title>.*?</title>', '<title>Option 1 · Mobile Focal Points | VNW Media Preview</title>', html, count=1)
 html = html.replace('</head>', '<meta name="robots" content="noindex,nofollow">\n</head>')
 html = html.replace('<link rel="stylesheet" href="site-buttons.css', '<link rel="stylesheet" href="mobile-hero-focal-preview.css?v=1">\n<link rel="stylesheet" href="site-buttons.css')
