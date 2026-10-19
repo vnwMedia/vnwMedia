@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-19",
+  "fix_commit": "1216b938294d8461eeaf2bec92df29b1de25af5d",
+  "desktop_pages_rendered": 211,
+  "mobile_pages_rendered": 211,
+  "mobile_menu_categories_tested_per_page": ["Create", "Connect", "Convert"],
+  "rendered_link_instances_checked": 45229,
+  "image_references_including_deferred_and_responsive_candidates": 5807,
+  "unique_internal_page_and_asset_http_checks_passed": 496,
+  "external_destination_http_checks_passed": 66,
+  "missing_internal_files_or_wrong_case_paths": 0,
+  "rendered_internal_html_navigation_links": 0,
+  "rendered_internal_links_outside_project_base": 0,
+  "missing_linked_section_ids": 0,
+  "regression_test_files_passed": 18,
+  "manual_click_checks": [
+    "Services header Our Story reaches /vnwMedia/our-story/ with decoded logo",
+    "Mobile Services navigation project button closes the menu and opens the email sheet without changing pages"
+  ],
+  "form_submissions_or_emails_sent": 0,
+  "wordpress_publishing_checkout": "unchanged; publishing remains on hold",
+  "github_backup": "fix commit pushed and remote branch identity confirmed",
+  "github_pages_deployment": {
+    "status": "queued as of 2026-10-19 16:06 UTC",
+    "run": "https://github.com/vnwMedia/vnwMedia/actions/runs/39281989086",
+    "public_site_verified_updated": false,
+    "note": "The public Services response still contains the previous navigation cache version. Do not report the fix live until deployment completes and public rendering is rechecked."
+  },
+  "screenshot": "services-navigation-repaired-2026-10-19.png",
+  "screenshot_environment": "tested local preview reproducing the /vnwMedia/ project path"
+}
