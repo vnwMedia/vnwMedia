@@ -1,0 +1,107 @@
+{
+  "package": "vnw-media-wordpress-elementor-0.4.3.zip",
+  "sha256": "58fa5dc3d29139c57362927ac8641f1e35aa50485e5a5072215b100dcbbc4985",
+  "bytes": 300610495,
+  "environment": {
+    "php": "8.5.10",
+    "wordpress": "7.1.3",
+    "elementor": "4.3.5",
+    "theme": "0.4.3",
+    "memoryLimit": "512M"
+  },
+  "syntax": {
+    "themePhpFiles": 5,
+    "php": "parsed on PHP 8.5",
+    "changedJavaScript": "node --check passed"
+  },
+  "fields": {
+    "website": 144,
+    "email": 144,
+    "result": "all accept domains without a protocol; email type unchanged"
+  },
+  "content": {
+    "importedPages": 211,
+    "elementorEditable": 211,
+    "unchangedAfterRenderingAndSubmission": true,
+    "reimportRequired": false
+  },
+  "browser": {
+    "scenarios": [
+      {
+        "path": "/industries/healthcare/ppc/",
+        "website": "www.aol.com",
+        "viewport": "desktop",
+        "submitted": true,
+        "thankYou": true,
+        "emailAndRequiredValidation": true,
+        "optionalWebsite": true
+      },
+      {
+        "path": "/",
+        "website": "aol.com",
+        "viewport": "desktop",
+        "submitted": true,
+        "thankYou": true,
+        "emailAndRequiredValidation": true,
+        "optionalWebsite": true
+      },
+      {
+        "path": "/contact.html",
+        "website": "https://www.aol.com",
+        "viewport": "desktop",
+        "submitted": true,
+        "thankYou": true,
+        "emailAndRequiredValidation": true,
+        "optionalWebsite": true
+      },
+      {
+        "path": "/industries/healthcare/ppc/",
+        "website": "http://www.aol.com",
+        "viewport": "desktop",
+        "submitted": true,
+        "thankYou": true,
+        "emailAndRequiredValidation": true,
+        "optionalWebsite": true
+      },
+      {
+        "viewport": "mobile",
+        "website": "aol.com",
+        "wwwAccepted": true,
+        "submitted": true,
+        "thankYou": true,
+        "sourceAndCampaign": true
+      }
+    ],
+    "javascriptErrors": [],
+    "delivery": "intercepted locally; inbox not tested",
+    "invalidNonce": "rejected",
+    "dynamicLegacyForm": "passed",
+    "withoutJavaScript": "passed"
+  },
+  "diagnostics": {
+    "themeWarningsOrErrors": [],
+    "fatalErrors": [],
+    "thirdPartyNotices": [
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      }
+    ]
+  },
+  "packageChanges": [
+    "vnw-media/content/release.json",
+    "vnw-media/elementor/integration.php",
+    "vnw-media/form-bridge.js",
+    "vnw-media/functions.php",
+    "vnw-media/latest-update.php",
+    "vnw-media/style.css"
+  ],
+  "limitations": [
+    "Tested locally with Chromium desktop/mobile emulation and WordPress Playground SQLite, not Safari or Hostinger MariaDB.",
+    "Mail intercepted locally; actual hosted delivery remains unverified.",
+    "Existing non-blocking Elementor PHP deprecation notice remains upstream.",
+    "Not deployed to live WordPress by this test."
+  ]
+}

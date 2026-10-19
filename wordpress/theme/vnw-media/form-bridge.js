@@ -2,6 +2,14 @@
 (() => {
   function prepare(form) {
     if (!form.matches('form[data-vnw-form],#vnw-mobile-email-form,.hero-form,.plan-form,[data-vnw-lead-form]')) return;
+    // Match server-rendered forms, including contact sheets inserted later.
+    for (const input of form.querySelectorAll('input[name="website"]')) {
+      input.type = 'text';
+      input.inputMode = 'url';
+      input.autocomplete = 'url';
+      input.autocapitalize = 'none';
+      input.spellcheck = false;
+    }
     form.method = 'post';
     form.setAttribute('action', window.vnwSite.formAction);
     form.setAttribute('data-vnw-form', '');
