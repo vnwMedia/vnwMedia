@@ -9,6 +9,8 @@ assert(!proof.includes('Content,')&&!proof.includes('Experienced team'),'keep ap
 assert(!live.includes('hero-services-preview')&&!live.includes('data-preview-form')&&!live.includes('event.stopImmediatePropagation()'),'homepage never imports preview code or blocks live forms');
 assert(live.includes('<h2><span class="hero-form-title-line">Let’s Grow Your</span> <span class="hero-form-title-line">Business Together</span></h2>')&&live.includes('>Let’s Get Started</button>'));
 assert(live.includes('mobile-hero-focal-points.css')&&live.includes('home-hero-motion.js'));
-assert(css.includes('grid-template-columns:repeat(4,minmax(0,1fr))')&&css.includes('@media(max-width:1100px)')&&css.includes('grid-template-columns:repeat(2,minmax(0,1fr))'));
+assert(css.includes('grid-template-columns:repeat(4,auto);justify-content:space-between'),'desktop groups use natural text widths with equal visible gaps');
+assert(css.includes('@media(max-width:1100px){[data-page="home"] .hero-proof{grid-template-columns:repeat(2,minmax(0,1fr));justify-content:normal;column-gap:24px}}'),'smaller screens keep the approved equal-width two-column layout');
+assert(live.includes('home-hero-motion.css?v=20261019-even-service-spacing'),'homepage refreshes the service spacing stylesheet');
 assert(!fs.existsSync(path.join(root,'hero-services-preview.html')),'temporary approval preview has been removed');
 console.log('PASS: approved live homepage service labels, Engagement & growth, responsive layout, working production forms, and removed temporary preview.');
