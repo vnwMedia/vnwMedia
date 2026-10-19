@@ -1,0 +1,2356 @@
+[
+  {
+    "source": "index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      },
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/aesthetic-island-nyc.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/brooklyn-motors.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/argana-day-spa.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/art-of-construction.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/calvin-schwartz.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/catanzaros-power-washing.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/classical-caterers.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/coin-jewelry-gallery-boca-raton.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/cti-logistics.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/fordoz-pharma.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/genius-kids.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/harlem-east-life-plan.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/h2bros-plumbing.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/jb-body-works.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/la-rosa-chicken-grill.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/kypcl.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/mb-law.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/nj-steps-to-success.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/new-generation-learning-center.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/nycadsco.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/platinum-valet-parking.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/prestige-beauty-project.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/raidex-construction.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/sfadsco.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/rices-collision.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/skyrex-inc.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/south-carolina-motors.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "case-studies/vision-centers.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "clients.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "contact.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/auto-repair.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/automotive/auto-body-seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/automotive/case-studies/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/automotive/google-business-profile/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/automotive/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/automotive/ppc/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/automotive/reputation-management/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/automotive/seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/automotive/website-design/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/day-care.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/daycare-education/case-studies/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/daycare-education/education-seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/daycare-education/google-business-profile/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/daycare-education/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/daycare-education/ppc/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/daycare-education/reputation-management/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/daycare-education/seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/daycare-education/website-design/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/healthcare.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/healthcare/case-studies/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/healthcare/google-business-profile/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/healthcare/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/healthcare/medical-practice-seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/healthcare/ppc/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/healthcare/reputation-management/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/healthcare/seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/healthcare/website-design/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/home-services-contractors.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/home-services/case-studies/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/home-services/contractor-seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/home-services/google-business-profile/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/home-services/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/home-services/ppc/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/home-services/reputation-management/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/home-services/seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/home-services/website-design/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/legal-professional-services.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/legal-professional-services/case-studies/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/legal-professional-services/google-business-profile/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/legal-professional-services/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/legal-professional-services/ppc/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/legal-professional-services/professional-services-seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/legal-professional-services/reputation-management/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/legal-professional-services/seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/legal-professional-services/website-design/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/real-estate.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/real-estate/case-studies/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/real-estate/google-business-profile/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/real-estate/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/real-estate/ppc/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/real-estate/property-management-seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/real-estate/reputation-management/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/real-estate/seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/real-estate/website-design/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/restaurant.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/restaurants-hospitality/case-studies/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/restaurants-hospitality/google-business-profile/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/restaurants-hospitality/hospitality-seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/restaurants-hospitality/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/restaurants-hospitality/ppc/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/restaurants-hospitality/reputation-management/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/restaurants-hospitality/seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/restaurants-hospitality/website-design/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/retail-ecommerce.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/retail-ecommerce/case-studies/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/retail-ecommerce/ecommerce-seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/retail-ecommerce/google-business-profile/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/retail-ecommerce/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/retail-ecommerce/ppc/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/retail-ecommerce/reputation-management/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/retail-ecommerce/seo/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "industries/retail-ecommerce/website-design/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/digital-marketing-new-jersey/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/middletown/digital-marketing-middletown/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/middletown/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/middletown/ppc-middletown/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/middletown/seo-middletown/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/middletown/web-design-middletown/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/monmouth-county/digital-marketing-monmouth-county/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/monmouth-county/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/monmouth-county/ppc-monmouth-county/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/monmouth-county/seo-monmouth-county/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/monmouth-county/web-design-monmouth-county/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/morganville/digital-marketing-morganville/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/morganville/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/morganville/ppc-morganville/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/morganville/seo-morganville/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/morganville/web-design-morganville/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/ppc-new-jersey/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/seo-new-jersey/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-jersey/web-design-new-jersey/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/bronx/digital-marketing-bronx/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/bronx/google-ads-bronx/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/bronx/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/bronx/ppc-bronx/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/bronx/seo-bronx/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/bronx/web-design-bronx/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/brooklyn/digital-marketing-brooklyn/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/brooklyn/google-ads-brooklyn/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/brooklyn/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/brooklyn/ppc-brooklyn/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/brooklyn/seo-brooklyn/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/brooklyn/web-design-brooklyn/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/digital-marketing-new-york/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/manhattan/digital-marketing-manhattan/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/manhattan/google-ads-manhattan/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/manhattan/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/manhattan/ppc-manhattan/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/manhattan/seo-manhattan/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/manhattan/web-design-manhattan/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/ppc-new-york/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/queens/digital-marketing-queens/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/queens/google-ads-queens/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/queens/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/queens/ppc-queens/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/queens/seo-queens/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/queens/web-design-queens/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/seo-new-york/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/sheepshead-bay/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/sheepshead-bay/ppc-sheepshead-bay/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/sheepshead-bay/seo-sheepshead-bay/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/sheepshead-bay/web-design-sheepshead-bay/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/staten-island/digital-marketing-staten-island/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/staten-island/google-ads-staten-island/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/staten-island/index.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/staten-island/ppc-staten-island/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/staten-island/seo-staten-island/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/staten-island/web-design-staten-island/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "locations/new-york/web-design-new-york/index.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "our-story.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/accelerate-business-growth-with-results-driven-ppc-advertising.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/landing-page-blueprint.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/local-seo-growth-guide.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/turn-search-visibility-into-real-business-growth-in-new-york.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/turn-social-media-into-your-strongest-growth-channel.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/website-redesign-checklist.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/aeo.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/aio.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/app-design-development.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/brand-strategy.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/community-management.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/content-seo.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/content-writing.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/crm-automation.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/ecommerce.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/email-marketing.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/geo.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/google-business-profile.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/google-ppc.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/graphic-design.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/landing-pages.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/lead-generation.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/local-seo.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/paid-social.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/reputation-management.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/seo.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/social-media-consultation.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/social-media.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/technical-seo.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/text-marketing.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/video-editing.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/web-design.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/website-maintenance.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "services/yelp-seo.html",
+    "forms": [
+      {
+        "post": true,
+        "action": true,
+        "nonce": true
+      }
+    ],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "thank-you.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  },
+  {
+    "source": "work.html",
+    "forms": [],
+    "status": 200,
+    "h1": true,
+    "error": false
+  }
+]

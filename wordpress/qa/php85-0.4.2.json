@@ -1,0 +1,66 @@
+{
+  "package": "vnw-media-wordpress-elementor-0.4.2.zip",
+  "sha256": "d6235509a4ad924c5a05d47f9c1c8ccb469182f93386a25ee754eb2d45c29fbe",
+  "environment": {
+    "php": "8.5.10",
+    "wordpress": "7.1.3",
+    "elementor": "4.3.5",
+    "theme": "0.4.2",
+    "wordpressMemoryLimit": "512M",
+    "database": "WordPress Playground SQLite; Hostinger MariaDB not exercised locally"
+  },
+  "syntax": {
+    "themePhpFiles": 5,
+    "result": "parsed successfully on PHP 8.5"
+  },
+  "import": {
+    "pages": 211,
+    "editable": 211,
+    "unnecessaryRecoverySnapshots": 0,
+    "duplicatePrevention": "passed"
+  },
+  "routes": {
+    "checked": 213,
+    "failed": 0,
+    "staticFormsWired": 144
+  },
+  "browser": {
+    "javascriptErrors": [],
+    "desktopForm": {
+      "passed": true,
+      "recipient": "contactus@vnwmedia.com",
+      "thankYouStatus": 200,
+      "delivery": "intercepted locally; inbox delivery not tested"
+    },
+    "mobileForm": {
+      "passed": true,
+      "recipient": "contactus@vnwmedia.com",
+      "sourceAndCampaign": true,
+      "delivery": "intercepted locally; inbox delivery not tested"
+    },
+    "invalidNonce": "rejected",
+    "elementor": {
+      "loaded": true,
+      "safeMode": false,
+      "textSavedAndPersisted": true,
+      "imageUploadedAndPersisted": true
+    }
+  },
+  "diagnostics": {
+    "themeWarningsOrErrors": [],
+    "fatalErrors": [],
+    "thirdPartyNotices": [
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      }
+    ]
+  },
+  "limitations": [
+    "Form mail was intercepted locally; actual Hostinger/inbox delivery remains to be verified.",
+    "Elementor 4.3.5 emits one distinct nullable-parameter deprecation notice; tested editor and save operations passed.",
+    "PHP compatibility testing does not replace the existing visual layout review."
+  ]
+}

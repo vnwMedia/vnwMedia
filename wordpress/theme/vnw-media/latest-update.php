@@ -7,7 +7,9 @@ function vnw_refresh_latest($id) {
  foreach(vnw_records() as $r)if($r['source']===$source)$new=$r;
  foreach([['content/previous-031-pages.json','elementor/previous-031-sections.json'],['content/previous-pages.json','elementor/previous-sections.json']] as $files){
   foreach(json_decode(file_get_contents(__DIR__.'/'.$files[0]),true) as $r){
-   if($r['source']===$source && vnw_elementor_import_signature($post->post_content)===vnw_elementor_import_signature($r['post_content']??$r['html'])){
+   $baseline=$r['post_content']??$r['html']??null;
+   if(!is_string($baseline))continue;
+   if($r['source']===$source && vnw_elementor_import_signature($post->post_content)===vnw_elementor_import_signature($baseline)){
     $old=$r;$prior=json_decode(file_get_contents(__DIR__.'/'.$files[1]),true);break 2;
    }
   }
@@ -56,11 +58,11 @@ function vnw_refresh_latest($id) {
 }
 add_action('admin_menu',function(){add_theme_page('Latest HTML Update','VNW Latest HTML Update','manage_options','vnw-latest-update',function(){
  if(!current_user_can('manage_options'))return;
- echo '<div class="wrap"><h1>VNW latest HTML update — 0.4.1</h1><p>Refresh unchanged imported pages and enable Elementor editing. Pages with saved Elementor settings or other edits are left for manual review. Keep this tab open.</p>';
+ echo '<div class="wrap"><h1>VNW latest HTML update — 0.4.2</h1><p>Refresh unchanged imported pages and enable Elementor editing. Pages with saved Elementor settings or other edits are left for manual review. Keep this tab open.</p>';
  if(!did_action('elementor/loaded')){echo '<p>Activate an up-to-date compatible Elementor version first.</p></div>';return;}
  $has_imported=get_posts(['post_type'=>['page','post'],'post_status'=>'any','meta_key'=>'_vnw_source','fields'=>'ids','numberposts'=>1]);
  $button_label=$has_imported?'Apply latest HTML to unchanged pages':'Install all pages and enable Elementor editing';
- echo '<button class="button button-primary" id="vnw-latest-start" data-nonce="'.esc_attr(wp_create_nonce('vnw_latest_update')).'">'.esc_html($button_label).'</button><pre id="vnw-latest-status" style="white-space:pre-wrap"></pre><script src="'.esc_url(get_template_directory_uri().'/latest-update.js?ver=0.4.1').'"></script></div>';
+ echo '<button class="button button-primary" id="vnw-latest-start" data-nonce="'.esc_attr(wp_create_nonce('vnw_latest_update')).'">'.esc_html($button_label).'</button><pre id="vnw-latest-status" style="white-space:pre-wrap"></pre><script src="'.esc_url(get_template_directory_uri().'/latest-update.js?ver=0.4.2').'"></script></div>';
 });});
 add_action('wp_ajax_vnw_latest_update',function(){
  if(!current_user_can('manage_options'))wp_send_json_error('Not authorized',403);
