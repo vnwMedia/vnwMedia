@@ -1,12 +1,12 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const page=read('thank-you.html');
-function render(search=''){
+function render(search='',pageId='thank-you'){
  const app={innerHTML:''};
- const context={URLSearchParams,location:{search},document:{title:'Thank you | VNW Media',body:{dataset:{page:'thank-you',depth:'0'}},querySelector:selector=>{assert.equal(selector,'#app');return app;},createElement:tag=>{assert.equal(tag,'textarea');return {value:'',innerHTML:''};}}};
+ const context={URLSearchParams,location:{search},document:{title:'VNW Media',body:{dataset:{page:pageId,depth:'0'}},querySelector:selector=>{assert.equal(selector,'#app');return app;},createElement:tag=>{assert.equal(tag,'textarea');return {value:'',innerHTML:''};}}};
  vm.createContext(context);
  for(const file of ['service-catalog.js','pages.js'])vm.runInContext(read(file),context,{filename:file});
- vm.runInContext('this.sharedReviews=googleTestimonials("reviews");',context);
+ vm.runInContext('this.sharedReviews=googleTestimonials(document.body.dataset.page==="thank-you"?"thank-you-reviews":"contact-reviews").replace(\'data-nav-theme="dark"\',\'data-nav-theme="light"\');',context);
  return {html:app.innerHTML,reviews:context.sharedReviews};
 }
 for(const search of ['', '?delivery=email']){
@@ -28,8 +28,20 @@ for(const search of ['', '?delivery=email']){
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]);
  assert.equal(ids.length,new Set(ids).size,'no duplicate IDs');
 }
-for(const asset of ['tickers.css?v=20260927-full-width-scroll','tickers.js?v=20261018-mobile-scroll-continuity','script.js?v=20261017-review-hold','pages.js?v=20261019-thank-you-proof'])assert(page.includes(asset),'load '+asset);
+for(const asset of ['tickers.css?v=20260927-full-width-scroll','tickers.js?v=20261018-mobile-scroll-continuity','script.js?v=20261017-review-hold','pages.js?v=20261019-light-client-feedback'])assert(page.includes(asset),'load '+asset);
 assert(page.indexOf('pages.js?')<page.indexOf('script.js?')&&page.indexOf('script.js?')<page.indexOf('tickers.js?'),'render reviews before shared animation handlers');
 assert(page.indexOf('tickers.js?')<page.indexOf('site-buttons.js?'),'shared buttons enhance rendered content last');
 assert(page.includes('content="noindex,follow"'),'confirmation page remains excluded from search results');
-console.log('PASS: thank-you and email-draft states preserve messages/actions, add one homepage capabilities ticker and the unchanged 22-review section before the footer, and load existing responsive animation handlers in order.');
+const lightCss=read('contact-testimonials.css'),lightTheme=':is(#contact-reviews,#thank-you-reviews,#case-reviews)';
+assert(lightCss.includes(lightTheme+'{background:#eeeae3;color:#141b1e}'));
+assert(lightCss.includes(lightTheme+' .testimonial-ticker-card{background:#fff;color:#303a3e;border-color:#d4cec4}'));
+assert(read('resources.html').includes('contact-testimonials.css'),'same stylesheet as the Resources reference');
+assert(!lightCss.includes('animation')&&!lightCss.includes('@media'),'theme preserves existing responsive scrolling and reduced motion');
+for(const id of ['thank-you','contact']){
+ const {html,reviews}=render('',id),sectionId=id==='thank-you'?'thank-you-reviews':'contact-reviews';
+ assert(html.includes(reviews)&&html.includes(`id="${sectionId}" data-nav-theme="light"`),id+' uses the shared light reviews');
+ const source=read(id+'.html');
+ assert(source.includes('contact-testimonials.css?v=20261019-light-client-feedback'),id+' current shared light stylesheet');
+ assert(source.indexOf('styles.css?')<source.indexOf('contact-testimonials.css?')&&source.indexOf('contact-testimonials.css?')<source.indexOf('site-buttons.css?'),id+' stylesheet order');
+}
+console.log('PASS: thank-you/email-draft messages and actions, capability ticker and unchanged 22 reviews; Contact and Thank You share Resources’ light palette, correct navigation theme and responsive animation handlers.');
