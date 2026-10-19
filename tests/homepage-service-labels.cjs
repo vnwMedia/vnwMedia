@@ -2,7 +2,8 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const root=path.resolve(__dirname,'..'),read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const live=read('index.html'),css=read('home-hero-motion.css');
 const proof=live.match(/<div class="hero-proof"[^>]*>([\s\S]*?)<\/div>/)[1];
-for(const text of ['Web Design','Websites built to convert','SEO &amp; Local Search','Help customers find you','Paid Advertising','Google Ads &amp; paid social','Social Media','Engagement &amp; growth'])assert(proof.includes(text));
+for(const text of ['Web Design','Built to convert','SEO &amp; Local Search','Help customers find you','Paid Advertising','Google Ads &amp; paid social','Social Media','Engagement &amp; growth'])assert(proof.includes(text));
+assert(!proof.includes('Websites built to convert'),'Web Design subtext uses the approved shorter wording');
 assert.equal((proof.match(/<span>/g)||[]).length,4);
 assert(!proof.includes('Content,')&&!proof.includes('Experienced team'),'keep approved service-focused copy');
 assert(!live.includes('hero-services-preview')&&!live.includes('data-preview-form')&&!live.includes('event.stopImmediatePropagation()'),'homepage never imports preview code or blocks live forms');
