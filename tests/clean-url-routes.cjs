@@ -45,6 +45,28 @@ for(const home of ['https://vnwmedia.github.io/vnwMedia/','https://vnwmedia.net/
  assert.equal(old.location.redirect,home+'services/google-ppc/?utm_campaign=test#details');
  assert(!client(home,home+'services/google-ppc/',true).location.redirect,'clean page has no redirect loop');
 }
+// A WordPress hidden input named action shadows the form.action property.
+// Normalize once and replay observer notifications: an unchanged endpoint must
+// never be rewritten, or the browser enters an endless mutation loop.
+{
+ const endpoint='https://vnwmedia.net/wp-admin/admin-post.php';
+ class Element {}
+ let observer, writes=0;
+ class Form extends Element {
+  constructor(){super();this.tagName='FORM';this.action={tagName:'INPUT',name:'action',value:'vnw_contact'};this.endpoint=endpoint;}
+  matches(){return true;} querySelectorAll(){return [];}
+  getAttribute(name){assert.equal(name,'action');return this.endpoint;}
+  setAttribute(name,value){writes++;assert.equal(typeof value,'string','never write a named input object into form action');this.endpoint=value;}
+ }
+ const form=new Form();
+ const document={readyState:'complete',body:{},querySelector:()=>null,querySelectorAll:selector=>selector==='a[href],form[action]'?[form]:[]};
+ const context={URL,Element,document,location:{href:'https://vnwmedia.net/industries/auto-repair/',pathname:'/industries/auto-repair/'},window:{vnwCleanRoutes:{home:'https://vnwmedia.net/',routes:build.lookup}},MutationObserver:class{constructor(callback){observer=callback;}observe(){}}};
+ vm.createContext(context);vm.runInContext(moduleSource,context);
+ for(let i=0;i<3;i++)observer([{type:'attributes',target:form}]);
+ observer([{type:'childList',addedNodes:[new Form()]}]);
+ assert.equal(writes,0,'native and dynamic forms retain their unchanged WordPress endpoint without observer churn');
+ assert.equal(form.getAttribute('action'),endpoint);
+}
 assert(!/<loc>[^<]*\.html/.test(read('sitemap.xml')),'preview sitemap has only clean URLs');
 assert(read('site-clean-urls.js').endsWith(moduleSource),'preview and WordPress share the exact link normalizer');
 const tickers=read('tickers.js'),start=tickers.indexOf('    // Our Work keeps'),end=tickers.indexOf('    // Service details',start),setup=tickers.slice(start,end);

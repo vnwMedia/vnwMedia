@@ -1,0 +1,27 @@
+{
+  "site": "https://vnwmedia.net/",
+  "date": "2026-10-19",
+  "cause": "HTMLFormElement.action was shadowed by WordPress hidden input name=action; the clean URL observer rewrote the attribute continuously.",
+  "repair": "Read the raw form action attribute; preserve resolved anchor behavior.",
+  "liveScriptVersion": "20261019-clean-urls-form-fix",
+  "desktop": {
+    "form": "Hero strategy form",
+    "thankYou": "https://vnwmedia.net/thank-you/",
+    "receivedInInbox": true,
+    "submittedAtUTC": "2026-10-19T17:24:44Z"
+  },
+  "mobile": {
+    "form": "Mobile quick-contact form",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "thankYou": "https://vnwmedia.net/thank-you/",
+    "receivedInInbox": true,
+    "submittedAtUTC": "2026-10-19T17:26:05Z",
+    "campaignAndPageContextPreserved": true
+  },
+  "verification": "Exactly two human-approved test inquiries; inbox delivery confirmed through connected contactus@vnwmedia.com mailbox; required fields, website, context and Reply-To preserved.",
+  "emailSettingsChanged": false,
+  "localRegression": "Native and dynamically added forms preserve endpoint, hidden action and nonce, remain responsive and submit once; localhost fixture sends no mail."
+}

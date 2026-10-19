@@ -39,7 +39,10 @@ if(location.protocol!=='file:'){window.vnwCleanRoutes={home:new URL('.',document
    const attribute = node.tagName === 'FORM' ? 'action' : 'href';
    const value = node.getAttribute(attribute);
    // Directory previews retain their source asset base; navigation uses resolved URLs.
-   const next = value?.startsWith('#') ? (document.querySelector('base') ? new URL(value,location.href).href : value) : clean(node[attribute] || value);
+   // An input named "action" shadows HTMLFormElement.action. Read the
+   // attribute so WordPress's hidden action field cannot cause an observer loop.
+   const resolved = node.tagName === 'FORM' ? value : node.href || value;
+   const next = value?.startsWith('#') ? (document.querySelector('base') ? new URL(value,location.href).href : value) : clean(resolved);
    if (next !== value) node.setAttribute(attribute, next);
   }
  }

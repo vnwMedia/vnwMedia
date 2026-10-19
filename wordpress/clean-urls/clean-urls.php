@@ -134,6 +134,6 @@ add_action('template_redirect', function() {
 
 add_action('wp_enqueue_scripts', function() {
  $config = ['home' => trailingslashit(home_url()), 'routes' => vnw_clean_route_data()['lookup']];
- wp_enqueue_script('vnw-clean-urls', get_template_directory_uri().'/clean-urls.js', ['vnw-interactions','vnw-buttons','vnw-form-bridge'], '20261019-clean-urls', true);
+ wp_enqueue_script('vnw-clean-urls', get_template_directory_uri().'/clean-urls.js', ['vnw-interactions','vnw-buttons','vnw-form-bridge'], '20261019-clean-urls-form-fix', true);
  wp_add_inline_script('vnw-clean-urls', 'window.vnwCleanRoutes='.wp_json_encode($config).';', 'before');
 }, 101);

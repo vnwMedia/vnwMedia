@@ -187,14 +187,14 @@ new file mode 100644
 +
 +add_action('wp_enqueue_scripts', function() {
 + $config = ['home' => trailingslashit(home_url()), 'routes' => vnw_clean_route_data()['lookup']];
-+ wp_enqueue_script('vnw-clean-urls', get_template_directory_uri().'/clean-urls.js', ['vnw-interactions','vnw-buttons','vnw-form-bridge'], '20261019-clean-urls', true);
++ wp_enqueue_script('vnw-clean-urls', get_template_directory_uri().'/clean-urls.js', ['vnw-interactions','vnw-buttons','vnw-form-bridge'], '20261019-clean-urls-form-fix', true);
 + wp_add_inline_script('vnw-clean-urls', 'window.vnwCleanRoutes='.wp_json_encode($config).';', 'before');
 +}, 101);
 diff --git a/wordpress/theme/vnw-media/clean-urls.js b/wordpress/theme/vnw-media/clean-urls.js
 new file mode 100644
 --- /dev/null
 +++ b/wordpress/theme/vnw-media/clean-urls.js
-@@ -0,0 +1,71 @@
+@@ -0,0 +1,74 @@
 +/* Clean dynamic menu, footer and contact-sheet links; shared with the GitHub preview. */
 +(() => {
 + 'use strict';
@@ -234,7 +234,10 @@ new file mode 100644
 +   const attribute = node.tagName === 'FORM' ? 'action' : 'href';
 +   const value = node.getAttribute(attribute);
 +   // Directory previews retain their source asset base; navigation uses resolved URLs.
-+   const next = value?.startsWith('#') ? (document.querySelector('base') ? new URL(value,location.href).href : value) : clean(node[attribute] || value);
++   // An input named "action" shadows HTMLFormElement.action. Read the
++   // attribute so WordPress's hidden action field cannot cause an observer loop.
++   const resolved = node.tagName === 'FORM' ? value : node.href || value;
++   const next = value?.startsWith('#') ? (document.querySelector('base') ? new URL(value,location.href).href : value) : clean(resolved);
 +   if (next !== value) node.setAttribute(attribute, next);
 +  }
 + }

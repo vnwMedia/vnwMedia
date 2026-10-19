@@ -13,7 +13,7 @@ $pages=get_posts(['post_type'=>['page','post'],'post_status'=>'publish','numberp
 $signature=function()use($pages){$state=[];foreach($pages as $page)$state[]=[$page->ID,get_post($page->ID)->post_content,get_post_meta($page->ID,'_elementor_data',true),get_post_meta($page->ID,'_vnw_source',true)];return hash('sha256',wp_json_encode($state));};
 $before=$signature(); $route_checks=0; $redirect_checks=0;
 global $wp_rewrite;
-do_action('init');
+// wp-load.php already ran init; repeating it redeclares Elementor classes.
 $rules=$wp_rewrite->wp_rewrite_rules();
 foreach($pages as $page){
  $source=get_post_meta($page->ID,'_vnw_source',true);$expected=trailingslashit(home_url()).$sources[$source];
