@@ -33,6 +33,7 @@ for(const record of inventory.records){
    [...el.children].forEach((child,i)=>scan(child,[...path,i])); }
   scan(main,[]);
   return {title:heading?.textContent.trim()||document.title,document_title:document.title,
+   styles:[...document.querySelectorAll('head link[rel="stylesheet"]')].map(link=>link.getAttribute('href')),
    backgrounds,html:main.outerHTML,header:document.querySelector('.site-header')?.outerHTML,
    footer:document.querySelector('#vnw-site-footer')?.outerHTML,
    body_attributes:Object.fromEntries([...document.body.attributes].map(a=>[a.name,a.value])),

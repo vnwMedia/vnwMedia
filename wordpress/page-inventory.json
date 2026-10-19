@@ -1,5 +1,5 @@
 {
-  "baseline_commit": "a7a4c4db7dd3f443b460a48e96d128e7e0040d9e",
+  "baseline_commit": "487711cbd6785c6e92e255d4f92f3e3e2d092d1a",
   "records": [
     {
       "source": "index.html",
@@ -224,7 +224,7 @@
     {
       "source": "case-studies/catanzaros-power-washing.html",
       "type": "page",
-      "source_title": "Catanzaro\u2019s Power Washing Case Study | VNW Media",
+      "source_title": "Catanzaro’s Power Washing Case Study | VNW Media",
       "styles": [
         "../styles.css?v=20261017-mobile-review-pause",
         "../client-projects.css?v=2",
@@ -4671,7 +4671,7 @@
     {
       "source": "services/aeo.html",
       "type": "page",
-      "source_title": "AEO \u2013 Answer Engine Optimization | VNW Media",
+      "source_title": "AEO – Answer Engine Optimization | VNW Media",
       "styles": [
         "../styles.css?v=20261017-mobile-review-pause",
         "../tickers.css?v=20260927-full-width-scroll",
@@ -4710,7 +4710,7 @@
     {
       "source": "services/aio.html",
       "type": "page",
-      "source_title": "AIO \u2013 AI Optimization | VNW Media",
+      "source_title": "AIO – AI Optimization | VNW Media",
       "styles": [
         "../styles.css?v=20261017-mobile-review-pause",
         "../tickers.css?v=20260927-full-width-scroll",
@@ -5060,7 +5060,7 @@
     {
       "source": "services/geo.html",
       "type": "page",
-      "source_title": "GEO \u2013 Generative Engine Optimization | VNW Media",
+      "source_title": "GEO – Generative Engine Optimization | VNW Media",
       "styles": [
         "../styles.css?v=20261017-mobile-review-pause",
         "../tickers.css?v=20260927-full-width-scroll",

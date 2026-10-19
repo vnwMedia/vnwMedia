@@ -1,0 +1,160 @@
+{
+  "theme": "0.4.4",
+  "contentPages": 211,
+  "routes": {
+    "checked": 213,
+    "passed": 213,
+    "pageForms": 144
+  },
+  "assetReferencesChecked": 3186,
+  "missingAssets": [],
+  "legacyWidgetsRetained": 1403,
+  "thankYou": {
+    "sections": 3,
+    "reviews": 22,
+    "lightPalette": true
+  },
+  "sourceCommit": "487711cbd6785c6e92e255d4f92f3e3e2d092d1a",
+  "sha256": "fe18de03ff7acdfa8fd524a9b1c2f2ba6434549fbfa69fe5d564d60384722978",
+  "runtime": {
+    "php": "8.5.10",
+    "wordpress": "7.1.3",
+    "elementor": "4.3.5",
+    "theme": "0.4.4",
+    "pages": 211,
+    "editable": 211,
+    "mailCount": 5,
+    "linted": "6",
+    "upgrade": {
+      "from": "0.4.3",
+      "to": "0.4.4",
+      "pages": 211,
+      "thankYouSections": 3,
+      "thankYouReviews": 22,
+      "manualThankYouEdit": "Skipped: Elementor content was edited",
+      "manualArticleEdit": "Skipped: page content does not match a supported baseline",
+      "recoverySnapshot": true,
+      "duplicateImport": false,
+      "repeatable": true,
+      "results": {
+        "Already current; edits retained": 209,
+        "Updated to latest design": 1,
+        "Skipped: page content does not match a supported baseline": 1
+      }
+    },
+    "fresh": {
+      "pages": 211,
+      "editable": 211,
+      "websiteFields": 144,
+      "emailFields": 144,
+      "idempotent": true,
+      "unnecessarySnapshots": false
+    }
+  },
+  "forms": {
+    "scenarios": [
+      {
+        "path": "/industries/healthcare/ppc/",
+        "website": "www.aol.com",
+        "viewport": "desktop",
+        "submitted": true,
+        "thankYou": true,
+        "emailAndRequiredValidation": true,
+        "optionalWebsite": true
+      },
+      {
+        "path": "/",
+        "website": "aol.com",
+        "viewport": "desktop",
+        "submitted": true,
+        "thankYou": true,
+        "emailAndRequiredValidation": true,
+        "optionalWebsite": true
+      },
+      {
+        "path": "/contact.html",
+        "website": "https://www.aol.com",
+        "viewport": "desktop",
+        "submitted": true,
+        "thankYou": true,
+        "emailAndRequiredValidation": true,
+        "optionalWebsite": true
+      },
+      {
+        "path": "/industries/healthcare/ppc/",
+        "website": "http://www.aol.com",
+        "viewport": "desktop",
+        "submitted": true,
+        "thankYou": true,
+        "emailAndRequiredValidation": true,
+        "optionalWebsite": true
+      },
+      {
+        "viewport": "mobile",
+        "website": "aol.com",
+        "wwwAccepted": true,
+        "submitted": true,
+        "thankYou": true,
+        "sourceAndCampaign": true
+      }
+    ],
+    "javascriptErrors": [],
+    "delivery": "intercepted locally; inbox not tested",
+    "dynamicLegacyForm": "passed",
+    "withoutJavaScript": "passed",
+    "invalidNonce": "rejected",
+    "emailSummary": "one summary with one copy of each field; attribution and Reply-To retained",
+    "thankYou": "hero, services strip, 22 reviews, shared light palette"
+  },
+  "elementorEditor": {
+    "javascriptErrors": [],
+    "elementor": {
+      "loaded": true,
+      "safeMode": false,
+      "textSavedAndPersisted": true,
+      "imageUploadedAndPersisted": true
+    }
+  },
+  "thankYouVisual": [
+    {
+      "width": 1440,
+      "heading": "Trusted by the people behind growing businesses.",
+      "headings": [
+        {
+          "text": "Trusted by the people behind growing businesses.",
+          "opacity": "1"
+        }
+      ],
+      "background": "rgb(238, 234, 227)",
+      "cards": 44,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "heading": "Trusted by the people behind growing businesses.",
+      "headings": [
+        {
+          "text": "Trusted by the people behind growing businesses.",
+          "opacity": "1"
+        }
+      ],
+      "background": "rgb(238, 234, 227)",
+      "cards": 44,
+      "overflow": false
+    }
+  ],
+  "phpFormatterRegression": [
+    "PHP 8.2.33 passed",
+    "PHP 8.5.10 passed",
+    "Browser CRLF, duplicate summary, desktop/mobile, campaign/page/form attribution, fallback, optional values, sanitization, nonce, honeypot, invalid email, rate limit, method and failure redirect covered"
+  ],
+  "themeWarnings": [],
+  "externalWarning": {
+    "plugin": "Elementor 4.3.5",
+    "type": "PHP 8.5 implicit-nullable deprecation in Atomic_Global_Styles::get_cache_root_key",
+    "uniqueWarnings": 1
+  },
+  "delivery": "Mocked locally. Original Hostinger/PHP configuration unchanged. Live delivery and inbox placement not established by this build.",
+  "liveChanges": false,
+  "archiveReview": "Rebuilt after four whitespace-only cleanups; every functional file is identical to the tested archive. Final archive integrity and every packaged source file verified."
+}

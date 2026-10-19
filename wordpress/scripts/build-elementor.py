@@ -58,6 +58,7 @@ for r in records:
  pages[r['source']]={'sections':keys,'main_attributes':main.attrs}
 previous=json.loads((root/'elementor/previous-sections.json').read_text())
 recent=json.loads((root/'elementor/previous-031-sections.json').read_text())
-sections={**previous['sections'],**recent['sections'],**sections}
+current_baseline=json.loads((root/'elementor/previous-043-sections.json').read_text())
+sections={**previous['sections'],**recent['sections'],**current_baseline['sections'],**sections}
 (root/'elementor/sections.json').write_text(json.dumps({'sections':sections,'pages':pages},ensure_ascii=False))
 print(len(pages),'pages;',len(sections),'editable section widgets;',sum(len(s['fields']) for s in sections.values()),'controls')

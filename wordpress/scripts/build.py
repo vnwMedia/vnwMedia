@@ -71,7 +71,7 @@ home=manifest[0]
 (theme/'content/header.html').write_text(home['header'])
 (theme/'content/footer.html').write_text(home['footer'])
 # Copy design assets only, never the old page-generation application.
-shutil.copytree(source_root/'assets',theme/'assets',dirs_exist_ok=True,ignore=shutil.ignore_patterns('.DS_Store'))
+shutil.copytree(source_root/'assets',theme/'assets',dirs_exist_ok=True,ignore=shutil.ignore_patterns('.DS_Store','job.json'))
 for file in source_root.glob('*.css'):(theme/file.name).write_text(bridge_css(file.read_text()))
 for name in ['service-catalog.js','tickers.js','resources-live.js','site-buttons.js','home-hero-motion.js','favicon.ico']:
  shutil.copy2(source_root/name,theme/name)

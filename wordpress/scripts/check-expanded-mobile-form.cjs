@@ -1,7 +1,7 @@
 const {chromium}=require('/Users/vnwmediallc/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const fs=require('fs');
 const base=process.env.VNW_TEST_URL||'http://127.0.0.1:9425';
-const output=process.env.VNW_TEST_REPORT||'/tmp/vnw-043-forms.json';
+const output=process.env.VNW_TEST_REPORT||'/tmp/vnw-latest-forms.json';
 if(!['localhost','127.0.0.1'].includes(new URL(base).hostname))throw Error('Disposable local tests only');
 const result={scenarios:[],javascriptErrors:[],delivery:'intercepted locally; inbox not tested'};
 
@@ -48,6 +48,13 @@ const result={scenarios:[],javascriptErrors:[],delivery:'intercepted locally; in
    const mail=await(await context.request.get(base+'/wp-json/vnw-test/v1/mail')).json();
    if(![mail.to].flat().includes('contactus@vnwmedia.com')||!mail.message.includes(label)||!mail.message.includes('Website: '+website+'\n'))throw Error('Submitted website value or mail context missing');
    if(!/thank/i.test(await page.locator('h1').innerText()))throw Error('Thank-you page missing');
+   for (const field of ['Name','Email','Website']) if ((mail.message.match(new RegExp('^'+field+': ', 'gm'))||[]).length!==1) throw Error('Duplicated '+field+' field');
+   if (/Lead_context:/i.test(mail.message)) throw Error('Raw context duplicated');
+   if (!mail.message.startsWith('NEW WEBSITE INQUIRY\n') || !mail.message.includes('Form: ') || !mail.message.includes('Page: ')) throw Error('Concise summary missing');
+   if (![mail.headers].flat().includes('Reply-To: qa@example.com')) throw Error('Reply-To changed');
+   const reviews=page.locator('#thank-you-reviews');
+   if (await reviews.locator('.testimonial-ticker-card').count()<22) throw Error('Thank-you missing client reviews');
+   if (await reviews.evaluate(e=>getComputedStyle(e).backgroundColor)!=='rgb(238, 234, 227)') throw Error('Thank-you light palette missing');
    return mail;
   }
   for(const [index,item] of cases.entries()){
@@ -87,6 +94,13 @@ const result={scenarios:[],javascriptErrors:[],delivery:'intercepted locally; in
   const invalid=await context.request.post(base+'/wp-admin/admin-post.php',{form:{action:'vnw_contact',name:'Test',email:'qa@example.com',return_to:base+'/contact.html'},maxRedirects:0});
   if(!invalid.headers().location?.includes('inquiry=error'))throw Error('Invalid nonce accepted');
   result.invalidNonce='rejected';
+  await page.setViewportSize({width:1440,height:1000});
+  await page.goto(base+'/thank-you.html',{waitUntil:'domcontentloaded'});
+  await page.screenshot({path:'/tmp/vnw-latest-thank-you-desktop.jpg',type:'jpeg',quality:85,fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  await page.screenshot({path:'/tmp/vnw-latest-thank-you-mobile.jpg',type:'jpeg',quality:85,fullPage:true});
+  result.emailSummary='one summary with one copy of each field; attribution and Reply-To retained';
+  result.thankYou='hero, services strip, 22 reviews, shared light palette';
   if(result.javascriptErrors.length)throw Error('Browser JavaScript errors');
   fs.writeFileSync(output,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
  }finally{await browser.close();}
