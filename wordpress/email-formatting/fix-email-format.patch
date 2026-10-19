@@ -1,0 +1,63 @@
+diff --git a/wordpress/theme/vnw-media/functions.php b/wordpress/theme/vnw-media/functions.php
+--- a/wordpress/theme/vnw-media/functions.php
++++ b/wordpress/theme/vnw-media/functions.php
+@@ -147,6 +147,7 @@ function vnw_contact(){
+  if(!$name||!is_email($email))$finish('error');
+  $key='vnw_rate_'.hash_hmac('sha256',$_SERVER['REMOTE_ADDR']??'',wp_salt());$count=(int)get_transient($key);
+  if($count>=5)$finish('error');set_transient($key,$count+1,10*MINUTE_IN_SECONDS);
+- $body='';foreach(['name','email','phone','company','website','interest','message','source_page','source_title','form_name','lead_context'] as $field){$value=sanitize_textarea_field(wp_unslash($_POST[$field]??''));$body.=ucfirst($field).': '.substr($value,0,5000)."\n\n";}
++ require_once __DIR__.'/inquiry-email.php';
++ $body=vnw_inquiry_email_body($_POST);
+  $sent=wp_mail('contactus@vnwmedia.com','VNW Media website inquiry',$body,['Reply-To: '.$email]);$finish($sent?'sent':'error');
+ }
+diff --git a/wordpress/theme/vnw-media/inquiry-email.php b/wordpress/theme/vnw-media/inquiry-email.php
+new file mode 100644
+index 00000000..fcdb62f4
+--- /dev/null
++++ b/wordpress/theme/vnw-media/inquiry-email.php
+@@ -0,0 +1,45 @@
++<?php
++/** One plain-text inquiry summary. Delivery and validation stay in vnw_contact(). */
++if (!defined('ABSPATH')) exit;
++
++function vnw_inquiry_email_value(array $submission, string $key, int $limit = 5000): string {
++    $value = $submission[$key] ?? '';
++    if (!is_scalar($value)) return '';
++    return substr(trim(sanitize_textarea_field(wp_unslash((string) $value))), 0, $limit);
++}
++
++function vnw_inquiry_email_body(array $submission): string {
++    $context = vnw_inquiry_email_value($submission, 'lead_context', 10000);
++    $single_line = static fn(string $value): string => trim(preg_replace('/[\r\n\t]+/', ' ', $value));
++    $name = $single_line(vnw_inquiry_email_value($submission, 'name', 220));
++    $email = $single_line(vnw_inquiry_email_value($submission, 'email', 220));
++    $lines = preg_split('/\r?\n/', $context);
++
++    // The browser already supplies the concise summary, including page, form,
++    // device and campaign attribution. Use it once, not after a second field list.
++    // A missing, stale or malformed summary falls back to the submitted fields.
++    if (str_starts_with($context, "NEW WEBSITE INQUIRY\n")
++        && $name !== '' && $email !== ''
++        && in_array('Name: '.$name, $lines, true)
++        && in_array('Email: '.$email, $lines, true)
++        && preg_match('/^Page: https?:\/\/[^\r\n]+$/m', $context)
++        && preg_match('/^Form: [^\r\n]+$/m', $context)) {
++        return $context."\n";
++    }
++
++    $body = ['NEW WEBSITE INQUIRY', ''];
++    foreach (['name'=>'Name', 'company'=>'Business', 'phone'=>'Phone', 'email'=>'Email', 'website'=>'Website', 'interest'=>'Service'] as $key=>$label) {
++        $value = $single_line(vnw_inquiry_email_value($submission, $key, 220));
++        if ($value !== '') $body[] = $label.': '.$value;
++    }
++    $message = vnw_inquiry_email_value($submission, 'message');
++    if ($message !== '') array_push($body, '', 'Message:', $message);
++    $details = [];
++    foreach (['source_title'=>'From', 'source_page'=>'Page', 'form_name'=>'Form'] as $key=>$label) {
++        $value = $single_line(vnw_inquiry_email_value($submission, $key, 500));
++        if ($key === 'source_title') $value = preg_replace('/\s*\|\s*VNW Media.*$/i', '', $value);
++        if ($value !== '') $details[] = $label.': '.$value;
++    }
++    if ($details) array_push($body, '', ...$details);
++    return implode("\n", $body)."\n";
++}
