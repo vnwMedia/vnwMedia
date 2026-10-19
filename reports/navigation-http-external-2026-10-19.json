@@ -1,0 +1,405 @@
+{
+  "mode": "external",
+  "date": "2026-10-19",
+  "checked": 66,
+  "passed": 66,
+  "failures": [],
+  "results": [
+    {
+      "url": "https://www.arganadayspa.com/",
+      "status": 206,
+      "final": "https://www.arganadayspa.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.instagram.com/vnwmediallc/",
+      "status": 200,
+      "final": "https://www.instagram.com/vnwmediallc/",
+      "type": "text/html; charset=\"utf-8\""
+    },
+    {
+      "url": "https://www.google.com/maps/search/?api=1&query=VNW+Media&query_place_id=ChIJH8x-SSDNw4kRL5QM6uUWIV4",
+      "status": 200,
+      "final": "https://www.google.com/maps/search/?api=1&query=VNW+Media&query_place_id=ChIJH8x-SSDNw4kRL5QM6uUWIV4",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.catanzarospowerwashing.com/",
+      "status": 200,
+      "final": "https://www.catanzarospowerwashing.com/",
+      "type": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.linkedin.com/company/vnw-media-llc",
+      "status": 200,
+      "final": "https://www.linkedin.com/company/vnw-media-llc",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.classicalcaterers.com/",
+      "status": 200,
+      "final": "https://www.classicalcaterers.com/",
+      "type": "text/html"
+    },
+    {
+      "url": "https://www.fordozpharma.com/",
+      "status": 200,
+      "final": "https://www.fordozpharma.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.facebook.com/vnwmedia/",
+      "status": 200,
+      "final": "https://www.facebook.com/vnwmedia/",
+      "type": "text/html; charset=\"utf-8\""
+    },
+    {
+      "url": "https://calvinschwartz.com/",
+      "status": 200,
+      "final": "https://calvinschwartz.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.genius-kids.us/",
+      "status": 200,
+      "final": "https://www.genius-kids.us/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://jbbodyworks.com/",
+      "status": 200,
+      "final": "https://jbbodyworks.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://h2brosplumbing.com/",
+      "status": 200,
+      "final": "https://h2brosplumbing.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://cgobr.com/",
+      "status": 200,
+      "final": "https://cgobr.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.mblawny.com/",
+      "status": 206,
+      "final": "https://www.mblawny.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.aestheticislandnyc.com/",
+      "status": 200,
+      "final": "https://www.aestheticislandnyc.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://larosachicken.com/",
+      "status": 200,
+      "final": "https://larosachicken.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.artofconstructionnyc.com/",
+      "status": 200,
+      "final": "https://www.artofconstructionnyc.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.harlemeastlifeplan.com/",
+      "status": 200,
+      "final": "https://www.harlemeastlifeplan.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.njstepstosuccess.com/",
+      "status": 200,
+      "final": "https://www.njstepstosuccess.com/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nycadsco.com/",
+      "status": 206,
+      "final": "https://www.nycadsco.com/",
+      "type": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.brooklynmotorsny.com/",
+      "status": 200,
+      "final": "https://www.brooklynmotorsny.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.sfadsco.com/",
+      "status": 200,
+      "final": "https://www.sfadsco.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://kypcl.com/",
+      "status": 200,
+      "final": "https://kypcl.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://www.platinumvaletparkingservices.com/",
+      "status": 200,
+      "final": "https://www.platinumvaletparkingservices.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=86",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=86",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://www.skyrexinc.com/",
+      "status": 200,
+      "final": "https://www.skyrexinc.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=86",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=86",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?auto=format&fit=crop&w=1500&q=86",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?auto=format&fit=crop&w=1500&q=86",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=86",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=86",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1500&q=86",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1500&q=86",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1800&q=86",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1800&q=86",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1800&q=86",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1800&q=86",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://www.newgenerationlearningcenter.com/",
+      "status": 200,
+      "final": "https://www.newgenerationlearningcenter.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.broadwayvisionnyc.com/",
+      "status": 200,
+      "final": "https://www.broadwayvisionnyc.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+      "status": 200,
+      "final": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600;700;800&display=swap",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://www.ctilogisticsnj.com/",
+      "status": 200,
+      "final": "https://www.ctilogisticsnj.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1500&q=86",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1500&q=86",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=1500&q=86",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=1500&q=86",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1400&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1400&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://www.vnwmedia.com/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth/",
+      "status": 200,
+      "final": "https://www.vnwmedia.com/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://www.vnwmedia.com/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow/",
+      "status": 200,
+      "final": "https://www.vnwmedia.com/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.vnwmedia.com/accelerate-business-growth-with-results-driven-ppc-advertising/",
+      "status": 200,
+      "final": "https://www.vnwmedia.com/accelerate-business-growth-with-results-driven-ppc-advertising/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.vnwmedia.com/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth/",
+      "status": 200,
+      "final": "https://www.vnwmedia.com/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.vnwmedia.com/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey/",
+      "status": 200,
+      "final": "https://www.vnwmedia.com/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.vnwmedia.com/professional-website-design-solutions-that-help-new-jersey-businesses-grow/",
+      "status": 200,
+      "final": "https://www.vnwmedia.com/professional-website-design-solutions-that-help-new-jersey-businesses-grow/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.vnwmedia.com/turn-search-visibility-into-real-business-growth-in-new-york/",
+      "status": 200,
+      "final": "https://www.vnwmedia.com/turn-search-visibility-into-real-business-growth-in-new-york/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.vnwmedia.com/turn-social-media-into-your-strongest-growth-channel/",
+      "status": 200,
+      "final": "https://www.vnwmedia.com/turn-social-media-into-your-strongest-growth-channel/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=1400&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=1400&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1600&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1600&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://www.vnwmedia.com/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth/",
+      "status": 200,
+      "final": "https://www.vnwmedia.com/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1600&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1600&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=86",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=86",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://www.raidexconstructionllc.com/",
+      "status": 200,
+      "final": "https://www.raidexconstructionllc.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=1600&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=1600&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://prestigebeautyproject.com/",
+      "status": 200,
+      "final": "https://prestigebeautyproject.com/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.vnwmedia.com/boost-your-online-growth-with-result-driven-seo-in-new-jersey/",
+      "status": 200,
+      "final": "https://www.vnwmedia.com/boost-your-online-growth-with-result-driven-seo-in-new-jersey/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1600&q=84",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1600&q=84",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=86",
+      "status": 206,
+      "final": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=86",
+      "type": "image/jpeg"
+    }
+  ]
+}

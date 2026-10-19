@@ -8,12 +8,25 @@
   if (!value || /^(?:#|mailto:|tel:|data:|javascript:)/i.test(value)) return value;
   try {
    const url = new URL(value, location.href);
-   if (url.origin !== home.origin || !url.pathname.startsWith(home.pathname)) return value;
+   if (url.origin !== home.origin) return value;
+   // Repair a known site-page link that accidentally escaped the project base.
+   if (!url.pathname.startsWith(home.pathname)) {
+    const misplaced = url.pathname.replace(/^\/+|\/+$/g,'');
+    if (!Object.prototype.hasOwnProperty.call(routes, misplaced)) return value;
+    url.pathname = home.pathname + misplaced;
+   }
    const key = url.pathname.slice(home.pathname.length).replace(/\/+$/, '');
    if (!Object.prototype.hasOwnProperty.call(routes, key)) return value;
    const target = new URL(routes[key], home);
    target.search = url.search;
+   // Page version tags are obsolete; keep campaign/filter parameters instead.
+   target.searchParams.delete('v');
    if (url.hash) target.hash = url.hash;
+   // These older shortcuts no longer have matching sections on their old pages.
+   if (target.pathname === home.pathname+'resources/' && target.hash === '#faq') {
+    target.pathname = home.pathname+'our-story/';
+   }
+   if (target.pathname === home.pathname+'contact/' && target.hash === '#audit') target.hash = '#page-content';
    return target.href;
   } catch { return value; }
  }

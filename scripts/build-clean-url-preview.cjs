@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const manifest=JSON.parse(read('wordpress/clean-urls/route-manifest.json'));
-const version='20261019-clean-urls',lookup={},owners=new Map(manifest.routes.map(r=>[r.path,r.source]));
+const version='20261019-route-audit',lookup={},owners=new Map(manifest.routes.map(r=>[r.path,r.source]));
 for(const {source,path:route}of manifest.routes)lookup[source]=route;
 for(const [source,target]of Object.entries({...manifest.aliases,...Object.fromEntries(manifest.records.filter(r=>r.type==='redirect').map(r=>[r.source,r.target]))})){
  const [file,fragment]=target.split('#');if(lookup[file]!==undefined)lookup[source]=lookup[file]+(fragment?'#'+fragment:'');
@@ -18,6 +18,8 @@ const generated=[],sourcePages=[];
 for(const {source,path:route}of manifest.routes){
  assert(fs.existsSync(path.join(root,source)),'approved source exists: '+source);
  let html=read(source),prefix='../'.repeat(source.split('/').length-1);
+ html=html.replace(/(["/])script\.js\?v=[^"'<>\s]+/g,'$1script.js?v=20261019-nav-base');
+ html=html.replace(/(["/])pages\.js\?v=[^"'<>\s]+/g,'$1pages.js?v=20261019-nav-base');
  html=html.replace(/<script\b[^>]*src="[^\"]*site-clean-urls\.js[^\"]*"[^>]*><\/script>\s*/g,'');
  const canonical='https://vnwmedia.github.io/vnwMedia/'+route;
  html=html.replace(/(<link\b[^>]*rel="canonical"[^>]*href=")[^"]*(")/gi,'$1'+canonical+'$2');

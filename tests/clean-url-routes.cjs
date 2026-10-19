@@ -5,7 +5,7 @@ assert.equal(build.routes.length,211);assert.equal(new Set(build.routes.map(r=>r
 let references=0;
 for(const {source,path:route}of build.routes){
  const file=route?route+'index.html':'index.html',html=read(file);
- assert(html.includes('site-clean-urls.js?v=20261019-clean-urls'),file+' loads shared clean-link handling');
+ assert(html.includes('site-clean-urls.js?v=20261019-route-audit'),file+' loads shared clean-link handling');
  assert(html.includes('rel="canonical" href="https://vnwmedia.github.io/vnwMedia/'+route+'"'),file+' clean canonical');
  const base=html.match(/<base href="([^"]+)"/)?.[1]||'';
  for(const [,ref]of html.replace(/<base\b[^>]*>/gi,'').matchAll(/\b(?:src|href|data-src|poster)=["']([^"']+)["']/g)){
@@ -35,6 +35,12 @@ for(const home of ['https://vnwmedia.github.io/vnwMedia/','https://vnwmedia.net/
  assert.equal(clean(home+'wp-admin/admin-post.php'),home+'wp-admin/admin-post.php');
  assert.equal(clean(home+'assets/guide.html'),home+'assets/guide.html');
  assert.equal(clean('#details'),'#details');
+ assert.equal(clean(home+'resources.html#faq'),home+'our-story/#faq','FAQ shortcut points to the existing general FAQ section');
+ assert.equal(clean(home+'contact.html#audit'),home+'contact/#page-content','audit shortcut reaches the contact form section');
+ assert.equal(clean(home+'work/?v=31&utm_source=google#cases'),home+'work/?utm_source=google#cases','only the obsolete page version parameter is removed');
+ const origin=new URL(home).origin;
+ assert.equal(clean(origin+'/our-story.html'),home+'our-story/','known misplaced page links are contained in the project');
+ assert.equal(clean(origin+'/unrelated-project/unknown.html'),origin+'/unrelated-project/unknown.html','unrelated same-host projects are not rewritten');
  const old=client(home,home+'services/google-ppc.html?utm_campaign=test#details',true);
  assert.equal(old.location.redirect,home+'services/google-ppc/?utm_campaign=test#details');
  assert(!client(home,home+'services/google-ppc/',true).location.redirect,'clean page has no redirect loop');

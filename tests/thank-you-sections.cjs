@@ -28,7 +28,7 @@ for(const search of ['', '?delivery=email']){
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]);
  assert.equal(ids.length,new Set(ids).size,'no duplicate IDs');
 }
-for(const asset of ['tickers.css?v=20260927-full-width-scroll','tickers.js?v=20261018-mobile-scroll-continuity','script.js?v=20261017-review-hold','pages.js?v=20261019-light-client-feedback'])assert(page.includes(asset),'load '+asset);
+for(const asset of ['tickers.css?v=20260927-full-width-scroll','tickers.js?v=20261018-mobile-scroll-continuity','script.js?v=20261019-nav-base','pages.js?v=20261019-nav-base'])assert(page.includes(asset),'load '+asset);
 assert(page.indexOf('pages.js?')<page.indexOf('script.js?')&&page.indexOf('script.js?')<page.indexOf('tickers.js?'),'render reviews before shared animation handlers');
 assert(page.indexOf('tickers.js?')<page.indexOf('site-buttons.js?'),'shared buttons enhance rendered content last');
 assert(page.includes('content="noindex,follow"'),'confirmation page remains excluded from search results');

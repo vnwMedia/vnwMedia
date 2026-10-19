@@ -1,0 +1,2985 @@
+{
+  "mode": "local",
+  "date": "2026-10-19",
+  "checked": 496,
+  "passed": 496,
+  "failures": [],
+  "results": [
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/our-story/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/our-story/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/brand-strategy/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/brand-strategy/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/graphic-design/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/graphic-design/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/ecommerce/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/ecommerce/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/web-design/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/web-design/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/website-maintenance/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/website-maintenance/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/app-design-development/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/app-design-development/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/landing-pages/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/landing-pages/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/community-management/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/community-management/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/social-media-consultation/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/social-media-consultation/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/local-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/local-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/technical-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/technical-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/social-media/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/social-media/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/google-business-profile/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/google-business-profile/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/content-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/content-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/reputation-management/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/reputation-management/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/lead-generation/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/lead-generation/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/yelp-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/yelp-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/google-ppc/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/google-ppc/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/aeo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/aeo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/geo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/geo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/paid-social/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/paid-social/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/aio/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/aio/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/email-marketing/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/email-marketing/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/crm-automation/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/crm-automation/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/text-marketing/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/text-marketing/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/contact/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/contact/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/work/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/work/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/overview/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/overview/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/overview/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/overview/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/auto-repair/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/auto-repair/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/home-services-contractors/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/home-services-contractors/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/restaurant/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/restaurant/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/day-care/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/day-care/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/overview/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/overview/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/overview/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/overview/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/content-writing/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/content-writing/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/overview/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/overview/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/la-rosa-chicken-grill/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/la-rosa-chicken-grill/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/kypcl/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/kypcl/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/brooklyn-motors/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/brooklyn-motors/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/clients/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/clients/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/vnw-media-logo-646.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/vnw-media-logo-646.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/restaurants-hospitality-mobile.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/restaurants-hospitality-mobile.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/home-services-mobile.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/home-services-mobile.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/restaurants-hospitality.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/restaurants-hospitality.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/home-services.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/home-services.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-team-circle-option-3-960.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-team-circle-option-3-960.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/process-beige/strategize-wireframes.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/process-beige/strategize-wireframes.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-team-circle-option-3.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-team-circle-option-3.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-team-circle-option-3-480.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-team-circle-option-3-480.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/process-beige/create-kypcl.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/process-beige/create-kypcl.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/brooklyn-motors-logo-supplied.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/brooklyn-motors-logo-supplied.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/brooklyn-motors-banner.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/brooklyn-motors-banner.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/process-beige/improve-natural-team.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/process-beige/improve-natural-team.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/la-rosa-portfolio-hero.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/la-rosa-portfolio-hero.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/la-rosa-logo-white-text.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/la-rosa-logo-white-text.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/kypcl-logo-supplied.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/kypcl-logo-supplied.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/kypcl-hero.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/kypcl-hero.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/google-g-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/google-g-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/homepage-process-approved.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/homepage-process-approved.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-catalog.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-catalog.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/fonts/fraunces-latin.woff2",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/fonts/fraunces-latin.woff2",
+      "type": "font/woff2"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/fonts/inter-latin.woff2",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/fonts/inter-latin.woff2",
+      "type": "font/woff2"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/script.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/script.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/styles.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/styles.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/tickers.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/tickers.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/tickers.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/tickers.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/site-footer.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/site-footer.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/apple-touch-icon.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/apple-touch-icon.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/favicon.ico",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/section-labels.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/section-labels.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/site-footer.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/site-footer.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/site-buttons.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/site-buttons.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/hero-layout.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/hero-layout.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/lead-attribution.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/lead-attribution.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/home-hero-motion.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/home-hero-motion.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/case-studies-hero-larosa-logo.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/case-studies-hero-larosa-logo.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/mobile-hero-focal-points.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/mobile-hero-focal-points.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/site-buttons.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/site-buttons.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/site-clean-urls.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/site-clean-urls.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/home-hero-motion.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/home-hero-motion.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/pages.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/pages.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/thank-you-hero-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/thank-you-hero-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies-fresh-options.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies-fresh-options.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies-fresh-dark.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies-fresh-dark.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies-live.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies-live.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies-fresh-options.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies-fresh-options.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/aesthetic-island-nyc/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/aesthetic-island-nyc/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/aesthetic-island-nyc-beauty.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/aesthetic-island-nyc-beauty.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/la-rosa-case-study.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/la-rosa-case-study.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/aesthetic-island-nyc-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/aesthetic-island-nyc-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/aesthetic-island-nyc-devices.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/aesthetic-island-nyc-devices.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/portfolio-client-additions.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/portfolio-client-additions.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/client-service-scope.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/client-service-scope.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/client-projects.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/client-projects.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/argana-day-spa/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/argana-day-spa/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/contact-testimonials.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/contact-testimonials.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/art-construction-results-preview.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/art-construction-results-preview.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/client-scope-layout.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/client-scope-layout.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/portfolio-client-results.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/portfolio-client-results.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/argana-day-spa-devices.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/argana-day-spa-devices.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/argana-day-spa-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/argana-day-spa-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/portfolio-client-additions.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/portfolio-client-additions.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/argana-day-spa-desktop.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/argana-day-spa-desktop.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/art-of-construction/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/art-of-construction/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/brooklyn-motors.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/brooklyn-motors.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/art-of-construction-hero.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/art-of-construction-hero.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/art-of-construction-logo.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/art-of-construction-logo.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/client-projects.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/client-projects.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/art-of-construction.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/art-of-construction.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/client-case-study-enhancements.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/client-case-study-enhancements.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/calvin-schwartz/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/calvin-schwartz/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/client-service-results.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/client-service-results.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/calvin-schwartz-portrait-cover.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/calvin-schwartz-portrait-cover.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/catanzaros-power-washing/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/catanzaros-power-washing/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/calvin-schwartz-devices.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/calvin-schwartz-devices.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/calvin-schwartz-logo-vector.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/calvin-schwartz-logo-vector.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/catanzaros-power-washing-hero.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/catanzaros-power-washing-hero.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/catanzaros-power-washing-logo.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/catanzaros-power-washing-logo.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/catanzaros-power-washing.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/catanzaros-power-washing.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/classical-caterers/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/classical-caterers/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/classical-caterers-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/classical-caterers-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/classical-caterers-hall.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/classical-caterers-hall.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/coin-jewelry-gallery-boca-raton/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/coin-jewelry-gallery-boca-raton/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/cti-logistics/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/cti-logistics/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/classical-caterers-devices.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/classical-caterers-devices.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/coin-jewelry-gallery-boca-raton-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/coin-jewelry-gallery-boca-raton-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/coin-jewelry-gallery-boca-raton-hero.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/coin-jewelry-gallery-boca-raton-hero.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/coin-jewelry-gallery-boca-raton.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/coin-jewelry-gallery-boca-raton.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/cti-logistics-hero.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/cti-logistics-hero.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/fordoz-pharma/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/fordoz-pharma/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/cti-logistics-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/cti-logistics-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/cti-logistics-transparent.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/cti-logistics-transparent.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/fordoz-pharma-hero.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/fordoz-pharma-hero.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/fordoz-pharma-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/fordoz-pharma-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/genius-kids-logo-transparent.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/genius-kids-logo-transparent.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/h2bros-plumbing/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/h2bros-plumbing/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/h2bros-plumbing-hero.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/h2bros-plumbing-hero.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/fordoz-pharma.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/fordoz-pharma.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/genius-kids/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/genius-kids/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/genius-kids-devices.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/genius-kids-devices.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/genius-kids-desktop.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/genius-kids-desktop.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/h2bros-plumbing.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/h2bros-plumbing.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/jb-body-works/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/jb-body-works/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/harlem-east-life-plan/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/harlem-east-life-plan/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/harlem-east-life-plan-care.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/harlem-east-life-plan-care.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/h2bros-plumbing-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/h2bros-plumbing-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/harlem-east-life-plan-logo-white-text.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/harlem-east-life-plan-logo-white-text.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/harlem-east-life-plan-devices.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/harlem-east-life-plan-devices.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/jb-body-works-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/jb-body-works-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/jb-body-works-devices.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/jb-body-works-devices.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/la-rosa-chicken-grill-transparent.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/la-rosa-chicken-grill-transparent.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/mb-law-legal-office.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/mb-law-legal-office.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/jb-body-works-collision-repair.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/jb-body-works-collision-repair.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/kypcl.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/kypcl.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/la-rosa-case-study.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/la-rosa-case-study.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/mb-law/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/mb-law/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/mb-law-logo-vector.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/mb-law-logo-vector.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/mb-law-devices.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/mb-law-devices.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/new-generation-learning-center-desktop.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/new-generation-learning-center-desktop.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/new-generation-learning-center/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/new-generation-learning-center/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/nj-steps-to-success-hero.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/nj-steps-to-success-hero.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/new-generation-learning-center-devices.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/new-generation-learning-center-devices.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/nj-steps-to-success/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/nj-steps-to-success/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/new-generation-learning-center-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/new-generation-learning-center-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/nycadsco/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/nycadsco/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/nj-steps-to-success-transparent.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/nj-steps-to-success-transparent.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/nj-steps-to-success-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/nj-steps-to-success-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/nycadsco-transparent.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/nycadsco-transparent.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/platinum-valet-parking/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/platinum-valet-parking/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/platinum-valet-parking-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/platinum-valet-parking-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/platinum-valet-parking-hero.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/platinum-valet-parking-hero.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/nycadsco-logo.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/nycadsco-logo.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/nycadsco-hero.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/nycadsco-hero.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/platinum-valet-parking.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/platinum-valet-parking.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/prestige-beauty-project-aesthetics-studio.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/prestige-beauty-project-aesthetics-studio.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/prestige-beauty-project-logo.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/prestige-beauty-project-logo.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/ads-client-case-studies.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/ads-client-case-studies.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/prestige-beauty-project-devices.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/prestige-beauty-project-devices.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/prestige-beauty-project/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/prestige-beauty-project/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/raidex-construction/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/raidex-construction/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/raidex-construction-hero.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/raidex-construction-hero.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/raidex-construction.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/raidex-construction.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/sfadsco/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/sfadsco/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/sfadsco-logo.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/sfadsco-logo.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/raidex-construction-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/raidex-construction-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/sfadsco-hero.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/sfadsco-hero.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/skyrex-inc-hero.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/skyrex-inc-hero.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/skyrex-inc/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/skyrex-inc/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/sfadsco-transparent.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/sfadsco-transparent.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/case-studies/vision-centers/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/case-studies/vision-centers/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/skyrex-inc-transparent.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/skyrex-inc-transparent.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/skyrex-inc-logo.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/skyrex-inc-logo.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/vision-centers-transparent.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/digital-experience-clients/vision-centers-transparent.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/vision-centers-optical-boutique-hero.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/vision-centers-optical-boutique-hero.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/vision-centers-case-study.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/vision-centers-case-study.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/hero-consistency.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/hero-consistency.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/contact-assurances.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/contact-assurances.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/vision-centers-case-study.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/vision-centers-case-study.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/contractor-homeowner-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/contractor-homeowner-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/restaurant.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/restaurant.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/education.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/education.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/business-neighborhood-hero-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/business-neighborhood-hero-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/education-reading-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/education-reading-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/automotive-generic-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/automotive-generic-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/healthcare-diagonal-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/healthcare-diagonal-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/hospitality-welcome-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/hospitality-welcome-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/legal-advice-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/legal-advice-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/property.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/property.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/ecommerce-shopping-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/ecommerce-shopping-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries-page.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries-page.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/automotive/auto-body-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/automotive/auto-body-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries-page.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries-page.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/automotive.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/automotive.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/automotive/ppc/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/automotive/ppc/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/automotive/seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/automotive/seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/automotive/google-business-profile/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/automotive/google-business-profile/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/automotive-customer-journey-photo.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/automotive-customer-journey-photo.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/automotive/reputation-management/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/automotive/reputation-management/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/automotive/website-design/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/automotive/website-design/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/automotive/case-studies/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/automotive/case-studies/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/automotive-customer-context.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/automotive-customer-context.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industry-directory.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industry-directory.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/automotive/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/automotive/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/automotive.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/automotive.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/case-studies/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/case-studies/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/location-pages.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/location-pages.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/google-business-profile/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/google-business-profile/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/education-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/education-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/reputation-management/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/reputation-management/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/website-design/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/website-design/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/ppc/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/daycare-education/ppc/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/daycare-education-customer-context.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/daycare-education-customer-context.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/medical-practice-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/medical-practice-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/daycare-education.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/daycare-education.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/google-business-profile/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/google-business-profile/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/healthcare-care-collage-v4.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-concepts/healthcare-care-collage-v4.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/case-studies/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/case-studies/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/ppc/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/ppc/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/reputation-management/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/reputation-management/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/website-design/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/website-design/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/healthcare.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/healthcare.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/home-services/google-business-profile/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/home-services/google-business-profile/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/healthcare-customer-context.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/healthcare-customer-context.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/home-services/case-studies/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/home-services/case-studies/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/home-services/contractor-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/home-services/contractor-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/healthcare/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/home-services/seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/home-services/seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-services-contractor-website-mockup.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-services-contractor-website-mockup.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/home-services.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/home-services.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/home-services/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/home-services/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/home-services-customer-context.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/home-services-customer-context.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/home-services/ppc/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/home-services/ppc/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/home-services/reputation-management/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/home-services/reputation-management/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/home-services/website-design/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/home-services/website-design/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/reputation-management/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/reputation-management/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/case-studies/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/case-studies/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/ppc/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/ppc/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/google-business-profile/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/google-business-profile/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/hospitality-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/hospitality-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/website-design/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/restaurants-hospitality/website-design/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/professional-services-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/professional-services-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/ppc/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/ppc/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/reputation-management/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/reputation-management/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/website-design/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/website-design/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/google-business-profile/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/google-business-profile/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/case-studies/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/legal-professional-services/case-studies/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/google-business-profile/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/google-business-profile/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/property-management-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/property-management-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/google-business-profile/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/google-business-profile/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/ppc/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/ppc/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/reputation-management/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/reputation-management/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/website-design/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/website-design/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/ecommerce-seo/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/ecommerce-seo/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/case-studies/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/real-estate/case-studies/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/ppc/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/ppc/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/reputation-management/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/reputation-management/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/case-studies/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/case-studies/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/website-design/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/industries/retail-ecommerce/website-design/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/legal-professional-services.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/legal-professional-services.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/restaurants-hospitality.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/restaurants-hospitality.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/real-estate.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/real-estate.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/retail-ecommerce.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/retail-ecommerce.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/legal-professional-services.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/legal-professional-services.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/legal-professional-services-customer-context.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/legal-professional-services-customer-context.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/industry-directory.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-heroes/industry-directory.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/legal-professional-services-v2.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/legal-professional-services-v2.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/digital-marketing-new-jersey/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/digital-marketing-new-jersey/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/real-estate-customer-context.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/real-estate-customer-context.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/restaurants-hospitality-customer-context.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/restaurants-hospitality-customer-context.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/retail-ecommerce-customer-context.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/industry-context/retail-ecommerce-customer-context.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/web-design-new-jersey/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/web-design-new-jersey/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/retail-ecommerce.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/retail-ecommerce.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/ppc-new-jersey/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/ppc-new-jersey/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/monmouth-county/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/monmouth-county/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/monmouth-county/seo-monmouth-county/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/monmouth-county/seo-monmouth-county/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/seo-new-jersey/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/seo-new-jersey/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/monmouth-county/web-design-monmouth-county/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/monmouth-county/web-design-monmouth-county/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/middletown/seo-middletown/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/middletown/seo-middletown/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/monmouth-county/digital-marketing-monmouth-county/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/monmouth-county/digital-marketing-monmouth-county/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/monmouth-county/ppc-monmouth-county/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/monmouth-county/ppc-monmouth-county/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/middletown/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/middletown/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/middletown/ppc-middletown/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/middletown/ppc-middletown/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/middletown/web-design-middletown/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/middletown/web-design-middletown/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/morganville/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/morganville/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/morganville/seo-morganville/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/morganville/seo-morganville/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/morganville/digital-marketing-morganville/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/morganville/digital-marketing-morganville/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/middletown/digital-marketing-middletown/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/middletown/digital-marketing-middletown/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/morganville/ppc-morganville/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/morganville/ppc-morganville/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/morganville/web-design-morganville/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/morganville/web-design-morganville/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/digital-marketing-new-york/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/digital-marketing-new-york/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/seo-new-york/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/seo-new-york/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/web-design-new-york/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/web-design-new-york/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/digital-marketing-manhattan/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/digital-marketing-manhattan/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/web-design-manhattan/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/web-design-manhattan/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/seo-manhattan/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/seo-manhattan/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/ppc-manhattan/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/ppc-manhattan/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/google-ads-manhattan/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/manhattan/google-ads-manhattan/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/ppc-new-york/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/ppc-new-york/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/ppc-brooklyn/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/ppc-brooklyn/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/seo-brooklyn/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/seo-brooklyn/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/digital-marketing-brooklyn/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/digital-marketing-brooklyn/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/web-design-brooklyn/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/web-design-brooklyn/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/google-ads-brooklyn/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/brooklyn/google-ads-brooklyn/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/digital-marketing-queens/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/digital-marketing-queens/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/seo-queens/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/seo-queens/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/web-design-queens/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/web-design-queens/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/ppc-queens/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/ppc-queens/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/google-ads-queens/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/queens/google-ads-queens/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/digital-marketing-bronx/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/digital-marketing-bronx/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/web-design-bronx/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/web-design-bronx/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/seo-bronx/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/seo-bronx/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/ppc-bronx/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/ppc-bronx/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/google-ads-bronx/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/bronx/google-ads-bronx/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/digital-marketing-staten-island/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/digital-marketing-staten-island/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/seo-staten-island/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/seo-staten-island/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/ppc-staten-island/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/ppc-staten-island/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/web-design-staten-island/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/web-design-staten-island/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/sheepshead-bay/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/sheepshead-bay/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/sheepshead-bay/seo-sheepshead-bay/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/sheepshead-bay/seo-sheepshead-bay/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/sheepshead-bay/web-design-sheepshead-bay/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/sheepshead-bay/web-design-sheepshead-bay/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/google-ads-staten-island/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/staten-island/google-ads-staten-island/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/sheepshead-bay/ppc-sheepshead-bay/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/sheepshead-bay/ppc-sheepshead-bay/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-jersey/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/seo-performance-review-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/seo-performance-review-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/ny-digital-marketing.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/ny-digital-marketing.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/location-pages.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/location-pages.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/nj-digital-marketing.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/nj-digital-marketing.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/web-design-customer-engagement-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/web-design-customer-engagement-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/google-ppc-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/google-ppc-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/nj-ppc.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/nj-ppc.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/nj-seo.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/nj-seo.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/nj-web-design.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/nj-web-design.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/ny-ppc.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/ny-ppc.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/ny-seo.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/ny-seo.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/locations/new-york/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/locations/new-york/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/team-vanessa-natural-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/team-vanessa-natural-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/ny-web-design.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/location-heroes/ny-web-design.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/team-vlad-headshot.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/team-vlad-headshot.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/team-john-portrait.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/team-john-portrait.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/team-lily-headshot.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/team-lily-headshot.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/story-purpose-vnw-landscape.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/story-purpose-vnw-landscape.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/story-purpose-approved-collaboration.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/story-purpose-approved-collaboration.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/story-process.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/story-process.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/story-hero-wireframe-wall-v2.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/story-hero-wireframe-wall-v2.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/story-approach.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/story-approach.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/story-purpose.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/story-purpose.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/turn-social-media-into-your-strongest-growth-channel/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/turn-social-media-into-your-strongest-growth-channel/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/accelerate-business-growth-with-results-driven-ppc-advertising/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/accelerate-business-growth-with-results-driven-ppc-advertising/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/turn-search-visibility-into-real-business-growth-in-new-york/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/turn-search-visibility-into-real-business-growth-in-new-york/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-3.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-3.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/resources/resources-editorial-hero-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/resources/resources-editorial-hero-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-10.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-10.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-0.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-0.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-4.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-4.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-5.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-5.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-8.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-8.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-7.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-7.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/landing-page-blueprint/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/landing-page-blueprint/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/local-seo-growth-guide/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/local-seo-growth-guide/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources/website-redesign-checklist/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources/website-redesign-checklist/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-9.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/resources/photo-9.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources-content.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources-content.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/resources-live.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/resources-live.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/brand-strategy-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/brand-strategy-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/web-design-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/web-design-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/seo-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/seo-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services-design-review.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services-design-review.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/create-service-content.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/create-service-content.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-process-specific-scenes.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-process-specific-scenes.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/story-hero-digital-option-1-monitor-collaboration.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/story-hero-digital-option-1-monitor-collaboration.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-story-content.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-story-content.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-customer-questions.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-customer-questions.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-process-visuals.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-process-visuals.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-process-timeline.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-process-timeline.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/agency-help-eight.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/agency-help-eight.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-process-visuals.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-process-visuals.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-help-compact.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-help-compact.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-help-compact.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-help-compact.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-process-timeline.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-process-timeline.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-help-studio-art.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-help-studio-art.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-help-studio.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-help-studio.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-help-studio.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-help-studio.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/content-writing-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/content-writing-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-help-outcome-copy.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-help-outcome-copy.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/geo-search-audit-feature-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/geo-search-audit-feature-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/app-design-development-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/app-design-development-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/brand-strategy-workshop-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/brand-strategy-workshop-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/community-management-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/community-management-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/content-seo-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/content-seo-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/email-marketing-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/email-marketing-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/geo-visibility-review-v3.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/geo-visibility-review-v3.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/crm-automation-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/crm-automation-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/ecommerce-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/ecommerce-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/crm-automation-follow-up-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/crm-automation-follow-up-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/google-business-profile-management-v3.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/google-business-profile-management-v3.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/graphic-design-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/graphic-design-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/ecommerce-storefront-design-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/ecommerce-storefront-design-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/google-business-profile-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/google-business-profile-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/landing-pages-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/landing-pages-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/landing-page-conversion-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/landing-page-conversion-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/lead-generation-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/lead-generation-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/lead-generation-qualified-inquiries-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/lead-generation-qualified-inquiries-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/local-seo-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/local-seo-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/paid-social-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/paid-social-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/paid-social-campaign-review-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/paid-social-campaign-review-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/reputation-management-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/reputation-management-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/social-media-consultation-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/social-media-consultation-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/social-consultation-content-studio-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/social-consultation-content-studio-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/social-media-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/social-media-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/social-media-management-team-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/social-media-management-team-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/technical-seo-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/technical-seo-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/service-process-heading.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/service-process-heading.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/text-marketing-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/text-marketing-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/services/video-editing/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/services/video-editing/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/video-editing-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/video-editing-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/website-maintenance-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/website-maintenance-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/website-maintenance-care-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/website-maintenance-care-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/yelp-seo-v2.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/service-heroes/yelp-seo-v2.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/thank-you/",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/thank-you/",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/thank-you.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/thank-you.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/vision-centers-boutique.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/vision-centers-boutique.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/prestige-beauty-project-desktop.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/client-projects/prestige-beauty-project-desktop.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/work-chapters.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/work-chapters.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/work-process-live.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/work-process-live.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/work-process-illustrated.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/work-process-illustrated.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/work-process-refined.css",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/work-process-refined.css",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/work-process-illustrated.js",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/work-process-illustrated.js",
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/healthcare-mobile.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/healthcare-mobile.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/daycare-education-mobile.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/daycare-education-mobile.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/work-hero-digital-table-v1.jpg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/work-hero-digital-table-v1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/automotive-mobile.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/automotive-mobile.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/real-estate.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/real-estate.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/healthcare.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/healthcare.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/case-final-cta.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/case-final-cta.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/daycare-education.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/daycare-education.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/legal-professional-services-mobile.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/legal-professional-services-mobile.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/h2bros-plumbing.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/h2bros-plumbing.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/real-estate-mobile.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/real-estate-mobile.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/vnwMedia-LogoBlk.png",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/vnwMedia-LogoBlk.png",
+      "type": "image/png"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/retail-ecommerce-mobile.webp",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/home-hero-options/industry-motion/retail-ecommerce-mobile.webp",
+      "type": "image/webp"
+    },
+    {
+      "url": "http://127.0.0.1:8765/vnwMedia/assets/case-system-stack.svg",
+      "status": 200,
+      "final": "http://127.0.0.1:8765/vnwMedia/assets/case-system-stack.svg",
+      "type": "image/svg+xml"
+    }
+  ]
+}
