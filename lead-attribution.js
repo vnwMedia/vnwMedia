@@ -21,7 +21,7 @@
   function currentPage() {
     const pathname = location.pathname.startsWith(root.pathname) ? '/' + location.pathname.slice(root.pathname.length) : location.pathname;
     const pagePath = pathname === '/index.html' ? '/' : pathname;
-    const type = pagePath === '/' ? 'Homepage' : /^\/services\//.test(pagePath) ? 'Service page' : /^\/locations\//.test(pagePath) ? 'Location landing page' : /^\/industries\//.test(pagePath) ? 'Industry landing page' : /^\/case-studies\//.test(pagePath) ? 'Case study' : /^\/resources\//.test(pagePath) ? 'Resource page' : pagePath === '/contact.html' ? 'Contact page' : 'Website page';
+    const type = pagePath === '/' ? 'Homepage' : /^\/services\//.test(pagePath) ? 'Service page' : /^\/locations\//.test(pagePath) ? 'Location landing page' : /^\/industries\//.test(pagePath) ? 'Industry landing page' : /^\/case-studies\//.test(pagePath) ? 'Case study' : /^\/resources\//.test(pagePath) ? 'Resource page' : /^\/contact(?:\.html)?\/?$/.test(pagePath) ? 'Contact page' : 'Website page';
     return {
       title: singleLine(document.title.replace(/\s*\|\s*VNW Media.*$/i, '')) || pagePath,
       heading: singleLine(document.querySelector('main h1,h1')?.textContent),

@@ -1,0 +1,207 @@
+{
+  "checks": [
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/",
+      "width": 1280
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": 1,
+      "url": "/work/",
+      "width": 1280
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/services/google-ppc/",
+      "width": 1280
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/industries/",
+      "width": 1280
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/industries/overview/",
+      "width": 1280
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/locations/new-jersey/middletown/seo-middletown/",
+      "width": 1280
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/case-studies/nycadsco/",
+      "width": 1280
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/resources/",
+      "width": 1280
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/contact/",
+      "width": 1280
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/thank-you/",
+      "width": 1280
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/",
+      "width": 390
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": 1,
+      "url": "/work/",
+      "width": 390
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/services/google-ppc/",
+      "width": 390
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/industries/",
+      "width": 390
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/industries/overview/",
+      "width": 390
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/locations/new-jersey/middletown/seo-middletown/",
+      "width": 390
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/case-studies/nycadsco/",
+      "width": 390
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/resources/",
+      "width": 390
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/contact/",
+      "width": 390
+    },
+    {
+      "footer": 1,
+      "h1": true,
+      "header": 1,
+      "legacyLinks": [],
+      "overflow": false,
+      "tickers": null,
+      "url": "/thank-you/",
+      "width": 390
+    }
+  ],
+  "legacy_query_fragment_forwarding": "passed",
+  "mobile_menu_clean_links": "passed",
+  "menu_to_email_sheet": "passed; no submission"
+}

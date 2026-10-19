@@ -199,7 +199,7 @@ for(const p of c.reviewClients){
  const source=fs.readFileSync(path.join(root,'case-studies',p.slug+'.html'),'utf8');
  assert(!source.includes('noindex')&&!source.includes('<title>Review'));
  assert(source.includes('data-portfolio-published="true"'));
- assert(source.includes('rel="canonical" href="https://vnwmedia.github.io/vnwMedia/case-studies/'+p.slug+'.html"'));
+ assert(source.includes('rel="canonical" href="https://vnwmedia.github.io/vnwMedia/case-studies/'+p.slug+'/"'));
  assert(source.includes('data-page="case-'+p.slug+'"'));
  assert(source.indexOf('site-buttons.css')>source.indexOf('portfolio-client-additions.css'));
  assert(source.indexOf('site-buttons.js')>source.indexOf('portfolio-client-results.js'));
@@ -215,5 +215,5 @@ for(const p of c.reviewClients){
 
 const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
 for(const p of c.clients)assert(!sitemap.includes(p.slug+'-review'));
-for(const p of c.reviewClients)assert(sitemap.includes('/case-studies/'+p.slug+'.html'),'published case study is discoverable');
+for(const p of c.reviewClients)assert(sitemap.includes('/case-studies/'+p.slug+'/'),'published case study is discoverable at its clean URL');
 console.log('PASS: 26 unique public portfolio clients, required positions, stable lower order, 10 published case studies, and a retired portfolio-review redirect.');

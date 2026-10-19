@@ -24,7 +24,7 @@ function verify(html,label){
 const locationSource=read('location-pages.js');
 function walk(dir){for(const item of fs.readdirSync(dir,{withFileTypes:true})){if(['.git','assets','Liquid Soldier','ai-intake-system-wordpress-upload'].includes(item.name))continue;const file=path.join(dir,item.name);if(item.isDirectory())walk(file);else if(item.name.endsWith('.html')){
  const html=fs.readFileSync(file,'utf8');staticForms+=verify(html,path.relative(root,file));
- const templateVersion=path.relative(root,file)==='thank-you.html'?'?v=20261019-light-client-feedback':'?v=20261018-growth-title-lines';
+ const templateVersion=html.includes('data-page="thank-you"')?'?v=20261019-light-client-feedback':'?v=20261018-growth-title-lines';
  for(const script of html.matchAll(/src=["']((?:\.\.\/)*(?:pages|location-pages)\.js)([^"']*)["']/g))assert.equal(script[2],templateVersion,file+' current template version');
  if(html.includes('hero-form')||html.includes('pages.js'))assert(/site-buttons\.css\?v=20261018-growth-title-lines/.test(html),file+' current shared title styles');
  if(!html.includes('location-pages.js'))continue;

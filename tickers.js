@@ -39,9 +39,13 @@
   }
 
   function initializeTickers() {
-    // Portfolio heroes use the exact same catalog, labels, and pace as Home.
+    // Our Work keeps its selected-client ticker, not a second capabilities strip.
     const page = document.body.dataset.page || '';
-    if (page === 'work' || page === 'cases-hub' || page.startsWith('case-')) {
+    if (page === 'work') {
+      document.querySelectorAll('main .trust-strip[aria-label="VNW Media capabilities"]').forEach(strip => strip.remove());
+    }
+    // Case-study heroes retain the shared capabilities catalog and pace.
+    if (page === 'cases-hub' || page.startsWith('case-')) {
       const hero = document.querySelector('.scm-ms-hero, .cs-live-hero, main .inner-hero');
       if (hero) {
         let strip = hero.nextElementSibling;

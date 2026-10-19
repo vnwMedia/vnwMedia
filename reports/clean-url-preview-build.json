@@ -1,0 +1,1946 @@
+{
+  "version": "20261019-clean-urls",
+  "source_pages": [
+    "index.html",
+    "case-studies.html",
+    "case-studies/aesthetic-island-nyc.html",
+    "case-studies/argana-day-spa.html",
+    "case-studies/art-of-construction.html",
+    "case-studies/brooklyn-motors.html",
+    "case-studies/calvin-schwartz.html",
+    "case-studies/catanzaros-power-washing.html",
+    "case-studies/classical-caterers.html",
+    "case-studies/coin-jewelry-gallery-boca-raton.html",
+    "case-studies/cti-logistics.html",
+    "case-studies/fordoz-pharma.html",
+    "case-studies/genius-kids.html",
+    "case-studies/h2bros-plumbing.html",
+    "case-studies/harlem-east-life-plan.html",
+    "case-studies/jb-body-works.html",
+    "case-studies/kypcl.html",
+    "case-studies/la-rosa-chicken-grill.html",
+    "case-studies/mb-law.html",
+    "case-studies/new-generation-learning-center.html",
+    "case-studies/nj-steps-to-success.html",
+    "case-studies/nycadsco.html",
+    "case-studies/platinum-valet-parking.html",
+    "case-studies/prestige-beauty-project.html",
+    "case-studies/raidex-construction.html",
+    "case-studies/sfadsco.html",
+    "case-studies/skyrex-inc.html",
+    "case-studies/vision-centers.html",
+    "clients.html",
+    "contact.html",
+    "industries.html",
+    "industries/auto-repair.html",
+    "industries/automotive/auto-body-seo/index.html",
+    "industries/automotive/case-studies/index.html",
+    "industries/automotive/google-business-profile/index.html",
+    "industries/automotive/index.html",
+    "industries/automotive/ppc/index.html",
+    "industries/automotive/reputation-management/index.html",
+    "industries/automotive/seo/index.html",
+    "industries/automotive/website-design/index.html",
+    "industries/day-care.html",
+    "industries/daycare-education/case-studies/index.html",
+    "industries/daycare-education/education-seo/index.html",
+    "industries/daycare-education/google-business-profile/index.html",
+    "industries/daycare-education/index.html",
+    "industries/daycare-education/ppc/index.html",
+    "industries/daycare-education/reputation-management/index.html",
+    "industries/daycare-education/seo/index.html",
+    "industries/daycare-education/website-design/index.html",
+    "industries/healthcare.html",
+    "industries/healthcare/case-studies/index.html",
+    "industries/healthcare/google-business-profile/index.html",
+    "industries/healthcare/index.html",
+    "industries/healthcare/medical-practice-seo/index.html",
+    "industries/healthcare/ppc/index.html",
+    "industries/healthcare/reputation-management/index.html",
+    "industries/healthcare/seo/index.html",
+    "industries/healthcare/website-design/index.html",
+    "industries/home-services-contractors.html",
+    "industries/home-services/case-studies/index.html",
+    "industries/home-services/contractor-seo/index.html",
+    "industries/home-services/google-business-profile/index.html",
+    "industries/home-services/index.html",
+    "industries/home-services/ppc/index.html",
+    "industries/home-services/reputation-management/index.html",
+    "industries/home-services/seo/index.html",
+    "industries/home-services/website-design/index.html",
+    "industries/index.html",
+    "industries/legal-professional-services.html",
+    "industries/legal-professional-services/case-studies/index.html",
+    "industries/legal-professional-services/google-business-profile/index.html",
+    "industries/legal-professional-services/index.html",
+    "industries/legal-professional-services/ppc/index.html",
+    "industries/legal-professional-services/professional-services-seo/index.html",
+    "industries/legal-professional-services/reputation-management/index.html",
+    "industries/legal-professional-services/seo/index.html",
+    "industries/legal-professional-services/website-design/index.html",
+    "industries/real-estate.html",
+    "industries/real-estate/case-studies/index.html",
+    "industries/real-estate/google-business-profile/index.html",
+    "industries/real-estate/index.html",
+    "industries/real-estate/ppc/index.html",
+    "industries/real-estate/property-management-seo/index.html",
+    "industries/real-estate/reputation-management/index.html",
+    "industries/real-estate/seo/index.html",
+    "industries/real-estate/website-design/index.html",
+    "industries/restaurant.html",
+    "industries/restaurants-hospitality/case-studies/index.html",
+    "industries/restaurants-hospitality/google-business-profile/index.html",
+    "industries/restaurants-hospitality/hospitality-seo/index.html",
+    "industries/restaurants-hospitality/index.html",
+    "industries/restaurants-hospitality/ppc/index.html",
+    "industries/restaurants-hospitality/reputation-management/index.html",
+    "industries/restaurants-hospitality/seo/index.html",
+    "industries/restaurants-hospitality/website-design/index.html",
+    "industries/retail-ecommerce.html",
+    "industries/retail-ecommerce/case-studies/index.html",
+    "industries/retail-ecommerce/ecommerce-seo/index.html",
+    "industries/retail-ecommerce/google-business-profile/index.html",
+    "industries/retail-ecommerce/index.html",
+    "industries/retail-ecommerce/ppc/index.html",
+    "industries/retail-ecommerce/reputation-management/index.html",
+    "industries/retail-ecommerce/seo/index.html",
+    "industries/retail-ecommerce/website-design/index.html",
+    "locations/index.html",
+    "locations/new-jersey/digital-marketing-new-jersey/index.html",
+    "locations/new-jersey/index.html",
+    "locations/new-jersey/middletown/digital-marketing-middletown/index.html",
+    "locations/new-jersey/middletown/index.html",
+    "locations/new-jersey/middletown/ppc-middletown/index.html",
+    "locations/new-jersey/middletown/seo-middletown/index.html",
+    "locations/new-jersey/middletown/web-design-middletown/index.html",
+    "locations/new-jersey/monmouth-county/digital-marketing-monmouth-county/index.html",
+    "locations/new-jersey/monmouth-county/index.html",
+    "locations/new-jersey/monmouth-county/ppc-monmouth-county/index.html",
+    "locations/new-jersey/monmouth-county/seo-monmouth-county/index.html",
+    "locations/new-jersey/monmouth-county/web-design-monmouth-county/index.html",
+    "locations/new-jersey/morganville/digital-marketing-morganville/index.html",
+    "locations/new-jersey/morganville/index.html",
+    "locations/new-jersey/morganville/ppc-morganville/index.html",
+    "locations/new-jersey/morganville/seo-morganville/index.html",
+    "locations/new-jersey/morganville/web-design-morganville/index.html",
+    "locations/new-jersey/ppc-new-jersey/index.html",
+    "locations/new-jersey/seo-new-jersey/index.html",
+    "locations/new-jersey/web-design-new-jersey/index.html",
+    "locations/new-york/bronx/digital-marketing-bronx/index.html",
+    "locations/new-york/bronx/google-ads-bronx/index.html",
+    "locations/new-york/bronx/index.html",
+    "locations/new-york/bronx/ppc-bronx/index.html",
+    "locations/new-york/bronx/seo-bronx/index.html",
+    "locations/new-york/bronx/web-design-bronx/index.html",
+    "locations/new-york/brooklyn/digital-marketing-brooklyn/index.html",
+    "locations/new-york/brooklyn/google-ads-brooklyn/index.html",
+    "locations/new-york/brooklyn/index.html",
+    "locations/new-york/brooklyn/ppc-brooklyn/index.html",
+    "locations/new-york/brooklyn/seo-brooklyn/index.html",
+    "locations/new-york/brooklyn/web-design-brooklyn/index.html",
+    "locations/new-york/digital-marketing-new-york/index.html",
+    "locations/new-york/index.html",
+    "locations/new-york/manhattan/digital-marketing-manhattan/index.html",
+    "locations/new-york/manhattan/google-ads-manhattan/index.html",
+    "locations/new-york/manhattan/index.html",
+    "locations/new-york/manhattan/ppc-manhattan/index.html",
+    "locations/new-york/manhattan/seo-manhattan/index.html",
+    "locations/new-york/manhattan/web-design-manhattan/index.html",
+    "locations/new-york/ppc-new-york/index.html",
+    "locations/new-york/queens/digital-marketing-queens/index.html",
+    "locations/new-york/queens/google-ads-queens/index.html",
+    "locations/new-york/queens/index.html",
+    "locations/new-york/queens/ppc-queens/index.html",
+    "locations/new-york/queens/seo-queens/index.html",
+    "locations/new-york/queens/web-design-queens/index.html",
+    "locations/new-york/seo-new-york/index.html",
+    "locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay/index.html",
+    "locations/new-york/sheepshead-bay/index.html",
+    "locations/new-york/sheepshead-bay/ppc-sheepshead-bay/index.html",
+    "locations/new-york/sheepshead-bay/seo-sheepshead-bay/index.html",
+    "locations/new-york/sheepshead-bay/web-design-sheepshead-bay/index.html",
+    "locations/new-york/staten-island/digital-marketing-staten-island/index.html",
+    "locations/new-york/staten-island/google-ads-staten-island/index.html",
+    "locations/new-york/staten-island/index.html",
+    "locations/new-york/staten-island/ppc-staten-island/index.html",
+    "locations/new-york/staten-island/seo-staten-island/index.html",
+    "locations/new-york/staten-island/web-design-staten-island/index.html",
+    "locations/new-york/web-design-new-york/index.html",
+    "our-story.html",
+    "resources.html",
+    "resources/accelerate-business-growth-with-results-driven-ppc-advertising.html",
+    "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey.html",
+    "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey.html",
+    "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth.html",
+    "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow.html",
+    "resources/landing-page-blueprint.html",
+    "resources/local-seo-growth-guide.html",
+    "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow.html",
+    "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth.html",
+    "resources/turn-search-visibility-into-real-business-growth-in-new-york.html",
+    "resources/turn-social-media-into-your-strongest-growth-channel.html",
+    "resources/website-redesign-checklist.html",
+    "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth.html",
+    "services.html",
+    "services/aeo.html",
+    "services/aio.html",
+    "services/app-design-development.html",
+    "services/brand-strategy.html",
+    "services/community-management.html",
+    "services/content-seo.html",
+    "services/content-writing.html",
+    "services/crm-automation.html",
+    "services/ecommerce.html",
+    "services/email-marketing.html",
+    "services/geo.html",
+    "services/google-business-profile.html",
+    "services/google-ppc.html",
+    "services/graphic-design.html",
+    "services/landing-pages.html",
+    "services/lead-generation.html",
+    "services/local-seo.html",
+    "services/paid-social.html",
+    "services/reputation-management.html",
+    "services/seo.html",
+    "services/social-media-consultation.html",
+    "services/social-media.html",
+    "services/technical-seo.html",
+    "services/text-marketing.html",
+    "services/video-editing.html",
+    "services/web-design.html",
+    "services/website-maintenance.html",
+    "services/yelp-seo.html",
+    "thank-you.html",
+    "work.html"
+  ],
+  "generated": [
+    {
+      "source": "case-studies.html",
+      "output": "case-studies/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/aesthetic-island-nyc.html",
+      "output": "case-studies/aesthetic-island-nyc/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/argana-day-spa.html",
+      "output": "case-studies/argana-day-spa/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/art-of-construction.html",
+      "output": "case-studies/art-of-construction/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/brooklyn-motors.html",
+      "output": "case-studies/brooklyn-motors/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/calvin-schwartz.html",
+      "output": "case-studies/calvin-schwartz/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/catanzaros-power-washing.html",
+      "output": "case-studies/catanzaros-power-washing/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/classical-caterers.html",
+      "output": "case-studies/classical-caterers/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/coin-jewelry-gallery-boca-raton.html",
+      "output": "case-studies/coin-jewelry-gallery-boca-raton/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/cti-logistics.html",
+      "output": "case-studies/cti-logistics/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/fordoz-pharma.html",
+      "output": "case-studies/fordoz-pharma/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/genius-kids.html",
+      "output": "case-studies/genius-kids/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/h2bros-plumbing.html",
+      "output": "case-studies/h2bros-plumbing/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/harlem-east-life-plan.html",
+      "output": "case-studies/harlem-east-life-plan/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/jb-body-works.html",
+      "output": "case-studies/jb-body-works/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/kypcl.html",
+      "output": "case-studies/kypcl/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/la-rosa-chicken-grill.html",
+      "output": "case-studies/la-rosa-chicken-grill/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/mb-law.html",
+      "output": "case-studies/mb-law/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/new-generation-learning-center.html",
+      "output": "case-studies/new-generation-learning-center/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/nj-steps-to-success.html",
+      "output": "case-studies/nj-steps-to-success/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/nycadsco.html",
+      "output": "case-studies/nycadsco/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/platinum-valet-parking.html",
+      "output": "case-studies/platinum-valet-parking/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/prestige-beauty-project.html",
+      "output": "case-studies/prestige-beauty-project/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/raidex-construction.html",
+      "output": "case-studies/raidex-construction/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/sfadsco.html",
+      "output": "case-studies/sfadsco/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/skyrex-inc.html",
+      "output": "case-studies/skyrex-inc/index.html",
+      "base": "../"
+    },
+    {
+      "source": "case-studies/vision-centers.html",
+      "output": "case-studies/vision-centers/index.html",
+      "base": "../"
+    },
+    {
+      "source": "clients.html",
+      "output": "clients/index.html",
+      "base": "../"
+    },
+    {
+      "source": "contact.html",
+      "output": "contact/index.html",
+      "base": "../"
+    },
+    {
+      "source": "industries.html",
+      "output": "industries/overview/index.html",
+      "base": "../../"
+    },
+    {
+      "source": "industries/auto-repair.html",
+      "output": "industries/auto-repair/index.html",
+      "base": "../"
+    },
+    {
+      "source": "industries/day-care.html",
+      "output": "industries/day-care/index.html",
+      "base": "../"
+    },
+    {
+      "source": "industries/healthcare.html",
+      "output": "industries/healthcare/overview/index.html",
+      "base": "../../"
+    },
+    {
+      "source": "industries/home-services-contractors.html",
+      "output": "industries/home-services-contractors/index.html",
+      "base": "../"
+    },
+    {
+      "source": "industries/legal-professional-services.html",
+      "output": "industries/legal-professional-services/overview/index.html",
+      "base": "../../"
+    },
+    {
+      "source": "industries/real-estate.html",
+      "output": "industries/real-estate/overview/index.html",
+      "base": "../../"
+    },
+    {
+      "source": "industries/restaurant.html",
+      "output": "industries/restaurant/index.html",
+      "base": "../"
+    },
+    {
+      "source": "industries/retail-ecommerce.html",
+      "output": "industries/retail-ecommerce/overview/index.html",
+      "base": "../../"
+    },
+    {
+      "source": "our-story.html",
+      "output": "our-story/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources.html",
+      "output": "resources/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/accelerate-business-growth-with-results-driven-ppc-advertising.html",
+      "output": "resources/accelerate-business-growth-with-results-driven-ppc-advertising/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey.html",
+      "output": "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey.html",
+      "output": "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth.html",
+      "output": "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow.html",
+      "output": "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/landing-page-blueprint.html",
+      "output": "resources/landing-page-blueprint/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/local-seo-growth-guide.html",
+      "output": "resources/local-seo-growth-guide/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow.html",
+      "output": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth.html",
+      "output": "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/turn-search-visibility-into-real-business-growth-in-new-york.html",
+      "output": "resources/turn-search-visibility-into-real-business-growth-in-new-york/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/turn-social-media-into-your-strongest-growth-channel.html",
+      "output": "resources/turn-social-media-into-your-strongest-growth-channel/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/website-redesign-checklist.html",
+      "output": "resources/website-redesign-checklist/index.html",
+      "base": "../"
+    },
+    {
+      "source": "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth.html",
+      "output": "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services.html",
+      "output": "services/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/aeo.html",
+      "output": "services/aeo/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/aio.html",
+      "output": "services/aio/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/app-design-development.html",
+      "output": "services/app-design-development/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/brand-strategy.html",
+      "output": "services/brand-strategy/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/community-management.html",
+      "output": "services/community-management/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/content-seo.html",
+      "output": "services/content-seo/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/content-writing.html",
+      "output": "services/content-writing/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/crm-automation.html",
+      "output": "services/crm-automation/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/ecommerce.html",
+      "output": "services/ecommerce/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/email-marketing.html",
+      "output": "services/email-marketing/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/geo.html",
+      "output": "services/geo/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/google-business-profile.html",
+      "output": "services/google-business-profile/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/google-ppc.html",
+      "output": "services/google-ppc/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/graphic-design.html",
+      "output": "services/graphic-design/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/landing-pages.html",
+      "output": "services/landing-pages/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/lead-generation.html",
+      "output": "services/lead-generation/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/local-seo.html",
+      "output": "services/local-seo/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/paid-social.html",
+      "output": "services/paid-social/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/reputation-management.html",
+      "output": "services/reputation-management/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/seo.html",
+      "output": "services/seo/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/social-media-consultation.html",
+      "output": "services/social-media-consultation/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/social-media.html",
+      "output": "services/social-media/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/technical-seo.html",
+      "output": "services/technical-seo/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/text-marketing.html",
+      "output": "services/text-marketing/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/video-editing.html",
+      "output": "services/video-editing/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/web-design.html",
+      "output": "services/web-design/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/website-maintenance.html",
+      "output": "services/website-maintenance/index.html",
+      "base": "../"
+    },
+    {
+      "source": "services/yelp-seo.html",
+      "output": "services/yelp-seo/index.html",
+      "base": "../"
+    },
+    {
+      "source": "thank-you.html",
+      "output": "thank-you/index.html",
+      "base": "../"
+    },
+    {
+      "source": "work.html",
+      "output": "work/index.html",
+      "base": "../"
+    }
+  ],
+  "routes": [
+    {
+      "source": "index.html",
+      "path": ""
+    },
+    {
+      "source": "case-studies.html",
+      "path": "case-studies/"
+    },
+    {
+      "source": "case-studies/aesthetic-island-nyc.html",
+      "path": "case-studies/aesthetic-island-nyc/"
+    },
+    {
+      "source": "case-studies/argana-day-spa.html",
+      "path": "case-studies/argana-day-spa/"
+    },
+    {
+      "source": "case-studies/art-of-construction.html",
+      "path": "case-studies/art-of-construction/"
+    },
+    {
+      "source": "case-studies/brooklyn-motors.html",
+      "path": "case-studies/brooklyn-motors/"
+    },
+    {
+      "source": "case-studies/calvin-schwartz.html",
+      "path": "case-studies/calvin-schwartz/"
+    },
+    {
+      "source": "case-studies/catanzaros-power-washing.html",
+      "path": "case-studies/catanzaros-power-washing/"
+    },
+    {
+      "source": "case-studies/classical-caterers.html",
+      "path": "case-studies/classical-caterers/"
+    },
+    {
+      "source": "case-studies/coin-jewelry-gallery-boca-raton.html",
+      "path": "case-studies/coin-jewelry-gallery-boca-raton/"
+    },
+    {
+      "source": "case-studies/cti-logistics.html",
+      "path": "case-studies/cti-logistics/"
+    },
+    {
+      "source": "case-studies/fordoz-pharma.html",
+      "path": "case-studies/fordoz-pharma/"
+    },
+    {
+      "source": "case-studies/genius-kids.html",
+      "path": "case-studies/genius-kids/"
+    },
+    {
+      "source": "case-studies/h2bros-plumbing.html",
+      "path": "case-studies/h2bros-plumbing/"
+    },
+    {
+      "source": "case-studies/harlem-east-life-plan.html",
+      "path": "case-studies/harlem-east-life-plan/"
+    },
+    {
+      "source": "case-studies/jb-body-works.html",
+      "path": "case-studies/jb-body-works/"
+    },
+    {
+      "source": "case-studies/kypcl.html",
+      "path": "case-studies/kypcl/"
+    },
+    {
+      "source": "case-studies/la-rosa-chicken-grill.html",
+      "path": "case-studies/la-rosa-chicken-grill/"
+    },
+    {
+      "source": "case-studies/mb-law.html",
+      "path": "case-studies/mb-law/"
+    },
+    {
+      "source": "case-studies/new-generation-learning-center.html",
+      "path": "case-studies/new-generation-learning-center/"
+    },
+    {
+      "source": "case-studies/nj-steps-to-success.html",
+      "path": "case-studies/nj-steps-to-success/"
+    },
+    {
+      "source": "case-studies/nycadsco.html",
+      "path": "case-studies/nycadsco/"
+    },
+    {
+      "source": "case-studies/platinum-valet-parking.html",
+      "path": "case-studies/platinum-valet-parking/"
+    },
+    {
+      "source": "case-studies/prestige-beauty-project.html",
+      "path": "case-studies/prestige-beauty-project/"
+    },
+    {
+      "source": "case-studies/raidex-construction.html",
+      "path": "case-studies/raidex-construction/"
+    },
+    {
+      "source": "case-studies/sfadsco.html",
+      "path": "case-studies/sfadsco/"
+    },
+    {
+      "source": "case-studies/skyrex-inc.html",
+      "path": "case-studies/skyrex-inc/"
+    },
+    {
+      "source": "case-studies/vision-centers.html",
+      "path": "case-studies/vision-centers/"
+    },
+    {
+      "source": "clients.html",
+      "path": "clients/"
+    },
+    {
+      "source": "contact.html",
+      "path": "contact/"
+    },
+    {
+      "source": "industries.html",
+      "path": "industries/overview/"
+    },
+    {
+      "source": "industries/auto-repair.html",
+      "path": "industries/auto-repair/"
+    },
+    {
+      "source": "industries/automotive/auto-body-seo/index.html",
+      "path": "industries/automotive/auto-body-seo/"
+    },
+    {
+      "source": "industries/automotive/case-studies/index.html",
+      "path": "industries/automotive/case-studies/"
+    },
+    {
+      "source": "industries/automotive/google-business-profile/index.html",
+      "path": "industries/automotive/google-business-profile/"
+    },
+    {
+      "source": "industries/automotive/index.html",
+      "path": "industries/automotive/"
+    },
+    {
+      "source": "industries/automotive/ppc/index.html",
+      "path": "industries/automotive/ppc/"
+    },
+    {
+      "source": "industries/automotive/reputation-management/index.html",
+      "path": "industries/automotive/reputation-management/"
+    },
+    {
+      "source": "industries/automotive/seo/index.html",
+      "path": "industries/automotive/seo/"
+    },
+    {
+      "source": "industries/automotive/website-design/index.html",
+      "path": "industries/automotive/website-design/"
+    },
+    {
+      "source": "industries/day-care.html",
+      "path": "industries/day-care/"
+    },
+    {
+      "source": "industries/daycare-education/case-studies/index.html",
+      "path": "industries/daycare-education/case-studies/"
+    },
+    {
+      "source": "industries/daycare-education/education-seo/index.html",
+      "path": "industries/daycare-education/education-seo/"
+    },
+    {
+      "source": "industries/daycare-education/google-business-profile/index.html",
+      "path": "industries/daycare-education/google-business-profile/"
+    },
+    {
+      "source": "industries/daycare-education/index.html",
+      "path": "industries/daycare-education/"
+    },
+    {
+      "source": "industries/daycare-education/ppc/index.html",
+      "path": "industries/daycare-education/ppc/"
+    },
+    {
+      "source": "industries/daycare-education/reputation-management/index.html",
+      "path": "industries/daycare-education/reputation-management/"
+    },
+    {
+      "source": "industries/daycare-education/seo/index.html",
+      "path": "industries/daycare-education/seo/"
+    },
+    {
+      "source": "industries/daycare-education/website-design/index.html",
+      "path": "industries/daycare-education/website-design/"
+    },
+    {
+      "source": "industries/healthcare.html",
+      "path": "industries/healthcare/overview/"
+    },
+    {
+      "source": "industries/healthcare/case-studies/index.html",
+      "path": "industries/healthcare/case-studies/"
+    },
+    {
+      "source": "industries/healthcare/google-business-profile/index.html",
+      "path": "industries/healthcare/google-business-profile/"
+    },
+    {
+      "source": "industries/healthcare/index.html",
+      "path": "industries/healthcare/"
+    },
+    {
+      "source": "industries/healthcare/medical-practice-seo/index.html",
+      "path": "industries/healthcare/medical-practice-seo/"
+    },
+    {
+      "source": "industries/healthcare/ppc/index.html",
+      "path": "industries/healthcare/ppc/"
+    },
+    {
+      "source": "industries/healthcare/reputation-management/index.html",
+      "path": "industries/healthcare/reputation-management/"
+    },
+    {
+      "source": "industries/healthcare/seo/index.html",
+      "path": "industries/healthcare/seo/"
+    },
+    {
+      "source": "industries/healthcare/website-design/index.html",
+      "path": "industries/healthcare/website-design/"
+    },
+    {
+      "source": "industries/home-services-contractors.html",
+      "path": "industries/home-services-contractors/"
+    },
+    {
+      "source": "industries/home-services/case-studies/index.html",
+      "path": "industries/home-services/case-studies/"
+    },
+    {
+      "source": "industries/home-services/contractor-seo/index.html",
+      "path": "industries/home-services/contractor-seo/"
+    },
+    {
+      "source": "industries/home-services/google-business-profile/index.html",
+      "path": "industries/home-services/google-business-profile/"
+    },
+    {
+      "source": "industries/home-services/index.html",
+      "path": "industries/home-services/"
+    },
+    {
+      "source": "industries/home-services/ppc/index.html",
+      "path": "industries/home-services/ppc/"
+    },
+    {
+      "source": "industries/home-services/reputation-management/index.html",
+      "path": "industries/home-services/reputation-management/"
+    },
+    {
+      "source": "industries/home-services/seo/index.html",
+      "path": "industries/home-services/seo/"
+    },
+    {
+      "source": "industries/home-services/website-design/index.html",
+      "path": "industries/home-services/website-design/"
+    },
+    {
+      "source": "industries/index.html",
+      "path": "industries/"
+    },
+    {
+      "source": "industries/legal-professional-services.html",
+      "path": "industries/legal-professional-services/overview/"
+    },
+    {
+      "source": "industries/legal-professional-services/case-studies/index.html",
+      "path": "industries/legal-professional-services/case-studies/"
+    },
+    {
+      "source": "industries/legal-professional-services/google-business-profile/index.html",
+      "path": "industries/legal-professional-services/google-business-profile/"
+    },
+    {
+      "source": "industries/legal-professional-services/index.html",
+      "path": "industries/legal-professional-services/"
+    },
+    {
+      "source": "industries/legal-professional-services/ppc/index.html",
+      "path": "industries/legal-professional-services/ppc/"
+    },
+    {
+      "source": "industries/legal-professional-services/professional-services-seo/index.html",
+      "path": "industries/legal-professional-services/professional-services-seo/"
+    },
+    {
+      "source": "industries/legal-professional-services/reputation-management/index.html",
+      "path": "industries/legal-professional-services/reputation-management/"
+    },
+    {
+      "source": "industries/legal-professional-services/seo/index.html",
+      "path": "industries/legal-professional-services/seo/"
+    },
+    {
+      "source": "industries/legal-professional-services/website-design/index.html",
+      "path": "industries/legal-professional-services/website-design/"
+    },
+    {
+      "source": "industries/real-estate.html",
+      "path": "industries/real-estate/overview/"
+    },
+    {
+      "source": "industries/real-estate/case-studies/index.html",
+      "path": "industries/real-estate/case-studies/"
+    },
+    {
+      "source": "industries/real-estate/google-business-profile/index.html",
+      "path": "industries/real-estate/google-business-profile/"
+    },
+    {
+      "source": "industries/real-estate/index.html",
+      "path": "industries/real-estate/"
+    },
+    {
+      "source": "industries/real-estate/ppc/index.html",
+      "path": "industries/real-estate/ppc/"
+    },
+    {
+      "source": "industries/real-estate/property-management-seo/index.html",
+      "path": "industries/real-estate/property-management-seo/"
+    },
+    {
+      "source": "industries/real-estate/reputation-management/index.html",
+      "path": "industries/real-estate/reputation-management/"
+    },
+    {
+      "source": "industries/real-estate/seo/index.html",
+      "path": "industries/real-estate/seo/"
+    },
+    {
+      "source": "industries/real-estate/website-design/index.html",
+      "path": "industries/real-estate/website-design/"
+    },
+    {
+      "source": "industries/restaurant.html",
+      "path": "industries/restaurant/"
+    },
+    {
+      "source": "industries/restaurants-hospitality/case-studies/index.html",
+      "path": "industries/restaurants-hospitality/case-studies/"
+    },
+    {
+      "source": "industries/restaurants-hospitality/google-business-profile/index.html",
+      "path": "industries/restaurants-hospitality/google-business-profile/"
+    },
+    {
+      "source": "industries/restaurants-hospitality/hospitality-seo/index.html",
+      "path": "industries/restaurants-hospitality/hospitality-seo/"
+    },
+    {
+      "source": "industries/restaurants-hospitality/index.html",
+      "path": "industries/restaurants-hospitality/"
+    },
+    {
+      "source": "industries/restaurants-hospitality/ppc/index.html",
+      "path": "industries/restaurants-hospitality/ppc/"
+    },
+    {
+      "source": "industries/restaurants-hospitality/reputation-management/index.html",
+      "path": "industries/restaurants-hospitality/reputation-management/"
+    },
+    {
+      "source": "industries/restaurants-hospitality/seo/index.html",
+      "path": "industries/restaurants-hospitality/seo/"
+    },
+    {
+      "source": "industries/restaurants-hospitality/website-design/index.html",
+      "path": "industries/restaurants-hospitality/website-design/"
+    },
+    {
+      "source": "industries/retail-ecommerce.html",
+      "path": "industries/retail-ecommerce/overview/"
+    },
+    {
+      "source": "industries/retail-ecommerce/case-studies/index.html",
+      "path": "industries/retail-ecommerce/case-studies/"
+    },
+    {
+      "source": "industries/retail-ecommerce/ecommerce-seo/index.html",
+      "path": "industries/retail-ecommerce/ecommerce-seo/"
+    },
+    {
+      "source": "industries/retail-ecommerce/google-business-profile/index.html",
+      "path": "industries/retail-ecommerce/google-business-profile/"
+    },
+    {
+      "source": "industries/retail-ecommerce/index.html",
+      "path": "industries/retail-ecommerce/"
+    },
+    {
+      "source": "industries/retail-ecommerce/ppc/index.html",
+      "path": "industries/retail-ecommerce/ppc/"
+    },
+    {
+      "source": "industries/retail-ecommerce/reputation-management/index.html",
+      "path": "industries/retail-ecommerce/reputation-management/"
+    },
+    {
+      "source": "industries/retail-ecommerce/seo/index.html",
+      "path": "industries/retail-ecommerce/seo/"
+    },
+    {
+      "source": "industries/retail-ecommerce/website-design/index.html",
+      "path": "industries/retail-ecommerce/website-design/"
+    },
+    {
+      "source": "locations/index.html",
+      "path": "locations/"
+    },
+    {
+      "source": "locations/new-jersey/digital-marketing-new-jersey/index.html",
+      "path": "locations/new-jersey/digital-marketing-new-jersey/"
+    },
+    {
+      "source": "locations/new-jersey/index.html",
+      "path": "locations/new-jersey/"
+    },
+    {
+      "source": "locations/new-jersey/middletown/digital-marketing-middletown/index.html",
+      "path": "locations/new-jersey/middletown/digital-marketing-middletown/"
+    },
+    {
+      "source": "locations/new-jersey/middletown/index.html",
+      "path": "locations/new-jersey/middletown/"
+    },
+    {
+      "source": "locations/new-jersey/middletown/ppc-middletown/index.html",
+      "path": "locations/new-jersey/middletown/ppc-middletown/"
+    },
+    {
+      "source": "locations/new-jersey/middletown/seo-middletown/index.html",
+      "path": "locations/new-jersey/middletown/seo-middletown/"
+    },
+    {
+      "source": "locations/new-jersey/middletown/web-design-middletown/index.html",
+      "path": "locations/new-jersey/middletown/web-design-middletown/"
+    },
+    {
+      "source": "locations/new-jersey/monmouth-county/digital-marketing-monmouth-county/index.html",
+      "path": "locations/new-jersey/monmouth-county/digital-marketing-monmouth-county/"
+    },
+    {
+      "source": "locations/new-jersey/monmouth-county/index.html",
+      "path": "locations/new-jersey/monmouth-county/"
+    },
+    {
+      "source": "locations/new-jersey/monmouth-county/ppc-monmouth-county/index.html",
+      "path": "locations/new-jersey/monmouth-county/ppc-monmouth-county/"
+    },
+    {
+      "source": "locations/new-jersey/monmouth-county/seo-monmouth-county/index.html",
+      "path": "locations/new-jersey/monmouth-county/seo-monmouth-county/"
+    },
+    {
+      "source": "locations/new-jersey/monmouth-county/web-design-monmouth-county/index.html",
+      "path": "locations/new-jersey/monmouth-county/web-design-monmouth-county/"
+    },
+    {
+      "source": "locations/new-jersey/morganville/digital-marketing-morganville/index.html",
+      "path": "locations/new-jersey/morganville/digital-marketing-morganville/"
+    },
+    {
+      "source": "locations/new-jersey/morganville/index.html",
+      "path": "locations/new-jersey/morganville/"
+    },
+    {
+      "source": "locations/new-jersey/morganville/ppc-morganville/index.html",
+      "path": "locations/new-jersey/morganville/ppc-morganville/"
+    },
+    {
+      "source": "locations/new-jersey/morganville/seo-morganville/index.html",
+      "path": "locations/new-jersey/morganville/seo-morganville/"
+    },
+    {
+      "source": "locations/new-jersey/morganville/web-design-morganville/index.html",
+      "path": "locations/new-jersey/morganville/web-design-morganville/"
+    },
+    {
+      "source": "locations/new-jersey/ppc-new-jersey/index.html",
+      "path": "locations/new-jersey/ppc-new-jersey/"
+    },
+    {
+      "source": "locations/new-jersey/seo-new-jersey/index.html",
+      "path": "locations/new-jersey/seo-new-jersey/"
+    },
+    {
+      "source": "locations/new-jersey/web-design-new-jersey/index.html",
+      "path": "locations/new-jersey/web-design-new-jersey/"
+    },
+    {
+      "source": "locations/new-york/bronx/digital-marketing-bronx/index.html",
+      "path": "locations/new-york/bronx/digital-marketing-bronx/"
+    },
+    {
+      "source": "locations/new-york/bronx/google-ads-bronx/index.html",
+      "path": "locations/new-york/bronx/google-ads-bronx/"
+    },
+    {
+      "source": "locations/new-york/bronx/index.html",
+      "path": "locations/new-york/bronx/"
+    },
+    {
+      "source": "locations/new-york/bronx/ppc-bronx/index.html",
+      "path": "locations/new-york/bronx/ppc-bronx/"
+    },
+    {
+      "source": "locations/new-york/bronx/seo-bronx/index.html",
+      "path": "locations/new-york/bronx/seo-bronx/"
+    },
+    {
+      "source": "locations/new-york/bronx/web-design-bronx/index.html",
+      "path": "locations/new-york/bronx/web-design-bronx/"
+    },
+    {
+      "source": "locations/new-york/brooklyn/digital-marketing-brooklyn/index.html",
+      "path": "locations/new-york/brooklyn/digital-marketing-brooklyn/"
+    },
+    {
+      "source": "locations/new-york/brooklyn/google-ads-brooklyn/index.html",
+      "path": "locations/new-york/brooklyn/google-ads-brooklyn/"
+    },
+    {
+      "source": "locations/new-york/brooklyn/index.html",
+      "path": "locations/new-york/brooklyn/"
+    },
+    {
+      "source": "locations/new-york/brooklyn/ppc-brooklyn/index.html",
+      "path": "locations/new-york/brooklyn/ppc-brooklyn/"
+    },
+    {
+      "source": "locations/new-york/brooklyn/seo-brooklyn/index.html",
+      "path": "locations/new-york/brooklyn/seo-brooklyn/"
+    },
+    {
+      "source": "locations/new-york/brooklyn/web-design-brooklyn/index.html",
+      "path": "locations/new-york/brooklyn/web-design-brooklyn/"
+    },
+    {
+      "source": "locations/new-york/digital-marketing-new-york/index.html",
+      "path": "locations/new-york/digital-marketing-new-york/"
+    },
+    {
+      "source": "locations/new-york/index.html",
+      "path": "locations/new-york/"
+    },
+    {
+      "source": "locations/new-york/manhattan/digital-marketing-manhattan/index.html",
+      "path": "locations/new-york/manhattan/digital-marketing-manhattan/"
+    },
+    {
+      "source": "locations/new-york/manhattan/google-ads-manhattan/index.html",
+      "path": "locations/new-york/manhattan/google-ads-manhattan/"
+    },
+    {
+      "source": "locations/new-york/manhattan/index.html",
+      "path": "locations/new-york/manhattan/"
+    },
+    {
+      "source": "locations/new-york/manhattan/ppc-manhattan/index.html",
+      "path": "locations/new-york/manhattan/ppc-manhattan/"
+    },
+    {
+      "source": "locations/new-york/manhattan/seo-manhattan/index.html",
+      "path": "locations/new-york/manhattan/seo-manhattan/"
+    },
+    {
+      "source": "locations/new-york/manhattan/web-design-manhattan/index.html",
+      "path": "locations/new-york/manhattan/web-design-manhattan/"
+    },
+    {
+      "source": "locations/new-york/ppc-new-york/index.html",
+      "path": "locations/new-york/ppc-new-york/"
+    },
+    {
+      "source": "locations/new-york/queens/digital-marketing-queens/index.html",
+      "path": "locations/new-york/queens/digital-marketing-queens/"
+    },
+    {
+      "source": "locations/new-york/queens/google-ads-queens/index.html",
+      "path": "locations/new-york/queens/google-ads-queens/"
+    },
+    {
+      "source": "locations/new-york/queens/index.html",
+      "path": "locations/new-york/queens/"
+    },
+    {
+      "source": "locations/new-york/queens/ppc-queens/index.html",
+      "path": "locations/new-york/queens/ppc-queens/"
+    },
+    {
+      "source": "locations/new-york/queens/seo-queens/index.html",
+      "path": "locations/new-york/queens/seo-queens/"
+    },
+    {
+      "source": "locations/new-york/queens/web-design-queens/index.html",
+      "path": "locations/new-york/queens/web-design-queens/"
+    },
+    {
+      "source": "locations/new-york/seo-new-york/index.html",
+      "path": "locations/new-york/seo-new-york/"
+    },
+    {
+      "source": "locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay/index.html",
+      "path": "locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay/"
+    },
+    {
+      "source": "locations/new-york/sheepshead-bay/index.html",
+      "path": "locations/new-york/sheepshead-bay/"
+    },
+    {
+      "source": "locations/new-york/sheepshead-bay/ppc-sheepshead-bay/index.html",
+      "path": "locations/new-york/sheepshead-bay/ppc-sheepshead-bay/"
+    },
+    {
+      "source": "locations/new-york/sheepshead-bay/seo-sheepshead-bay/index.html",
+      "path": "locations/new-york/sheepshead-bay/seo-sheepshead-bay/"
+    },
+    {
+      "source": "locations/new-york/sheepshead-bay/web-design-sheepshead-bay/index.html",
+      "path": "locations/new-york/sheepshead-bay/web-design-sheepshead-bay/"
+    },
+    {
+      "source": "locations/new-york/staten-island/digital-marketing-staten-island/index.html",
+      "path": "locations/new-york/staten-island/digital-marketing-staten-island/"
+    },
+    {
+      "source": "locations/new-york/staten-island/google-ads-staten-island/index.html",
+      "path": "locations/new-york/staten-island/google-ads-staten-island/"
+    },
+    {
+      "source": "locations/new-york/staten-island/index.html",
+      "path": "locations/new-york/staten-island/"
+    },
+    {
+      "source": "locations/new-york/staten-island/ppc-staten-island/index.html",
+      "path": "locations/new-york/staten-island/ppc-staten-island/"
+    },
+    {
+      "source": "locations/new-york/staten-island/seo-staten-island/index.html",
+      "path": "locations/new-york/staten-island/seo-staten-island/"
+    },
+    {
+      "source": "locations/new-york/staten-island/web-design-staten-island/index.html",
+      "path": "locations/new-york/staten-island/web-design-staten-island/"
+    },
+    {
+      "source": "locations/new-york/web-design-new-york/index.html",
+      "path": "locations/new-york/web-design-new-york/"
+    },
+    {
+      "source": "our-story.html",
+      "path": "our-story/"
+    },
+    {
+      "source": "resources.html",
+      "path": "resources/"
+    },
+    {
+      "source": "resources/accelerate-business-growth-with-results-driven-ppc-advertising.html",
+      "path": "resources/accelerate-business-growth-with-results-driven-ppc-advertising/"
+    },
+    {
+      "source": "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey.html",
+      "path": "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey/"
+    },
+    {
+      "source": "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey.html",
+      "path": "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey/"
+    },
+    {
+      "source": "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth.html",
+      "path": "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth/"
+    },
+    {
+      "source": "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow.html",
+      "path": "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow/"
+    },
+    {
+      "source": "resources/landing-page-blueprint.html",
+      "path": "resources/landing-page-blueprint/"
+    },
+    {
+      "source": "resources/local-seo-growth-guide.html",
+      "path": "resources/local-seo-growth-guide/"
+    },
+    {
+      "source": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow.html",
+      "path": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow/"
+    },
+    {
+      "source": "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth.html",
+      "path": "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth/"
+    },
+    {
+      "source": "resources/turn-search-visibility-into-real-business-growth-in-new-york.html",
+      "path": "resources/turn-search-visibility-into-real-business-growth-in-new-york/"
+    },
+    {
+      "source": "resources/turn-social-media-into-your-strongest-growth-channel.html",
+      "path": "resources/turn-social-media-into-your-strongest-growth-channel/"
+    },
+    {
+      "source": "resources/website-redesign-checklist.html",
+      "path": "resources/website-redesign-checklist/"
+    },
+    {
+      "source": "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth.html",
+      "path": "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth/"
+    },
+    {
+      "source": "services.html",
+      "path": "services/"
+    },
+    {
+      "source": "services/aeo.html",
+      "path": "services/aeo/"
+    },
+    {
+      "source": "services/aio.html",
+      "path": "services/aio/"
+    },
+    {
+      "source": "services/app-design-development.html",
+      "path": "services/app-design-development/"
+    },
+    {
+      "source": "services/brand-strategy.html",
+      "path": "services/brand-strategy/"
+    },
+    {
+      "source": "services/community-management.html",
+      "path": "services/community-management/"
+    },
+    {
+      "source": "services/content-seo.html",
+      "path": "services/content-seo/"
+    },
+    {
+      "source": "services/content-writing.html",
+      "path": "services/content-writing/"
+    },
+    {
+      "source": "services/crm-automation.html",
+      "path": "services/crm-automation/"
+    },
+    {
+      "source": "services/ecommerce.html",
+      "path": "services/ecommerce/"
+    },
+    {
+      "source": "services/email-marketing.html",
+      "path": "services/email-marketing/"
+    },
+    {
+      "source": "services/geo.html",
+      "path": "services/geo/"
+    },
+    {
+      "source": "services/google-business-profile.html",
+      "path": "services/google-business-profile/"
+    },
+    {
+      "source": "services/google-ppc.html",
+      "path": "services/google-ppc/"
+    },
+    {
+      "source": "services/graphic-design.html",
+      "path": "services/graphic-design/"
+    },
+    {
+      "source": "services/landing-pages.html",
+      "path": "services/landing-pages/"
+    },
+    {
+      "source": "services/lead-generation.html",
+      "path": "services/lead-generation/"
+    },
+    {
+      "source": "services/local-seo.html",
+      "path": "services/local-seo/"
+    },
+    {
+      "source": "services/paid-social.html",
+      "path": "services/paid-social/"
+    },
+    {
+      "source": "services/reputation-management.html",
+      "path": "services/reputation-management/"
+    },
+    {
+      "source": "services/seo.html",
+      "path": "services/seo/"
+    },
+    {
+      "source": "services/social-media-consultation.html",
+      "path": "services/social-media-consultation/"
+    },
+    {
+      "source": "services/social-media.html",
+      "path": "services/social-media/"
+    },
+    {
+      "source": "services/technical-seo.html",
+      "path": "services/technical-seo/"
+    },
+    {
+      "source": "services/text-marketing.html",
+      "path": "services/text-marketing/"
+    },
+    {
+      "source": "services/video-editing.html",
+      "path": "services/video-editing/"
+    },
+    {
+      "source": "services/web-design.html",
+      "path": "services/web-design/"
+    },
+    {
+      "source": "services/website-maintenance.html",
+      "path": "services/website-maintenance/"
+    },
+    {
+      "source": "services/yelp-seo.html",
+      "path": "services/yelp-seo/"
+    },
+    {
+      "source": "thank-you.html",
+      "path": "thank-you/"
+    },
+    {
+      "source": "work.html",
+      "path": "work/"
+    }
+  ],
+  "lookup": {
+    "index.html": "",
+    "case-studies.html": "case-studies/",
+    "case-studies/aesthetic-island-nyc.html": "case-studies/aesthetic-island-nyc/",
+    "case-studies/argana-day-spa.html": "case-studies/argana-day-spa/",
+    "case-studies/art-of-construction.html": "case-studies/art-of-construction/",
+    "case-studies/brooklyn-motors.html": "case-studies/brooklyn-motors/",
+    "case-studies/calvin-schwartz.html": "case-studies/calvin-schwartz/",
+    "case-studies/catanzaros-power-washing.html": "case-studies/catanzaros-power-washing/",
+    "case-studies/classical-caterers.html": "case-studies/classical-caterers/",
+    "case-studies/coin-jewelry-gallery-boca-raton.html": "case-studies/coin-jewelry-gallery-boca-raton/",
+    "case-studies/cti-logistics.html": "case-studies/cti-logistics/",
+    "case-studies/fordoz-pharma.html": "case-studies/fordoz-pharma/",
+    "case-studies/genius-kids.html": "case-studies/genius-kids/",
+    "case-studies/h2bros-plumbing.html": "case-studies/h2bros-plumbing/",
+    "case-studies/harlem-east-life-plan.html": "case-studies/harlem-east-life-plan/",
+    "case-studies/jb-body-works.html": "case-studies/jb-body-works/",
+    "case-studies/kypcl.html": "case-studies/kypcl/",
+    "case-studies/la-rosa-chicken-grill.html": "case-studies/la-rosa-chicken-grill/",
+    "case-studies/mb-law.html": "case-studies/mb-law/",
+    "case-studies/new-generation-learning-center.html": "case-studies/new-generation-learning-center/",
+    "case-studies/nj-steps-to-success.html": "case-studies/nj-steps-to-success/",
+    "case-studies/nycadsco.html": "case-studies/nycadsco/",
+    "case-studies/platinum-valet-parking.html": "case-studies/platinum-valet-parking/",
+    "case-studies/prestige-beauty-project.html": "case-studies/prestige-beauty-project/",
+    "case-studies/raidex-construction.html": "case-studies/raidex-construction/",
+    "case-studies/sfadsco.html": "case-studies/sfadsco/",
+    "case-studies/skyrex-inc.html": "case-studies/skyrex-inc/",
+    "case-studies/vision-centers.html": "case-studies/vision-centers/",
+    "clients.html": "clients/",
+    "contact.html": "contact/",
+    "industries.html": "industries/overview/",
+    "industries/auto-repair.html": "industries/auto-repair/",
+    "industries/automotive/auto-body-seo/index.html": "industries/automotive/auto-body-seo/",
+    "industries/automotive/case-studies/index.html": "industries/automotive/case-studies/",
+    "industries/automotive/google-business-profile/index.html": "industries/automotive/google-business-profile/",
+    "industries/automotive/index.html": "industries/automotive/",
+    "industries/automotive/ppc/index.html": "industries/automotive/ppc/",
+    "industries/automotive/reputation-management/index.html": "industries/automotive/reputation-management/",
+    "industries/automotive/seo/index.html": "industries/automotive/seo/",
+    "industries/automotive/website-design/index.html": "industries/automotive/website-design/",
+    "industries/day-care.html": "industries/day-care/",
+    "industries/daycare-education/case-studies/index.html": "industries/daycare-education/case-studies/",
+    "industries/daycare-education/education-seo/index.html": "industries/daycare-education/education-seo/",
+    "industries/daycare-education/google-business-profile/index.html": "industries/daycare-education/google-business-profile/",
+    "industries/daycare-education/index.html": "industries/daycare-education/",
+    "industries/daycare-education/ppc/index.html": "industries/daycare-education/ppc/",
+    "industries/daycare-education/reputation-management/index.html": "industries/daycare-education/reputation-management/",
+    "industries/daycare-education/seo/index.html": "industries/daycare-education/seo/",
+    "industries/daycare-education/website-design/index.html": "industries/daycare-education/website-design/",
+    "industries/healthcare.html": "industries/healthcare/overview/",
+    "industries/healthcare/case-studies/index.html": "industries/healthcare/case-studies/",
+    "industries/healthcare/google-business-profile/index.html": "industries/healthcare/google-business-profile/",
+    "industries/healthcare/index.html": "industries/healthcare/",
+    "industries/healthcare/medical-practice-seo/index.html": "industries/healthcare/medical-practice-seo/",
+    "industries/healthcare/ppc/index.html": "industries/healthcare/ppc/",
+    "industries/healthcare/reputation-management/index.html": "industries/healthcare/reputation-management/",
+    "industries/healthcare/seo/index.html": "industries/healthcare/seo/",
+    "industries/healthcare/website-design/index.html": "industries/healthcare/website-design/",
+    "industries/home-services-contractors.html": "industries/home-services-contractors/",
+    "industries/home-services/case-studies/index.html": "industries/home-services/case-studies/",
+    "industries/home-services/contractor-seo/index.html": "industries/home-services/contractor-seo/",
+    "industries/home-services/google-business-profile/index.html": "industries/home-services/google-business-profile/",
+    "industries/home-services/index.html": "industries/home-services/",
+    "industries/home-services/ppc/index.html": "industries/home-services/ppc/",
+    "industries/home-services/reputation-management/index.html": "industries/home-services/reputation-management/",
+    "industries/home-services/seo/index.html": "industries/home-services/seo/",
+    "industries/home-services/website-design/index.html": "industries/home-services/website-design/",
+    "industries/index.html": "industries/",
+    "industries/legal-professional-services.html": "industries/legal-professional-services/overview/",
+    "industries/legal-professional-services/case-studies/index.html": "industries/legal-professional-services/case-studies/",
+    "industries/legal-professional-services/google-business-profile/index.html": "industries/legal-professional-services/google-business-profile/",
+    "industries/legal-professional-services/index.html": "industries/legal-professional-services/",
+    "industries/legal-professional-services/ppc/index.html": "industries/legal-professional-services/ppc/",
+    "industries/legal-professional-services/professional-services-seo/index.html": "industries/legal-professional-services/professional-services-seo/",
+    "industries/legal-professional-services/reputation-management/index.html": "industries/legal-professional-services/reputation-management/",
+    "industries/legal-professional-services/seo/index.html": "industries/legal-professional-services/seo/",
+    "industries/legal-professional-services/website-design/index.html": "industries/legal-professional-services/website-design/",
+    "industries/real-estate.html": "industries/real-estate/overview/",
+    "industries/real-estate/case-studies/index.html": "industries/real-estate/case-studies/",
+    "industries/real-estate/google-business-profile/index.html": "industries/real-estate/google-business-profile/",
+    "industries/real-estate/index.html": "industries/real-estate/",
+    "industries/real-estate/ppc/index.html": "industries/real-estate/ppc/",
+    "industries/real-estate/property-management-seo/index.html": "industries/real-estate/property-management-seo/",
+    "industries/real-estate/reputation-management/index.html": "industries/real-estate/reputation-management/",
+    "industries/real-estate/seo/index.html": "industries/real-estate/seo/",
+    "industries/real-estate/website-design/index.html": "industries/real-estate/website-design/",
+    "industries/restaurant.html": "industries/restaurant/",
+    "industries/restaurants-hospitality/case-studies/index.html": "industries/restaurants-hospitality/case-studies/",
+    "industries/restaurants-hospitality/google-business-profile/index.html": "industries/restaurants-hospitality/google-business-profile/",
+    "industries/restaurants-hospitality/hospitality-seo/index.html": "industries/restaurants-hospitality/hospitality-seo/",
+    "industries/restaurants-hospitality/index.html": "industries/restaurants-hospitality/",
+    "industries/restaurants-hospitality/ppc/index.html": "industries/restaurants-hospitality/ppc/",
+    "industries/restaurants-hospitality/reputation-management/index.html": "industries/restaurants-hospitality/reputation-management/",
+    "industries/restaurants-hospitality/seo/index.html": "industries/restaurants-hospitality/seo/",
+    "industries/restaurants-hospitality/website-design/index.html": "industries/restaurants-hospitality/website-design/",
+    "industries/retail-ecommerce.html": "industries/retail-ecommerce/overview/",
+    "industries/retail-ecommerce/case-studies/index.html": "industries/retail-ecommerce/case-studies/",
+    "industries/retail-ecommerce/ecommerce-seo/index.html": "industries/retail-ecommerce/ecommerce-seo/",
+    "industries/retail-ecommerce/google-business-profile/index.html": "industries/retail-ecommerce/google-business-profile/",
+    "industries/retail-ecommerce/index.html": "industries/retail-ecommerce/",
+    "industries/retail-ecommerce/ppc/index.html": "industries/retail-ecommerce/ppc/",
+    "industries/retail-ecommerce/reputation-management/index.html": "industries/retail-ecommerce/reputation-management/",
+    "industries/retail-ecommerce/seo/index.html": "industries/retail-ecommerce/seo/",
+    "industries/retail-ecommerce/website-design/index.html": "industries/retail-ecommerce/website-design/",
+    "locations/index.html": "locations/",
+    "locations/new-jersey/digital-marketing-new-jersey/index.html": "locations/new-jersey/digital-marketing-new-jersey/",
+    "locations/new-jersey/index.html": "locations/new-jersey/",
+    "locations/new-jersey/middletown/digital-marketing-middletown/index.html": "locations/new-jersey/middletown/digital-marketing-middletown/",
+    "locations/new-jersey/middletown/index.html": "locations/new-jersey/middletown/",
+    "locations/new-jersey/middletown/ppc-middletown/index.html": "locations/new-jersey/middletown/ppc-middletown/",
+    "locations/new-jersey/middletown/seo-middletown/index.html": "locations/new-jersey/middletown/seo-middletown/",
+    "locations/new-jersey/middletown/web-design-middletown/index.html": "locations/new-jersey/middletown/web-design-middletown/",
+    "locations/new-jersey/monmouth-county/digital-marketing-monmouth-county/index.html": "locations/new-jersey/monmouth-county/digital-marketing-monmouth-county/",
+    "locations/new-jersey/monmouth-county/index.html": "locations/new-jersey/monmouth-county/",
+    "locations/new-jersey/monmouth-county/ppc-monmouth-county/index.html": "locations/new-jersey/monmouth-county/ppc-monmouth-county/",
+    "locations/new-jersey/monmouth-county/seo-monmouth-county/index.html": "locations/new-jersey/monmouth-county/seo-monmouth-county/",
+    "locations/new-jersey/monmouth-county/web-design-monmouth-county/index.html": "locations/new-jersey/monmouth-county/web-design-monmouth-county/",
+    "locations/new-jersey/morganville/digital-marketing-morganville/index.html": "locations/new-jersey/morganville/digital-marketing-morganville/",
+    "locations/new-jersey/morganville/index.html": "locations/new-jersey/morganville/",
+    "locations/new-jersey/morganville/ppc-morganville/index.html": "locations/new-jersey/morganville/ppc-morganville/",
+    "locations/new-jersey/morganville/seo-morganville/index.html": "locations/new-jersey/morganville/seo-morganville/",
+    "locations/new-jersey/morganville/web-design-morganville/index.html": "locations/new-jersey/morganville/web-design-morganville/",
+    "locations/new-jersey/ppc-new-jersey/index.html": "locations/new-jersey/ppc-new-jersey/",
+    "locations/new-jersey/seo-new-jersey/index.html": "locations/new-jersey/seo-new-jersey/",
+    "locations/new-jersey/web-design-new-jersey/index.html": "locations/new-jersey/web-design-new-jersey/",
+    "locations/new-york/bronx/digital-marketing-bronx/index.html": "locations/new-york/bronx/digital-marketing-bronx/",
+    "locations/new-york/bronx/google-ads-bronx/index.html": "locations/new-york/bronx/google-ads-bronx/",
+    "locations/new-york/bronx/index.html": "locations/new-york/bronx/",
+    "locations/new-york/bronx/ppc-bronx/index.html": "locations/new-york/bronx/ppc-bronx/",
+    "locations/new-york/bronx/seo-bronx/index.html": "locations/new-york/bronx/seo-bronx/",
+    "locations/new-york/bronx/web-design-bronx/index.html": "locations/new-york/bronx/web-design-bronx/",
+    "locations/new-york/brooklyn/digital-marketing-brooklyn/index.html": "locations/new-york/brooklyn/digital-marketing-brooklyn/",
+    "locations/new-york/brooklyn/google-ads-brooklyn/index.html": "locations/new-york/brooklyn/google-ads-brooklyn/",
+    "locations/new-york/brooklyn/index.html": "locations/new-york/brooklyn/",
+    "locations/new-york/brooklyn/ppc-brooklyn/index.html": "locations/new-york/brooklyn/ppc-brooklyn/",
+    "locations/new-york/brooklyn/seo-brooklyn/index.html": "locations/new-york/brooklyn/seo-brooklyn/",
+    "locations/new-york/brooklyn/web-design-brooklyn/index.html": "locations/new-york/brooklyn/web-design-brooklyn/",
+    "locations/new-york/digital-marketing-new-york/index.html": "locations/new-york/digital-marketing-new-york/",
+    "locations/new-york/index.html": "locations/new-york/",
+    "locations/new-york/manhattan/digital-marketing-manhattan/index.html": "locations/new-york/manhattan/digital-marketing-manhattan/",
+    "locations/new-york/manhattan/google-ads-manhattan/index.html": "locations/new-york/manhattan/google-ads-manhattan/",
+    "locations/new-york/manhattan/index.html": "locations/new-york/manhattan/",
+    "locations/new-york/manhattan/ppc-manhattan/index.html": "locations/new-york/manhattan/ppc-manhattan/",
+    "locations/new-york/manhattan/seo-manhattan/index.html": "locations/new-york/manhattan/seo-manhattan/",
+    "locations/new-york/manhattan/web-design-manhattan/index.html": "locations/new-york/manhattan/web-design-manhattan/",
+    "locations/new-york/ppc-new-york/index.html": "locations/new-york/ppc-new-york/",
+    "locations/new-york/queens/digital-marketing-queens/index.html": "locations/new-york/queens/digital-marketing-queens/",
+    "locations/new-york/queens/google-ads-queens/index.html": "locations/new-york/queens/google-ads-queens/",
+    "locations/new-york/queens/index.html": "locations/new-york/queens/",
+    "locations/new-york/queens/ppc-queens/index.html": "locations/new-york/queens/ppc-queens/",
+    "locations/new-york/queens/seo-queens/index.html": "locations/new-york/queens/seo-queens/",
+    "locations/new-york/queens/web-design-queens/index.html": "locations/new-york/queens/web-design-queens/",
+    "locations/new-york/seo-new-york/index.html": "locations/new-york/seo-new-york/",
+    "locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay/index.html": "locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay/",
+    "locations/new-york/sheepshead-bay/index.html": "locations/new-york/sheepshead-bay/",
+    "locations/new-york/sheepshead-bay/ppc-sheepshead-bay/index.html": "locations/new-york/sheepshead-bay/ppc-sheepshead-bay/",
+    "locations/new-york/sheepshead-bay/seo-sheepshead-bay/index.html": "locations/new-york/sheepshead-bay/seo-sheepshead-bay/",
+    "locations/new-york/sheepshead-bay/web-design-sheepshead-bay/index.html": "locations/new-york/sheepshead-bay/web-design-sheepshead-bay/",
+    "locations/new-york/staten-island/digital-marketing-staten-island/index.html": "locations/new-york/staten-island/digital-marketing-staten-island/",
+    "locations/new-york/staten-island/google-ads-staten-island/index.html": "locations/new-york/staten-island/google-ads-staten-island/",
+    "locations/new-york/staten-island/index.html": "locations/new-york/staten-island/",
+    "locations/new-york/staten-island/ppc-staten-island/index.html": "locations/new-york/staten-island/ppc-staten-island/",
+    "locations/new-york/staten-island/seo-staten-island/index.html": "locations/new-york/staten-island/seo-staten-island/",
+    "locations/new-york/staten-island/web-design-staten-island/index.html": "locations/new-york/staten-island/web-design-staten-island/",
+    "locations/new-york/web-design-new-york/index.html": "locations/new-york/web-design-new-york/",
+    "our-story.html": "our-story/",
+    "resources.html": "resources/",
+    "resources/accelerate-business-growth-with-results-driven-ppc-advertising.html": "resources/accelerate-business-growth-with-results-driven-ppc-advertising/",
+    "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey.html": "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey/",
+    "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey.html": "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey/",
+    "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth.html": "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth/",
+    "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow.html": "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow/",
+    "resources/landing-page-blueprint.html": "resources/landing-page-blueprint/",
+    "resources/local-seo-growth-guide.html": "resources/local-seo-growth-guide/",
+    "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow.html": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow/",
+    "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth.html": "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth/",
+    "resources/turn-search-visibility-into-real-business-growth-in-new-york.html": "resources/turn-search-visibility-into-real-business-growth-in-new-york/",
+    "resources/turn-social-media-into-your-strongest-growth-channel.html": "resources/turn-social-media-into-your-strongest-growth-channel/",
+    "resources/website-redesign-checklist.html": "resources/website-redesign-checklist/",
+    "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth.html": "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth/",
+    "services.html": "services/",
+    "services/aeo.html": "services/aeo/",
+    "services/aio.html": "services/aio/",
+    "services/app-design-development.html": "services/app-design-development/",
+    "services/brand-strategy.html": "services/brand-strategy/",
+    "services/community-management.html": "services/community-management/",
+    "services/content-seo.html": "services/content-seo/",
+    "services/content-writing.html": "services/content-writing/",
+    "services/crm-automation.html": "services/crm-automation/",
+    "services/ecommerce.html": "services/ecommerce/",
+    "services/email-marketing.html": "services/email-marketing/",
+    "services/geo.html": "services/geo/",
+    "services/google-business-profile.html": "services/google-business-profile/",
+    "services/google-ppc.html": "services/google-ppc/",
+    "services/graphic-design.html": "services/graphic-design/",
+    "services/landing-pages.html": "services/landing-pages/",
+    "services/lead-generation.html": "services/lead-generation/",
+    "services/local-seo.html": "services/local-seo/",
+    "services/paid-social.html": "services/paid-social/",
+    "services/reputation-management.html": "services/reputation-management/",
+    "services/seo.html": "services/seo/",
+    "services/social-media-consultation.html": "services/social-media-consultation/",
+    "services/social-media.html": "services/social-media/",
+    "services/technical-seo.html": "services/technical-seo/",
+    "services/text-marketing.html": "services/text-marketing/",
+    "services/video-editing.html": "services/video-editing/",
+    "services/web-design.html": "services/web-design/",
+    "services/website-maintenance.html": "services/website-maintenance/",
+    "services/yelp-seo.html": "services/yelp-seo/",
+    "thank-you.html": "thank-you/",
+    "work.html": "work/",
+    "case-studies/aesthetic-island-nyc-review.html": "case-studies/aesthetic-island-nyc/",
+    "case-studies/argana-day-spa-review.html": "case-studies/argana-day-spa/",
+    "case-studies/calvin-schwartz-review.html": "case-studies/calvin-schwartz/",
+    "case-studies/classical-caterers-review.html": "case-studies/classical-caterers/",
+    "case-studies/genius-kids-review.html": "case-studies/genius-kids/",
+    "case-studies/glass-company-nyc-review.html": "work/",
+    "case-studies/harlem-east-life-plan-review.html": "case-studies/harlem-east-life-plan/",
+    "case-studies/jb-body-works-review.html": "case-studies/jb-body-works/",
+    "case-studies/liquid-soldier-review.html": "work/",
+    "case-studies/lm-attorney-review.html": "work/",
+    "case-studies/mb-law-review.html": "case-studies/mb-law/",
+    "case-studies/new-generation-learning-center-review.html": "case-studies/new-generation-learning-center/",
+    "case-studies/ofshtein-law-firm-review.html": "work/",
+    "case-studies/prestige-beauty-project-review.html": "case-studies/prestige-beauty-project/",
+    "case-studies/rices-collision.html": "work/",
+    "case-studies/south-carolina-motors.html": "work/",
+    "examples/agency-pages/index.html": "case-studies/la-rosa-chicken-grill/",
+    "examples/agency-pages/industry.html": "industries/auto-repair/",
+    "portfolio-review.html": "work/#page-content",
+    "case-studies/aesthetic-island-nyc-review": "case-studies/aesthetic-island-nyc/",
+    "case-studies/argana-day-spa-review": "case-studies/argana-day-spa/",
+    "case-studies/calvin-schwartz-review": "case-studies/calvin-schwartz/",
+    "case-studies/classical-caterers-review": "case-studies/classical-caterers/",
+    "case-studies/genius-kids-review": "case-studies/genius-kids/",
+    "case-studies/glass-company-nyc-review": "work/",
+    "case-studies/harlem-east-life-plan-review": "case-studies/harlem-east-life-plan/",
+    "case-studies/jb-body-works-review": "case-studies/jb-body-works/",
+    "case-studies/liquid-soldier-review": "work/",
+    "case-studies/lm-attorney-review": "work/",
+    "case-studies/mb-law-review": "case-studies/mb-law/",
+    "case-studies/new-generation-learning-center-review": "case-studies/new-generation-learning-center/",
+    "case-studies/ofshtein-law-firm-review": "work/",
+    "case-studies/prestige-beauty-project-review": "case-studies/prestige-beauty-project/",
+    "case-studies/rices-collision": "work/",
+    "case-studies/south-carolina-motors": "work/",
+    "examples/agency-pages": "case-studies/la-rosa-chicken-grill/",
+    "examples/agency-pages/industry": "industries/auto-repair/",
+    "portfolio-review": "work/#page-content",
+    "": "",
+    "case-studies": "case-studies/",
+    "case-studies/aesthetic-island-nyc": "case-studies/aesthetic-island-nyc/",
+    "case-studies/argana-day-spa": "case-studies/argana-day-spa/",
+    "case-studies/art-of-construction": "case-studies/art-of-construction/",
+    "case-studies/brooklyn-motors": "case-studies/brooklyn-motors/",
+    "case-studies/calvin-schwartz": "case-studies/calvin-schwartz/",
+    "case-studies/catanzaros-power-washing": "case-studies/catanzaros-power-washing/",
+    "case-studies/classical-caterers": "case-studies/classical-caterers/",
+    "case-studies/coin-jewelry-gallery-boca-raton": "case-studies/coin-jewelry-gallery-boca-raton/",
+    "case-studies/cti-logistics": "case-studies/cti-logistics/",
+    "case-studies/fordoz-pharma": "case-studies/fordoz-pharma/",
+    "case-studies/genius-kids": "case-studies/genius-kids/",
+    "case-studies/h2bros-plumbing": "case-studies/h2bros-plumbing/",
+    "case-studies/harlem-east-life-plan": "case-studies/harlem-east-life-plan/",
+    "case-studies/jb-body-works": "case-studies/jb-body-works/",
+    "case-studies/kypcl": "case-studies/kypcl/",
+    "case-studies/la-rosa-chicken-grill": "case-studies/la-rosa-chicken-grill/",
+    "case-studies/mb-law": "case-studies/mb-law/",
+    "case-studies/new-generation-learning-center": "case-studies/new-generation-learning-center/",
+    "case-studies/nj-steps-to-success": "case-studies/nj-steps-to-success/",
+    "case-studies/nycadsco": "case-studies/nycadsco/",
+    "case-studies/platinum-valet-parking": "case-studies/platinum-valet-parking/",
+    "case-studies/prestige-beauty-project": "case-studies/prestige-beauty-project/",
+    "case-studies/raidex-construction": "case-studies/raidex-construction/",
+    "case-studies/sfadsco": "case-studies/sfadsco/",
+    "case-studies/skyrex-inc": "case-studies/skyrex-inc/",
+    "case-studies/vision-centers": "case-studies/vision-centers/",
+    "clients": "clients/",
+    "contact": "contact/",
+    "industries/overview": "industries/overview/",
+    "industries/auto-repair": "industries/auto-repair/",
+    "industries/automotive/auto-body-seo": "industries/automotive/auto-body-seo/",
+    "industries/automotive/case-studies": "industries/automotive/case-studies/",
+    "industries/automotive/google-business-profile": "industries/automotive/google-business-profile/",
+    "industries/automotive": "industries/automotive/",
+    "industries/automotive/ppc": "industries/automotive/ppc/",
+    "industries/automotive/reputation-management": "industries/automotive/reputation-management/",
+    "industries/automotive/seo": "industries/automotive/seo/",
+    "industries/automotive/website-design": "industries/automotive/website-design/",
+    "industries/day-care": "industries/day-care/",
+    "industries/daycare-education/case-studies": "industries/daycare-education/case-studies/",
+    "industries/daycare-education/education-seo": "industries/daycare-education/education-seo/",
+    "industries/daycare-education/google-business-profile": "industries/daycare-education/google-business-profile/",
+    "industries/daycare-education": "industries/daycare-education/",
+    "industries/daycare-education/ppc": "industries/daycare-education/ppc/",
+    "industries/daycare-education/reputation-management": "industries/daycare-education/reputation-management/",
+    "industries/daycare-education/seo": "industries/daycare-education/seo/",
+    "industries/daycare-education/website-design": "industries/daycare-education/website-design/",
+    "industries/healthcare/overview": "industries/healthcare/overview/",
+    "industries/healthcare/case-studies": "industries/healthcare/case-studies/",
+    "industries/healthcare/google-business-profile": "industries/healthcare/google-business-profile/",
+    "industries/healthcare": "industries/healthcare/",
+    "industries/healthcare/medical-practice-seo": "industries/healthcare/medical-practice-seo/",
+    "industries/healthcare/ppc": "industries/healthcare/ppc/",
+    "industries/healthcare/reputation-management": "industries/healthcare/reputation-management/",
+    "industries/healthcare/seo": "industries/healthcare/seo/",
+    "industries/healthcare/website-design": "industries/healthcare/website-design/",
+    "industries/home-services-contractors": "industries/home-services-contractors/",
+    "industries/home-services/case-studies": "industries/home-services/case-studies/",
+    "industries/home-services/contractor-seo": "industries/home-services/contractor-seo/",
+    "industries/home-services/google-business-profile": "industries/home-services/google-business-profile/",
+    "industries/home-services": "industries/home-services/",
+    "industries/home-services/ppc": "industries/home-services/ppc/",
+    "industries/home-services/reputation-management": "industries/home-services/reputation-management/",
+    "industries/home-services/seo": "industries/home-services/seo/",
+    "industries/home-services/website-design": "industries/home-services/website-design/",
+    "industries": "industries/",
+    "industries/legal-professional-services/overview": "industries/legal-professional-services/overview/",
+    "industries/legal-professional-services/case-studies": "industries/legal-professional-services/case-studies/",
+    "industries/legal-professional-services/google-business-profile": "industries/legal-professional-services/google-business-profile/",
+    "industries/legal-professional-services": "industries/legal-professional-services/",
+    "industries/legal-professional-services/ppc": "industries/legal-professional-services/ppc/",
+    "industries/legal-professional-services/professional-services-seo": "industries/legal-professional-services/professional-services-seo/",
+    "industries/legal-professional-services/reputation-management": "industries/legal-professional-services/reputation-management/",
+    "industries/legal-professional-services/seo": "industries/legal-professional-services/seo/",
+    "industries/legal-professional-services/website-design": "industries/legal-professional-services/website-design/",
+    "industries/real-estate/overview": "industries/real-estate/overview/",
+    "industries/real-estate/case-studies": "industries/real-estate/case-studies/",
+    "industries/real-estate/google-business-profile": "industries/real-estate/google-business-profile/",
+    "industries/real-estate": "industries/real-estate/",
+    "industries/real-estate/ppc": "industries/real-estate/ppc/",
+    "industries/real-estate/property-management-seo": "industries/real-estate/property-management-seo/",
+    "industries/real-estate/reputation-management": "industries/real-estate/reputation-management/",
+    "industries/real-estate/seo": "industries/real-estate/seo/",
+    "industries/real-estate/website-design": "industries/real-estate/website-design/",
+    "industries/restaurant": "industries/restaurant/",
+    "industries/restaurants-hospitality/case-studies": "industries/restaurants-hospitality/case-studies/",
+    "industries/restaurants-hospitality/google-business-profile": "industries/restaurants-hospitality/google-business-profile/",
+    "industries/restaurants-hospitality/hospitality-seo": "industries/restaurants-hospitality/hospitality-seo/",
+    "industries/restaurants-hospitality": "industries/restaurants-hospitality/",
+    "industries/restaurants-hospitality/ppc": "industries/restaurants-hospitality/ppc/",
+    "industries/restaurants-hospitality/reputation-management": "industries/restaurants-hospitality/reputation-management/",
+    "industries/restaurants-hospitality/seo": "industries/restaurants-hospitality/seo/",
+    "industries/restaurants-hospitality/website-design": "industries/restaurants-hospitality/website-design/",
+    "industries/retail-ecommerce/overview": "industries/retail-ecommerce/overview/",
+    "industries/retail-ecommerce/case-studies": "industries/retail-ecommerce/case-studies/",
+    "industries/retail-ecommerce/ecommerce-seo": "industries/retail-ecommerce/ecommerce-seo/",
+    "industries/retail-ecommerce/google-business-profile": "industries/retail-ecommerce/google-business-profile/",
+    "industries/retail-ecommerce": "industries/retail-ecommerce/",
+    "industries/retail-ecommerce/ppc": "industries/retail-ecommerce/ppc/",
+    "industries/retail-ecommerce/reputation-management": "industries/retail-ecommerce/reputation-management/",
+    "industries/retail-ecommerce/seo": "industries/retail-ecommerce/seo/",
+    "industries/retail-ecommerce/website-design": "industries/retail-ecommerce/website-design/",
+    "locations": "locations/",
+    "locations/new-jersey/digital-marketing-new-jersey": "locations/new-jersey/digital-marketing-new-jersey/",
+    "locations/new-jersey": "locations/new-jersey/",
+    "locations/new-jersey/middletown/digital-marketing-middletown": "locations/new-jersey/middletown/digital-marketing-middletown/",
+    "locations/new-jersey/middletown": "locations/new-jersey/middletown/",
+    "locations/new-jersey/middletown/ppc-middletown": "locations/new-jersey/middletown/ppc-middletown/",
+    "locations/new-jersey/middletown/seo-middletown": "locations/new-jersey/middletown/seo-middletown/",
+    "locations/new-jersey/middletown/web-design-middletown": "locations/new-jersey/middletown/web-design-middletown/",
+    "locations/new-jersey/monmouth-county/digital-marketing-monmouth-county": "locations/new-jersey/monmouth-county/digital-marketing-monmouth-county/",
+    "locations/new-jersey/monmouth-county": "locations/new-jersey/monmouth-county/",
+    "locations/new-jersey/monmouth-county/ppc-monmouth-county": "locations/new-jersey/monmouth-county/ppc-monmouth-county/",
+    "locations/new-jersey/monmouth-county/seo-monmouth-county": "locations/new-jersey/monmouth-county/seo-monmouth-county/",
+    "locations/new-jersey/monmouth-county/web-design-monmouth-county": "locations/new-jersey/monmouth-county/web-design-monmouth-county/",
+    "locations/new-jersey/morganville/digital-marketing-morganville": "locations/new-jersey/morganville/digital-marketing-morganville/",
+    "locations/new-jersey/morganville": "locations/new-jersey/morganville/",
+    "locations/new-jersey/morganville/ppc-morganville": "locations/new-jersey/morganville/ppc-morganville/",
+    "locations/new-jersey/morganville/seo-morganville": "locations/new-jersey/morganville/seo-morganville/",
+    "locations/new-jersey/morganville/web-design-morganville": "locations/new-jersey/morganville/web-design-morganville/",
+    "locations/new-jersey/ppc-new-jersey": "locations/new-jersey/ppc-new-jersey/",
+    "locations/new-jersey/seo-new-jersey": "locations/new-jersey/seo-new-jersey/",
+    "locations/new-jersey/web-design-new-jersey": "locations/new-jersey/web-design-new-jersey/",
+    "locations/new-york/bronx/digital-marketing-bronx": "locations/new-york/bronx/digital-marketing-bronx/",
+    "locations/new-york/bronx/google-ads-bronx": "locations/new-york/bronx/google-ads-bronx/",
+    "locations/new-york/bronx": "locations/new-york/bronx/",
+    "locations/new-york/bronx/ppc-bronx": "locations/new-york/bronx/ppc-bronx/",
+    "locations/new-york/bronx/seo-bronx": "locations/new-york/bronx/seo-bronx/",
+    "locations/new-york/bronx/web-design-bronx": "locations/new-york/bronx/web-design-bronx/",
+    "locations/new-york/brooklyn/digital-marketing-brooklyn": "locations/new-york/brooklyn/digital-marketing-brooklyn/",
+    "locations/new-york/brooklyn/google-ads-brooklyn": "locations/new-york/brooklyn/google-ads-brooklyn/",
+    "locations/new-york/brooklyn": "locations/new-york/brooklyn/",
+    "locations/new-york/brooklyn/ppc-brooklyn": "locations/new-york/brooklyn/ppc-brooklyn/",
+    "locations/new-york/brooklyn/seo-brooklyn": "locations/new-york/brooklyn/seo-brooklyn/",
+    "locations/new-york/brooklyn/web-design-brooklyn": "locations/new-york/brooklyn/web-design-brooklyn/",
+    "locations/new-york/digital-marketing-new-york": "locations/new-york/digital-marketing-new-york/",
+    "locations/new-york": "locations/new-york/",
+    "locations/new-york/manhattan/digital-marketing-manhattan": "locations/new-york/manhattan/digital-marketing-manhattan/",
+    "locations/new-york/manhattan/google-ads-manhattan": "locations/new-york/manhattan/google-ads-manhattan/",
+    "locations/new-york/manhattan": "locations/new-york/manhattan/",
+    "locations/new-york/manhattan/ppc-manhattan": "locations/new-york/manhattan/ppc-manhattan/",
+    "locations/new-york/manhattan/seo-manhattan": "locations/new-york/manhattan/seo-manhattan/",
+    "locations/new-york/manhattan/web-design-manhattan": "locations/new-york/manhattan/web-design-manhattan/",
+    "locations/new-york/ppc-new-york": "locations/new-york/ppc-new-york/",
+    "locations/new-york/queens/digital-marketing-queens": "locations/new-york/queens/digital-marketing-queens/",
+    "locations/new-york/queens/google-ads-queens": "locations/new-york/queens/google-ads-queens/",
+    "locations/new-york/queens": "locations/new-york/queens/",
+    "locations/new-york/queens/ppc-queens": "locations/new-york/queens/ppc-queens/",
+    "locations/new-york/queens/seo-queens": "locations/new-york/queens/seo-queens/",
+    "locations/new-york/queens/web-design-queens": "locations/new-york/queens/web-design-queens/",
+    "locations/new-york/seo-new-york": "locations/new-york/seo-new-york/",
+    "locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay": "locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay/",
+    "locations/new-york/sheepshead-bay": "locations/new-york/sheepshead-bay/",
+    "locations/new-york/sheepshead-bay/ppc-sheepshead-bay": "locations/new-york/sheepshead-bay/ppc-sheepshead-bay/",
+    "locations/new-york/sheepshead-bay/seo-sheepshead-bay": "locations/new-york/sheepshead-bay/seo-sheepshead-bay/",
+    "locations/new-york/sheepshead-bay/web-design-sheepshead-bay": "locations/new-york/sheepshead-bay/web-design-sheepshead-bay/",
+    "locations/new-york/staten-island/digital-marketing-staten-island": "locations/new-york/staten-island/digital-marketing-staten-island/",
+    "locations/new-york/staten-island/google-ads-staten-island": "locations/new-york/staten-island/google-ads-staten-island/",
+    "locations/new-york/staten-island": "locations/new-york/staten-island/",
+    "locations/new-york/staten-island/ppc-staten-island": "locations/new-york/staten-island/ppc-staten-island/",
+    "locations/new-york/staten-island/seo-staten-island": "locations/new-york/staten-island/seo-staten-island/",
+    "locations/new-york/staten-island/web-design-staten-island": "locations/new-york/staten-island/web-design-staten-island/",
+    "locations/new-york/web-design-new-york": "locations/new-york/web-design-new-york/",
+    "our-story": "our-story/",
+    "resources": "resources/",
+    "resources/accelerate-business-growth-with-results-driven-ppc-advertising": "resources/accelerate-business-growth-with-results-driven-ppc-advertising/",
+    "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey": "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey/",
+    "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey": "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey/",
+    "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth": "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth/",
+    "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow": "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow/",
+    "resources/landing-page-blueprint": "resources/landing-page-blueprint/",
+    "resources/local-seo-growth-guide": "resources/local-seo-growth-guide/",
+    "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow/",
+    "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth": "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth/",
+    "resources/turn-search-visibility-into-real-business-growth-in-new-york": "resources/turn-search-visibility-into-real-business-growth-in-new-york/",
+    "resources/turn-social-media-into-your-strongest-growth-channel": "resources/turn-social-media-into-your-strongest-growth-channel/",
+    "resources/website-redesign-checklist": "resources/website-redesign-checklist/",
+    "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth": "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth/",
+    "services": "services/",
+    "services/aeo": "services/aeo/",
+    "services/aio": "services/aio/",
+    "services/app-design-development": "services/app-design-development/",
+    "services/brand-strategy": "services/brand-strategy/",
+    "services/community-management": "services/community-management/",
+    "services/content-seo": "services/content-seo/",
+    "services/content-writing": "services/content-writing/",
+    "services/crm-automation": "services/crm-automation/",
+    "services/ecommerce": "services/ecommerce/",
+    "services/email-marketing": "services/email-marketing/",
+    "services/geo": "services/geo/",
+    "services/google-business-profile": "services/google-business-profile/",
+    "services/google-ppc": "services/google-ppc/",
+    "services/graphic-design": "services/graphic-design/",
+    "services/landing-pages": "services/landing-pages/",
+    "services/lead-generation": "services/lead-generation/",
+    "services/local-seo": "services/local-seo/",
+    "services/paid-social": "services/paid-social/",
+    "services/reputation-management": "services/reputation-management/",
+    "services/seo": "services/seo/",
+    "services/social-media-consultation": "services/social-media-consultation/",
+    "services/social-media": "services/social-media/",
+    "services/technical-seo": "services/technical-seo/",
+    "services/text-marketing": "services/text-marketing/",
+    "services/video-editing": "services/video-editing/",
+    "services/web-design": "services/web-design/",
+    "services/website-maintenance": "services/website-maintenance/",
+    "services/yelp-seo": "services/yelp-seo/",
+    "thank-you": "thank-you/",
+    "work": "work/"
+  }
+}

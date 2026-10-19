@@ -37,7 +37,7 @@ for(const service of context.services){
   assert(title&&description,service.slug+' missing metadata');
   assert(!titles.has(title),'duplicate title');titles.add(title);
   assert(!descriptions.has(description),'duplicate description');descriptions.add(description);
-  assert(source.includes('rel="canonical" href="https://vnwmedia.github.io/vnwMedia/services/'+service.slug+'.html"'));
+  assert(source.includes('rel="canonical" href="https://vnwmedia.github.io/vnwMedia/services/'+service.slug+'/"'));
   const html=context.render(service);
   assert(!html.includes('undefined'),service.slug+' undefined content');
   assert.equal((html.match(/<h1[ >]/g)||[]).length,1);

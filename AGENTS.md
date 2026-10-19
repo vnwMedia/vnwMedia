@@ -21,3 +21,11 @@ Published site: https://vnwmedia.github.io/vnwMedia/
 - Reuse the homepage pill pattern: fully rounded corners, blue primary CTAs with white text, the existing Inter type scale, and a decorative arrow on CTA links. Preserve outline secondary buttons, telephone buttons, and the homepage navigation conventions.
 - Preserve button actions, validation, filtering, selected states, accessibility labels, and keyboard behavior. Text links and linked cards are not filled CTA buttons.
 - Do not modify separate client projects such as Liquid Soldier or the separate WordPress upload as part of this shared VNW Media styling.
+
+## Clean URL preview build
+
+- Edit the original approved `.html` source files. Public URLs use directory paths without `.html`; 84 directory indexes are generated compatibility outputs, not separately maintained page designs.
+- After any source page or shared route-client change, run `node scripts/build-clean-url-preview.cjs` before testing, committing, and pushing. It updates clean copies, metadata, the preview sitemap and `site-clean-urls.js`.
+- `reports/clean-url-preview-build.json` identifies generated outputs and their original asset bases. Do not hand-edit generated copies or remove the originals that serve old links and WordPress exports.
+- New production pages need distinct entries in `wordpress/clean-urls/route-manifest.json`; preserve the five explicit `/overview/` routes that prevent overwriting existing industry directory pages.
+- WordPress publishing is on hold pending the user's review of these GitHub changes. Do not send this migration to the publishing chat or deploy it to WordPress until the user explicitly approves that next step.

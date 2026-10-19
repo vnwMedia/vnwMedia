@@ -78,7 +78,7 @@
     // Keep floating controls out of design studies, but let their shared menu
     // open the same email sheet when that project action is present.
     const isPreview = document.querySelector('meta[name="robots"][content*="noindex"]') &&
-      !/\/thank-you\.html$/.test(location.pathname);
+      !/\/thank-you(?:\.html)?\/?$/.test(location.pathname);
     if ((isPreview && !document.querySelector('[data-open-mobile-email]')) || document.querySelector('.vnw-mobile-contact') || document.querySelector('#vnw-mobile-email-sheet')) return;
 
     const contact = document.createElement('nav');
