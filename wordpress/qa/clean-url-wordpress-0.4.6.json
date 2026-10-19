@@ -1,0 +1,12 @@
+{
+    "php": "8.5.10",
+    "wordpress": "7.1.3",
+    "pages": 211,
+    "legacy_301_redirects": 230,
+    "collision_pairs_preserved": 5,
+    "query_strings_and_fragments": "preserved",
+    "html_metadata_schema": "passed using real WP_HTML_Tag_Processor",
+    "native_sitemap": "clean",
+    "saved_content": "unchanged",
+    "email": "no messages sent"
+}

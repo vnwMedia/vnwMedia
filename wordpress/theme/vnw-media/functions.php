@@ -57,7 +57,7 @@ add_action('wp_enqueue_scripts',function(){
  $deps=array_values(array_filter(wp_styles()->queue,fn($handle)=>str_starts_with($handle,'elementor-')));
  foreach($r['styles'] as $i=>$url){
   $expanded=vnw_expand($url);
-  if(str_contains($expanded,get_template_directory_uri().'/'))$expanded=add_query_arg('vnw_build','0.4.5',$expanded);
+  if(str_contains($expanded,get_template_directory_uri().'/'))$expanded=add_query_arg('vnw_build','0.4.6',$expanded);
   wp_enqueue_style('vnw-'.$i,$expanded,$deps,null);
   $deps=['vnw-'.$i];
  }
@@ -65,11 +65,11 @@ add_action('wp_enqueue_scripts',function(){
  wp_enqueue_script('vnw-catalog',get_template_directory_uri().'/service-catalog.js',[],null,true);
  wp_enqueue_script('vnw-interactions',get_template_directory_uri().'/interactions.js',['vnw-catalog'],null,true);
  wp_add_inline_script('vnw-interactions','window.vnwSite='.wp_json_encode(['home'=>trailingslashit(home_url()),'theme'=>trailingslashit(get_template_directory_uri()),'formAction'=>admin_url('admin-post.php'),'nonce'=>wp_create_nonce('vnw_contact')]).';','before');
- wp_enqueue_script('vnw-home-motion',get_template_directory_uri().'/home-hero-motion.js',['vnw-interactions'],'0.4.5',true);
- wp_enqueue_script('vnw-tickers',get_template_directory_uri().'/tickers.js',['vnw-interactions'],null,true);
- wp_enqueue_script('vnw-buttons',get_template_directory_uri().'/site-buttons.js',['vnw-interactions'],'0.4.5',true);
- wp_enqueue_script('vnw-lead-context',get_template_directory_uri().'/lead-attribution.js',['vnw-buttons'],'0.4.5',true);
- wp_enqueue_script('vnw-form-bridge',get_template_directory_uri().'/form-bridge.js',['vnw-lead-context'],'0.4.5',true);
+ wp_enqueue_script('vnw-home-motion',get_template_directory_uri().'/home-hero-motion.js',['vnw-interactions'],'0.4.6',true);
+ wp_enqueue_script('vnw-tickers',get_template_directory_uri().'/tickers.js',['vnw-interactions'],'0.4.6',true);
+ wp_enqueue_script('vnw-buttons',get_template_directory_uri().'/site-buttons.js',['vnw-interactions'],'0.4.6',true);
+ wp_enqueue_script('vnw-lead-context',get_template_directory_uri().'/lead-attribution.js',['vnw-buttons'],'0.4.6',true);
+ wp_enqueue_script('vnw-form-bridge',get_template_directory_uri().'/form-bridge.js',['vnw-lead-context'],'0.4.6',true);
  wp_enqueue_script('vnw-resources',get_template_directory_uri().'/resources-live.js',['vnw-interactions'],null,true);
 },100);
 // Preserve the source's native emoji rather than WordPress image substitutions.
@@ -165,3 +165,4 @@ add_action('save_post_post',function($id,$post,$update){if(!$update && !wp_is_po
 require_once __DIR__.'/elementor/integration.php';
 
 require_once __DIR__."/latest-update.php";
+require_once __DIR__.'/clean-urls.php';

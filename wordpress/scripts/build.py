@@ -96,7 +96,7 @@ print('Prepared',len(manifest),'routes and original assets')
 p=theme/'site-buttons.js'
 buttons=p.read_text().replace("document.querySelectorAll(ctas).forEach(link => {", "document.querySelectorAll(ctas).forEach(link => {\n      if (link.closest('#wpadminbar')) return;").replace("document.querySelectorAll(controls).forEach(control => {", "document.querySelectorAll(controls).forEach(control => {\n      if (control.closest('#wpadminbar')) return;")
 # WordPress staging also uses noindex; it is not an HTML design-study page.
-buttons=buttons.replace("const isPreview = document.querySelector('meta[name=\"robots\"][content*=\"noindex\"]') &&\n      !/\\/thank-you\\.html$/.test(location.pathname);", "const isPreview = document.body.classList.contains('elementor-editor-active');")
+buttons=buttons.replace("const isPreview = document.querySelector('meta[name=\"robots\"][content*=\"noindex\"]') &&\n      !/\\/thank-you(?:\\.html)?\\/?$/.test(location.pathname);", "const isPreview = document.body.classList.contains('elementor-editor-active');")
 p.write_text(buttons)
 
 # Retain attribution formatting, but WordPress owns submission and confirmation.

@@ -1,0 +1,1413 @@
+{
+  "package": {
+    "theme": "0.4.6",
+    "contentPages": 211,
+    "routes": 213,
+    "assetReferencesChecked": 3186,
+    "missingAssets": [],
+    "legacyWidgetsRetained": 1406,
+    "thankYou": {
+      "sections": 3,
+      "reviews": 22,
+      "lightPalette": true
+    },
+    "sourceCommit": "bb220648952bf952db57999c8fdfbc5b1ce05884",
+    "sha256": "ca4eec300b80bc58ca996958d08bf540d00077b17be5da3bc461de8fcbd29b30",
+    "filename": "vnw-media-wordpress-elementor-0.4.6-form-fix.zip"
+  },
+  "runtime": {
+    "php": "8.5.10",
+    "wordpress": "7.1.3",
+    "elementor": "4.3.5",
+    "theme": "0.4.6",
+    "pages": 211,
+    "editable": 211,
+    "sources": {
+      "work.html": 426,
+      "thank-you.html": 425,
+      "services/yelp-seo.html": 424,
+      "services/website-maintenance.html": 423,
+      "services/web-design.html": 422,
+      "services/video-editing.html": 421,
+      "services/text-marketing.html": 420,
+      "services/technical-seo.html": 419,
+      "services/social-media.html": 418,
+      "services/social-media-consultation.html": 417,
+      "services/seo.html": 416,
+      "services/reputation-management.html": 415,
+      "services/paid-social.html": 414,
+      "services/local-seo.html": 413,
+      "services/lead-generation.html": 412,
+      "services/landing-pages.html": 411,
+      "services/graphic-design.html": 410,
+      "services/google-ppc.html": 409,
+      "services/google-business-profile.html": 408,
+      "services/geo.html": 407,
+      "services/email-marketing.html": 406,
+      "services/ecommerce.html": 405,
+      "services/crm-automation.html": 404,
+      "services/content-writing.html": 403,
+      "services/content-seo.html": 402,
+      "services/community-management.html": 401,
+      "services/brand-strategy.html": 400,
+      "services/app-design-development.html": 399,
+      "services/aio.html": 398,
+      "services/aeo.html": 397,
+      "services.html": 396,
+      "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth.html": 395,
+      "resources/website-redesign-checklist.html": 394,
+      "resources/turn-social-media-into-your-strongest-growth-channel.html": 393,
+      "resources/turn-search-visibility-into-real-business-growth-in-new-york.html": 392,
+      "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth.html": 391,
+      "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow.html": 390,
+      "resources/local-seo-growth-guide.html": 389,
+      "resources/landing-page-blueprint.html": 388,
+      "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow.html": 387,
+      "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth.html": 386,
+      "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey.html": 385,
+      "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey.html": 384,
+      "resources/accelerate-business-growth-with-results-driven-ppc-advertising.html": 383,
+      "resources.html": 382,
+      "our-story.html": 381,
+      "locations/new-york/web-design-new-york/index.html": 380,
+      "locations/new-york/staten-island/web-design-staten-island/index.html": 379,
+      "locations/new-york/staten-island/seo-staten-island/index.html": 378,
+      "locations/new-york/staten-island/ppc-staten-island/index.html": 377,
+      "locations/new-york/staten-island/index.html": 376,
+      "locations/new-york/staten-island/google-ads-staten-island/index.html": 375,
+      "locations/new-york/staten-island/digital-marketing-staten-island/index.html": 374,
+      "locations/new-york/sheepshead-bay/web-design-sheepshead-bay/index.html": 373,
+      "locations/new-york/sheepshead-bay/seo-sheepshead-bay/index.html": 372,
+      "locations/new-york/sheepshead-bay/ppc-sheepshead-bay/index.html": 371,
+      "locations/new-york/sheepshead-bay/index.html": 370,
+      "locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay/index.html": 369,
+      "locations/new-york/seo-new-york/index.html": 368,
+      "locations/new-york/queens/web-design-queens/index.html": 367,
+      "locations/new-york/queens/seo-queens/index.html": 366,
+      "locations/new-york/queens/ppc-queens/index.html": 365,
+      "locations/new-york/queens/index.html": 364,
+      "locations/new-york/queens/google-ads-queens/index.html": 363,
+      "locations/new-york/queens/digital-marketing-queens/index.html": 362,
+      "locations/new-york/ppc-new-york/index.html": 361,
+      "locations/new-york/manhattan/web-design-manhattan/index.html": 360,
+      "locations/new-york/manhattan/seo-manhattan/index.html": 359,
+      "locations/new-york/manhattan/ppc-manhattan/index.html": 358,
+      "locations/new-york/manhattan/index.html": 357,
+      "locations/new-york/manhattan/google-ads-manhattan/index.html": 356,
+      "locations/new-york/manhattan/digital-marketing-manhattan/index.html": 355,
+      "locations/new-york/index.html": 354,
+      "locations/new-york/digital-marketing-new-york/index.html": 353,
+      "locations/new-york/brooklyn/web-design-brooklyn/index.html": 352,
+      "locations/new-york/brooklyn/seo-brooklyn/index.html": 351,
+      "locations/new-york/brooklyn/ppc-brooklyn/index.html": 350,
+      "locations/new-york/brooklyn/index.html": 349,
+      "locations/new-york/brooklyn/google-ads-brooklyn/index.html": 348,
+      "locations/new-york/brooklyn/digital-marketing-brooklyn/index.html": 347,
+      "locations/new-york/bronx/web-design-bronx/index.html": 346,
+      "locations/new-york/bronx/seo-bronx/index.html": 345,
+      "locations/new-york/bronx/ppc-bronx/index.html": 344,
+      "locations/new-york/bronx/index.html": 343,
+      "locations/new-york/bronx/google-ads-bronx/index.html": 342,
+      "locations/new-york/bronx/digital-marketing-bronx/index.html": 341,
+      "locations/new-jersey/web-design-new-jersey/index.html": 340,
+      "locations/new-jersey/seo-new-jersey/index.html": 339,
+      "locations/new-jersey/ppc-new-jersey/index.html": 338,
+      "locations/new-jersey/morganville/web-design-morganville/index.html": 337,
+      "locations/new-jersey/morganville/seo-morganville/index.html": 336,
+      "locations/new-jersey/morganville/ppc-morganville/index.html": 335,
+      "locations/new-jersey/morganville/index.html": 334,
+      "locations/new-jersey/morganville/digital-marketing-morganville/index.html": 333,
+      "locations/new-jersey/monmouth-county/web-design-monmouth-county/index.html": 332,
+      "locations/new-jersey/monmouth-county/seo-monmouth-county/index.html": 331,
+      "locations/new-jersey/monmouth-county/ppc-monmouth-county/index.html": 330,
+      "locations/new-jersey/monmouth-county/index.html": 329,
+      "locations/new-jersey/monmouth-county/digital-marketing-monmouth-county/index.html": 328,
+      "locations/new-jersey/middletown/web-design-middletown/index.html": 327,
+      "locations/new-jersey/middletown/seo-middletown/index.html": 326,
+      "locations/new-jersey/middletown/ppc-middletown/index.html": 325,
+      "locations/new-jersey/middletown/index.html": 324,
+      "locations/new-jersey/middletown/digital-marketing-middletown/index.html": 323,
+      "locations/new-jersey/index.html": 322,
+      "locations/new-jersey/digital-marketing-new-jersey/index.html": 321,
+      "locations/index.html": 320,
+      "industries/retail-ecommerce/website-design/index.html": 319,
+      "industries/retail-ecommerce/seo/index.html": 318,
+      "industries/retail-ecommerce/reputation-management/index.html": 317,
+      "industries/retail-ecommerce/ppc/index.html": 316,
+      "industries/retail-ecommerce/index.html": 315,
+      "industries/retail-ecommerce/google-business-profile/index.html": 314,
+      "industries/retail-ecommerce/ecommerce-seo/index.html": 313,
+      "industries/retail-ecommerce/case-studies/index.html": 312,
+      "industries/retail-ecommerce.html": 311,
+      "industries/restaurants-hospitality/website-design/index.html": 310,
+      "industries/restaurants-hospitality/seo/index.html": 309,
+      "industries/restaurants-hospitality/reputation-management/index.html": 308,
+      "industries/restaurants-hospitality/ppc/index.html": 307,
+      "industries/restaurants-hospitality/index.html": 306,
+      "industries/restaurants-hospitality/hospitality-seo/index.html": 305,
+      "industries/restaurants-hospitality/google-business-profile/index.html": 304,
+      "industries/restaurants-hospitality/case-studies/index.html": 303,
+      "industries/restaurant.html": 302,
+      "industries/real-estate/website-design/index.html": 301,
+      "industries/real-estate/seo/index.html": 300,
+      "industries/real-estate/reputation-management/index.html": 299,
+      "industries/real-estate/property-management-seo/index.html": 298,
+      "industries/real-estate/ppc/index.html": 297,
+      "industries/real-estate/index.html": 296,
+      "industries/real-estate/google-business-profile/index.html": 295,
+      "industries/real-estate/case-studies/index.html": 294,
+      "industries/real-estate.html": 293,
+      "industries/legal-professional-services/website-design/index.html": 292,
+      "industries/legal-professional-services/seo/index.html": 291,
+      "industries/legal-professional-services/reputation-management/index.html": 290,
+      "industries/legal-professional-services/professional-services-seo/index.html": 289,
+      "industries/legal-professional-services/ppc/index.html": 288,
+      "industries/legal-professional-services/index.html": 287,
+      "industries/legal-professional-services/google-business-profile/index.html": 286,
+      "industries/legal-professional-services/case-studies/index.html": 285,
+      "industries/legal-professional-services.html": 284,
+      "industries/index.html": 283,
+      "industries/home-services/website-design/index.html": 282,
+      "industries/home-services/seo/index.html": 281,
+      "industries/home-services/reputation-management/index.html": 280,
+      "industries/home-services/ppc/index.html": 279,
+      "industries/home-services/index.html": 278,
+      "industries/home-services/google-business-profile/index.html": 277,
+      "industries/home-services/contractor-seo/index.html": 276,
+      "industries/home-services/case-studies/index.html": 275,
+      "industries/home-services-contractors.html": 274,
+      "industries/healthcare/website-design/index.html": 273,
+      "industries/healthcare/seo/index.html": 272,
+      "industries/healthcare/reputation-management/index.html": 271,
+      "industries/healthcare/ppc/index.html": 270,
+      "industries/healthcare/medical-practice-seo/index.html": 269,
+      "industries/healthcare/index.html": 268,
+      "industries/healthcare/google-business-profile/index.html": 267,
+      "industries/healthcare/case-studies/index.html": 266,
+      "industries/healthcare.html": 265,
+      "industries/daycare-education/website-design/index.html": 264,
+      "industries/daycare-education/seo/index.html": 263,
+      "industries/daycare-education/reputation-management/index.html": 262,
+      "industries/daycare-education/ppc/index.html": 261,
+      "industries/daycare-education/index.html": 260,
+      "industries/daycare-education/google-business-profile/index.html": 259,
+      "industries/daycare-education/education-seo/index.html": 258,
+      "industries/daycare-education/case-studies/index.html": 257,
+      "industries/day-care.html": 256,
+      "industries/automotive/website-design/index.html": 255,
+      "industries/automotive/seo/index.html": 254,
+      "industries/automotive/reputation-management/index.html": 253,
+      "industries/automotive/ppc/index.html": 252,
+      "industries/automotive/index.html": 251,
+      "industries/automotive/google-business-profile/index.html": 250,
+      "industries/automotive/case-studies/index.html": 249,
+      "industries/automotive/auto-body-seo/index.html": 248,
+      "industries/auto-repair.html": 247,
+      "industries.html": 246,
+      "contact.html": 245,
+      "clients.html": 244,
+      "case-studies/vision-centers.html": 243,
+      "case-studies/skyrex-inc.html": 242,
+      "case-studies/sfadsco.html": 241,
+      "case-studies/raidex-construction.html": 240,
+      "case-studies/prestige-beauty-project.html": 239,
+      "case-studies/platinum-valet-parking.html": 238,
+      "case-studies/nycadsco.html": 237,
+      "case-studies/nj-steps-to-success.html": 236,
+      "case-studies/new-generation-learning-center.html": 235,
+      "case-studies/mb-law.html": 234,
+      "case-studies/la-rosa-chicken-grill.html": 233,
+      "case-studies/kypcl.html": 232,
+      "case-studies/jb-body-works.html": 231,
+      "case-studies/harlem-east-life-plan.html": 230,
+      "case-studies/h2bros-plumbing.html": 229,
+      "case-studies/genius-kids.html": 228,
+      "case-studies/fordoz-pharma.html": 227,
+      "case-studies/cti-logistics.html": 226,
+      "case-studies/coin-jewelry-gallery-boca-raton.html": 225,
+      "case-studies/classical-caterers.html": 224,
+      "case-studies/catanzaros-power-washing.html": 223,
+      "case-studies/calvin-schwartz.html": 222,
+      "case-studies/brooklyn-motors.html": 221,
+      "case-studies/art-of-construction.html": 220,
+      "case-studies/argana-day-spa.html": 219,
+      "case-studies/aesthetic-island-nyc.html": 218,
+      "case-studies.html": 217,
+      "index.html": 216
+    },
+    "errors": [
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 1024,
+        "message": "Function WP_Icon_Collections_Registry::register was called <strong>incorrectly</strong>. Icon collection is already registered. Please see <a href=\"https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/\">Debugging in WordPress</a> for more information. (This message was added in version 7.1.0.)",
+        "file": "/wordpress/wp-includes/functions.php",
+        "line": 6260
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 2,
+        "message": "Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/elementor/includes/autoloader.php:300)",
+        "file": "/wordpress/wp-includes/rest-api/class-wp-rest-server.php",
+        "line": 1930
+      },
+      {
+        "severity": 2,
+        "message": "Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/elementor/includes/autoloader.php:300)",
+        "file": "/wordpress/wp-includes/rest-api/class-wp-rest-server.php",
+        "line": 1930
+      },
+      {
+        "severity": 2,
+        "message": "Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/elementor/includes/autoloader.php:300)",
+        "file": "/wordpress/wp-includes/rest-api/class-wp-rest-server.php",
+        "line": 1930
+      },
+      {
+        "severity": 2,
+        "message": "Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/elementor/includes/autoloader.php:300)",
+        "file": "/wordpress/wp-includes/rest-api/class-wp-rest-server.php",
+        "line": 1930
+      },
+      {
+        "severity": 2,
+        "message": "Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/elementor/includes/autoloader.php:300)",
+        "file": "/wordpress/wp-includes/rest-api/class-wp-rest-server.php",
+        "line": 1930
+      },
+      {
+        "severity": 2,
+        "message": "Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/elementor/includes/autoloader.php:300)",
+        "file": "/wordpress/wp-includes/rest-api/class-wp-rest-server.php",
+        "line": 1930
+      },
+      {
+        "severity": 2,
+        "message": "Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/elementor/includes/autoloader.php:300)",
+        "file": "/wordpress/wp-includes/rest-api/class-wp-rest-server.php",
+        "line": 1930
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      },
+      {
+        "severity": 8192,
+        "message": "Elementor\\Modules\\GlobalClasses\\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead",
+        "file": "/wordpress/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php",
+        "line": 410
+      }
+    ],
+    "upgrade": {
+      "from": "0.4.5",
+      "to": "0.4.6",
+      "pages": 211,
+      "manualHomepageEdit": "Already current; edits retained",
+      "manualEditsPreserved": true,
+      "duplicateImport": false,
+      "repeatable": true,
+      "results": {
+        "Already current; edits retained": 211
+      }
+    },
+    "fresh": {
+      "pages": 211,
+      "editable": 211,
+      "websiteFields": 144,
+      "emailFields": 144,
+      "idempotent": true,
+      "unnecessarySnapshots": false
+    },
+    "mailCount": 0,
+    "linted": "7"
+  },
+  "cleanRoutes": {
+    "php": "8.5.10",
+    "wordpress": "7.1.3",
+    "pages": 211,
+    "legacy_301_redirects": 230,
+    "collision_pairs_preserved": 5,
+    "query_strings_and_fragments": "preserved",
+    "html_metadata_schema": "passed using real WP_HTML_Tag_Processor",
+    "native_sitemap": "clean",
+    "saved_content": "unchanged",
+    "email": "no messages sent"
+  },
+  "sourceTests": {
+    "pass": 18,
+    "fail": 0
+  },
+  "localFormLoopRegression": {
+    "desktop": true,
+    "dynamicMobile": true,
+    "endpointHiddenActionNoncePreserved": true,
+    "postsPerClick": 1,
+    "mailSent": false
+  },
+  "live": {
+    "site": "https://vnwmedia.net/",
+    "theme": "0.4.6",
+    "formScriptVersion": "20261019-clean-urls-form-fix",
+    "safeUpdater": "Finished; all 211 pages already current, edits retained",
+    "cachesCleared": [
+      "Elementor",
+      "Hostinger website and CDN"
+    ],
+    "http": {
+      "base": "https://vnwmedia.net",
+      "pages": 211,
+      "legacyRedirects": 230,
+      "assets": 258,
+      "sitemapPageUrls": 212,
+      "results": [
+        {
+          "path": "case-studies/aesthetic-island-nyc/",
+          "status": 200
+        },
+        {
+          "path": "",
+          "status": 200
+        },
+        {
+          "path": "case-studies/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/art-of-construction/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/argana-day-spa/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/brooklyn-motors/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/catanzaros-power-washing/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/calvin-schwartz/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/classical-caterers/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/cti-logistics/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/coin-jewelry-gallery-boca-raton/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/fordoz-pharma/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/genius-kids/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/h2bros-plumbing/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/harlem-east-life-plan/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/kypcl/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/jb-body-works/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/la-rosa-chicken-grill/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/mb-law/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/nj-steps-to-success/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/new-generation-learning-center/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/nycadsco/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/platinum-valet-parking/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/prestige-beauty-project/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/sfadsco/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/skyrex-inc/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/raidex-construction/",
+          "status": 200
+        },
+        {
+          "path": "case-studies/vision-centers/",
+          "status": 200
+        },
+        {
+          "path": "clients/",
+          "status": 200
+        },
+        {
+          "path": "contact/",
+          "status": 200
+        },
+        {
+          "path": "industries/overview/",
+          "status": 200
+        },
+        {
+          "path": "industries/auto-repair/",
+          "status": 200
+        },
+        {
+          "path": "industries/automotive/auto-body-seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/automotive/case-studies/",
+          "status": 200
+        },
+        {
+          "path": "industries/automotive/google-business-profile/",
+          "status": 200
+        },
+        {
+          "path": "industries/automotive/",
+          "status": 200
+        },
+        {
+          "path": "industries/automotive/reputation-management/",
+          "status": 200
+        },
+        {
+          "path": "industries/automotive/seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/automotive/ppc/",
+          "status": 200
+        },
+        {
+          "path": "industries/daycare-education/case-studies/",
+          "status": 200
+        },
+        {
+          "path": "industries/automotive/website-design/",
+          "status": 200
+        },
+        {
+          "path": "industries/day-care/",
+          "status": 200
+        },
+        {
+          "path": "industries/daycare-education/google-business-profile/",
+          "status": 200
+        },
+        {
+          "path": "industries/daycare-education/",
+          "status": 200
+        },
+        {
+          "path": "industries/daycare-education/education-seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/daycare-education/ppc/",
+          "status": 200
+        },
+        {
+          "path": "industries/daycare-education/reputation-management/",
+          "status": 200
+        },
+        {
+          "path": "industries/daycare-education/seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/healthcare/case-studies/",
+          "status": 200
+        },
+        {
+          "path": "industries/daycare-education/website-design/",
+          "status": 200
+        },
+        {
+          "path": "industries/healthcare/overview/",
+          "status": 200
+        },
+        {
+          "path": "industries/healthcare/",
+          "status": 200
+        },
+        {
+          "path": "industries/healthcare/medical-practice-seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/healthcare/google-business-profile/",
+          "status": 200
+        },
+        {
+          "path": "industries/healthcare/seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/healthcare/reputation-management/",
+          "status": 200
+        },
+        {
+          "path": "industries/healthcare/ppc/",
+          "status": 200
+        },
+        {
+          "path": "industries/healthcare/website-design/",
+          "status": 200
+        },
+        {
+          "path": "industries/home-services-contractors/",
+          "status": 200
+        },
+        {
+          "path": "industries/home-services/case-studies/",
+          "status": 200
+        },
+        {
+          "path": "industries/home-services/google-business-profile/",
+          "status": 200
+        },
+        {
+          "path": "industries/home-services/contractor-seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/home-services/",
+          "status": 200
+        },
+        {
+          "path": "industries/home-services/ppc/",
+          "status": 200
+        },
+        {
+          "path": "industries/home-services/reputation-management/",
+          "status": 200
+        },
+        {
+          "path": "industries/home-services/seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/home-services/website-design/",
+          "status": 200
+        },
+        {
+          "path": "industries/",
+          "status": 200
+        },
+        {
+          "path": "industries/legal-professional-services/overview/",
+          "status": 200
+        },
+        {
+          "path": "industries/legal-professional-services/case-studies/",
+          "status": 200
+        },
+        {
+          "path": "industries/legal-professional-services/google-business-profile/",
+          "status": 200
+        },
+        {
+          "path": "industries/legal-professional-services/",
+          "status": 200
+        },
+        {
+          "path": "industries/legal-professional-services/ppc/",
+          "status": 200
+        },
+        {
+          "path": "industries/legal-professional-services/professional-services-seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/legal-professional-services/reputation-management/",
+          "status": 200
+        },
+        {
+          "path": "industries/legal-professional-services/seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/legal-professional-services/website-design/",
+          "status": 200
+        },
+        {
+          "path": "industries/real-estate/overview/",
+          "status": 200
+        },
+        {
+          "path": "industries/real-estate/case-studies/",
+          "status": 200
+        },
+        {
+          "path": "industries/real-estate/google-business-profile/",
+          "status": 200
+        },
+        {
+          "path": "industries/real-estate/",
+          "status": 200
+        },
+        {
+          "path": "industries/real-estate/ppc/",
+          "status": 200
+        },
+        {
+          "path": "industries/real-estate/property-management-seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/real-estate/reputation-management/",
+          "status": 200
+        },
+        {
+          "path": "industries/real-estate/seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/real-estate/website-design/",
+          "status": 200
+        },
+        {
+          "path": "industries/restaurant/",
+          "status": 200
+        },
+        {
+          "path": "industries/restaurants-hospitality/google-business-profile/",
+          "status": 200
+        },
+        {
+          "path": "industries/restaurants-hospitality/case-studies/",
+          "status": 200
+        },
+        {
+          "path": "industries/restaurants-hospitality/hospitality-seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/restaurants-hospitality/ppc/",
+          "status": 200
+        },
+        {
+          "path": "industries/restaurants-hospitality/",
+          "status": 200
+        },
+        {
+          "path": "industries/restaurants-hospitality/reputation-management/",
+          "status": 200
+        },
+        {
+          "path": "industries/restaurants-hospitality/website-design/",
+          "status": 200
+        },
+        {
+          "path": "industries/restaurants-hospitality/seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/retail-ecommerce/overview/",
+          "status": 200
+        },
+        {
+          "path": "industries/retail-ecommerce/ecommerce-seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/retail-ecommerce/case-studies/",
+          "status": 200
+        },
+        {
+          "path": "industries/retail-ecommerce/google-business-profile/",
+          "status": 200
+        },
+        {
+          "path": "industries/retail-ecommerce/reputation-management/",
+          "status": 200
+        },
+        {
+          "path": "industries/retail-ecommerce/",
+          "status": 200
+        },
+        {
+          "path": "industries/retail-ecommerce/ppc/",
+          "status": 200
+        },
+        {
+          "path": "locations/",
+          "status": 200
+        },
+        {
+          "path": "industries/retail-ecommerce/seo/",
+          "status": 200
+        },
+        {
+          "path": "industries/retail-ecommerce/website-design/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/digital-marketing-new-jersey/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/middletown/digital-marketing-middletown/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/middletown/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/middletown/ppc-middletown/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/middletown/seo-middletown/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/middletown/web-design-middletown/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/monmouth-county/digital-marketing-monmouth-county/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/monmouth-county/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/monmouth-county/ppc-monmouth-county/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/monmouth-county/seo-monmouth-county/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/monmouth-county/web-design-monmouth-county/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/morganville/digital-marketing-morganville/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/morganville/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/morganville/ppc-morganville/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/morganville/seo-morganville/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/morganville/web-design-morganville/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/ppc-new-jersey/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/seo-new-jersey/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-jersey/web-design-new-jersey/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/bronx/digital-marketing-bronx/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/bronx/google-ads-bronx/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/bronx/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/bronx/ppc-bronx/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/bronx/web-design-bronx/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/bronx/seo-bronx/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/brooklyn/digital-marketing-brooklyn/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/brooklyn/google-ads-brooklyn/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/brooklyn/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/brooklyn/ppc-brooklyn/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/brooklyn/web-design-brooklyn/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/brooklyn/seo-brooklyn/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/digital-marketing-new-york/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/manhattan/digital-marketing-manhattan/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/manhattan/google-ads-manhattan/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/manhattan/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/manhattan/ppc-manhattan/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/manhattan/seo-manhattan/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/manhattan/web-design-manhattan/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/ppc-new-york/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/queens/digital-marketing-queens/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/queens/google-ads-queens/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/queens/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/queens/ppc-queens/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/queens/seo-queens/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/queens/web-design-queens/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/seo-new-york/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/sheepshead-bay/digital-marketing-sheepshead-bay/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/sheepshead-bay/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/sheepshead-bay/ppc-sheepshead-bay/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/sheepshead-bay/seo-sheepshead-bay/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/sheepshead-bay/web-design-sheepshead-bay/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/staten-island/digital-marketing-staten-island/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/staten-island/google-ads-staten-island/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/staten-island/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/staten-island/ppc-staten-island/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/web-design-new-york/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/staten-island/web-design-staten-island/",
+          "status": 200
+        },
+        {
+          "path": "locations/new-york/staten-island/seo-staten-island/",
+          "status": 200
+        },
+        {
+          "path": "our-story/",
+          "status": 200
+        },
+        {
+          "path": "resources/accelerate-business-growth-with-results-driven-ppc-advertising/",
+          "status": 200
+        },
+        {
+          "path": "resources/",
+          "status": 200
+        },
+        {
+          "path": "resources/boost-your-online-growth-with-result-driven-seo-in-new-jersey/",
+          "status": 200
+        },
+        {
+          "path": "resources/build-a-stronger-online-presence-with-digital-marketing-in-new-jersey/",
+          "status": 200
+        },
+        {
+          "path": "resources/custom-website-design-ecommerce-development-services-in-new-jersey-that-drive-business-growth/",
+          "status": 200
+        },
+        {
+          "path": "resources/from-likes-to-leads-how-social-media-marketing-helps-new-jersey-businesses-grow/",
+          "status": 200
+        },
+        {
+          "path": "resources/landing-page-blueprint/",
+          "status": 200
+        },
+        {
+          "path": "resources/local-seo-growth-guide/",
+          "status": 200
+        },
+        {
+          "path": "resources/professional-website-design-solutions-that-help-new-jersey-businesses-grow/",
+          "status": 200
+        },
+        {
+          "path": "resources/turn-clicks-into-customers-digital-marketing-strategies-that-drive-real-business-growth/",
+          "status": 200
+        },
+        {
+          "path": "resources/turn-search-visibility-into-real-business-growth-in-new-york/",
+          "status": 200
+        },
+        {
+          "path": "resources/turn-social-media-into-your-strongest-growth-channel/",
+          "status": 200
+        },
+        {
+          "path": "resources/website-redesign-checklist/",
+          "status": 200
+        },
+        {
+          "path": "services/",
+          "status": 200
+        },
+        {
+          "path": "resources/why-businesses-choose-the-top-digital-marketing-agency-in-new-jersey-for-online-growth/",
+          "status": 200
+        },
+        {
+          "path": "services/aeo/",
+          "status": 200
+        },
+        {
+          "path": "services/aio/",
+          "status": 200
+        },
+        {
+          "path": "services/app-design-development/",
+          "status": 200
+        },
+        {
+          "path": "services/brand-strategy/",
+          "status": 200
+        },
+        {
+          "path": "services/community-management/",
+          "status": 200
+        },
+        {
+          "path": "services/content-seo/",
+          "status": 200
+        },
+        {
+          "path": "services/content-writing/",
+          "status": 200
+        },
+        {
+          "path": "services/crm-automation/",
+          "status": 200
+        },
+        {
+          "path": "services/ecommerce/",
+          "status": 200
+        },
+        {
+          "path": "services/email-marketing/",
+          "status": 200
+        },
+        {
+          "path": "services/geo/",
+          "status": 200
+        },
+        {
+          "path": "services/google-business-profile/",
+          "status": 200
+        },
+        {
+          "path": "services/google-ppc/",
+          "status": 200
+        },
+        {
+          "path": "services/graphic-design/",
+          "status": 200
+        },
+        {
+          "path": "services/landing-pages/",
+          "status": 200
+        },
+        {
+          "path": "services/lead-generation/",
+          "status": 200
+        },
+        {
+          "path": "services/local-seo/",
+          "status": 200
+        },
+        {
+          "path": "services/paid-social/",
+          "status": 200
+        },
+        {
+          "path": "services/seo/",
+          "status": 200
+        },
+        {
+          "path": "services/reputation-management/",
+          "status": 200
+        },
+        {
+          "path": "services/social-media-consultation/",
+          "status": 200
+        },
+        {
+          "path": "services/social-media/",
+          "status": 200
+        },
+        {
+          "path": "services/text-marketing/",
+          "status": 200
+        },
+        {
+          "path": "services/technical-seo/",
+          "status": 200
+        },
+        {
+          "path": "services/video-editing/",
+          "status": 200
+        },
+        {
+          "path": "services/web-design/",
+          "status": 200
+        },
+        {
+          "path": "services/website-maintenance/",
+          "status": 200
+        },
+        {
+          "path": "services/yelp-seo/",
+          "status": 200
+        },
+        {
+          "path": "thank-you/",
+          "status": 200
+        },
+        {
+          "path": "work/",
+          "status": 200
+        }
+      ],
+      "issues": [],
+      "verifiedAt": "2026-10-19T17:29:39.459Z",
+      "emailSent": false
+    },
+    "forms": {
+      "site": "https://vnwmedia.net/",
+      "date": "2026-10-19",
+      "cause": "HTMLFormElement.action was shadowed by WordPress hidden input name=action; the clean URL observer rewrote the attribute continuously.",
+      "repair": "Read the raw form action attribute; preserve resolved anchor behavior.",
+      "liveScriptVersion": "20261019-clean-urls-form-fix",
+      "desktop": {
+        "form": "Hero strategy form",
+        "thankYou": "https://vnwmedia.net/thank-you/",
+        "receivedInInbox": true,
+        "submittedAtUTC": "2026-10-19T17:24:44Z"
+      },
+      "mobile": {
+        "form": "Mobile quick-contact form",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "thankYou": "https://vnwmedia.net/thank-you/",
+        "receivedInInbox": true,
+        "submittedAtUTC": "2026-10-19T17:26:05Z",
+        "campaignAndPageContextPreserved": true
+      },
+      "verification": "Exactly two human-approved test inquiries; inbox delivery confirmed through connected contactus@vnwmedia.com mailbox; required fields, website, context and Reply-To preserved.",
+      "emailSettingsChanged": false,
+      "localRegression": "Native and dynamically added forms preserve endpoint, hidden action and nonce, remain responsive and submit once; localhost fixture sends no mail."
+    },
+    "mailSettingsChanged": false
+  },
+  "limits": [
+    "Full local browser sweep was interrupted by a Playground SQLite connection issue; it is not counted as passed. Public HTTP sweep and representative live browser checks passed.",
+    "Live delivery confirmed for exactly two approved test inquiries; future inbox placement is not guaranteed."
+  ],
+  "sourceRepairCommit": "5c92b6ce57ad66312f00b6cb82bd8346b6711c5c"
+}

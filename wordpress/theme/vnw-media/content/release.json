@@ -1,13 +1,15 @@
 {
-  "theme_version": "0.4.5",
-  "source_commit": "7d8392c91a49ed2c8091609a35b375c9452c343d",
+  "theme_version": "0.4.6",
+  "source_commit": "bb220648952bf952db57999c8fdfbc5b1ce05884",
   "source_url": "https://github.com/vnwMedia/vnwMedia",
   "content_pages": 211,
   "redirects": 2,
-  "form_heading": "Let’s Grow Your / Business Together",
+  "form_heading": "Let\u2019s Grow Your / Business Together",
   "setup_hosts": [
     "vnwmedia.net",
     "www.vnwmedia.net",
     "redesign.vnwmedia.net"
-  ]
+  ],
+  "version": "0.4.6",
+  "form_fix": "20261019-clean-urls-form-fix"
 }

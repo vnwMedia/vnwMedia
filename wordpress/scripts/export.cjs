@@ -11,7 +11,7 @@ await page.route('**/*',async route=>{
  const u=route.request().url();
  if(/^https?:/.test(u))return route.abort();
  const name=new URL(u).pathname.split('/').pop();
- if(['script.js','tickers.js','resources-live.js','site-buttons.js','lead-attribution.js','home-hero-motion.js'].includes(name))return route.fulfill({body:''});
+ if(['site-clean-urls.js','script.js','tickers.js','resources-live.js','site-buttons.js','lead-attribution.js','home-hero-motion.js'].includes(name))return route.fulfill({body:''});
  return route.continue();
 });
 const inventory=JSON.parse(fs.readFileSync(path.join(project,'wordpress/page-inventory.json')));

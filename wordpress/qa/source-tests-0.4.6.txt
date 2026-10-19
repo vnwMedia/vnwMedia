@@ -1,0 +1,120 @@
+PASS: 211 unique clean pages, 84 exact generated copies, 5933 local references, canonical/sitemap coverage, legacy/query/hash forwarding, domain/subdirectory support, preserved assets/form endpoints, and one client ticker on Our Work.
+✔ tests/clean-url-routes.cjs (114.733708ms)
+nycadsco: PASS — 4 confirmed services, positive varied comparisons, fixed sample values
+vision-centers: PASS — 3 confirmed services, positive varied comparisons, fixed sample values
+sfadsco: PASS — 4 confirmed services, positive varied comparisons, fixed sample values
+la-rosa-chicken-grill: PASS — 4 confirmed services, positive varied comparisons, fixed sample values
+brooklyn-motors: PASS — 6 confirmed services, positive varied comparisons, fixed sample values
+kypcl: PASS — 6 confirmed services, positive varied comparisons, fixed sample values
+skyrex-inc: PASS — 5 confirmed services, positive varied comparisons, fixed sample values
+cti-logistics: PASS — 5 confirmed services, positive varied comparisons, fixed sample values
+fordoz-pharma: PASS — 5 confirmed services, positive varied comparisons, fixed sample values
+platinum-valet-parking: PASS — 5 confirmed services, positive varied comparisons, fixed sample values
+raidex-construction: PASS — 5 confirmed services, positive varied comparisons, fixed sample values
+catanzaros-power-washing: PASS — 5 confirmed services, positive varied comparisons, fixed sample values
+coin-jewelry-gallery-boca-raton: PASS — 5 confirmed services, positive varied comparisons, fixed sample values
+nj-steps-to-success: PASS — 5 confirmed services, positive varied comparisons, fixed sample values
+h2bros-plumbing: PASS — 5 confirmed services, positive varied comparisons, fixed sample values
+art-of-construction: PASS — 5 confirmed services, positive varied comparisons, fixed sample values
+PASS: all 26 Work clients covered; 77 shared comparison cards; existing modern pages retained.
+✔ tests/client-service-results.cjs (99.171375ms)
+PASS: approved title/button on 73 static forms, 49 rendered location forms, all 28 service forms, and the industry generator. Fields, validation, service interest and other form types preserved.
+✔ tests/hero-form-copy.cjs (128.7155ms)
+PASS: progressive image loading, slow-network fallback, hidden-tab/off-screen pause, reduced motion, local fonts, responsive images, shared buttons.
+✔ tests/home-performance.cjs (46.77825ms)
+PASS: approved live homepage service labels, Engagement & growth, responsive layout, working production forms, and removed temporary preview.
+✔ tests/homepage-service-labels.cjs (37.247958ms)
+PASS: 310 pages wired; hero, lower-page, mobile and late-rendered forms; landing/previous-page continuity; UTM retention; privacy filtering; expiry/blocked storage; validation; mailto encoding; no duplicate handlers or outbound sends.
+
+EXAMPLE SUBJECT: [VNW Lead] SEO Strategy & Services | Example Dental
+
+NEW WEBSITE INQUIRY
+
+Name: Alex Morgan
+Business: Example Dental
+Phone: (202) 555-0147
+Email: alex@example.com
+Website: https://example.com
+Service: Search Engine Optimization
+
+From: SEO Strategy & Services
+Page: https://vnwmedia.github.io/vnwMedia/services/seo.html
+Form: Hero strategy form (Desktop)
+Campaign: google / cpc / fall-search
+✔ tests/lead-attribution.cjs (98.133208ms)
+PASS: 310 pages; plain/emoji/text variants, inline and nested arrows, dynamic content, protected text, inherited colors, unchanged links, idempotence, desktop restoration and mobile-only styles.
+✔ tests/mobile-arrows.cjs (94.47925ms)
+PASS: 310 pages refresh mobile-only feature photo styles (61 location, 82 industry and 57 service pages); text gutters and existing service full-bleed layouts preserved.
+✔ tests/mobile-feature-images.cjs (99.161083ms)
+PASS: 210 published pages, 102 individually mapped hero assets, approved 8-photo homepage framing, mobile-only CSS, correct paths/order, unchanged desktop/layout/forms/content and retired preview studies.
+✔ tests/mobile-hero-focal-points.cjs (2119.2625ms)
+PASS: 295 menu pages; zero-delay handoff, menu unlock before sheet, ordinary close animation, reduced motion, resize, Contact fallback, normal links, focus return, and existing floating Email interaction.
+✔ tests/mobile-menu-contact.cjs (56.849708ms)
+PASS: mobile press-and-hold, immediate release/cancel resume, cloned cards, multiple touches, lost focus, hidden tabs, breakpoint reset, desktop exclusion, and unchanged controls/timeline/reduced motion.
+✔ tests/mobile-review-pause.cjs (41.486708ms)
+PASS: all 273 ticker pages and all three page generators load the refreshed shared ticker script.
+PASS: mobile height-only resize and initial/height-only observer events never restart the ticker; unrelated fonts ignored; true width/text changes selectively rebuild; desktop pace, continuous scrolling and reduced motion preserved.
+✔ tests/mobile-ticker-resize.cjs (65.020917ms)
+PASS: all 211 source/clean page pairs resolve header navigation and logo assets inside the site, including Services without data-depth. Obsolete Work version tags removed.
+✔ tests/navigation-base.cjs (126.430708ms)
+aesthetic-island-nyc: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+argana-day-spa: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+calvin-schwartz: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+classical-caterers: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+genius-kids: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+new-generation-learning-center: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+glass-company-nyc: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+harlem-east-life-plan: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+jb-body-works: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+mb-law: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+liquid-soldier: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+lm-attorney: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+prestige-beauty-project: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+ofshtein-law-firm: PASS — actual logo, compatible review redirect, confirmed service scope, valid links
+PASS: 26 unique public portfolio clients, required positions, stable lower order, 10 published case studies, and a retired portfolio-review redirect.
+✔ tests/portfolio-client-additions.cjs (74.037042ms)
+web-design: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+ecommerce: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+website-maintenance: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+app-design-development: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+landing-pages: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+brand-strategy: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 3 matching FAQs; links/assets valid
+graphic-design: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+seo: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 3 matching FAQs; links/assets valid
+local-seo: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+technical-seo: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+content-seo: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+yelp-seo: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+google-business-profile: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+aeo: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+geo: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+aio: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+content-writing: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+lead-generation: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+google-ppc: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+paid-social: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+crm-automation: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+video-editing: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+social-media: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+social-media-consultation: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+community-management: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+reputation-management: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 4 matching FAQs; links/assets valid
+email-marketing: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+text-marketing: PASS — unique metadata, 1 H1, 4 gates, preparation section removed, 5 matching FAQs; links/assets valid
+All 28 service landing pages passed.
+✔ tests/service-story-audit.cjs (56.028083ms)
+PASS: 125 retired study/approval pages absent; all 210 regular pages preserved; 14 compatible review redirects; 6499 retained links/assets and sitemap destinations resolve.
+✔ tests/site-cleanup.cjs (106.347833ms)
+PASS: thank-you/email-draft messages and actions, capability ticker and unchanged 22 reviews; Contact and Thank You share Resources’ light palette, correct navigation theme and responsive animation handlers.
+✔ tests/thank-you-sections.cjs (49.285083ms)
+PASS PHP 8.2.33: duplicate reproduced before patch; one summary after; desktop/mobile, campaign/page/form attribution, fallback, empty fields, sanitization and all delivery safeguards preserved. No actual emails sent.
+PASS PHP 8.5.10: duplicate reproduced before patch; one summary after; desktop/mobile, campaign/page/form attribution, fallback, empty fields, sanitization and all delivery safeguards preserved. No actual emails sent.
+✔ WordPress inquiry formatter removes the duplicate body without changing delivery (267.925208ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2131.184333
