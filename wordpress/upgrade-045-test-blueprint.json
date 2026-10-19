@@ -1,0 +1,44 @@
+{
+  "login": true,
+  "preferredVersions": {
+    "php": "8.5",
+    "wp": "7.1.3"
+  },
+  "steps": [
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/vnw45-test.php",
+      "data": "<?php\nerror_reporting(E_ALL);\nfunction vnw45_error($severity,$message,$file,$line){\n if(!(error_reporting()&$severity))return false;\n file_put_contents(WP_CONTENT_DIR.'/vnw45-errors.jsonl',json_encode(compact('severity','message','file','line')).\"\\n\",FILE_APPEND|LOCK_EX);return false;\n}\nset_error_handler('vnw45_error');\nadd_filter('pre_wp_mail',function($return,$atts){update_option('vnw_test_mail',$atts);update_option('vnw_test_mail_count',(int)get_option('vnw_test_mail_count')+1);return true;},10,2);\nadd_action('rest_api_init',function(){\n register_rest_route('vnw-test/v1','/mail',['methods'=>'GET','permission_callback'=>'__return_true','callback'=>fn()=>get_option('vnw_test_mail')]);\n register_rest_route('vnw-test/v1','/status',['methods'=>'GET','permission_callback'=>'__return_true','callback'=>function(){\n  $posts=get_posts(['post_type'=>['page','post'],'post_status'=>'publish','numberposts'=>-1,'meta_key'=>'_vnw_source']);$editable=0;$sources=[];\n  foreach($posts as $p){if(vnw_elementor_enabled($p->ID))$editable++;$sources[get_post_meta($p->ID,'_vnw_source',true)]=$p->ID;}\n  $log=WP_CONTENT_DIR.'/vnw45-errors.jsonl';$errors=[];\n  if(file_exists($log))foreach(file($log,FILE_IGNORE_NEW_LINES|FILE_SKIP_EMPTY_LINES) as $line){$e=json_decode($line,true);if($e)$errors[]=$e;}\n  return ['php'=>PHP_VERSION,'wordpress'=>get_bloginfo('version'),'elementor'=>defined('ELEMENTOR_VERSION')?ELEMENTOR_VERSION:null,'theme'=>wp_get_theme()->get('Version'),'pages'=>count($posts),'editable'=>$editable,'sources'=>$sources,'errors'=>$errors,'upgrade'=>get_option('vnw45_upgrade_report'),'fresh'=>get_option('vnw45_fresh_report'),'mailCount'=>(int)get_option('vnw_test_mail_count'),'linted'=>get_option('vnw45_linted')];\n }]);\n});\n"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/elementor.4.3.5.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "vnw-media-044"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php';\nif(wp_get_theme()->get('Version')!=='0.4.4')throw new Exception('Old theme version mismatch');\nvnw_import();$items=get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']);if(count($items)!==211)throw new Exception('Old content count');\nforeach($items as $p)vnw_refresh_latest($p->ID);\nforeach($items as $p)if(get_post_meta($p->ID,'_vnw_source',true)==='index.html')$id=$p->ID;\n$raw=get_post_meta($id,'_elementor_data',true);$data=json_decode($raw,true);$key=substr($data[0]['widgetType'],12);$fields=vnw_elementor_catalog()['sections'][$key]['fields'];$field=null;\nforeach($fields as $k=>$f)if($f['type']==='rich'&&str_starts_with($f['label'],'Heading:')){$field=$k;break;}\nif(!$field)throw new Exception('Missing hero heading control');\n$data[0]['settings'][$field]='Manual saved homepage headline';update_post_meta($id,'_elementor_data',wp_slash(wp_json_encode($data)));\nupdate_option('vnw45_fixture',['id'=>$id,'raw'=>$raw,'edited'=>get_post_meta($id,'_elementor_data',true)]);update_option('blog_public',0);\n"
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "vnw-media"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php';\nif(wp_get_theme()->get('Version')!=='0.4.5')throw new Exception('New theme version mismatch');\n$f=get_option('vnw45_fixture');$result=vnw_refresh_latest($f['id']);\nif(!str_starts_with($result,'Skipped:')||get_post_meta($f['id'],'_elementor_data',true)!==$f['edited'])throw new Exception('Manual homepage edit not protected');\nupdate_post_meta($f['id'],'_elementor_data',wp_slash($f['raw']));$results=[];\nforeach(get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']) as $p){$results[get_post_meta($p->ID,'_vnw_source',true)]=vnw_refresh_latest($p->ID);}\nif($results['index.html']!=='Updated to latest design')throw new Exception('Homepage not upgraded');\n$home=get_post($f['id']);if(!str_contains($home->post_content,'Built to convert')||str_contains($home->post_content,'Websites built to convert'))throw new Exception('Homepage copy not updated');\nif(!get_post_meta($f['id'],'_vnw_before_045',true))throw new Exception('Recovery snapshot missing');\nif(vnw_import()!==0||vnw_refresh_latest($f['id'])!=='Already current; edits retained')throw new Exception('Update not idempotent');\nupdate_option('vnw45_upgrade_report',['from'=>'0.4.4','to'=>'0.4.5','pages'=>count($results),'manualHomepageEdit'=>$result,'recoverySnapshot'=>true,'duplicateImport'=>false,'repeatable'=>true,'results'=>array_count_values($results)]);\n"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php';\n// Disposable local runtime only: verify a fresh complete import independently.\nif(!in_array(wp_parse_url(home_url(),PHP_URL_HOST),['127.0.0.1','localhost'],true))throw new Exception('Local fixtures only');\nforeach(get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']) as $p)wp_delete_post($p->ID,true);\nif(vnw_import()!==211||vnw_import()!==0)throw new Exception('Fresh import count or repeat failed');\n$items=get_posts(['post_type'=>['page','post'],'numberposts'=>-1,'meta_key'=>'_vnw_source']);\nforeach($items as $p){vnw_refresh_latest($p->ID);if(!vnw_elementor_enabled($p->ID))throw new Exception('Fresh page not editable');if(get_post_meta($p->ID,'_vnw_before_045',true))throw new Exception('Unnecessary snapshot');}\n$count=0;$emails=0;foreach(vnw_records() as $r){if($r['type']==='redirect')continue;$inputs=new WP_HTML_Tag_Processor(vnw_prepare_forms($r['html']));while($inputs->next_tag(['tag_name'=>'INPUT'])){if($inputs->get_attribute('name')==='website'){if($inputs->get_attribute('type')!=='text'||$inputs->get_attribute('inputmode')!=='url'||$inputs->get_attribute('required')!==null)throw new Exception('Website field regression');$count++;}if($inputs->get_attribute('name')==='email'){if($inputs->get_attribute('type')!=='email')throw new Exception('Email validation removed');$emails++;}}}\nif($count!==144||$emails!==144)throw new Exception('Wrong form coverage');\n$linted=0;$it=new RecursiveIteratorIterator(new RecursiveDirectoryIterator(get_template_directory()));foreach($it as $file){if($file->isFile()&&$file->getExtension()==='php'){token_get_all(file_get_contents($file->getPathname()),TOKEN_PARSE);$linted++;}}update_option('vnw45_linted',$linted);\nupdate_option('vnw45_fresh_report',['pages'=>count($items),'editable'=>count($items),'websiteFields'=>$count,'emailFields'=>$emails,'idempotent'=>true,'unnecessarySnapshots'=>false]);\necho 'PASS: fresh 211-page import, 144 forms, PHP syntax, no duplicated pages';\n"
+    }
+  ]
+}

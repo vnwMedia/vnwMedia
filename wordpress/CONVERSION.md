@@ -1,6 +1,6 @@
-# Current release: 0.3.0
+# Current release: 0.4.5
 
-See LATEST-EXPORT-0.3.0.md for current source, installation, verification and limitations. Earlier entries below are historical.
+See UPDATE-0.4.5.md for the latest GitHub source, safe theme replacement, live verification and limitations. Earlier entries below are historical.
 
 # 0.2.1 staging conversion correction
 

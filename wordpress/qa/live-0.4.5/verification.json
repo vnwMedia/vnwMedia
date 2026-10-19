@@ -1,0 +1,85 @@
+{
+  "verifiedAt": "2026-10-19T14:26:11.991Z",
+  "desktop": {
+    "h1": "Digital marketing that gets your business results.",
+    "labels": [
+      {
+        "text": "Web Design Built to convert",
+        "width": 108.3359375,
+        "x": 64,
+        "y": 523.390625
+      },
+      {
+        "text": "SEO & Local Search Help customers find you",
+        "width": 160.015625,
+        "x": 232.625,
+        "y": 523.390625
+      },
+      {
+        "text": "Paid Advertising Google Ads & paid social",
+        "width": 158.3671875,
+        "x": 452.9296875,
+        "y": 523.390625
+      },
+      {
+        "text": "Social Media Engagement & growth",
+        "width": 142.3984375,
+        "x": 671.5859375,
+        "y": 523.390625
+      }
+    ],
+    "nonceFields": 3,
+    "themeVersion": true,
+    "url": "https://vnwmedia.net/",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "mobile": {
+    "grid": "169px 169px",
+    "labels": [
+      {
+        "text": "Web Design Built to convert",
+        "width": 169,
+        "x": 14,
+        "y": 596.9140625
+      },
+      {
+        "text": "SEO & Local Search Help customers find you",
+        "width": 169,
+        "x": 207,
+        "y": 596.9140625
+      },
+      {
+        "text": "Paid Advertising Google Ads & paid social",
+        "width": 169,
+        "x": 14,
+        "y": 649.0078125
+      },
+      {
+        "text": "Social Media Engagement & growth",
+        "width": 169,
+        "x": 207,
+        "y": 649.0078125
+      }
+    ],
+    "pageWidth": 390,
+    "url": "https://vnwmedia.net/",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "thankYou": {
+    "canonical": "https://vnwmedia.net/thank-you.html",
+    "capabilities": true,
+    "h1": "Thanks for reaching out.",
+    "reviewBackground": "rgb(255, 255, 255)",
+    "themeVersion": true,
+    "uniqueReviews": 22,
+    "url": "https://vnwmedia.net/thank-you.html"
+  },
+  "emailSettingsChanged": false,
+  "liveMailTestSent": false
+}
