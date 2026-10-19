@@ -1,0 +1,2 @@
+# Unified patches require a one-space prefix on blank context lines.
+wordpress/**/*.patch -whitespace

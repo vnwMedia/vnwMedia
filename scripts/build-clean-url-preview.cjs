@@ -28,6 +28,7 @@ for(const {source,path:route}of manifest.routes){
   return 'https://vnwmedia.github.io/vnwMedia/'+lookup[key]+url.search+url.hash;
  })+close);
  html=html.replace('</head>',`<script defer src="${prefix}site-clean-urls.js?v=${version}"></script></head>`);
+ html=html.replace(/[\t ]+$/gm,'');
  fs.writeFileSync(path.join(root,source),html);sourcePages.push(source);
  const output=route?route+'index.html':'index.html';
  if(output===source)continue;
