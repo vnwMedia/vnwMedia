@@ -211,7 +211,8 @@
     "services/website-maintenance.html",
     "services/yelp-seo.html",
     "thank-you.html",
-    "work.html"
+    "work.html",
+    "client-login.html"
   ],
   "generated": [
     {
@@ -632,6 +633,11 @@
     {
       "source": "work.html",
       "output": "work/index.html",
+      "base": "../"
+    },
+    {
+      "source": "client-login.html",
+      "output": "client-login/index.html",
       "base": "../"
     }
   ],
@@ -1479,6 +1485,10 @@
     {
       "source": "work.html",
       "path": "work/"
+    },
+    {
+      "source": "client-login.html",
+      "path": "client-login/"
     }
   ],
   "lookup": {
@@ -1693,6 +1703,7 @@
     "services/yelp-seo.html": "services/yelp-seo/",
     "thank-you.html": "thank-you/",
     "work.html": "work/",
+    "client-login.html": "client-login/",
     "case-studies/aesthetic-island-nyc-review.html": "case-studies/aesthetic-island-nyc/",
     "case-studies/argana-day-spa-review.html": "case-studies/argana-day-spa/",
     "case-studies/calvin-schwartz-review.html": "case-studies/calvin-schwartz/",
@@ -1941,6 +1952,7 @@
     "services/website-maintenance": "services/website-maintenance/",
     "services/yelp-seo": "services/yelp-seo/",
     "thank-you": "thank-you/",
-    "work": "work/"
+    "work": "work/",
+    "client-login": "client-login/"
   }
 }

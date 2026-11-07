@@ -854,6 +854,10 @@
     {
       "source": "work.html",
       "type": "page"
+    },
+    {
+      "source": "client-login.html",
+      "type": "page"
     }
   ],
   "routes": [
@@ -1700,6 +1704,10 @@
     {
       "source": "work.html",
       "path": "work/"
+    },
+    {
+      "source": "client-login.html",
+      "path": "client-login/"
     }
   ],
   "aliases": {
