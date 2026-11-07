@@ -1,0 +1,37 @@
+name: Client portal checks
+on:
+  push:
+    paths:
+      - 'client-login.html'
+      - 'client-login/**'
+      - 'client-portal.*'
+      - 'portal-backend/**'
+      - '.github/workflows/client-portal-checks.yml'
+  pull_request:
+    paths:
+      - 'client-login.html'
+      - 'client-portal.*'
+      - 'portal-backend/**'
+      - '.github/workflows/client-portal-checks.yml'
+permissions:
+  contents: read
+jobs:
+  security-and-reporting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check browser and server syntax
+        run: |
+          node --check client-portal.js
+          node --check portal-backend/worker.mjs
+          node --check portal-backend/google.mjs
+          node --check portal-backend/security.mjs
+      - name: Test client isolation, OAuth, and Google report handling
+        run: node --test portal-backend/tests/*.test.mjs
+      - name: Build secure frontend without credentials
+        run: node portal-backend/build.mjs
+      - name: Verify generated website routes
+        run: node tests/clean-url-routes.cjs

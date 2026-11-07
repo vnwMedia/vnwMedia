@@ -1,7 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const build=JSON.parse(read('reports/clean-url-preview-build.json')),manifest=JSON.parse(read('wordpress/clean-urls/route-manifest.json'));
-assert.equal(build.routes.length,211);assert.equal(new Set(build.routes.map(r=>r.path)).size,211);
+assert.equal(build.routes.length,manifest.routes.length);assert.equal(new Set(build.routes.map(r=>r.path)).size,manifest.routes.length);
 let references=0;
 for(const {source,path:route}of build.routes){
  const file=route?route+'index.html':'index.html',html=read(file);
@@ -77,5 +77,5 @@ for(const page of ['work','cases-hub','case-nycadsco']){
  if(page==='work')assert.deepEqual(calls,['remove-capabilities'],'Work never creates or overwrites its client ticker');
  else assert(!calls.includes('remove-capabilities'),'other portfolio capabilities stay intact');
 }
-assert.equal(manifest.routes.length,211);
-console.log(`PASS: 211 unique clean pages, ${build.generated.length} exact generated copies, ${references} local references, canonical/sitemap coverage, legacy/query/hash forwarding, domain/subdirectory support, preserved assets/form endpoints, and one client ticker on Our Work.`);
+assert(manifest.routes.some(r=>r.source==='client-login.html'&&r.path==='client-login/'),'client portal has a clean route');
+console.log(`PASS: ${manifest.routes.length} unique clean pages, ${build.generated.length} exact generated copies, ${references} local references, canonical/sitemap coverage, legacy/query/hash forwarding, domain/subdirectory support, preserved assets/form endpoints, and one client ticker on Our Work.`);

@@ -1,0 +1,7 @@
+# The public Pages preview serves only the static website, never backend source or provisioning inputs.
+exclude:
+  - portal-backend
+  - docs
+  - tests
+  - scripts
+  - node_modules

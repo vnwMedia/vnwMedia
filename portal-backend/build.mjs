@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync,mkdirSync,copyFileSync,rmSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import {join} from 'node:path';
+const here=fileURLToPath(new URL('.',import.meta.url)),root=join(here,'..'),output=join(here,'public');
+rmSync(output,{recursive:true,force:true});mkdirSync(join(output,'client-login'),{recursive:true});mkdirSync(join(output,'assets/fonts'),{recursive:true});
+let html=readFileSync(join(root,'client-login.html'),'utf8').replace('data-portal-mode="demo"','data-portal-mode="secure"');
+html=html.replace(/<link rel="canonical"[^>]+>/,'').replace(/<script defer src="site-clean-urls[^>]+><\/script>/,'').replace('<head>','<head><base href="/">');
+html=html.replace('href="index.html"','href="https://vnwmedia.net/"').replace('href="contact.html"','href="https://vnwmedia.net/contact/"');
+writeFileSync(join(output,'client-login/index.html'),html);
+for(const file of ['client-portal.css','client-portal.js','site-buttons.css','site-buttons.js','assets/vnw-media-logo-646.webp','assets/vnwMedia-LogoBlk.png','assets/fonts/inter-latin.woff2','assets/fonts/fraunces-latin.woff2'])copyFileSync(join(root,file),join(output,file));
+console.log('Built secure portal assets. No credentials or client data included.');

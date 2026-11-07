@@ -2,7 +2,9 @@
 
 ## Current milestone
 
-Public design prototype: `client-login.html` and generated `/client-login/` route. Uses illustrative, browser-local data only; no authentication, OAuth, database, or live reporting is implemented. No credentials or client records should be added to these static files. Shared branding and button assets are inherited from VNW Media. Changes remain in GitHub preview; WordPress publishing is on hold.
+VNW Media-branded design preview at `/client-login/`: actual logo, Inter/Fraunces fonts, black/cream/blue palette, per-client example workspaces, line charts, channel-share donuts, heatmaps, accessible value tables and CSV export. All public metrics are explicitly illustrative.
+
+Secure backend source is implemented in `portal-backend/`, with per-client membership checks, Google sign-in, agency controls and a GA4 reporting adapter. See [the backend implementation and activation guide](../../portal-backend/README.md). The source is tested with SQLite and simulated Google responses; it has not been hosted or connected to a real Google property. No live account or private client data is active on GitHub Pages. All hosting and live Google activation are deferred at the user's request to build in GitHub first.
 
 ## Planned product
 
@@ -10,11 +12,11 @@ Public design prototype: `client-login.html` and generated `/client-login/` rout
 - Agency admin: invite clients, assign memberships, authorize Google services, select properties/accounts/locations, revoke connections, and investigate sync failures.
 - Keep client sign-in distinct from Google authorization. Clients do not need to grant Google access simply to view reports if an authorized agency account already manages the assigned property.
 
-## Backend foundation to implement
+## Backend architecture
 
 Serve a backend separately from GitHub Pages, ideally behind `/api/` on the production domain. Use a managed identity provider, verified invitations and server-managed HttpOnly/Secure/SameSite sessions. Enforce client membership and admin permissions on every API call and database query. Browser selectors are not authorization.
 
-Suggested routes (contracts only; not implemented):
+Original route plan (the implemented route names are defined in `portal-backend/worker.mjs`; this table is the broader product roadmap):
 
 | Route | Purpose |
 | --- | --- |
@@ -64,4 +66,4 @@ Official references checked November 6, 2026:
 
 ## Preview and validation
 
-Serve repository root with a local static server and visit `/client-login/`. Navigation, period selection and connection requirement disclosures work without dependencies. Period selection changes sample KPI values and illustrative bars; breakdown rows are explicitly fixed examples. Run `node --check client-portal.js` and `node scripts/build-clean-url-preview.cjs` after source changes. Generated directory copies must not be edited directly.
+Serve repository root with a local static server and visit `/client-login/`. Navigation, period selection and connection requirement disclosures work without dependencies. Period and example client selection update sample KPIs and charts. CSV exports are labeled SAMPLE. Secure frontend builds fetch only authorized backend reports and show no sample fallback. Run `node --check client-portal.js` and `node scripts/build-clean-url-preview.cjs` after source changes. Generated directory copies must not be edited directly.

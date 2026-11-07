@@ -1,0 +1,10 @@
+{
+  "name": "vnw-client-portal-backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node build.mjs"
+  },
+  "engines": {"node": ">=24"}
+}

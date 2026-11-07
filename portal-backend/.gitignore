@@ -1,0 +1,7 @@
+node_modules/
+.wrangler/
+public/
+.dev.vars
+.env*
+!.env.example
+*.local.sql
